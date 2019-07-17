@@ -1,0 +1,85 @@
+#Processed by EYE v19.0705.1450 josd
+#eye variables_and_predicates.n3 change-address.ttl --query mappingRuleCreation.n3 --nope
+
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX p-plan: <http://purl.org/net/p-plan#>
+PREFIX o-address: <https://data.vlaanderen.be/ns/adres#>
+PREFIX o-steps: <https://example.org/ns/oslo-steps#>
+PREFIX ex: <https://example.org/ns/example#>
+PREFIX var: <https://example.org/ns/var#>
+PREFIX e: <http://eulersharp.sourceforge.net/2003/03swap/log-rules#>
+
+ex:provideHouseholderFirstNameManually <file:///media/doerthe/4EC6F987C6F97017/store/FAST/mappingRuleCreation.n3#outTriples> ({var:user ex:firstName var:householderFirstName}).
+ex:provideHouseholderFirstNameManually <file:///media/doerthe/4EC6F987C6F97017/store/FAST/mappingRuleCreation.n3#inTriples> ().
+ex:provideHouseholderLastNameManually <file:///media/doerthe/4EC6F987C6F97017/store/FAST/mappingRuleCreation.n3#outTriples> ({var:user ex:lastName var:householderLastName}).
+ex:provideHouseholderLastNameManually <file:///media/doerthe/4EC6F987C6F97017/store/FAST/mappingRuleCreation.n3#inTriples> ().
+ex:provideHouseholderGenderManually <file:///media/doerthe/4EC6F987C6F97017/store/FAST/mappingRuleCreation.n3#outTriples> ({var:user ex:gender var:householderGender}).
+ex:provideHouseholderGenderManually <file:///media/doerthe/4EC6F987C6F97017/store/FAST/mappingRuleCreation.n3#inTriples> ().
+ex:provideHouseholderEmailManually <file:///media/doerthe/4EC6F987C6F97017/store/FAST/mappingRuleCreation.n3#outTriples> ({var:user ex:email var:householderEmail}).
+ex:provideHouseholderEmailManually <file:///media/doerthe/4EC6F987C6F97017/store/FAST/mappingRuleCreation.n3#inTriples> ().
+ex:provideHouseholderMobilePhoneNumberManually <file:///media/doerthe/4EC6F987C6F97017/store/FAST/mappingRuleCreation.n3#outTriples> ({var:user ex:mobile var:householderMobilePhoneNumber}).
+ex:provideHouseholderMobilePhoneNumberManually <file:///media/doerthe/4EC6F987C6F97017/store/FAST/mappingRuleCreation.n3#inTriples> ().
+ex:provideHouseholderPhoneNumberManually <file:///media/doerthe/4EC6F987C6F97017/store/FAST/mappingRuleCreation.n3#outTriples> ({var:user ex:phone var:householderPhoneNumber}).
+ex:provideHouseholderPhoneNumberManually <file:///media/doerthe/4EC6F987C6F97017/store/FAST/mappingRuleCreation.n3#inTriples> ().
+ex:provideHouseholderNationalNumberManually <file:///media/doerthe/4EC6F987C6F97017/store/FAST/mappingRuleCreation.n3#outTriples> ({var:user ex:nationalNumber var:householderNationalNumber}).
+ex:provideHouseholderNationalNumberManually <file:///media/doerthe/4EC6F987C6F97017/store/FAST/mappingRuleCreation.n3#inTriples> ().
+ex:provideHouseholderBankAccountNumberManually <file:///media/doerthe/4EC6F987C6F97017/store/FAST/mappingRuleCreation.n3#outTriples> ({var:user ex:bankaccount var:householderBankAccountNumber}).
+ex:provideHouseholderBankAccountNumberManually <file:///media/doerthe/4EC6F987C6F97017/store/FAST/mappingRuleCreation.n3#inTriples> ().
+ex:provideHouseholderResidencePermitManually <file:///media/doerthe/4EC6F987C6F97017/store/FAST/mappingRuleCreation.n3#outTriples> ({var:user ex:residencypermit var:householderResidencePermit}).
+ex:provideHouseholderResidencePermitManually <file:///media/doerthe/4EC6F987C6F97017/store/FAST/mappingRuleCreation.n3#inTriples> ().
+ex:provideHouseholderBirthDataManually <file:///media/doerthe/4EC6F987C6F97017/store/FAST/mappingRuleCreation.n3#outTriples> ().
+ex:provideHouseholderBirthDataManually <file:///media/doerthe/4EC6F987C6F97017/store/FAST/mappingRuleCreation.n3#inTriples> ().
+ex:provideHouseholderAddressManually <file:///media/doerthe/4EC6F987C6F97017/store/FAST/mappingRuleCreation.n3#outTriples> ({var:user ex:address var:householderAdress}).
+ex:provideHouseholderAddressManually <file:///media/doerthe/4EC6F987C6F97017/store/FAST/mappingRuleCreation.n3#inTriples> ().
+ex:provideHouseholderProfessionManually <file:///media/doerthe/4EC6F987C6F97017/store/FAST/mappingRuleCreation.n3#outTriples> ({var:user ex:profession var:householderProfession}).
+ex:provideHouseholderProfessionManually <file:///media/doerthe/4EC6F987C6F97017/store/FAST/mappingRuleCreation.n3#inTriples> ().
+ex:provideNumberOfFamilyMembersManually <file:///media/doerthe/4EC6F987C6F97017/store/FAST/mappingRuleCreation.n3#outTriples> ({var:user ex:amountOfFamilyMembers var:numberOfFamilyMembers}).
+ex:provideNumberOfFamilyMembersManually <file:///media/doerthe/4EC6F987C6F97017/store/FAST/mappingRuleCreation.n3#inTriples> ().
+ex:provideMovingDateManually <file:///media/doerthe/4EC6F987C6F97017/store/FAST/mappingRuleCreation.n3#outTriples> ({var:user ex:movingdate var:date}).
+ex:provideMovingDateManually <file:///media/doerthe/4EC6F987C6F97017/store/FAST/mappingRuleCreation.n3#inTriples> ().
+ex:provideMovingCityManually <file:///media/doerthe/4EC6F987C6F97017/store/FAST/mappingRuleCreation.n3#outTriples> ({var:user ex:city var:movingCity}).
+ex:provideMovingCityManually <file:///media/doerthe/4EC6F987C6F97017/store/FAST/mappingRuleCreation.n3#inTriples> ().
+ex:provideNumberOf40LiterGreyWasteContainersManually <file:///media/doerthe/4EC6F987C6F97017/store/FAST/mappingRuleCreation.n3#outTriples> ().
+ex:provideNumberOf40LiterGreyWasteContainersManually <file:///media/doerthe/4EC6F987C6F97017/store/FAST/mappingRuleCreation.n3#inTriples> ().
+ex:provideNumberOf120LiterGreyWasteContainersManualy <file:///media/doerthe/4EC6F987C6F97017/store/FAST/mappingRuleCreation.n3#outTriples> ().
+ex:provideNumberOf120LiterGreyWasteContainersManualy <file:///media/doerthe/4EC6F987C6F97017/store/FAST/mappingRuleCreation.n3#inTriples> ().
+ex:provideNumberOf240LiterGreyWasteContainers <file:///media/doerthe/4EC6F987C6F97017/store/FAST/mappingRuleCreation.n3#outTriples> ().
+ex:provideNumberOf240LiterGreyWasteContainers <file:///media/doerthe/4EC6F987C6F97017/store/FAST/mappingRuleCreation.n3#inTriples> ().
+ex:provideGreyWasteContainerLockInfoManually <file:///media/doerthe/4EC6F987C6F97017/store/FAST/mappingRuleCreation.n3#outTriples> ().
+ex:provideGreyWasteContainerLockInfoManually <file:///media/doerthe/4EC6F987C6F97017/store/FAST/mappingRuleCreation.n3#inTriples> ().
+ex:provideNumberOf40LiterGreenWasteContainersManually <file:///media/doerthe/4EC6F987C6F97017/store/FAST/mappingRuleCreation.n3#outTriples> ().
+ex:provideNumberOf40LiterGreenWasteContainersManually <file:///media/doerthe/4EC6F987C6F97017/store/FAST/mappingRuleCreation.n3#inTriples> ().
+ex:provideNumberOf120LiterGreenWasteContainersManually <file:///media/doerthe/4EC6F987C6F97017/store/FAST/mappingRuleCreation.n3#outTriples> ().
+ex:provideNumberOf120LiterGreenWasteContainersManually <file:///media/doerthe/4EC6F987C6F97017/store/FAST/mappingRuleCreation.n3#inTriples> ().
+ex:provideGreenWasteContainerOwnCompostInfoManually <file:///media/doerthe/4EC6F987C6F97017/store/FAST/mappingRuleCreation.n3#outTriples> ().
+ex:provideGreenWasteContainerOwnCompostInfoManually <file:///media/doerthe/4EC6F987C6F97017/store/FAST/mappingRuleCreation.n3#inTriples> ().
+ex:provideGreenWasteContainerCollectionStopInfoManually <file:///media/doerthe/4EC6F987C6F97017/store/FAST/mappingRuleCreation.n3#outTriples> ().
+ex:provideGreenWasteContainerCollectionStopInfoManually <file:///media/doerthe/4EC6F987C6F97017/store/FAST/mappingRuleCreation.n3#inTriples> ().
+ex:provideGreenWasteContainerLockInfoManually <file:///media/doerthe/4EC6F987C6F97017/store/FAST/mappingRuleCreation.n3#outTriples> ().
+ex:provideGreenWasteContainerLockInfoManually <file:///media/doerthe/4EC6F987C6F97017/store/FAST/mappingRuleCreation.n3#inTriples> ().
+ex:provideNumberOf40LiterPaperWasteContainersManually <file:///media/doerthe/4EC6F987C6F97017/store/FAST/mappingRuleCreation.n3#outTriples> ().
+ex:provideNumberOf40LiterPaperWasteContainersManually <file:///media/doerthe/4EC6F987C6F97017/store/FAST/mappingRuleCreation.n3#inTriples> ().
+ex:provideNumberOf240LiterPaperWasteContainersManually <file:///media/doerthe/4EC6F987C6F97017/store/FAST/mappingRuleCreation.n3#outTriples> ().
+ex:provideNumberOf240LiterPaperWasteContainersManually <file:///media/doerthe/4EC6F987C6F97017/store/FAST/mappingRuleCreation.n3#inTriples> ().
+ex:provideNumberOf1100LiterPaperWasteContainersManually <file:///media/doerthe/4EC6F987C6F97017/store/FAST/mappingRuleCreation.n3#outTriples> ().
+ex:provideNumberOf1100LiterPaperWasteContainersManually <file:///media/doerthe/4EC6F987C6F97017/store/FAST/mappingRuleCreation.n3#inTriples> ().
+ex:requestWasteCollection <file:///media/doerthe/4EC6F987C6F97017/store/FAST/mappingRuleCreation.n3#outTriples> ({var:user ex:wastRequeast var:wasteCollectionRequested}).
+ex:requestWasteCollection <file:///media/doerthe/4EC6F987C6F97017/store/FAST/mappingRuleCreation.n3#inTriples> ({var:user ex:info var:applicantInfo}).
+ex:provideWasteCollectionApplicantInfo <file:///media/doerthe/4EC6F987C6F97017/store/FAST/mappingRuleCreation.n3#outTriples> ({var:user ex:info var:applicantInfo}).
+ex:provideWasteCollectionApplicantInfo <file:///media/doerthe/4EC6F987C6F97017/store/FAST/mappingRuleCreation.n3#inTriples> ({var:user ex:firstName var:householderFirstName} {var:user ex:lastName var:householderLastName} {var:user ex:phone var:householderPhoneNumber} {var:user ex:mobile var:householderMobilePhoneNumber} {var:user ex:email var:householderEmail} {var:user ex:gender var:householderGender} {var:user ex:nationalNumber var:householderNationalNumber} {var:user ex:amountOfFamilyMembers var:numberOfFamilyMembers} {var:user ex:movingAddress var:mAddress} {var:user ex:billing var:billingAddress}).
+ex:provideGreyWasteContainerInfo <file:///media/doerthe/4EC6F987C6F97017/store/FAST/mappingRuleCreation.n3#outTriples> ().
+ex:provideGreyWasteContainerInfo <file:///media/doerthe/4EC6F987C6F97017/store/FAST/mappingRuleCreation.n3#inTriples> ().
+ex:provideGreenWasteContainerInfo <file:///media/doerthe/4EC6F987C6F97017/store/FAST/mappingRuleCreation.n3#outTriples> ().
+ex:provideGreenWasteContainerInfo <file:///media/doerthe/4EC6F987C6F97017/store/FAST/mappingRuleCreation.n3#inTriples> ().
+ex:providePaperWasteContainerInfo <file:///media/doerthe/4EC6F987C6F97017/store/FAST/mappingRuleCreation.n3#outTriples> ().
+ex:providePaperWasteContainerInfo <file:///media/doerthe/4EC6F987C6F97017/store/FAST/mappingRuleCreation.n3#inTriples> ().
+ex:declareAddressChange <file:///media/doerthe/4EC6F987C6F97017/store/FAST/mappingRuleCreation.n3#outTriples> ().
+ex:declareAddressChange <file:///media/doerthe/4EC6F987C6F97017/store/FAST/mappingRuleCreation.n3#inTriples> ({var:user ex:firstName var:householderFirstName} {var:user ex:lastName var:householderLastName} {var:user ex:nationalNumber var:householderNationalNumber} {var:user ex:birthdate var:householderBirthDate} {var:user ex:bornin var:householderCityOfBirth} {ex:user ex:nationality var:householderNationality} {var:user ex:movingAddress var:mAddress} {var:user ex:movingdate var:date} {var:user ex:profession var:householderProfession} {var:user ex:phone var:householderPhoneNumber} {var:user ex:mobile var:householderMobilePhoneNumber} {var:user ex:email var:householderEmail}).
+ex:confirmAddressChangeVisit <file:///media/doerthe/4EC6F987C6F97017/store/FAST/mappingRuleCreation.n3#outTriples> ().
+ex:confirmAddressChangeVisit <file:///media/doerthe/4EC6F987C6F97017/store/FAST/mappingRuleCreation.n3#inTriples> ().
+ex:addressChangeOnEIDInOffice <file:///media/doerthe/4EC6F987C6F97017/store/FAST/mappingRuleCreation.n3#outTriples> ().
+ex:addressChangeOnEIDInOffice <file:///media/doerthe/4EC6F987C6F97017/store/FAST/mappingRuleCreation.n3#inTriples> ().
+
+#2019-07-17T14:46:35.984Z in=344 out=70 ent=70 step=35 brake=2 inf=416704 sec=0.103 inf/sec=4045670
+#ENDS
+

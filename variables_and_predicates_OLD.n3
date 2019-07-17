@@ -1,0 +1,215 @@
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix p-plan: <http://purl.org/net/p-plan#> .
+@prefix o-address: <https://data.vlaanderen.be/ns/adres#> .
+@prefix o-steps: <https://example.org/ns/oslo-steps#> .
+@prefix ex: <https://example.org/ns/example#> .
+@prefix var: <https://example.org/ns/var#> .
+#
+# Various kinds of data
+#
+
+# declaration of variables
+var:user a var:GlobalVariable.
+
+#
+# data regarding a householder
+#
+ex:householderFirstName a p-plan:Variable ;
+  ex:use { var:user ex:firstName _:n};
+  rdfs:label "Householder's first name"@en ;
+  rdfs:label "Gezinshoofd voornaam"@nl .
+
+ex:householderLastName a p-plan:Variable ;
+  ex:use { var:user ex:lastName _:ln};
+  rdfs:label "Householder's last name"@en ;
+  rdfs:label "Gezinshoofd naam"@nl .
+
+ex:householderGender a p-plan:Variable ;
+  ex:use { var:user ex:gender _:g};
+  rdfs:label "Householder's gender"@en ;
+  rdfs:label "Geslacht gezinshoofd"@nl .
+
+ex:householderEmail a p-plan:Variable ;
+  ex:use { var:user ex:email _:m};
+  rdfs:label "Householder's email address"@en ;
+  rdfs:label "Email gezinshoofd"@nl .
+
+ex:householderMobilePhoneNumber a p-plan:Variable ;
+  ex:use { var:user ex:mobile _:householderMobilePhoneNumber};
+  rdfs:label "Householder's mobile phone number"@en ;
+  rdfs:label "GSM gezinshoofd"@nl .
+
+ex:householderPhoneNumber a p-plan:Variable ;
+  ex:use { var:user ex:phone _:householderPhoneNumber};
+  rdfs:label "Householder's phone number"@en ;
+  rdfs:label "Telefoon gezinshoofd"@nl .
+
+ex:householderNationalNumber a p-plan:Variable ;
+  ex:use { var:user ex:nationalNumber _:householderNationalNumber};
+  rdfs:label "Householder's national number"@en ;
+  rdfs:label "Rijksregister gezinshoofd"@nl .
+
+ex:householderBankAccountNumber a p-plan:Variable ;
+  ex:use {var:user ex:bankaccount _:householderBankAccountNumber};
+  rdfs:label "Householder's bank account number"@en ;
+  rdfs:label "rekeningsnummer gezinshoofd"@nl .
+
+ex:householderNationality a p-plan:Variable ;
+  ex:use { ex:user ex:nationality _:householderNationality};
+  rdfs:label "Householder's nationality"@en ;
+  rdfs:label "nationaliteit gezinshoofd"@nl .
+
+ex:householderResidencePermit a p-plan:Variable ;
+  ex:use { var:user ex:residencypermit _:householderResidencePermit}; #I think here, we need a better structure?
+  rdfs:label "Householder's residency permit"@en ;
+  rdfs:label "verblijfsvergunning"@nl .
+
+ex:householderBirthDate a p-plan:Variable ;
+  ex:use {var:user ex:birthdate _:householderBirthDate};
+  rdfs:label "Householder's date of birth"@en ;
+  rdfs:label "geboortedatum gezinshoofd"@nl .
+
+ex:householderCityOfBirth a p-plan:Variable ;
+  ex:use {var:user ex:bornin _:householderCityOfBirth};
+  rdfs:label "Householder's city of birth"@en ;
+  rdfs:label "Geboorteplaats"@nl .
+
+ex:householderAddress a p-plan:Variable ;
+  ex:use {var:user ex:address _:householderAdress};
+  rdfs:label "Householder's address"@en ;
+  rdfs:label "adres gezinshoofd"@nl .
+
+ex:householderProfession a p-plan:Variable ;
+  ex:use {var:user ex:profession _:householderProfession};
+  rdfs:label "Householder's profession"@en ;
+  rdfs:label "beroep gezinshoofd"@nl .
+
+ex:numberOfFamilyMembers a p-plan:Variable ;
+  ex:use {var:user ex:amountOfFamilyMembers _:numberOfFamilyMembers};
+  rdfs:label "Number of family members"@en ;
+  rdfs:label "Aantal gezinsleden"@nl .
+
+
+#
+# data regarding moving
+#
+ex:applicantInfo a p-plan:Variable ; #what exactly us this?
+  ex:use {var:user ex:info _:applicantInfo};
+  rdfs:label "Applicant information"@en ;
+  rdfs:label "Aanvrager information"@nl .
+
+ex:movingDate a p-plan:Variable ;
+  ex:use {var:user _:movingdate var:date};
+  rdfs:label "Moving date"@en ;
+  rdfs:label "Verhuisdatum"@nl .
+
+ex:movingAddress a p-plan:Variable ;
+  ex:use {var:user ex:movingAddress _:mAddress};
+  rdfs:label "Address to move to"@en ;
+  rdfs:label "Adres waarnar wordt verplaatst"@nl .
+
+ex:billingAddress a p-plan:Variable ;
+  ex:use {var:user ex:billing _:billingAddress};
+  rdfs:label "Billing address"@en ;
+  rdfs:label "Facturatieadres"@nl .
+
+ex:movingCity a p-plan:Variable ;
+  ex:use {var:user ex:city _:movingCity};
+  rdfs:label "City to move to"@en ;
+  rdfs:label "Stad waarnaar wordt verplaatst"@nl .
+
+#
+# data regarding waste disposal
+#
+ex:wasteCollectionRequested a p-plan:Variable ;
+  ex:use {var:user ex:wastRequeast _:wasteCollectionRequested};
+  rdfs:label "Waste collection request"@en ;
+  rdfs:label "Aanvrag afvalcontainers"@nl .
+
+ex:numberOf40LiterGreyWasteContainers a p-plan:Variable ;
+  
+  rdfs:label "Number of 40 liter grey waste containers"@en ;
+  rdfs:label "Aantal 40 liter grijze restafval containers"@nl .
+
+ex:numberOf120LiterGreyWasteContainers a p-plan:Variable ;
+  rdfs:label "Number of 120 liter grey waste containers"@en ;
+  rdfs:label "Aantal 120 liter grijze restafval containers"@nl .
+
+ex:numberOf240LiterGreyWasteContainers a p-plan:Variable ;
+  rdfs:label "Number of 240 liter grey waste containers"@en ;
+  rdfs:label "Aantal 240 liter grijze restafval containers"@nl .
+
+ex:greyWasteContainerLockInfo a p-plan:Variable ;
+  rdfs:label "Grey waste container lock"@en ;
+  rdfs:label "Grijze restafval container slot"@nl .
+
+ex:greyWasteContainerInfo a p-plan:Variable ;
+  rdfs:label "Grey waste container(s)"@en ;
+  rdfs:label "Grijze restafvalcontainer(s)"@nl .
+
+
+ex:numberOf40LiterGreenWasteContainers a p-plan:Variable ;
+  rdfs:label "Number of 40 liter green waste containers"@en ;
+  rdfs:label "Aantal 40 liter GFT containers"@nl .
+
+ex:numberOf120LiterGreenWasteContainers a p-plan:Variable ;
+  rdfs:label "Number of 120 liter green waste containers"@en ;
+  rdfs:label "Aantal 120 liter GFT containers"@nl .
+
+ex:greenWasteContainerOwnCompostInfo a p-plan:Variable ;
+  rdfs:label "Own compost"@en ;
+  rdfs:label "GFT zelf composteer"@nl .
+
+ex:greenWasteContainerStopCollectingInfo a p-plan:Variable ;
+  rdfs:label "Stop collecting green waste contaienr"@en ;
+  rdfs:label "Ophaling GFT-container door stopzetting"@nl .
+
+ex:greenWasteContainerLockInfo a p-plan:Variable ;
+  rdfs:label "Green waste container lock"@en ;
+  rdfs:label "GFT container slot"@nl .
+
+ex:greenWasteContainerInfo a p-plan:Variable ;
+  rdfs:label "Green GFT waste container(s)"@en ;
+  rdfs:label "Groene GFT container(s)"@nl .
+
+
+ex:numberOf40LiterPaperWasteContainers a p-plan:Variable ;
+  rdfs:label "Number of 40 liter paper waste contaienrs"@en ;
+  rdfs:label "Aantal 40 liter papier containers"@nl .
+
+ex:numberOf240LiterPaperWasteContainers a p-plan:Variable ;
+  rdfs:label "Number of 240 liter paper waste contaienrs"@en ;
+  rdfs:label "Aantal 240 liter papier containers"@nl .
+
+ex:numberOf1100LiterPaperWasteContainers a p-plan:Variable ;
+  rdfs:label "Number of 1100 liter paper waste containers"@en ;
+  rdfs:label "Aantal 1100 liter papier containers"@nl .
+
+ex:paperWasteContainerInfo a p-plan:Variable ;
+  rdfs:label "Paper waste container(s)"@en ;
+  rdfs:label "Papiercontainer(s)"@nl .
+
+#
+# data regarding municipality
+#
+
+ex:addressChangeDeclared a p-plan:Variable ;
+  rdfs:label "Declared address change"@en ;
+  rdfs:label "Adreswijziging verklaard"@nl .
+
+ex:householderAtNewAddress a p-plan:Variable ;
+  rdfs:label "Met the householder at new address"@en ;
+  rdfs:label "Ontmoette de bewoner op nieuw adres"@nl .
+
+ex:addressChangeConfirmed a p-plan:Variable ;
+  rdfs:label "Confirmed address change"@en ;
+  rdfs:label "Adreswijziging bevestigd"@nl .
+
+
+ex:addressChangedOnEID a p-plan:Variable ;
+  rdfs:label "Address updated on eID card"@en ;
+  rdfs:label "Adreswijziging bevestigd op eID"@nl .
+
+ex:householderBringsEID a p-plan:Variable ;
+  rdfs:label "Householder brings eID"@en ;
+  rdfs:label "Gezinshoofd brengt eID"@nl .
