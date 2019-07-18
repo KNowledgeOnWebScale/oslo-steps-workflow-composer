@@ -1,0 +1,5 @@
+Open issues:
+
+- Data removal: Our oslo-vocabulary does not include any notation that data gets removed by a step. This needs to be added.
+- weights: so far the weights (duration, cost, success and comfort) are fixed. These need to be also expressed in the vocabulary
+- description for graphs connected to variables: currently I just added patterns to describe how a triple produced or required by a step will look like. this also needs to be added in the vocabulary. Here, Shacl could also help. Maybe also plan triple generation from shacl (and make a nice paper for Sven out of it ;) ). 
