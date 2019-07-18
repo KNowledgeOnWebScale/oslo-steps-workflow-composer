@@ -247,7 +247,7 @@ ex:provideHouseholderResidencePermitManually a o-steps:Step ;
 ex:provideHouseholderBirthDataManually a o-steps:Step ;
   rdfs:label "Householder's date of birth"@en ;
   rdfs:label "geboortedatum gezinshoofd"@nl ;
-  p-plan:hasOutputVar ex:householderBirthData .
+  p-plan:hasOutputVar ex:householderBirthDate .
 
 ex:provideHouseholderAddressManually a o-steps:Step ;
   rdfs:label "Householder's address"@en ;

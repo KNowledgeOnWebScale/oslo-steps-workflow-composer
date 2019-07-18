@@ -7,30 +7,31 @@
 PREFIX log: <http://www.w3.org/2000/10/swap/log#>
 PREFIX e: <http://eulersharp.sourceforge.net/2003/03swap/log-rules#>
 PREFIX gps: <http://josd.github.io/eye/reasoning/gps/gps-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 @prefix : <https://example.org/ns/example#> .
 PREFIX list: <http://www.w3.org/2000/10/swap/list#>
 
 {
-?step a o-steps:Step;
- p-plan:hasOutputVar ?ov.
-
-_:x e:findall (?use { ?step p-plan:hasInputVar ?x. ?x ex:use ?use} ?inTriples). 
-
-_:x e:findall (?use2 { ?step p-plan:hasOutputVar ?y. ?y ex:use ?use2} ?outTriples).
-
-?outTriples  :produceSkolemfunctions (() ?skolem).
-?outTriples log:conjunction ?out.
-
-(?inTriples ?skolem) list:append ?inTriples2.
- ?inTriples2 log:conjunction ?in.
+()  :produceSkolemfunctions (?skolem ?skolem)
+}<={}.
 
 
-}
-=>
 {
-#the values here are currently fixed.
-{ex:movemap gps:description (true true ?out ?step 1 1 0.97 0.97)} <= ?in.
+?graphlist  :produceSkolemfunctions ( ?interim ?skolem)
+}
+<=
+{
+?graphlist rdf:first ?first.
+
+
+?first e:graphList ?flist.
+_:x e:findall ( { (?s ?p) e:skolem ?o } { ?triple list:in ?flist. ?triple log:equalTo {?s ?p ?o}. ?o a var:LocalVariable } ?slist  ).
+
+(?interim ?slist) list:append ?interim2.
+
+
+?graphlist rdf:rest ?rest.
+
+?rest  :produceSkolemfunctions ( ?interim2 ?skolem)
+
 }.
-
-
-
