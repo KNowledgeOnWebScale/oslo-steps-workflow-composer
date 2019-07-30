@@ -96,7 +96,9 @@ shp:householderFirstNameShape a sh:NodeShape ;
 # data regarding a householder
 #
 ex:householderFirstName a p-plan:Variable ;
-  ex:use { var:user ex:firstName var:n};
+  # Use a shape instead
+  # ex:use { var:user ex:firstName var:n};
+  ex:use shp:householderFirstNameShape ;
   rdfs:label "Householder's first name"@en ;
   rdfs:label "Gezinshoofd voornaam"@nl .
 
