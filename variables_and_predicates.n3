@@ -4,6 +4,8 @@
 @prefix o-steps: <https://example.org/ns/oslo-steps#> .
 @prefix ex: <https://example.org/ns/example#> .
 @prefix var: <https://example.org/ns/var#> .
+@prefix shp: <https://example.org/ns/shapes#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
 #
 # Various kinds of data
 #
@@ -60,15 +62,16 @@ shp:nationalNumberPatternBelgium a sh:PropertyShape ;
   sh:name "The regular expression of a Belgian national number"@en ;
   sh:name "De reguliere expressie van een Belgisch Rijksregisternummer"@nl ;
   sh:name "Der reguläre Ausdruck einer belgischen Reichsregisternummer"@de ;
-  sh:path ex:nationalNumber ;
-  sh:pattern "^[0-9]{2}[.\- ]{0,1}[0-9]{2}[.\- ]{0,1}[0-9]{2}[.\- ]{0,1}[0-9]{3}[.\- ]{0,1}[0-9]{2}$" .
+  sh:path ex:nationalNumber .
+# This statement raises syntax errors in n3
+#  sh:pattern """^[0-9]{2}[.\- ]{0,1}[0-9]{2}[.\- ]{0,1}[0-9]{2}[.\- ]{0,1}[0-9]{3}[.\- ]{0,1}[0-9]{2}$""" .
 
 shp:nationalNumberObliged a sh:PropertyShape ;
   sh:name "Obliged national number"@en ;
   sh:name "Verplicht nationaal nummer"@nl ;
   sh:name "Benötigte Personenkennzeichnung"@de ;
   sh:description "There can be exactly one national number"@en ;
-  sh:description "Er kan precies één nationaal nummer zijn"@nl.
+  sh:description "Er kan precies één nationaal nummer zijn"@nl ;
   sh:description "Es kann nur genau eine Personenkennzeichnung geben"@de ;
   sh:path ex:nationalNumber ;
   sh:minCount 1 ;
@@ -78,6 +81,15 @@ shp:nationalNumberBelgiumShape a sh:NodeShape ;
   sh:property shp:nationalNumberPatternBelgium ;
   sh:property shp:nationalNumberObliged .
 
+shp:hasAtLeastOneFirstName a sh:PropertyShape ;
+  sh:name "has first name"@en ;
+  sh:name "heeft naam"@nl ;
+  sh:name "hat Vornamen"@de ;
+  sh:path ex:firstName ;
+  sh:minCount 1 .
+
+shp:householderFirstNameShape a sh:NodeShape ;
+  sh:property shp:hasAtLeastOneFirstName .
 
 
 #
