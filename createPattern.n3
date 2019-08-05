@@ -16,11 +16,11 @@ PREFIX list: <http://www.w3.org/2000/10/swap/list#>
 ?x a p-plan:Variable;
    ex:use ?shape.
 
-?shape sh:property ?p.
+?shape sh:property ?p;
+ sh:targetClass ?target .
 
-?p  sh:targetClass ?target ;
-  sh:path ?path ;
-  sh:minCount 1 .
+?p sh:path ?path ;
+   sh:minCount 1 .
 
 
 
@@ -29,7 +29,7 @@ PREFIX list: <http://www.w3.org/2000/10/swap/list#>
 }
 =>
 {
-?y ?path _:x. 
+?shape :expects {?y ?path _:x}. 
 }.
 
 
