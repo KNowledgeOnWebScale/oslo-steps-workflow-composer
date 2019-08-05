@@ -2,6 +2,7 @@
 @prefix p-plan: <http://purl.org/net/p-plan#> .
 @prefix o-address: <https://data.vlaanderen.be/ns/adres#> .
 @prefix o-steps: <https://example.org/ns/oslo-steps#> .
+@prefix oslo: <https://example.org/ns/oslo#> .
 @prefix ex: <https://example.org/ns/example#> .
 @prefix var: <https://example.org/ns/var#> .
 @prefix shp: <https://example.org/ns/shapes#> .
@@ -78,6 +79,9 @@ shp:nationalNumberObliged a sh:PropertyShape ;
   sh:maxCount 1 .
 
 shp:nationalNumberBelgiumShape a sh:NodeShape ;
+  sh:name "Householder national number"@en ;
+  sh:description "User with valid Belgian national number"@en ;
+  sh:targetClass oslo:Inwoner ;
   sh:property shp:nationalNumberPatternBelgium ;
   sh:property shp:nationalNumberObliged .
 
@@ -89,6 +93,9 @@ shp:hasAtLeastOneFirstName a sh:PropertyShape ;
   sh:minCount 1 .
 
 shp:householderFirstNameShape a sh:NodeShape ;
+  sh:name "Householder first name"@en ;
+  sh:description "User with a valid first name"@en ;
+  sh:targetClass oslo:Inwoner ;
   sh:property shp:hasAtLeastOneFirstName .
 
 
