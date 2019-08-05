@@ -1,0 +1,4 @@
+@prefix oslo: <https://example.org/ns/oslo#> .
+@prefix : <https://example.org/ns/example#> .
+
+:me a oslo:Inwoner. 
