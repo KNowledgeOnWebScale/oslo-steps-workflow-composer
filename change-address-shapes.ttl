@@ -1,0 +1,66 @@
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix shp: <https://example.org/ns/shapes#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix ex: <https://example.org/ns/example#> .
+@prefix o-persoon: <https://data.vlaanderen.be/ns/persoon#> .
+
+#
+# first name
+#
+shp:firstNameShape a sh:NodeShape ;
+  sh:name "A citizen's first name"@en ;
+  sh:description "User with valid first name"@en ;
+  sh:targetClass o-persoon:Inwoner ;
+  sh:property shp:firstNameLength .
+
+shp:firstNameLength a sh:PropertyShape ;
+  sh:name "First name length constraints"@en ;
+  sh:description "Minimum and maximum for a valid first name"@en ;
+  sh:path o-persoon:gebruikteVoornaam ;
+  sh:minLength 2 ;
+  sh:maxLength 25 .
+
+#
+# last name
+#
+shp:lastNameShape a sh:NodeShape ;
+  sh:name "A citizen's last name"@en ;
+  sh:description "User with valid first name"@en ;
+  sh:targetClass o-persoon:Inwoner ;
+  sh:property shp:lastNameLength .
+
+shp:lastNameLength a sh:PropertyShape ;
+  sh:name "First name length constraints"@en ;
+  sh:description "Minimum and maximum for a valid first name"@en ;
+  sh:path o-persoon:gebruikteVoornaam ;
+  sh:minLength 2 ;
+  sh:maxLength 25 .
+
+#
+# gender constraints (sorry 2019)
+#
+shp:genderShape a sh:NodeShape ;
+  sh:name "A citizen's gender"@en ;
+  sh:description "User with a valid gender"@en ;
+  sh:targetClass o-persoon:Inwoner ;
+  sh:property shp:genderValidValues .
+
+shp:genderValidValues a sh:PropertyShape ;
+  sh:name "Valid gender values"@en ;
+  sh:path o-persoon:geslacht ;
+  sh:in ( "male" "female" ) .
+
+#
+# Email address
+#
+shp:emailAddressShape a sh:NodeShape ;
+  sh:name "A citizen's email"@en ;
+  sh:description "User with a valid email address"@en ;
+  sh:targetClass o-persoon:Inwoner ;
+  sh:property shp:emailPattern .
+
+shp:emailPattern a sh:PropertyShape ;
+  sh:name "Valid email address"@en ;
+  sh:path ex:hasEmailAddress ;
+  sh:pattern "todo" .
+
