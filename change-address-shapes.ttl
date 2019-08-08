@@ -125,10 +125,10 @@ shp:validPhoneNumber a sh:NodeShape ;
     sh:select """
       SELECT ?this
       WHERE {
-        ?person a <https://data.vlaanderen.be/doc/applicatieprofiel/persoon-basis#Inwoner> ;
-             <https://data.vlaanderen.be/doc/applicatieprofiel/persoon-basis#contactinfo> ?this .
+        ?person a o-persoon:Inwoner> ;
+             o-persoon: ?this .
 
-        ?this <https://schema.org/contactType> ?type .
+        ?this schema: ?type .
 
         FILTER( ?type IN ("phone") )
       }
