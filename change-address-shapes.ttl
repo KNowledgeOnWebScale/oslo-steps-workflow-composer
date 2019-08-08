@@ -2,7 +2,10 @@
 @prefix shp: <https://example.org/ns/shapes#> .
 @prefix sh: <http://www.w3.org/ns/shacl#> .
 @prefix ex: <https://example.org/ns/example#> .
-@prefix o-persoon: <https://data.vlaanderen.be/ns/persoon#> .
+@prefix schema: <https://schema.org/> .
+
+# OSLO persoon application profile, because reused terms like first name are in an application profile
+@prefix o-persoon: <https://data.vlaanderen.be/doc/applicatieprofiel/persoon-basis#> .
 
 #
 # first name
@@ -16,7 +19,7 @@ shp:firstNameShape a sh:NodeShape ;
 shp:firstNameLength a sh:PropertyShape ;
   sh:name "First name length constraints"@en ;
   sh:description "Minimum and maximum for a valid first name"@en ;
-  sh:path o-persoon:gebruikteVoornaam ;
+  sh:path o-persoon:voornaam ;
   sh:minLength 2 ;
   sh:maxLength 25 .
 
@@ -32,7 +35,7 @@ shp:lastNameShape a sh:NodeShape ;
 shp:lastNameLength a sh:PropertyShape ;
   sh:name "First name length constraints"@en ;
   sh:description "Minimum and maximum for a valid first name"@en ;
-  sh:path o-persoon:gebruikteVoornaam ;
+  sh:path o-persoon:achternaam ;
   sh:minLength 2 ;
   sh:maxLength 25 .
 
@@ -61,6 +64,76 @@ shp:emailAddressShape a sh:NodeShape ;
 
 shp:emailPattern a sh:PropertyShape ;
   sh:name "Valid email address"@en ;
-  sh:path ex:hasEmailAddress ;
+  sh:path schema:email ;
   sh:pattern "todo" .
+
+#
+# Mobile phone number
+#
+shp:mobilePhoneNumber a sh:NodeShape ;
+  sh:name "A citizen's mobile phone number"@en ;
+  sh:description "User with a valid mobile phone number"@en ;
+  sh:targetClass o-persoon:Inwoner ;
+  # this is wrong, it says that additionally all person's mobile phone numbers should be valid, not just the one from this person
+  sh:and ( shp:validMobilePhoneNumber ) .
+
+
+# this shape targets all contactPoints with type 'mobile' or 'gsm' of a person
+shp:validMobilePhoneNumber a sh:NodeShape ;
+  sh:name "Valid mobile phone number"@en ;
+  sh:target [
+    a sh:SPARQLTarget ;
+    sh:select """
+      SELECT ?this
+      WHERE {
+        ?person a <https://data.vlaanderen.be/doc/applicatieprofiel/persoon-basis#Inwoner> ;
+             <https://data.vlaanderen.be/doc/applicatieprofiel/persoon-basis#contactinfo> ?this .
+
+        ?this <https://schema.org/contactType> ?type .
+
+        FILTER( ?type IN ("mobile" "gsm") )
+      }
+    """ ;
+  ] ;
+  sh:and ( shp:mobilePhoneNumberPattern ) .
+
+shp:mobilePhoneNumberPattern a sh:PropertyShape ;
+  sh:name "Valid mobile phone number"@en ;
+  sh:path schema:telephone ;
+  sh:pattern "todo" .
+
+#
+# phone number
+#
+shp:phoneNumber a sh:NodeShape ;
+  sh:name "A citizen's phone number"@en ;
+  sh:description "User with a valid phone number"@en ;
+  sh:targetClass o-persoon:Inwoner ;
+  # this is wrong, it says that additionally all person's mobile phone numbers should be valid, not just the one from this person
+  sh:and ( shp:validPhoneNumber ) .
+
+# this shape targets all contactPoints with type 'phone' of a person
+shp:validPhoneNumber a sh:NodeShape ;
+  sh:name "Valid phone number"@en ;
+  sh:target [
+    a sh:SPARQLTarget ;
+    sh:select """
+      SELECT ?this
+      WHERE {
+        ?person a <https://data.vlaanderen.be/doc/applicatieprofiel/persoon-basis#Inwoner> ;
+             <https://data.vlaanderen.be/doc/applicatieprofiel/persoon-basis#contactinfo> ?this .
+
+        ?this <https://schema.org/contactType> ?type .
+
+        FILTER( ?type IN ("phone") )
+      }
+    """ ;
+  ] ;
+  sh:and ( shp:phoneNumberPattern ) .
+
+shp:phoneNumberPattern a sh:PropertyShape ;
+  sh:name "Valid phone number"@en ;
+  sh:path schema:telephone ;
+  sh:pattern "todo" .
+
 
