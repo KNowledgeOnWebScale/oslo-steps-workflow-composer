@@ -1,11 +1,16 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix shp: <https://example.org/ns/shapes#> .
+@prefix shp: <http://fast.ilabt.imec.be/states#> .
 @prefix sh: <http://www.w3.org/ns/shacl#> .
 @prefix ex: <https://example.org/ns/example#> .
 @prefix schema: <https://schema.org/> .
 
 # OSLO persoon application profile, because reused terms like first name are in an application profile
 @prefix o-persoon: <https://data.vlaanderen.be/doc/applicatieprofiel/persoon-basis#> .
+
+# needed for advanced shacl, to use prefixes in SPARQL query string
+<https://schema.org/> sh:prefix "schema" .
+<https://data.vlaanderen.be/doc/applicatieprofiel/persoon-basis#> sh:prefix "o-persoon" .
+
 
 #
 # first name
@@ -70,7 +75,7 @@ shp:emailPattern a sh:PropertyShape ;
 #
 # Mobile phone number
 #
-shp:mobilePhoneNumber a sh:NodeShape ;
+shp:mobilePhoneNumberShape a sh:NodeShape ;
   sh:name "A citizen's mobile phone number"@en ;
   sh:description "User with a valid mobile phone number"@en ;
   sh:targetClass o-persoon:Inwoner ;
@@ -105,7 +110,7 @@ shp:mobilePhoneNumberPattern a sh:PropertyShape ;
 #
 # phone number
 #
-shp:phoneNumber a sh:NodeShape ;
+shp:phoneNumberShape a sh:NodeShape ;
   sh:name "A citizen's phone number"@en ;
   sh:description "User with a valid phone number"@en ;
   sh:targetClass o-persoon:Inwoner ;

@@ -4,8 +4,9 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix p-plan: <http://purl.org/net/p-plan#> .
 @prefix o-address: <https://data.vlaanderen.be/ns/adres#> .
-@prefix o-steps: <https://example.org/ns/oslo-steps#> .
+@prefix o-steps: <http://fast.ilabt.imec.be/ns/oslo-steps/0.1#> .
 @prefix ex: <https://example.org/ns/example#> .
+@prefix shp: <http://fast.ilabt.imec.be/states#> .
 
 #
 # Various kinds of data
@@ -14,33 +15,48 @@
 #
 # data regarding a householder
 #
-ex:householderFirstName a p-plan:Variable ;
-  rdfs:label "Householder's first name"@en ;
-  rdfs:label "Gezinshoofd voornaam"@nl .
+ex:citizenFirstNameKnown a o-steps:State;
+  rdfs:label "Citizen first name"@en ;
+  rdfs:label "Inwoner voornaam"@nl ;
+  rdfs:label "Einwohner Vorname"@de ;
+  o-steps:hasStateShape shp:firstNameShape .
 
-ex:householderLastName a p-plan:Variable ;
-  rdfs:label "Householder's last name"@en ;
-  rdfs:label "Gezinshoofd naam"@nl .
+ex:citizenLastNameKnown a o-steps:State;
+  rdfs:label "Citizen last name"@en ;
+  rdfs:label "Inwoner naam"@nl ;
+  rdfs:label "Einwohner Nachname"@de ;
+  o-steps:hasStateShape shp:lastNameShape .
 
-ex:householderGender a p-plan:Variable ;
-  rdfs:label "Householder's gender"@en ;
-  rdfs:label "Geslacht gezinshoofd"@nl .
+ex:citizenGender a p-plan:Variable ;
+  rdfs:label "Citizen gender"@en ;
+  rdfs:label "Inwoner Geslacht"@nl ;
+  rdfs:label "Einwohner Geschlecht"@de ;
+  o-steps:hasStateShape shp:genderShape .
 
-ex:householderEmail a p-plan:Variable ;
-  rdfs:label "Householder's email address"@en ;
-  rdfs:label "Email gezinshoofd"@nl .
+ex:citizenEmailAddress a o-steps:State ;
+  rdfs:label "Citizen email address"@en ;
+  rdfs:label "Inwoner email address"@nl ;
+  rdfs:label "Einwohner Email Adresse"@de ;
+  o-steps:hasStateShape shp:emailAddressShape .
 
-ex:householderMobilePhoneNumber a p-plan:Variable ;
-  rdfs:label "Householder's mobile phone number"@en ;
-  rdfs:label "GSM gezinshoofd"@nl .
+ex:citizenMobilePhoneNumber a o-steps:State;
+  rdfs:label "Citizen mobile phone number"@en ;
+  rdfs:label "Inwoner GSM"@nl ;
+  rdfs:label "Einwohner Mobilfunknummer"@de ;
+  o-steps:hasStateShape shp:mobilePhoneNumberShape .
 
-ex:householderPhoneNumber a p-plan:Variable ;
-  rdfs:label "Householder's phone number"@en ;
-  rdfs:label "Telefoon gezinshoofd"@nl .
+ex:citizenPhoneNumber a o-steps:State;
+  rdfs:label "Citizen phone number"@en ;
+  rdfs:label "Inwoner telefoon"@nl ;
+  rdfs:label "Einwohner Telefonnummer"@de ;
+  o-steps:hasStateShape shp:phoneNumberShape .
 
-ex:householderNationalNumber a p-plan:Variable ;
-  rdfs:label "Householder's national number"@en ;
-  rdfs:label "Rijksregister gezinshoofd"@nl .
+ex:citizenNationalNumber a o-steps:State;
+  rdfs:label "Citizen national number"@en ;
+  rdfs:label "Inwoner Rijksregisternummer"@nl ;
+  o-steps:hasStateShape shp:nationalNumberBelgiumShape .
+  
+# updated to using OSLO-STEPS until HERE!
 
 ex:householderBankAccountNumber a p-plan:Variable ;
   rdfs:label "Householder's bank account number"@en ;
