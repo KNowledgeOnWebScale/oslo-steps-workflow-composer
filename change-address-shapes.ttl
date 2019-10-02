@@ -3,6 +3,8 @@
 @prefix sh: <http://www.w3.org/ns/shacl#> .
 @prefix ex: <https://example.org/ns/example#> .
 @prefix schema: <https://schema.org/> .
+@prefix ops: <https://data.vlaanderen.be/shacl/persoon-basis#> .
+@prefix o-steps: <https://fast.ilabt.imec.be/ns/oslo-steps#> .
 
 # OSLO persoon application profile, because reused terms like first name are in an application profile
 @prefix o-persoon: <https://data.vlaanderen.be/doc/applicatieprofiel/persoon-basis#> .
@@ -204,3 +206,79 @@ shp:validNationality a sh:PropertyShape ;
 #
 # residence permit
 #
+shp:residencePermitShape a o-steps:StateShape ;
+  rdfs:label "Citizen residence permit"@en ;
+  rdfs:comment "User with valid residence permit"@en ;
+  rdfs:comment "Assuming that if a Citizen has an official address there is also a residence permit. Needs a change!"@en ;
+  sh:targetClass o-persoon:Inwoner ;
+  sh:property shp:validResidence .
+
+shp:validResidence a sh:PropertyShape ;
+  rdfs:label "Valid residence"@en ;
+  rdfs:comment "Assuming that if a Citizen has an official address there is also a residence permit. Needs a change!"@en ;
+  sh:path o-persoon:heeftVerblijfplaats ;
+  sh:class o-persoon:Verblijfplaats .
+
+#
+# birth date
+#  
+shp:birthDateShape a o-steps:StateShape ;
+  rdfs:label "Citizen birth date"@en ;
+  rdfs:comment "User with a valid birth date"@en ;
+  sh:targetClass o-persoon:Inwoner ;
+  sh:property shp:validBirth .
+
+shp:validBirth a sh:PropertyShape ;
+  rdfs:label "Valid date of birth"@en ;
+  sh:path o-persoon:heeftGeboorte ;
+  sh:minCount 1 ;
+  sh:maxCount 1 ;
+  sh:class o-persoon:Geboorte ;
+  sh:node ops:PersoonsgebeurtenisShape .
+
+#
+# city of birth
+#
+shp:cityOfBirthShape a o-steps:StateShape ;
+  rdfs:label "Citizen city of birth"@en ;
+  sh:targetClass o-persoon:Inwoner ;
+  sh:property shp:validBirth .
+
+#
+# address
+#
+shp:addressShape a o-steps:StateShape ;
+  rdfs:label "Citizen address"@en ;
+  sh:targetClass o-persoon:Inwoner ;
+  sh:property shp:validAddress .
+
+shp:validAddress a sh:PropertyShape ;
+  rdfs:label "valid address"@en ;
+  sh:path o-persoon:verblijfsadres ;
+  sh:node ops:VerblijfplaatsShape .
+
+#
+# profession
+#
+shp:professionShape a o-steps:StateShape ;
+  rdfs:label "Citizen profession"@en ;
+  sh:targetClass o-persoon:Inwoner ;
+  sh:property shp:validProfession .
+
+shp:validProfession a sh:PropertyShape ;
+  rdfs:label "Valid profession" ;
+  sh:path schema:hasOccupation ;
+  sh:minCount 1 .
+
+#
+# number of family members
+#
+shp:numberOfFamilyMembersShape a o-steps:StateShape ;
+  rdfs:label "Citizen number of family members"@en ;
+  sh:targetClass o-persoon:Inwoner ;
+  sh:property shp:validNumberOfFamilyMembers .
+
+shp:validNumberOfFamilyMembers a sh:PropertyShapes ;
+  rdfs:label "valid number of family members"@en ;
+  sh:path ex:numberOfFamilyMembers ;
+  sh:minInclusive 1 .
