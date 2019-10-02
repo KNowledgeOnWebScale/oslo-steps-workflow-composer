@@ -27,7 +27,7 @@ ex:citizenLastNameKnown a o-steps:State;
   rdfs:label "Einwohner Nachname"@de ;
   o-steps:hasStateShape shp:lastNameShape .
 
-ex:citizenGender a p-plan:Variable ;
+ex:citizenGender a o-steps:State ;
   rdfs:label "Citizen gender"@en ;
   rdfs:label "Inwoner Geslacht"@nl ;
   rdfs:label "Einwohner Geschlecht"@de ;
@@ -54,42 +54,57 @@ ex:citizenPhoneNumber a o-steps:State;
 ex:citizenNationalNumber a o-steps:State;
   rdfs:label "Citizen national number"@en ;
   rdfs:label "Inwoner Rijksregisternummer"@nl ;
-  o-steps:hasStateShape shp:nationalNumberBelgiumShape .
-  
-# updated to using OSLO-STEPS until HERE!
+  o-steps:hasStateShape shp:nationalNumberBelgiumShape .  
 
-ex:householderBankAccountNumber a p-plan:Variable ;
-  rdfs:label "Householder's bank account number"@en ;
-  rdfs:label "rekeningsnummer gezinshoofd"@nl .
+ex:citizenBankAccountNumber a o-steps:State ;
+  rdfs:label "Citizen bank account number"@en ;
+  rdfs:label "Inwoner rekeningsnummer"@nl ;
+  rdfs:label "Einwohner Bankverbindung"@de ;
+  o-steps:hasStateShape shp:bankAccountNumberEuropeShape .
 
-ex:householderNationality a p-plan:Variable ;
-  rdfs:label "Householder's nationality"@en ;
-  rdfs:label "nationaliteit gezinshoofd"@nl .
+ex:citizenNationality a o-steps:State ;
+  rdfs:label "Citizen nationality"@en ;
+  rdfs:label "Inwoner nationaliteit"@nl ;
+  rdfs:label "Einwohenr Nationalität"@de ;
+  o-steps:hasStateShape shp:nationalityShape .
 
-ex:householderResidencePermit a p-plan:Variable ;
-  rdfs:label "Householder's residency permit"@en ;
-  rdfs:label "verblijfsvergunning"@nl .
+ex:citizenResidencePermit a o-steps:State ;
+  rdfs:label "Citizen residency permit"@en ;
+  rdfs:label "Inwoner verblijfsvergunning"@nl ;
+  rdfs:label "Einwohner Aufenthaltsgenehmigung"@de ;
+  o-steps:hasStateShape shp:residencePermit .
 
-ex:householderBirthDate a p-plan:Variable ;
-  rdfs:label "Householder's date of birth"@en ;
-  rdfs:label "geboortedatum gezinshoofd"@nl .
+ex:citizenBirthDate a o-steps:State ;
+  rdfs:label "Citizen date of birth"@en ;
+  rdfs:label "Inwoner geboortedatum"@nl ;
+  rdfs:label "Einwohner Geburtsdatum"@de ;
+  o-steps:hasStateShape shp:birthDateShape .
 
-ex:householderCityOfBirth a p-plan:Variable ;
-  rdfs:label "Householder's city of birth"@en ;
-  rdfs:label "Geboorteplaats"@nl .
+ex:citizenCityOfBirth a p-plan:Variable ;
+  rdfs:label "Citizen city of birth"@en ;
+  rdfs:label "Inwoner geboorteplaats"@nl ;
+  rdfs:label "Einwohner Geburtsort"@de ;
+  o-steps:hasStateShape shp:cityOfBirthShape .
 
-ex:householderAddress a p-plan:Variable ;
-  rdfs:label "Householder's address"@en ;
-  rdfs:label "adres gezinshoofd"@nl .
+ex:citizenAddress a o-steps:State ;
+  rdfs:label "Citizen address"@en ;
+  rdfs:label "Inwoner adres"@nl ;
+  rdfs:label "Einwohner Adresse"@de ;
+  o-steps:hasStateShape shp:addressShape .
 
-ex:householderProfession a p-plan:Variable ;
-  rdfs:label "Householder's profession"@en ;
-  rdfs:label "beroep gezinshoofd"@nl .
+ex:citizenProfession a o-steps:State ;
+  rdfs:label "Citizen profession"@en ;
+  rdfs:label "Inwoner beroep"@nl ;
+  rdfs:label "Einwohner Beruf"@de ;
+  o-steps:hasStateShape shp:professionShape .
 
-ex:numberOfFamilyMembers a p-plan:Variable ;
+ex:numberOfFamilyMembers a o-steps:State ;
   rdfs:label "Number of family members"@en ;
-  rdfs:label "Aantal gezinsleden"@nl .
+  rdfs:label "Aantal gezinsleden"@nl ;
+  rdfs:label "Anzahl Familienmitglieder"@de ;
+  o-steps:hasStateShape shp:numberOfFamilyMembersShape .
 
+# updated to using OSLO-STEPS until HERE!
 
 #
 # data regarding moving
