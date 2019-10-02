@@ -72,7 +72,7 @@ ex:citizenResidencePermit a o-steps:State ;
   rdfs:label "Citizen residency permit"@en ;
   rdfs:label "Inwoner verblijfsvergunning"@nl ;
   rdfs:label "Einwohner Aufenthaltsgenehmigung"@de ;
-  o-steps:hasStateShape shp:residencePermit .
+  o-steps:hasStateShape shp:residencePermitShape .
 
 ex:citizenBirthDate a o-steps:State ;
   rdfs:label "Citizen date of birth"@en ;
