@@ -1,0 +1,28 @@
+
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix ex: <https://example.org/ns/example#> .
+@prefix o-persoon: <https://data.vlaanderen.be/doc/applicatieprofiel/persoon-basis#> .
+@prefix schema: <https://schema.org/> .
+
+ex:sven a o-persoon:Inwoner ;
+  o-persoon:voornaam "Sven"@en ;
+  o-persoon:achternaam "Lieber"@en ;
+  o-persoon:geslacht "male" ;
+  schema:email "Sven.Lieber@ugent.be"@en ;
+  o-persoon:registratie "123456789"@en ;
+  ex:bankAccountNumber "BE28 123 456 789"@en ;
+  o-persoon:heeftNationaliteit ex:svenNationality ;
+  o-persoon:heeftVerblijfsplaats ex:svenVerblijfsplaats ;
+  o-persoon:heeftGeboorte ex:svenGeboorte ;
+  o-persoon:verblijfsadres ex:svenVerblifsplaats ;
+  schema:hasOccupation ex:svenOccupation ;
+  ex:numberOfFamilyMembers 1 .
+
+
+ex:svenNationality a o-persoon:Nationaliteit .
+
+ex:svenVerblijfsplaats a o-persoon:Verblijfsplaats .
+
+ex:svenGeboorte a o-persoon:Geboorte .
+
+ex:svenOccupation a schema:Occupation .
