@@ -1,13 +1,13 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
 @prefix shp: <http://fast.ilabt.imec.be/states#> .
 @prefix sh: <http://www.w3.org/ns/shacl#> .
 @prefix ex: <https://example.org/ns/example#> .
 @prefix schema: <https://schema.org/> .
 @prefix ops: <https://data.vlaanderen.be/shacl/persoon-basis#> .
 @prefix o-steps: <https://fast.ilabt.imec.be/ns/oslo-steps#> .
+@prefix o-persoon: <https://data.vlaanderen.be/ns/persoon#> .
 
-# OSLO persoon application profile, because reused terms like first name are in an application profile
-@prefix o-persoon: <https://data.vlaanderen.be/doc/applicatieprofiel/persoon-basis#> .
 
 # needed for advanced shacl, to use prefixes in SPARQL query string
 <https://schema.org/> sh:prefix "schema" .
@@ -26,7 +26,7 @@ shp:firstNameShape a o-steps:StateShape ;
 shp:firstNameLength a sh:PropertyShape ;
   rdfs:label "First name length constraints"@en ;
   rdfs:comment "Minimum and maximum for a valid first name"@en ;
-  sh:path o-persoon:voornaam ;
+  sh:path foaf:givenName ;
   sh:minLength 2 ;
   sh:maxLength 25 .
 
@@ -42,9 +42,9 @@ shp:lastNameShape a o-steps:StateShape ;
 shp:lastNameLength a sh:PropertyShape ;
   rdfs:label "First name length constraints"@en ;
   rdfs:comment "Minimum and maximum for a valid first name"@en ;
-  sh:path o-persoon:achternaam ;
+  sh:path foaf:familyName ;
   sh:minLength 2 ;
-  sh:maxLength 25 .
+  sh:maxLength 55 .
 
 #
 # gender constraints (sorry 2019)

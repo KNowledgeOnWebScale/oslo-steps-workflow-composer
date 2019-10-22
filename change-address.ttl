@@ -80,7 +80,7 @@ ex:citizenBirthDate a o-steps:State ;
   rdfs:label "Einwohner Geburtsdatum"@de ;
   o-steps:hasStateShape shp:birthDateShape .
 
-ex:citizenCityOfBirth a p-plan:Variable ;
+ex:citizenCityOfBirth a o-steps:State ;
   rdfs:label "Citizen city of birth"@en ;
   rdfs:label "Inwoner geboorteplaats"@nl ;
   rdfs:label "Einwohner Geburtsort"@de ;
@@ -104,124 +104,176 @@ ex:numberOfFamilyMembers a o-steps:State ;
   rdfs:label "Anzahl Familienmitglieder"@de ;
   o-steps:hasStateShape shp:numberOfFamilyMembersShape .
 
-# updated to using OSLO-STEPS until HERE!
 
 #
 # data regarding moving
 #
-ex:applicantInfo a p-plan:Variable ;
+ex:applicantInfo a o-steps:State ;
   rdfs:label "Applicant information"@en ;
-  rdfs:label "Aanvrager information"@nl .
+  rdfs:label "Aanvrager information"@nl ;
+  rdfs:label "Antragssteller informationen"@de .
 
-ex:movingDate a p-plan:Variable ;
+ex:movingDate a o-steps:State ;
   rdfs:label "Moving date"@en ;
-  rdfs:label "Verhuisdatum"@nl .
+  rdfs:label "Verhuisdatum"@nl ;
+  rdfs:label "Umzugsdatum"@de ;
+  o-steps:hasStateShape shp:movingDateShape .
 
-ex:movingAddress a p-plan:Variable ;
+ex:movingAddress a o-steps:State ;
   rdfs:label "Address to move to"@en ;
-  rdfs:label "Adres waarnar wordt verplaatst"@nl .
+  rdfs:label "Adres waarnar wordt verplaatst"@nl ;
+  rdfs:label "Umzugsadresse"@de ;
+  o-steps:hasStateShape shp:movingAddressShape .
 
-ex:billingAddress a p-plan:Variable ;
+ex:billingAddress a o-steps:State ;
   rdfs:label "Billing address"@en ;
-  rdfs:label "Facturatieadres"@nl .
+  rdfs:label "Facturatieadres"@nl ;
+  rdfs:label "Rechnungsadresse"@de ;
+  o-steps:hasStateShape shp:billingAddressShape .
 
-ex:movingCity a p-plan:Variable ;
+ex:movingCity a o-steps:State ;
   rdfs:label "City to move to"@en ;
-  rdfs:label "Stad waarnaar wordt verplaatst"@nl .
+  rdfs:label "Stad waarnaar wordt verplaatst"@nl ;
+  rdfs:label "Stadt in die umgezogen wird"@de ;
+  o-steps:hasStateShape shp:movingCityShape .
 
 #
 # data regarding waste disposal
 #
-ex:wasteCollectionRequested a p-plan:Variable ;
+ex:wasteCollectionRequested a o-steps:State ;
   rdfs:label "Waste collection request"@en ;
-  rdfs:label "Aanvrag afvalcontainers"@nl .
+  rdfs:label "Aanvrag afvalcontainers"@nl ;
+  rdfs:label "Antrag für Müllabfuhr"@de ;
+  o-steps:hasStateShape shp:wasteCollectionRequestShape .
 
-ex:numberOf40LiterGreyWasteContainers a p-plan:Variable ;
+ex:numberOf40LiterGreyWasteContainers a o-steps:State ;
   rdfs:label "Number of 40 liter grey waste containers"@en ;
-  rdfs:label "Aantal 40 liter grijze restafval containers"@nl .
+  rdfs:label "Aantal 40 liter grijze restafval containers"@nl ;
+  rdfs:label "Anzahl grauer Restabfallcontainer 40 liter"@de ;
+  o-steps:hasStateShape shp:number40LiterGreyWasteContainerShape .
 
-ex:numberOf120LiterGreyWasteContainers a p-plan:Variable ;
+ex:numberOf120LiterGreyWasteContainers a o-steps:State ;
   rdfs:label "Number of 120 liter grey waste containers"@en ;
-  rdfs:label "Aantal 120 liter grijze restafval containers"@nl .
+  rdfs:label "Aantal 120 liter grijze restafval containers"@nl ;
+  rdfs:label "Anzahl grauer Restabfallcontainer 120 liter"@de ;
+  o-steps:hasStateShape shp:number120LiterGreyWasteContainerShape .
 
-ex:numberOf240LiterGreyWasteContainers a p-plan:Variable ;
+ex:numberOf240LiterGreyWasteContainers a o-steps:State ;
   rdfs:label "Number of 240 liter grey waste containers"@en ;
-  rdfs:label "Aantal 240 liter grijze restafval containers"@nl .
+  rdfs:label "Aantal 240 liter grijze restafval containers"@nl ;
+  rdfs:label "Anzahl grauer Restabfallcontainer 240 liter"@de ;
+  o-steps:hasStateShape shp:number240LiterGreyWasteContainerShape .
 
-ex:greyWasteContainerLockInfo a p-plan:Variable ;
+ex:greyWasteContainerLockInfo a o-steps:State ;
   rdfs:label "Grey waste container lock"@en ;
-  rdfs:label "Grijze restafval container slot"@nl .
+  rdfs:label "Grijze restafval container slot"@nl ;
+  rdfs:label "Schloss für graue Restabfallcontainer"@de ;
+  o-steps:hasStateShape shp:greyWasteContainerLockShape .
 
-ex:greyWasteContainerInfo a p-plan:Variable ;
+ex:greyWasteContainerInfo a o-steps:State ;
   rdfs:label "Grey waste container(s)"@en ;
-  rdfs:label "Grijze restafvalcontainer(s)"@nl .
+  rdfs:label "Grijze restafvalcontainer(s)"@nl ;
+  rdfs:label "Graue Abfallcontainer"@de ;
+  o-steps:hasStateShape shp:greyWasteContainerInfoShape .
 
 
-ex:numberOf40LiterGreenWasteContainers a p-plan:Variable ;
+ex:numberOf40LiterGreenWasteContainers a o-steps:State ;
   rdfs:label "Number of 40 liter green waste containers"@en ;
-  rdfs:label "Aantal 40 liter GFT containers"@nl .
+  rdfs:label "Aantal 40 liter GFT containers"@nl ;
+  rdfs:label "Anzahl Biomüllcontainer 40 liter"@de ;
+  o-steps:hasStateShape shp:number40LiterGreenWasteContainerShape .
 
-ex:numberOf120LiterGreenWasteContainers a p-plan:Variable ;
+ex:numberOf120LiterGreenWasteContainers a o-steps:State ;
   rdfs:label "Number of 120 liter green waste containers"@en ;
-  rdfs:label "Aantal 120 liter GFT containers"@nl .
+  rdfs:label "Aantal 120 liter GFT containers"@nl ;
+  rdfs:label "Anzahl Biomüllcontainer 120 liter"@de ;
+  o-steps:hasStateShape shp:number120LiterGreenWasteContainerShape .
 
-ex:greenWasteContainerOwnCompostInfo a p-plan:Variable ;
+ex:greenWasteContainerOwnCompostInfo a o-steps:State ;
   rdfs:label "Own compost"@en ;
-  rdfs:label "GFT zelf composteer"@nl .
+  rdfs:label "GFT zelf composteer"@nl ;
+  rdfs:label "Selbstkompostierung"@de ;
+  o-steps:hasStateShape shp:greenWasteSelfCompostShape .
 
-ex:greenWasteContainerStopCollectingInfo a p-plan:Variable ;
-  rdfs:label "Stop collecting green waste contaienr"@en ;
-  rdfs:label "Ophaling GFT-container door stopzetting"@nl .
+ex:greenWasteContainerStopCollectingInfo a o-steps:State ;
+  rdfs:label "Stop collecting green waste container"@en ;
+  rdfs:label "Ophaling GFT-container door stopzetting"@nl ;
+  rdfs:label "Abholung von Biomüll stoppen"@de ; 
+  o-steps:hasStateShape shp:greenWasteContainerStopCollectingInfoShape .
 
-ex:greenWasteContainerLockInfo a p-plan:Variable ;
+ex:greenWasteContainerLockInfo a o-steps:State ;
   rdfs:label "Green waste container lock"@en ;
-  rdfs:label "GFT container slot"@nl .
+  rdfs:label "GFT container slot"@nl ;
+  rdfs:label "Schloss für Biomüllcontainer"@de ;
+  o-steps:hasStateShape shp:greenWasteContainerLockShape .
 
-ex:greenWasteContainerInfo a p-plan:Variable ;
+ex:greenWasteContainerInfo a o-steps:State ;
   rdfs:label "Green GFT waste container(s)"@en ;
-  rdfs:label "Groene GFT container(s)"@nl .
+  rdfs:label "Groene GFT container(s)"@nl ;
+  rdfs:label "Biomüllcontainer"@de ;
+  o-steps:hasStateShape shp:greenWasteContainerInfoShape .
 
 
-ex:numberOf40LiterPaperWasteContainers a p-plan:Variable ;
+ex:numberOf40LiterPaperWasteContainers a o-steps:State ;
   rdfs:label "Number of 40 liter paper waste contaienrs"@en ;
-  rdfs:label "Aantal 40 liter papier containers"@nl .
+  rdfs:label "Aantal 40 liter papier containers"@nl ;
+  rdfs:label "Anzahl Papiercontainer 40 liter"@de ;
+  o-steps:hasStateShape shp:number40LiterPaperWasteContainerShape .
 
-ex:numberOf240LiterPaperWasteContainers a p-plan:Variable ;
+ex:numberOf240LiterPaperWasteContainers a o-steps:State ;
   rdfs:label "Number of 240 liter paper waste contaienrs"@en ;
-  rdfs:label "Aantal 240 liter papier containers"@nl .
+  rdfs:label "Aantal 240 liter papier containers"@nl ;
+  rdfs:label "Anzahl Papiercontainer 240 liter"@de ;
+  o-steps:hasStateShape shp:number240LiterPaperWasteContainerShape .
 
-ex:numberOf1100LiterPaperWasteContainers a p-plan:Variable ;
+ex:numberOf1100LiterPaperWasteContainers a o-steps:State ;
   rdfs:label "Number of 1100 liter paper waste containers"@en ;
-  rdfs:label "Aantal 1100 liter papier containers"@nl .
+  rdfs:label "Aantal 1100 liter papier containers"@nl ;
+  rdfs:label "Anzahl Papiercontainer 1100 liter"@de ;
+  o-steps:hasStateShape shp:number1100LiterPaperWasteContainerShape .
 
-ex:paperWasteContainerInfo a p-plan:Variable ;
+ex:paperWasteContainerInfo a o-steps:State ;
   rdfs:label "Paper waste container(s)"@en ;
-  rdfs:label "Papiercontainer(s)"@nl .
+  rdfs:label "Papiercontainer(s)"@nl ;
+  rdfs:label "Papiercontainer"@de ;
+  o-steps:hasStateShape shp:paperWasteContaierInfoShape .
 
 #
 # data regarding municipality
 #
 
-ex:addressChangeDeclared a p-plan:Variable ;
+ex:addressChangeDeclared a o-steps:State ;
   rdfs:label "Declared address change"@en ;
-  rdfs:label "Adreswijziging verklaard"@nl .
+  rdfs:label "Adreswijziging verklaard"@nl ;
+  rdfs:label "Adressänderung angefragt"@de ;
+  o-steps:hasStateShape shp:addressChangeDeclaredShape .
 
-ex:householderAtNewAddress a p-plan:Variable ;
-  rdfs:label "Met the householder at new address"@en ;
-  rdfs:label "Ontmoette de bewoner op nieuw adres"@nl .
+ex:citizenAtNewAddress a o-steps:State ;
+  rdfs:label "Met the citizen at new address"@en ;
+  rdfs:label "Ontmoette de bewoner op nieuw adres"@nl ;
+  rdfs:label "Bewohner an neuer Adresse angetroffen"@de ;
+  o-steps:hasStateShape shp:citizenAtNewAddressShape .
 
-ex:addressChangeConfirmed a p-plan:Variable ;
+ex:addressChangeConfirmed a o-steps:State ;
   rdfs:label "Confirmed address change"@en ;
-  rdfs:label "Adreswijziging bevestigd"@nl .
+  rdfs:label "Adreswijziging bevestigd"@nl ;
+  rdfs:label "Adressänderung bestätigt"@de ;
+  o-steps:hasStateShape shp:addressChangeConfirmedShape .
 
 
-ex:addressChangedOnEID a p-plan:Variable ;
+ex:addressChangedOnEID a o-steps:State ;
   rdfs:label "Address updated on eID card"@en ;
-  rdfs:label "Adreswijziging bevestigd op eID"@nl .
+  rdfs:label "Adreswijziging bevestigd op eID"@nl ;
+  rdfs:label "Adressänderung auf eID Karte gespeichert"@de ;
+  o-steps:hasStateShape shp:addressChangeOnEIDShape .
 
-ex:householderBringsEID a p-plan:Variable ;
-  rdfs:label "Householder brings eID"@en ;
-  rdfs:label "Gezinshoofd brengt eID"@nl .
+ex:citizenBroughtEID a o-steps:State ;
+  rdfs:label "Citizen brought eID"@en ;
+  rdfs:label "Inwoner brengt eID"@nl ;
+  rdfs:label "Einwohner hat eID Karte vorgelegt"@de ;
+  o-steps:hasStateShape shp:citizenBroughtEIDShape .
+
+# updated to using OSLO-STEPS until HERE!
 
 #
 # Steps to provide various kinds of data
