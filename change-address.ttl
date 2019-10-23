@@ -13,7 +13,7 @@
 #
 
 #
-# data regarding a householder
+# data regarding a citizen
 #
 ex:citizenFirstNameKnown a o-steps:State;
   rdfs:label "Citizen first name"@en ;
@@ -273,14 +273,13 @@ ex:citizenBroughtEID a o-steps:State ;
   rdfs:label "Einwohner hat eID Karte vorgelegt"@de ;
   o-steps:hasStateShape shp:citizenBroughtEIDShape .
 
-# updated to using OSLO-STEPS until HERE!
 
 #
 # Steps to provide various kinds of data
 #
 
 #
-# Steps to provide information of the householder in a manual fashion
+# Steps to provide information of the citizen in a manual fashion
 #
 ex:provideCitizenFirstNameManually a o-steps:Step ;
   rdfs:label "Citizen's first name"@en ;
@@ -326,34 +325,40 @@ ex:provideCitizenNationalNumberManually a o-steps:Step ;
 
 # updated steps to OSLO-STEPS states until here
 
-ex:provideHouseholderBankAccountNumberManually a o-steps:Step ;
-  rdfs:label "Householder's bank account number"@en ;
-  rdfs:label "rekeningsnummer gezinshoofd"@nl ;
-  o-steps:producesState ex:householderBankAccountNumber .
+ex:provideCitizenBankAccountNumberManually a o-steps:Step ;
+  rdfs:label "Citizen's bank account number"@en ;
+  rdfs:label "rekeningsnummer inwoner"@nl ;
+  rdfs:label "Bankverbindungsdaten Einwohner"@de ;
+  o-steps:producesState ex:citizenBankAccountNumber .
 
-ex:provideHouseholderResidencePermitManually a o-steps:Step ;
-  rdfs:label "Householder's residency permit"@en ;
+ex:provideCitizenResidencePermitManually a o-steps:Step ;
+  rdfs:label "Citizen's residency permit"@en ;
   rdfs:label "verblijfsvergunning"@nl ;
-  o-steps:producesState ex:householderResidencePermit .
+  rdfs:label "Aufenthaltsgenehmigung"@de ;
+  o-steps:producesState ex:citizenResidencePermit .
 
-ex:provideHouseholderBirthDataManually a o-steps:Step ;
-  rdfs:label "Householder's date of birth"@en ;
-  rdfs:label "geboortedatum gezinshoofd"@nl ;
-  o-steps:producesState ex:householderBirthDate .
+ex:provideCitizenBirthDataManually a o-steps:Step ;
+  rdfs:label "Citizen's date of birth"@en ;
+  rdfs:label "geboortedatum inwoner"@nl ;
+  rdfs:label "Geburtsdatum Einwohner"@de ;
+  o-steps:producesState ex:citizenBirthDate .
 
-ex:provideHouseholderAddressManually a o-steps:Step ;
-  rdfs:label "Householder's address"@en ;
-  rdfs:label "adres gezinshoofd"@nl ;
-  o-steps:producesState ex:householderAddress .
+ex:provideCitizenAddressManually a o-steps:Step ;
+  rdfs:label "Citizen's address"@en ;
+  rdfs:label "adres inwoner"@nl ;
+  rdfs:label "Adresse Einwohner"@de ;
+  o-steps:producesState ex:citizenAddress .
 
-ex:provideHouseholderProfessionManually a o-steps:Step ;
-  rdfs:label "Householder's profession"@en ;
-  rdfs:label "beroep gezinshoofd"@nl ;
-  o-steps:producesState ex:householderProfession .
+ex:provideCitizenProfessionManually a o-steps:Step ;
+  rdfs:label "Citizen's profession"@en ;
+  rdfs:label "beroep inwoner"@nl ;
+  rdfs:label "Beruf Einwohner"@de ;
+  o-steps:producesState ex:citizenProfession .
 
 ex:provideNumberOfFamilyMembersManually a o-steps:Step ;
   rdfs:label "Number of family members"@en ;
   rdfs:label "Aantal gezinsleden"@nl ;
+  rdfs:label "Anzahl Familienmitglieder"@de ;
   o-steps:producesState ex:numberOfFamilyMembers .
 
 #
@@ -362,11 +367,13 @@ ex:provideNumberOfFamilyMembersManually a o-steps:Step ;
 ex:provideMovingDateManually a o-steps:Step ;
   rdfs:label "Moving date"@en ;
   rdfs:label "Verhuisdatum"@nl ;
+  rdfs:label "Umzungsdatum"@de ;
   o-steps:producesState ex:movingDate .
 
 ex:provideMovingCityManually a o-steps:Step ;
   rdfs:label "City to move to"@en ;
   rdfs:label "Stad waarnaar wordt verplaatst"@nl ;
+  rdfs:label "Stadt in die umgezogen wird"@de ;
   o-steps:producesState ex:movingCity .
 
 #
@@ -376,61 +383,73 @@ ex:provideMovingCityManually a o-steps:Step ;
 ex:provideNumberOf40LiterGreyWasteContainersManually a o-steps:Step ;
   rdfs:label "Number of 40 liter grey waste container(s)"@en ;
   rdfs:label "Aantal 40 liter grijze restafvalcontainer(s)"@nl ;
+  rdfs:label "Anzahl grauer Restabfallcontainer 40 liter"@de ;
   o-steps:producesState ex:numberOf40LiterGreyWasteContainers .
 
 ex:provideNumberOf120LiterGreyWasteContainersManualy a o-steps:Step ;
   rdfs:label "Number of 120 liter grey waste container(s)"@en ;
   rdfs:label "Aantal 120 liter grijze restafvalcontainer(s)"@nl ;
+  rdfs:label "Anzahl grauer Restabfallcontainer 120 liter"@de ;
   o-steps:producesState ex:numberOf120LiterGreyWasteContainers .
 
 ex:provideNumberOf240LiterGreyWasteContainers a o-steps:Step ;
   rdfs:label "Number of 240 liter grey waste container(s)"@en ;
   rdfs:label "Aantal 240 liter grijze restafvalcontainer(s)"@nl ;
+  rdfs:label "Anzahl grauer Restabfallcontainer 240 liter"@de ;
   o-steps:producesState ex:numberOf240LiterGreyWasteContainers .
 
 ex:provideGreyWasteContainerLockInfoManually a o-steps:Step ;
   rdfs:label "I request a lock for my grey waste container(s)"@en ;
   rdfs:label "Ik vraag een slot voor mijn grijze restafvalcontainer(s) aan"@nl ;
+  rdfs:label "Ich beantrage ein Schloss für meine Restabfallcontainer"@de ;
   o-steps:producesState ex:greyWasteContainerLockInfo .
 
 ex:provideNumberOf40LiterGreenWasteContainersManually a o-steps:Step ;
   rdfs:label "Number of 40 liter green waste container(s)"@en ;
   rdfs:label "Aantal 40 liter GFT container(s)"@nl ;
+  rdfs:label "Anzahl Biomüllcontainer 40 liter"@de ;
   o-steps:producesState ex:numberOf40LiterGreenWasteContainers .
 
 ex:provideNumberOf120LiterGreenWasteContainersManually a o-steps:Step ;
   rdfs:label "Number of 120 liter green waste container(s)"@en ;
   rdfs:label "Aantal 120 liter GFT container(s)"@nl ;
+  rdfs:label "Anzahl Biomüllcontainer 120 liter"@de ;
   o-steps:producesState ex:numberOf120LiterGreenWasteContainers .
 
 ex:provideGreenWasteContainerOwnCompostInfoManually a o-steps:Step ;
   rdfs:label "No green waste containers, because I compost on my own"@en ;
   rdfs:label "Geen GFT containers, want ik composteer mijn GFT zelf"@nl ;
+  rdfs:label "Keine Biomüllcontainer, weil ich selbst kompostiere"@de ;
   o-steps:producesState ex:greenWasteContainerOwnCompostInfo .
 
 ex:provideGreenWasteContainerCollectionStopInfoManually a o-steps:Step ;
   rdfs:label "Stop collecting green waste containers"@en ;
   rdfs:label "Ophaling GFT-container door stopzetting"@nl ;
+  rdfs:label "Abholung von Biomüll stoppen"@de ;
   o-steps:producesState ex:greenWasteContainerStopCollectingInfo .
 
 ex:provideGreenWasteContainerLockInfoManually a o-steps:Step ;
   rdfs:label "I request a lock for my green waste container(s)"@en ;
   rdfs:label "Ik vraag een slot voor mijn GFT container(s) aan"@nl ;
+  rdfs:label "Ich beantrage ein Schloss für meine Biomüllcontainer"@de ;
   o-steps:producesState ex:greenWasteContainerLockInfo .
 
 ex:provideNumberOf40LiterPaperWasteContainersManually a o-steps:Step ;
   rdfs:label "Number of 40 liter paper waste container(s)"@en ;
   rdfs:label "Aantal 40 liter papier container(s)"@nl ;
+  rdfs:label "Anzahl Papiercontainer 40 liter"@de ;
   o-steps:producesState ex:numberOf40LiterPaperWasteContainers .
 
 ex:provideNumberOf240LiterPaperWasteContainersManually a o-steps:Step ;
   rdfs:label "Number of 240 liter paper waste container(s)"@en ;
   rdfs:label "Aantal 240 liter papier container(s)"@nl ;
+  rdfs:label "Anzahl Papiercontainer 240 liter"@de ;
   o-steps:producesState ex:numberOf240LiterPaperWasteContainers .
 
 ex:provideNumberOf1100LiterPaperWasteContainersManually a o-steps:Step ;
   rdfs:label "Number of 1100 liter paper waste container(s)"@en ;
   rdfs:label "Aantal 1100 liter papier container(s)"@nl ;
+  rdfs:label "Anzahl Papiercontainer 1100 liter"@de ;
   o-steps:producesState ex:numberOf1100LiterPaperWasteContainers .
 
 
@@ -440,8 +459,9 @@ ex:provideNumberOf1100LiterPaperWasteContainersManually a o-steps:Step ;
 ex:requestWasteCollection a o-steps:Step ;
   rdfs:label "Application for waste collection"@en ;
   rdfs:label "Aanvraag afvalcontainers"@nl ;
+  rdfs:label "Antrag für Müllabfuhr"@de ;
   o-steps:producesState ex:wasteCollectionRequested ;
-  p-plan:hasInputVar
+  o-steps:requiresState
     ex:applicantInfo ,
     ex:greyWasteContainerInfo ,
     ex:greenWasteContainerInfo ,
@@ -450,16 +470,17 @@ ex:requestWasteCollection a o-steps:Step ;
 ex:provideWasteCollectionApplicantInfo a o-steps:Step ;
   rdfs:label "Applicant information"@en ;
   rdfs:label "Aanvrager informatie"@nl ;
+  rdfs:label "Antragssteller informationen"@de ;
   rdfs:comment "Information regarding the applicant requesting waste collection"@en ;
   o-steps:producesState ex:applicantInfo ;
-  p-plan:hasInputVar
-    ex:householderFirstName ,
-    ex:householderLastName ,
-    ex:householderPhoneNumber ,
-    ex:householderMobilePhoneNumber ,
-    ex:householderEmail ,
-    ex:householderGender ,
-    ex:householderNationalNumber ,
+  o-steps:requiresState
+    ex:citizenFirstName ,
+    ex:citizenLastName ,
+    ex:citizenPhoneNumber ,
+    ex:citizenMobilePhoneNumber ,
+    ex:citizenEmail ,
+    ex:citizenGender ,
+    ex:citizenNationalNumber ,
     ex:numberOfFamilyMembers ,
     ex:movingAddress ,
     ex:billingAddress .
@@ -467,9 +488,10 @@ ex:provideWasteCollectionApplicantInfo a o-steps:Step ;
 ex:provideGreyWasteContainerInfo a o-steps:Step ;
   rdfs:label "Grey waste container(s)"@en ;
   rdfs:label "Grijze restafvalcontainer(s)"@nl ;
+  rdfs:label "Graue Restabfallcontainer"@de ;
   rdfs:comment "Information regarding grey waste container(s)"@en ;
   o-steps:producesState ex:greyWasteContainerInfo ;
-  p-plan:hasInputVar
+  o-steps:requiresState
     ex:numberOf40LiterGreyWasteContainers ,
     ex:numberOf120LiterGreyWasteContainers ,
     ex:numberOf240LiterGreyWasteContainers ,
@@ -478,9 +500,10 @@ ex:provideGreyWasteContainerInfo a o-steps:Step ;
 ex:provideGreenWasteContainerInfo a o-steps:Step ;
 	rdfs:label "Green GFT waste container(s)"@en ;
   rdfs:label "Groene GFT container(s)"@nl ;
+  rdfs:label "Grüne Biomüllcontainer"@de ;
 	rdfs:comment "Information regarding green waste container(s)"@en ;
   o-steps:producesState ex:greenWasteContainerInfo ;
-  p-plan:hasInputVar 
+  o-steps:requiresState 
     ex:numberOf40LiterGreenWasteContainers ,
     ex:numberOf120LiterGreenWasteContainers ,
     ex:greenWasteContainerLockInfo ,
@@ -490,9 +513,10 @@ ex:provideGreenWasteContainerInfo a o-steps:Step ;
 ex:providePaperWasteContainerInfo a o-steps:Step ;
   rdfs:label "Paper waste container(s)"@en ;
   rdfs:label "Papier container(s)"@nl ;
+  rdfs:label "Papiercontainer"@de ;
   rdfs:comment "Information regarding paper waste container(s)"@en ;
   o-steps:producesState ex:paperWasteContainerInfo ;
-  p-plan:hasInputVar
+  o-steps:requiresState
     ex:numberOf40LiterPaperWasteContainers ,
     ex:numberOf240LiterPaperWasteContainers ,
     ex:numberOf1100LiterPaperWasteContainers  .
@@ -504,36 +528,39 @@ ex:providePaperWasteContainerInfo a o-steps:Step ;
 ex:declareAddressChange a o-steps:Step ;
   rdfs:label "Declaration of address change"@en ;
   rdfs:label "Aangifte van adreswijziging"@nl ;
+  rdfs:label "Adressänderung beantragen"@de ;
   o-steps:producesState ex:addressChangeDeclared ;
-  p-plan:hasInputVar
-    ex:householderFirstName ,
-    ex:householderLastName ,
-    ex:householderNationalNumber ,
-    ex:householderBirthDate ,
-    ex:householderCityOfBirth ,
-    ex:householderNationality ,
+  o-steps:requiresState
+    ex:citizenFirstName ,
+    ex:citizenLastName ,
+    ex:citizenNationalNumber ,
+    ex:citizenBirthDate ,
+    ex:citizenCityOfBirth ,
+    ex:citizenNationality ,
     ex:movingAddress ,
     ex:movingDate ,
-    ex:householderProfession ,
-    ex:householderPhoneNumber ,
-    ex:householderMobilePhoneNumber ,
-    ex:householderEmail .
+    ex:citizenProfession ,
+    ex:citizenPhoneNumber ,
+    ex:citizenMobilePhoneNumber ,
+    ex:citizenEmail .
 
 # The police is confirming this in Belgium by a visit
 ex:confirmAddressChangeVisit a o-steps:Step ;
   rdfs:label "Confirmation of address change"@en ;
   rdfs:label "Bevestiging van adreswijziging"@nl ;
+  rdfs:label "Bestätigung der Adressänderung"@de ;
   o-steps:producesState ex:addressChangeConfirmed ;
-  p-plan:hasInputVar
+  o-steps:requiresState
     ex:addressChangeDeclared ,
-    ex:householderAtNewAddress .
+    ex:citizenAtNewAddress .
 
 ex:addressChangeOnEIDInOffice a o-steps:Step ;
   rdfs:label "Update address on eID card"@en ;
   rdfs:label "Adreswijziging op eID kaart"@nl ;
+  rdfs:label "Änderung der Adresse auf eID Karte"@de ;
   o-steps:producesState ex:addressChangedOnEID ;
-  p-plan:hasInputVar
+  o-steps:requiresState
     ex:addressChangeConfirmed ,
-    ex:householderBringsEID .
+    ex:citizenBroughtEID .
 
 
