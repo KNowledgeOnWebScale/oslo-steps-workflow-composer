@@ -14,14 +14,19 @@ ex:sven a o-persoon:Inwoner ;
   o-persoon:heeftNationaliteit ex:svenNationality ;
   o-persoon:heeftVerblijfsplaats ex:svenVerblijfsplaats ;
   o-persoon:heeftGeboorte ex:svenGeboorte ;
-  o-persoon:verblijfsadres ex:svenVerblifsplaats ;
+  o-persoon:verblijfsadres ex:svenVerblijfsplaats ;
   schema:hasOccupation ex:svenOccupation ;
-  ex:numberOfFamilyMembers 1 .
+  ex:numberOfFamilyMembers 1 ;
+  ex:movingDate "2019-10-23"^^xsd:date ;
+  ex:movingAddress ex:svenMovingAddress ;
+  ex:billingAddress ex:svenVerblijfsplaats .
 
 
 ex:svenNationality a o-persoon:Nationaliteit .
 
 ex:svenVerblijfsplaats a o-persoon:Verblijfsplaats .
+
+ex:svenMovingAddress a o-persoon:Verblijfsplaats .
 
 ex:svenGeboorte a o-persoon:Geboorte .
 

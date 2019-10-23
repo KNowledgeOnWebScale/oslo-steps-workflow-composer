@@ -278,7 +278,56 @@ shp:numberOfFamilyMembersShape a o-steps:StateShape ;
   sh:targetClass o-persoon:Inwoner ;
   sh:property shp:validNumberOfFamilyMembers .
 
-shp:validNumberOfFamilyMembers a sh:PropertyShapes ;
+shp:validNumberOfFamilyMembers a sh:PropertyShape ;
   rdfs:label "valid number of family members"@en ;
   sh:path ex:numberOfFamilyMembers ;
   sh:minInclusive 1 .
+
+#
+# moving date
+#
+shp:movingDateShape a o-steps:StateShape ;
+  rdfs:label "Citizen moving date"@en ;
+  sh:targetClass o-persoon:Inwoner ;
+  sh:property shp:validMovingDate .
+
+shp:validMovingDate a sh:PropertyShape ;
+  rdfs:label "valid date" ;
+  sh:path ex:movingDate ;
+  sh:datatype xsd:date .
+
+#
+# moving addres
+#
+shp:movingAddressShape a o-steps:StateShape ;
+  rdfs:label "Citizen moving address"@en ;
+  sh:targetClass o-persoon:Inwoner ;
+  sh:property shp:validMovingAddress .
+
+shp:validMovingAddress a sh:PropertyShape ;
+  rdfs:label "valid moving address"@en ;
+  sh:path ex:movingAddress ;
+  sh:node ops:VerblijfplaatsShape .
+  
+#
+# billing address
+#
+shp:billingAddressShape a o-steps:StateShape ;
+  rdfs:label "Citizen billing address"@en ;
+  sh:targetClass o-persoon:Inwoner ;
+  sh:property shp:validBillingAddress .
+
+shp:validBillingAddress a sh:PropertyShape ;
+  rdfs:label "valid billing address"@en ;
+  sh:path ex:billingAddress ;
+  sh:node ops:VerblijfplaatsShape .
+
+#
+# moving city
+# TODO: that should actually be part of a Verblijfsplaats or Adresvoorstelling
+#
+shp:movingCity a o-steps:State ;
+  rdfs:label "City a citizen wants to move to"@en .
+
+#
+# 

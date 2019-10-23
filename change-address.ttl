@@ -112,6 +112,21 @@ ex:applicantInfo a o-steps:State ;
   rdfs:label "Applicant information"@en ;
   rdfs:label "Aanvrager information"@nl ;
   rdfs:label "Antragssteller informationen"@de .
+  o-steps:hasStateShape 
+      shp:firstNameShape,
+      shp:lastNameShape,
+      shp:genderShape,
+      shp:emailAddressShape,
+      shp:mobilePhoneNumberShape,
+      shp:phoneNumberShape,
+      shp:nationalNumberBelgiumShape,
+      shp:bankAccountNumberEuropeShape,
+      shp:residencePermitShape,
+      shp:birthDateShape,
+      shp:cityOfBirthShape,
+      shp:addressShape,
+      shp:professionShape,
+      shp:numberOfFamilyMembersShape .
 
 ex:movingDate a o-steps:State ;
   rdfs:label "Moving date"@en ;
@@ -139,12 +154,24 @@ ex:movingCity a o-steps:State ;
 
 #
 # data regarding waste disposal
+# TODO
 #
 ex:wasteCollectionRequested a o-steps:State ;
   rdfs:label "Waste collection request"@en ;
   rdfs:label "Aanvrag afvalcontainers"@nl ;
-  rdfs:label "Antrag für Müllabfuhr"@de ;
-  o-steps:hasStateShape shp:wasteCollectionRequestShape .
+  rdfs:label "Antrag für Müllabfuhr"@de .
+
+### grey container
+
+ex:greyWasteContainerInfo a o-steps:State ;
+  rdfs:label "Grey waste container(s)"@en ;
+  rdfs:label "Grijze restafvalcontainer(s)"@nl ;
+  rdfs:label "Graue Abfallcontainer"@de ;
+  o-steps:hasStateShape 
+      shp:number40LiterGreyWatseContainerShape,
+      shp:number120LiterGreyWasteContainerShape,
+      shp:number240LiterGreyWasteContainerShape,
+      shp:greyWasteContainerLockShape,
 
 ex:numberOf40LiterGreyWasteContainers a o-steps:State ;
   rdfs:label "Number of 40 liter grey waste containers"@en ;
@@ -170,12 +197,18 @@ ex:greyWasteContainerLockInfo a o-steps:State ;
   rdfs:label "Schloss für graue Restabfallcontainer"@de ;
   o-steps:hasStateShape shp:greyWasteContainerLockShape .
 
-ex:greyWasteContainerInfo a o-steps:State ;
-  rdfs:label "Grey waste container(s)"@en ;
-  rdfs:label "Grijze restafvalcontainer(s)"@nl ;
-  rdfs:label "Graue Abfallcontainer"@de ;
-  o-steps:hasStateShape shp:greyWasteContainerInfoShape .
+### green container
 
+ex:greenWasteContainerInfo a o-steps:State ;
+  rdfs:label "Green GFT waste container(s)"@en ;
+  rdfs:label "Groene GFT container(s)"@nl ;
+  rdfs:label "Biomüllcontainer"@de ;
+  o-steps:hasStateShape 
+      shp:number40LiterGreenWasteContainerShape,
+      shp:number120LiterGreenWasteContainerShape,
+      shp:greenWasteSelfCompostShape,
+      shp:greenWateContainerLockShape,
+      shp:greenWasteContainerStopCollectingInfoShape .
 
 ex:numberOf40LiterGreenWasteContainers a o-steps:State ;
   rdfs:label "Number of 40 liter green waste containers"@en ;
@@ -207,11 +240,16 @@ ex:greenWasteContainerLockInfo a o-steps:State ;
   rdfs:label "Schloss für Biomüllcontainer"@de ;
   o-steps:hasStateShape shp:greenWasteContainerLockShape .
 
-ex:greenWasteContainerInfo a o-steps:State ;
-  rdfs:label "Green GFT waste container(s)"@en ;
-  rdfs:label "Groene GFT container(s)"@nl ;
-  rdfs:label "Biomüllcontainer"@de ;
-  o-steps:hasStateShape shp:greenWasteContainerInfoShape .
+## paper container
+
+ex:paperWasteContainerInfo a o-steps:State ;
+  rdfs:label "Paper waste container(s)"@en ;
+  rdfs:label "Papiercontainer(s)"@nl ;
+  rdfs:label "Papiercontainer"@de ;
+  o-steps:hasStateShape 
+      shp:number40LiterPaperWasteContainerShape,
+      shp:number240LiterPaperWasteContainerShape,
+      shp:number1100LiterPaperWasteContainerShape .
 
 
 ex:numberOf40LiterPaperWasteContainers a o-steps:State ;
@@ -231,12 +269,6 @@ ex:numberOf1100LiterPaperWasteContainers a o-steps:State ;
   rdfs:label "Aantal 1100 liter papier containers"@nl ;
   rdfs:label "Anzahl Papiercontainer 1100 liter"@de ;
   o-steps:hasStateShape shp:number1100LiterPaperWasteContainerShape .
-
-ex:paperWasteContainerInfo a o-steps:State ;
-  rdfs:label "Paper waste container(s)"@en ;
-  rdfs:label "Papiercontainer(s)"@nl ;
-  rdfs:label "Papiercontainer"@de ;
-  o-steps:hasStateShape shp:paperWasteContaierInfoShape .
 
 #
 # data regarding municipality
