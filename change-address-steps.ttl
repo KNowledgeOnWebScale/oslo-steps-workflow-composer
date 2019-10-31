@@ -2,7 +2,6 @@
 # for the change of address, description source: https://docs.google.com/spreadsheets/d/1Iw6w3Espwbw-tIvofDcL7SwahDAh7Hf3VDcaod190r0/edit#gid=836388458
 
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix p-plan: <http://purl.org/net/p-plan#> .
 @prefix o-address: <https://data.vlaanderen.be/ns/adres#> .
 @prefix o-steps: <http://fast.ilabt.imec.be/ns/oslo-steps/0.1#> .
 @prefix step: <https://example.org/ns/example#> .
@@ -20,7 +19,7 @@ step:provideCitizenFirstNameManually a o-steps:ComponentLevelStep ;
   rdfs:label "Inwoner voornaam"@nl ;
   rdfs:label "Einwohner Vorname"@de ;
   o-steps:hasDescription step:firstNameDescriptionEnglish1 ;
-  p-plan:producesState state:citizenFirstNameKnown .
+  o-steps:producesState state:citizenFirstNameKnown .
 
 step:firstNameDescriptionEnglish1 a xl:Label ;
   xl:literalForm "The first name as indicated on your passport or ID card."@en .
