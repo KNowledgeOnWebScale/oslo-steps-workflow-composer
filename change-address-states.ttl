@@ -111,7 +111,7 @@ state:numberOfFamilyMembers a o-steps:State ;
 state:applicantInfo a o-steps:State ;
   rdfs:label "Applicant information"@en ;
   rdfs:label "Aanvrager information"@nl ;
-  rdfs:label "Antragssteller informationen"@de .
+  rdfs:label "Antragssteller informationen"@de ;
   o-steps:hasStateShape 
       shape:firstNameShape,
       shape:lastNameShape,
@@ -171,7 +171,7 @@ state:greyWasteContainerInfo a o-steps:State ;
       shape:number40LiterGreyWatseContainerShape,
       shape:number120LiterGreyWasteContainerShape,
       shape:number240LiterGreyWasteContainerShape,
-      shape:greyWasteContainerLockShape,
+      shape:greyWasteContainerLockShape.
 
 state:numberOf40LiterGreyWasteContainers a o-steps:State ;
   rdfs:label "Number of 40 liter grey waste containers"@en ;
