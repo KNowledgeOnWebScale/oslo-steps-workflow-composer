@@ -4,7 +4,7 @@
 @prefix ex: <https://example.org/ns/example#> .
 @prefix schema: <https://schema.org/> .
 @prefix ops: <https://data.vlaanderen.be/shacl/persoon-basis#> .
-@prefix o-steps: <https://fast.ilabt.imec.be/ns/oslo-steps#> .
+@prefix o-steps: <https://fast.ilabt.imec.be/ns/oslo-steps/0.2#> .
 @prefix o-persoon: <https://data.vlaanderen.be/ns/persoon#> .
 
 @prefix state: <{{base}}/states#> .

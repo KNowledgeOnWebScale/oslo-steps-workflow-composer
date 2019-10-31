@@ -4,7 +4,7 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix p-plan: <http://purl.org/net/p-plan#> .
 @prefix o-address: <https://data.vlaanderen.be/ns/adres#> .
-@prefix o-steps: <http://fast.ilabt.imec.be/ns/oslo-steps/0.1#> .
+@prefix o-steps: <http://fast.ilabt.imec.be/ns/oslo-steps/0.2#> .
 @prefix ex: <https://example.org/ns/example#> .
 @prefix xl: <http://www.w3.org/2008/05/skos-xl#> .
 
