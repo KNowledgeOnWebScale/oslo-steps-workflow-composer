@@ -1,12 +1,16 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
-@prefix shp: <http://fast.ilabt.imec.be/states#> .
 @prefix sh: <http://www.w3.org/ns/shacl#> .
 @prefix ex: <https://example.org/ns/example#> .
 @prefix schema: <https://schema.org/> .
 @prefix ops: <https://data.vlaanderen.be/shacl/persoon-basis#> .
 @prefix o-steps: <https://fast.ilabt.imec.be/ns/oslo-steps#> .
 @prefix o-persoon: <https://data.vlaanderen.be/ns/persoon#> .
+
+@prefix state: <{{base}}/states#> .
+@prefix shape: <{{base}}/shapes#> .
+@prefix step: <{{base}}/steps#> .
+
 
 
 # needed for advanced shacl, to use prefixes in SPARQL query string
@@ -17,13 +21,13 @@
 #
 # first name
 #
-shp:firstNameShape a o-steps:StateShape ;
+shape:firstNameShape a o-steps:StateShape ;
   rdfs:label "A citizen's first name"@en ;
   rdfs:comment "User with valid first name"@en ;
   sh:targetClass o-persoon:Inwoner ;
-  sh:property shp:firstNameLength .
+  sh:property shape:firstNameLength .
 
-shp:firstNameLength a sh:PropertyShape ;
+shape:firstNameLength a sh:PropertyShape ;
   rdfs:label "First name length constraints"@en ;
   rdfs:comment "Minimum and maximum for a valid first name"@en ;
   sh:path foaf:givenName ;
@@ -33,13 +37,13 @@ shp:firstNameLength a sh:PropertyShape ;
 #
 # last name
 #
-shp:lastNameShape a o-steps:StateShape ;
+shape:lastNameShape a o-steps:StateShape ;
   rdfs:label "A citizen's last name"@en ;
   rdfs:comment "User with valid first name"@en ;
   sh:targetClass o-persoon:Inwoner ;
-  sh:property shp:lastNameLength .
+  sh:property shape:lastNameLength .
 
-shp:lastNameLength a sh:PropertyShape ;
+shape:lastNameLength a sh:PropertyShape ;
   rdfs:label "First name length constraints"@en ;
   rdfs:comment "Minimum and maximum for a valid first name"@en ;
   sh:path foaf:familyName ;
@@ -49,13 +53,13 @@ shp:lastNameLength a sh:PropertyShape ;
 #
 # gender constraints (sorry 2019)
 #
-shp:genderShape a o-steps:StateShape ;
+shape:genderShape a o-steps:StateShape ;
   rdfs:label "A citizen's gender"@en ;
   rdfs:comment "User with a valid gender"@en ;
   sh:targetClass o-persoon:Inwoner ;
-  sh:property shp:genderValidValues .
+  sh:property shape:genderValidValues .
 
-shp:genderValidValues a sh:PropertyShape ;
+shape:genderValidValues a sh:PropertyShape ;
   rdfs:label "Valid gender values"@en ;
   sh:path o-persoon:geslacht ;
   sh:in ( "male" "female" ) .
@@ -63,13 +67,13 @@ shp:genderValidValues a sh:PropertyShape ;
 #
 # Email address
 #
-shp:emailAddressShape a o-steps:StateShape ;
+shape:emailAddressShape a o-steps:StateShape ;
   rdfs:label "A citizen's email"@en ;
   rdfs:comment "User with a valid email address"@en ;
   sh:targetClass o-persoon:Inwoner ;
-  sh:property shp:emailPattern .
+  sh:property shape:emailPattern .
 
-shp:emailPattern a sh:PropertyShape ;
+shape:emailPattern a sh:PropertyShape ;
   rdfs:label "Valid email address"@en ;
   sh:path schema:email ;
   sh:pattern "todo" .
@@ -77,17 +81,17 @@ shp:emailPattern a sh:PropertyShape ;
 #
 # Mobile phone number
 #
-shp:mobilePhoneNumberShape a o-steps:StateShape ;
+shape:mobilePhoneNumberShape a o-steps:StateShape ;
   sh:deactivated true ;
   rdfs:label "A citizen's mobile phone number"@en ;
   rdfs:comment "User with a valid mobile phone number"@en ;
   sh:targetClass o-persoon:Inwoner ;
   # this is wrong, it says that additionally all person's mobile phone numbers should be valid, not just the one from this person
-  sh:and ( shp:validMobilePhoneNumber ) .
+  sh:and ( shape:validMobilePhoneNumber ) .
 
 
 # this shape targets all contactPoints with type 'mobile' or 'gsm' of a person
-shp:validMobilePhoneNumber a o-steps:StateShape ;
+shape:validMobilePhoneNumber a o-steps:StateShape ;
   rdfs:label "Valid mobile phone number"@en ;
   sh:target [
     a sh:SPARQLTarget ;
@@ -103,9 +107,9 @@ shp:validMobilePhoneNumber a o-steps:StateShape ;
       }
     """ ;
   ] ;
-  sh:and ( shp:mobilePhoneNumberPattern ) .
+  sh:and ( shape:mobilePhoneNumberPattern ) .
 
-shp:mobilePhoneNumberPattern a sh:PropertyShape ;
+shape:mobilePhoneNumberPattern a sh:PropertyShape ;
   rdfs:label "Valid mobile phone number"@en ;
   sh:path schema:telephone ;
   sh:pattern "todo" .
@@ -113,16 +117,16 @@ shp:mobilePhoneNumberPattern a sh:PropertyShape ;
 #
 # phone number
 #
-shp:phoneNumberShape a o-steps:StateShape ;
+shape:phoneNumberShape a o-steps:StateShape ;
   sh:deactivated true ;
   rdfs:label "A citizen's phone number"@en ;
   rdfs:comment "User with a valid phone number"@en ;
   sh:targetClass o-persoon:Inwoner ;
   # this is wrong, it says that additionally all person's mobile phone numbers should be valid, not just the one from this person
-  sh:and ( shp:validPhoneNumber ) .
+  sh:and ( shape:validPhoneNumber ) .
 
 # this shape targets all contactPoints with type 'phone' of a person
-shp:validPhoneNumber a o-steps:StateShape ;
+shape:validPhoneNumber a o-steps:StateShape ;
   rdfs:label "Valid phone number"@en ;
   sh:target [
     a sh:SPARQLTarget ;
@@ -138,9 +142,9 @@ shp:validPhoneNumber a o-steps:StateShape ;
       }
     """ ;
   ] ;
-  sh:and ( shp:phoneNumberPattern ) .
+  sh:and ( shape:phoneNumberPattern ) .
 
-shp:phoneNumberPattern a sh:PropertyShape ;
+shape:phoneNumberPattern a sh:PropertyShape ;
   rdfs:label "Valid phone number"@en ;
   sh:path schema:telephone ;
   sh:pattern "todo" .
@@ -148,14 +152,14 @@ shp:phoneNumberPattern a sh:PropertyShape ;
 #
 # national number
 #
-shp:nationalNumberBelgiumShape a o-steps:StateShape ;
+shape:nationalNumberBelgiumShape a o-steps:StateShape ;
   rdfs:label "Householder national number"@en ;
   rdfs:comment "User with valid Belgian national number"@en ;
   sh:targetClass o-persoon:Inwoner ;
-  sh:property shp:nationalNumberPatternBelgium ;
-  sh:property shp:nationalNumberObliged .
+  sh:property shape:nationalNumberPatternBelgium ;
+  sh:property shape:nationalNumberObliged .
 
-shp:nationalNumberPatternBelgium a sh:PropertyShape ;
+shape:nationalNumberPatternBelgium a sh:PropertyShape ;
   rdfs:label "The regular expression of a Belgian national number"@en ;
   rdfs:label "De reguliere expressie van een Belgisch Rijksregisternummer"@nl ;
   rdfs:label "Der reguläre Ausdruck einer belgischen Reichsregisternummer"@de ;
@@ -163,7 +167,7 @@ shp:nationalNumberPatternBelgium a sh:PropertyShape ;
 # This statement raises syntax errors in n3
 #  sh:pattern """^[0-9]{2}[.\- ]{0,1}[0-9]{2}[.\- ]{0,1}[0-9]{2}[.\- ]{0,1}[0-9]{3}[.\- ]{0,1}[0-9]{2}$""" .
 
-shp:nationalNumberObliged a sh:PropertyShape ;
+shape:nationalNumberObliged a sh:PropertyShape ;
   rdfs:label "Obliged national number"@en ;
   rdfs:label "Verplicht nationaal nummer"@nl ;
   rdfs:label "Benötigte Personenkennzeichnung"@de ;
@@ -177,13 +181,13 @@ shp:nationalNumberObliged a sh:PropertyShape ;
 #
 # bank account number
 #
-shp:bankAccountNumberEuropeShape a o-steps:StateShape ;
+shape:bankAccountNumberEuropeShape a o-steps:StateShape ;
   rdfs:label "Citizen bank account number"@en ;
   rdfs:comment "User with valid bank account number"@en ;
   sh:targetClass o-persoon:Inwoner ;
-  sh:property shp:bankAccountNumberPatternEurope .
+  sh:property shape:bankAccountNumberPatternEurope .
 
-shp:bankAccountNumberPatternEurope a sh:PropertyShape ;
+shape:bankAccountNumberPatternEurope a sh:PropertyShape ;
   rdfs:label "IBAN pattern"@en ;
   rdfs:comment "The regular expression of a European bank account number (IBAN)"@en ;
   sh:path ex:bankAccountNumber ;
@@ -192,13 +196,13 @@ shp:bankAccountNumberPatternEurope a sh:PropertyShape ;
 #
 # nationality
 #
-shp:nationalityShape a o-steps:StateShape ;
+shape:nationalityShape a o-steps:StateShape ;
   rdfs:label "Citizen nationality"@en ;
   rdfs:comment "User with valid nationality"@en ;
   sh:targetClass o-persoon:Inwoner ;
-  sh:property shp:validNationality .
+  sh:property shape:validNationality .
 
-shp:validNationality a sh:PropertyShape ;
+shape:validNationality a sh:PropertyShape ;
   rdfs:label "Valid nationality"@en ;
   sh:path o-persoon:heeftNationaliteit ;
   sh:class o-persoon:Nationaliteit .
@@ -206,14 +210,14 @@ shp:validNationality a sh:PropertyShape ;
 #
 # residence permit
 #
-shp:residencePermitShape a o-steps:StateShape ;
+shape:residencePermitShape a o-steps:StateShape ;
   rdfs:label "Citizen residence permit"@en ;
   rdfs:comment "User with valid residence permit"@en ;
   rdfs:comment "Assuming that if a Citizen has an official address there is also a residence permit. Needs a change!"@en ;
   sh:targetClass o-persoon:Inwoner ;
-  sh:property shp:validResidence .
+  sh:property shape:validResidence .
 
-shp:validResidence a sh:PropertyShape ;
+shape:validResidence a sh:PropertyShape ;
   rdfs:label "Valid residence"@en ;
   rdfs:comment "Assuming that if a Citizen has an official address there is also a residence permit. Needs a change!"@en ;
   sh:path o-persoon:heeftVerblijfplaats ;
@@ -222,13 +226,13 @@ shp:validResidence a sh:PropertyShape ;
 #
 # birth date
 #  
-shp:birthDateShape a o-steps:StateShape ;
+shape:birthDateShape a o-steps:StateShape ;
   rdfs:label "Citizen birth date"@en ;
   rdfs:comment "User with a valid birth date"@en ;
   sh:targetClass o-persoon:Inwoner ;
-  sh:property shp:validBirth .
+  sh:property shape:validBirth .
 
-shp:validBirth a sh:PropertyShape ;
+shape:validBirth a sh:PropertyShape ;
   rdfs:label "Valid date of birth"@en ;
   sh:path o-persoon:heeftGeboorte ;
   sh:minCount 1 ;
@@ -239,20 +243,20 @@ shp:validBirth a sh:PropertyShape ;
 #
 # city of birth
 #
-shp:cityOfBirthShape a o-steps:StateShape ;
+shape:cityOfBirthShape a o-steps:StateShape ;
   rdfs:label "Citizen city of birth"@en ;
   sh:targetClass o-persoon:Inwoner ;
-  sh:property shp:validBirth .
+  sh:property shape:validBirth .
 
 #
 # address
 #
-shp:addressShape a o-steps:StateShape ;
+shape:addressShape a o-steps:StateShape ;
   rdfs:label "Citizen address"@en ;
   sh:targetClass o-persoon:Inwoner ;
-  sh:property shp:validAddress .
+  sh:property shape:validAddress .
 
-shp:validAddress a sh:PropertyShape ;
+shape:validAddress a sh:PropertyShape ;
   rdfs:label "valid address"@en ;
   sh:path o-persoon:verblijfsadres ;
   sh:node ops:VerblijfplaatsShape .
@@ -260,12 +264,12 @@ shp:validAddress a sh:PropertyShape ;
 #
 # profession
 #
-shp:professionShape a o-steps:StateShape ;
+shape:professionShape a o-steps:StateShape ;
   rdfs:label "Citizen profession"@en ;
   sh:targetClass o-persoon:Inwoner ;
-  sh:property shp:validProfession .
+  sh:property shape:validProfession .
 
-shp:validProfession a sh:PropertyShape ;
+shape:validProfession a sh:PropertyShape ;
   rdfs:label "Valid profession" ;
   sh:path schema:hasOccupation ;
   sh:minCount 1 .
@@ -273,12 +277,12 @@ shp:validProfession a sh:PropertyShape ;
 #
 # number of family members
 #
-shp:numberOfFamilyMembersShape a o-steps:StateShape ;
+shape:numberOfFamilyMembersShape a o-steps:StateShape ;
   rdfs:label "Citizen number of family members"@en ;
   sh:targetClass o-persoon:Inwoner ;
-  sh:property shp:validNumberOfFamilyMembers .
+  sh:property shape:validNumberOfFamilyMembers .
 
-shp:validNumberOfFamilyMembers a sh:PropertyShape ;
+shape:validNumberOfFamilyMembers a sh:PropertyShape ;
   rdfs:label "valid number of family members"@en ;
   sh:path ex:numberOfFamilyMembers ;
   sh:minInclusive 1 .
@@ -286,12 +290,12 @@ shp:validNumberOfFamilyMembers a sh:PropertyShape ;
 #
 # moving date
 #
-shp:movingDateShape a o-steps:StateShape ;
+shape:movingDateShape a o-steps:StateShape ;
   rdfs:label "Citizen moving date"@en ;
   sh:targetClass o-persoon:Inwoner ;
-  sh:property shp:validMovingDate .
+  sh:property shape:validMovingDate .
 
-shp:validMovingDate a sh:PropertyShape ;
+shape:validMovingDate a sh:PropertyShape ;
   rdfs:label "valid date" ;
   sh:path ex:movingDate ;
   sh:datatype xsd:date .
@@ -299,12 +303,12 @@ shp:validMovingDate a sh:PropertyShape ;
 #
 # moving addres
 #
-shp:movingAddressShape a o-steps:StateShape ;
+shape:movingAddressShape a o-steps:StateShape ;
   rdfs:label "Citizen moving address"@en ;
   sh:targetClass o-persoon:Inwoner ;
-  sh:property shp:validMovingAddress .
+  sh:property shape:validMovingAddress .
 
-shp:validMovingAddress a sh:PropertyShape ;
+shape:validMovingAddress a sh:PropertyShape ;
   rdfs:label "valid moving address"@en ;
   sh:path ex:movingAddress ;
   sh:node ops:VerblijfplaatsShape .
@@ -312,12 +316,12 @@ shp:validMovingAddress a sh:PropertyShape ;
 #
 # billing address
 #
-shp:billingAddressShape a o-steps:StateShape ;
+shape:billingAddressShape a o-steps:StateShape ;
   rdfs:label "Citizen billing address"@en ;
   sh:targetClass o-persoon:Inwoner ;
-  sh:property shp:validBillingAddress .
+  sh:property shape:validBillingAddress .
 
-shp:validBillingAddress a sh:PropertyShape ;
+shape:validBillingAddress a sh:PropertyShape ;
   rdfs:label "valid billing address"@en ;
   sh:path ex:billingAddress ;
   sh:node ops:VerblijfplaatsShape .
@@ -326,7 +330,7 @@ shp:validBillingAddress a sh:PropertyShape ;
 # moving city
 # TODO: that should actually be part of a Verblijfsplaats or Adresvoorstelling
 #
-shp:movingCity a o-steps:State ;
+shape:movingCity a o-steps:State ;
   rdfs:label "City a citizen wants to move to"@en .
 
 #
