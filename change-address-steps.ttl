@@ -131,6 +131,12 @@ step:provideMovingCityManually a o-steps:ComponentLevelStep ;
   rdfs:label "Stadt in die umgezogen wird"@de ;
   o-steps:producesState state:movingCity .
 
+step:provideMovingAddressManually a o-steps:ComponentLevelStep ;
+  rdfs:label "Moving address"@en ;
+  rdfs:label "Adres waarnaar wordt verhuist"@nl ;
+  rdfs:label "Umzungsadresse"@de ;
+  o-steps:producesState state:movingAddress .
+
 #
 # Steps to provide waste collection information in a manual fashion
 #
