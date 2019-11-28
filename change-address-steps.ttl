@@ -19,7 +19,7 @@ step:provideCitizenFirstNameManually a o-steps:ComponentLevelStep ;
   rdfs:label "Inwoner voornaam"@nl ;
   rdfs:label "Einwohner Vorname"@de ;
   o-steps:hasDescription step:firstNameDescriptionEnglish1 ;
-  o-steps:producesState state:citizenFirstNameKnown .
+  o-steps:producesState state:citizenFirstName .
 
 step:firstNameDescriptionEnglish1 a xl:Label ;
   xl:literalForm "The first name as indicated on your passport or ID card."@en .
@@ -29,7 +29,7 @@ step:provideCitizenLastNameManually a o-steps:ComponentLevelStep ;
   rdfs:label "Inwoner naam"@nl ;
   rdfs:label "Einwohner Nachname"@de ;
   o-steps:hasDescription step:lastNameDescriptionEnglish1 ;
-  o-steps:producesState state:citizenLastNameKnown .
+  o-steps:producesState state:citizenLastName .
 
 step:lastNameDescriptionEnglish2 a xl:Label ;
   xl:literalForm "The last name as indicated on your passport or ID card."@en .
@@ -92,7 +92,7 @@ step:provideCitizenResidencePermitManually a o-steps:ComponentLevelStep ;
   rdfs:label "Aufenthaltsgenehmigung"@de ;
   o-steps:producesState state:citizenResidencePermit .
 
-step:provideCitizenBirthDataManually a o-steps:ComponentLevelStep ;
+step:provideCitizenBirthDateManually a o-steps:ComponentLevelStep ;
   rdfs:label "Citizen's date of birth"@en ;
   rdfs:label "geboortedatum inwoner"@nl ;
   rdfs:label "Geburtsdatum Einwohner"@de ;
@@ -136,6 +136,12 @@ step:provideMovingAddressManually a o-steps:ComponentLevelStep ;
   rdfs:label "Adres waarnaar wordt verhuist"@nl ;
   rdfs:label "Umzungsadresse"@de ;
   o-steps:producesState state:movingAddress .
+
+step:provideBillingAddressManually a o-steps:ComponentLevelStep ;
+  rdfs:label "Billing address"@en ;
+  rdfs:label "Facturatieadres"@nl ;
+  rdfs:label "Rechnungsadresse"@de ;
+  o-steps:producesState state:billingAddress .
 
 #
 # Steps to provide waste collection information in a manual fashion
