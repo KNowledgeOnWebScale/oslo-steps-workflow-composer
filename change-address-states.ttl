@@ -15,13 +15,13 @@
 #
 # data regarding a citizen
 #
-state:citizenFirstNameKnown a o-steps:State;
+state:citizenFirstName a o-steps:State;
   rdfs:label "Citizen first name"@en ;
   rdfs:label "Inwoner voornaam"@nl ;
   rdfs:label "Einwohner Vorname"@de ;
   o-steps:hasStateShape shape:firstNameShape .
 
-state:citizenLastNameKnown a o-steps:State;
+state:citizenLastName a o-steps:State;
   rdfs:label "Citizen last name"@en ;
   rdfs:label "Inwoner naam"@nl ;
   rdfs:label "Einwohner Nachname"@de ;
