@@ -40,7 +40,7 @@ _:x e:findall (({var:x ?path ?o.} {(var:x ?path) e:skolem ?o} )  { ?step  o-step
 
 
 ?outlist :separate ((true) ?outs (true) ?skol).
-(?inTriples ?inTriples2  ?skol ({?subject ?predicate ?object}) ) list:append ?inlist.
+(?inTriples ?inTriples2  ?skol ({var:x a o-persoon:Inwoner}) ) list:append ?inlist.
 
 #?outTriples  :produceSkolemfunctions (() ?skolem).
 #?outTriples log:conjunction ?out.
