@@ -163,7 +163,8 @@ state:movingCity a o-steps:State ;
 state:wasteCollectionRequested a o-steps:State ;
   rdfs:label "Waste collection request"@en ;
   rdfs:label "Aanvrag afvalcontainers"@nl ;
-  rdfs:label "Antrag für Müllabfuhr"@de .
+  rdfs:label "Antrag für Müllabfuhr"@de ;
+    o-steps:hasStateShape shape:wasteCollection .
 
 ### grey container
 

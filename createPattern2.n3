@@ -44,6 +44,7 @@ PREFIX list: <http://www.w3.org/2000/10/swap/list#>
 {
 ?stateShape a o-steps:StateShape; sh:property ?property; sh:targetClass o-persoon:Inwoner . ?property sh:path ?path; sh:minCount 1.
 ?path log:rawType ?t. ?t log:notEqualTo rdf:List.
+
 }
 =>
 {
@@ -53,6 +54,7 @@ PREFIX list: <http://www.w3.org/2000/10/swap/list#>
 {
 ?stateShape a o-steps:StateShape; sh:property ?property. ?property sh:path ?path; sh:minCount 1; sh:targetClass o-persoon:Inwoner.
 ?path log:rawType ?t. ?t log:notEqualTo rdf:List.
+
 
 }
 =>
@@ -104,5 +106,12 @@ PREFIX list: <http://www.w3.org/2000/10/swap/list#>
 ?rest :makePattern ( ?newTriples ?newSkolems ?o  ?pattern).
 }.
 
+{
+?stateShape a o-steps:StateShape; sh:property ?property; sh:targetClass o-persoon:Inwoner . ?property sh:path ?path; sh:hasValue ?value.
 
+}
+=>
+{
+?stateShape :pattern ( {var:x ?path ?value} true ).
+}.
 

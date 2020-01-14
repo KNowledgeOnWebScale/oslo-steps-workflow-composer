@@ -482,6 +482,20 @@ shape:addressChangeOnEIDExistence a sh:PropertyShape ;
   sh:path ex:addressChanged;
   sh:minCount 1 .
 
+shape:wasteCollection a o-steps:StateShape ;
+  sh:targetClass o-persoon:Inwoner ;
+  sh:property shape:wasteCollectionRequestValue .
 
+shape:wasteCollectionRequestValue a sh:PropertyShape ;
+  sh:path ex:wasteCollectionRequested;
+  sh:hasValue true .
+
+shape:addressChangeDeclaredShape a o-steps:StateShape ;
+  sh:targetClass o-persoon:Inwoner ;
+  sh:property shape:addressChangeValue .
+
+shape:addressChangeValue  a sh:PropertyShape ;
+  sh:path ex:wasteCollectionRequested;
+  sh:hasValue true .
 #
 # 
