@@ -10,7 +10,6 @@ PREFIX gps: <http://josd.github.io/eye/reasoning/gps/gps-schema#>
 @prefix : <https://example.org/ns/example#> .
 PREFIX list: <http://www.w3.org/2000/10/swap/list#>
 @prefix log: <http://www.w3.org/2000/10/swap/log#>.
-@prefix e: <http://eulersharp.sourceforge.net/2003/03swap/log-rules#>.
 @prefix sh: <http://www.w3.org/ns/shacl#> .
 @prefix o-persoon: <https://data.vlaanderen.be/ns/persoon#> .
 @prefix var: <http://josd.github.io/.well-known/genid/pP7dSETOSHCTU6bSn:iLn_1X3mg#>.
@@ -19,34 +18,29 @@ PREFIX list: <http://www.w3.org/2000/10/swap/list#>
 
 ?step a o-steps:Step.
 
+
+
 ?step o-steps:producesState ?ov.
 
 
+_:x e:findall ( ?pattern { ?step o-steps:requiresState ?y. ?y o-steps:hasStateShape ?stateShape. ?stateShape :pattern ?pattern} ?inlist). 
 
-_:x e:findall ({var:x ?path ?o.} { ?step o-steps:requiresState ?y. ?y o-steps:hasStateShape ?stateShape.  ?stateShape a o-steps:StateShape; sh:property ?property. ?property sh:path ?path; sh:minCount 1; sh:targetClass o-persoon:Inwoner.  } ?inTriples). 
-
-_:x e:findall ({var:x ?path ?o.}   { ?step o-steps:requiresState ?y. ?y o-steps:hasStateShape ?stateShape.  ?stateShape a o-steps:StateShape; sh:property ?property; sh:targetClass o-persoon:Inwoner . ?property sh:path ?path; sh:minCount 1
-                        } ?inTriples2).
+_:x e:findall ( ?pattern {?step  o-steps:producesState ?y. ?y o-steps:hasStateShape ?stateShape. ?stateShape :pattern ?pattern} ?outlist ).
 
 
 
-_:x e:findall (({var:x ?path ?o.} {(var:x ?path) e:skolem ?o} ) { ?step  o-steps:producesState ?y. ?y o-steps:hasStateShape ?stateShape.  ?stateShape a o-steps:StateShape; sh:property ?property. ?property sh:path ?path; sh:minCount 1; sh:targetClass o-persoon:Inwoner.
-                        } ?outTriples). 
-
-_:x e:findall (({var:x ?path ?o.} {(var:x ?path) e:skolem ?o} )  { ?step  o-steps:producesState ?y. ?y o-steps:hasStateShape ?stateShape.  ?stateShape a o-steps:StateShape; sh:property ?property; sh:targetClass o-persoon:Inwoner . ?property sh:path ?path; sh:minCount 1
-                        } ?outTriples2).
-
-(?outTriples ?outTriples2  ) list:append ?outlist.
-
-
+?inlist :separate ((true) ?ins1 (true) ?skolI).
 ?outlist :separate ((true) ?outs (true) ?skol).
-(?inTriples ?inTriples2  ?skol ({var:x a o-persoon:Inwoner}) ) list:append ?inlist.
+
+
+
+( ?ins1 ?skol ({var:x a o-persoon:Inwoner}) ) list:append ?in.
 
 #?outTriples  :produceSkolemfunctions (() ?skolem).
 #?outTriples log:conjunction ?out.
 
 ?outs log:conjunction ?out. 
-?inlist log:conjunction ?ins. 
+?in log:conjunction ?ins. 
 }
 =>
 {
