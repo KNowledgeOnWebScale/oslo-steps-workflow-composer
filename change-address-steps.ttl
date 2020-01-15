@@ -233,9 +233,9 @@ step:requestWasteCollection a o-steps:JourneyLevelStep ;
   rdfs:label "Antrag für Müllabfuhr"@de ;
   o-steps:producesState state:wasteCollectionRequested ;
   o-steps:requiresState
-    state:applicantInfo ,
-    state:greyWasteContainerInfo ,
-    state:greenWasteContainerInfo ,
+#    state:applicantInfo ,
+#    state:greyWasteContainerInfo ,
+#    state:greenWasteContainerInfo ,
     state:paperWasteContainerInfo .
 
 step:provideWasteCollectionApplicantInfo a o-steps:ContainerLevelStep ;

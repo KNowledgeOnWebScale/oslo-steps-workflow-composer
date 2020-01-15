@@ -495,7 +495,7 @@ shape:addressChangeDeclaredShape a o-steps:StateShape ;
   sh:property shape:addressChangeValue .
 
 shape:addressChangeValue  a sh:PropertyShape ;
-  sh:path ex:addressChangeRequested;
+  sh:path ex:addressChangeDeclared;
   sh:hasValue true .
 #
 # 
