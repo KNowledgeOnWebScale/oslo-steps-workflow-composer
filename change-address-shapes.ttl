@@ -4,6 +4,7 @@
 @prefix ex: <https://example.org/ns/example#> .
 @prefix schema: <https://schema.org/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix ops: <https://data.vlaanderen.be/shacl/persoon-basis#> .
 @prefix o-steps: <https://fast.ilabt.imec.be/ns/oslo-steps/0.2#> .
 @prefix o-persoon: <https://data.vlaanderen.be/ns/persoon#> .
@@ -24,7 +25,7 @@
 
 
 #
-# first name
+# first name (state shape)
 #
 
 
@@ -44,7 +45,19 @@ shape:firstNameLength a sh:PropertyShape ;
   sh:minCount 1 .
 
 #
-# last name
+# first name (ui shape)
+#
+shape:firstNameUIShape a o-steps:UIShape ;
+  rdfs:label "UI shape: first name"@en ;
+  rdfs:comment ""@en ;
+  sh:targetClass o-persoon:Inwoner ;
+  sh:property [
+    sh:path foaf:givenName ;
+    sh:datatype xsd:string ;
+  ] .
+
+#
+# last name (state shape)
 #
 shape:lastNameShape a o-steps:StateShape ;
   rdfs:label "A citizen's last name"@en ;
@@ -60,7 +73,21 @@ shape:lastNameLength a sh:PropertyShape ;
   sh:maxLength 55 .
 
 #
-# gender constraints (sorry 2019)
+# last name (ui shape)
+#
+shape:lastNameUIShape a o-steps:UIShape ;
+  rdfs:label "UI shape: last name"@en ;
+  rdfs:comment ""@en ;
+  sh:targetClass o-persoon:Inwoner ;
+  sh:property [
+    sh:path foaf:familyName ;
+    sh:datatype xsd:string ;
+  ] .
+
+
+
+#
+# gender constraints (state)
 #
 shape:genderShape a o-steps:StateShape ;
   rdfs:label "A citizen's gender"@en ;
@@ -74,7 +101,27 @@ shape:genderValidValues a sh:PropertyShape ;
   sh:in ( "male" "female" ) .
 
 #
-# Email address
+# gender constraints (UI)
+#
+shape:genderMale a skos:Concept ;
+  rdfs:label "male gender"@en ;
+  rdfs:label "mannelijk geslacht"@nl .
+
+shape:femaleGender a skos:Concept ;
+  rdfs:label "female gender"@en ;
+  rdfs:label "vrouwelijk geslacht"@nl . 
+
+shape:genderUIShape a o-steps:UIShape ;
+  rdfs:label "UI shape: gender"@en ;
+  sh:targetClass o-persoon:Inwoner ;
+  sh:property [
+    sh:path o-persoon:geslacht ;
+    sh:in ( shape:genderMale shape:genderFemale) ;
+  ] .    
+
+
+#
+# Email address (state)
 #
 shape:emailAddressShape a o-steps:StateShape ;
   rdfs:label "A citizen's email"@en ;
@@ -88,40 +135,37 @@ shape:emailPattern a sh:PropertyShape ;
   sh:pattern "todo" .
 
 #
+# Email address (ui)
+#
+shape:emailAddressUIShape a o-steps:UIShape ;
+  rdfs:label "UI shape: email address"@en ;
+  sh:targetClass o-persoon:Inwoner ;
+  sh:property [
+    sh:path schema:email ;
+    sh:datatype xsd:string ;
+    sh:pattern "todo" ;
+  ] .
+
+#
 # Mobile phone number
 #
 shape:mobilePhoneNumberShape a o-steps:StateShape ;
   sh:deactivated true ;
   rdfs:label "A citizen's mobile phone number"@en ;
-  rdfs:comment "User with a valid mobile phone number"@en ;
+  rdfs:comment "User with a valid mobile phone number"@en ; sh:NodeShape ;
   sh:targetClass o-persoon:Inwoner ;
-  # this is wrong, it says that additionally all person's mobile phone numbers should be valid, not just the one from this person
-  sh:and ( shape:validMobilePhoneNumber ) .
-
-
-# this shape targets all contactPoints with type 'mobile' or 'gsm' of a person
-shape:validMobilePhoneNumber a o-steps:StateShape ;
-  rdfs:label "Valid mobile phone number"@en ;
-  sh:target [
-    a sh:SPARQLTarget ;
-    sh:select """
-      SELECT ?this
-      WHERE {
-        ?person a <https://data.vlaanderen.be/doc/applicatieprofiel/persoon-basis#Inwoner> ;
-             <https://data.vlaanderen.be/doc/applicatieprofiel/persoon-basis#contactinfo> ?this .
-
-        ?this <https://schema.org/contactType> ?type .
-
-        FILTER( ?type IN ("mobile" "gsm") )
-      }
-    """ ;
-  ] ;
-  sh:and ( shape:mobilePhoneNumberPattern ) .
-
-shape:mobilePhoneNumberPattern a sh:PropertyShape ;
-  rdfs:label "Valid mobile phone number"@en ;
-  sh:path schema:telephone ;
-  sh:pattern "todo" .
+  sh:property [
+    sh:path schema:contactPoint;
+    sh:qualifiedValueShape [ 
+      sh:path  schema:contactType;
+      sh:hasValue "gsm" 
+    ] ;
+    sh:node [ 
+      sh:path schema:telephone;
+      sh:minCount 1 
+    ];
+    sh:qualifiedMinCount 1 ;
+  ]  .
 
 #
 # phone number
@@ -131,32 +175,20 @@ shape:phoneNumberShape a o-steps:StateShape ;
   rdfs:label "A citizen's phone number"@en ;
   rdfs:comment "User with a valid phone number"@en ;
   sh:targetClass o-persoon:Inwoner ;
-  # this is wrong, it says that additionally all person's mobile phone numbers should be valid, not just the one from this person
-  sh:and ( shape:validPhoneNumber ) .
+  sh:property [
+    sh:path schema:contactPoint;
+    sh:qualifiedValueShape [ 
+      sh:path  schema:contactType;
+      sh:hasValue "telephone" 
+    ] ;
+    sh:node [ 
+      sh:path schema:telephone;
+      sh:minCount 1 
+    ];
+    sh:qualifiedMinCount 1 ;
+  ] .
 
-# this shape targets all contactPoints with type 'phone' of a person
-shape:validPhoneNumber a o-steps:StateShape ;
-  rdfs:label "Valid phone number"@en ;
-  sh:target [
-    a sh:SPARQLTarget ;
-    sh:select """
-      SELECT ?this
-      WHERE {
-        ?person a o-persoon:Inwoner> ;
-             o-persoon: ?this .
 
-        ?this schema: ?type .
-
-        FILTER( ?type IN ("phone") )
-      }
-    """ ;
-  ] ;
-  sh:and ( shape:phoneNumberPattern ) .
-
-shape:phoneNumberPattern a sh:PropertyShape ;
-  rdfs:label "Valid phone number"@en ;
-  sh:path schema:telephone ;
-  sh:pattern "todo" .
 
 #
 # national number
@@ -188,7 +220,19 @@ shape:nationalNumberObliged a sh:PropertyShape ;
   sh:maxCount 1 .
 
 #
-# bank account number
+# national number (ui)
+#
+shape:nationalNumberUIShape a o-steps:UIShape ;
+  rdfs:label "UI shape: national number"@en ;
+  sh:targetClass o-persoon:Inwoner ;
+  sh:property [
+    sh:path o-persoon:registratie ;
+    sh:datatype xsd:string ;
+    sh:pattern "todo" ;
+  ] .
+
+#
+# bank account number (state)
 #
 shape:bankAccountNumberEuropeShape a o-steps:StateShape ;
   rdfs:label "Citizen bank account number"@en ;
@@ -203,7 +247,18 @@ shape:bankAccountNumberPatternEurope a sh:PropertyShape ;
   sh:pattern "todo" .
 
 #
-# nationality
+# bank account number (ui)
+#
+shape:bankAccountNumberEuropeUIShape a o-steps:UIShape ;
+  rdfs:label "UI shape: bank account European"@en ;
+  sh:targetClass o-persoon:Inwoner ;
+  sh:property [
+    sh:path ex:bankAccountNumber ;
+    sh:datatype xsd:string ;
+  ] .
+
+#
+# nationality (state)
 #
 shape:nationalityShape a o-steps:StateShape ;
   rdfs:label "Citizen nationality"@en ;
@@ -215,6 +270,16 @@ shape:validNationality a sh:PropertyShape ;
   rdfs:label "Valid nationality"@en ;
   sh:path o-persoon:heeftNationaliteit ;
   sh:class o-persoon:Nationaliteit .
+
+#
+# nationality (ui)
+#
+shape:nationalityUIShape a o-steps:UIShape ;
+  rdfs:label "UI shape: nationality" ;
+  sh:targetClass o-persoon:Inwoner ;
+  sh:property [
+    sh:path o-persoon:heeftNationaliteit
+  ] .
 
 #
 # residence permit
