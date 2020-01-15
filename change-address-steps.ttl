@@ -23,6 +23,7 @@ step:provideCitizenFirstNameManually a o-steps:ComponentLevelStep ;
   rdfs:label "Inwoner voornaam"@nl ;
   rdfs:label "Einwohner Vorname"@de ;
   o-steps:hasDescription step:firstNameDescriptionEnglish1 ;
+  o-steps:requiresState o-steps:emptyState ;
   o-steps:producesState state:citizenFirstName .
 
 step:firstNameDescriptionEnglish1 a xl:Label ;
@@ -33,6 +34,7 @@ step:provideCitizenLastNameManually a o-steps:ComponentLevelStep ;
   rdfs:label "Inwoner naam"@nl ;
   rdfs:label "Einwohner Nachname"@de ;
   o-steps:hasDescription step:lastNameDescriptionEnglish1 ;
+  o-steps:requiresState o-steps:emptyState ;
   o-steps:producesState state:citizenLastName .
 
 step:lastNameDescriptionEnglish2 a xl:Label ;
@@ -43,6 +45,7 @@ step:provideCitizenGenderManually a o-steps:ComponentLevelStep ;
   rdfs:label "Geslacht inwoner"@nl ;
   rdfs:label "Einwohner Geschlecht"@de ;
   o-steps:hasDescription step:genderDescriptionEnglish1 ;
+  o-steps:requiresState o-steps:emptyState ;
   o-steps:producesState state:citizenGender .
 
 step:genderDescriptionEnglish1 a xl:Label ;
@@ -53,6 +56,7 @@ step:provideCitizenEmailManually a o-steps:ComponentLevelStep ;
   rdfs:label "Email inwoner"@nl ;
   rdfs:label "Einwohner Email"@de ;
   o-steps:hasDescription step:genderDescriptionEnglish1 ;
+  o-steps:requiresState o-steps:emptyState ;
   o-steps:producesState state:citizenEmailAddress .
 
 step:genderDescriptionEnglish1 a xl:Label ;
@@ -63,6 +67,7 @@ step:provideCitizenMobilePhoneNumberManually a o-steps:ComponentLevelStep ;
   rdfs:label "GSM inwoner"@nl ;
   rdfs:label "Handynummer Einwohner"@de ;
   o-steps:hasDescription step:mobilePhoneNumberDescriptionEnglish1 ;
+  o-steps:requiresState o-steps:emptyState ;
   o-steps:producesState state:citizenMobilePhoneNumber .
 
 step:mobilePhoneNumberDescriptionEnglish1 a xl:Label ;
@@ -73,6 +78,7 @@ step:provideCitizenPhoneNumberManually a o-steps:ComponentLevelStep ;
   rdfs:label "Telefoon inwoner"@nl ;
   rdfs:label "Telefonnummer Einwohner"@de ;
   o-steps:hasDescription step:phoneNumberDescriptionEnglish1 ;
+  o-steps:requiresState o-steps:emptyState ;
   o-steps:producesState state:citizenPhoneNumber .
 
 step:phoneNumberDescriptionEnglish1 a xl:Label ;
@@ -82,42 +88,49 @@ step:provideCitizenNationalNumberManually a o-steps:ComponentLevelStep ;
   rdfs:label "Citizen's national number"@en ;
   rdfs:label "Rijksregister inwoner"@nl ;
   rdfs:label "Einwohner Reichsregisternummer"@de ;
+  o-steps:requiresState o-steps:emptyState ;
   o-steps:producesState state:citizenNationalNumber .
 
 step:provideCitizenBankAccountNumberManually a o-steps:ComponentLevelStep ;
   rdfs:label "Citizen's bank account number"@en ;
   rdfs:label "rekeningsnummer inwoner"@nl ;
   rdfs:label "Bankverbindungsdaten Einwohner"@de ;
+  o-steps:requiresState o-steps:emptyState ;
   o-steps:producesState state:citizenBankAccountNumber .
 
 step:provideCitizenResidencePermitManually a o-steps:ComponentLevelStep ;
   rdfs:label "Citizen's residency permit"@en ;
   rdfs:label "verblijfsvergunning"@nl ;
   rdfs:label "Aufenthaltsgenehmigung"@de ;
+  o-steps:requiresState o-steps:emptyState ;
   o-steps:producesState state:citizenResidencePermit .
 
 step:provideCitizenBirthDateManually a o-steps:ComponentLevelStep ;
   rdfs:label "Citizen's date of birth"@en ;
   rdfs:label "geboortedatum inwoner"@nl ;
   rdfs:label "Geburtsdatum Einwohner"@de ;
+  o-steps:requiresState o-steps:emptyState ;
   o-steps:producesState state:citizenBirthDate .
 
 step:provideCitizenAddressManually a o-steps:ComponentLevelStep ;
   rdfs:label "Citizen's address"@en ;
   rdfs:label "adres inwoner"@nl ;
   rdfs:label "Adresse Einwohner"@de ;
+  o-steps:requiresState o-steps:emptyState ;
   o-steps:producesState state:citizenAddress .
 
 step:provideCitizenProfessionManually a o-steps:ComponentLevelStep ;
   rdfs:label "Citizen's profession"@en ;
   rdfs:label "beroep inwoner"@nl ;
   rdfs:label "Beruf Einwohner"@de ;
+  o-steps:requiresState o-steps:emptyState ;
   o-steps:producesState state:citizenProfession .
 
 step:provideNumberOfFamilyMembersManually a o-steps:ComponentLevelStep ;
   rdfs:label "Number of family members"@en ;
   rdfs:label "Aantal gezinsleden"@nl ;
   rdfs:label "Anzahl Familienmitglieder"@de ;
+  o-steps:requiresState o-steps:emptyState ;
   o-steps:producesState state:numberOfFamilyMembers .
 
 #
@@ -127,24 +140,28 @@ step:provideMovingDateManually a o-steps:ComponentLevelStep ;
   rdfs:label "Moving date"@en ;
   rdfs:label "Verhuisdatum"@nl ;
   rdfs:label "Umzungsdatum"@de ;
+  o-steps:requiresState o-steps:emptyState ;
   o-steps:producesState state:movingDate .
 
 step:provideMovingCityManually a o-steps:ComponentLevelStep ;
   rdfs:label "City to move to"@en ;
   rdfs:label "Stad waarnaar wordt verplaatst"@nl ;
   rdfs:label "Stadt in die umgezogen wird"@de ;
+  o-steps:requiresState o-steps:emptyState ;
   o-steps:producesState state:movingCity .
 
 step:provideMovingAddressManually a o-steps:ComponentLevelStep ;
   rdfs:label "Moving address"@en ;
   rdfs:label "Adres waarnaar wordt verhuist"@nl ;
   rdfs:label "Umzungsadresse"@de ;
+  o-steps:requiresState o-steps:emptyState ;
   o-steps:producesState state:movingAddress .
 
 step:provideBillingAddressManually a o-steps:ComponentLevelStep ;
   rdfs:label "Billing address"@en ;
   rdfs:label "Facturatieadres"@nl ;
   rdfs:label "Rechnungsadresse"@de ;
+  o-steps:requiresState o-steps:emptyState ;
   o-steps:producesState state:billingAddress .
 
 #
@@ -155,72 +172,84 @@ step:provideNumberOf40LiterGreyWasteContainersManually a o-steps:ComponentLevelS
   rdfs:label "Number of 40 liter grey waste container(s)"@en ;
   rdfs:label "Aantal 40 liter grijze restafvalcontainer(s)"@nl ;
   rdfs:label "Anzahl grauer Restabfallcontainer 40 liter"@de ;
+  o-steps:requiresState o-steps:emptyState ;
   o-steps:producesState state:numberOf40LiterGreyWasteContainers .
 
 step:provideNumberOf120LiterGreyWasteContainersManualy a o-steps:ComponentLevelStep ;
   rdfs:label "Number of 120 liter grey waste container(s)"@en ;
   rdfs:label "Aantal 120 liter grijze restafvalcontainer(s)"@nl ;
   rdfs:label "Anzahl grauer Restabfallcontainer 120 liter"@de ;
+  o-steps:requiresState o-steps:emptyState ;
   o-steps:producesState state:numberOf120LiterGreyWasteContainers .
 
 step:provideNumberOf240LiterGreyWasteContainers a o-steps:ComponentLevelStep ;
   rdfs:label "Number of 240 liter grey waste container(s)"@en ;
   rdfs:label "Aantal 240 liter grijze restafvalcontainer(s)"@nl ;
   rdfs:label "Anzahl grauer Restabfallcontainer 240 liter"@de ;
+  o-steps:requiresState o-steps:emptyState ;
   o-steps:producesState state:numberOf240LiterGreyWasteContainers .
 
 step:provideGreyWasteContainerLockInfoManually a o-steps:ComponentLevelStep ;
   rdfs:label "I request a lock for my grey waste container(s)"@en ;
   rdfs:label "Ik vraag een slot voor mijn grijze restafvalcontainer(s) aan"@nl ;
   rdfs:label "Ich beantrage ein Schloss für meine Restabfallcontainer"@de ;
+  o-steps:requiresState o-steps:emptyState ;
   o-steps:producesState state:greyWasteContainerLockInfo .
 
 step:provideNumberOf40LiterGreenWasteContainersManually a o-steps:ComponentLevelStep ;
   rdfs:label "Number of 40 liter green waste container(s)"@en ;
   rdfs:label "Aantal 40 liter GFT container(s)"@nl ;
   rdfs:label "Anzahl Biomüllcontainer 40 liter"@de ;
+  o-steps:requiresState o-steps:emptyState ;
   o-steps:producesState state:numberOf40LiterGreenWasteContainers .
 
 step:provideNumberOf120LiterGreenWasteContainersManually a o-steps:ComponentLevelStep ;
   rdfs:label "Number of 120 liter green waste container(s)"@en ;
   rdfs:label "Aantal 120 liter GFT container(s)"@nl ;
   rdfs:label "Anzahl Biomüllcontainer 120 liter"@de ;
+  o-steps:requiresState o-steps:emptyState ;
   o-steps:producesState state:numberOf120LiterGreenWasteContainers .
 
 step:provideGreenWasteContainerOwnCompostInfoManually a o-steps:ComponentLevelStep ;
   rdfs:label "No green waste containers, because I compost on my own"@en ;
   rdfs:label "Geen GFT containers, want ik composteer mijn GFT zelf"@nl ;
   rdfs:label "Keine Biomüllcontainer, weil ich selbst kompostiere"@de ;
+  o-steps:requiresState o-steps:emptyState ;
   o-steps:producesState state:greenWasteContainerOwnCompostInfo .
 
 step:provideGreenWasteContainerCollectionStopInfoManually a o-steps:ComponentLevelStep ;
   rdfs:label "Stop collecting green waste containers"@en ;
   rdfs:label "Ophaling GFT-container door stopzetting"@nl ;
   rdfs:label "Abholung von Biomüll stoppen"@de ;
+  o-steps:requiresState o-steps:emptyState ;
   o-steps:producesState state:greenWasteContainerStopCollectingInfo .
 
 step:provideGreenWasteContainerLockInfoManually a o-steps:ComponentLevelStep ;
   rdfs:label "I request a lock for my green waste container(s)"@en ;
   rdfs:label "Ik vraag een slot voor mijn GFT container(s) aan"@nl ;
   rdfs:label "Ich beantrage ein Schloss für meine Biomüllcontainer"@de ;
+  o-steps:requiresState o-steps:emptyState ;
   o-steps:producesState state:greenWasteContainerLockInfo .
 
 step:provideNumberOf40LiterPaperWasteContainersManually a o-steps:ComponentLevelStep ;
   rdfs:label "Number of 40 liter paper waste container(s)"@en ;
   rdfs:label "Aantal 40 liter papier container(s)"@nl ;
   rdfs:label "Anzahl Papiercontainer 40 liter"@de ;
+  o-steps:requiresState o-steps:emptyState ;
   o-steps:producesState state:numberOf40LiterPaperWasteContainers .
 
 step:provideNumberOf240LiterPaperWasteContainersManually a o-steps:ComponentLevelStep ;
   rdfs:label "Number of 240 liter paper waste container(s)"@en ;
   rdfs:label "Aantal 240 liter papier container(s)"@nl ;
   rdfs:label "Anzahl Papiercontainer 240 liter"@de ;
+  o-steps:requiresState o-steps:emptyState ;
   o-steps:producesState state:numberOf240LiterPaperWasteContainers .
 
 step:provideNumberOf1100LiterPaperWasteContainersManually a o-steps:ComponentLevelStep ;
   rdfs:label "Number of 1100 liter paper waste container(s)"@en ;
   rdfs:label "Aantal 1100 liter papier container(s)"@nl ;
   rdfs:label "Anzahl Papiercontainer 1100 liter"@de ;
+  o-steps:requiresState o-steps:emptyState ;
   o-steps:producesState state:numberOf1100LiterPaperWasteContainers .
 
 
