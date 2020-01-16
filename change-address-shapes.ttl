@@ -99,7 +99,7 @@ shape:genderMale a skos:Concept ;
   rdfs:label "male gender"@en ;
   rdfs:label "mannelijk geslacht"@nl .
 
-shape:femaleGender a skos:Concept ;
+shape:genderFemale a skos:Concept ;
   rdfs:label "female gender"@en ;
   rdfs:label "vrouwelijk geslacht"@nl . 
 
