@@ -23,24 +23,28 @@ state:citizenFirstName a o-steps:State;
   rdfs:label "Citizen first name"@en ;
   rdfs:label "Inwoner voornaam"@nl ;
   rdfs:label "Einwohner Vorname"@de ;
+  o-steps:hasUIShape shape:firstNameUIShape ;
   o-steps:hasStateShape shape:firstNameShape .
 
 state:citizenLastName a o-steps:State;
   rdfs:label "Citizen last name"@en ;
   rdfs:label "Inwoner naam"@nl ;
   rdfs:label "Einwohner Nachname"@de ;
+  o-steps:hasUIShape shape:lastNameUIShape ;
   o-steps:hasStateShape shape:lastNameShape .
 
 state:citizenGender a o-steps:State ;
   rdfs:label "Citizen gender"@en ;
   rdfs:label "Inwoner Geslacht"@nl ;
   rdfs:label "Einwohner Geschlecht"@de ;
+  o-steps:hasUIShape shape:genderUIShape ;
   o-steps:hasStateShape shape:genderShape .
 
 state:citizenEmailAddress a o-steps:State ;
   rdfs:label "Citizen email address"@en ;
   rdfs:label "Inwoner email address"@nl ;
   rdfs:label "Einwohner Email Adresse"@de ;
+  o-steps:hasUIShape shape:emailAddressUIShape ;
   o-steps:hasStateShape shape:emailAddressShape .
 
 state:citizenMobilePhoneNumber a o-steps:State;
@@ -58,6 +62,7 @@ state:citizenPhoneNumber a o-steps:State;
 state:citizenNationalNumber a o-steps:State;
   rdfs:label "Citizen national number"@en ;
   rdfs:label "Inwoner Rijksregisternummer"@nl ;
+  o-steps:hasUIShape shape:nationalNumberUIShape ;
   o-steps:hasStateShape shape:nationalNumberBelgiumShape .  
 
 state:citizenBankAccountNumber a o-steps:State ;
@@ -70,24 +75,28 @@ state:citizenNationality a o-steps:State ;
   rdfs:label "Citizen nationality"@en ;
   rdfs:label "Inwoner nationaliteit"@nl ;
   rdfs:label "Einwohenr Nationalität"@de ;
+  o-steps:hasUIShape shape:nationalityUIShape ;
   o-steps:hasStateShape shape:nationalityShape .
 
 state:citizenResidencePermit a o-steps:State ;
   rdfs:label "Citizen residency permit"@en ;
   rdfs:label "Inwoner verblijfsvergunning"@nl ;
   rdfs:label "Einwohner Aufenthaltsgenehmigung"@de ;
+  o-steps:hasUIShape shape:residencePermitUIShape ;
   o-steps:hasStateShape shape:residencePermitShape .
 
 state:citizenBirthDate a o-steps:State ;
   rdfs:label "Citizen date of birth"@en ;
   rdfs:label "Inwoner geboortedatum"@nl ;
   rdfs:label "Einwohner Geburtsdatum"@de ;
+  o-steps:hasUIShape shape:birthDateUIShape ;
   o-steps:hasStateShape shape:birthDateShape .
 
 state:citizenCityOfBirth a o-steps:State ;
   rdfs:label "Citizen city of birth"@en ;
   rdfs:label "Inwoner geboorteplaats"@nl ;
   rdfs:label "Einwohner Geburtsort"@de ;
+  o-steps:hasUIShape shape:cityOfBirthUIShape ;
   o-steps:hasStateShape shape:cityOfBirthShape .
 
 state:citizenAddress a o-steps:State ;
