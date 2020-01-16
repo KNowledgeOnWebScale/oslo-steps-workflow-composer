@@ -343,7 +343,7 @@ shape:cityOfBirthShape a o-steps:StateShape ;
 #
 # city of birth (ui)
 #
-shape:cityOfbirthUIShape a o-steps:UIShape ;
+shape:cityOfBirthUIShape a o-steps:UIShape ;
   rdfs:label "UI shape: city of birth" ;
   sh:targetClass o-persoon:Inwoner ;
   sh:property [ 
