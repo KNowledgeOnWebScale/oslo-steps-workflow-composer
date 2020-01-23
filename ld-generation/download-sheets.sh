@@ -7,6 +7,7 @@ SHEETNAME[1]="States"
 SHEETNAME[2]="Shapes"
 SHEETNAME[3]="States-Shapes"
 SHEETNAME[4]="Shapes-Constraints"
+SHEETNAME[5]="Steps-Descriptions"
 
 for i in "${SHEETNAME[@]}"
 do

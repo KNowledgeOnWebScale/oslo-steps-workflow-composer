@@ -1,0 +1,82 @@
+prefixes:
+  dc: "http://purl.org/dc/terms/"
+  xsd: "http://www.w3.org/2001/XMLSchema#"
+  grel: "http://users.ugent.be/~bjdmeest/function/grel2.ttl#"
+  idlab-fn: "http://example.com/idlab/function/"
+  rdfs: "http://www.w3.org/2000/01/rdf-schema#"
+  foaf: "http://xmlns.com/foaf/0.1/"
+  sh: "http://www.w3.org/ns/shacl#"
+  ex: "https://example.org/ns/example#"
+  schema: "https://schema.org/"
+  skos: "http://www.w3.org/2004/02/skos/core#"
+  xl: "http://www.w3.org/2008/05/skos-xl#"
+  ops: "https://data.vlaanderen.be/shacl/persoon-basis#"
+  wd: "http://www.wikidata.org/entity/"
+  o-steps: "https://fast.ilabt.imec.be/ns/oslo-steps/0.2#"
+  o-persoon: "https://data.vlaanderen.be/ns/persoon#"
+  step: "https://fast.ilabt.imec.be/api/v3/steps#"
+  state: "https://fast.ilabt.imec.be/api/v3/states#"
+  shape: "https://fast.ilabt.imec.be/api/v3/shapes#"
+
+mappings:
+
+  #
+  # Steps
+  #
+  steps:
+    sources:
+      - ['Steps.csv~csv']
+    s: step:$(URI)
+    po:
+      - [a, o-steps:$(Class)]
+      - [rdfs:label, $(label_english), en~lang]
+      - [rdfs:label, $(label_dutch), nl~lang]
+
+  #
+  # Identifiable step description texts (english)
+  #
+  steps_descriptions_english:
+    sources:
+      - ['Steps-Descriptions.csv~csv']
+    s: step:descriptionEnglish$(description_id)
+    po:
+      - [a, xl:Label]
+      - [xl:literalForm, $(description_english), en~lang]
+      - [schema:inLanguage, wd:Q191]
+
+  
+  #
+  # Identifiable step description (english)
+  #
+  steps_descriptions_dutch:
+    sources:
+      - ['Steps-Descriptions.csv~csv']
+    s: step:descriptionDutch$(description_id)
+    po:
+      - [a, xl:Label]
+      - [xl:literalForm, $(description_dutch), nl~lang]
+      - [schema:inLanguage, wd:Q29999]
+
+  #
+  # States
+  #
+  states:
+    sources:
+      - ['States.csv~csv']
+    s: state:$(URI)
+    po:
+      - [a, o-steps:$(Class)]
+      - [rdfs:label, $(label_english) en~lang]
+      - [rdfs:label, $(label_dutch) nl~lang]
+
+  #
+  # Shapes
+  #
+  shapes:
+    sources:
+      - ['Shapes.csv~csv']
+    s: shape:$(URI)
+    po:
+      - [a, o-steps:$(Class)]
+      - [rdfs:label, $(label_english), en~lang]
+      - [rdfs:label, $(label_dutch), nl~lang]
