@@ -42,11 +42,20 @@ mappings:
     po:
       - [a, xl:Label]
       - [xl:literalForm, $(description_english), en~lang]
-      - [schema:inLanguage, wd:Q191]
+      - [schema:inLanguage, wd:Q191~iri]
 
+  #
+  # Links between steps and their descriptions (english)
+  #
+  steps_descriptions_links_english:
+    sources:
+      - ['Steps-Descriptions.csv~csv']
+    s: step:$(step)
+    po:
+      - [o-steps:hasDescription, step:descriptionEnglish$(description_id)~iri]
   
   #
-  # Identifiable step description (english)
+  # Identifiable step description (dutch)
   #
   steps_descriptions_dutch:
     sources:
@@ -55,7 +64,17 @@ mappings:
     po:
       - [a, xl:Label]
       - [xl:literalForm, $(description_dutch), nl~lang]
-      - [schema:inLanguage, wd:Q29999]
+      - [schema:inLanguage, wd:Q29999~iri]
+
+  #
+  # Links between steps and their descriptions (dutch)
+  #
+  steps_descriptions_links_dutch:
+    sources:
+      - ['Steps-Descriptions.csv~csv']
+    s: step:$(step)
+    po:
+      - [o-steps:hasDescription, step:descriptionDutch$(description_id)~iri]
 
   #
   # States
@@ -66,8 +85,8 @@ mappings:
     s: state:$(URI)
     po:
       - [a, o-steps:$(Class)]
-      - [rdfs:label, $(label_english) en~lang]
-      - [rdfs:label, $(label_dutch) nl~lang]
+      - [rdfs:label, $(label_english), en~lang]
+      - [rdfs:label, $(label_dutch), nl~lang]
 
   #
   # Shapes
