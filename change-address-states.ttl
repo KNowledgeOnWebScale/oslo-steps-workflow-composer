@@ -108,6 +108,9 @@ state:numberOfFamilyMembers a o-steps:State ;
   rdfs:label "Anzahl Familienmitglieder"@de ;
   o-steps:hasStateShape shape:numberOfFamilyMembersShape .
 
+state:applicantInfoSubmitted a o-steps:State ;
+  o-steps:hasStateShape shape:applicantInfoSubmittedShape .
+
 
 #
 # data regarding moving
@@ -309,5 +312,17 @@ state:citizenBroughtEID a o-steps:State ;
   rdfs:label "Inwoner brengt eID"@nl ;
   rdfs:label "Einwohner hat eID Karte vorgelegt"@de ;
   o-steps:hasStateShape shape:citizenBroughtEIDShape .
+
+
+state:transportRequested a o-steps:State ;
+  o-steps:hasStateShape shape:transportRequestedShape .
+
+state:mobilityRequested a o-steps:State ;
+  o-steps:hasStateShape shape:mobilityRequestedShape .
+
+state:drivingLicenceExchangeRequested  a o-steps:State ;
+  o-steps:hasStateShape shape:drivingLicenceExchangeRequestedShape .
+
+
 
 

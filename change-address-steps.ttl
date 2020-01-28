@@ -253,19 +253,17 @@ step:provideNumberOf1100LiterPaperWasteContainersManually a o-steps:ComponentLev
   o-steps:producesState state:numberOf1100LiterPaperWasteContainers .
 
 
-#
-# higher level steps regarding waste collection
-#
-step:requestWasteCollection a o-steps:JourneyLevelStep ;
-  rdfs:label "Application for waste collection"@en ;
-  rdfs:label "Aanvraag afvalcontainers"@nl ;
-  rdfs:label "Antrag für Müllabfuhr"@de ;
-  o-steps:producesState state:wasteCollectionRequested ;
-  o-steps:requiresState
-#    state:applicantInfo ,
-#    state:greyWasteContainerInfo ,
-#    state:greenWasteContainerInfo ,
-    state:paperWasteContainerInfo .
+
+
+step:submitWasteCollectionApplicantInfo a o-steps:ContainerLevelStep ;
+  rdfs:label "Applicant information"@en ;
+  rdfs:label "Aanvrager informatie"@nl ;
+  rdfs:label "Antragssteller informationen"@de ;
+  rdfs:comment "Information regarding the applicant requesting waste collection"@en ;
+  o-steps:producesState state:applicantInfoSubmitted  ;
+  o-steps:requiresState state:applicantInfo  .
+
+
 
 step:provideWasteCollectionApplicantInfo a o-steps:ContainerLevelStep ;
   rdfs:label "Applicant information"@en ;
@@ -273,17 +271,7 @@ step:provideWasteCollectionApplicantInfo a o-steps:ContainerLevelStep ;
   rdfs:label "Antragssteller informationen"@de ;
   rdfs:comment "Information regarding the applicant requesting waste collection"@en ;
   o-steps:producesState state:applicantInfo ;
-  o-steps:requiresState
-    state:citizenFirstName ,
-    state:citizenLastName ,
-    state:citizenPhoneNumber ,
-    state:citizenMobilePhoneNumber ,
-    state:citizenEmail ,
-    state:citizenGender ,
-    state:citizenNationalNumber ,
-    state:numberOfFamilyMembers ,
-    state:movingAddress ,
-    state:billingAddress .
+  o-steps:requiresState o-steps:emptyState  .
 
 step:provideGreyWasteContainerInfo a o-steps:ContainerLevelStep ;
   rdfs:label "Grey waste container(s)"@en ;
@@ -304,10 +292,10 @@ step:provideGreenWasteContainerInfo a o-steps:ContainerLevelStep ;
 	rdfs:comment "Information regarding green waste container(s)"@en ;
   o-steps:producesState state:greenWasteContainerInfo ;
   o-steps:requiresState 
-    state:numberOf40LiterGreenWasteContainers ,
-    state:numberOf120LiterGreenWasteContainers ,
-    state:greenWasteContainerLockInfo ,
-    state:greenWasteContainerOwnCompostInfo ,
+ #   state:numberOf40LiterGreenWasteContainers ,
+ #   state:numberOf120LiterGreenWasteContainers ,
+ #   state:greenWasteContainerLockInfo ,
+ #   state:greenWasteContainerOwnCompostInfo ,
     state:greenWasteContainerStopCollectingInfo .
 
 step:providePaperWasteContainerInfo a o-steps:ContainerLevelStep ;
@@ -321,28 +309,7 @@ step:providePaperWasteContainerInfo a o-steps:ContainerLevelStep ;
     state:numberOf240LiterPaperWasteContainers ,
     state:numberOf1100LiterPaperWasteContainers  .
 
-#
-# higher level steps regarding declaration of address change
-# 
 
-step:declareAddressChange a o-steps:JourneyLevelStep ;
-  rdfs:label "Declaration of address change"@en ;
-  rdfs:label "Aangifte van adreswijziging"@nl ;
-  rdfs:label "Adressänderung beantragen"@de ;
-  o-steps:producesState state:addressChangeDeclared ;
-  o-steps:requiresState
-    state:citizenFirstName ,
-    state:citizenLastName ,
-    state:citizenNationalNumber ,
-    state:citizenBirthDate ,
-    state:citizenCityOfBirth ,
-    state:citizenNationality ,
-    state:movingAddress ,
-    state:movingDate ,
-    state:citizenProfession ,
-    state:citizenPhoneNumber ,
-    state:citizenMobilePhoneNumber ,
-    state:citizenEmail .
 
 # The police is confirming this in Belgium by a visit
 step:confirmAddressChangeVisit a o-steps:ComponentLevelStep ;
@@ -362,5 +329,56 @@ step:addressChangeOnEIDInOffice a o-steps:ComponentLevelStep ;
   o-steps:requiresState
     state:addressChangeConfirmed ,
     state:citizenBroughtEID .
+
+#
+# higher level steps regarding declaration of address change
+# 
+
+step:declareAddressChange a o-steps:JourneyLevelStep ;
+  rdfs:label "Declaration of address change"@en ;
+  rdfs:label "Aangifte van adreswijziging"@nl ;
+  rdfs:label "Adressänderung beantragen"@de ;
+  o-steps:producesState state:addressChangeDeclared ;
+  o-steps:requiresState o-steps:emptyState ;
+#  o-steps:requiresState
+#    state:citizenFirstName ,
+#    state:citizenLastName ,
+#    state:citizenNationalNumber ,
+#    state:citizenBirthDate ,
+#    state:citizenCityOfBirth ,
+#    state:citizenNationality ,
+#    state:movingAddress ,
+#    state:movingDate ,
+#    state:citizenProfession ,
+#    state:citizenPhoneNumber ,
+#    state:citizenMobilePhoneNumber ,
+#    state:citizenEmail 
+.
+
+
+step:requestWasteCollection a o-steps:JourneyLevelStep ;
+  rdfs:label "Application for waste collection"@en ;
+  rdfs:label "Aanvraag afvalcontainers"@nl ;
+  rdfs:label "Antrag für Müllabfuhr"@de ;
+  o-steps:producesState state:wasteCollectionRequested ;
+  o-steps:requiresState o-steps:emptyState ;
+#    state:applicantInfo ,
+#    state:greyWasteContainerInfo ,
+#    state:greenWasteContainerInfo ,
+#    state:paperWasteContainerInfo 
+.
+
+step:requestTransportDuringRelocation  a o-steps:JourneyLevelStep;
+  o-steps:requiresState o-steps:emptyState ;
+  o-steps:producesState state:transportRequested .
+
+step:requestMobilityInNewCity  a o-steps:JourneyLevelStep;
+  o-steps:requiresState o-steps:emptyState ;
+  o-steps:producesState state:mobilityRequested .
+
+
+step:requestExchangeNonEUDrivingLicence  a o-steps:JourneyLevelStep;
+  o-steps:requiresState o-steps:emptyState ;
+  o-steps:producesState state:drivingLicenceExchangeRequested .
 
 
