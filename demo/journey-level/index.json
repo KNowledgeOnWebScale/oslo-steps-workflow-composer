@@ -1,0 +1,21 @@
+{
+    "@context": {
+        "@vocab": "http://www.example.org#"
+    },
+    "features": {
+        "moving": {
+            "description": "moving",
+            "inference": {
+                "data": ["./journey-level/steps/*", "./profile/*", "./workflow-composer/gps-plugin_modified.n3"],
+                "query": "./goal/journeyGoal.n3"
+            }
+        },
+           "moving_noPermutation": {
+            "description": "moving without permutations",
+            "inference": {
+                "data": ["./journey-level/steps/*", "./profile/*", "./workflow-composer/gps-plugin_modified_noPermutations.n3"],
+                "query": "./goal/journeyGoal.n3"
+            }
+        }
+    }    
+}

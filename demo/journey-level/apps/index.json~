@@ -1,0 +1,19 @@
+{
+  "@context": {
+    "@vocab": "http://www.example.org#"
+  },
+  "features": {
+    "visualization": {
+      "description": "A visualization of all possible paths for request permit",
+      "Content-Type": "text/html",
+      "handlebars": "./app.handlebars",
+      "context": {
+        "title":"Request permit"
+      },
+      "withUrl":{
+        "data": "../request_permit"
+      }
+    }
+
+  }
+}

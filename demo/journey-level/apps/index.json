@@ -1,0 +1,19 @@
+{
+  "@context": {
+    "@vocab": "http://www.example.org#"
+  },
+  "features": {
+    "visualization": {
+      "description": "A visualization of all possible journey paths for moving",
+      "Content-Type": "text/html",
+      "handlebars": "./app.handlebars",
+      "context": {
+        "title":"Moving: journey"
+      },
+      "withUrl":{
+        "data": "../moving"
+      }
+    }
+
+  }
+}
