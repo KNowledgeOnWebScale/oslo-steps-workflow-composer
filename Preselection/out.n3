@@ -1,0 +1,44 @@
+#Processed by EYE v19.0817.2233 josd
+#eye gps-example22.n3 shortdescriptions.n3 gps-query2.n3 preselection.n3 --query prequery.n3 --nope
+
+PREFIX math: <http://www.w3.org/2000/10/swap/math#>
+PREFIX e: <http://eulersharp.sourceforge.net/2003/03swap/log-rules#>
+PREFIX gps: <http://josd.github.io/eye/reasoning/gps/gps-schema#>
+PREFIX : <http://josd.github.io/eye/reasoning#>
+PREFIX ns1: <http://example.org#>
+PREFIX log: <http://www.w3.org/2000/10/swap/log#>
+PREFIX list: <http://www.w3.org/2000/10/swap/list#>
+PREFIX plan: <http://https://github.com/doerthe/plan#>
+
+{:map1a gps:description ({?U_47 :e ?U_48. ?U_47 :y :z1. ?U_47 :y :z2. ?U_47 :y :z3. ?U_47 :y :z4. ?U_47 :y :z5} true {?U_47 :e 37 . ?U_47 :f :g} :action6a 4.0 0.6 0.98 0.99)} <= {37 math:notGreaterThan ?U_48}.
+:map1a gps:description ({?U_49 :d :e} true {?U_49 :e 38.7} :action5a 12.8 0.8 0.85 0.86).
+:map1a gps:description ({?U_50 :i :j} true {?U_50 :e 37.2} :action8a 4.0 0.01 0.99 1.0).
+{:map1a gps:description ({?U_51 :x :y1} true {?U_51 :y :z1} :action11a 3.0 0.5 0.96 0.97)} <= {?U_51 :e ?U_52}.
+{:map1a gps:description ({?U_53 :x :y2} true {?U_53 :y :z2} :action12a 3.0 0.5 0.96 0.97)} <= {?U_53 :y :z1}.
+{:map1a gps:description ({?U_54 :x :y3} true {?U_54 :y :z3} :action13a 3.0 0.5 0.96 0.97)} <= {?U_54 :y :z2}.
+{:map1a gps:description ({?U_55 :x :y4} true {?U_55 :y :z4} :action14a 3.0 0.5 0.96 0.97)} <= {?U_55 :y :z3}.
+{:map1a gps:description ({?U_56 :x :y5} true {?U_56 :y :z5} :action15a 3.0 0.5 0.96 0.97)} <= {?U_56 :y :z4}.
+:map1b gps:description ({?U_57 :i :j} true {?U_57 :e 37.2} :action8bb 4.0 0.01 0.998 1.0).
+{:map1b gps:description ({?U_58 :x :y1} true {?U_58 :y :z1} :action11bb 3.0 0.5 0.968 0.97)} <= {?U_58 :e ?U_59}.
+{:map1b gps:description ({?U_60 :x :y2} true {?U_60 :y :z2} :action12bb 3.0 0.5 0.968 0.97)} <= {?U_60 :y :z1}.
+{:map1b gps:description ({?U_61 :x :y3} true {?U_61 :y :z3} :action13bb 3.0 0.5 0.968 0.97)} <= {?U_61 :y :z2}.
+{:map1b gps:description ({?U_62 :x :y4} true {?U_62 :y :z4} :action14bb 3.0 0.5 0.968 0.97)} <= {?U_62 :y :z3}.
+{:map1b gps:description ({?U_63 :x :y5} true {?U_63 :y :z5} :action15bb 3.0 0.5 0.968 0.97)} <= {?U_63 :y :z4}.
+:map1a gps:description ({?U_79 :n :o. ?U_79 :b :c} true {?U_79 :d :e} :action3a 4.0 1.5 0.98 0.99).
+{:map1a gps:description ({?U_80 :c ?U_81} true {?U_80 :d :e} :action4a 90.0 -0.2 0.96 0.97)} <= {?U_81 math:notGreaterThan 9}.
+:map1b gps:description ({?U_82 :n :o. ?U_82 :b :c} true {?U_82 :d :e} :action3bb 4.0 1.5 0.988 0.99).
+{:map1a gps:description ({?U_83 a :H} true {?U_83 :i :j} :action10a 0.0 0.0 1.0 1.0)} <= {?U_83 a :K. ?U_83 :uu :lll. ?U_83 :aha :so}.
+{:map1b gps:description ({?U_84 a :H} true {?U_84 :i :j} :action10bb 0.0 0.0 1.0 1.0)} <= {?U_84 a :K}.
+:map1a gps:description ({?U_85 :g :h} true {?U_85 a :H} :action9a 0.0 0.0 1.0 1.0).
+:map1a gps:description ({?U_86 :uu :ll} true {?U_86 :uu :llll} :action110a 0.0 0.0 1.0 1.0).
+:map1a gps:description ({?U_87 :aha :sososo} true {?U_87 :aha :soso} :action110soso 0.0 0.0 1.0 1.0).
+:map1b gps:description ({?U_88 :g :h} true {?U_88 a :H} :action9bb 0.0 0.0 1.0 1.0).
+:map1a gps:description ({?U_103 :a :b. ?U_103 :aa :bb} true {?U_103 :b :c. ?U_103 :n :o. ?U_103 :j :k} :action1a 3.0 0.5 0.96 0.97).
+:map1b gps:description ({?U_104 :a :b} true {?U_104 :b :c. ?U_104 :n :o. ?U_104 :j :k} :action1bb 3.0 0.5 0.968 0.97).
+{:map1a gps:description ({?U_105 :a ?U_106} true {?U_105 :c 5} :action2a 3.0 0.0 0.95 0.96)} <= {?U_107 e:fail {?U_105 :x :y}}.
+{:map1b gps:description ({?U_108 :a ?U_109} true {?U_108 :c 5} :action2bb 3.0 0.0 0.958 0.96)} <= {?U_110 e:fail {?U_108 :x :y}}.
+:map1a gps:description ({?U_111 :d :e} true {?U_111 :g :h} :action7a 2.0 3.5 0.97 0.98).
+
+#2019-11-15T11:27:25.592Z in=134 out=28 ent=56 step=299 brake=4 inf=1088777 sec=0.289 inf/sec=3767394
+#ENDS
+

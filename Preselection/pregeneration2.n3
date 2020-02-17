@@ -1,0 +1,64 @@
+PREFIX math: <http://www.w3.org/2000/10/swap/math#>
+PREFIX e: <http://eulersharp.sourceforge.net/2003/03swap/log-rules#>
+PREFIX gps: <http://josd.github.io/eye/reasoning/gps/gps-schema#>
+PREFIX : <http://example.org#>
+PREFIX log: <http://www.w3.org/2000/10/swap/log#>
+@prefix list: <http://www.w3.org/2000/10/swap/list#>.
+
+{
+?head <= ?Where.
+?head log:equalTo {?Map gps:description ?list}.
+?list log:equalTo (?From ?Transition ?To ?Action ?Duration_n ?Cost_n ?Belief_n ?Comfort_n ).
+?From e:graphList ?FromList.
+
+?con list:in ?FromList.
+
+?To e:graphList ?ToList.
+?ToTo list:in ?ToList. 
+#?Where e:graphList ?WhereList.
+#(?FromList ?WhereList) list:append ?longlist.
+#?longlist log:conjunction ?con.
+
+}
+=>
+{
+{{?con ?Action ?ToTo} a :ShortDescription.}<={}
+}.
+
+
+{
+?head <= ?Where.
+?head log:equalTo {?Map gps:description ?list}.
+?list log:equalTo (?From ?Transition ?To ?Action ?Duration_n ?Cost_n ?Belief_n ?Comfort_n ).
+?Where e:graphList ?WhereList.
+
+?con list:in ?WhereList.
+
+?To e:graphList ?ToList.
+?ToTo list:in ?ToList. 
+#?Where e:graphList ?WhereList.
+#(?FromList ?WhereList) list:append ?longlist.
+#?longlist log:conjunction ?con.
+
+}
+=>
+{
+{{?con ?Action ?ToTo} a :ShortDescription.}<={}
+}.
+
+{
+?head <= ?body. 
+?body e:graphList ?list.
+?l list:in ?list.
+{?s ?p ?o} log:equalTo ?l. 
+}
+=>
+{
+?head :reliesOn {?s ?p ?o}.
+{?head :reliesOn {?s ?p ?o}.}<={}.
+
+}.
+
+
+
+

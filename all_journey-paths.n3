@@ -1,0 +1,153 @@
+#Processed by EYE v20.0105.1336 josd
+#eye gps-plugin_modified.n3 knowledge.n3 journey-level-steps.n3 change-address-steps.ttl --query journeyGoal.n3 --nope
+
+@prefix math: <http://www.w3.org/2000/10/swap/math#>.
+@prefix list: <http://www.w3.org/2000/10/swap/list#>.
+@prefix log: <http://www.w3.org/2000/10/swap/log#>.
+@prefix e: <http://eulersharp.sourceforge.net/2003/03swap/log-rules#>.
+@prefix gps: <http://josd.github.io/eye/reasoning/gps/gps-schema#>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
+@prefix o-steps: <https://fast.ilabt.imec.be/ns/oslo-steps/0.2#>.
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix p-plan: <http://purl.org/net/p-plan#>.
+@prefix o-address: <https://data.vlaanderen.be/ns/adres#>.
+@prefix ex: <https://example.org/ns/example#>.
+@prefix xl: <http://www.w3.org/2008/05/skos-xl#>.
+@prefix o-persoon: <https://data.vlaanderen.be/ns/persoon#>.
+@prefix foaf: <http://xmlns.com/foaf/0.1/>.
+@prefix schema: <https://schema.org/>.
+@prefix oslo: <https://example.org/ns/oslo#>.
+@prefix var: <https://example.org/ns/var#>.
+@prefix shp: <https://example.org/ns/shapes#>.
+@prefix sh: <http://www.w3.org/ns/shacl#>.
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
+@prefix ops: <https://data.vlaanderen.be/shacl/persoon-basis#>.
+@prefix ns1: <https://example.org/ns/oslo-steps#>.
+@prefix ns2: <http://josd.github.io/.well-known/genid/pP7dSETOSHCTU6bSn:iLn_1X3mg#>.
+@prefix ns3: <http://josd.github.io/.well-known/genid/0lq:rOixATM0xY4HYVephMVME7I#>.
+@prefix ns4: <http://josd.github.io/.well-known/genid/vQD8KHRlaFq7_0Un:d:bf1FCvIY#>.
+
+ex:bob gps:path ((ex:declareAddressChangeJ ex:requestWasteCollection ex:requestTransportDuringRelocation ex:requestMobilityInNewCity ex:requestExchangeNonEUDrivingLicence) 5.0 5.0 0.8587340256999999 0.8587340256999999).
+ex:bob gps:path ((ex:declareAddressChangeJ ex:requestWasteCollection ex:requestTransportDuringRelocation ex:requestExchangeNonEUDrivingLicence ex:requestMobilityInNewCity) 5.0 5.0 0.8587340256999999 0.8587340256999999).
+ex:bob gps:path ((ex:declareAddressChangeJ ex:requestWasteCollection ex:requestMobilityInNewCity ex:requestTransportDuringRelocation ex:requestExchangeNonEUDrivingLicence) 5.0 5.0 0.8587340256999999 0.8587340256999999).
+ex:bob gps:path ((ex:declareAddressChangeJ ex:requestWasteCollection ex:requestMobilityInNewCity ex:requestExchangeNonEUDrivingLicence ex:requestTransportDuringRelocation) 5.0 5.0 0.8587340256999999 0.8587340256999999).
+ex:bob gps:path ((ex:declareAddressChangeJ ex:requestWasteCollection ex:requestExchangeNonEUDrivingLicence ex:requestTransportDuringRelocation ex:requestMobilityInNewCity) 5.0 5.0 0.8587340256999999 0.8587340256999999).
+ex:bob gps:path ((ex:declareAddressChangeJ ex:requestWasteCollection ex:requestExchangeNonEUDrivingLicence ex:requestMobilityInNewCity ex:requestTransportDuringRelocation) 5.0 5.0 0.8587340256999999 0.8587340256999999).
+ex:bob gps:path ((ex:declareAddressChangeJ ex:requestTransportDuringRelocation ex:requestWasteCollection ex:requestMobilityInNewCity ex:requestExchangeNonEUDrivingLicence) 5.0 5.0 0.8587340256999999 0.8587340256999999).
+ex:bob gps:path ((ex:declareAddressChangeJ ex:requestTransportDuringRelocation ex:requestWasteCollection ex:requestExchangeNonEUDrivingLicence ex:requestMobilityInNewCity) 5.0 5.0 0.8587340256999999 0.8587340256999999).
+ex:bob gps:path ((ex:declareAddressChangeJ ex:requestTransportDuringRelocation ex:requestMobilityInNewCity ex:requestWasteCollection ex:requestExchangeNonEUDrivingLicence) 5.0 5.0 0.8587340256999999 0.8587340256999999).
+ex:bob gps:path ((ex:declareAddressChangeJ ex:requestTransportDuringRelocation ex:requestMobilityInNewCity ex:requestExchangeNonEUDrivingLicence ex:requestWasteCollection) 5.0 5.0 0.8587340256999999 0.8587340256999999).
+ex:bob gps:path ((ex:declareAddressChangeJ ex:requestTransportDuringRelocation ex:requestExchangeNonEUDrivingLicence ex:requestWasteCollection ex:requestMobilityInNewCity) 5.0 5.0 0.8587340256999999 0.8587340256999999).
+ex:bob gps:path ((ex:declareAddressChangeJ ex:requestTransportDuringRelocation ex:requestExchangeNonEUDrivingLicence ex:requestMobilityInNewCity ex:requestWasteCollection) 5.0 5.0 0.8587340256999999 0.8587340256999999).
+ex:bob gps:path ((ex:declareAddressChangeJ ex:requestMobilityInNewCity ex:requestWasteCollection ex:requestTransportDuringRelocation ex:requestExchangeNonEUDrivingLicence) 5.0 5.0 0.8587340256999999 0.8587340256999999).
+ex:bob gps:path ((ex:declareAddressChangeJ ex:requestMobilityInNewCity ex:requestWasteCollection ex:requestExchangeNonEUDrivingLicence ex:requestTransportDuringRelocation) 5.0 5.0 0.8587340256999999 0.8587340256999999).
+ex:bob gps:path ((ex:declareAddressChangeJ ex:requestMobilityInNewCity ex:requestTransportDuringRelocation ex:requestWasteCollection ex:requestExchangeNonEUDrivingLicence) 5.0 5.0 0.8587340256999999 0.8587340256999999).
+ex:bob gps:path ((ex:declareAddressChangeJ ex:requestMobilityInNewCity ex:requestTransportDuringRelocation ex:requestExchangeNonEUDrivingLicence ex:requestWasteCollection) 5.0 5.0 0.8587340256999999 0.8587340256999999).
+ex:bob gps:path ((ex:declareAddressChangeJ ex:requestMobilityInNewCity ex:requestExchangeNonEUDrivingLicence ex:requestWasteCollection ex:requestTransportDuringRelocation) 5.0 5.0 0.8587340256999999 0.8587340256999999).
+ex:bob gps:path ((ex:declareAddressChangeJ ex:requestMobilityInNewCity ex:requestExchangeNonEUDrivingLicence ex:requestTransportDuringRelocation ex:requestWasteCollection) 5.0 5.0 0.8587340256999999 0.8587340256999999).
+ex:bob gps:path ((ex:declareAddressChangeJ ex:requestExchangeNonEUDrivingLicence ex:requestWasteCollection ex:requestTransportDuringRelocation ex:requestMobilityInNewCity) 5.0 5.0 0.8587340256999999 0.8587340256999999).
+ex:bob gps:path ((ex:declareAddressChangeJ ex:requestExchangeNonEUDrivingLicence ex:requestWasteCollection ex:requestMobilityInNewCity ex:requestTransportDuringRelocation) 5.0 5.0 0.8587340256999999 0.8587340256999999).
+ex:bob gps:path ((ex:declareAddressChangeJ ex:requestExchangeNonEUDrivingLicence ex:requestTransportDuringRelocation ex:requestWasteCollection ex:requestMobilityInNewCity) 5.0 5.0 0.8587340256999999 0.8587340256999999).
+ex:bob gps:path ((ex:declareAddressChangeJ ex:requestExchangeNonEUDrivingLicence ex:requestTransportDuringRelocation ex:requestMobilityInNewCity ex:requestWasteCollection) 5.0 5.0 0.8587340256999999 0.8587340256999999).
+ex:bob gps:path ((ex:declareAddressChangeJ ex:requestExchangeNonEUDrivingLicence ex:requestMobilityInNewCity ex:requestWasteCollection ex:requestTransportDuringRelocation) 5.0 5.0 0.8587340256999999 0.8587340256999999).
+ex:bob gps:path ((ex:declareAddressChangeJ ex:requestExchangeNonEUDrivingLicence ex:requestMobilityInNewCity ex:requestTransportDuringRelocation ex:requestWasteCollection) 5.0 5.0 0.8587340256999999 0.8587340256999999).
+ex:bob gps:path ((ex:requestWasteCollection ex:declareAddressChangeJ ex:requestTransportDuringRelocation ex:requestMobilityInNewCity ex:requestExchangeNonEUDrivingLicence) 5.0 5.0 0.8587340256999999 0.8587340256999999).
+ex:bob gps:path ((ex:requestWasteCollection ex:declareAddressChangeJ ex:requestTransportDuringRelocation ex:requestExchangeNonEUDrivingLicence ex:requestMobilityInNewCity) 5.0 5.0 0.8587340256999999 0.8587340256999999).
+ex:bob gps:path ((ex:requestWasteCollection ex:declareAddressChangeJ ex:requestMobilityInNewCity ex:requestTransportDuringRelocation ex:requestExchangeNonEUDrivingLicence) 5.0 5.0 0.8587340256999999 0.8587340256999999).
+ex:bob gps:path ((ex:requestWasteCollection ex:declareAddressChangeJ ex:requestMobilityInNewCity ex:requestExchangeNonEUDrivingLicence ex:requestTransportDuringRelocation) 5.0 5.0 0.8587340256999999 0.8587340256999999).
+ex:bob gps:path ((ex:requestWasteCollection ex:declareAddressChangeJ ex:requestExchangeNonEUDrivingLicence ex:requestTransportDuringRelocation ex:requestMobilityInNewCity) 5.0 5.0 0.8587340256999999 0.8587340256999999).
+ex:bob gps:path ((ex:requestWasteCollection ex:declareAddressChangeJ ex:requestExchangeNonEUDrivingLicence ex:requestMobilityInNewCity ex:requestTransportDuringRelocation) 5.0 5.0 0.8587340256999999 0.8587340256999999).
+ex:bob gps:path ((ex:requestWasteCollection ex:requestTransportDuringRelocation ex:declareAddressChangeJ ex:requestMobilityInNewCity ex:requestExchangeNonEUDrivingLicence) 5.0 5.0 0.8587340256999999 0.8587340256999999).
+ex:bob gps:path ((ex:requestWasteCollection ex:requestTransportDuringRelocation ex:declareAddressChangeJ ex:requestExchangeNonEUDrivingLicence ex:requestMobilityInNewCity) 5.0 5.0 0.8587340256999999 0.8587340256999999).
+ex:bob gps:path ((ex:requestWasteCollection ex:requestTransportDuringRelocation ex:requestMobilityInNewCity ex:declareAddressChangeJ ex:requestExchangeNonEUDrivingLicence) 5.0 5.0 0.8587340256999999 0.8587340256999999).
+ex:bob gps:path ((ex:requestWasteCollection ex:requestTransportDuringRelocation ex:requestMobilityInNewCity ex:requestExchangeNonEUDrivingLicence ex:declareAddressChangeJ) 5.0 5.0 0.8587340256999999 0.8587340256999999).
+ex:bob gps:path ((ex:requestWasteCollection ex:requestTransportDuringRelocation ex:requestExchangeNonEUDrivingLicence ex:declareAddressChangeJ ex:requestMobilityInNewCity) 5.0 5.0 0.8587340256999999 0.8587340256999999).
+ex:bob gps:path ((ex:requestWasteCollection ex:requestTransportDuringRelocation ex:requestExchangeNonEUDrivingLicence ex:requestMobilityInNewCity ex:declareAddressChangeJ) 5.0 5.0 0.8587340256999999 0.8587340256999999).
+ex:bob gps:path ((ex:requestWasteCollection ex:requestMobilityInNewCity ex:declareAddressChangeJ ex:requestTransportDuringRelocation ex:requestExchangeNonEUDrivingLicence) 5.0 5.0 0.8587340256999999 0.8587340256999999).
+ex:bob gps:path ((ex:requestWasteCollection ex:requestMobilityInNewCity ex:declareAddressChangeJ ex:requestExchangeNonEUDrivingLicence ex:requestTransportDuringRelocation) 5.0 5.0 0.8587340256999999 0.8587340256999999).
+ex:bob gps:path ((ex:requestWasteCollection ex:requestMobilityInNewCity ex:requestTransportDuringRelocation ex:declareAddressChangeJ ex:requestExchangeNonEUDrivingLicence) 5.0 5.0 0.8587340256999999 0.8587340256999999).
+ex:bob gps:path ((ex:requestWasteCollection ex:requestMobilityInNewCity ex:requestTransportDuringRelocation ex:requestExchangeNonEUDrivingLicence ex:declareAddressChangeJ) 5.0 5.0 0.8587340256999999 0.8587340256999999).
+ex:bob gps:path ((ex:requestWasteCollection ex:requestMobilityInNewCity ex:requestExchangeNonEUDrivingLicence ex:declareAddressChangeJ ex:requestTransportDuringRelocation) 5.0 5.0 0.8587340256999999 0.8587340256999999).
+ex:bob gps:path ((ex:requestWasteCollection ex:requestMobilityInNewCity ex:requestExchangeNonEUDrivingLicence ex:requestTransportDuringRelocation ex:declareAddressChangeJ) 5.0 5.0 0.8587340256999999 0.8587340256999999).
+ex:bob gps:path ((ex:requestWasteCollection ex:requestExchangeNonEUDrivingLicence ex:declareAddressChangeJ ex:requestTransportDuringRelocation ex:requestMobilityInNewCity) 5.0 5.0 0.8587340256999999 0.8587340256999999).
+ex:bob gps:path ((ex:requestWasteCollection ex:requestExchangeNonEUDrivingLicence ex:declareAddressChangeJ ex:requestMobilityInNewCity ex:requestTransportDuringRelocation) 5.0 5.0 0.8587340256999999 0.8587340256999999).
+ex:bob gps:path ((ex:requestWasteCollection ex:requestExchangeNonEUDrivingLicence ex:requestTransportDuringRelocation ex:declareAddressChangeJ ex:requestMobilityInNewCity) 5.0 5.0 0.8587340256999999 0.8587340256999999).
+ex:bob gps:path ((ex:requestWasteCollection ex:requestExchangeNonEUDrivingLicence ex:requestTransportDuringRelocation ex:requestMobilityInNewCity ex:declareAddressChangeJ) 5.0 5.0 0.8587340256999999 0.8587340256999999).
+ex:bob gps:path ((ex:requestWasteCollection ex:requestExchangeNonEUDrivingLicence ex:requestMobilityInNewCity ex:declareAddressChangeJ ex:requestTransportDuringRelocation) 5.0 5.0 0.8587340256999999 0.8587340256999999).
+ex:bob gps:path ((ex:requestWasteCollection ex:requestExchangeNonEUDrivingLicence ex:requestMobilityInNewCity ex:requestTransportDuringRelocation ex:declareAddressChangeJ) 5.0 5.0 0.8587340256999999 0.8587340256999999).
+ex:bob gps:path ((ex:requestTransportDuringRelocation ex:declareAddressChangeJ ex:requestWasteCollection ex:requestMobilityInNewCity ex:requestExchangeNonEUDrivingLicence) 5.0 5.0 0.8587340256999999 0.8587340256999999).
+ex:bob gps:path ((ex:requestTransportDuringRelocation ex:declareAddressChangeJ ex:requestWasteCollection ex:requestExchangeNonEUDrivingLicence ex:requestMobilityInNewCity) 5.0 5.0 0.8587340256999999 0.8587340256999999).
+ex:bob gps:path ((ex:requestTransportDuringRelocation ex:declareAddressChangeJ ex:requestMobilityInNewCity ex:requestWasteCollection ex:requestExchangeNonEUDrivingLicence) 5.0 5.0 0.8587340256999999 0.8587340256999999).
+ex:bob gps:path ((ex:requestTransportDuringRelocation ex:declareAddressChangeJ ex:requestMobilityInNewCity ex:requestExchangeNonEUDrivingLicence ex:requestWasteCollection) 5.0 5.0 0.8587340256999999 0.8587340256999999).
+ex:bob gps:path ((ex:requestTransportDuringRelocation ex:declareAddressChangeJ ex:requestExchangeNonEUDrivingLicence ex:requestWasteCollection ex:requestMobilityInNewCity) 5.0 5.0 0.8587340256999999 0.8587340256999999).
+ex:bob gps:path ((ex:requestTransportDuringRelocation ex:declareAddressChangeJ ex:requestExchangeNonEUDrivingLicence ex:requestMobilityInNewCity ex:requestWasteCollection) 5.0 5.0 0.8587340256999999 0.8587340256999999).
+ex:bob gps:path ((ex:requestTransportDuringRelocation ex:requestWasteCollection ex:declareAddressChangeJ ex:requestMobilityInNewCity ex:requestExchangeNonEUDrivingLicence) 5.0 5.0 0.8587340256999999 0.8587340256999999).
+ex:bob gps:path ((ex:requestTransportDuringRelocation ex:requestWasteCollection ex:declareAddressChangeJ ex:requestExchangeNonEUDrivingLicence ex:requestMobilityInNewCity) 5.0 5.0 0.8587340256999999 0.8587340256999999).
+ex:bob gps:path ((ex:requestTransportDuringRelocation ex:requestWasteCollection ex:requestMobilityInNewCity ex:declareAddressChangeJ ex:requestExchangeNonEUDrivingLicence) 5.0 5.0 0.8587340256999999 0.8587340256999999).
+ex:bob gps:path ((ex:requestTransportDuringRelocation ex:requestWasteCollection ex:requestMobilityInNewCity ex:requestExchangeNonEUDrivingLicence ex:declareAddressChangeJ) 5.0 5.0 0.8587340256999999 0.8587340256999999).
+ex:bob gps:path ((ex:requestTransportDuringRelocation ex:requestWasteCollection ex:requestExchangeNonEUDrivingLicence ex:declareAddressChangeJ ex:requestMobilityInNewCity) 5.0 5.0 0.8587340256999999 0.8587340256999999).
+ex:bob gps:path ((ex:requestTransportDuringRelocation ex:requestWasteCollection ex:requestExchangeNonEUDrivingLicence ex:requestMobilityInNewCity ex:declareAddressChangeJ) 5.0 5.0 0.8587340256999999 0.8587340256999999).
+ex:bob gps:path ((ex:requestTransportDuringRelocation ex:requestMobilityInNewCity ex:declareAddressChangeJ ex:requestWasteCollection ex:requestExchangeNonEUDrivingLicence) 5.0 5.0 0.8587340256999999 0.8587340256999999).
+ex:bob gps:path ((ex:requestTransportDuringRelocation ex:requestMobilityInNewCity ex:declareAddressChangeJ ex:requestExchangeNonEUDrivingLicence ex:requestWasteCollection) 5.0 5.0 0.8587340256999999 0.8587340256999999).
+ex:bob gps:path ((ex:requestTransportDuringRelocation ex:requestMobilityInNewCity ex:requestWasteCollection ex:declareAddressChangeJ ex:requestExchangeNonEUDrivingLicence) 5.0 5.0 0.8587340256999999 0.8587340256999999).
+ex:bob gps:path ((ex:requestTransportDuringRelocation ex:requestMobilityInNewCity ex:requestWasteCollection ex:requestExchangeNonEUDrivingLicence ex:declareAddressChangeJ) 5.0 5.0 0.8587340256999999 0.8587340256999999).
+ex:bob gps:path ((ex:requestTransportDuringRelocation ex:requestMobilityInNewCity ex:requestExchangeNonEUDrivingLicence ex:declareAddressChangeJ ex:requestWasteCollection) 5.0 5.0 0.8587340256999999 0.8587340256999999).
+ex:bob gps:path ((ex:requestTransportDuringRelocation ex:requestMobilityInNewCity ex:requestExchangeNonEUDrivingLicence ex:requestWasteCollection ex:declareAddressChangeJ) 5.0 5.0 0.8587340256999999 0.8587340256999999).
+ex:bob gps:path ((ex:requestTransportDuringRelocation ex:requestExchangeNonEUDrivingLicence ex:declareAddressChangeJ ex:requestWasteCollection ex:requestMobilityInNewCity) 5.0 5.0 0.8587340256999999 0.8587340256999999).
+ex:bob gps:path ((ex:requestTransportDuringRelocation ex:requestExchangeNonEUDrivingLicence ex:declareAddressChangeJ ex:requestMobilityInNewCity ex:requestWasteCollection) 5.0 5.0 0.8587340256999999 0.8587340256999999).
+ex:bob gps:path ((ex:requestTransportDuringRelocation ex:requestExchangeNonEUDrivingLicence ex:requestWasteCollection ex:declareAddressChangeJ ex:requestMobilityInNewCity) 5.0 5.0 0.8587340256999999 0.8587340256999999).
+ex:bob gps:path ((ex:requestTransportDuringRelocation ex:requestExchangeNonEUDrivingLicence ex:requestWasteCollection ex:requestMobilityInNewCity ex:declareAddressChangeJ) 5.0 5.0 0.8587340256999999 0.8587340256999999).
+ex:bob gps:path ((ex:requestTransportDuringRelocation ex:requestExchangeNonEUDrivingLicence ex:requestMobilityInNewCity ex:declareAddressChangeJ ex:requestWasteCollection) 5.0 5.0 0.8587340256999999 0.8587340256999999).
+ex:bob gps:path ((ex:requestTransportDuringRelocation ex:requestExchangeNonEUDrivingLicence ex:requestMobilityInNewCity ex:requestWasteCollection ex:declareAddressChangeJ) 5.0 5.0 0.8587340256999999 0.8587340256999999).
+ex:bob gps:path ((ex:requestMobilityInNewCity ex:declareAddressChangeJ ex:requestWasteCollection ex:requestTransportDuringRelocation ex:requestExchangeNonEUDrivingLicence) 5.0 5.0 0.8587340256999999 0.8587340256999999).
+ex:bob gps:path ((ex:requestMobilityInNewCity ex:declareAddressChangeJ ex:requestWasteCollection ex:requestExchangeNonEUDrivingLicence ex:requestTransportDuringRelocation) 5.0 5.0 0.8587340256999999 0.8587340256999999).
+ex:bob gps:path ((ex:requestMobilityInNewCity ex:declareAddressChangeJ ex:requestTransportDuringRelocation ex:requestWasteCollection ex:requestExchangeNonEUDrivingLicence) 5.0 5.0 0.8587340256999999 0.8587340256999999).
+ex:bob gps:path ((ex:requestMobilityInNewCity ex:declareAddressChangeJ ex:requestTransportDuringRelocation ex:requestExchangeNonEUDrivingLicence ex:requestWasteCollection) 5.0 5.0 0.8587340256999999 0.8587340256999999).
+ex:bob gps:path ((ex:requestMobilityInNewCity ex:declareAddressChangeJ ex:requestExchangeNonEUDrivingLicence ex:requestWasteCollection ex:requestTransportDuringRelocation) 5.0 5.0 0.8587340256999999 0.8587340256999999).
+ex:bob gps:path ((ex:requestMobilityInNewCity ex:declareAddressChangeJ ex:requestExchangeNonEUDrivingLicence ex:requestTransportDuringRelocation ex:requestWasteCollection) 5.0 5.0 0.8587340256999999 0.8587340256999999).
+ex:bob gps:path ((ex:requestMobilityInNewCity ex:requestWasteCollection ex:declareAddressChangeJ ex:requestTransportDuringRelocation ex:requestExchangeNonEUDrivingLicence) 5.0 5.0 0.8587340256999999 0.8587340256999999).
+ex:bob gps:path ((ex:requestMobilityInNewCity ex:requestWasteCollection ex:declareAddressChangeJ ex:requestExchangeNonEUDrivingLicence ex:requestTransportDuringRelocation) 5.0 5.0 0.8587340256999999 0.8587340256999999).
+ex:bob gps:path ((ex:requestMobilityInNewCity ex:requestWasteCollection ex:requestTransportDuringRelocation ex:declareAddressChangeJ ex:requestExchangeNonEUDrivingLicence) 5.0 5.0 0.8587340256999999 0.8587340256999999).
+ex:bob gps:path ((ex:requestMobilityInNewCity ex:requestWasteCollection ex:requestTransportDuringRelocation ex:requestExchangeNonEUDrivingLicence ex:declareAddressChangeJ) 5.0 5.0 0.8587340256999999 0.8587340256999999).
+ex:bob gps:path ((ex:requestMobilityInNewCity ex:requestWasteCollection ex:requestExchangeNonEUDrivingLicence ex:declareAddressChangeJ ex:requestTransportDuringRelocation) 5.0 5.0 0.8587340256999999 0.8587340256999999).
+ex:bob gps:path ((ex:requestMobilityInNewCity ex:requestWasteCollection ex:requestExchangeNonEUDrivingLicence ex:requestTransportDuringRelocation ex:declareAddressChangeJ) 5.0 5.0 0.8587340256999999 0.8587340256999999).
+ex:bob gps:path ((ex:requestMobilityInNewCity ex:requestTransportDuringRelocation ex:declareAddressChangeJ ex:requestWasteCollection ex:requestExchangeNonEUDrivingLicence) 5.0 5.0 0.8587340256999999 0.8587340256999999).
+ex:bob gps:path ((ex:requestMobilityInNewCity ex:requestTransportDuringRelocation ex:declareAddressChangeJ ex:requestExchangeNonEUDrivingLicence ex:requestWasteCollection) 5.0 5.0 0.8587340256999999 0.8587340256999999).
+ex:bob gps:path ((ex:requestMobilityInNewCity ex:requestTransportDuringRelocation ex:requestWasteCollection ex:declareAddressChangeJ ex:requestExchangeNonEUDrivingLicence) 5.0 5.0 0.8587340256999999 0.8587340256999999).
+ex:bob gps:path ((ex:requestMobilityInNewCity ex:requestTransportDuringRelocation ex:requestWasteCollection ex:requestExchangeNonEUDrivingLicence ex:declareAddressChangeJ) 5.0 5.0 0.8587340256999999 0.8587340256999999).
+ex:bob gps:path ((ex:requestMobilityInNewCity ex:requestTransportDuringRelocation ex:requestExchangeNonEUDrivingLicence ex:declareAddressChangeJ ex:requestWasteCollection) 5.0 5.0 0.8587340256999999 0.8587340256999999).
+ex:bob gps:path ((ex:requestMobilityInNewCity ex:requestTransportDuringRelocation ex:requestExchangeNonEUDrivingLicence ex:requestWasteCollection ex:declareAddressChangeJ) 5.0 5.0 0.8587340256999999 0.8587340256999999).
+ex:bob gps:path ((ex:requestMobilityInNewCity ex:requestExchangeNonEUDrivingLicence ex:declareAddressChangeJ ex:requestWasteCollection ex:requestTransportDuringRelocation) 5.0 5.0 0.8587340256999999 0.8587340256999999).
+ex:bob gps:path ((ex:requestMobilityInNewCity ex:requestExchangeNonEUDrivingLicence ex:declareAddressChangeJ ex:requestTransportDuringRelocation ex:requestWasteCollection) 5.0 5.0 0.8587340256999999 0.8587340256999999).
+ex:bob gps:path ((ex:requestMobilityInNewCity ex:requestExchangeNonEUDrivingLicence ex:requestWasteCollection ex:declareAddressChangeJ ex:requestTransportDuringRelocation) 5.0 5.0 0.8587340256999999 0.8587340256999999).
+ex:bob gps:path ((ex:requestMobilityInNewCity ex:requestExchangeNonEUDrivingLicence ex:requestWasteCollection ex:requestTransportDuringRelocation ex:declareAddressChangeJ) 5.0 5.0 0.8587340256999999 0.8587340256999999).
+ex:bob gps:path ((ex:requestMobilityInNewCity ex:requestExchangeNonEUDrivingLicence ex:requestTransportDuringRelocation ex:declareAddressChangeJ ex:requestWasteCollection) 5.0 5.0 0.8587340256999999 0.8587340256999999).
+ex:bob gps:path ((ex:requestMobilityInNewCity ex:requestExchangeNonEUDrivingLicence ex:requestTransportDuringRelocation ex:requestWasteCollection ex:declareAddressChangeJ) 5.0 5.0 0.8587340256999999 0.8587340256999999).
+ex:bob gps:path ((ex:requestExchangeNonEUDrivingLicence ex:declareAddressChangeJ ex:requestWasteCollection ex:requestTransportDuringRelocation ex:requestMobilityInNewCity) 5.0 5.0 0.8587340256999999 0.8587340256999999).
+ex:bob gps:path ((ex:requestExchangeNonEUDrivingLicence ex:declareAddressChangeJ ex:requestWasteCollection ex:requestMobilityInNewCity ex:requestTransportDuringRelocation) 5.0 5.0 0.8587340256999999 0.8587340256999999).
+ex:bob gps:path ((ex:requestExchangeNonEUDrivingLicence ex:declareAddressChangeJ ex:requestTransportDuringRelocation ex:requestWasteCollection ex:requestMobilityInNewCity) 5.0 5.0 0.8587340256999999 0.8587340256999999).
+ex:bob gps:path ((ex:requestExchangeNonEUDrivingLicence ex:declareAddressChangeJ ex:requestTransportDuringRelocation ex:requestMobilityInNewCity ex:requestWasteCollection) 5.0 5.0 0.8587340256999999 0.8587340256999999).
+ex:bob gps:path ((ex:requestExchangeNonEUDrivingLicence ex:declareAddressChangeJ ex:requestMobilityInNewCity ex:requestWasteCollection ex:requestTransportDuringRelocation) 5.0 5.0 0.8587340256999999 0.8587340256999999).
+ex:bob gps:path ((ex:requestExchangeNonEUDrivingLicence ex:declareAddressChangeJ ex:requestMobilityInNewCity ex:requestTransportDuringRelocation ex:requestWasteCollection) 5.0 5.0 0.8587340256999999 0.8587340256999999).
+ex:bob gps:path ((ex:requestExchangeNonEUDrivingLicence ex:requestWasteCollection ex:declareAddressChangeJ ex:requestTransportDuringRelocation ex:requestMobilityInNewCity) 5.0 5.0 0.8587340256999999 0.8587340256999999).
+ex:bob gps:path ((ex:requestExchangeNonEUDrivingLicence ex:requestWasteCollection ex:declareAddressChangeJ ex:requestMobilityInNewCity ex:requestTransportDuringRelocation) 5.0 5.0 0.8587340256999999 0.8587340256999999).
+ex:bob gps:path ((ex:requestExchangeNonEUDrivingLicence ex:requestWasteCollection ex:requestTransportDuringRelocation ex:declareAddressChangeJ ex:requestMobilityInNewCity) 5.0 5.0 0.8587340256999999 0.8587340256999999).
+ex:bob gps:path ((ex:requestExchangeNonEUDrivingLicence ex:requestWasteCollection ex:requestTransportDuringRelocation ex:requestMobilityInNewCity ex:declareAddressChangeJ) 5.0 5.0 0.8587340256999999 0.8587340256999999).
+ex:bob gps:path ((ex:requestExchangeNonEUDrivingLicence ex:requestWasteCollection ex:requestMobilityInNewCity ex:declareAddressChangeJ ex:requestTransportDuringRelocation) 5.0 5.0 0.8587340256999999 0.8587340256999999).
+ex:bob gps:path ((ex:requestExchangeNonEUDrivingLicence ex:requestWasteCollection ex:requestMobilityInNewCity ex:requestTransportDuringRelocation ex:declareAddressChangeJ) 5.0 5.0 0.8587340256999999 0.8587340256999999).
+ex:bob gps:path ((ex:requestExchangeNonEUDrivingLicence ex:requestTransportDuringRelocation ex:declareAddressChangeJ ex:requestWasteCollection ex:requestMobilityInNewCity) 5.0 5.0 0.8587340256999999 0.8587340256999999).
+ex:bob gps:path ((ex:requestExchangeNonEUDrivingLicence ex:requestTransportDuringRelocation ex:declareAddressChangeJ ex:requestMobilityInNewCity ex:requestWasteCollection) 5.0 5.0 0.8587340256999999 0.8587340256999999).
+ex:bob gps:path ((ex:requestExchangeNonEUDrivingLicence ex:requestTransportDuringRelocation ex:requestWasteCollection ex:declareAddressChangeJ ex:requestMobilityInNewCity) 5.0 5.0 0.8587340256999999 0.8587340256999999).
+ex:bob gps:path ((ex:requestExchangeNonEUDrivingLicence ex:requestTransportDuringRelocation ex:requestWasteCollection ex:requestMobilityInNewCity ex:declareAddressChangeJ) 5.0 5.0 0.8587340256999999 0.8587340256999999).
+ex:bob gps:path ((ex:requestExchangeNonEUDrivingLicence ex:requestTransportDuringRelocation ex:requestMobilityInNewCity ex:declareAddressChangeJ ex:requestWasteCollection) 5.0 5.0 0.8587340256999999 0.8587340256999999).
+ex:bob gps:path ((ex:requestExchangeNonEUDrivingLicence ex:requestTransportDuringRelocation ex:requestMobilityInNewCity ex:requestWasteCollection ex:declareAddressChangeJ) 5.0 5.0 0.8587340256999999 0.8587340256999999).
+ex:bob gps:path ((ex:requestExchangeNonEUDrivingLicence ex:requestMobilityInNewCity ex:declareAddressChangeJ ex:requestWasteCollection ex:requestTransportDuringRelocation) 5.0 5.0 0.8587340256999999 0.8587340256999999).
+ex:bob gps:path ((ex:requestExchangeNonEUDrivingLicence ex:requestMobilityInNewCity ex:declareAddressChangeJ ex:requestTransportDuringRelocation ex:requestWasteCollection) 5.0 5.0 0.8587340256999999 0.8587340256999999).
+ex:bob gps:path ((ex:requestExchangeNonEUDrivingLicence ex:requestMobilityInNewCity ex:requestWasteCollection ex:declareAddressChangeJ ex:requestTransportDuringRelocation) 5.0 5.0 0.8587340256999999 0.8587340256999999).
+ex:bob gps:path ((ex:requestExchangeNonEUDrivingLicence ex:requestMobilityInNewCity ex:requestWasteCollection ex:requestTransportDuringRelocation ex:declareAddressChangeJ) 5.0 5.0 0.8587340256999999 0.8587340256999999).
+ex:bob gps:path ((ex:requestExchangeNonEUDrivingLicence ex:requestMobilityInNewCity ex:requestTransportDuringRelocation ex:declareAddressChangeJ ex:requestWasteCollection) 5.0 5.0 0.8587340256999999 0.8587340256999999).
+ex:bob gps:path ((ex:requestExchangeNonEUDrivingLicence ex:requestMobilityInNewCity ex:requestTransportDuringRelocation ex:requestWasteCollection ex:declareAddressChangeJ) 5.0 5.0 0.8587340256999999 0.8587340256999999).
+
+#2020-01-31T10:20:32.049Z in=323 out=120 ent=120 step=120 brake=2 inf=538889 sec=0.136 inf/sec=3962419
+#ENDS
+

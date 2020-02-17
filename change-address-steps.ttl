@@ -4,7 +4,7 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix o-address: <https://data.vlaanderen.be/ns/adres#> .
 @prefix o-steps: <https://fast.ilabt.imec.be/ns/oslo-steps/0.2#> .
-@prefix step: <https://example.org/ns/example#> .
+#@prefix step: <https://example.org/ns/example#> .
 @prefix xl: <http://www.w3.org/2008/05/skos-xl#> .
 
 @prefix state: <{{base}}/states#> .
@@ -334,7 +334,7 @@ step:addressChangeOnEIDInOffice a o-steps:ComponentLevelStep ;
 # higher level steps regarding declaration of address change
 # 
 
-step:declareAddressChange a o-steps:JourneyLevelStep ;
+step:declareAddressChangeJ a o-steps:JourneyLevelStep ;
   rdfs:label "Declaration of address change"@en ;
   rdfs:label "Aangifte van adreswijziging"@nl ;
   rdfs:label "Adressänderung beantragen"@de ;
@@ -381,4 +381,45 @@ step:requestExchangeNonEUDrivingLicence  a o-steps:JourneyLevelStep;
   o-steps:requiresState o-steps:emptyState ;
   o-steps:producesState state:drivingLicenceExchangeRequested .
 
+#
+# middle level steps regarding declaration of address change
+# 
+step:declareAddressChangeC a o-steps:ContainerLevelStep ;
+  rdfs:label "Declaration of address change"@en ;
+  rdfs:label "Aangifte van adreswijziging"@nl ;
+  rdfs:label "Adressänderung beantragen"@de ;
+  o-steps:producesState state:addressChangeDeclared ;
+  o-steps:requiresState 
+    state:citizenFirstName ,
+    state:citizenLastName ,
+    state:citizenNationalNumber ,
+    state:citizenBirthDate ,
+    state:citizenCityOfBirth ,
+    state:citizenNationality ,
+    state:movingAddress ,
+    state:movingDate ,
+    state:citizenProfession ,
+    state:citizenPhoneNumber ,
+    state:citizenMobilePhoneNumber ,
+    state:citizenEmail 
+.
 
+step:providePersonalInformation a o-steps:ContainerLevelStep ;
+  o-steps:producesState state:citizenFirstName ,
+                        state:citizenLastName ,
+                        state:citizenNationalNumber ,
+                        state:citizenBirthDate ,
+                        state:citizenCityOfBirth ,
+                        state:citizenNationality ,
+                        state:citizenProfession ,
+                        state:citizenPhoneNumber ,
+                        state:citizenMobilePhoneNumber ,
+                        state:citizenEmail ;
+  o-steps:requiresState o-steps:emptyState
+.
+
+step:declareMovingDetails a o-steps:ContainerLevelStep ;
+  o-steps:producesState     state:movingAddress ,
+    state:movingDate  ;
+  o-steps:requiresState o-steps:emptyState
+.

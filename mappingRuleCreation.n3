@@ -34,7 +34,7 @@ _:x e:findall ( ?pattern {?step  o-steps:producesState ?y. ?y o-steps:hasStateSh
 
 
 
-({?scope e:fail ?out}  ?ins1 ?skol ({var:x a o-persoon:Inwoner}) ) list:append ?in.
+(  ?ins1 ?skol ({var:x a o-persoon:Inwoner. }) ) list:append ?in.
 
 #?outTriples  :produceSkolemfunctions (() ?skolem).
 #?outTriples log:conjunction ?out.

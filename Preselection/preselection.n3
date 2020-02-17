@@ -1,0 +1,142 @@
+
+PREFIX math: <http://www.w3.org/2000/10/swap/math#>
+PREFIX list: <http://www.w3.org/2000/10/swap/list#>
+PREFIX log: <http://www.w3.org/2000/10/swap/log#>
+PREFIX e: <http://eulersharp.sourceforge.net/2003/03swap/log-rules#>
+PREFIX gps: <http://josd.github.io/eye/reasoning/gps/gps-schema#>
+PREFIX plan: <http://https://github.com/doerthe/plan#>
+PREFIX :  <http://example.org#>
+
+{
+
+
+
+{
+    ?SCOPE gps:findpath (?Goal ?PATH ?DURATION ?COST ?BELIEF ?COMFORT ?list).
+} => ?head.
+
+
+
+
+?ll a :ShortDescription.
+
+?ll log:equalTo {?extendedFrom ?action ?to}.
+
+?Goal e:graphList ?glist.
+
+?l list:in ?glist. 
+
+?l log:equalTo {?s ?p ?o}.
+
+?to log:includes {?s ?p ?o}.
+
+}
+=>
+{:keep :action ?action}.
+
+
+{
+:keep :action ?action.
+?ll a :ShortDescription.
+?ll log:equalTo {?extendedFrom ?action ?to}.
+
+
+
+
+?lll a :ShortDescription.
+?lll log:equalTo {?extendedFrom2 ?action2 ?to2}.
+
+
+
+?extendedFrom e:graphList ?glist.
+?l list:in ?glist.  
+?l log:equalTo {?s ?p ?o}.
+?to2 log:includes {?s ?p ?o}.
+}
+=>
+{
+:keep :action ?action2
+}.
+
+
+#include reasoning rules.
+{
+:keep :action ?action.
+?ll a :ShortDescription.
+?ll log:equalTo {?extendedFrom ?action ?to}.
+
+
+
+
+?lll a :ShortDescription.
+?lll log:equalTo {?extendedFrom2 ?action2 ?to2}.
+
+
+
+?extendedFrom e:graphList ?glist.
+?l list:in ?glist.  
+
+?to2 e:graphList ?toglist.
+?tol list:in ?toglist.
+
+#?l log:equalTo {?s ?p ?o}.
+?l :reliesOnChain ?tol.
+#?to2 log:includes {?s ?p ?o}.
+}
+=>
+{
+:keep :action ?action2
+}.
+
+
+{?l :reliesOnChain ?tol.}
+<=
+{
+?l :reliesOn ?tol.
+("!") e:derive true.
+}.
+
+{?a :reliesOnChain ?c.}
+<=
+{
+?a :reliesOn ?b.
+?b :reliesOnChain ?c.
+}.
+
+#reasoning rules directly on the goal 
+{
+
+
+
+{
+    ?SCOPE gps:findpath (?Goal ?PATH ?DURATION ?COST ?BELIEF ?COMFORT ?list).
+} => ?head.
+
+?Goal e:graphList ?glist.
+?l list:in ?glist. 
+
+
+?ll a :ShortDescription.
+?ll log:equalTo {?extendedFrom ?action ?to}.
+?to e:graphList ?lllist.
+?l2 list:in ?lllist.
+
+
+
+?l :reliesOnChain ?l2.
+
+
+
+
+}
+=>
+{:keep :action ?action}.
+
+
+
+
+
+
+
+
+

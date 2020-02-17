@@ -1,0 +1,23 @@
+PREFIX math: <http://www.w3.org/2000/10/swap/math#>
+PREFIX e: <http://eulersharp.sourceforge.net/2003/03swap/log-rules#>
+PREFIX gps: <http://josd.github.io/eye/reasoning/gps/gps-schema#>
+PREFIX : <http://example.org#>
+PREFIX log: <http://www.w3.org/2000/10/swap/log#>
+@prefix list: <http://www.w3.org/2000/10/swap/list#>.
+
+{
+{{?con ?Action ?To} a :ShortDescription.}<={}
+_:x e:trace "hier2".
+
+}
+=>
+{
+{{?con ?Action ?To} a :ShortDescription.}<={}
+}.
+
+
+{{?head :reliesOn ?body2.} <={}}
+=>
+{
+{?head :reliesOn ?body2.} <={}
+}.

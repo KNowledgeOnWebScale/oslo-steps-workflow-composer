@@ -9,13 +9,13 @@
 @prefix o-steps: <https://fast.ilabt.imec.be/ns/oslo-steps/0.2#> .
 @prefix o-persoon: <https://data.vlaanderen.be/ns/persoon#> .
 
-#@prefix state: <{{base}}/states#> .
-#@prefix shape: <{{base}}/shapes#> .
-#@prefix step: <{{base}}/steps#> .
+@prefix state: <{{base}}/states#> .
+@prefix shape: <{{base}}/shapes#> .
+@prefix step: <{{base}}/steps#> .
 
-@prefix state: <https://example.org/ns/example#> .
-@prefix shape: <https://example.org/ns/example#> .
-@prefix step: <https://example.org/ns/example#> .
+#@prefix state: <https://example.org/ns/example#> .
+#@prefix shape: <https://example.org/ns/example#> .
+#@prefix step: <https://example.org/ns/example#> .
 
 
 
@@ -70,7 +70,8 @@ shape:lastNameLength a sh:PropertyShape ;
   rdfs:comment "Minimum and maximum for a valid first name"@en ;
   sh:path foaf:familyName ;
   sh:minLength 2 ;
-  sh:maxLength 55 .
+  sh:maxLength 55 ;
+  sh:minCount 1 .
 
 #
 # last name (ui shape)
@@ -98,7 +99,8 @@ shape:genderShape a o-steps:StateShape ;
 shape:genderValidValues a sh:PropertyShape ;
   rdfs:label "Valid gender values"@en ;
   sh:path o-persoon:geslacht ;
-  sh:in ( "male" "female" ) .
+  sh:in ( "male" "female" );
+  sh:minCount 1  .
 
 #
 # gender constraints (UI)
@@ -132,7 +134,8 @@ shape:emailAddressShape a o-steps:StateShape ;
 shape:emailPattern a sh:PropertyShape ;
   rdfs:label "Valid email address"@en ;
   sh:path schema:email ;
-  sh:pattern "todo" .
+  sh:pattern "todo" ;
+  sh:minCount 1 .
 
 #
 # Email address (ui)
@@ -150,7 +153,6 @@ shape:emailAddressUIShape a o-steps:UIShape ;
 # Mobile phone number
 #
 shape:mobilePhoneNumberShape a o-steps:StateShape ;
-  sh:deactivated true ;
   rdfs:label "A citizen's mobile phone number"@en ;
   rdfs:comment "User with a valid mobile phone number"@en ;
   sh:targetClass o-persoon:Inwoner ;
@@ -160,18 +162,18 @@ shape:mobilePhoneNumberShape a o-steps:StateShape ;
       sh:path  schema:contactType;
       sh:hasValue "gsm" 
     ] ;
-    sh:node [ 
+    sh:property [ 
       sh:path schema:telephone;
       sh:minCount 1 
     ];
     sh:qualifiedMinCount 1 ;
   ]  .
 
+
 #
 # phone number
 #
 shape:phoneNumberShape a o-steps:StateShape ;
-  sh:deactivated true ;
   rdfs:label "A citizen's phone number"@en ;
   rdfs:comment "User with a valid phone number"@en ;
   sh:targetClass o-persoon:Inwoner ;
@@ -181,7 +183,7 @@ shape:phoneNumberShape a o-steps:StateShape ;
       sh:path  schema:contactType;
       sh:hasValue "telephone" 
     ] ;
-    sh:node [ 
+    sh:property [ 
       sh:path schema:telephone;
       sh:minCount 1 
     ];
@@ -245,7 +247,8 @@ shape:bankAccountNumberPatternEurope a sh:PropertyShape ;
   rdfs:label "IBAN pattern"@en ;
   rdfs:comment "The regular expression of a European bank account number (IBAN)"@en ;
   sh:path ex:bankAccountNumber ;
-  sh:pattern "todo" .
+  sh:pattern "todo" ;
+  sh:minCount 1 . 
 
 #
 # bank account number (ui)
@@ -339,7 +342,16 @@ shape:birthDateUIShape a o-steps:UIShape ;
     sh:path ( o-persoon:heeftGeboorte o-persoon:datum ) ;
     sh:datatype xsd:date ;
   ] .
+#
+# applicatnt info
+#
+shape:applicantInfoSubmittedShape a o-steps:StateShape ;
+  sh:targetClass o-persoon:Inwoner ;
+  sh:property shape:applicantInfoValue .
 
+shape:applicantInfoValue  a sh:PropertyShape ;
+  sh:path ex:applicantInfoSubmitted;
+  sh:hasValue true .
 #
 # city of birth (state)
 #
@@ -347,6 +359,14 @@ shape:cityOfBirthShape a o-steps:StateShape ;
   rdfs:label "Citizen city of birth"@en ;
   sh:targetClass o-persoon:Inwoner ;
   sh:property shape:validBirth .
+
+shape:validBirth a sh:PropertyShape ;
+  rdfs:label "Valid date of birth"@en ;
+  sh:path ( o-persoon:heeftGeboorte o-persoon:plaats ) ;
+  sh:minCount 1 ;
+  sh:maxCount 1 ;
+  sh:class o-persoon:Geboorte ;
+  sh:node ops:PersoonsgebeurtenisShape .
 
 #
 # city of birth (ui)
@@ -365,12 +385,16 @@ shape:cityOfBirthUIShape a o-steps:UIShape ;
 shape:addressShape a o-steps:StateShape ;
   rdfs:label "Citizen address"@en ;
   sh:targetClass o-persoon:Inwoner ;
-  sh:property shape:validAddress .
+  sh:property shape:validAddress , shape:addressExistence  .
 
 shape:validAddress a sh:PropertyShape ;
   rdfs:label "valid address"@en ;
   sh:path o-persoon:verblijfsadres ;
   sh:node ops:VerblijfplaatsShape .
+
+shape:addressExistence a sh:PropertyShape ;
+  sh:path ( o-persoon:heeftVerblijfplaats o-persoon:verblijfsadres) ;
+  sh:minCount 1 .
 
 #
 # profession
@@ -396,7 +420,8 @@ shape:numberOfFamilyMembersShape a o-steps:StateShape ;
 shape:validNumberOfFamilyMembers a sh:PropertyShape ;
   rdfs:label "valid number of family members"@en ;
   sh:path ex:numberOfFamilyMembers ;
-  sh:minInclusive 1 .
+  sh:minInclusive 1 ;
+  sh:minCount 1 .
 
 #
 # moving date
@@ -409,7 +434,8 @@ shape:movingDateShape a o-steps:StateShape ;
 shape:validMovingDate a sh:PropertyShape ;
   rdfs:label "valid date" ;
   sh:path ex:movingDate ;
-  sh:datatype xsd:date .
+  sh:datatype xsd:date ;
+  sh:minCount 1 .
 
 #
 # moving addres
@@ -422,7 +448,8 @@ shape:movingAddressShape a o-steps:StateShape ;
 shape:validMovingAddress a sh:PropertyShape ;
   rdfs:label "valid moving address"@en ;
   sh:path ex:movingAddress ;
-  sh:node ops:VerblijfplaatsShape .
+  sh:node ops:VerblijfplaatsShape ;
+  sh:minCount 1 .
   
 #
 # billing address
@@ -435,7 +462,8 @@ shape:billingAddressShape a o-steps:StateShape ;
 shape:validBillingAddress a sh:PropertyShape ;
   rdfs:label "valid billing address"@en ;
   sh:path ex:billingAddress ;
-  sh:node ops:VerblijfplaatsShape .
+  sh:node ops:VerblijfplaatsShape ;
+  sh:minCount 1  .
 
 #
 # moving city
@@ -443,6 +471,172 @@ shape:validBillingAddress a sh:PropertyShape ;
 #
 shape:movingCity a o-steps:State ;
   rdfs:label "City a citizen wants to move to"@en .
+
+shape:movingCityShape a o-steps:StateShape ;
+  sh:targetClass o-persoon:Inwoner ;
+  sh:property shape:movingCityExistence .
+
+shape:movingCityExistence a sh:PropertyShape ;
+  sh:path ex:movingCity;
+  sh:minCount 1 .
+
+
+#waste containers
+shape:number40LiterGreyWasteContainerShape a o-steps:StateShape ;
+  sh:targetClass o-persoon:Inwoner ;
+  sh:property shape:number40LiterGreyWasteContainerExistence .
+
+shape:number40LiterGreyWasteContainerExistence a sh:PropertyShape ;
+  sh:path ex:numberOfRequested40LiterGreyWasteContainers;
+  sh:minCount 1 .
+
+shape:number120LiterGreyWasteContainerShape a o-steps:StateShape ;
+  sh:targetClass o-persoon:Inwoner ;
+  sh:property shape:number120LiterGreyWasteContainerExistence .
+
+shape:number120LiterGreyWasteContainerExistence a sh:PropertyShape ;
+  sh:path ex:numberOfRequested120LiterGreyWasteContainers;
+  sh:minCount 1 .
+
+shape:number240LiterGreyWasteContainerShape a o-steps:StateShape ;
+  sh:targetClass o-persoon:Inwoner ;
+  sh:property shape:number240LiterGreyWasteContainerExistence .
+
+shape:number240LiterGreyWasteContainerExistence a sh:PropertyShape ;
+  sh:path ex:numberOfRequested240LiterGreyWasteContainers;
+  sh:minCount 1 .
+
+shape:greyWasteContainerLockShape a o-steps:StateShape ;
+  sh:targetClass o-persoon:Inwoner ;
+  sh:property shape:lockNededGreyWasteContainerExistence .
+
+shape:lockNededGreyWasteContainerExistence a sh:PropertyShape ;
+  sh:path ex:lockNededForGreyWasteContainer;
+  sh:minCount 1 .
+
+shape:number40LiterGreenWasteContainerShape a o-steps:StateShape ;
+  sh:targetClass o-persoon:Inwoner ;
+  sh:property shape:number40LiterGreenWasteContainerExistence .
+
+shape:number40LiterGreenWasteContainerExistence a sh:PropertyShape ;
+  sh:path ex:numberOfRequested40LiterGreenWasteContainers;
+  sh:minCount 1 .
+
+shape:number120LiterGreenWasteContainerShape a o-steps:StateShape ;
+  sh:targetClass o-persoon:Inwoner ;
+  sh:property shape:number120LiterGreenWasteContainerExistence .
+
+shape:number120LiterGreenWasteContainerExistence a sh:PropertyShape ;
+  sh:path ex:numberOfRequested120LiterGreenWasteContainers;
+  sh:minCount 1 .
+
+shape:greenWasteContainerLockShape  a o-steps:StateShape ;
+  sh:targetClass o-persoon:Inwoner ;
+  sh:property shape:lockNededGreenWasteContainerExistence .
+
+shape:lockNededGreenWasteContainerExistence a sh:PropertyShape ;
+  sh:path ex:lockNededForGreenWasteContainer;
+  sh:minCount 1 .
+
+#todo: make a shortcut rule for "yes"
+shape:greenWasteSelfCompostShape a o-steps:StateShape ;
+  sh:targetClass o-persoon:Inwoner ;
+  sh:property shape:greenWasteSelfCompostExistence .
+
+shape:greenWasteSelfCompostExistence a sh:PropertyShape ;
+  sh:path ex:needForGreenWasteContainer;
+  sh:minCount 1 .
+
+state:greenWasteContainerStopCollectingInfoShape  a o-steps:StateShape ;
+  sh:targetClass o-persoon:Inwoner ;
+  sh:property shape:greenWasteContainerStopExistence .
+
+shape:greenWasteContainerStopExistence a sh:PropertyShape ;
+  sh:path ex:stopGreeWasteContainer;
+  sh:minCount 1 .
+
+
+shape:number40LiterPaperWasteContainerShape a o-steps:StateShape ;
+  sh:targetClass o-persoon:Inwoner ;
+  sh:property shape:number40LiterPaperWasteContainerExistence .
+
+shape:number40LiterPaperWasteContainerExistence a sh:PropertyShape ;
+  sh:path ex:numberOfRequested40LiterPaperWasteContainers;
+  sh:minCount 1 .
+
+shape:number240LiterPaperWasteContainerShape a o-steps:StateShape ;
+  sh:targetClass o-persoon:Inwoner ;
+  sh:property shape:number240LiterPaperWasteContainerExistence .
+
+shape:number240LiterPaperWasteContainerExistence a sh:PropertyShape ;
+  sh:path ex:numberOfRequested240LiterPaperWasteContainers;
+  sh:minCount 1 .
+
+shape:number1100LiterPaperWasteContainerShape a o-steps:StateShape ;
+  sh:targetClass o-persoon:Inwoner ;
+  sh:property shape:number1100LiterPaperWasteContainerExistence .
+
+shape:number1100LiterPaperWasteContainerExistence a sh:PropertyShape ;
+  sh:path ex:numberOfRequested1100LiterPaperWasteContainers;
+  sh:minCount 1 .
+
+#Confirmation of address change
+shape:addressChangeConfirmedShape a o-steps:StateShape ;
+  sh:targetClass o-persoon:Inwoner ;
+  sh:property shape:addressChangeConfirmationExistence .
+
+shape:addressChangeConfirmationExistence a sh:PropertyShape ;
+  sh:path ex:confirmationOfAddressChange;
+  sh:minCount 1 .
+
+shape:addressChangeOnEIDShape a o-steps:StateShape ;
+  sh:targetClass o-persoon:Inwoner ;
+  sh:property shape:addressChangeOnEIDExistence .
+
+shape:addressChangeOnEIDExistence a sh:PropertyShape ;
+  sh:path ex:addressChanged;
+  sh:minCount 1 .
+
+shape:wasteCollection a o-steps:StateShape ;
+  sh:targetClass o-persoon:Inwoner ;
+  sh:property shape:wasteCollectionRequestValue .
+
+shape:wasteCollectionRequestValue a sh:PropertyShape ;
+  sh:path ex:wasteCollectionRequested;
+  sh:hasValue true .
+
+shape:addressChangeDeclaredShape a o-steps:StateShape ;
+  sh:targetClass o-persoon:Inwoner ;
+  sh:property shape:addressChangeValue .
+
+shape:addressChangeValue  a sh:PropertyShape ;
+  sh:path ex:addressChangeDeclared;
+  sh:hasValue true .
+
+
+shape:transportRequestedShape a o-steps:StateShape ;
+  sh:targetClass o-persoon:Inwoner ;
+  sh:property shape:transportRequestedExistence .
+
+shape:transportRequestedExistence  a sh:PropertyShape ;
+  sh:path ex:transportRequested;
+  sh:minCount 1 .
+
+shape:mobilityRequestedShape a o-steps:StateShape ;
+  sh:targetClass o-persoon:Inwoner ;
+  sh:property shape:mobilityRequestedExistence .
+
+shape:mobilityRequestedExistence  a sh:PropertyShape ;
+  sh:path ex:mobilityRequested;
+  sh:minCount 1 .
+
+shape:drivingLicenceExchangeRequestedShape a o-steps:StateShape ;
+  sh:targetClass o-persoon:Inwoner ;
+  sh:property shape:drivingLicenceExchangeExistence .
+
+shape:drivingLicenceExchangeExistence  a sh:PropertyShape ;
+  sh:path ex:drivingLicenceExchangeRequested;
+  sh:minCount 1 .
 
 #
 # 

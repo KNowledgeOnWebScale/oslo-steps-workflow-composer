@@ -15,6 +15,10 @@ PREFIX list: <http://www.w3.org/2000/10/swap/list#>
 @prefix var: <http://josd.github.io/.well-known/genid/pP7dSETOSHCTU6bSn:iLn_1X3mg#>.
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
 
+
+
+
+
 {
 ?shape a o-steps:StateShape.
 
@@ -24,7 +28,7 @@ PREFIX list: <http://www.w3.org/2000/10/swap/list#>
 ?p sh:path ?path;
    sh:qualifiedValueShape ?sh2;
    sh:qualifiedMinCount 1;
-   sh:node ?node.
+   sh:property ?node.
 
 
 ?sh2 sh:path ?p2;
@@ -37,14 +41,13 @@ PREFIX list: <http://www.w3.org/2000/10/swap/list#>
 }
 =>
 {
-?shape :pattern ({ var:x ?path ?y. ?y ?p2 ?v.  ?y ?p3 ?o} {(var:x ?path ?p2 ?v ?p3) e:skolem ?o. (var:x ?path ?p2) e:skolem ?y. }  ). 
+?shape :pattern ({ var:x ?path ?y. ?y ?p2 ?v.  ?y ?p3 ?o} {(var:x ?path ?p2 ?v ?p3) e:skolem ?o. (var:x ?path ?p2 ?v) e:skolem ?y. }  ). 
 }.
 
 
 {
 ?stateShape a o-steps:StateShape; sh:property ?property; sh:targetClass o-persoon:Inwoner . ?property sh:path ?path; sh:minCount 1.
 ?path log:rawType ?t. ?t log:notEqualTo rdf:List.
-
 }
 =>
 {

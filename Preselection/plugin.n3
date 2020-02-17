@@ -1,0 +1,565 @@
+PREFIX math: <http://www.w3.org/2000/10/swap/math#>
+PREFIX e: <http://eulersharp.sourceforge.net/2003/03swap/log-rules#>
+PREFIX gps: <http://josd.github.io/eye/reasoning/gps/gps-schema#>
+PREFIX : <https://example.org/gpstest#>
+PREFIX prolog: <http://eulersharp.sourceforge.net/2003/03swap/prolog#>
+@prefix list: <http://www.w3.org/2000/10/swap/list#>.
+@prefix math: <http://www.w3.org/2000/10/swap/math#>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
+@prefix log: <http://www.w3.org/2000/10/swap/log#>.
+
+
+{
+  :SCOPE gps:findpath ( ?goal ?path ?DUR ?CO ?BEL ?COM (?DURATION ?COST ?BELIEF ?COMFORT ?l) )
+}
+<=
+{
+
+  :SCOPE gps:findpath ( ?goal ?path ?DUR ?CO ?BEL ?COM (?DURATION ?COST ?BELIEF ?COMFORT) )
+}.
+
+
+{
+  :SCOPE gps:findpath ( ?goal ?path ?DUR ?CO ?BEL ?COM (?DURATION ?COST ?BELIEF ?COMFORT) )
+}
+<=
+{
+   _:x e:trace {:SCOPE gps:findpathd ( ?goal ?path () ?uniquePath () ?DUR 0 ?CO 0 ?BEL 1 ?COM 1 (?DURATION ?COST ?BELIEF ?COMFORT) ?valid ?start ).}.
+  :SCOPE gps:findpathd ( ?goal ?path () ?uniquePath () ?DUR 0 ?CO 0 ?BEL 1 ?COM 1 (?DURATION ?COST ?BELIEF ?COMFORT) ?valid ?start ).
+
+  # I do this to not go further backwards with this path if a solution is already found
+  :SCOPE :assert { ?path :solves ?goal. }.
+}.
+
+
+
+
+{
+  :SCOPE gps:findpathd ( ?goal ?path ?path ?uniquePath ?uniquePath ?DUR ?DUR ?COS ?COS ?BEL ?BEL ?COM ?COM (?DURATION ?COST ?BELIEF ?COMFORT) ?goal ?goal)
+}
+<=
+{
+
+  ?goal log:notIncludes {?s :not ?g}.
+
+  (?goal) prolog:call true.
+}.
+
+
+
+{
+  :SCOPE gps:findpathd ( ?goal ?path ?p ?uniquePath ?up ?DUR ?d ?COS ?c ?BEL ?b ?COM ?co (?DURATION ?COST ?BELIEF ?COMFORT) ?valid ?start ).
+}
+<=
+{
+   _:x e:trace "hier".
+ 
+  {?t gps:description (?if ?goal2 ?action ?acDur ?acCost ?acBel ?acCom)} <= ?condition.
+
+
+  (?goal2 ?goal) e:graphIntersection ?goal.
+
+   
+  (?d ?acDur) math:sum ?d2.
+  (?c ?acCost) math:sum ?c2.
+  (?b ?acBel) math:product ?b2.
+  (?co ?acCom) math:product ?co2.
+
+  ?d2 math:lessThan ?DURATION.
+  ?c2 math:lessThan ?COST.
+  ?b2 math:greaterThan ?BELIEF.
+  ?co2 math:greaterThan ?COMFORT.
+
+
+  (?action ?t) e:skolem ?sk.
+  ((?sk) ?up) list:append ?up2.
+  ((?t) ?p) list:append ?p2.
+
+
+
+
+   ?goal2 log:includes ?goal.
+
+  
+  
+
+  :SCOPE :not {?p :solves ?goal}.
+
+
+  :SCOPE gps:findpathd ( ?if ?path ?p2 ?uniquePath ?up2 ?DUR ?d2 ?COS ?c2 ?BEL ?b2 ?COM ?co2  (?DURATION ?COST ?BELIEF ?COMFORT) ?v2 ?start).
+
+
+  :SCOPE :retract ?start.
+  :SCOPE :assert ?v2.
+  ?condition :finalize {
+    :SCOPE :retract ?v2.
+    :SCOPE :assert ?start.
+    }.
+   (?v2 ?if ) e:graphDifference ?v3. 
+   (?v3 ?goal2) log:conjunction ?valid.
+   ?goal2 log:includes ?goal.
+   
+}.
+
+
+#case: composed goal
+{
+  :SCOPE gps:findpathd ( ?goal ?path ?p ?uniquePath ?up ?DUR ?d ?COS ?c ?BEL ?b ?COM ?co (?DURATION ?COST ?BELIEF ?COMFORT) ?valid ?start)
+}
+<=
+{
+  
+  ?goal e:graphList ?GraphList.
+  ?GraphList e:length [ math:notEqualTo 1].
+
+
+  :SCOPE gps:findpathList ( ?GraphList ?path ?p ?uniquePath ?up ?DUR ?d ?COS ?c ?BEL ?b ?COM ?co (?DURATION ?COST ?BELIEF ?COMFORT) ?valid ?start).
+}.
+
+{
+  :SCOPE gps:findpathList ( () ?path ?path ?uniquePath ?uniquePath ?DUR ?DUR ?COS ?COS ?BEL ?BEL ?COM ?COM (?DURATION ?COST ?BELIEF ?COMFORT) {} {})
+}
+<=
+{
+
+  () prolog:cut true.
+}.
+
+
+{
+  :SCOPE gps:findpathList ( ?GraphList ?path ?p ?uniquePath ?up ?DUR ?d ?COS ?c ?BEL ?b ?COM ?co (?DURATION ?COST ?BELIEF ?COMFORT) ?valid ?start).
+  
+}
+<=
+{
+  (?DURATION ?d) math:difference ?DURATION2.
+  (?COST ?c) math:difference ?COST2.
+  (?BELIEF ?b) math:quotient ?BELIEF2.
+  (?COMFORT ?co) math:quotient ?COMFORT2.
+   
+  ?GraphList rdf:first ?triple.
+  (?triple ?triple2) prolog:copy_term_nat true.
+
+
+  :SCOPE gps:findpathd    ( ?triple2 ?path1 () ?uniquePath1 () ?DUR1 0 ?COS1 0 ?BEL1 1 ?COM1 1 (?DURATION2 ?COST2 ?BELIEF2 ?COMFORT2) ?valid1 ?start1).
+
+ 
+  #unification
+  ?triple2 log:includes ?triple.
+  ?GraphList rdf:first ?triple.
+  ?GraphList rdf:rest ?rest.
+
+  :SCOPE :assert {?path1 :solves ?triple2}.
+
+  (?rest ?rest2) prolog:copy_term_nat true.
+
+  :SCOPE gps:findpathList ( ?rest2 ?path3 () ?uniquePath3 () ?DUR3 0 ?COS3 0 ?BEL3 1 ?COM3 1 (?DURATION2 ?COST2 ?BELIEF2 ?COMFORT2) ?valid3 ?start3).
+
+  (?path1 ?path3 ?uniquePath1 ?uniquePath3 ?DUR1 ?DUR3 ?COS1 ?COS3 ?BEL1 ?BEL3 ?COM1 ?COM3 ?valid1 ?valid3 ?start1 ?start3) :match (?path2 ?uniquePath2 ?DUR2 ?COS2 ?BEL2 ?COM2 ?valid ?start). 
+
+
+  ?triple2 log:includes ?triple.
+  ?rest2 log:includes ?rest.
+  ?GraphList log:conjunction ?con.
+
+  
+(?start ?valid) e:graphDifference ?st.
+(?valid ?start) e:graphDifference ?val.
+
+
+
+
+  ?SCOPE :retract ?st.
+  ?SCOPE :assert ?val.
+
+  ?con :finalize {
+    ?SCOPE :retract ?val.
+    ?SCOPE :assert ?st.
+    }.
+
+
+  (?path2 ?p) list:append ?path.
+  (?uniquePath2 ?up) list:append ?uniquePath.
+  (?DUR2 ?d) math:sum ?DUR.
+  (?COS2 ?c) math:sum ?COS.
+  (?BEL2 ?b) math:product ?BEL.
+  (?COM2 ?co) math:product ?COM.
+
+}.
+
+
+
+
+
+
+# support components
+{
+  ?SCOPE gps:retract ?Graph
+}
+<= 
+{
+	?SCOPE e:call {?Graph e:graphList ?GraphList}.
+	({?GraphList list:member ?Triple} {(?Triple) prolog:retract true}) prolog:forall true.
+}.
+
+{?SCOPE gps:assert ?Graph} <= {
+	?SCOPE e:call {?Graph e:graphList ?GraphList}.
+	({?GraphList list:member ?Triple} {(?Triple) prolog:assert true}) prolog:forall true.
+}.
+
+
+{
+  :SCOPE :retract ?Graph
+}
+<= 
+{
+	 ({?Graph e:graphList ?GraphList}) prolog:call true.
+	({?GraphList list:member ?Triple} {(?Triple) prolog:retract true}) prolog:forall true.
+}.
+
+{:SCOPE :assert ?Graph} <= {
+	({?Graph e:graphList ?GraphList}) prolog:call true.
+	({?GraphList list:member ?Triple} {(?Triple) prolog:assert true}) prolog:forall true.
+}.
+
+
+
+#matching paths
+
+#two cases where one path is subpath of the other
+{
+  (?path1 ?path3 ?uniquePath1 ?uniquePath3 ?DUR1 ?DUR3 ?COS1 ?COS3 ?BEL1 ?BEL3 ?COM1 ?COM3 ?valid1 ?valid3 ?start1 ?start3) :match (?path1 ?uniquePath1 ?DUR1 ?COS1 ?BEL1 ?COM1 ?valid1 ?start1).
+}
+<=
+{
+  ?uniquePath1 e:sublist ?uniquePath3.
+
+  () prolog:cut true.
+}.
+
+
+{
+  (?path1 ?path3 ?uniquePath1 ?uniquePath3 ?DUR1 ?DUR3 ?COS1 ?COS3 ?BEL1 ?BEL3 ?COM1 ?COM3 ?valid1 ?valid3 ?start1 ?start3) :match (?path3 ?uniquePath3 ?DUR3 ?COS3 ?BEL3 ?COM3 ?valid3 ?start3).
+}
+<=
+{
+  ?uniquePath3 e:sublist ?uniquePath1.
+
+  () prolog:cut true.
+}.
+
+
+#general independency (to be adjusted)
+{
+  (?path1 ?path3 ?uniquePath1 ?uniquePath2 ?DUR1 ?DUR3 ?COS1 ?COS3 ?BEL1 ?BEL3 ?COM1 ?COM3 ?valid1 ?valid3 ?start1 ?start3) :match (?path ?uniquePath ?DUR ?COS ?BEL ?COM ?valid ?start).
+}
+<=
+{
+
+  ?uniquePath1 :independent ?uniquePath2.
+  #todo: the order is just a random choice, I would like to mark the independency
+  (?path1 ?path3) list:append ?path.
+  (?uniquePath1 ?uniquePath2) list:append ?uniquePath.
+ 
+
+  (?DUR1 ?DUR3) math:sum ?DUR.
+  (?COS1 ?COS3) math:sum ?COS.
+  (?BEL1 ?BEL3) math:product ?BEL.
+  (?COM1 ?COM3) math:product ?COM. 
+
+  #here I still need a check whether the goals exclude each other
+  (?start1 ?start3) :check (?valid1 ?valid3).
+  (?valid1 ?valid3) log:conjunction ?valid.
+  (?start1 ?start3) log:conjunction ?start.
+  
+
+  () prolog:cut true.
+}.
+
+
+{(?start1 ?start3) :check (?valid1 ?valid3)}
+<=
+{
+  
+  (?start1 ?start3) e:graphIntersection {}.
+  () prolog:cut true.
+}.
+
+
+{(?start1 ?start3) :check (?valid1 ?valid3)}
+<=
+{
+  #test: can they occur after each other?
+  :SCOPE :retract ?start1.
+  :SCOPE :assert ?valid1.
+  ?start3 :finalize {
+      :SCOPE :retract ?valid1.
+      :SCOPE :assert ?start1}.
+}.
+
+
+#path independency
+{
+  () :independent ?uniquePath2.
+}
+<=
+{
+  () prolog:cut true.
+}.
+
+{
+  ?uniquePath1 :independent ().
+}
+<=
+{
+  () prolog:cut true.
+}.
+
+{
+  ?uniquePath1 :independent ?uniquePath2.
+}
+<=
+{
+  ?uniquePath1 rdf:first ?first.
+  ?first list:in ?uniquePath2.
+  () prolog:cut true.
+  () prolog:fail true.
+}.
+
+{
+  ?uniquePath1 :independent ?uniquePath2.
+}
+<=
+{
+  ?uniquePath1 rdf:rest ?rest.
+  ?rest :independent ?uniquePath2.
+}.
+
+
+
+
+
+
+#highly experimental
+
+
+{?graph :possibleReason ?reason.}
+<=
+{
+#here: just one rule, but should be more
+?graph2 <= ?reason.
+ (?graph2 ?graph3) prolog:copy_term_nat true.
+ 
+(?graph3 ?graph) e:graphIntersection ?graph.
+(?reason ?reason2) prolog:copy_term_nat true.
+?SCOPE e:call ?reason2.
+
+{?graph3 <= ?reason2} log:equalTo {?graph2 <= ?reason}. 
+}.
+
+
+
+
+
+
+
+#predicate :merge
+{
+(?graph1 ?graph2) :merge ?graph3
+}
+<=
+{
+(?graph1 ?graph2) e:graphIntersection ?together.
+(?graph1 ?graph2) e:graphDifference ?diff.
+(?together ?diff) log:conjunction ?graph3.
+?graph1 log:equalTo ?graph3 
+}.
+
+
+
+#negation
+{
+  :SCOPE gps:findpathd ( {:SCOPE :not ?graph} ?path ?path ?uniquePath ?uniquePath ?DUR ?DUR ?COS ?COS ?BEL ?BEL ?COM ?COM (?DURATION ?COST ?BELIEF ?COMFORT) {} {})
+}
+<=
+{
+  ?SCOPE e:fail ?graph.
+}.
+
+
+{
+  :SCOPE gps:findpathd ( {:SCOPE :not ?graph} ?path ?p ?uniquePath ?up ?DUR ?d ?COS ?c ?BEL ?b ?COM ?co (?DURATION ?COST ?BELIEF ?COMFORT) ?valid ?start )
+}
+<=
+{
+  (?graph) prolog:call true.
+
+  {?t gps:description (?if ?goal2 ?action ?acDur ?acCost ?acBel ?acCom)} <= ?condition.
+
+  
+  #I do that because there could be variables in ?if but not in ?graph
+  #todo: check whether that is a problem in general
+  (?if ?graph) e:graphIntersection ?graph.
+  (?if ?graph) :merge ?if.
+
+  () prolog:cut true. #This cut is based on the assumption that triples which occur in the from part of a description cannot occure in the consequence of a rule.
+  (?d ?acDur) math:sum ?d2.
+  (?c ?acCost) math:sum ?c2.
+  (?b ?acBel) math:product ?b2.
+  (?co ?acCom) math:product ?co2.
+
+  ?d2 math:lessThan ?DURATION.
+  ?c2 math:lessThan ?COST.
+  ?b2 math:greaterThan ?BELIEF.
+  ?co2 math:greaterThan ?COMFORT.
+
+  (?action ?t) e:skolem ?sk. 
+  ((?sk) ?up) list:append ?up2.
+  
+  ((?t) ?p) list:append ?p2.
+
+  :SCOPE :not {?p :solves {:SCOPE :not ?graph}}.  
+  :SCOPE gps:findpathd ( ?if ?path ?p2 ?uniquePath ?up2 ?DUR ?d2 ?COS ?c2 ?BEL ?b2 ?COM ?co2  (?DURATION ?COST ?BELIEF ?COMFORT) ?v2 ?start).
+  
+
+  :SCOPE :retract ?start.
+  :SCOPE :assert ?v2.
+  ?condition :finalize {
+    :SCOPE :retract ?v2.
+    :SCOPE :assert ?start.
+    }.
+  (?v2 ?if ) e:graphDifference ?v3.
+  (?v3 ?goal2  ) log:conjunction ?valid. 
+  (?path ?p) :remember ?if.
+}.
+
+
+
+{
+  :SCOPE gps:findpathd ( {:SCOPE :not ?graph} ?path ?p ?uniquePath ?up ?DUR ?d ?COS ?c ?BEL ?b ?COM ?co (?DURATION ?COST ?BELIEF ?COMFORT) ?valid ?start )
+}
+<=
+{
+
+  (?graph) prolog:call true.
+
+
+
+  ?graph :possibleReason ?reason.
+  
+
+  {?t gps:description (?if ?goal2 ?action ?acDur ?acCost ?acBel ?acCom)} <= ?condition.
+
+
+
+  (?if ?if2) prolog:copy_term_nat true.
+
+
+  (?reason ?if2) e:graphIntersection ?int. 
+ 
+
+  ?int log:notEqualTo {}.
+
+   
+  (?d ?acDur) math:sum ?d2.
+  (?c ?acCost) math:sum ?c2.
+  (?b ?acBel) math:product ?b2.
+  (?co ?acCom) math:product ?co2.
+
+  ?d2 math:lessThan ?DURATION.
+  ?c2 math:lessThan ?COST.
+  ?b2 math:greaterThan ?BELIEF.
+  ?co2 math:greaterThan ?COMFORT.
+
+  (?action ?t) e:skolem ?sk. 
+
+  ((?sk) ?up) list:append ?up2.
+  ((?t) ?p) list:append ?p2.
+
+  :SCOPE :not {?p :solves {:SCOPE :not ?graph}}.  
+
+
+
+  :SCOPE :not {?p :solves ?if}.  
+  :SCOPE gps:findpathd ( ?if ?path ?p2 ?uniquePath ?up2 ?DUR ?d2 ?COS ?c2 ?BEL ?b2 ?COM ?co2  (?DURATION ?COST ?BELIEF ?COMFORT) ?v2 ?start).
+
+  :SCOPE :retract ?start.
+  :SCOPE :assert ?v2.
+  ?condition :finalize {
+    :SCOPE :retract ?v2.
+    :SCOPE :assert ?start.
+    }.
+
+  (?v2 ?if ) e:graphDifference ?v3.
+  (?v3 ?goal2 ) log:conjunction ?valid.
+
+  :SCOPE :retract ?start.
+  :SCOPE :assert ?valid.
+  {:SCOPE :not ?graph} :finalize {
+    :SCOPE :retract ?valid.
+    :SCOPE :assert ?start.
+    }.
+  (?path ?p) :remember ?if.
+}.
+
+
+#handle negation in the goal
+
+
+
+{
+
+ :SCOPE :not ?graph
+}
+<=
+{
+ (?graph) prolog:call true .
+ () prolog:cut true.
+ () prolog:fail true.
+}.
+
+{ :SCOPE :not ?graph}<={}.
+
+{
+(?p1 ()) :remember ?goal
+}
+<=
+{
+() prolog:cut true.
+:SCOPE :assert { ?p1 :solves ?goal. }.
+}.
+
+{
+(?p1 ?p2) :remember ?goal
+}
+<=
+{
+
+}.
+
+{?x :finalize ?y}
+<=
+{
+(?x) prolog:call true.
+() prolog:cut true.
+(?y) prolog:call true.}.
+
+{?x :finalize ?y}
+<=
+{
+(?y) prolog:call true.
+() prolog:fail true.
+}. 
+
+
+
+#todo: I need to cover partly dependent and partly independent
+#todo: notation for independency of paths
+#todo: check negation carefully
+#todo: better handling of negation in the condition
+#todo: if from and to contain the same triple, that is corrently not covered by negation.
+#todo: find a test for combinatorial problems in case of logical dependency. 
+#todo: control pruning in case a solution has been found
+#todo: conjunction inside negation is not allowed (yet) 
+#todo: make "possible reason" more complex.
+#todo: better skolem iris

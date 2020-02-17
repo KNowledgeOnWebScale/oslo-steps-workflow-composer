@@ -1,0 +1,40 @@
+#Processed by EYE v20.0105.1336 josd
+#eye variables_and_predicates.n3 change-address-steps.ttl change-address-states.ttl change-address-shapes2.ttl step-reasoning.n3 aux.n3 createPattern2.n3 --query mappingRuleCreationContainer.n3 --nope --no-skolem http://josd.github.io/.well-known/genid/
+
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix p-plan: <http://purl.org/net/p-plan#>.
+@prefix o-address: <https://data.vlaanderen.be/ns/adres#>.
+@prefix o-steps: <https://fast.ilabt.imec.be/ns/oslo-steps/0.2#>.
+@prefix oslo: <https://example.org/ns/oslo#>.
+@prefix ex: <https://example.org/ns/example#>.
+@prefix var: <https://example.org/ns/var#>.
+@prefix shp: <https://example.org/ns/shapes#>.
+@prefix sh: <http://www.w3.org/ns/shacl#>.
+@prefix xl: <http://www.w3.org/2008/05/skos-xl#>.
+@prefix foaf: <http://xmlns.com/foaf/0.1/>.
+@prefix schema: <https://schema.org/>.
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
+@prefix ops: <https://data.vlaanderen.be/shacl/persoon-basis#>.
+@prefix o-persoon: <https://data.vlaanderen.be/ns/persoon#>.
+@prefix ns1: <https://example.org/ns/oslo-steps#>.
+@prefix log: <http://www.w3.org/2000/10/swap/log#>.
+@prefix e: <http://eulersharp.sourceforge.net/2003/03swap/log-rules#>.
+@prefix gps: <http://josd.github.io/eye/reasoning/gps/gps-schema#>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
+@prefix list: <http://www.w3.org/2000/10/swap/list#>.
+@prefix math: <http://www.w3.org/2000/10/swap/math#>.
+@prefix ns2: <http://josd.github.io/.well-known/genid/pP7dSETOSHCTU6bSn:iLn_1X3mg#>.
+@prefix ns3: <http://josd.github.io/.well-known/genid/I7xbQZZKBZ1DOHnP6MVPJav:Km8#>.
+
+{ex:movemap gps:description (true true {?t_2 ex:applicantInfoSubmitted true} ex:submitWasteCollectionApplicantInfo 1 1 0.97 0.97)} <= {?t_2 a o-persoon:Inwoner. ?t_2 foaf:familyName ?U_5. ?t_2 foaf:givenName ?U_4. ?t_2 o-persoon:geslacht ?U_6. ?t_2 o-persoon:heeftGeboorte ?U_11. ?t_2 o-persoon:heeftGeboortePlaats ?U_12. ?t_2 o-persoon:heeftVerblijfplaats ?U_10. ?t_2 ex:bankAccountNumber ?U_9. ?t_2 ex:nationalNumber ?U_8. ?t_2 ex:numberOfFamilyMembers ?U_14. ?t_2 schema:email ?U_7. ?t_2 schema:hasOccupation ?U_13. ?t_2 o-persoon:heeftVerblijfplaats ?t_3. ?t_3 o-persoon:verblijfsadres ?t_4. ?t_2 schema:contactPoint ?U_0. ?t_2 schema:contactPoint ?U_2. ?U_0 schema:contactType "gsm". ?U_2 schema:contactType "phone". ?U_0 schema:telephone ?U_1. ?U_2 schema:telephone ?U_3}.
+{ex:movemap gps:description (true true {?t_2 foaf:familyName ?U_5. ?t_2 foaf:givenName ?U_4. ?t_2 o-persoon:geslacht ?U_6. ?t_2 o-persoon:heeftGeboorte ?U_11. ?t_2 o-persoon:heeftGeboortePlaats ?U_12. ?t_2 o-persoon:heeftVerblijfplaats ?U_10. ?t_2 ex:bankAccountNumber ?U_9. ?t_2 ex:nationalNumber ?U_8. ?t_2 ex:numberOfFamilyMembers ?U_14. ?t_2 schema:email ?U_7. ?t_2 schema:hasOccupation ?U_13. ?t_2 o-persoon:heeftVerblijfplaats ?t_3. ?t_3 o-persoon:verblijfsadres ?t_4. ?t_2 schema:contactPoint ?U_0. ?t_2 schema:contactPoint ?U_2. ?U_0 schema:contactType "gsm". ?U_2 schema:contactType "phone". ?U_0 schema:telephone ?U_1. ?U_2 schema:telephone ?U_3} ex:provideWasteCollectionApplicantInfo 1 1 0.97 0.97)} <= {(?t_3 o-persoon:verblijfsadres) e:skolem ?t_4. (?t_2 foaf:familyName) e:skolem ?U_5. (?t_2 foaf:givenName) e:skolem ?U_4. (?t_2 o-persoon:geslacht) e:skolem ?U_6. (?t_2 o-persoon:heeftGeboorte) e:skolem ?U_11. (?t_2 o-persoon:heeftGeboortePlaats) e:skolem ?U_12. (?t_2 o-persoon:heeftVerblijfplaats) e:skolem ?t_3. (?t_2 o-persoon:heeftVerblijfplaats) e:skolem ?U_10. (?t_2 ex:bankAccountNumber) e:skolem ?U_9. (?t_2 ex:nationalNumber) e:skolem ?U_8. (?t_2 ex:numberOfFamilyMembers) e:skolem ?U_14. (?t_2 schema:contactPoint schema:contactType "gsm") e:skolem ?U_0. (?t_2 schema:contactPoint schema:contactType "gsm" schema:telephone) e:skolem ?U_1. (?t_2 schema:contactPoint schema:contactType "phone") e:skolem ?U_2. (?t_2 schema:contactPoint schema:contactType "phone" schema:telephone) e:skolem ?U_3. (?t_2 schema:email) e:skolem ?U_7. (?t_2 schema:hasOccupation) e:skolem ?U_13. ?t_2 a o-persoon:Inwoner}.
+{ex:movemap gps:description (true true {?t_2 ex:lockNededForGreyWasteContainer ?U_22. ?t_2 ex:numberOfRequested120LiterGreyWasteContainers ?U_20. ?t_2 ex:numberOfRequested240LiterGreyWasteContainers ?U_21} ex:provideGreyWasteContainerInfo 1 1 0.97 0.97)} <= {(?t_2 ex:lockNededForGreyWasteContainer) e:skolem ?U_22. (?t_2 ex:numberOfRequested120LiterGreyWasteContainers) e:skolem ?U_20. (?t_2 ex:numberOfRequested240LiterGreyWasteContainers) e:skolem ?U_21. ?t_2 a o-persoon:Inwoner. ?t_2 ex:lockNededForGreyWasteContainer ?U_22. ?t_2 ex:numberOfRequested120LiterGreyWasteContainers ?U_20. ?t_2 ex:numberOfRequested240LiterGreyWasteContainers ?U_21. ?t_2 ex:numberOfRequested40LiterGreyWasteContainers ?U_19}.
+{ex:movemap gps:description (true true {?t_2 ex:needForGreenWasteContainer ?U_26. ?t_2 ex:numberOfRequested120LiterGreenWasteContainers ?U_24. ?t_2 ex:numberOfRequested40LiterGreenWasteContainers ?U_23. ?t_2 ex:stopGreeWasteContainer ?U_27} ex:provideGreenWasteContainerInfo 1 1 0.97 0.97)} <= {(?t_2 ex:needForGreenWasteContainer) e:skolem ?U_26. (?t_2 ex:numberOfRequested120LiterGreenWasteContainers) e:skolem ?U_24. (?t_2 ex:numberOfRequested40LiterGreenWasteContainers) e:skolem ?U_23. (?t_2 ex:stopGreeWasteContainer) e:skolem ?U_27. ?t_2 a o-persoon:Inwoner. ?t_2 ex:stopGreeWasteContainer ?U_27}.
+{ex:movemap gps:description (true true {?t_2 ex:numberOfRequested1100LiterPaperWasteContainers ?U_30. ?t_2 ex:numberOfRequested240LiterPaperWasteContainers ?U_29. ?t_2 ex:numberOfRequested40LiterPaperWasteContainers ?U_28} ex:providePaperWasteContainerInfo 1 1 0.97 0.97)} <= {(?t_2 ex:numberOfRequested1100LiterPaperWasteContainers) e:skolem ?U_30. (?t_2 ex:numberOfRequested240LiterPaperWasteContainers) e:skolem ?U_29. (?t_2 ex:numberOfRequested40LiterPaperWasteContainers) e:skolem ?U_28. ?t_2 a o-persoon:Inwoner. ?t_2 ex:numberOfRequested1100LiterPaperWasteContainers ?U_30. ?t_2 ex:numberOfRequested240LiterPaperWasteContainers ?U_29. ?t_2 ex:numberOfRequested40LiterPaperWasteContainers ?U_28}.
+{ex:movemap gps:description (true true {?t_2 ex:addressChangeDeclared true} ex:declareAddressChangeC 1 1 0.97 0.97)} <= {?t_2 a o-persoon:Inwoner. ?t_2 foaf:familyName ?U_5. ?t_2 foaf:givenName ?U_4. ?t_2 o-persoon:heeftGeboorte ?U_11. ?t_2 o-persoon:heeftGeboortePlaats ?U_12. ?t_2 ex:movingAddress ?U_16. ?t_2 ex:movingDate ?U_15. ?t_2 ex:nationalNumber ?U_8. ?t_2 schema:hasOccupation ?U_13. ?t_2 schema:contactPoint ?U_0. ?t_2 schema:contactPoint ?U_2. ?U_0 schema:contactType "gsm". ?U_2 schema:contactType "phone". ?U_0 schema:telephone ?U_1. ?U_2 schema:telephone ?U_3}.
+{ex:movemap gps:description (true true {?t_2 foaf:familyName ?U_5. ?t_2 foaf:givenName ?U_4. ?t_2 o-persoon:heeftGeboorte ?U_11. ?t_2 o-persoon:heeftGeboortePlaats ?U_12. ?t_2 ex:nationalNumber ?U_8. ?t_2 schema:hasOccupation ?U_13. ?t_2 schema:contactPoint ?U_0. ?t_2 schema:contactPoint ?U_2. ?U_0 schema:contactType "gsm". ?U_2 schema:contactType "phone". ?U_0 schema:telephone ?U_1. ?U_2 schema:telephone ?U_3} ex:providePersonalInformation 1 1 0.97 0.97)} <= {(?t_2 foaf:familyName) e:skolem ?U_5. (?t_2 foaf:givenName) e:skolem ?U_4. (?t_2 o-persoon:heeftGeboorte) e:skolem ?U_11. (?t_2 o-persoon:heeftGeboortePlaats) e:skolem ?U_12. (?t_2 ex:nationalNumber) e:skolem ?U_8. (?t_2 schema:contactPoint schema:contactType "gsm") e:skolem ?U_0. (?t_2 schema:contactPoint schema:contactType "gsm" schema:telephone) e:skolem ?U_1. (?t_2 schema:contactPoint schema:contactType "phone") e:skolem ?U_2. (?t_2 schema:contactPoint schema:contactType "phone" schema:telephone) e:skolem ?U_3. (?t_2 schema:hasOccupation) e:skolem ?U_13. ?t_2 a o-persoon:Inwoner}.
+{ex:movemap gps:description (true true {?t_2 ex:movingAddress ?U_16. ?t_2 ex:movingDate ?U_15} ex:declareMovingDetails 1 1 0.97 0.97)} <= {(?t_2 ex:movingAddress) e:skolem ?U_16. (?t_2 ex:movingDate) e:skolem ?U_15. ?t_2 a o-persoon:Inwoner}.
+
+#2020-01-31T10:20:31.456Z in=1100 out=8 ent=90 step=364 brake=4 inf=919453 sec=0.218 inf/sec=4217674
+#ENDS
+
