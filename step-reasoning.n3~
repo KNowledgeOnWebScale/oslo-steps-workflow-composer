@@ -1,8 +1,0 @@
-@prefix o-steps: <http://fast.ilabt.imec.be/ns/oslo-steps/0.2#> .
-
-{?x a o-steps:ComponentLevelStep }=>{?x a o-steps:Step}.
-{?x a o-steps:ContainerLevelStep }=>{?x a o-steps:Step}.
-{?x a o-steps:JourneyLevelStep}=>{?x a o-steps:Step}.
-
-
- 
