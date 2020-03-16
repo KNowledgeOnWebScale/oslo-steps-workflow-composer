@@ -1,0 +1,14 @@
+
+@prefix e: <http://eulersharp.sourceforge.net/2003/03swap/log-rules#>.
+@prefix : <something#>.
+
+:a :b :c.
+
+
+{
+:a :b :c.
+( "day_of_the_week" "date" (2007 1 30) "2"  ) e:derive false.
+}
+=>{:a :a :l}
+.
+

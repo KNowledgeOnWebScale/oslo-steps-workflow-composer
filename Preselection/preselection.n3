@@ -10,7 +10,6 @@ PREFIX :  <http://example.org#>
 {
 
 
-
 {
     ?SCOPE gps:findpath (?Goal ?PATH ?DURATION ?COST ?BELIEF ?COMFORT ?list).
 } => ?head.

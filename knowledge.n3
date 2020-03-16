@@ -8,6 +8,8 @@
 @prefix o-persoon: <https://data.vlaanderen.be/ns/persoon#>.
 @prefix foaf: <http://xmlns.com/foaf/0.1/>.
 @prefix schema: <https://schema.org/>.
+@prefix math: <http://www.w3.org/2000/10/swap/math#>.
+PREFIX e: <http://eulersharp.sourceforge.net/2003/03swap/log-rules#>
 
 {?user :paperWorkForMovementComplete true} <= 
   {
@@ -17,6 +19,39 @@
   ?user ex:mobilityRequested ?w.
   ?user ex:drivingLicenceExchangeRequested ?z
   }.
+
+
+{?user ex:providedFamilyInformation true}
+<=
+{
+?user ex:numberOfFamilyMembers 1.
+
+("!") e:derive true.
+}.
+
+{?user ex:providedFamilyInformation true}
+<=
+{
+?user ex:numberOfFamilyMembers ?n.
+_:x e:findall (?member {?user ex:familyMember ?member} ?members ).
+
+
+?members e:length ?m.
+(?m ?n) math:difference 1.
+("!") e:derive true.
+}.
+
+{?user ex:providedFamilyInformation true}
+<=
+{
+?user ex:numberOfFamilyMembers ?n.
+?n e:label ?j.
+
+#if there is no number, we assume a family member to have a better workflow.
+?user ex:familyMember ?member.
+
+}.
+
 
 :bob  a o-persoon:Inwoner.
 

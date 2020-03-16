@@ -1,54 +1,44 @@
-#Processed by EYE v19.0705.1450 josd
-#eye variables_and_predicates.n3 change-address.ttl treatVariables.n3 --query mappingRuleCreation.n3 --nope --no-skolem https://example.org/ns/var#
+#Processed by EYE v20.0225.2300 josd
+#eye gps-plugin_modified_noPermutations.n3 knowledge.n3 AddressChangeSelected.n3 change-address-steps.ttl --query containerGoal_addressChange.n3 --nope
 
-PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-PREFIX p-plan: <http://purl.org/net/p-plan#>
-PREFIX o-address: <https://data.vlaanderen.be/ns/adres#>
-PREFIX o-steps: <https://example.org/ns/oslo-steps#>
-PREFIX ex: <https://example.org/ns/example#>
-PREFIX var: <https://example.org/ns/var#>
-PREFIX log: <http://www.w3.org/2000/10/swap/log#>
-PREFIX e: <http://eulersharp.sourceforge.net/2003/03swap/log-rules#>
-PREFIX gps: <http://josd.github.io/eye/reasoning/gps/gps-schema#>
-PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
-PREFIX list: <http://www.w3.org/2000/10/swap/list#>
+@prefix math: <http://www.w3.org/2000/10/swap/math#>.
+@prefix list: <http://www.w3.org/2000/10/swap/list#>.
+@prefix log: <http://www.w3.org/2000/10/swap/log#>.
+@prefix e: <http://eulersharp.sourceforge.net/2003/03swap/log-rules#>.
+@prefix gps: <http://josd.github.io/eye/reasoning/gps/gps-schema#>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
+@prefix o-steps: <https://fast.ilabt.imec.be/ns/oslo-steps/0.2#>.
+@prefix : <http://example.org#>.
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix p-plan: <http://purl.org/net/p-plan#>.
+@prefix o-address: <https://data.vlaanderen.be/ns/adres#>.
+@prefix ex: <https://example.org/ns/example#>.
+@prefix xl: <http://www.w3.org/2008/05/skos-xl#>.
+@prefix o-persoon: <https://data.vlaanderen.be/ns/persoon#>.
+@prefix foaf: <http://xmlns.com/foaf/0.1/>.
+@prefix schema: <https://schema.org/>.
+@prefix oslo: <https://example.org/ns/oslo#>.
+@prefix var: <https://example.org/ns/var#>.
+@prefix shp: <https://example.org/ns/shapes#>.
+@prefix sh: <http://www.w3.org/ns/shacl#>.
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
+@prefix ops: <https://data.vlaanderen.be/shacl/persoon-basis#>.
+@prefix ns1: <https://example.org/ns/oslo-steps#>.
+@prefix ns2: <http://josd.github.io/.well-known/genid/pP7dSETOSHCTU6bSn:iLn_1X3mg#>.
+@prefix ns3: <http://josd.github.io/.well-known/genid/I7xbQZZKBZ1DOHnP6MVPJav:Km8#>.
+@prefix plan: <http://https://github.com/doerthe/plan#>.
+@prefix step: <file:///media/doerthe/4EC6F987C6F97017/store/FAST/base/steps#>.
+@prefix ns4: <http://josd.github.io/.well-known/genid/LyYo:trIdsPhQL_fWTVc6LXfmKA#>.
 
-{ex:movemap gps:description (true true {?t_0 ex:firstName ?t_1} ex:provideHouseholderFirstNameManually 1 1 0.97 0.97)} <= {(?t_0 ex:firstName) e:skolem ?t_1}.
-{ex:movemap gps:description (true true {?t_0 ex:lastName ?t_2} ex:provideHouseholderLastNameManually 1 1 0.97 0.97)} <= {(?t_0 ex:lastName) e:skolem ?t_2}.
-{ex:movemap gps:description (true true {?t_0 ex:gender ?t_3} ex:provideHouseholderGenderManually 1 1 0.97 0.97)} <= {(?t_0 ex:gender) e:skolem ?t_3}.
-{ex:movemap gps:description (true true {?t_0 ex:email ?t_4} ex:provideHouseholderEmailManually 1 1 0.97 0.97)} <= {(?t_0 ex:email) e:skolem ?t_4}.
-{ex:movemap gps:description (true true {?t_0 ex:mobile ?t_5} ex:provideHouseholderMobilePhoneNumberManually 1 1 0.97 0.97)} <= {(?t_0 ex:mobile) e:skolem ?t_5}.
-{ex:movemap gps:description (true true {?t_0 ex:phone ?t_6} ex:provideHouseholderPhoneNumberManually 1 1 0.97 0.97)} <= {(?t_0 ex:phone) e:skolem ?t_6}.
-{ex:movemap gps:description (true true {?t_0 ex:nationalNumber ?t_7} ex:provideHouseholderNationalNumberManually 1 1 0.97 0.97)} <= {(?t_0 ex:nationalNumber) e:skolem ?t_7}.
-{ex:movemap gps:description (true true {?t_0 ex:bankaccount ?t_8} ex:provideHouseholderBankAccountNumberManually 1 1 0.97 0.97)} <= {(?t_0 ex:bankaccount) e:skolem ?t_8}.
-{ex:movemap gps:description (true true {?t_0 ex:residencypermit ?t_9} ex:provideHouseholderResidencePermitManually 1 1 0.97 0.97)} <= {(?t_0 ex:residencypermit) e:skolem ?t_9}.
-{ex:movemap gps:description (true true {?t_0 ex:birthdate ?t_10} ex:provideHouseholderBirthDataManually 1 1 0.97 0.97)} <= {(?t_0 ex:birthdate) e:skolem ?t_10}.
-{ex:movemap gps:description (true true {?t_0 ex:address ?t_11} ex:provideHouseholderAddressManually 1 1 0.97 0.97)} <= {(?t_0 ex:address) e:skolem ?t_11}.
-{ex:movemap gps:description (true true {?t_0 ex:profession ?t_12} ex:provideHouseholderProfessionManually 1 1 0.97 0.97)} <= {(?t_0 ex:profession) e:skolem ?t_12}.
-{ex:movemap gps:description (true true {?t_0 ex:amountOfFamilyMembers ?t_13} ex:provideNumberOfFamilyMembersManually 1 1 0.97 0.97)} <= {(?t_0 ex:amountOfFamilyMembers) e:skolem ?t_13}.
-{ex:movemap gps:description (true true {?t_0 ?t_14 ?t_15} ex:provideMovingDateManually 1 1 0.97 0.97)} <= {(?t_0 ?t_14) e:skolem ?t_15}.
-{ex:movemap gps:description (true true {?t_0 ex:city ?t_16} ex:provideMovingCityManually 1 1 0.97 0.97)} <= {(?t_0 ex:city) e:skolem ?t_16}.
-{ex:movemap gps:description (true true {?t_0 ex:number40Lgrey ?t_17} ex:provideNumberOf40LiterGreyWasteContainersManually 1 1 0.97 0.97)} <= {(?t_0 ex:number40Lgrey) e:skolem ?t_17}.
-{ex:movemap gps:description (true true {?t_0 ex:number120Lgrey ?t_18} ex:provideNumberOf120LiterGreyWasteContainersManualy 1 1 0.97 0.97)} <= {(?t_0 ex:number120Lgrey) e:skolem ?t_18}.
-{ex:movemap gps:description (true true {?t_0 ex:number240Lgrey ?t_19} ex:provideNumberOf240LiterGreyWasteContainers 1 1 0.97 0.97)} <= {(?t_0 ex:number240Lgrey) e:skolem ?t_19}.
-{ex:movemap gps:description (true true {?t_0 ex:needOfgreyWasteContainerLock ?t_20} ex:provideGreyWasteContainerLockInfoManually 1 1 0.97 0.97)} <= {(?t_0 ex:needOfgreyWasteContainerLock) e:skolem ?t_20}.
-{ex:movemap gps:description (true true {?t_0 ex:number40LGreen ?t_21} ex:provideNumberOf40LiterGreenWasteContainersManually 1 1 0.97 0.97)} <= {(?t_0 ex:number40LGreen) e:skolem ?t_21}.
-{ex:movemap gps:description (true true {?t_0 ex:number120LGreen ?t_22} ex:provideNumberOf120LiterGreenWasteContainersManually 1 1 0.97 0.97)} <= {(?t_0 ex:number120LGreen) e:skolem ?t_22}.
-{ex:movemap gps:description (true true {?t_0 ex:greenWasteContainerInfoProvided ?t_23} ex:provideGreenWasteContainerOwnCompostInfoManually 1 1 0.97 0.97)} <= {(?t_0 ex:greenWasteContainerInfoProvided) e:skolem ?t_23}.
-{ex:movemap gps:description (true true {?t_0 ex:greenWasteContainerStop ?t_24} ex:provideGreenWasteContainerCollectionStopInfoManually 1 1 0.97 0.97)} <= {(?t_0 ex:greenWasteContainerStop) e:skolem ?t_24}.
-{ex:movemap gps:description (true true {?t_0 ex:greenWasteContainerLockRequired ?t_25} ex:provideGreenWasteContainerLockInfoManually 1 1 0.97 0.97)} <= {(?t_0 ex:greenWasteContainerLockRequired) e:skolem ?t_25}.
-{ex:movemap gps:description (true true {?t_0 ex:amountOf40LiterPaperWasteContainers ?t_26} ex:provideNumberOf40LiterPaperWasteContainersManually 1 1 0.97 0.97)} <= {(?t_0 ex:amountOf40LiterPaperWasteContainers) e:skolem ?t_26}.
-{ex:movemap gps:description (true true {?t_0 ex:amountOf240LiterPaperWasteContainers ?t_27} ex:provideNumberOf240LiterPaperWasteContainersManually 1 1 0.97 0.97)} <= {(?t_0 ex:amountOf240LiterPaperWasteContainers) e:skolem ?t_27}.
-{ex:movemap gps:description (true true {?t_0 ex:amountOf1100LiterPaperWasteContainers ?t_28} ex:provideNumberOf1100LiterPaperWasteContainersManually 1 1 0.97 0.97)} <= {(?t_0 ex:amountOf1100LiterPaperWasteContainers) e:skolem ?t_28}.
-{ex:movemap gps:description (true true {?t_0 ex:wasteRequest ?t_29} ex:requestWasteCollection 1 1 0.97 0.97)} <= {(?t_0 ex:wasteRequest) e:skolem ?t_29. ?t_0 ex:greenWasteContainerInfoProvided ?t_30. ?t_0 ex:greyWasteContainerInfoProvided ?t_31. ?t_0 ex:info ?t_32. ?t_0 ex:paperWasteContainerInfoProvided ?t_33}.
-{ex:movemap gps:description (true true {?t_0 ex:info ?t_32} ex:provideWasteCollectionApplicantInfo 1 1 0.97 0.97)} <= {(?t_0 ex:info) e:skolem ?t_32. ?t_0 ex:amountOfFamilyMembers ?t_13. ?t_0 ex:billing ?t_34. ?t_0 ex:email ?t_4. ?t_0 ex:firstName ?t_1. ?t_0 ex:gender ?t_3. ?t_0 ex:lastName ?t_2. ?t_0 ex:mobile ?t_5. ?t_0 ex:movingAddress ?t_35. ?t_0 ex:nationalNumber ?t_7. ?t_0 ex:phone ?t_6}.
-{ex:movemap gps:description (true true {?t_0 ex:greyWasteContainerInfoProvided ?t_31} ex:provideGreyWasteContainerInfo 1 1 0.97 0.97)} <= {(?t_0 ex:greyWasteContainerInfoProvided) e:skolem ?t_31. ?t_0 ex:needOfgreyWasteContainerLock ?t_20. ?t_0 ex:number120Lgrey ?t_18. ?t_0 ex:number240Lgrey ?t_19. ?t_0 ex:number40Lgrey ?t_17}.
-{ex:movemap gps:description (true true {?t_0 ex:greenWasteContainerInfoProvided ?t_30} ex:provideGreenWasteContainerInfo 1 1 0.97 0.97)} <= {(?t_0 ex:greenWasteContainerInfoProvided) e:skolem ?t_30. ?t_0 ex:greenWasteContainerInfoProvided ?t_23. ?t_0 ex:greenWasteContainerLockRequired ?t_25. ?t_0 ex:greenWasteContainerStop ?t_24. ?t_0 ex:number120LGreen ?t_22. ?t_0 ex:number40LGreen ?t_21}.
-{ex:movemap gps:description (true true {?t_0 ex:paperWasteContainerInfoProvided ?t_33} ex:providePaperWasteContainerInfo 1 1 0.97 0.97)} <= {(?t_0 ex:paperWasteContainerInfoProvided) e:skolem ?t_33. ?t_0 ex:amountOf1100LiterPaperWasteContainers ?t_28. ?t_0 ex:amountOf240LiterPaperWasteContainers ?t_27. ?t_0 ex:amountOf40LiterPaperWasteContainers ?t_26}.
-{ex:movemap gps:description (true true {?t_0 ex:addressChange ?t_36} ex:declareAddressChange 1 1 0.97 0.97)} <= {(?t_0 ex:addressChange) e:skolem ?t_36. ?t_0 ex:birthdate ?t_10. ?t_0 ex:bornin ?t_37. ?t_0 ex:email ?t_4. ?t_0 ex:firstName ?t_1. ?t_0 ex:lastName ?t_2. ?t_0 ex:mobile ?t_5. ?t_0 ex:movingAddress ?t_35. ?t_0 ex:nationalNumber ?t_7. ex:user ex:nationality ?t_38. ?t_0 ex:phone ?t_6. ?t_0 ex:profession ?t_12. ?t_0 ?t_14 ?t_15}.
-{ex:movemap gps:description (true true {?t_0 ex:addressChangeConfirmedBy ?t_39} ex:confirmAddressChangeVisit 1 1 0.97 0.97)} <= {(?t_0 ex:addressChangeConfirmedBy) e:skolem ?t_39. ?t_0 ex:addressChange ?t_36. ?t_0 ex:housholderpresent ?t_40}.
-{ex:movemap gps:description (true true {?t_0 ex:changedAddressOnId ?t_41} ex:addressChangeOnEIDInOffice 1 1 0.97 0.97)} <= {(?t_0 ex:changedAddressOnId) e:skolem ?t_41. ?t_0 ex:addressChangeConfirmedBy ?t_39. ?t_0 ex:bringsID ?t_42}.
+ex:bob gps:path ((ex:provideWasteCollectionApplicantInfo ex:declareMovingDetails ex:declareAddressChangeC) 3.0 3.0 0.912673 0.912673).
+ex:bob gps:path ((ex:providePersonalInformation ex:provideWasteCollectionApplicantInfo ex:declareMovingDetails ex:declareAddressChangeC) 4.0 4.0 0.8852928099999999 0.8852928099999999).
+ex:bob gps:path ((ex:providePersonalInformation ex:declareMovingDetails ex:provideWasteCollectionApplicantInfo ex:declareAddressChangeC) 4.0 4.0 0.8852928099999999 0.8852928099999999).
+ex:bob gps:path ((ex:providePersonalInformation ex:declareMovingDetails ex:providePersonalInformation ex:declareAddressChangeC) 4.0 4.0 0.8852928099999999 0.8852928099999999).
+ex:bob gps:path ((ex:declareMovingDetails ex:provideWasteCollectionApplicantInfo ex:declareAddressChangeC) 3.0 3.0 0.912673 0.912673).
+ex:bob gps:path ((ex:declareMovingDetails ex:providePersonalInformation ex:declareAddressChangeC) 3.0 3.0 0.912673 0.912673).
+ex:bob gps:path ((ex:declareMovingDetails ex:providePersonalInformation ex:provideWasteCollectionApplicantInfo ex:declareAddressChangeC) 4.0 4.0 0.8852928099999999 0.8852928099999999).
+ex:bob gps:path ((ex:declareMovingDetails ex:providePersonalInformation ex:providePersonalInformation ex:declareAddressChangeC) 4.0 4.0 0.8852928099999999 0.8852928099999999).
 
-#2019-07-18T13:03:57.853Z in=395 out=35 ent=35 step=35 brake=2 inf=514359 sec=0.162 inf/sec=3175056
+#2020-02-26T10:08:39.863Z in=325 out=8 ent=8 step=8 brake=2 inf=416021 sec=0.145 inf/sec=2869110
 #ENDS
 

@@ -1,0 +1,34 @@
+#Processed by EYE v19.1206.2337 josd
+#eye change-address-shapes2.ttl --query createPattern2.n3 --nope
+
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix foaf: <http://xmlns.com/foaf/0.1/>.
+@prefix sh: <http://www.w3.org/ns/shacl#>.
+@prefix ex: <https://example.org/ns/example#>.
+@prefix schema: <https://schema.org/>.
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
+@prefix ops: <https://data.vlaanderen.be/shacl/persoon-basis#>.
+@prefix o-steps: <https://fast.ilabt.imec.be/ns/oslo-steps/0.2#>.
+@prefix o-persoon: <https://data.vlaanderen.be/ns/persoon#>.
+@prefix p-plan: <http://purl.org/net/p-plan#>.
+@prefix o-address: <https://data.vlaanderen.be/ns/adres#>.
+@prefix var: <https://example.org/ns/var#>.
+@prefix log: <http://www.w3.org/2000/10/swap/log#>.
+@prefix e: <http://eulersharp.sourceforge.net/2003/03swap/log-rules#>.
+@prefix gps: <http://josd.github.io/eye/reasoning/gps/gps-schema#>.
+@prefix list: <http://www.w3.org/2000/10/swap/list#>.
+@prefix oslo: <https://example.org/ns/oslo#>.
+@prefix ns1: <http://josd.github.io/.well-known/genid/pP7dSETOSHCTU6bSn:iLn_1X3mg#>.
+
+ex:mobilePhoneNumberShape ex:pattern ({ns1:x schema:contactPoint _:sk_0. _:sk_0 schema:contactType "gsm". _:sk_0 schema:telephone _:sk_1} {(ns1:x schema:contactPoint schema:contactType "gsm" schema:telephone) e:skolem _:sk_1. (ns1:x schema:contactPoint schema:contactType) e:skolem _:sk_0}).
+_:sk_2 ex:pattern ({ns1:x foaf:givenName _:sk_3} {(ns1:x foaf:givenName) e:skolem _:sk_3}).
+_:sk_4 ex:pattern ({ns1:x foaf:familyName _:sk_5} {(ns1:x foaf:familyName) e:skolem _:sk_5}).
+_:sk_6 ex:pattern ({ns1:x o-persoon:geslacht _:sk_7} {(ns1:x o-persoon:geslacht) e:skolem _:sk_7}).
+_:sk_8 ex:pattern ({ns1:x schema:email _:sk_9} {(ns1:x schema:email) e:skolem _:sk_9}).
+_:sk_10 ex:pattern ({ns1:x ex:nationalNumber _:sk_11} {(ns1:x ex:nationalNumber) e:skolem _:sk_11}).
+_:sk_12 ex:pattern ({ns1:x o-persoon:heeftGeboorte _:sk_13} {(ns1:x o-persoon:heeftGeboorte) e:skolem _:sk_13}).
+_:sk_14 ex:pattern ({ns1:x schema:hasOccupation _:sk_15} {(ns1:x schema:hasOccupation) e:skolem _:sk_15}).
+
+#2020-01-08T15:32:53.363Z in=212 out=8 ent=8 step=9 brake=1 inf=158997 sec=0.093 inf/sec=1709645
+#ENDS
+

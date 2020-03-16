@@ -7,13 +7,13 @@
 #@prefix step: <https://example.org/ns/example#> .
 @prefix xl: <http://www.w3.org/2008/05/skos-xl#> .
 
-@prefix state: <{{base}}/states#> .
-@prefix shape: <{{base}}/shapes#> .
-@prefix step: <{{base}}/steps#> .
+#@prefix state: <{{base}}/states#> .
+#@prefix shape: <{{base}}/shapes#> .
+#@prefix step: <{{base}}/steps#> .
 
-#@prefix state: <https://example.org/ns/example#> .
-#@prefix shape: <https://example.org/ns/example#> .
-#@prefix step: <base/steps#> .
+@prefix state: <https://example.org/ns/example#> .
+@prefix shape: <https://example.org/ns/example#> .
+@prefix step: <base/steps#> .
 
 #
 # Steps to provide information of the citizen in a manual fashion
@@ -423,3 +423,20 @@ step:declareMovingDetails a o-steps:ContainerLevelStep ;
     state:movingDate  ;
   o-steps:requiresState o-steps:emptyState
 .
+
+#Journey level steps
+#provide personal details
+step:providePersonalInformation a o-steps:JourneyLevelStep ;
+  o-steps:producesState state:citizenFirstName ,
+                        state:citizenLastName ,
+                        state:citizenNationalNumber ,
+                        state:citizenBirthDate ,
+                        state:citizenCityOfBirth ,
+                        state:citizenNationality ,
+                        state:citizenProfession ,
+                        state:citizenPhoneNumber ,
+                        state:citizenMobilePhoneNumber ,
+                        state:citizenEmail ;
+  o-steps:requiresState o-steps:emptyState
+
+

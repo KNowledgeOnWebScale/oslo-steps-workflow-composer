@@ -1,0 +1,40 @@
+#Processed by EYE v20.0313.1435 josd
+#eye component-level-steps.n3 shortComponentDescriptions.n3 Goal_provideMovingData.n3 Preselection/preselection.n3 knowledge.n3 --nope --query Preselection/prequery.n3
+
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix o-address: <https://data.vlaanderen.be/ns/adres#>.
+@prefix o-steps: <https://fast.ilabt.imec.be/ns/oslo-steps/0.2#>.
+@prefix xl: <http://www.w3.org/2008/05/skos-xl#>.
+@prefix state: <https://example.org/ns/example#>.
+@prefix step: <file:///media/doerthe/4EC6F987C6F97017/store/FAST/base/steps#>.
+@prefix p-plan: <http://purl.org/net/p-plan#>.
+@prefix foaf: <http://xmlns.com/foaf/0.1/>.
+@prefix sh: <http://www.w3.org/ns/shacl#>.
+@prefix schema: <https://schema.org/>.
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
+@prefix skos: <http://www.w3.org/2004/02/skos/core#>.
+@prefix ops: <https://data.vlaanderen.be/shacl/persoon-basis#>.
+@prefix o-persoon: <https://data.vlaanderen.be/ns/persoon#>.
+@prefix ns1: <https://example.org/ns/oslo-steps#>.
+@prefix var: <https://example.org/ns/var#>.
+@prefix log: <http://www.w3.org/2000/10/swap/log#>.
+@prefix e: <http://eulersharp.sourceforge.net/2003/03swap/log-rules#>.
+@prefix gps: <http://josd.github.io/eye/reasoning/gps/gps-schema#>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
+@prefix list: <http://www.w3.org/2000/10/swap/list#>.
+@prefix math: <http://www.w3.org/2000/10/swap/math#>.
+@prefix oslo: <https://example.org/ns/oslo#>.
+@prefix ns2: <http://josd.github.io/.well-known/genid/pP7dSETOSHCTU6bSn:iLn_1X3mg#>.
+@prefix ns3: <http://josd.github.io/.well-known/genid/Cu5OpwYIn2aR94xaMPa5PzMZSqs#>.
+@prefix : <http://example.org#>.
+@prefix shp: <https://example.org/ns/shapes#>.
+@prefix ns4: <http://josd.github.io/.well-known/genid/bCHPrOjcGmNlvnxxC_gIZneJs1Y#>.
+@prefix plan: <http://https://github.com/doerthe/plan#>.
+
+{state:movemap gps:description (true true {?U_36 state:movingDate ?U_37} step:provideMovingDateManually 1 1 0.97 0.97)} <= {(?U_36 state:movingDate) e:skolem ?U_37. ?U_36 a o-persoon:Inwoner}.
+{state:movemap gps:description (true true {?U_38 state:movingCity ?U_39} step:provideMovingCityManually 1 1 0.97 0.97)} <= {(?U_38 state:movingCity) e:skolem ?U_39. ?U_38 a o-persoon:Inwoner}.
+{state:movemap gps:description (true true {?U_40 state:movingAddress ?U_41} step:provideMovingAddressManually 1 1 0.97 0.97)} <= {(?U_40 state:movingAddress) e:skolem ?U_41. ?U_40 a o-persoon:Inwoner}.
+
+#2020-03-16T10:40:13.397Z in=131 out=3 ent=6 step=12 brake=2 inf=471218 sec=0.135 inf/sec=3490504
+#ENDS
+

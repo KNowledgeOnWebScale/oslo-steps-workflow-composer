@@ -1,0 +1,33 @@
+@prefix gps: <http://josd.github.io/eye/reasoning/gps/gps-schema#>.
+@prefix e: <http://eulersharp.sourceforge.net/2003/03swap/log-rules#>.
+@prefix : <http://example.org#>.
+@prefix var: <http://josd.github.io/.well-known/genid/pP7dSETOSHCTU6bSn:iLn_1X3mg#>.
+@prefix log: <http://www.w3.org/2000/10/swap/log#>.
+
+{
+?action :findSubpath true.
+
+
+ {?map gps:description (?from ?between ?to ?action ?duration ?cost ?belief ?comfort) } <= ?body.
+
+?body e:graphCopy ?body2.
+_:x e:findall ({?s ?p ?o} {?body2 log:includes {?s ?p ?o}. ?p log:notEqualTo e:skolem} ?in ).
+?in log:conjunction ?in2.
+}
+=>
+{
+
+{ ?x e:findall ( {?ss ?pp ?oo}  {  ?in2 log:includes {?ss ?pp ?oo}. ?x e:call {?ss ?pp ?oo} } ?out ). 
+
+#(?in2 ?out) :unifyList ?in2.
+?out log:conjunction ?out2.
+(?out2 ?in2) e:graphIntersection ?int.
+
+?in2 e:labelvars ?in3
+
+
+} => ?in3.
+
+}.
+
+

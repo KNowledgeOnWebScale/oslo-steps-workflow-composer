@@ -48,6 +48,7 @@ PREFIX list: <http://www.w3.org/2000/10/swap/list#>
 {
 ?stateShape a o-steps:StateShape; sh:property ?property; sh:targetClass o-persoon:Inwoner . ?property sh:path ?path; sh:minCount 1.
 ?path log:rawType ?t. ?t log:notEqualTo rdf:List.
+
 }
 =>
 {
@@ -111,7 +112,6 @@ PREFIX list: <http://www.w3.org/2000/10/swap/list#>
 
 {
 ?stateShape a o-steps:StateShape; sh:property ?property; sh:targetClass o-persoon:Inwoner . ?property sh:path ?path; sh:hasValue ?value.
-
 }
 =>
 {

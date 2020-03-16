@@ -1,0 +1,45 @@
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix p-plan: <http://purl.org/net/p-plan#> .
+@prefix o-address: <https://data.vlaanderen.be/ns/adres#> .
+@prefix o-steps: <https://example.org/ns/oslo-steps#> .
+@prefix ex: <https://example.org/ns/example#> .
+
+
+ex:numberOf240LiterPaperWasteContainers a p-plan:Variable ;
+  rdfs:label "Number of 240 liter paper waste contaienrs"@en ;
+  rdfs:label "Aantal 240 liter papier containers"@nl .
+
+ex:provideNumberOf240LiterPaperWasteContainersManually a o-steps:Step ;
+  rdfs:label "Number of 240 liter paper waste container(s)"@en ;
+  rdfs:label "Aantal 240 liter papier container(s)"@nl ;
+  p-plan:hasOutputVar ex:numberOf240LiterPaperWasteContainers .
+
+ex:provideNumberOf40LiterPaperWasteContainersManually a o-steps:Step ;
+  rdfs:label "Number of 40 liter paper waste container(s)"@en ;
+  rdfs:label "Aantal 40 liter papier container(s)"@nl ;
+  p-plan:hasOutputVar ex:numberOf40LiterPaperWasteContainers .
+
+ex:provideGreenWasteContainerCollectionStopInfoManually a o-steps:Step ;
+  rdfs:label "Stop collecting green waste containers"@en ;
+  rdfs:label "Ophaling GFT-container door stopzetting"@nl ;
+  p-plan:hasOutputVar ex:greenWasteContainerStopCollectingInfo .
+
+ex:provideGreenWasteContainerLockInfoManually a o-steps:Step ;
+  rdfs:label "I request a lock for my green waste container(s)"@en ;
+  rdfs:label "Ik vraag een slot voor mijn GFT container(s) aan"@nl ;
+  p-plan:hasOutputVar ex:greenWasteContainerLockInfo .
+
+ex:provideNumberOf40LiterPaperWasteContainersManually a o-steps:Step ;
+  rdfs:label "Number of 40 liter paper waste container(s)"@en ;
+  rdfs:label "Aantal 40 liter papier container(s)"@nl ;
+  p-plan:hasOutputVar ex:numberOf40LiterPaperWasteContainers .
+
+ex:provideNumberOf240LiterPaperWasteContainersManually a o-steps:Step ;
+  rdfs:label "Number of 240 liter paper waste container(s)"@en ;
+  rdfs:label "Aantal 240 liter papier container(s)"@nl ;
+  p-plan:hasOutputVar ex:numberOf240LiterPaperWasteContainers .
+
+ex:provideNumberOf1100LiterPaperWasteContainersManually a o-steps:Step ;
+  rdfs:label "Number of 1100 liter paper waste container(s)"@en ;
+  rdfs:label "Aantal 1100 liter papier container(s)"@nl ;
+  p-plan:hasOutputVar ex:numberOf1100LiterPaperWasteContainers .

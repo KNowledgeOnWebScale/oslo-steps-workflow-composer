@@ -1,0 +1,20 @@
+@prefix : <https://example.org/ns/example#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix list: <http://www.w3.org/2000/10/swap/list#>.
+@prefix log: <http://www.w3.org/2000/10/swap/log#>.
+@prefix e: <http://eulersharp.sourceforge.net/2003/03swap/log-rules#>.
+@prefix var: <http://josd.github.io/.well-known/genid/pP7dSETOSHCTU6bSn:iLn_1X3mg#>.
+
+
+@forAll :y.
+
+{
+?x a rdfs:Class.
+_:x e:findall ({@exists :o. :y ?p :o.} {?x :definedBy ?list. ?p list:in ?list  } ?out  ).
+?out log:conjunction ?triples.
+}
+=>
+{
+?triples => {:y a ?x}.
+}. 
+

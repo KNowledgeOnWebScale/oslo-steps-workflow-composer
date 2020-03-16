@@ -1,0 +1,4 @@
+@prefix step: <file:///media/doerthe/4EC6F987C6F97017/store/FAST/base/steps#>.
+@prefix : <https://example.org/#> .
+
+step:submitWasteInfo :findSubpath true.

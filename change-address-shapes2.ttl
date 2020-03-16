@@ -119,9 +119,11 @@ shape:mobilePhoneNumberShape a o-steps:StateShape ;
 shape:mobilePhoneNumberExistence		sh:path schema:contactPoint;
                 sh:qualifiedValueShape [ sh:path  schema:contactType;
                                          sh:hasValue "gsm" ] ;
-                sh:node [ sh:path schema:telephone;
-                          sh:minCount 1 ];
-                sh:qualifiedMinCount 1 .
+                sh:qualifiedMinCount 1 ;
+                
+                sh:property [ sh:path schema:telephone;
+                          sh:minCount 1 ].
+
 
 
 #
@@ -138,7 +140,7 @@ shape:phoneNumberShape a o-steps:StateShape ;
 shape:phoneNumberExistence		sh:path schema:contactPoint;
                 sh:qualifiedValueShape [ sh:path  schema:contactType;
                                          sh:hasValue "phone" ] ;
-                sh:node [ sh:path schema:telephone;
+                sh:property [ sh:path schema:telephone;
                           sh:minCount 1 ];
                 sh:qualifiedMinCount 1 .
 
@@ -241,13 +243,33 @@ shape:validBirth a sh:PropertyShape ;
   sh:class o-persoon:Geboorte ;
   sh:node ops:PersoonsgebeurtenisShape .
 
+
+shape:applicantInfoSubmittedShape a o-steps:StateShape ;
+  sh:targetClass o-persoon:Inwoner ;
+  sh:property shape:applicantInfoValue .
+
+shape:applicantInfoValue  a sh:PropertyShape ;
+  sh:path ex:applicantInfoSubmitted;
+  sh:hasValue true .
+
+
 #
 # city of birth
 #
 shape:cityOfBirthShape a o-steps:StateShape ;
   rdfs:label "Citizen city of birth"@en ;
   sh:targetClass o-persoon:Inwoner ;
-  sh:property shape:validBirth .
+  sh:property shape:validBirthPlace .
+
+#TODO: Sven, please fix
+
+shape:validBirth a sh:PropertyShape ;
+  rdfs:label "Valid date of birth"@en ;
+  sh:path o-persoon:heeftGeboortePlaats ;
+  sh:minCount 1 ;
+  sh:maxCount 1 ;
+  sh:class o-persoon:Geboorte ;
+  sh:node ops:PersoonsgebeurtenisShape .
 
 #
 # address
@@ -497,5 +519,31 @@ shape:addressChangeDeclaredShape a o-steps:StateShape ;
 shape:addressChangeValue  a sh:PropertyShape ;
   sh:path ex:addressChangeDeclared;
   sh:hasValue true .
+
+
+shape:transportRequestedShape a o-steps:StateShape ;
+  sh:targetClass o-persoon:Inwoner ;
+  sh:property shape:transportRequestedExistence .
+
+shape:transportRequestedExistence  a sh:PropertyShape ;
+  sh:path ex:transportRequested;
+  sh:minCount 1 .
+
+shape:mobilityRequestedShape a o-steps:StateShape ;
+  sh:targetClass o-persoon:Inwoner ;
+  sh:property shape:mobilityRequestedExistence .
+
+shape:mobilityRequestedExistence  a sh:PropertyShape ;
+  sh:path ex:mobilityRequested;
+  sh:minCount 1 .
+
+shape:drivingLicenceExchangeRequestedShape a o-steps:StateShape ;
+  sh:targetClass o-persoon:Inwoner ;
+  sh:property shape:drivingLicenceExchangeExistence .
+
+shape:drivingLicenceExchangeExistence  a sh:PropertyShape ;
+  sh:path ex:drivingLicenceExchangeRequested;
+  sh:minCount 1 .
+
 #
 # 

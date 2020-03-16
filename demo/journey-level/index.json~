@@ -6,7 +6,7 @@
         "moving": {
             "description": "moving",
             "inference": {
-                "data": ["./journey-level/steps/*", "./profile/*", "./workflow-composer/gps-plugin_modified.n3"],
+                "data": ["./journey-level/steps/*", "https://github.com/josd/fluid/blob/master/gps/gps-schema", "./profile/*", "./workflow-composer/gps-plugin_modified.n3"],
                 "query": "./goal/journeyGoal.n3"
             }
         },
@@ -16,6 +16,6 @@
                 "data": ["./journey-level/steps/*", "./profile/*", "./workflow-composer/gps-plugin_modified_noPermutations.n3"],
                 "query": "./goal/journeyGoal.n3"
             }
-        },
+        }
     }    
 }

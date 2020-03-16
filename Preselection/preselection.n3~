@@ -9,14 +9,14 @@ PREFIX :  <http://example.org#>
 
 {
 
-
+_:x e:trace 11.
 
 {
     ?SCOPE gps:findpath (?Goal ?PATH ?DURATION ?COST ?BELIEF ?COMFORT ?list).
 } => ?head.
 
 
-
+_:x e:trace 1.
 
 ?ll a :ShortDescription.
 
@@ -29,7 +29,7 @@ PREFIX :  <http://example.org#>
 ?l log:equalTo {?s ?p ?o}.
 
 ?to log:includes {?s ?p ?o}.
-
+_:x e:trace "trace".
 }
 =>
 {:keep :action ?action}.
@@ -118,10 +118,10 @@ PREFIX :  <http://example.org#>
 
 ?ll a :ShortDescription.
 ?ll log:equalTo {?extendedFrom ?action ?to}.
-?ll e:graphList ?lllist.
+?to e:graphList ?lllist.
 ?l2 list:in ?lllist.
 
-_:x e:trace ("pair" ?l ?l2).
+
 
 ?l :reliesOnChain ?l2.
 

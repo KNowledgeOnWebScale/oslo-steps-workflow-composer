@@ -1,5 +1,5 @@
-#Processed by EYE v20.0105.1336 josd
-#eye gps-plugin_modified_noPermutations.n3 knowledge.n3 journey-level-steps.n3 change-address-steps.ttl --query journeyGoal.n3 --nope
+#Processed by EYE v20.0313.1435 josd
+#eye gps-plugin_modified_noPermutations.n3 knowledge.n3 selectedSteps.n3 NewSteps.n3 --query newJourneyGoal.n3 --nope
 
 @prefix math: <http://www.w3.org/2000/10/swap/math#>.
 @prefix list: <http://www.w3.org/2000/10/swap/list#>.
@@ -17,19 +17,23 @@
 @prefix o-persoon: <https://data.vlaanderen.be/ns/persoon#>.
 @prefix foaf: <http://xmlns.com/foaf/0.1/>.
 @prefix schema: <https://schema.org/>.
-@prefix oslo: <https://example.org/ns/oslo#>.
-@prefix var: <https://example.org/ns/var#>.
-@prefix shp: <https://example.org/ns/shapes#>.
+@prefix step: <file:///media/doerthe/4EC6F987C6F97017/store/FAST/base/steps#>.
 @prefix sh: <http://www.w3.org/ns/shacl#>.
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
+@prefix skos: <http://www.w3.org/2004/02/skos/core#>.
 @prefix ops: <https://data.vlaanderen.be/shacl/persoon-basis#>.
 @prefix ns1: <https://example.org/ns/oslo-steps#>.
+@prefix var: <https://example.org/ns/var#>.
+@prefix oslo: <https://example.org/ns/oslo#>.
 @prefix ns2: <http://josd.github.io/.well-known/genid/pP7dSETOSHCTU6bSn:iLn_1X3mg#>.
-@prefix ns3: <http://josd.github.io/.well-known/genid/0lq:rOixATM0xY4HYVephMVME7I#>.
-@prefix ns4: <http://josd.github.io/.well-known/genid/MQbTQAKCIYwT8wT8Y8soXWekDkQ#>.
+@prefix ns3: <http://josd.github.io/.well-known/genid/UBLkU4dVvnAeNIF0eA5UNJCT3h4#>.
+@prefix plan: <http://https://github.com/doerthe/plan#>.
+@prefix ns4: <http://josd.github.io/.well-known/genid/mccq4WshlduaHM4uV:sVTx05k6U#>.
 
-ex:bob gps:path ((("unorderedList" (ex:declareAddressChangeJ ex:requestWasteCollection ex:requestTransportDuringRelocation ex:requestMobilityInNewCity ex:requestExchangeNonEUDrivingLicence))) 5.0 5.0 0.8587340256999999 0.8587340256999999).
+ex:bob gps:path ((("unorderedList" (step:providePersonalInformation step:provideMovingData)) step:changeAddress step:submitWasteInfo) 400.0 400.0 0.6561000000000001 0.6561000000000001).
+ex:bob gps:path ((("unorderedList" (step:providePersonalInformation step:provideMovingData)) step:submitWasteInfo step:changeAddress) 400.0 400.0 0.6561000000000001 0.6561000000000001).
+ex:bob gps:path ((("unorderedList" (step:provideMovingData)) step:submitWasteInfo ("unorderedList" (step:providePersonalInformation)) step:changeAddress) 400.0 400.0 0.6561000000000001 0.6561000000000001).
 
-#2020-01-31T10:20:32.332Z in=326 out=1 ent=1 step=1 brake=2 inf=460893 sec=0.162 inf/sec=2845019
+#2020-03-16T11:33:02.532Z in=288 out=3 ent=3 step=3 brake=2 inf=322912 sec=0.126 inf/sec=2562794
 #ENDS
 

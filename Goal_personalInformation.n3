@@ -1,0 +1,60 @@
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix p-plan: <http://purl.org/net/p-plan#>.
+@prefix o-address: <https://data.vlaanderen.be/ns/adres#>.
+@prefix o-steps: <https://fast.ilabt.imec.be/ns/oslo-steps/0.2#>.
+@prefix oslo: <https://example.org/ns/oslo#>.
+@prefix ex: <https://example.org/ns/example#>.
+@prefix var: <https://example.org/ns/var#>.
+@prefix shp: <https://example.org/ns/shapes#>.
+@prefix sh: <http://www.w3.org/ns/shacl#>.
+@prefix xl: <http://www.w3.org/2008/05/skos-xl#>.
+@prefix step: <file:///media/doerthe/4EC6F987C6F97017/store/FAST/base/steps#>.
+@prefix foaf: <http://xmlns.com/foaf/0.1/>.
+@prefix schema: <https://schema.org/>.
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
+@prefix ops: <https://data.vlaanderen.be/shacl/persoon-basis#>.
+@prefix o-persoon: <https://data.vlaanderen.be/ns/persoon#>.
+@prefix ns1: <https://example.org/ns/oslo-steps#>.
+@prefix log: <http://www.w3.org/2000/10/swap/log#>.
+@prefix e: <http://eulersharp.sourceforge.net/2003/03swap/log-rules#>.
+@prefix gps: <http://josd.github.io/eye/reasoning/gps/gps-schema#>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
+@prefix list: <http://www.w3.org/2000/10/swap/list#>.
+@prefix math: <http://www.w3.org/2000/10/swap/math#>.
+@prefix ns2: <http://josd.github.io/.well-known/genid/pP7dSETOSHCTU6bSn:iLn_1X3mg#>.
+@prefix ns3: <http://josd.github.io/.well-known/genid/bCHPrOjcGmNlvnxxC_gIZneJs1Y#>.
+
+
+
+{
+    ?SCOPE gps:findpath (
+{?t_6 foaf:familyName ?U_5. 
+?t_6 foaf:givenName ?U_4. 
+?t_6 ex:nationalNumber ?U_8. 
+?t_6 schema:hasOccupation ?U_10. 
+?t_7 o-persoon:datum ?t_8. 
+ 
+?t_6 o-persoon:heeftGeboorte ?t_9. 
+
+?t_9 o-persoon:plaats ?t_11. 
+
+?t_6 o-persoon:heeftGeboorte ?t_7.
+
+?t_6 o-persoon:heeftVerblijfplaats ?t_10. 
+
+?t_10 o-persoon:verblijfsadres ?t_12. 
+
+
+?t_6 schema:contactPoint ?U_0. 
+?U_0 schema:contactType "gsm". 
+?U_0 schema:telephone ?U_1. 
+
+?t_6 schema:contactPoint ?U_2. 
+?U_2 schema:contactType "telephone". 
+?U_2 schema:telephone ?U_3
+}
+
+ ?PATH ?DURATION ?COST ?BELIEF ?COMFORT (10 8.0 0.2 0.2 )).
+} => {
+    ?t_2 gps:path (?PATH ?DURATION ?COST ?BELIEF ?COMFORT).
+}.

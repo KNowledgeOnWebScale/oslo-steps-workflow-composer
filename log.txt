@@ -1,0 +1,68 @@
+eye variables_and_predicates.n3 NewSteps.n3 change-address-states.ttl change-address-shapes.ttl step-reasoning.n3 aux.n3 createPattern2.n3 --query mappingRuleCreationJourney.n3 --nope --no-skolem http://josd.github.io/.well-known/genid/
+EYE v20.0225.2300 josd
+SWI-Prolog version 8.0.3
+starting 46 [msec cputime] 50 [msec walltime]
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/variables_and_predicates.n3 SC=238
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/NewSteps.n3 SC=158
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/change-address-states.ttl SC=194
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/change-address-shapes.ttl SC=394
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/step-reasoning.n3 SC=3
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/aux.n3 SC=2
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/createPattern2.n3 SC=8
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/mappingRuleCreationJourney.n3 SC=1
+networking 129 [msec cputime] 136 [msec walltime]
+reasoning 31 [msec cputime] 32 [msec walltime]
+2020-02-26T13:20:01.548Z in=998 out=4 ent=64 step=272 brake=4 inf=828064 sec=0.206 inf/sec=4019728
+
+eye variables_and_predicates.n3 NewSteps.n3 change-address-states.ttl change-address-shapes.ttl step-reasoning.n3 aux.n3 createPattern2.n3 --query mappingRuleCreationCL-Level.n3 --nope --no-skolem http://josd.github.io/.well-known/genid/
+EYE v20.0225.2300 josd
+SWI-Prolog version 8.0.3
+starting 35 [msec cputime] 38 [msec walltime]
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/variables_and_predicates.n3 SC=238
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/NewSteps.n3 SC=158
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/change-address-states.ttl SC=194
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/change-address-shapes.ttl SC=394
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/step-reasoning.n3 SC=3
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/aux.n3 SC=2
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/createPattern2.n3 SC=8
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/mappingRuleCreationCL-Level.n3 SC=1
+networking 95 [msec cputime] 102 [msec walltime]
+reasoning 18 [msec cputime] 19 [msec walltime]
+2020-02-26T13:20:01.814Z in=998 out=17 ent=77 step=274 brake=4 inf=767219 sec=0.148 inf/sec=5183912
+
+eye gps-plugin_modified.n3 knowledge.n3 journey-level-steps.n3 NewSteps.n3 --query newJourneyGoal.n3 --nope
+EYE v20.0225.2300 josd
+SWI-Prolog version 8.0.3
+starting 50 [msec cputime] 56 [msec walltime]
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/gps-plugin_modified.n3 SC=16
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/knowledge.n3 SC=2
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/journey-level-steps.n3 SC=4
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/NewSteps.n3 SC=158
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/newJourneyGoal.n3 SC=1
+networking 48 [msec cputime] 53 [msec walltime]
+reasoning 19 [msec cputime] 19 [msec walltime]
+2020-02-26T13:20:02.049Z in=181 out=5 ent=5 step=5 brake=2 inf=260020 sec=0.117 inf/sec=2222393
+
+eye gps-plugin_modified_noPermutations.n3 knowledge.n3 journey-level-steps.n3 NewSteps.n3 --query newJourneyGoal.n3 --nope
+EYE v20.0225.2300 josd
+SWI-Prolog version 8.0.3
+starting 41 [msec cputime] 46 [msec walltime]
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/gps-plugin_modified_noPermutations.n3 SC=19
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/knowledge.n3 SC=2
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/journey-level-steps.n3 SC=4
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/NewSteps.n3 SC=158
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/newJourneyGoal.n3 SC=1
+networking 42 [msec cputime] 45 [msec walltime]
+reasoning 18 [msec cputime] 20 [msec walltime]
+2020-02-26T13:20:02.269Z in=184 out=3 ent=3 step=3 brake=2 inf=263740 sec=0.101 inf/sec=2611287
+
+eye gps-plugin_modified.n3 knowledge.n3 component-level-steps.n3 NewSteps.n3 --query Goal_personalInformation.n3 --nope
+EYE v20.0225.2300 josd
+SWI-Prolog version 8.0.3
+starting 57 [msec cputime] 64 [msec walltime]
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/gps-plugin_modified.n3 SC=16
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/knowledge.n3 SC=2
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/component-level-steps.n3 SC=17
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/NewSteps.n3 SC=158
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/Goal_personalInformation.n3 SC=1
+networking 64 [msec cputime] 71 [msec walltime]
