@@ -10,7 +10,7 @@
 
 @prefix state: <https://example.org/ns/example#> .
 @prefix shape: <https://example.org/ns/example#> .
-@prefix step: <https://example.org/ns/example#> .
+@prefix step: <base/steps#> .
 
 #Journey level steps
 #provide personal details

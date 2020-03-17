@@ -21,7 +21,7 @@
         "journey_moving": {
             "description": "journey moving",
             "inference": {
-                "data": ["./demo/interim/selectedSteps_Journey.n3", "./demo/oslo-descriptions/change-address-steps.ttl", "./demo/profile/*", "./demo/workflow-composer/gps-plugin_modified.n3"],
+                "data": ["./demo/interim/selectedSteps_Journey.n3", "./demo/oslo-descriptions/change-address-steps.ttl", "./demo/profile/*", "./demo/workflow-composer/gps-plugin_modified_noPermutations.n3"],
                 "query": "./demo/journey/journeyGoal.n3"
             }
         },
@@ -47,7 +47,7 @@
             }
         },
          "component_personalInfo": {
-            "description": "component level paths for personal info - there is still no container level for that, this will be added",
+            "description": "component level paths for personal info (there is still no container level for that, this will be added)",
             "inference": {
                 "data": ["./demo/profile/*", "./demo/workflow-composer/gps-plugin_modified_noPermutations.n3",  "./demo/oslo-descriptions/change-address-steps.ttl",   "./demo/interim/selectedSteps_personalInfo.n3"],
                 "query": "./demo/interim/goal_personalInformation.n3"

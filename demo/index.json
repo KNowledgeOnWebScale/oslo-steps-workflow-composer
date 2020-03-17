@@ -21,7 +21,7 @@
         "journey_moving": {
             "description": "journey moving",
             "inference": {
-                "data": ["./demo/interim/selectedSteps_Journey.n3", "./demo/oslo-descriptions/change-address-steps.ttl", "./demo/profile/*", "./demo/workflow-composer/gps-plugin_modified.n3"],
+                "data": ["./demo/interim/selectedSteps_Journey.n3", "./demo/oslo-descriptions/change-address-steps.ttl", "./demo/profile/*", "./demo/workflow-composer/gps-plugin_modified_noPermutations.n3"],
                 "query": "./demo/journey/journeyGoal.n3"
             }
         },
@@ -44,6 +44,20 @@
             "inference": {
                 "data": ["./demo/profile/*", "./demo/workflow-composer/gps-plugin_modified_noPermutations.n3", "./demo/interim/extraRule_police.n3", "./demo/subgoals/aux2.n3", "./demo/interim/selectedSteps_policevisit.n3", "./demo/oslo-descriptions/change-address-steps.ttl"],
                 "query": "./demo/interim/createdGoal_police.n3"
+            }
+        },
+         "component_personalInfo": {
+            "description": "component level paths for personal info (there is still no container level for that, this will be added)",
+            "inference": {
+                "data": ["./demo/profile/*", "./demo/workflow-composer/gps-plugin_modified_noPermutations.n3",  "./demo/oslo-descriptions/change-address-steps.ttl",   "./demo/interim/selectedSteps_personalInfo.n3"],
+                "query": "./demo/interim/goal_personalInformation.n3"
+            }
+        },
+         "component_movingData": {
+            "description": "component level paths for moving data (there is still no container level for that, this will be added)",
+            "inference": {
+                "data": ["./demo/profile/*", "./demo/workflow-composer/gps-plugin_modified_noPermutations.n3",  "./demo/oslo-descriptions/change-address-steps.ttl",   "./demo/interim/selectedSteps_movingData.n3"],
+                "query": "./demo/interim/Goal_provideMovingData.n3"
             }
         }
     }    
