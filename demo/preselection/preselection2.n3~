@@ -1,0 +1,87 @@
+
+PREFIX math: <http://www.w3.org/2000/10/swap/math#>
+PREFIX list: <http://www.w3.org/2000/10/swap/list#>
+PREFIX log: <http://www.w3.org/2000/10/swap/log#>
+PREFIX e: <http://eulersharp.sourceforge.net/2003/03swap/log-rules#>
+PREFIX gps: <http://josd.github.io/eye/reasoning/gps/gps-schema#>
+PREFIX plan: <http://https://github.com/doerthe/plan#>
+PREFIX :  <http://example.org#>
+
+
+{
+[] e:trace "here".
+
+{
+    ?SCOPE gps:findpath ?k # (?Goal ?PATH ?DURATION ?COST ?BELIEF ?COMFORT ?list).
+} => ?head.
+
+[] e:trace "here".
+
+
+?ll a :ShortDescription.
+
+?ll log:equalTo {?t1 ?action ?t2}.
+
+?Goal e:graphList ?glist.
+
+?l list:in ?glist.  
+?l :reliesOn ?t2.
+}
+=>
+{:keep :action ?action}.
+
+
+
+#include reasoning rules.
+{
+:keep :action ?action.
+?ll a :ShortDescription.
+?ll log:equalTo {?t1 ?action ?t2}.
+
+
+
+
+?lll a :ShortDescription.
+?lll log:equalTo {?t11 ?action2 ?t22}.
+
+
+
+#?l log:equalTo {?s ?p ?o}.
+?t1 :reliesOnChain ?t22.
+#?to2 log:includes {?s ?p ?o}.
+}
+=>
+{
+:keep :action ?action2
+}.
+
+{?l :reliesOnChain ?tol.}<={?l log:equalTo ?tol.}.
+
+
+{?l :reliesOnChain ?tol.}
+<=
+{
+?l :reliesOn ?tol.
+("!") e:derive true.
+}.
+
+{?a :reliesOnChain ?c.}
+<=
+{
+?a :reliesOn ?b.
+?b :reliesOnChain ?c.
+}.
+
+
+
+
+
+
+
+
+
+
+
+
+
+

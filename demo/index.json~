@@ -1,0 +1,57 @@
+{
+    "@context": {
+        "@vocab": "http://www.example.org#"
+    },
+    "features": {
+                  "journey-level-steps": {
+           "description": "creation of the journal level steps described in internal reasoning format",
+           "inference": {
+               "data": [ "./demo/oslo-descriptions/*", "./demo/translation/step-reasoning.n3", "./demo/translation/aux.n3", "./demo/translation/createPattern.n3" ],
+               "query" : "./demo/translation/mappingRuleCreationJourney.n3",
+               "eye:flags" : "--no-skolem http://josd.github.io/.well-known/genid/"
+            }
+        },
+        "shortJourneyDescriptions" : {
+             "description" : "To preselect steps based on a goal, we need shart descriptions of all steps",
+             "inference" : {
+                 "data" : ["./demo/interim/journey-level-steps.n3", "./demo/profile/*"],
+                 "query" : "./demo/preselection/pregeneration.n3"
+            }
+        },
+        "journey_moving": {
+            "description": "journey moving",
+            "inference": {
+                "data": ["./demo/interim/selectedSteps_Journey.n3", "./demo/oslo-descriptions/change-address-steps.ttl", "./demo/profile/*", "./demo/workflow-composer/gps-plugin_modified.n3"],
+                "query": "./demo/journey/journeyGoal.n3"
+            }
+        },
+           "container_waste": {
+            "description": "container level paths for waste collection",
+            "inference": {
+                "data": ["./demo/profile/*", "./demo/workflow-composer/gps-plugin_modified_noPermutations.n3", "./demo/interim/extraRule_waste.n3", "./demo/subgoals/aux2.n3", "./demo/interim/selectedSteps_waste.n3", "./demo/oslo-descriptions/change-address-steps.ttl"],
+                "query": "./demo/interim/createdGoal_Waste.n3"
+            }
+        },
+           "container_addressChange": {
+            "description": "container level paths for address change",
+            "inference": {
+                "data": ["./demo/profile/*", "./demo/workflow-composer/gps-plugin_modified_noPermutations.n3", "./demo/interim/extraRule_addresschange.n3", "./demo/subgoals/aux2.n3", "./demo/interim/selectedSteps_addresschange.n3", "./demo/oslo-descriptions/change-address-steps.ttl"],
+                "query": "./demo/interim/createdGoal_address.n3"
+            }
+        },
+         "component_addressChange": {
+            "description": "component level paths for address change",
+            "inference": {
+                "data": ["./demo/profile/*", "./demo/workflow-composer/gps-plugin_modified_noPermutations.n3", "./demo/interim/extraRule_police.n3", "./demo/subgoals/aux2.n3", "./demo/interim/selectedSteps_policevisit.n3", "./demo/oslo-descriptions/change-address-steps.ttl"],
+                "query": "./demo/interim/createdGoal_police.n3"
+            }
+        },
+         "component_personalInfo": {
+            "description": "component level paths for personal info - there is still no container level for that, this will be added",
+            "inference": {
+                "data": ["./demo/profile/*", "./demo/workflow-composer/gps-plugin_modified_noPermutations.n3",  "./demo/oslo-descriptions/change-address-steps.ttl",   "./demo/interim/selectedSteps_personalInfo.n3"],
+                "query": "./demo/interim/goal_personalInformation.n3"
+            }
+        }
+    }    
+}

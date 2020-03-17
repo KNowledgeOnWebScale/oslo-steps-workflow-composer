@@ -1,0 +1,40 @@
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX p-plan: <http://purl.org/net/p-plan#>
+PREFIX o-address: <https://data.vlaanderen.be/ns/adres#>
+PREFIX o-steps: <https://example.org/ns/oslo-steps#>
+PREFIX ex: <https://example.org/ns/example#>
+PREFIX var: <https://example.org/ns/var#>
+PREFIX log: <http://www.w3.org/2000/10/swap/log#>
+PREFIX e: <http://eulersharp.sourceforge.net/2003/03swap/log-rules#>
+PREFIX gps: <http://josd.github.io/eye/reasoning/gps/gps-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX list: <http://www.w3.org/2000/10/swap/list#>
+@prefix math: <http://www.w3.org/2000/10/swap/math#>.
+@prefix : <https://example.org/ns/example#> .
+
+{
+() :separate (?a ?a ?b ?b)
+}
+<=
+{
+}.
+
+{
+?outlist :separate (?a ?aresult  ?b ?bresult)
+}
+<=
+{
+?outlist rdf:first ?f.
+?outlist rdf:rest ?r.
+
+
+?f log:equalTo (?first ?second).
+
+
+(?a (?first)) list:append ?a1.
+(?b (?second)) list:append ?b1.
+
+
+
+?r :separate (?a1 ?aresult ?b1 ?bresult)
+}.
