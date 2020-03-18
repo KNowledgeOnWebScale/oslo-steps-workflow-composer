@@ -25,14 +25,14 @@
                 "query": "./demo/journey/journeyGoal.n3"
             }
         },
-           "container_waste": {
+           "container_submitWasteInfo": {
             "description": "container level paths for waste collection",
             "inference": {
                 "data": ["./demo/profile/*", "./demo/workflow-composer/gps-plugin_modified_noPermutations.n3", "./demo/interim/extraRule_waste.n3", "./demo/subgoals/aux2.n3", "./demo/interim/selectedSteps_waste.n3", "./demo/oslo-descriptions/change-address-steps.ttl"],
                 "query": "./demo/interim/createdGoal_Waste.n3"
             }
         },
-           "container_addressChange": {
+           "container_changeAddress": {
             "description": "container level paths for address change",
             "inference": {
                 "data": ["./demo/profile/*", "./demo/workflow-composer/gps-plugin_modified_noPermutations.n3", "./demo/interim/extraRule_addresschange.n3", "./demo/subgoals/aux2.n3", "./demo/interim/selectedSteps_addresschange.n3", "./demo/oslo-descriptions/change-address-steps.ttl"],
@@ -51,6 +51,13 @@
             "inference": {
                 "data": ["./demo/profile/*", "./demo/workflow-composer/gps-plugin_modified_noPermutations.n3",  "./demo/oslo-descriptions/change-address-steps.ttl",   "./demo/interim/selectedSteps_personalInfo.n3"],
                 "query": "./demo/interim/goal_personalInformation.n3"
+            }
+        },
+         "component_movingData": {
+            "description": "component level paths for moving data (there is still no container level for that, this will be added)",
+            "inference": {
+                "data": ["./demo/profile/*", "./demo/workflow-composer/gps-plugin_modified_noPermutations.n3",  "./demo/oslo-descriptions/change-address-steps.ttl",   "./demo/interim/selectedSteps_movingData.n3"],
+                "query": "./demo/interim/Goal_provideMovingData.n3"
             }
         }
     }    

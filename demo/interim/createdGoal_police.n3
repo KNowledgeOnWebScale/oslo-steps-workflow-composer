@@ -1,14 +1,16 @@
 #Processed by EYE v20.0313.1435 josd
-#eye selected_Policevisit.n3 container-level-steps.n3 --query subgoalCreation.n3 --nope --no-skolem http://josd.github.io/.well-known/genid/
+#eye choices/selected_Policevisit.n3 interim/container-level-steps.n3 --query subgoals/subgoalCreation.n3 --nope --no-skolem http://josd.github.io/.well-known/genid/
 
-@prefix step: <file:///media/doerthe/4EC6F987C6F97017/store/FAST/base/steps#>.
+@prefix step: <https://fast.ilabt.imec.be/api/v5/steps#>.
 @prefix : <http://example.org#>.
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
 @prefix o-address: <https://data.vlaanderen.be/ns/adres#>.
 @prefix o-steps: <https://fast.ilabt.imec.be/ns/oslo-steps/0.2#>.
 @prefix xl: <http://www.w3.org/2008/05/skos-xl#>.
-@prefix state: <https://example.org/ns/example#>.
+@prefix state: <https://fast.ilabt.imec.be/api/v5/states#>.
+@prefix shape: <https://fast.ilabt.imec.be/api/v5/shapes#>.
 @prefix p-plan: <http://purl.org/net/p-plan#>.
+@prefix ex: <https://example.org/ns/example#>.
 @prefix foaf: <http://xmlns.com/foaf/0.1/>.
 @prefix sh: <http://www.w3.org/ns/shacl#>.
 @prefix schema: <https://schema.org/>.
@@ -26,10 +28,10 @@
 @prefix math: <http://www.w3.org/2000/10/swap/math#>.
 @prefix oslo: <https://example.org/ns/oslo#>.
 @prefix ns2: <http://josd.github.io/.well-known/genid/pP7dSETOSHCTU6bSn:iLn_1X3mg#>.
-@prefix ns3: <http://josd.github.io/.well-known/genid/0vVUITDz21FSQOAiY1GDpkj6HPk#>.
+@prefix ns3: <http://josd.github.io/.well-known/genid/2yIgoWMn1LZi4MXbGzxifsiheUc#>.
 
-{?t_0 gps:findpath ({?U_0 state:confirmationOfAddressChange true} ?t_1 ?t_2 ?t_3 ?t_4 ?t_5 (10 10 0.2 0.2))} => {_:t_6 gps:path (?t_1 ?t_2 ?t_3 ?t_4 ?t_5)}.
+{?t_0 gps:findpath ({?U_0 ex:confirmationOfAddressChange true} ?t_1 ?t_2 ?t_3 ?t_4 ?t_5 (10 10 0.2 0.2))} => {_:t_6 gps:path (?t_1 ?t_2 ?t_3 ?t_4 ?t_5)}.
 
-#2020-03-16T22:32:24.152Z in=8 out=1 ent=1 step=1 brake=1 inf=78966 sec=0.073 inf/sec=1081726
+#2020-03-18T17:37:06.320Z in=8 out=1 ent=1 step=1 brake=1 inf=78016 sec=0.074 inf/sec=1054270
 #ENDS
 

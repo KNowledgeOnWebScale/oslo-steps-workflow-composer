@@ -1,13 +1,15 @@
 #Processed by EYE v20.0313.1435 josd
-#eye container-level-steps.n3 shortContainerDescriptions.n3 createdGoal_Waste.n3 Preselection/preselection.n3 knowledge.n3 --nope --query Preselection/prequery.n3
+#eye interim/container-level-steps.n3 interim/shortContainerDescriptions.n3 interim/createdGoal_Waste.n3 preselection/preselection.n3 profile/knowledge.n3 --nope --query preselection/prequery.n3
 
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
 @prefix o-address: <https://data.vlaanderen.be/ns/adres#>.
 @prefix o-steps: <https://fast.ilabt.imec.be/ns/oslo-steps/0.2#>.
 @prefix xl: <http://www.w3.org/2008/05/skos-xl#>.
-@prefix state: <https://example.org/ns/example#>.
-@prefix step: <https://example.org/ns/example#>.
+@prefix state: <https://fast.ilabt.imec.be/api/v5/states#>.
+@prefix shape: <https://fast.ilabt.imec.be/api/v5/shapes#>.
+@prefix step: <https://fast.ilabt.imec.be/api/v5/steps#>.
 @prefix p-plan: <http://purl.org/net/p-plan#>.
+@prefix ex: <https://example.org/ns/example#>.
 @prefix foaf: <http://xmlns.com/foaf/0.1/>.
 @prefix sh: <http://www.w3.org/ns/shacl#>.
 @prefix schema: <https://schema.org/>.
@@ -25,16 +27,16 @@
 @prefix math: <http://www.w3.org/2000/10/swap/math#>.
 @prefix oslo: <https://example.org/ns/oslo#>.
 @prefix ns2: <http://josd.github.io/.well-known/genid/pP7dSETOSHCTU6bSn:iLn_1X3mg#>.
-@prefix ns3: <http://josd.github.io/.well-known/genid/0vVUITDz21FSQOAiY1GDpkj6HPk#>.
+@prefix ns3: <http://josd.github.io/.well-known/genid/2yIgoWMn1LZi4MXbGzxifsiheUc#>.
 @prefix : <http://example.org#>.
-@prefix ns4: <http://josd.github.io/.well-known/genid/1rtmsrC87RSrw0YqllBd51GFdZc#>.
+@prefix ns4: <http://josd.github.io/.well-known/genid/171pZ4fvJfFizc13VMjzNpDv_iQ#>.
 @prefix plan: <http://https://github.com/doerthe/plan#>.
 
-{state:movemap gps:description (true true {?U_95 state:wasteCollectionRequested true} step:submitWasteCollectionContainerLevel 10 10 0.9 0.9)} <= {?U_95 a o-persoon:Inwoner. ?U_95 state:lockNededForGreenWasteContainer ?U_96. ?U_95 state:lockNededForGreyWasteContainer ?U_97. ?U_95 state:movingAddress ?U_98. ?U_95 state:movingCity ?U_99. ?U_95 state:movingDate ?U_100. ?U_95 state:needForGreenWasteContainer ?U_101. ?U_95 state:numberOfRequested1100LiterPaperWasteContainers ?U_102. ?U_95 state:numberOfRequested120LiterGreenWasteContainers ?U_103. ?U_95 state:numberOfRequested120LiterGreyWasteContainers ?U_104. ?U_95 state:numberOfRequested240LiterGreyWasteContainers ?U_105. ?U_95 state:numberOfRequested240LiterPaperWasteContainers ?U_106. ?U_95 state:numberOfRequested40LiterGreenWasteContainers ?U_107. ?U_95 state:numberOfRequested40LiterGreyWasteContainers ?U_108. ?U_95 state:numberOfRequested40LiterPaperWasteContainers ?U_109. ?U_95 state:stopGreeWasteContainer ?U_110. ?U_95 o-persoon:heeftVerblijfplaats ?U_111. ?U_111 o-persoon:verblijfsadres ?U_112}.
-{state:movemap gps:description (true true {?U_113 state:lockNededForGreyWasteContainer ?U_114. ?U_113 state:numberOfRequested120LiterGreyWasteContainers ?U_115. ?U_113 state:numberOfRequested240LiterGreyWasteContainers ?U_116. ?U_113 state:numberOfRequested40LiterGreyWasteContainers ?U_117} step:provideGreyWasteContainerInfo 10 10 0.9 0.9)} <= {(?U_113 state:lockNededForGreyWasteContainer) e:skolem ?U_114. (?U_113 state:numberOfRequested120LiterGreyWasteContainers) e:skolem ?U_115. (?U_113 state:numberOfRequested240LiterGreyWasteContainers) e:skolem ?U_116. (?U_113 state:numberOfRequested40LiterGreyWasteContainers) e:skolem ?U_117. ?U_113 a o-persoon:Inwoner}.
-{state:movemap gps:description (true true {?U_118 state:lockNededForGreenWasteContainer ?U_119. ?U_118 state:needForGreenWasteContainer ?U_120. ?U_118 state:numberOfRequested120LiterGreenWasteContainers ?U_121. ?U_118 state:numberOfRequested40LiterGreenWasteContainers ?U_122. ?U_118 state:stopGreeWasteContainer ?U_123} step:provideGreenWasteContainerInfo 10 10 0.9 0.9)} <= {(?U_118 state:lockNededForGreenWasteContainer) e:skolem ?U_119. (?U_118 state:needForGreenWasteContainer) e:skolem ?U_120. (?U_118 state:numberOfRequested120LiterGreenWasteContainers) e:skolem ?U_121. (?U_118 state:numberOfRequested40LiterGreenWasteContainers) e:skolem ?U_122. (?U_118 state:stopGreeWasteContainer) e:skolem ?U_123. ?U_118 a o-persoon:Inwoner}.
-{state:movemap gps:description (true true {?U_124 state:numberOfRequested1100LiterPaperWasteContainers ?U_125. ?U_124 state:numberOfRequested240LiterPaperWasteContainers ?U_126. ?U_124 state:numberOfRequested40LiterPaperWasteContainers ?U_127} step:providePaperWasteContainerInfo 10 10 0.9 0.9)} <= {(?U_124 state:numberOfRequested1100LiterPaperWasteContainers) e:skolem ?U_125. (?U_124 state:numberOfRequested240LiterPaperWasteContainers) e:skolem ?U_126. (?U_124 state:numberOfRequested40LiterPaperWasteContainers) e:skolem ?U_127. ?U_124 a o-persoon:Inwoner}.
+{ex:movemap gps:description (true true {?U_90 ex:wasteCollectionRequested true} step:submitWasteCollectionContainerLevel 10 10 0.9 0.9)} <= {?U_90 a o-persoon:Inwoner. ?U_90 ex:lockNededForGreenWasteContainer ?U_91. ?U_90 ex:lockNededForGreyWasteContainer ?U_92. ?U_90 ex:movingAddress ?U_93. ?U_90 ex:movingCity ?U_94. ?U_90 ex:movingDate ?U_95. ?U_90 ex:needForGreenWasteContainer ?U_96. ?U_90 ex:numberOfRequested1100LiterPaperWasteContainers ?U_97. ?U_90 ex:numberOfRequested120LiterGreenWasteContainers ?U_98. ?U_90 ex:numberOfRequested120LiterGreyWasteContainers ?U_99. ?U_90 ex:numberOfRequested240LiterGreyWasteContainers ?U_100. ?U_90 ex:numberOfRequested240LiterPaperWasteContainers ?U_101. ?U_90 ex:numberOfRequested40LiterGreenWasteContainers ?U_102. ?U_90 ex:numberOfRequested40LiterGreyWasteContainers ?U_103. ?U_90 ex:numberOfRequested40LiterPaperWasteContainers ?U_104. ?U_90 o-persoon:heeftVerblijfplaats ?U_105. ?U_105 o-persoon:verblijfsadres ?U_106}.
+{ex:movemap gps:description (true true {?U_107 ex:lockNededForGreyWasteContainer ?U_108. ?U_107 ex:numberOfRequested120LiterGreyWasteContainers ?U_109. ?U_107 ex:numberOfRequested240LiterGreyWasteContainers ?U_110. ?U_107 ex:numberOfRequested40LiterGreyWasteContainers ?U_111} step:provideGreyWasteContainerInfo 10 10 0.9 0.9)} <= {(?U_107 ex:lockNededForGreyWasteContainer) e:skolem ?U_108. (?U_107 ex:numberOfRequested120LiterGreyWasteContainers) e:skolem ?U_109. (?U_107 ex:numberOfRequested240LiterGreyWasteContainers) e:skolem ?U_110. (?U_107 ex:numberOfRequested40LiterGreyWasteContainers) e:skolem ?U_111. ?U_107 a o-persoon:Inwoner}.
+{ex:movemap gps:description (true true {?U_112 ex:lockNededForGreenWasteContainer ?U_113. ?U_112 ex:needForGreenWasteContainer ?U_114. ?U_112 ex:numberOfRequested120LiterGreenWasteContainers ?U_115. ?U_112 ex:numberOfRequested40LiterGreenWasteContainers ?U_116} step:provideGreenWasteContainerInfo 10 10 0.9 0.9)} <= {(?U_112 ex:lockNededForGreenWasteContainer) e:skolem ?U_113. (?U_112 ex:needForGreenWasteContainer) e:skolem ?U_114. (?U_112 ex:numberOfRequested120LiterGreenWasteContainers) e:skolem ?U_115. (?U_112 ex:numberOfRequested40LiterGreenWasteContainers) e:skolem ?U_116. ?U_112 a o-persoon:Inwoner}.
+{ex:movemap gps:description (true true {?U_117 ex:numberOfRequested1100LiterPaperWasteContainers ?U_118. ?U_117 ex:numberOfRequested240LiterPaperWasteContainers ?U_119. ?U_117 ex:numberOfRequested40LiterPaperWasteContainers ?U_120} step:providePaperWasteContainerInfo 10 10 0.9 0.9)} <= {(?U_117 ex:numberOfRequested1100LiterPaperWasteContainers) e:skolem ?U_118. (?U_117 ex:numberOfRequested240LiterPaperWasteContainers) e:skolem ?U_119. (?U_117 ex:numberOfRequested40LiterPaperWasteContainers) e:skolem ?U_120. ?U_117 a o-persoon:Inwoner}.
 
-#2020-03-16T22:32:22.575Z in=86 out=4 ent=8 step=34 brake=2 inf=427839 sec=0.149 inf/sec=2871403
+#2020-03-18T17:37:04.699Z in=84 out=4 ent=8 step=32 brake=2 inf=409120 sec=0.137 inf/sec=2986277
 #ENDS
 

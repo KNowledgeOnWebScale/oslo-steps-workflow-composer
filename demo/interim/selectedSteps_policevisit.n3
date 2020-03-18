@@ -1,13 +1,15 @@
 #Processed by EYE v20.0313.1435 josd
-#eye component-level-steps.n3 shortComponentDescriptions.n3 createdGoal_police.n3 Preselection/preselection.n3 knowledge.n3 --nope --query Preselection/prequery.n3
+#eye interim/component-level-steps.n3 interim/shortComponentDescriptions.n3 interim/createdGoal_police.n3 preselection/preselection.n3 profile/knowledge.n3 --nope --query preselection/prequery.n3
 
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
 @prefix o-address: <https://data.vlaanderen.be/ns/adres#>.
 @prefix o-steps: <https://fast.ilabt.imec.be/ns/oslo-steps/0.2#>.
 @prefix xl: <http://www.w3.org/2008/05/skos-xl#>.
-@prefix state: <https://example.org/ns/example#>.
-@prefix step: <https://example.org/ns/example#>.
+@prefix state: <https://fast.ilabt.imec.be/api/v5/states#>.
+@prefix shape: <https://fast.ilabt.imec.be/api/v5/shapes#>.
+@prefix step: <https://fast.ilabt.imec.be/api/v5/steps#>.
 @prefix p-plan: <http://purl.org/net/p-plan#>.
+@prefix ex: <https://example.org/ns/example#>.
 @prefix foaf: <http://xmlns.com/foaf/0.1/>.
 @prefix sh: <http://www.w3.org/ns/shacl#>.
 @prefix schema: <https://schema.org/>.
@@ -25,28 +27,28 @@
 @prefix math: <http://www.w3.org/2000/10/swap/math#>.
 @prefix oslo: <https://example.org/ns/oslo#>.
 @prefix ns2: <http://josd.github.io/.well-known/genid/pP7dSETOSHCTU6bSn:iLn_1X3mg#>.
-@prefix ns3: <http://josd.github.io/.well-known/genid/SqOFJcB05Brhm4YsThZWxHK2No8#>.
+@prefix ns3: <http://josd.github.io/.well-known/genid/aoyNzxmz7ATV26CpOkh__QP:zoM#>.
 @prefix : <http://example.org#>.
-@prefix ns4: <http://josd.github.io/.well-known/genid/0vVUITDz21FSQOAiY1GDpkj6HPk#>.
+@prefix ns4: <http://josd.github.io/.well-known/genid/2yIgoWMn1LZi4MXbGzxifsiheUc#>.
 @prefix plan: <http://https://github.com/doerthe/plan#>.
 
-{state:movemap gps:description (true true {?U_62 state:confirmationOfAddressChange true} step:getPolicevisit 1 1 0.97 0.97)} <= {?U_62 a o-persoon:Inwoner. ?U_62 state:policeVisitRequested true}.
-{state:movemap gps:description (true true {?U_63 state:policeVisitRequested true} step:requestPoliceVisit 1 1 0.97 0.97)} <= {?U_63 a o-persoon:Inwoner. ?U_63 foaf:familyName ?U_64. ?U_63 foaf:givenName ?U_65. ?U_63 state:availabilityInfo ?U_66. ?U_63 state:movingAddress ?U_67. ?U_63 state:movingCity ?U_68. ?U_63 state:movingDate ?U_69. ?U_63 state:nationalNumber ?U_70. ?U_63 state:providedFamilyInformation true. ?U_63 schema:hasOccupation ?U_71. ?U_72 o-persoon:datum ?U_73. ?U_63 o-persoon:heeftGeboorte ?U_72. ?U_63 o-persoon:heeftGeboorte ?U_74. ?U_74 o-persoon:plaats ?U_75. ?U_63 schema:contactPoint ?U_76. ?U_63 schema:contactPoint ?U_77. ?U_76 schema:contactType "gsm". ?U_77 schema:contactType "telephone". ?U_76 schema:telephone ?U_78. ?U_77 schema:telephone ?U_79}.
-{state:movemap gps:description (true true {?U_80 state:familyMember ?U_81} step:provideDataOfFamilyMembers 1 1 0.97 0.97)} <= {(?U_80 state:familyMember) e:skolem ?U_81. ?U_80 a o-persoon:Inwoner}.
-{state:movemap gps:description (true true {?U_82 state:numberOfFamilyMembers ?U_83} step:provideNumberOfFamilyMembersManually 1 1 0.97 0.97)} <= {(?U_82 state:numberOfFamilyMembers) e:skolem ?U_83. ?U_82 a o-persoon:Inwoner}.
-{state:movemap gps:description (true true {?U_316 state:availabilityInfo ?U_317} step:provideAvailability 1 1 0.97 0.97)} <= {(?U_316 state:availabilityInfo) e:skolem ?U_317. ?U_316 a o-persoon:Inwoner}.
-{state:movemap gps:description (true true {?U_318 foaf:givenName ?U_319} step:provideCitizenFirstNameManually 1 1 0.97 0.97)} <= {(?U_318 foaf:givenName) e:skolem ?U_319. ?U_318 a o-persoon:Inwoner}.
-{state:movemap gps:description (true true {?U_320 foaf:familyName ?U_321} step:provideCitizenLastNameManually 1 1 0.97 0.97)} <= {(?U_320 foaf:familyName) e:skolem ?U_321. ?U_320 a o-persoon:Inwoner}.
-{state:movemap gps:description (true true {?U_322 schema:contactPoint ?U_323. ?U_323 schema:contactType "gsm". ?U_323 schema:telephone ?U_324} step:provideCitizenMobilePhoneNumberManually 1 1 0.97 0.97)} <= {(?U_322 schema:contactPoint schema:contactType "gsm") e:skolem ?U_323. (?U_322 schema:contactPoint schema:contactType "gsm" schema:telephone) e:skolem ?U_324. ?U_322 a o-persoon:Inwoner}.
-{state:movemap gps:description (true true {?U_325 schema:contactPoint ?U_326. ?U_326 schema:contactType "telephone". ?U_326 schema:telephone ?U_327} step:provideCitizenPhoneNumberManually 1 1 0.97 0.97)} <= {(?U_325 schema:contactPoint schema:contactType "telephone") e:skolem ?U_326. (?U_325 schema:contactPoint schema:contactType "telephone" schema:telephone) e:skolem ?U_327. ?U_325 a o-persoon:Inwoner}.
-{state:movemap gps:description (true true {?U_328 state:nationalNumber ?U_329} step:provideCitizenNationalNumberManually 1 1 0.97 0.97)} <= {(?U_328 state:nationalNumber) e:skolem ?U_329. ?U_328 a o-persoon:Inwoner}.
-{state:movemap gps:description (true true {?U_330 o-persoon:datum ?U_331. ?U_332 o-persoon:heeftGeboorte ?U_330} step:provideCitizenBirthDateManually 1 1 0.97 0.97)} <= {(?U_330 o-persoon:datum) e:skolem ?U_331. (?U_332 o-persoon:heeftGeboorte) e:skolem ?U_330. ?U_332 a o-persoon:Inwoner}.
-{state:movemap gps:description (true true {?U_333 o-persoon:heeftGeboorte ?U_334. ?U_334 o-persoon:plaats ?U_335} step:provideCitizenBirthPlaceManually 1 1 0.97 0.97)} <= {(?U_334 o-persoon:plaats) e:skolem ?U_335. (?U_333 o-persoon:heeftGeboorte) e:skolem ?U_334. ?U_333 a o-persoon:Inwoner}.
-{state:movemap gps:description (true true {?U_336 schema:hasOccupation ?U_337} step:provideCitizenProfessionManually 1 1 0.97 0.97)} <= {(?U_336 schema:hasOccupation) e:skolem ?U_337. ?U_336 a o-persoon:Inwoner}.
-{state:movemap gps:description (true true {?U_338 state:movingDate ?U_339} step:provideMovingDateManually 1 1 0.97 0.97)} <= {(?U_338 state:movingDate) e:skolem ?U_339. ?U_338 a o-persoon:Inwoner}.
-{state:movemap gps:description (true true {?U_340 state:movingCity ?U_341} step:provideMovingCityManually 1 1 0.97 0.97)} <= {(?U_340 state:movingCity) e:skolem ?U_341. ?U_340 a o-persoon:Inwoner}.
-{state:movemap gps:description (true true {?U_342 state:movingAddress ?U_343} step:provideMovingAddressManually 1 1 0.97 0.97)} <= {(?U_342 state:movingAddress) e:skolem ?U_343. ?U_342 a o-persoon:Inwoner}.
+{ex:movemap gps:description (true true {?U_62 ex:confirmationOfAddressChange true} step:getPolicevisit 1 1 0.97 0.97)} <= {?U_62 a o-persoon:Inwoner. ?U_62 ex:policeVisitRequested true}.
+{ex:movemap gps:description (true true {?U_63 ex:policeVisitRequested true} step:requestPoliceVisit 1 1 0.97 0.97)} <= {?U_63 a o-persoon:Inwoner. ?U_63 foaf:familyName ?U_64. ?U_63 foaf:givenName ?U_65. ?U_63 ex:availabilityInfo ?U_66. ?U_63 ex:movingAddress ?U_67. ?U_63 ex:movingCity ?U_68. ?U_63 ex:movingDate ?U_69. ?U_63 ex:nationalNumber ?U_70. ?U_63 ex:providedFamilyInformation true. ?U_63 schema:hasOccupation ?U_71. ?U_72 o-persoon:datum ?U_73. ?U_63 o-persoon:heeftGeboorte ?U_72. ?U_63 o-persoon:heeftGeboorte ?U_74. ?U_74 o-persoon:plaats ?U_75. ?U_63 schema:contactPoint ?U_76. ?U_63 schema:contactPoint ?U_77. ?U_76 schema:contactType "gsm". ?U_77 schema:contactType "telephone". ?U_76 schema:telephone ?U_78. ?U_77 schema:telephone ?U_79}.
+{ex:movemap gps:description (true true {?U_80 ex:familyMember ?U_81} step:provideDataOfFamilyMembers 1 1 0.97 0.97)} <= {(?U_80 ex:familyMember) e:skolem ?U_81. ?U_80 a o-persoon:Inwoner}.
+{ex:movemap gps:description (true true {?U_82 ex:numberOfFamilyMembers ?U_83} step:provideNumberOfFamilyMembersManually 1 1 0.97 0.97)} <= {(?U_82 ex:numberOfFamilyMembers) e:skolem ?U_83. ?U_82 a o-persoon:Inwoner}.
+{ex:movemap gps:description (true true {?U_316 ex:availabilityInfo ?U_317} step:provideAvailability 1 1 0.97 0.97)} <= {(?U_316 ex:availabilityInfo) e:skolem ?U_317. ?U_316 a o-persoon:Inwoner}.
+{ex:movemap gps:description (true true {?U_318 foaf:givenName ?U_319} step:provideCitizenFirstNameManually 1 1 0.97 0.97)} <= {(?U_318 foaf:givenName) e:skolem ?U_319. ?U_318 a o-persoon:Inwoner}.
+{ex:movemap gps:description (true true {?U_320 foaf:familyName ?U_321} step:provideCitizenLastNameManually 1 1 0.97 0.97)} <= {(?U_320 foaf:familyName) e:skolem ?U_321. ?U_320 a o-persoon:Inwoner}.
+{ex:movemap gps:description (true true {?U_322 schema:contactPoint ?U_323. ?U_323 schema:contactType "gsm". ?U_323 schema:telephone ?U_324} step:provideCitizenMobilePhoneNumberManually 1 1 0.97 0.97)} <= {(?U_322 schema:contactPoint schema:contactType "gsm") e:skolem ?U_323. (?U_322 schema:contactPoint schema:contactType "gsm" schema:telephone) e:skolem ?U_324. ?U_322 a o-persoon:Inwoner}.
+{ex:movemap gps:description (true true {?U_325 schema:contactPoint ?U_326. ?U_326 schema:contactType "telephone". ?U_326 schema:telephone ?U_327} step:provideCitizenPhoneNumberManually 1 1 0.97 0.97)} <= {(?U_325 schema:contactPoint schema:contactType "telephone") e:skolem ?U_326. (?U_325 schema:contactPoint schema:contactType "telephone" schema:telephone) e:skolem ?U_327. ?U_325 a o-persoon:Inwoner}.
+{ex:movemap gps:description (true true {?U_328 ex:nationalNumber ?U_329} step:provideCitizenNationalNumberManually 1 1 0.97 0.97)} <= {(?U_328 ex:nationalNumber) e:skolem ?U_329. ?U_328 a o-persoon:Inwoner}.
+{ex:movemap gps:description (true true {?U_330 o-persoon:datum ?U_331. ?U_332 o-persoon:heeftGeboorte ?U_330} step:provideCitizenBirthDateManually 1 1 0.97 0.97)} <= {(?U_330 o-persoon:datum) e:skolem ?U_331. (?U_332 o-persoon:heeftGeboorte) e:skolem ?U_330. ?U_332 a o-persoon:Inwoner}.
+{ex:movemap gps:description (true true {?U_333 o-persoon:heeftGeboorte ?U_334. ?U_334 o-persoon:plaats ?U_335} step:provideCitizenBirthPlaceManually 1 1 0.97 0.97)} <= {(?U_334 o-persoon:plaats) e:skolem ?U_335. (?U_333 o-persoon:heeftGeboorte) e:skolem ?U_334. ?U_333 a o-persoon:Inwoner}.
+{ex:movemap gps:description (true true {?U_336 schema:hasOccupation ?U_337} step:provideCitizenProfessionManually 1 1 0.97 0.97)} <= {(?U_336 schema:hasOccupation) e:skolem ?U_337. ?U_336 a o-persoon:Inwoner}.
+{ex:movemap gps:description (true true {?U_338 ex:movingDate ?U_339} step:provideMovingDateManually 1 1 0.97 0.97)} <= {(?U_338 ex:movingDate) e:skolem ?U_339. ?U_338 a o-persoon:Inwoner}.
+{ex:movemap gps:description (true true {?U_340 ex:movingCity ?U_341} step:provideMovingCityManually 1 1 0.97 0.97)} <= {(?U_340 ex:movingCity) e:skolem ?U_341. ?U_340 a o-persoon:Inwoner}.
+{ex:movemap gps:description (true true {?U_342 ex:movingAddress ?U_343} step:provideMovingAddressManually 1 1 0.97 0.97)} <= {(?U_342 ex:movingAddress) e:skolem ?U_343. ?U_342 a o-persoon:Inwoner}.
 
-#2020-03-16T22:32:24.690Z in=131 out=16 ent=32 step=96 brake=3 inf=718001 sec=0.209 inf/sec=3435411
+#2020-03-18T17:37:06.843Z in=131 out=16 ent=32 step=96 brake=3 inf=718528 sec=0.200 inf/sec=3592640
 #ENDS
 
