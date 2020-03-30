@@ -1,5 +1,5 @@
 #Processed by EYE v20.0313.1435 josd
-#eye workflow-composer/gps-plugin_modified_noPermutations.n3 profile/knowledge.n3 interim/extraRule_police.n3 subgoals/aux2.n3 interim/selectedSteps_policevisit.n3 oslo-descriptions/change-address-steps.ttl --query interim/createdGoal_police.n3 --nope
+#eye workflow-composer/gps-plugin_modified_noPermutations.n3 profile/knowledge.n3 interim/extraRule_addressChangeInOffice.n3 subgoals/aux2.n3 interim/selectedSteps_addressChangeInOffice.n3 oslo-descriptions/change-address-steps.ttl --query interim/createdGoal_addressChangeInOffice.n3 --nope
 
 @prefix math: <http://www.w3.org/2000/10/swap/math#>.
 @prefix list: <http://www.w3.org/2000/10/swap/list#>.
@@ -31,10 +31,10 @@
 @prefix ns3: <http://josd.github.io/.well-known/genid/4I20Sw6M0w5UrPqii:NvR:OmTLE#>.
 @prefix ns4: <http://josd.github.io/.well-known/genid/yEN8ZyZ0SPTFzzs:GEskirSt5ng#>.
 @prefix plan: <http://https://github.com/doerthe/plan#>.
-@prefix ns5: <http://josd.github.io/.well-known/genid/fNiR_9Q5DxRjp84jfkTzBeHtHPw#>.
+@prefix ns5: <http://josd.github.io/.well-known/genid/rsdLnGUEAeYIl:V9Cyfk0M6wE88#>.
 
-_:sk_33 gps:path ((("unorderedList" (step:provideDataOfFamilyMembers step:provideNumberOfFamilyMembersManually step:provideAvailability)) step:requestPoliceVisit step:getPolicevisit) 5.0 5.0 0.8587340256999999 0.8587340256999999).
+_:sk_3 gps:path ((step:makeAppointmentForAddressChange step:visitOfficeForAddressChange) 2.0 2.0 0.9409 0.9409).
 
-#2020-03-30T14:57:42.568Z in=298 out=1 ent=19 step=3 brake=4 inf=384176 sec=0.112 inf/sec=3430143
+#2020-03-30T14:57:43.518Z in=295 out=1 ent=3 step=4 brake=4 inf=325669 sec=0.100 inf/sec=3256690
 #ENDS
 

@@ -81,6 +81,17 @@ step:addressChangeOnEIDInOffice a o-steps:ContainerLevelStep ;
   o-steps:producesState state:addressChangedOnEID  .
 
 
+step:makeAppointmentForAddressChange a o-steps:ComponentLevelStep ;
+  o-steps:requiresState
+    state:addressChangeConfirmed;
+  o-steps:producesState state:appointmentMade  .
+
+step:visitOfficeForAddressChange a o-steps:ComponentLevelStep ;
+  o-steps:requiresState
+    state:appointmentMade ;
+  o-steps:producesState state:addressChangedOnEID  .
+
+
                         
 #submit waste info
 step:submitWasteInfo a o-steps:JourneyLevelStep ;

@@ -600,6 +600,14 @@ shape:addressChangeOnEIDExistence a sh:PropertyShape ;
   sh:path ex:addressChanged;
   sh:hasValue true .
 
+shape:appointmentShape a o-steps:StateShape ;
+  sh:targetClass o-persoon:Inwoner ;
+  sh:property shape:appointmentExistence .
+
+shape:appointmentExistence a sh:PropertyShape ;
+  sh:path ex:hasAppointmentDate;
+  sh:minCount 1 .
+
 shape:wasteCollection a o-steps:StateShape ;
   sh:targetClass o-persoon:Inwoner ;
   sh:property shape:wasteCollectionRequestValue .

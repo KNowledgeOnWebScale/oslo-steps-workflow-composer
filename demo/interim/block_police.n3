@@ -1,5 +1,5 @@
 #Processed by EYE v20.0313.1435 josd
-#eye choices/selected_AddressSubmission.n3 interim/journey-level-steps.n3 --query subgoals/subgoalCreation.n3 --nope --no-skolem http://josd.github.io/.well-known/genid/
+#eye choices/selected_Policevisit.n3 interim/container-level-steps.n3 --query subgoals/creationOfBlockingInfo.n3 --nope
 
 @prefix step: <https://fast.ilabt.imec.be/api/v5/steps#>.
 @prefix : <http://example.org#>.
@@ -28,10 +28,27 @@
 @prefix math: <http://www.w3.org/2000/10/swap/math#>.
 @prefix oslo: <https://example.org/ns/oslo#>.
 @prefix ns2: <http://josd.github.io/.well-known/genid/pP7dSETOSHCTU6bSn:iLn_1X3mg#>.
-@prefix ns3: <http://josd.github.io/.well-known/genid/nUXS00i:WLYGtzWF8DrATWJdxAE#>.
+@prefix ns3: <http://josd.github.io/.well-known/genid/4I20Sw6M0w5UrPqii:NvR:OmTLE#>.
 
-{?t_0 gps:findpath ({?U_0 ex:addressChanged true} ?t_1 ?t_2 ?t_3 ?t_4 ?t_5 (100 100 0.2 0.2))} => {_:t_6 gps:path (?t_1 ?t_2 ?t_3 ?t_4 ?t_5)}.
+{_:sk_0 a o-persoon:Inwoner} :inInputRule true.
+{_:sk_0 foaf:familyName _:sk_1} :inInputRule true.
+{_:sk_0 foaf:givenName _:sk_2} :inInputRule true.
+{_:sk_8 o-persoon:datum _:sk_9} :inInputRule true.
+{_:sk_0 o-persoon:heeftGeboorte _:sk_10} :inInputRule true.
+{_:sk_0 o-persoon:heeftGeboorte _:sk_8} :inInputRule true.
+{_:sk_10 o-persoon:plaats _:sk_11} :inInputRule true.
+{_:sk_0 ex:movingAddress _:sk_3} :inInputRule true.
+{_:sk_0 ex:movingCity _:sk_4} :inInputRule true.
+{_:sk_0 ex:movingDate _:sk_5} :inInputRule true.
+{_:sk_0 ex:nationalNumber _:sk_6} :inInputRule true.
+{_:sk_0 schema:contactPoint _:sk_12} :inInputRule true.
+{_:sk_0 schema:contactPoint _:sk_13} :inInputRule true.
+{_:sk_12 schema:contactType "gsm"} :inInputRule true.
+{_:sk_13 schema:contactType "telephone"} :inInputRule true.
+{_:sk_0 schema:hasOccupation _:sk_7} :inInputRule true.
+{_:sk_12 schema:telephone _:sk_14} :inInputRule true.
+{_:sk_13 schema:telephone _:sk_15} :inInputRule true.
 
-#2020-03-30T14:57:40.535Z in=6 out=1 ent=1 step=1 brake=1 inf=73062 sec=0.040 inf/sec=1826550
+#2020-03-30T14:57:42.052Z in=8 out=18 ent=18 step=18 brake=1 inf=102402 sec=0.058 inf/sec=1765552
 #ENDS
 

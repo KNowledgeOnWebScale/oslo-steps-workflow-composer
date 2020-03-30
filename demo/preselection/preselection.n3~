@@ -9,14 +9,13 @@ PREFIX :  <http://example.org#>
 
 {
 
-_:x e:trace 11.
 
 {
     ?SCOPE gps:findpath (?Goal ?PATH ?DURATION ?COST ?BELIEF ?COMFORT ?list).
 } => ?head.
 
 
-_:x e:trace 1.
+
 
 ?ll a :ShortDescription.
 
@@ -28,8 +27,15 @@ _:x e:trace 1.
 
 ?l log:equalTo {?s ?p ?o}.
 
+
+
+#this here is a special extension for the use case
+?l :inputCheck true.
+
+
+
 ?to log:includes {?s ?p ?o}.
-_:x e:trace "trace".
+
 }
 =>
 {:keep :action ?action}.
@@ -37,6 +43,9 @@ _:x e:trace "trace".
 
 {
 :keep :action ?action.
+
+
+
 ?ll a :ShortDescription.
 ?ll log:equalTo {?extendedFrom ?action ?to}.
 
@@ -51,6 +60,11 @@ _:x e:trace "trace".
 ?extendedFrom e:graphList ?glist.
 ?l list:in ?glist.  
 ?l log:equalTo {?s ?p ?o}.
+#this here is a special extension for the use case
+?l :inputCheck true.
+
+
+
 ?to2 log:includes {?s ?p ?o}.
 }
 =>
@@ -79,7 +93,12 @@ _:x e:trace "trace".
 ?to2 e:graphList ?toglist.
 ?tol list:in ?toglist.
 
-#?l log:equalTo {?s ?p ?o}.
+?l log:equalTo {?s ?p ?o}.
+
+#this here is a special extension for the use case
+?l :inputCheck true.
+
+
 ?l :reliesOnChain ?tol.
 #?to2 log:includes {?s ?p ?o}.
 }
@@ -100,6 +119,12 @@ _:x e:trace "trace".
 <=
 {
 ?a :reliesOn ?b.
+
+
+
+#this here is a special extension for the use case
+?a :inputCheck true.
+
 ?b :reliesOnChain ?c.
 }.
 
@@ -123,6 +148,11 @@ _:x e:trace "trace".
 
 
 
+
+
+#this here is a special extension for the use case
+?l :inputCheck true.
+
 ?l :reliesOnChain ?l2.
 
 
@@ -134,6 +164,16 @@ _:x e:trace "trace".
 
 
 
+{?x :inputCheck true.}<=
+{
+?x :inInputRule true.
+?x log:equalTo {?s ?p ?o}.
+_:x e:trace ({?s ?p ?o} "worked").
+("!") e:derive true.
+("fail") e:derive true.
+}.
+
+{?x :inputCheck true.}<={}.
 
 
 

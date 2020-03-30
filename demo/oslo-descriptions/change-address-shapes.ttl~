@@ -9,13 +9,11 @@
 @prefix o-steps: <https://fast.ilabt.imec.be/ns/oslo-steps/0.2#> .
 @prefix o-persoon: <https://data.vlaanderen.be/ns/persoon#> .
 
-#@prefix state: <{{base}}/states#> .
-#@prefix shape: <{{base}}/shapes#> .
-#@prefix step: <{{base}}/steps#> .
+@prefix state: <https://fast.ilabt.imec.be/api/v5/states#> .
+@prefix shape: <https://fast.ilabt.imec.be/api/v5/shapes#> .
+@prefix step: <https://fast.ilabt.imec.be/api/v5/steps#> .
 
-@prefix state: <https://example.org/ns/example#> .
-@prefix shape: <https://example.org/ns/example#> .
-@prefix step: <https://example.org/ns/example#> .
+
 
 
 
@@ -600,6 +598,14 @@ shape:addressChangeOnEIDShape a o-steps:StateShape ;
 
 shape:addressChangeOnEIDExistence a sh:PropertyShape ;
   sh:path ex:addressChanged;
+  sh:hasValue true .
+
+shape:appointmentShape a o-steps:StateShape ;
+  sh:targetClass o-persoon:Inwoner ;
+  sh:property shape:appointmentExistence .
+
+shape:appointmentExistence a sh:PropertyShape ;
+  sh:path ex:hasAppointmentDate;
   sh:hasValue true .
 
 shape:wasteCollection a o-steps:StateShape ;

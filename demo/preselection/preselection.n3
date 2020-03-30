@@ -27,6 +27,13 @@ PREFIX :  <http://example.org#>
 
 ?l log:equalTo {?s ?p ?o}.
 
+
+
+#this here is a special extension for the use case
+?l :inputCheck true.
+
+
+
 ?to log:includes {?s ?p ?o}.
 
 }
@@ -36,6 +43,9 @@ PREFIX :  <http://example.org#>
 
 {
 :keep :action ?action.
+
+
+
 ?ll a :ShortDescription.
 ?ll log:equalTo {?extendedFrom ?action ?to}.
 
@@ -50,6 +60,11 @@ PREFIX :  <http://example.org#>
 ?extendedFrom e:graphList ?glist.
 ?l list:in ?glist.  
 ?l log:equalTo {?s ?p ?o}.
+#this here is a special extension for the use case
+?l :inputCheck true.
+
+
+
 ?to2 log:includes {?s ?p ?o}.
 }
 =>
@@ -78,7 +93,12 @@ PREFIX :  <http://example.org#>
 ?to2 e:graphList ?toglist.
 ?tol list:in ?toglist.
 
-#?l log:equalTo {?s ?p ?o}.
+?l log:equalTo {?s ?p ?o}.
+
+#this here is a special extension for the use case
+?l :inputCheck true.
+
+
 ?l :reliesOnChain ?tol.
 #?to2 log:includes {?s ?p ?o}.
 }
@@ -99,6 +119,12 @@ PREFIX :  <http://example.org#>
 <=
 {
 ?a :reliesOn ?b.
+
+
+
+#this here is a special extension for the use case
+?a :inputCheck true.
+
 ?b :reliesOnChain ?c.
 }.
 
@@ -122,6 +148,11 @@ PREFIX :  <http://example.org#>
 
 
 
+
+
+#this here is a special extension for the use case
+?l :inputCheck true.
+
 ?l :reliesOnChain ?l2.
 
 
@@ -133,6 +164,16 @@ PREFIX :  <http://example.org#>
 
 
 
+{?x :inputCheck true.}<=
+{
+?x :inInputRule true.
+?x log:equalTo {?s ?p ?o}.
+
+("!") e:derive true.
+("fail") e:derive true.
+}.
+
+{?x :inputCheck true.}<={}.
 
 
 

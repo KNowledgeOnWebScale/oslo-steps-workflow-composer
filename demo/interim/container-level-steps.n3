@@ -27,7 +27,7 @@
 @prefix math: <http://www.w3.org/2000/10/swap/math#>.
 @prefix oslo: <https://example.org/ns/oslo#>.
 @prefix ns2: <http://josd.github.io/.well-known/genid/pP7dSETOSHCTU6bSn:iLn_1X3mg#>.
-@prefix ns3: <http://josd.github.io/.well-known/genid/2yIgoWMn1LZi4MXbGzxifsiheUc#>.
+@prefix ns3: <http://josd.github.io/.well-known/genid/4I20Sw6M0w5UrPqii:NvR:OmTLE#>.
 
 {ex:movemap gps:description (true true {?t_6 ex:confirmationOfAddressChange true} step:confirmAddressChangeVisit 10 10 0.9 0.9)} <= {?t_6 a o-persoon:Inwoner. ?t_6 foaf:familyName ?U_5. ?t_6 foaf:givenName ?U_4. ?t_6 ex:movingAddress ?U_13. ?t_6 ex:movingCity ?U_15. ?t_6 ex:movingDate ?U_12. ?t_6 ex:nationalNumber ?U_8. ?t_6 schema:hasOccupation ?U_10. ?t_7 o-persoon:datum ?t_8. ?t_6 o-persoon:heeftGeboorte ?t_7. ?t_6 o-persoon:heeftGeboorte ?t_9. ?t_9 o-persoon:plaats ?t_10. ?t_6 schema:contactPoint ?U_0. ?t_6 schema:contactPoint ?U_2. ?U_0 schema:contactType "gsm". ?U_2 schema:contactType "telephone". ?U_0 schema:telephone ?U_1. ?U_2 schema:telephone ?U_3}.
 {ex:movemap gps:description (true true {?t_6 ex:addressChanged true} step:addressChangeOnEIDInOffice 10 10 0.9 0.9)} <= {?t_6 a o-persoon:Inwoner. ?t_6 ex:confirmationOfAddressChange true}.
@@ -36,6 +36,6 @@
 {ex:movemap gps:description (true true {?t_6 ex:lockNededForGreenWasteContainer ?U_22. ?t_6 ex:needForGreenWasteContainer ?U_23. ?t_6 ex:numberOfRequested120LiterGreenWasteContainers ?U_21. ?t_6 ex:numberOfRequested40LiterGreenWasteContainers ?U_20} step:provideGreenWasteContainerInfo 10 10 0.9 0.9)} <= {(?t_6 ex:lockNededForGreenWasteContainer) e:skolem ?U_22. (?t_6 ex:needForGreenWasteContainer) e:skolem ?U_23. (?t_6 ex:numberOfRequested120LiterGreenWasteContainers) e:skolem ?U_21. (?t_6 ex:numberOfRequested40LiterGreenWasteContainers) e:skolem ?U_20. ?t_6 a o-persoon:Inwoner}.
 {ex:movemap gps:description (true true {?t_6 ex:numberOfRequested1100LiterPaperWasteContainers ?U_27. ?t_6 ex:numberOfRequested240LiterPaperWasteContainers ?U_26. ?t_6 ex:numberOfRequested40LiterPaperWasteContainers ?U_25} step:providePaperWasteContainerInfo 10 10 0.9 0.9)} <= {(?t_6 ex:numberOfRequested1100LiterPaperWasteContainers) e:skolem ?U_27. (?t_6 ex:numberOfRequested240LiterPaperWasteContainers) e:skolem ?U_26. (?t_6 ex:numberOfRequested40LiterPaperWasteContainers) e:skolem ?U_25. ?t_6 a o-persoon:Inwoner}.
 
-#2020-03-18T17:37:02.468Z in=948 out=6 ent=80 step=392 brake=4 inf=741523 sec=0.189 inf/sec=3923402
+#2020-03-30T14:57:38.022Z in=962 out=6 ent=83 step=404 brake=4 inf=749062 sec=0.166 inf/sec=4512422
 #ENDS
 

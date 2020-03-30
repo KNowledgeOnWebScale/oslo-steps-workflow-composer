@@ -1,0 +1,68 @@
+#Processed by EYE v20.0313.1435 josd
+#eye workflow-composer/gps-plugin_modified_noPermutations.n3 profile/knowledge.n3 interim/extraRule_addressChangeInOffice.n3 subgoals/aux2.n3 interim/selectedSteps_addressChangeInOffice.n3 oslo-descriptions/change-address-steps.ttl --query interim/createdGoal_addressChangeInOffice.n3 --nope
+
+@prefix math: <http://www.w3.org/2000/10/swap/math#>.
+@prefix list: <http://www.w3.org/2000/10/swap/list#>.
+@prefix log: <http://www.w3.org/2000/10/swap/log#>.
+@prefix e: <http://eulersharp.sourceforge.net/2003/03swap/log-rules#>.
+@prefix gps: <http://josd.github.io/eye/reasoning/gps/gps-schema#>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
+@prefix o-steps: <https://fast.ilabt.imec.be/ns/oslo-steps/0.2#>.
+@prefix : <http://example.org#>.
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix p-plan: <http://purl.org/net/p-plan#>.
+@prefix o-address: <https://data.vlaanderen.be/ns/adres#>.
+@prefix ex: <https://example.org/ns/example#>.
+@prefix xl: <http://www.w3.org/2008/05/skos-xl#>.
+@prefix o-persoon: <https://data.vlaanderen.be/ns/persoon#>.
+@prefix foaf: <http://xmlns.com/foaf/0.1/>.
+@prefix schema: <https://schema.org/>.
+@prefix step: <https://fast.ilabt.imec.be/api/v5/steps#>.
+@prefix state: <https://fast.ilabt.imec.be/api/v5/states#>.
+@prefix shape: <https://fast.ilabt.imec.be/api/v5/shapes#>.
+@prefix sh: <http://www.w3.org/ns/shacl#>.
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
+@prefix skos: <http://www.w3.org/2004/02/skos/core#>.
+@prefix ops: <https://data.vlaanderen.be/shacl/persoon-basis#>.
+@prefix ns1: <https://example.org/ns/oslo-steps#>.
+@prefix var: <https://example.org/ns/var#>.
+@prefix oslo: <https://example.org/ns/oslo#>.
+@prefix ns2: <http://josd.github.io/.well-known/genid/pP7dSETOSHCTU6bSn:iLn_1X3mg#>.
+@prefix ns3: <http://josd.github.io/.well-known/genid/8rBleFg1KP7P3jFgnBKaFgGNDsQ#>.
+@prefix ns4: <http://josd.github.io/.well-known/genid/p3oPEFAlWY3KoMRP26MIg0PgUsg#>.
+@prefix plan: <http://https://github.com/doerthe/plan#>.
+@prefix ns5: <http://josd.github.io/.well-known/genid/k4iu3gLRovVprIBFczwqBt4H2Zk#>.
+
+_:sk_3 gps:path ((step:makeAppointmentForAddressChange step:visitOfficeForAddressChange) 2.0 2.0 0.9409 0.9409).
+_:sk_4 gps:path ((step:makeAppointmentForAddressChange ("unorderedList" (step:provideDataOfFamilyMembers)) step:visitOfficeForAddressChange) 3.0 3.0 0.912673 0.912673).
+_:sk_5 gps:path ((step:makeAppointmentForAddressChange ("unorderedList" (step:provideNumberOfFamilyMembersManually)) step:visitOfficeForAddressChange) 3.0 3.0 0.912673 0.912673).
+_:sk_6 gps:path ((step:makeAppointmentForAddressChange ("unorderedList" (step:provideAvailability)) step:visitOfficeForAddressChange) 3.0 3.0 0.912673 0.912673).
+_:sk_7 gps:path ((step:makeAppointmentForAddressChange ("unorderedList" (step:provideCitizenFirstNameManually)) step:visitOfficeForAddressChange) 3.0 3.0 0.912673 0.912673).
+_:sk_8 gps:path ((step:makeAppointmentForAddressChange ("unorderedList" (step:provideCitizenLastNameManually)) step:visitOfficeForAddressChange) 3.0 3.0 0.912673 0.912673).
+_:sk_9 gps:path ((step:makeAppointmentForAddressChange ("unorderedList" (step:provideCitizenMobilePhoneNumberManually)) step:visitOfficeForAddressChange) 3.0 3.0 0.912673 0.912673).
+_:sk_10 gps:path ((step:makeAppointmentForAddressChange ("unorderedList" (step:provideCitizenPhoneNumberManually)) step:visitOfficeForAddressChange) 3.0 3.0 0.912673 0.912673).
+_:sk_11 gps:path ((step:makeAppointmentForAddressChange ("unorderedList" (step:provideCitizenNationalNumberManually)) step:visitOfficeForAddressChange) 3.0 3.0 0.912673 0.912673).
+_:sk_12 gps:path ((step:makeAppointmentForAddressChange ("unorderedList" (step:provideCitizenBirthDateManually)) step:visitOfficeForAddressChange) 3.0 3.0 0.912673 0.912673).
+_:sk_13 gps:path ((step:makeAppointmentForAddressChange ("unorderedList" (step:provideCitizenBirthPlaceManually)) step:visitOfficeForAddressChange) 3.0 3.0 0.912673 0.912673).
+_:sk_14 gps:path ((step:makeAppointmentForAddressChange ("unorderedList" (step:provideCitizenProfessionManually)) step:visitOfficeForAddressChange) 3.0 3.0 0.912673 0.912673).
+_:sk_15 gps:path ((step:makeAppointmentForAddressChange ("unorderedList" (step:provideMovingDateManually)) step:visitOfficeForAddressChange) 3.0 3.0 0.912673 0.912673).
+_:sk_16 gps:path ((step:makeAppointmentForAddressChange ("unorderedList" (step:provideMovingCityManually)) step:visitOfficeForAddressChange) 3.0 3.0 0.912673 0.912673).
+_:sk_17 gps:path ((step:makeAppointmentForAddressChange ("unorderedList" (step:provideMovingAddressManually)) step:visitOfficeForAddressChange) 3.0 3.0 0.912673 0.912673).
+_:sk_18 gps:path ((("unorderedList" (step:provideDataOfFamilyMembers)) step:makeAppointmentForAddressChange step:visitOfficeForAddressChange) 3.0 3.0 0.912673 0.912673).
+_:sk_19 gps:path ((("unorderedList" (step:provideNumberOfFamilyMembersManually)) step:makeAppointmentForAddressChange step:visitOfficeForAddressChange) 3.0 3.0 0.912673 0.912673).
+_:sk_20 gps:path ((("unorderedList" (step:provideAvailability)) step:makeAppointmentForAddressChange step:visitOfficeForAddressChange) 3.0 3.0 0.912673 0.912673).
+_:sk_21 gps:path ((("unorderedList" (step:provideCitizenFirstNameManually)) step:makeAppointmentForAddressChange step:visitOfficeForAddressChange) 3.0 3.0 0.912673 0.912673).
+_:sk_22 gps:path ((("unorderedList" (step:provideCitizenLastNameManually)) step:makeAppointmentForAddressChange step:visitOfficeForAddressChange) 3.0 3.0 0.912673 0.912673).
+_:sk_23 gps:path ((("unorderedList" (step:provideCitizenMobilePhoneNumberManually)) step:makeAppointmentForAddressChange step:visitOfficeForAddressChange) 3.0 3.0 0.912673 0.912673).
+_:sk_24 gps:path ((("unorderedList" (step:provideCitizenPhoneNumberManually)) step:makeAppointmentForAddressChange step:visitOfficeForAddressChange) 3.0 3.0 0.912673 0.912673).
+_:sk_25 gps:path ((("unorderedList" (step:provideCitizenNationalNumberManually)) step:makeAppointmentForAddressChange step:visitOfficeForAddressChange) 3.0 3.0 0.912673 0.912673).
+_:sk_26 gps:path ((("unorderedList" (step:provideCitizenBirthDateManually)) step:makeAppointmentForAddressChange step:visitOfficeForAddressChange) 3.0 3.0 0.912673 0.912673).
+_:sk_27 gps:path ((("unorderedList" (step:provideCitizenBirthPlaceManually)) step:makeAppointmentForAddressChange step:visitOfficeForAddressChange) 3.0 3.0 0.912673 0.912673).
+_:sk_28 gps:path ((("unorderedList" (step:provideCitizenProfessionManually)) step:makeAppointmentForAddressChange step:visitOfficeForAddressChange) 3.0 3.0 0.912673 0.912673).
+_:sk_29 gps:path ((("unorderedList" (step:provideMovingDateManually)) step:makeAppointmentForAddressChange step:visitOfficeForAddressChange) 3.0 3.0 0.912673 0.912673).
+_:sk_30 gps:path ((("unorderedList" (step:provideMovingCityManually)) step:makeAppointmentForAddressChange step:visitOfficeForAddressChange) 3.0 3.0 0.912673 0.912673).
+_:sk_31 gps:path ((("unorderedList" (step:provideMovingAddressManually)) step:makeAppointmentForAddressChange step:visitOfficeForAddressChange) 3.0 3.0 0.912673 0.912673).
+
+#2020-03-30T09:58:52.169Z in=311 out=29 ent=31 step=32 brake=4 inf=432601280 sec=101.498 inf/sec=4262166
+#ENDS
+
