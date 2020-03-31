@@ -303,6 +303,13 @@ state:numberOf1100LiterPaperWasteContainers a o-steps:State ;
   o-steps:hasStateShape shape:number1100LiterPaperWasteContainerShape .
 
 #
+# show waste data to user
+#
+state:wasteInfoShownToUser a o-steps:State ;
+  o-steps:hasStateShape shape:wasteInfoShownShape .
+
+
+#
 # data regarding municipality
 #
 

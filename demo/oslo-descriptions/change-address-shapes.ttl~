@@ -511,10 +511,10 @@ shape:number240LiterGreyWasteContainerExistence a sh:PropertyShape ;
 
 shape:greyWasteContainerLockShape a o-steps:StateShape ;
   sh:targetClass o-persoon:Inwoner ;
-  sh:property shape:lockNededGreyWasteContainerExistence .
+  sh:property shape:lockNeededGreyWasteContainerExistence .
 
-shape:lockNededGreyWasteContainerExistence a sh:PropertyShape ;
-  sh:path ex:lockNededForGreyWasteContainer;
+shape:lockNeededGreyWasteContainerExistence a sh:PropertyShape ;
+  sh:path ex:lockNeededForGreyWasteContainer;
   sh:minCount 1 .
 
 shape:number40LiterGreenWasteContainerShape a o-steps:StateShape ;
@@ -535,10 +535,10 @@ shape:number120LiterGreenWasteContainerExistence a sh:PropertyShape ;
 
 shape:greenWasteContainerLockShape  a o-steps:StateShape ;
   sh:targetClass o-persoon:Inwoner ;
-  sh:property shape:lockNededGreenWasteContainerExistence .
+  sh:property shape:lockNeededGreenWasteContainerExistence .
 
-shape:lockNededGreenWasteContainerExistence a sh:PropertyShape ;
-  sh:path ex:lockNededForGreenWasteContainer;
+shape:lockNeededGreenWasteContainerExistence a sh:PropertyShape ;
+  sh:path ex:lockNeededForGreenWasteContainer;
   sh:minCount 1 .
 
 #todo: make a shortcut rule for "yes"
@@ -590,6 +590,14 @@ shape:number1100LiterPaperWasteContainerShape a o-steps:StateShape ;
 shape:number1100LiterPaperWasteContainerExistence a sh:PropertyShape ;
   sh:path ex:numberOfRequested1100LiterPaperWasteContainers;
   sh:minCount 1 .
+
+shape:wasteInfoShownShape a o-steps:StateShape ;
+  sh:targetClass o-persoon:Inwoner ;
+  sh:property shape:wasteInfoShown .
+
+shape:shape:wasteInfoShown a sh:PropertyShape ;
+  sh:path ex:wasteInfoShownToUser ;
+  sh:hasValue true .
 
 #Confirmation of address change
 shape:addressChangeConfirmedShape a o-steps:StateShape ;

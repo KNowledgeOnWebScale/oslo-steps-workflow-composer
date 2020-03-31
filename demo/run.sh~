@@ -155,9 +155,7 @@ eye interim/component-level-steps.n3 interim/shortComponentDescriptions.n3 inter
 #createPath
 eye workflow-composer/gps-plugin_modified_noPermutations.n3 profile/knowledge.n3 interim/extraRule_paperWaste.n3 subgoals/aux2.n3 interim/selectedSteps_paperWaste.n3 oslo-descriptions/change-address-steps.ttl --query interim/createdGoal_paperWaste.n3 --nope > interim/PaperWaste_noPermutation.n3
 
-
-
-#unifinished
+# TODO add to API
 
 #
 # Policevisit

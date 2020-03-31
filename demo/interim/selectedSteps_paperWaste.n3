@@ -27,15 +27,15 @@
 @prefix math: <http://www.w3.org/2000/10/swap/math#>.
 @prefix oslo: <https://example.org/ns/oslo#>.
 @prefix ns2: <http://josd.github.io/.well-known/genid/pP7dSETOSHCTU6bSn:iLn_1X3mg#>.
-@prefix ns3: <http://josd.github.io/.well-known/genid/Gxg0wWbCpZV0kxehf5GsD36Zrsg#>.
+@prefix ns3: <http://josd.github.io/.well-known/genid/R6UTffIY1rQS3OvnWjMF_ax_H3I#>.
 @prefix : <http://example.org#>.
-@prefix ns4: <http://josd.github.io/.well-known/genid/OrG:L_nDYymx8LgYBdmTuKpduUs#>.
+@prefix ns4: <http://josd.github.io/.well-known/genid/TTf2cdmH7U16PG1WCr1oynWkqMk#>.
 @prefix plan: <http://https://github.com/doerthe/plan#>.
 
 {ex:movemap gps:description (true true {?U_39 ex:numberOfRequested40LiterPaperWasteContainers ?U_40} step:provideNumberOf40LiterPaperWasteContainersManually 1 1 0.97 0.97)} <= {(?U_39 ex:numberOfRequested40LiterPaperWasteContainers) e:skolem ?U_40. ?U_39 a o-persoon:Inwoner}.
 {ex:movemap gps:description (true true {?U_41 ex:numberOfRequested240LiterPaperWasteContainers ?U_42} step:provideNumberOf240LiterPaperWasteContainersManually 1 1 0.97 0.97)} <= {(?U_41 ex:numberOfRequested240LiterPaperWasteContainers) e:skolem ?U_42. ?U_41 a o-persoon:Inwoner}.
 {ex:movemap gps:description (true true {?U_43 ex:numberOfRequested1100LiterPaperWasteContainers ?U_44} step:provideNumberOf1100LiterPaperWasteContainersManually 1 1 0.97 0.97)} <= {(?U_43 ex:numberOfRequested1100LiterPaperWasteContainers) e:skolem ?U_44. ?U_43 a o-persoon:Inwoner}.
 
-#2020-03-31T13:18:06.057Z in=201 out=3 ent=6 step=12 brake=2 inf=693924 sec=0.177 inf/sec=3920475
+#2020-03-31T14:22:46.594Z in=221 out=3 ent=6 step=12 brake=2 inf=757406 sec=0.152 inf/sec=4982934
 #ENDS
 

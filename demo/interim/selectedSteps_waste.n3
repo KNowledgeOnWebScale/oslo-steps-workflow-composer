@@ -27,9 +27,9 @@
 @prefix math: <http://www.w3.org/2000/10/swap/math#>.
 @prefix oslo: <https://example.org/ns/oslo#>.
 @prefix ns2: <http://josd.github.io/.well-known/genid/pP7dSETOSHCTU6bSn:iLn_1X3mg#>.
-@prefix ns3: <http://josd.github.io/.well-known/genid/OrG:L_nDYymx8LgYBdmTuKpduUs#>.
+@prefix ns3: <http://josd.github.io/.well-known/genid/TTf2cdmH7U16PG1WCr1oynWkqMk#>.
 @prefix : <http://example.org#>.
-@prefix ns4: <http://josd.github.io/.well-known/genid/q5atjp9bGBcjsbNosMdsVeD5T3I#>.
+@prefix ns4: <http://josd.github.io/.well-known/genid/l:_UGcpKRLnNbVKvnAQlUzz8ZfM#>.
 @prefix plan: <http://https://github.com/doerthe/plan#>.
 
 {ex:movemap gps:description (true true {?U_70 ex:wasteCollectionRequested true} step:submitWasteCollectionContainerLevel 10 10 0.9 0.9)} <= {?U_70 a o-persoon:Inwoner. ?U_70 ex:lockNeededForGreyWasteContainer ?U_71. ?U_70 ex:movingAddress ?U_72. ?U_70 ex:movingCity ?U_73. ?U_70 ex:movingDate ?U_74. ?U_70 ex:numberOfRequested1100LiterPaperWasteContainers ?U_75. ?U_70 ex:numberOfRequested120LiterGreyWasteContainers ?U_76. ?U_70 ex:numberOfRequested240LiterGreyWasteContainers ?U_77. ?U_70 ex:numberOfRequested240LiterPaperWasteContainers ?U_78. ?U_70 ex:numberOfRequested40LiterGreyWasteContainers ?U_79. ?U_70 ex:numberOfRequested40LiterPaperWasteContainers ?U_80. ?U_70 ex:providedGreenWasteInformation true. ?U_70 o-persoon:heeftVerblijfplaats ?U_81. ?U_81 o-persoon:verblijfsadres ?U_82}.
@@ -37,6 +37,6 @@
 {ex:movemap gps:description (true true {?U_88 ex:providedGreenWasteInformation true} step:provideGreenWasteContainerInfo 10 10 0.9 0.9)} <= {?U_88 a o-persoon:Inwoner}.
 {ex:movemap gps:description (true true {?U_89 ex:numberOfRequested1100LiterPaperWasteContainers ?U_90. ?U_89 ex:numberOfRequested240LiterPaperWasteContainers ?U_91. ?U_89 ex:numberOfRequested40LiterPaperWasteContainers ?U_92} step:providePaperWasteContainerInfo 10 10 0.9 0.9)} <= {(?U_89 ex:numberOfRequested1100LiterPaperWasteContainers) e:skolem ?U_90. (?U_89 ex:numberOfRequested240LiterPaperWasteContainers) e:skolem ?U_91. (?U_89 ex:numberOfRequested40LiterPaperWasteContainers) e:skolem ?U_92. ?U_89 a o-persoon:Inwoner}.
 
-#2020-03-31T13:18:01.880Z in=92 out=4 ent=8 step=26 brake=2 inf=396300 sec=0.098 inf/sec=4043878
+#2020-03-31T14:22:42.447Z in=92 out=4 ent=8 step=26 brake=2 inf=396281 sec=0.095 inf/sec=4171379
 #ENDS
 

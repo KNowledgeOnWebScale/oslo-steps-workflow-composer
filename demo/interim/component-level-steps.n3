@@ -27,7 +27,7 @@
 @prefix math: <http://www.w3.org/2000/10/swap/math#>.
 @prefix oslo: <https://example.org/ns/oslo#>.
 @prefix ns2: <http://josd.github.io/.well-known/genid/pP7dSETOSHCTU6bSn:iLn_1X3mg#>.
-@prefix ns3: <http://josd.github.io/.well-known/genid/Gxg0wWbCpZV0kxehf5GsD36Zrsg#>.
+@prefix ns3: <http://josd.github.io/.well-known/genid/R6UTffIY1rQS3OvnWjMF_ax_H3I#>.
 
 {ex:movemap gps:description (true true {?t_6 ex:hasAppointmentDate ?U_28} step:makeAppointmentForAddressChange 1 1 0.97 0.97)} <= {(?t_6 ex:hasAppointmentDate) e:skolem ?U_28. ?t_6 a o-persoon:Inwoner. ?t_6 ex:confirmationOfAddressChange true}.
 {ex:movemap gps:description (true true {?t_6 ex:addressChanged true} step:visitOfficeForAddressChange 1 1 0.97 0.97)} <= {?t_6 a o-persoon:Inwoner. ?t_6 ex:hasAppointmentDate ?U_28}.
@@ -65,7 +65,9 @@
 {ex:movemap gps:description (true true {?t_6 ex:numberOfRequested40LiterPaperWasteContainers ?U_25} step:provideNumberOf40LiterPaperWasteContainersManually 1 1 0.97 0.97)} <= {(?t_6 ex:numberOfRequested40LiterPaperWasteContainers) e:skolem ?U_25. ?t_6 a o-persoon:Inwoner}.
 {ex:movemap gps:description (true true {?t_6 ex:numberOfRequested240LiterPaperWasteContainers ?U_26} step:provideNumberOf240LiterPaperWasteContainersManually 1 1 0.97 0.97)} <= {(?t_6 ex:numberOfRequested240LiterPaperWasteContainers) e:skolem ?U_26. ?t_6 a o-persoon:Inwoner}.
 {ex:movemap gps:description (true true {?t_6 ex:numberOfRequested1100LiterPaperWasteContainers ?U_27} step:provideNumberOf1100LiterPaperWasteContainersManually 1 1 0.97 0.97)} <= {(?t_6 ex:numberOfRequested1100LiterPaperWasteContainers) e:skolem ?U_27. ?t_6 a o-persoon:Inwoner}.
+{ex:movemap gps:description (true true {?t_6 ex:wasteCollectionRequested true} step:submitWasteCollectionComponentLevel 1 1 0.97 0.97)} <= {?t_6 a o-persoon:Inwoner. ?t_6 ex:wasteInfoShownToUser true}.
+{ex:movemap gps:description (true true {?t_6 ex:wasteInfoShownToUser true} step:showWasteCollection 1 1 0.97 0.97)} <= {?t_6 a o-persoon:Inwoner. ?t_6 ex:lockNeededForGreyWasteContainer ?U_19. ?t_6 ex:movingAddress ?U_13. ?t_6 ex:movingCity ?U_15. ?t_6 ex:movingDate ?U_12. ?t_6 ex:numberOfRequested1100LiterPaperWasteContainers ?U_27. ?t_6 ex:numberOfRequested120LiterGreyWasteContainers ?U_17. ?t_6 ex:numberOfRequested240LiterGreyWasteContainers ?U_18. ?t_6 ex:numberOfRequested240LiterPaperWasteContainers ?U_26. ?t_6 ex:numberOfRequested40LiterGreyWasteContainers ?U_16. ?t_6 ex:numberOfRequested40LiterPaperWasteContainers ?U_25. ?t_6 ex:providedGreenWasteInformation true. ?t_6 o-persoon:heeftVerblijfplaats ?t_11. ?t_11 o-persoon:verblijfsadres ?t_12}.
 
-#2020-03-31T13:18:00.074Z in=1037 out=36 ent=126 step=432 brake=4 inf=801465 sec=0.157 inf/sec=5104873
+#2020-03-31T14:22:40.650Z in=1062 out=38 ent=131 step=448 brake=4 inf=827075 sec=0.170 inf/sec=4865147
 #ENDS
 

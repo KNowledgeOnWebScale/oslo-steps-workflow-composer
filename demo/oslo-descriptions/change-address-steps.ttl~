@@ -410,4 +410,54 @@ step:provideGreyWasteContainerLockInfoManually a o-steps:ComponentLevelStep ;
   o-steps:requiresState o-steps:emptyState ;
   o-steps:producesState state:greyWasteContainerLockInfo .
 
+step:provideNumberOf40LiterPaperWasteContainersManually a o-steps:ComponentLevelStep ;
+  rdfs:label "Number of 40 liter paper waste container(s)"@en ;
+  rdfs:label "Aantal 40 liter papier container(s)"@nl ;
+  rdfs:label "Anzahl Papiercontainer 40 liter"@de ;
+  o-steps:requiresState o-steps:emptyState ;
+  o-steps:producesState state:numberOf40LiterPaperWasteContainers .
+
+step:provideNumberOf240LiterPaperWasteContainersManually a o-steps:ComponentLevelStep ;
+  rdfs:label "Number of 240 liter paper waste container(s)"@en ;
+  rdfs:label "Aantal 240 liter papier container(s)"@nl ;
+  rdfs:label "Anzahl Papiercontainer 240 liter"@de ;
+  o-steps:requiresState o-steps:emptyState ;
+  o-steps:producesState state:numberOf240LiterPaperWasteContainers .
+
+step:provideNumberOf1100LiterPaperWasteContainersManually a o-steps:ComponentLevelStep ;
+  rdfs:label "Number of 1100 liter paper waste container(s)"@en ;
+  rdfs:label "Aantal 1100 liter papier container(s)"@nl ;
+  rdfs:label "Anzahl Papiercontainer 1100 liter"@de ;
+  o-steps:requiresState o-steps:emptyState ;
+  o-steps:producesState state:numberOf1100LiterPaperWasteContainers .
+
+step:submitWasteCollectionComponentLevel a o-steps:ComponentLevelStep ;
+  o-steps:producesState state:wasteCollectionRequested  ;
+  o-steps:requiresState state:wasteInfoShownToUser .
+
+step:showWasteCollection a o-steps:ComponentLevelStep ;
+  o-steps:producesState state:wasteInfoShownToUser  ;
+  o-steps:requiresState state:movingDate, 
+                        state:movingCity, 
+                        state:citizenAddress,
+                        state:movingAddress,
+    state:numberOf40LiterGreyWasteContainers ,
+    state:numberOf120LiterGreyWasteContainers ,
+    state:numberOf240LiterGreyWasteContainers ,
+    state:greyWasteContainerLockInfo,
+    state:greenWasteInfo,
+    state:numberOf40LiterPaperWasteContainers ,
+    state:numberOf240LiterPaperWasteContainers ,
+    state:numberOf1100LiterPaperWasteContainers 
+  .
+
+
+
+
+
+
+
+
+
+
 

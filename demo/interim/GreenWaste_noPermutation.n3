@@ -28,13 +28,13 @@
 @prefix var: <https://example.org/ns/var#>.
 @prefix oslo: <https://example.org/ns/oslo#>.
 @prefix ns2: <http://josd.github.io/.well-known/genid/pP7dSETOSHCTU6bSn:iLn_1X3mg#>.
-@prefix ns3: <http://josd.github.io/.well-known/genid/OrG:L_nDYymx8LgYBdmTuKpduUs#>.
-@prefix ns4: <http://josd.github.io/.well-known/genid/Gxg0wWbCpZV0kxehf5GsD36Zrsg#>.
+@prefix ns3: <http://josd.github.io/.well-known/genid/TTf2cdmH7U16PG1WCr1oynWkqMk#>.
+@prefix ns4: <http://josd.github.io/.well-known/genid/R6UTffIY1rQS3OvnWjMF_ax_H3I#>.
 @prefix plan: <http://https://github.com/doerthe/plan#>.
-@prefix ns5: <http://josd.github.io/.well-known/genid/fzBRxAyLuZ98KyMHJRJSQ_NwZ3A#>.
+@prefix ns5: <http://josd.github.io/.well-known/genid/aVd9rIj:Iv25wMYBjPBKQN:H7gw#>.
 
 _:sk_0 gps:path ((("unorderedList" (step:provideNumberOf40LiterGreenWasteContainersManually step:provideNumberOf120LiterGreenWasteContainersManually step:provideGreenWasteContainerCollectionStopInfoManually step:provideGreenWasteContainerLockInfoManually step:provideGreenWasteContainerOwnCompostInfoManually))) 5.0 5.0 0.8587340256999999 0.8587340256999999).
 
-#2020-03-31T13:18:04.270Z in=364 out=1 ent=1 step=3 brake=4 inf=507982 sec=0.130 inf/sec=3907554
+#2020-03-31T14:22:44.841Z in=381 out=1 ent=1 step=3 brake=4 inf=515319 sec=0.125 inf/sec=4122552
 #ENDS
 

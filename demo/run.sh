@@ -158,6 +158,29 @@ eye workflow-composer/gps-plugin_modified_noPermutations.n3 profile/knowledge.n3
 # TODO add to API
 
 #
+# Submit Waste Info
+#
+
+# create goal based on step name
+eye choices/selected_SubmitWasteInfo.n3 interim/container-level-steps.n3 --query subgoals/subgoalCreation.n3 --nope --no-skolem http://josd.github.io/.well-known/genid/ > interim/createdGoal_submitWasteInfo.n3
+
+# create rule to add input info for the step
+eye choices/selected_SubmitWasteInfo.n3 interim/container-level-steps.n3 --query subgoals/creationOfRuleForMissingData.n3 --nope >interim/extraRule_submitWasteInfo.n3
+
+# mark the triples which can be created by the extra rule to block them for step selection
+eye choices/selected_SubmitWasteInfo.n3 interim/container-level-steps.n3 --query subgoals/creationOfBlockingInfo.n3 --nope >interim/block_submitWasteInfo.n3
+
+#preselect
+eye interim/component-level-steps.n3 interim/shortComponentDescriptions.n3 interim/createdGoal_submitWasteInfo.n3 preselection/preselection.n3 profile/knowledge.n3 interim/block_submitWasteInfo.n3 --nope --query preselection/prequery.n3 >interim/selectedSteps_submitWasteInfo.n3
+
+#createPath
+eye workflow-composer/gps-plugin_modified_noPermutations.n3 profile/knowledge.n3 interim/extraRule_submitWasteInfo.n3 subgoals/aux2.n3 interim/selectedSteps_submitWasteInfo.n3 oslo-descriptions/change-address-steps.ttl --query interim/createdGoal_submitWasteInfo.n3 --nope > interim/SubmitWasteInfo_noPermutation.n3
+
+
+
+# Todo add link to all info used
+
+#
 # Policevisit
 #
 

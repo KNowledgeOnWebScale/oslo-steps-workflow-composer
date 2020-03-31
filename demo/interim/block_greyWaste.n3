@@ -28,7 +28,7 @@
 @prefix math: <http://www.w3.org/2000/10/swap/math#>.
 @prefix oslo: <https://example.org/ns/oslo#>.
 @prefix ns2: <http://josd.github.io/.well-known/genid/pP7dSETOSHCTU6bSn:iLn_1X3mg#>.
-@prefix ns3: <http://josd.github.io/.well-known/genid/OrG:L_nDYymx8LgYBdmTuKpduUs#>.
+@prefix ns3: <http://josd.github.io/.well-known/genid/TTf2cdmH7U16PG1WCr1oynWkqMk#>.
 
 {(_:sk_0 ex:lockNeededForGreyWasteContainer) e:skolem _:sk_1} :inInputRule true.
 {(_:sk_0 ex:numberOfRequested120LiterGreyWasteContainers) e:skolem _:sk_2} :inInputRule true.
@@ -36,6 +36,6 @@
 {(_:sk_0 ex:numberOfRequested40LiterGreyWasteContainers) e:skolem _:sk_4} :inInputRule true.
 {_:sk_0 a o-persoon:Inwoner} :inInputRule true.
 
-#2020-03-31T13:18:04.769Z in=8 out=5 ent=5 step=5 brake=1 inf=73732 sec=0.049 inf/sec=1504735
+#2020-03-31T14:22:45.330Z in=8 out=5 ent=5 step=5 brake=1 inf=73711 sec=0.046 inf/sec=1602413
 #ENDS
 

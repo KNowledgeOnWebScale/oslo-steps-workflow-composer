@@ -591,6 +591,14 @@ shape:number1100LiterPaperWasteContainerExistence a sh:PropertyShape ;
   sh:path ex:numberOfRequested1100LiterPaperWasteContainers;
   sh:minCount 1 .
 
+shape:wasteInfoShownShape a o-steps:StateShape ;
+  sh:targetClass o-persoon:Inwoner ;
+  sh:property shape:wasteInfoShown .
+
+shape:wasteInfoShown a sh:PropertyShape ;
+  sh:path ex:wasteInfoShownToUser ;
+  sh:hasValue true .
+
 #Confirmation of address change
 shape:addressChangeConfirmedShape a o-steps:StateShape ;
   sh:targetClass o-persoon:Inwoner ;

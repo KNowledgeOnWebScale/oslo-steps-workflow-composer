@@ -28,13 +28,13 @@
 @prefix var: <https://example.org/ns/var#>.
 @prefix oslo: <https://example.org/ns/oslo#>.
 @prefix ns2: <http://josd.github.io/.well-known/genid/pP7dSETOSHCTU6bSn:iLn_1X3mg#>.
-@prefix ns3: <http://josd.github.io/.well-known/genid/OrG:L_nDYymx8LgYBdmTuKpduUs#>.
-@prefix ns4: <http://josd.github.io/.well-known/genid/Gxg0wWbCpZV0kxehf5GsD36Zrsg#>.
+@prefix ns3: <http://josd.github.io/.well-known/genid/TTf2cdmH7U16PG1WCr1oynWkqMk#>.
+@prefix ns4: <http://josd.github.io/.well-known/genid/R6UTffIY1rQS3OvnWjMF_ax_H3I#>.
 @prefix plan: <http://https://github.com/doerthe/plan#>.
-@prefix ns5: <http://josd.github.io/.well-known/genid/JIEKNBxNBzKa9CPUSp3sURLNA7I#>.
+@prefix ns5: <http://josd.github.io/.well-known/genid/RUdpYbvVnpHdllQNuKDI0WKWjr0#>.
 
 _:sk_0 gps:path ((("unorderedList" (step:provideNumberOf40LiterPaperWasteContainersManually step:provideNumberOf240LiterPaperWasteContainersManually step:provideNumberOf1100LiterPaperWasteContainersManually))) 3.0 3.0 0.912673 0.912673).
 
-#2020-03-31T13:18:06.277Z in=362 out=1 ent=1 step=3 brake=4 inf=389761 sec=0.104 inf/sec=3747702
+#2020-03-31T14:22:46.822Z in=379 out=1 ent=1 step=3 brake=4 inf=397094 sec=0.111 inf/sec=3577423
 #ENDS
 
