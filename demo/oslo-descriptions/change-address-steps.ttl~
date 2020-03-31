@@ -81,8 +81,15 @@ step:addressChangeOnEIDInOffice a o-steps:ContainerLevelStep ;
   o-steps:producesState state:addressChangedOnEID  .
 
 
+step:makeAppointmentForAddressChange a o-steps:ComponentLevelStep ;
+  o-steps:requiresState
+    state:addressChangeConfirmed;
+  o-steps:producesState state:appointmentMade  .
 
-
+step:visitOfficeForAddressChange a o-steps:ComponentLevelStep ;
+  o-steps:requiresState
+    state:appointmentMade ;
+  o-steps:producesState state:addressChangedOnEID  .
 
 
                         
@@ -301,11 +308,7 @@ step:submitWasteCollectionContainerLevel a o-steps:ContainerLevelStep ;
     state:numberOf120LiterGreyWasteContainers ,
     state:numberOf240LiterGreyWasteContainers ,
     state:greyWasteContainerLockInfo,
-    state:numberOf40LiterGreenWasteContainers ,
-    state:numberOf120LiterGreenWasteContainers ,
-    state:greenWasteContainerLockInfo ,
-    state:greenWasteContainerOwnCompostInfo ,
-    state:greenWasteContainerStopCollectingInfo,
+    state:greenWasteInfo,
     state:numberOf40LiterPaperWasteContainers ,
     state:numberOf240LiterPaperWasteContainers ,
     state:numberOf1100LiterPaperWasteContainers 
@@ -330,11 +333,7 @@ step:provideGreenWasteContainerInfo a o-steps:ContainerLevelStep ;
 	rdfs:comment "Information regarding green waste container(s)"@en ;
   o-steps:requiresState o-steps:emptyState ;
   o-steps:producesState 
-    state:numberOf40LiterGreenWasteContainers ,
-    state:numberOf120LiterGreenWasteContainers ,
-    state:greenWasteContainerLockInfo ,
-    state:greenWasteContainerOwnCompostInfo ,
-    state:greenWasteContainerStopCollectingInfo .
+           state:greenWasteInfo .
 
 step:providePaperWasteContainerInfo a o-steps:ContainerLevelStep ;
   rdfs:label "Paper waste container(s)"@en ;
@@ -348,6 +347,67 @@ step:providePaperWasteContainerInfo a o-steps:ContainerLevelStep ;
     state:numberOf1100LiterPaperWasteContainers  .
 
 
+step:provideNumberOf40LiterGreenWasteContainersManually a o-steps:ComponentLevelStep ;
+  rdfs:label "Number of 40 liter green waste container(s)"@en ;
+  rdfs:label "Aantal 40 liter GFT container(s)"@nl ;
+  rdfs:label "Anzahl Biomüllcontainer 40 liter"@de ;
+  o-steps:requiresState o-steps:emptyState ;
+  o-steps:producesState state:numberOf40LiterGreenWasteContainers .
 
+step:provideNumberOf120LiterGreenWasteContainersManually a o-steps:ComponentLevelStep ;
+  rdfs:label "Number of 120 liter green waste container(s)"@en ;
+  rdfs:label "Aantal 120 liter GFT container(s)"@nl ;
+  rdfs:label "Anzahl Biomüllcontainer 120 liter"@de ;
+  o-steps:requiresState o-steps:emptyState ;
+  o-steps:producesState state:numberOf120LiterGreenWasteContainers .
+
+step:provideGreenWasteContainerCollectionStopInfoManually a o-steps:ComponentLevelStep ;
+  rdfs:label "Stop collecting green waste containers"@en ;
+  rdfs:label "Ophaling GFT-container door stopzetting"@nl ;
+  rdfs:label "Abholung von Biomüll stoppen"@de ;
+  o-steps:requiresState o-steps:emptyState ;
+  o-steps:producesState state:greenWasteContainerStopCollectingInfo .
+
+step:provideGreenWasteContainerLockInfoManually a o-steps:ComponentLevelStep ;
+  rdfs:label "I request a lock for my green waste container(s)"@en ;
+  rdfs:label "Ik vraag een slot voor mijn GFT container(s) aan"@nl ;
+  rdfs:label "Ich beantrage ein Schloss für meine Biomüllcontainer"@de ;
+  o-steps:requiresState o-steps:emptyState ;
+  o-steps:producesState state:greenWasteContainerLockInfo .
+
+step:provideGreenWasteContainerOwnCompostInfoManually a o-steps:ComponentLevelStep ;
+  rdfs:label "No green waste containers, because I compost on my own"@en ;
+  rdfs:label "Geen GFT containers, want ik composteer mijn GFT zelf"@nl ;
+  rdfs:label "Keine Biomüllcontainer, weil ich selbst kompostiere"@de ;
+  o-steps:requiresState o-steps:emptyState ;
+  o-steps:producesState state:greenWasteContainerOwnCompostInfo .
+
+step:provideNumberOf40LiterGreyWasteContainersManually a o-steps:ComponentLevelStep ;
+  rdfs:label "Number of 40 liter grey waste container(s)"@en ;
+  rdfs:label "Aantal 40 liter grijze restafvalcontainer(s)"@nl ;
+  rdfs:label "Anzahl grauer Restabfallcontainer 40 liter"@de ;
+  o-steps:requiresState o-steps:emptyState ;
+  o-steps:producesState state:numberOf40LiterGreyWasteContainers .
+
+step:provideNumberOf120LiterGreyWasteContainersManualy a o-steps:ComponentLevelStep ;
+  rdfs:label "Number of 120 liter grey waste container(s)"@en ;
+  rdfs:label "Aantal 120 liter grijze restafvalcontainer(s)"@nl ;
+  rdfs:label "Anzahl grauer Restabfallcontainer 120 liter"@de ;
+  o-steps:requiresState o-steps:emptyState ;
+  o-steps:producesState state:numberOf120LiterGreyWasteContainers .
+
+step:provideNumberOf240LiterGreyWasteContainers a o-steps:ComponentLevelStep ;
+  rdfs:label "Number of 240 liter grey waste container(s)"@en ;
+  rdfs:label "Aantal 240 liter grijze restafvalcontainer(s)"@nl ;
+  rdfs:label "Anzahl grauer Restabfallcontainer 240 liter"@de ;
+  o-steps:requiresState o-steps:emptyState ;
+  o-steps:producesState state:numberOf240LiterGreyWasteContainers .
+
+step:provideGreyWasteContainerLockInfoManually a o-steps:ComponentLevelStep ;
+  rdfs:label "I request a lock for my grey waste container(s)"@en ;
+  rdfs:label "Ik vraag een slot voor mijn grijze restafvalcontainer(s) aan"@nl ;
+  rdfs:label "Ich beantrage ein Schloss für meine Restabfallcontainer"@de ;
+  o-steps:requiresState o-steps:emptyState ;
+  o-steps:producesState state:greyWasteContainerLockInfo .
 
 

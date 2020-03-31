@@ -27,7 +27,7 @@
 @prefix math: <http://www.w3.org/2000/10/swap/math#>.
 @prefix oslo: <https://example.org/ns/oslo#>.
 @prefix ns2: <http://josd.github.io/.well-known/genid/pP7dSETOSHCTU6bSn:iLn_1X3mg#>.
-@prefix ns3: <http://josd.github.io/.well-known/genid/yEN8ZyZ0SPTFzzs:GEskirSt5ng#>.
+@prefix ns3: <http://josd.github.io/.well-known/genid/Gxg0wWbCpZV0kxehf5GsD36Zrsg#>.
 @prefix : <http://example.org#>.
 @prefix shp: <https://example.org/ns/shapes#>.
 @prefix ns4: <file:///media/doerthe/4EC6F987C6F97017/store/FAST/base/steps#>.
@@ -38,6 +38,6 @@
 {ex:movemap gps:description (true true {?U_38 ex:movingCity ?U_39} step:provideMovingCityManually 1 1 0.97 0.97)} <= {(?U_38 ex:movingCity) e:skolem ?U_39. ?U_38 a o-persoon:Inwoner}.
 {ex:movemap gps:description (true true {?U_40 ex:movingAddress ?U_41} step:provideMovingAddressManually 1 1 0.97 0.97)} <= {(?U_40 ex:movingAddress) e:skolem ?U_41. ?U_40 a o-persoon:Inwoner}.
 
-#2020-03-30T14:57:58.749Z in=142 out=3 ent=6 step=12 brake=2 inf=505777 sec=0.117 inf/sec=4322880
+#2020-03-31T13:18:21.504Z in=197 out=3 ent=6 step=12 brake=2 inf=670571 sec=0.148 inf/sec=4530885
 #ENDS
 

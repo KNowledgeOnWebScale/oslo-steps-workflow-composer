@@ -1,5 +1,5 @@
 #Processed by EYE v20.0313.1435 josd
-#eye choices/selected_Waste.n3 interim/journey-level-steps.n3 --query subgoals/creationOfBlockingInfo.n3 --nope
+#eye choices/selected_PaperWaste.n3 interim/container-level-steps.n3 --query subgoals/creationOfRuleForMissingData.n3 --nope
 
 @prefix step: <https://fast.ilabt.imec.be/api/v5/steps#>.
 @prefix : <http://example.org#>.
@@ -28,15 +28,10 @@
 @prefix math: <http://www.w3.org/2000/10/swap/math#>.
 @prefix oslo: <https://example.org/ns/oslo#>.
 @prefix ns2: <http://josd.github.io/.well-known/genid/pP7dSETOSHCTU6bSn:iLn_1X3mg#>.
-@prefix ns3: <http://josd.github.io/.well-known/genid/q5atjp9bGBcjsbNosMdsVeD5T3I#>.
+@prefix ns3: <http://josd.github.io/.well-known/genid/OrG:L_nDYymx8LgYBdmTuKpduUs#>.
 
-{_:sk_0 a o-persoon:Inwoner} :inInputRule true.
-{_:sk_0 o-persoon:heeftVerblijfplaats _:sk_4} :inInputRule true.
-{_:sk_4 o-persoon:verblijfsadres _:sk_5} :inInputRule true.
-{_:sk_0 ex:movingAddress _:sk_1} :inInputRule true.
-{_:sk_0 ex:movingCity _:sk_2} :inInputRule true.
-{_:sk_0 ex:movingDate _:sk_3} :inInputRule true.
+{?U_11 e:findall ({?U_13 ?U_12 ?U_14} {{?U_0 a o-persoon:Inwoner} log:includes {?U_13 ?U_12 ?U_14}. ?U_11 e:call {?U_13 ?U_12 ?U_14}} ?U_15). ({?U_0 a o-persoon:Inwoner} ?U_15) :unifyList {?U_0 a o-persoon:Inwoner}. {?U_0 a o-persoon:Inwoner} e:labelvars ?U_16} => ?U_16.
 
-#2020-03-31T13:18:01.665Z in=6 out=6 ent=6 step=6 brake=1 inf=74643 sec=0.045 inf/sec=1658733
+#2020-03-31T13:18:05.591Z in=8 out=1 ent=1 step=1 brake=2 inf=75598 sec=0.051 inf/sec=1482314
 #ENDS
 

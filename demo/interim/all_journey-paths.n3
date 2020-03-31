@@ -27,10 +27,10 @@
 @prefix var: <https://example.org/ns/var#>.
 @prefix oslo: <https://example.org/ns/oslo#>.
 @prefix ns2: <http://josd.github.io/.well-known/genid/pP7dSETOSHCTU6bSn:iLn_1X3mg#>.
-@prefix ns3: <http://josd.github.io/.well-known/genid/nUXS00i:WLYGtzWF8DrATWJdxAE#>.
+@prefix ns3: <http://josd.github.io/.well-known/genid/q5atjp9bGBcjsbNosMdsVeD5T3I#>.
 @prefix : <http://example.org#>.
 @prefix plan: <http://https://github.com/doerthe/plan#>.
-@prefix ns4: <http://josd.github.io/.well-known/genid/dr1fU8ZO5PA497XPFj6PPyKeMPA#>.
+@prefix ns4: <http://josd.github.io/.well-known/genid/E0OVvhI2LAM9SHklU1neb:TrnDY#>.
 
 ex:bob gps:path ((step:providePersonalInformation step:provideMovingData step:changeAddress step:submitWasteInfo) 400.0 400.0 0.6561000000000001 0.6561000000000001).
 ex:bob gps:path ((step:providePersonalInformation step:provideMovingData step:submitWasteInfo step:changeAddress) 400.0 400.0 0.6561000000000001 0.6561000000000001).
@@ -38,6 +38,6 @@ ex:bob gps:path ((step:provideMovingData step:submitWasteInfo step:providePerson
 ex:bob gps:path ((step:provideMovingData step:providePersonalInformation step:changeAddress step:submitWasteInfo) 400.0 400.0 0.6561000000000001 0.6561000000000001).
 ex:bob gps:path ((step:provideMovingData step:providePersonalInformation step:submitWasteInfo step:changeAddress) 400.0 400.0 0.6561000000000001 0.6561000000000001).
 
-#2020-03-30T14:57:38.952Z in=291 out=5 ent=5 step=5 brake=2 inf=324422 sec=0.091 inf/sec=3565077
+#2020-03-31T13:18:00.752Z in=357 out=5 ent=5 step=5 brake=2 inf=378732 sec=0.109 inf/sec=3474606
 #ENDS
 

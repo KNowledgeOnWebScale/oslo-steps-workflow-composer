@@ -1,5 +1,5 @@
 #Processed by EYE v20.0313.1435 josd
-#eye interim/component-level-steps.n3 interim/shortComponentDescriptions.n3 interim/createdGoal_addressChangeInOffice.n3 preselection/preselection.n3 profile/knowledge.n3 interim/block_addressChangeInOffice.n3 --nope --query preselection/prequery.n3
+#eye interim/component-level-steps.n3 interim/shortComponentDescriptions.n3 interim/createdGoal_greenWaste.n3 preselection/preselection.n3 profile/knowledge.n3 interim/block_greenWaste.n3 --nope --query preselection/prequery.n3
 
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
 @prefix o-address: <https://data.vlaanderen.be/ns/adres#>.
@@ -32,9 +32,12 @@
 @prefix ns4: <http://josd.github.io/.well-known/genid/OrG:L_nDYymx8LgYBdmTuKpduUs#>.
 @prefix plan: <http://https://github.com/doerthe/plan#>.
 
-{ex:movemap gps:description (true true {?U_14 ex:addressChanged true} step:visitOfficeForAddressChange 1 1 0.97 0.97)} <= {?U_14 a o-persoon:Inwoner. ?U_14 ex:hasAppointmentDate ?U_15}.
-{ex:movemap gps:description (true true {?U_16 ex:hasAppointmentDate ?U_17} step:makeAppointmentForAddressChange 1 1 0.97 0.97)} <= {(?U_16 ex:hasAppointmentDate) e:skolem ?U_17. ?U_16 a o-persoon:Inwoner. ?U_16 ex:confirmationOfAddressChange true}.
+{ex:movemap gps:description (true true {?U_44 ex:numberOfRequested40LiterGreenWasteContainers ?U_45} step:provideNumberOf40LiterGreenWasteContainersManually 1 1 0.97 0.97)} <= {(?U_44 ex:numberOfRequested40LiterGreenWasteContainers) e:skolem ?U_45. ?U_44 a o-persoon:Inwoner}.
+{ex:movemap gps:description (true true {?U_46 ex:numberOfRequested120LiterGreenWasteContainers ?U_47} step:provideNumberOf120LiterGreenWasteContainersManually 1 1 0.97 0.97)} <= {(?U_46 ex:numberOfRequested120LiterGreenWasteContainers) e:skolem ?U_47. ?U_46 a o-persoon:Inwoner}.
+{ex:movemap gps:description (true true {?U_48 ex:stopGreeWasteContainer ?U_49} step:provideGreenWasteContainerCollectionStopInfoManually 1 1 0.97 0.97)} <= {(?U_48 ex:stopGreeWasteContainer) e:skolem ?U_49. ?U_48 a o-persoon:Inwoner}.
+{ex:movemap gps:description (true true {?U_50 ex:lockNeededForGreenWasteContainer ?U_51} step:provideGreenWasteContainerLockInfoManually 1 1 0.97 0.97)} <= {(?U_50 ex:lockNeededForGreenWasteContainer) e:skolem ?U_51. ?U_50 a o-persoon:Inwoner}.
+{ex:movemap gps:description (true true {?U_52 ex:needForGreenWasteContainer ?U_53} step:provideGreenWasteContainerOwnCompostInfoManually 1 1 0.97 0.97)} <= {(?U_52 ex:needForGreenWasteContainer) e:skolem ?U_53. ?U_52 a o-persoon:Inwoner}.
 
-#2020-03-31T13:18:08.074Z in=199 out=2 ent=4 step=8 brake=2 inf=661158 sec=0.136 inf/sec=4861456
+#2020-03-31T13:18:04.025Z in=198 out=5 ent=10 step=20 brake=2 inf=673897 sec=0.142 inf/sec=4745754
 #ENDS
 

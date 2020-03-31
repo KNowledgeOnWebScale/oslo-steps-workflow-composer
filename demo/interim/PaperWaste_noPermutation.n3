@@ -1,5 +1,5 @@
 #Processed by EYE v20.0313.1435 josd
-#eye workflow-composer/gps-plugin_modified_noPermutations.n3 profile/knowledge.n3 interim/selectedSteps_movingData.n3 oslo-descriptions/change-address-steps.ttl --query interim/Goal_provideMovingData.n3 --nope
+#eye workflow-composer/gps-plugin_modified_noPermutations.n3 profile/knowledge.n3 interim/extraRule_paperWaste.n3 subgoals/aux2.n3 interim/selectedSteps_paperWaste.n3 oslo-descriptions/change-address-steps.ttl --query interim/createdGoal_paperWaste.n3 --nope
 
 @prefix math: <http://www.w3.org/2000/10/swap/math#>.
 @prefix list: <http://www.w3.org/2000/10/swap/list#>.
@@ -17,9 +17,9 @@
 @prefix o-persoon: <https://data.vlaanderen.be/ns/persoon#>.
 @prefix foaf: <http://xmlns.com/foaf/0.1/>.
 @prefix schema: <https://schema.org/>.
+@prefix step: <https://fast.ilabt.imec.be/api/v5/steps#>.
 @prefix state: <https://fast.ilabt.imec.be/api/v5/states#>.
 @prefix shape: <https://fast.ilabt.imec.be/api/v5/shapes#>.
-@prefix step: <https://fast.ilabt.imec.be/api/v5/steps#>.
 @prefix sh: <http://www.w3.org/ns/shacl#>.
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
 @prefix skos: <http://www.w3.org/2004/02/skos/core#>.
@@ -28,15 +28,13 @@
 @prefix var: <https://example.org/ns/var#>.
 @prefix oslo: <https://example.org/ns/oslo#>.
 @prefix ns2: <http://josd.github.io/.well-known/genid/pP7dSETOSHCTU6bSn:iLn_1X3mg#>.
-@prefix ns3: <http://josd.github.io/.well-known/genid/Gxg0wWbCpZV0kxehf5GsD36Zrsg#>.
-@prefix shp: <https://example.org/ns/shapes#>.
-@prefix ns4: <file:///media/doerthe/4EC6F987C6F97017/store/FAST/base/steps#>.
-@prefix ns5: <http://josd.github.io/.well-known/genid/bCHPrOjcGmNlvnxxC_gIZneJs1Y#>.
+@prefix ns3: <http://josd.github.io/.well-known/genid/OrG:L_nDYymx8LgYBdmTuKpduUs#>.
+@prefix ns4: <http://josd.github.io/.well-known/genid/Gxg0wWbCpZV0kxehf5GsD36Zrsg#>.
 @prefix plan: <http://https://github.com/doerthe/plan#>.
-@prefix ns6: <http://josd.github.io/.well-known/genid/IRWZmTR3biagigP9UWBIrkk0TYQ#>.
+@prefix ns5: <http://josd.github.io/.well-known/genid/JIEKNBxNBzKa9CPUSp3sURLNA7I#>.
 
-ex:bob gps:path ((("unorderedList" (step:provideMovingDateManually step:provideMovingCityManually step:provideMovingAddressManually))) 3.0 3.0 0.912673 0.912673).
+_:sk_0 gps:path ((("unorderedList" (step:provideNumberOf40LiterPaperWasteContainersManually step:provideNumberOf240LiterPaperWasteContainersManually step:provideNumberOf1100LiterPaperWasteContainersManually))) 3.0 3.0 0.912673 0.912673).
 
-#2020-03-31T13:18:21.724Z in=359 out=1 ent=1 step=1 brake=2 inf=360690 sec=0.104 inf/sec=3468173
+#2020-03-31T13:18:06.277Z in=362 out=1 ent=1 step=3 brake=4 inf=389761 sec=0.104 inf/sec=3747702
 #ENDS
 

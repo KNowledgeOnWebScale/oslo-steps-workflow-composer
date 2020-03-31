@@ -1,5 +1,5 @@
 #Processed by EYE v20.0313.1435 josd
-#eye choices/selected_Waste.n3 interim/journey-level-steps.n3 --query subgoals/creationOfBlockingInfo.n3 --nope
+#eye choices/selected_GreyWaste.n3 interim/container-level-steps.n3 --query subgoals/creationOfBlockingInfo.n3 --nope
 
 @prefix step: <https://fast.ilabt.imec.be/api/v5/steps#>.
 @prefix : <http://example.org#>.
@@ -28,15 +28,14 @@
 @prefix math: <http://www.w3.org/2000/10/swap/math#>.
 @prefix oslo: <https://example.org/ns/oslo#>.
 @prefix ns2: <http://josd.github.io/.well-known/genid/pP7dSETOSHCTU6bSn:iLn_1X3mg#>.
-@prefix ns3: <http://josd.github.io/.well-known/genid/q5atjp9bGBcjsbNosMdsVeD5T3I#>.
+@prefix ns3: <http://josd.github.io/.well-known/genid/OrG:L_nDYymx8LgYBdmTuKpduUs#>.
 
+{(_:sk_0 ex:lockNeededForGreyWasteContainer) e:skolem _:sk_1} :inInputRule true.
+{(_:sk_0 ex:numberOfRequested120LiterGreyWasteContainers) e:skolem _:sk_2} :inInputRule true.
+{(_:sk_0 ex:numberOfRequested240LiterGreyWasteContainers) e:skolem _:sk_3} :inInputRule true.
+{(_:sk_0 ex:numberOfRequested40LiterGreyWasteContainers) e:skolem _:sk_4} :inInputRule true.
 {_:sk_0 a o-persoon:Inwoner} :inInputRule true.
-{_:sk_0 o-persoon:heeftVerblijfplaats _:sk_4} :inInputRule true.
-{_:sk_4 o-persoon:verblijfsadres _:sk_5} :inInputRule true.
-{_:sk_0 ex:movingAddress _:sk_1} :inInputRule true.
-{_:sk_0 ex:movingCity _:sk_2} :inInputRule true.
-{_:sk_0 ex:movingDate _:sk_3} :inInputRule true.
 
-#2020-03-31T13:18:01.665Z in=6 out=6 ent=6 step=6 brake=1 inf=74643 sec=0.045 inf/sec=1658733
+#2020-03-31T13:18:04.769Z in=8 out=5 ent=5 step=5 brake=1 inf=73732 sec=0.049 inf/sec=1504735
 #ENDS
 

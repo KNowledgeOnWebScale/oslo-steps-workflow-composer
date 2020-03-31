@@ -329,6 +329,8 @@ state:citizenBroughtEID a o-steps:State ;
   rdfs:label "Einwohner hat eID Karte vorgelegt"@de ;
   o-steps:hasStateShape shape:citizenBroughtEIDShape .
 
+state:appointmentMade a o-steps:State ;
+  o-steps:hasStateShape shape:appointmentShape .
 
 state:transportRequested a o-steps:State ;
   o-steps:hasStateShape shape:transportRequestedShape .
@@ -351,7 +353,5 @@ state:availability a o-steps:State ;
 
 state:detailFamilyMember a o-steps:State ;
   o-steps:hasStateShape shape:detailFamilyMemberShape .
-
-
 
 

@@ -27,7 +27,7 @@
 @prefix math: <http://www.w3.org/2000/10/swap/math#>.
 @prefix oslo: <https://example.org/ns/oslo#>.
 @prefix ns2: <http://josd.github.io/.well-known/genid/pP7dSETOSHCTU6bSn:iLn_1X3mg#>.
-@prefix ns3: <http://josd.github.io/.well-known/genid/yEN8ZyZ0SPTFzzs:GEskirSt5ng#>.
+@prefix ns3: <http://josd.github.io/.well-known/genid/Gxg0wWbCpZV0kxehf5GsD36Zrsg#>.
 
 {ex:movemap gps:description (true true {?t_6 ex:hasAppointmentDate ?U_28} step:makeAppointmentForAddressChange 1 1 0.97 0.97)} <= {(?t_6 ex:hasAppointmentDate) e:skolem ?U_28. ?t_6 a o-persoon:Inwoner. ?t_6 ex:confirmationOfAddressChange true}.
 {ex:movemap gps:description (true true {?t_6 ex:addressChanged true} step:visitOfficeForAddressChange 1 1 0.97 0.97)} <= {?t_6 a o-persoon:Inwoner. ?t_6 ex:hasAppointmentDate ?U_28}.
@@ -45,15 +45,27 @@
 {ex:movemap gps:description (true true {?t_6 ex:nationalNumber ?U_8} step:provideCitizenNationalNumberManually 1 1 0.97 0.97)} <= {(?t_6 ex:nationalNumber) e:skolem ?U_8. ?t_6 a o-persoon:Inwoner}.
 {ex:movemap gps:description (true true {?t_6 ex:bankAccountNumber ?U_9} step:provideCitizenBankAccountNumberManually 1 1 0.97 0.97)} <= {(?t_6 ex:bankAccountNumber) e:skolem ?U_9. ?t_6 a o-persoon:Inwoner}.
 {ex:movemap gps:description (true true true step:provideCitizenResidencePermitManually 1 1 0.97 0.97)} <= {?t_6 a o-persoon:Inwoner}.
-{ex:movemap gps:description (true true {?t_7 o-persoon:datum ?t_8. ?t_6 o-persoon:heeftGeboorte ?t_7} step:provideCitizenBirthDateManually 1 1 0.97 0.97)} <= {(?t_6 o-persoon:heeftGeboorte) e:skolem ?t_7. (?t_7 o-persoon:datum) e:skolem ?t_8. ?t_6 a o-persoon:Inwoner}.
-{ex:movemap gps:description (true true {?t_6 o-persoon:heeftGeboorte ?t_9. ?t_9 o-persoon:plaats ?t_10} step:provideCitizenBirthPlaceManually 1 1 0.97 0.97)} <= {(?t_6 o-persoon:heeftGeboorte) e:skolem ?t_9. (?t_9 o-persoon:plaats) e:skolem ?t_10. ?t_6 a o-persoon:Inwoner}.
-{ex:movemap gps:description (true true {?t_6 o-persoon:heeftVerblijfplaats ?t_11. ?t_11 o-persoon:verblijfsadres ?t_12} step:provideCitizenAddressManually 1 1 0.97 0.97)} <= {(?t_6 o-persoon:heeftVerblijfplaats) e:skolem ?t_11. (?t_11 o-persoon:verblijfsadres) e:skolem ?t_12. ?t_6 a o-persoon:Inwoner}.
+{ex:movemap gps:description (true true {?t_7 o-persoon:datum ?t_8. ?t_6 o-persoon:heeftGeboorte ?t_7} step:provideCitizenBirthDateManually 1 1 0.97 0.97)} <= {(?t_7 o-persoon:datum) e:skolem ?t_8. (?t_6 o-persoon:heeftGeboorte) e:skolem ?t_7. ?t_6 a o-persoon:Inwoner}.
+{ex:movemap gps:description (true true {?t_6 o-persoon:heeftGeboorte ?t_9. ?t_9 o-persoon:plaats ?t_10} step:provideCitizenBirthPlaceManually 1 1 0.97 0.97)} <= {(?t_9 o-persoon:plaats) e:skolem ?t_10. (?t_6 o-persoon:heeftGeboorte) e:skolem ?t_9. ?t_6 a o-persoon:Inwoner}.
+{ex:movemap gps:description (true true {?t_6 o-persoon:heeftVerblijfplaats ?t_11. ?t_11 o-persoon:verblijfsadres ?t_12} step:provideCitizenAddressManually 1 1 0.97 0.97)} <= {(?t_11 o-persoon:verblijfsadres) e:skolem ?t_12. (?t_6 o-persoon:heeftVerblijfplaats) e:skolem ?t_11. ?t_6 a o-persoon:Inwoner}.
 {ex:movemap gps:description (true true {?t_6 schema:hasOccupation ?U_10} step:provideCitizenProfessionManually 1 1 0.97 0.97)} <= {(?t_6 schema:hasOccupation) e:skolem ?U_10. ?t_6 a o-persoon:Inwoner}.
 {ex:movemap gps:description (true true {?t_6 ex:movingDate ?U_12} step:provideMovingDateManually 1 1 0.97 0.97)} <= {(?t_6 ex:movingDate) e:skolem ?U_12. ?t_6 a o-persoon:Inwoner}.
 {ex:movemap gps:description (true true {?t_6 ex:movingCity ?U_15} step:provideMovingCityManually 1 1 0.97 0.97)} <= {(?t_6 ex:movingCity) e:skolem ?U_15. ?t_6 a o-persoon:Inwoner}.
 {ex:movemap gps:description (true true {?t_6 ex:movingAddress ?U_13} step:provideMovingAddressManually 1 1 0.97 0.97)} <= {(?t_6 ex:movingAddress) e:skolem ?U_13. ?t_6 a o-persoon:Inwoner}.
 {ex:movemap gps:description (true true {?t_6 ex:billingAddress ?U_14} step:provideBillingAddressManually 1 1 0.97 0.97)} <= {(?t_6 ex:billingAddress) e:skolem ?U_14. ?t_6 a o-persoon:Inwoner}.
+{ex:movemap gps:description (true true {?t_6 ex:numberOfRequested40LiterGreenWasteContainers ?U_20} step:provideNumberOf40LiterGreenWasteContainersManually 1 1 0.97 0.97)} <= {(?t_6 ex:numberOfRequested40LiterGreenWasteContainers) e:skolem ?U_20. ?t_6 a o-persoon:Inwoner}.
+{ex:movemap gps:description (true true {?t_6 ex:numberOfRequested120LiterGreenWasteContainers ?U_21} step:provideNumberOf120LiterGreenWasteContainersManually 1 1 0.97 0.97)} <= {(?t_6 ex:numberOfRequested120LiterGreenWasteContainers) e:skolem ?U_21. ?t_6 a o-persoon:Inwoner}.
+{ex:movemap gps:description (true true {?t_6 ex:stopGreeWasteContainer ?U_24} step:provideGreenWasteContainerCollectionStopInfoManually 1 1 0.97 0.97)} <= {(?t_6 ex:stopGreeWasteContainer) e:skolem ?U_24. ?t_6 a o-persoon:Inwoner}.
+{ex:movemap gps:description (true true {?t_6 ex:lockNeededForGreenWasteContainer ?U_22} step:provideGreenWasteContainerLockInfoManually 1 1 0.97 0.97)} <= {(?t_6 ex:lockNeededForGreenWasteContainer) e:skolem ?U_22. ?t_6 a o-persoon:Inwoner}.
+{ex:movemap gps:description (true true {?t_6 ex:needForGreenWasteContainer ?U_23} step:provideGreenWasteContainerOwnCompostInfoManually 1 1 0.97 0.97)} <= {(?t_6 ex:needForGreenWasteContainer) e:skolem ?U_23. ?t_6 a o-persoon:Inwoner}.
+{ex:movemap gps:description (true true {?t_6 ex:numberOfRequested40LiterGreyWasteContainers ?U_16} step:provideNumberOf40LiterGreyWasteContainersManually 1 1 0.97 0.97)} <= {(?t_6 ex:numberOfRequested40LiterGreyWasteContainers) e:skolem ?U_16. ?t_6 a o-persoon:Inwoner}.
+{ex:movemap gps:description (true true {?t_6 ex:numberOfRequested120LiterGreyWasteContainers ?U_17} step:provideNumberOf120LiterGreyWasteContainersManualy 1 1 0.97 0.97)} <= {(?t_6 ex:numberOfRequested120LiterGreyWasteContainers) e:skolem ?U_17. ?t_6 a o-persoon:Inwoner}.
+{ex:movemap gps:description (true true {?t_6 ex:numberOfRequested240LiterGreyWasteContainers ?U_18} step:provideNumberOf240LiterGreyWasteContainers 1 1 0.97 0.97)} <= {(?t_6 ex:numberOfRequested240LiterGreyWasteContainers) e:skolem ?U_18. ?t_6 a o-persoon:Inwoner}.
+{ex:movemap gps:description (true true {?t_6 ex:lockNeededForGreyWasteContainer ?U_19} step:provideGreyWasteContainerLockInfoManually 1 1 0.97 0.97)} <= {(?t_6 ex:lockNeededForGreyWasteContainer) e:skolem ?U_19. ?t_6 a o-persoon:Inwoner}.
+{ex:movemap gps:description (true true {?t_6 ex:numberOfRequested40LiterPaperWasteContainers ?U_25} step:provideNumberOf40LiterPaperWasteContainersManually 1 1 0.97 0.97)} <= {(?t_6 ex:numberOfRequested40LiterPaperWasteContainers) e:skolem ?U_25. ?t_6 a o-persoon:Inwoner}.
+{ex:movemap gps:description (true true {?t_6 ex:numberOfRequested240LiterPaperWasteContainers ?U_26} step:provideNumberOf240LiterPaperWasteContainersManually 1 1 0.97 0.97)} <= {(?t_6 ex:numberOfRequested240LiterPaperWasteContainers) e:skolem ?U_26. ?t_6 a o-persoon:Inwoner}.
+{ex:movemap gps:description (true true {?t_6 ex:numberOfRequested1100LiterPaperWasteContainers ?U_27} step:provideNumberOf1100LiterPaperWasteContainersManually 1 1 0.97 0.97)} <= {(?t_6 ex:numberOfRequested1100LiterPaperWasteContainers) e:skolem ?U_27. ?t_6 a o-persoon:Inwoner}.
 
-#2020-03-30T14:57:38.288Z in=962 out=24 ent=101 step=356 brake=4 inf=715608 sec=0.148 inf/sec=4835189
+#2020-03-31T13:18:00.074Z in=1037 out=36 ent=126 step=432 brake=4 inf=801465 sec=0.157 inf/sec=5104873
 #ENDS
 

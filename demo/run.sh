@@ -50,9 +50,6 @@ eye  interim/container-level-steps.n3 profile/knowledge.n3 --query preselection/
 # Goal Waste collection
 #
 
-
-
-
 # create goal based on step name
 eye choices/selected_Waste.n3 interim/journey-level-steps.n3 --query subgoals/subgoalCreation.n3 --nope --no-skolem http://josd.github.io/.well-known/genid/ > interim/createdGoal_Waste.n3
 
@@ -62,7 +59,6 @@ eye choices/selected_Waste.n3 interim/journey-level-steps.n3 --query subgoals/cr
 
 # mark the triples which can be created by the extra rule to block them for step selection
 eye choices/selected_Waste.n3 interim/journey-level-steps.n3 --query subgoals/creationOfBlockingInfo.n3 --nope >interim/block_waste.n3
-
 
 #preselect
 eye interim/container-level-steps.n3 interim/shortContainerDescriptions.n3 interim/createdGoal_Waste.n3 preselection/preselection.n3 profile/knowledge.n3 interim/block_waste.n3 --nope --query preselection/prequery.n3 >interim/selectedSteps_waste.n3
@@ -99,6 +95,69 @@ eye workflow-composer/gps-plugin_modified_noPermutations.n3 profile/knowledge.n3
 eye  interim/component-level-steps.n3 profile/knowledge.n3 --query preselection/pregeneration.n3 --nope >interim/shortComponentDescriptions.n3
 
 #
+# Green Waste
+#
+
+# create goal based on step name
+eye choices/selected_GreenWaste.n3 interim/container-level-steps.n3 --query subgoals/subgoalCreation.n3 --nope --no-skolem http://josd.github.io/.well-known/genid/ > interim/createdGoal_greenWaste.n3
+
+# create rule to add input info for the step
+eye choices/selected_GreenWaste.n3 interim/container-level-steps.n3 --query subgoals/creationOfRuleForMissingData.n3 --nope >interim/extraRule_greenWaste.n3
+
+# mark the triples which can be created by the extra rule to block them for step selection
+eye choices/selected_GreenWaste.n3 interim/container-level-steps.n3 --query subgoals/creationOfBlockingInfo.n3 --nope >interim/block_greenWaste.n3
+
+#preselect
+eye interim/component-level-steps.n3 interim/shortComponentDescriptions.n3 interim/createdGoal_greenWaste.n3 preselection/preselection.n3 profile/knowledge.n3 interim/block_greenWaste.n3 --nope --query preselection/prequery.n3 >interim/selectedSteps_greenWaste.n3
+
+#createPath
+eye workflow-composer/gps-plugin_modified_noPermutations.n3 profile/knowledge.n3 interim/extraRule_greenWaste.n3 subgoals/aux2.n3 interim/selectedSteps_greenWaste.n3 oslo-descriptions/change-address-steps.ttl --query interim/createdGoal_greenWaste.n3 --nope > interim/GreenWaste_noPermutation.n3
+
+# TODO add to API
+
+#
+# Grey Waste
+#
+
+# create goal based on step name
+eye choices/selected_GreyWaste.n3 interim/container-level-steps.n3 --query subgoals/subgoalCreation.n3 --nope --no-skolem http://josd.github.io/.well-known/genid/ > interim/createdGoal_greyWaste.n3
+
+# create rule to add input info for the step
+eye choices/selected_GreyWaste.n3 interim/container-level-steps.n3 --query subgoals/creationOfRuleForMissingData.n3 --nope >interim/extraRule_greyWaste.n3
+
+# mark the triples which can be created by the extra rule to block them for step selection
+eye choices/selected_GreyWaste.n3 interim/container-level-steps.n3 --query subgoals/creationOfBlockingInfo.n3 --nope >interim/block_greyWaste.n3
+
+#preselect
+eye interim/component-level-steps.n3 interim/shortComponentDescriptions.n3 interim/createdGoal_greyWaste.n3 preselection/preselection.n3 profile/knowledge.n3 interim/block_greyWaste.n3 --nope --query preselection/prequery.n3 >interim/selectedSteps_greyWaste.n3
+
+#createPath
+eye workflow-composer/gps-plugin_modified_noPermutations.n3 profile/knowledge.n3 interim/extraRule_greyWaste.n3 subgoals/aux2.n3 interim/selectedSteps_greyWaste.n3 oslo-descriptions/change-address-steps.ttl --query interim/createdGoal_greyWaste.n3 --nope > interim/GreyWaste_noPermutation.n3
+
+# TODO add to API
+
+#
+# Paper Waste
+#
+
+# create goal based on step name
+eye choices/selected_PaperWaste.n3 interim/container-level-steps.n3 --query subgoals/subgoalCreation.n3 --nope --no-skolem http://josd.github.io/.well-known/genid/ > interim/createdGoal_paperWaste.n3
+
+# create rule to add input info for the step
+eye choices/selected_PaperWaste.n3 interim/container-level-steps.n3 --query subgoals/creationOfRuleForMissingData.n3 --nope >interim/extraRule_paperWaste.n3
+
+# mark the triples which can be created by the extra rule to block them for step selection
+eye choices/selected_PaperWaste.n3 interim/container-level-steps.n3 --query subgoals/creationOfBlockingInfo.n3 --nope >interim/block_paperWaste.n3
+
+#preselect
+eye interim/component-level-steps.n3 interim/shortComponentDescriptions.n3 interim/createdGoal_paperWaste.n3 preselection/preselection.n3 profile/knowledge.n3 interim/block_paperWaste.n3 --nope --query preselection/prequery.n3 >interim/selectedSteps_paperWaste.n3
+
+#createPath
+eye workflow-composer/gps-plugin_modified_noPermutations.n3 profile/knowledge.n3 interim/extraRule_paperWaste.n3 subgoals/aux2.n3 interim/selectedSteps_paperWaste.n3 oslo-descriptions/change-address-steps.ttl --query interim/createdGoal_paperWaste.n3 --nope > interim/PaperWaste_noPermutation.n3
+
+# TODO add to API
+
+#
 # Policevisit
 #
 
@@ -130,7 +189,6 @@ eye choices/selected_AddressChangeInOffice.n3 interim/container-level-steps.n3 -
 
 # mark the triples which can be created by the extra rule to block them for step selection
 eye choices/selected_AddressChangeInOffice.n3 interim/container-level-steps.n3 --query subgoals/creationOfBlockingInfo.n3 --nope >interim/block_addressChangeInOffice.n3
-
 
 #preselect
 eye interim/component-level-steps.n3 interim/shortComponentDescriptions.n3 interim/createdGoal_addressChangeInOffice.n3 preselection/preselection.n3 profile/knowledge.n3 interim/block_addressChangeInOffice.n3 --nope --query preselection/prequery.n3 >interim/selectedSteps_addressChangeInOffice.n3

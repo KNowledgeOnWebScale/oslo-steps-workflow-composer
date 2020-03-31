@@ -1,5 +1,5 @@
 #Processed by EYE v20.0313.1435 josd
-#eye interim/container-level-steps.n3 interim/shortContainerDescriptions.n3 interim/createdGoal_address.n3 preselection/preselection.n3 profile/knowledge.n3 interim/block_addresschange.n3 --nope --query preselection/prequery.n3
+#eye interim/component-level-steps.n3 interim/shortComponentDescriptions.n3 interim/createdGoal_paperWaste.n3 preselection/preselection.n3 profile/knowledge.n3 interim/block_paperWaste.n3 --nope --query preselection/prequery.n3
 
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
 @prefix o-address: <https://data.vlaanderen.be/ns/adres#>.
@@ -27,14 +27,15 @@
 @prefix math: <http://www.w3.org/2000/10/swap/math#>.
 @prefix oslo: <https://example.org/ns/oslo#>.
 @prefix ns2: <http://josd.github.io/.well-known/genid/pP7dSETOSHCTU6bSn:iLn_1X3mg#>.
-@prefix ns3: <http://josd.github.io/.well-known/genid/OrG:L_nDYymx8LgYBdmTuKpduUs#>.
+@prefix ns3: <http://josd.github.io/.well-known/genid/Gxg0wWbCpZV0kxehf5GsD36Zrsg#>.
 @prefix : <http://example.org#>.
-@prefix ns4: <http://josd.github.io/.well-known/genid/q5atjp9bGBcjsbNosMdsVeD5T3I#>.
+@prefix ns4: <http://josd.github.io/.well-known/genid/OrG:L_nDYymx8LgYBdmTuKpduUs#>.
 @prefix plan: <http://https://github.com/doerthe/plan#>.
 
-{ex:movemap gps:description (true true {?U_26 ex:addressChanged true} step:addressChangeOnEIDInOffice 10 10 0.9 0.9)} <= {?U_26 a o-persoon:Inwoner. ?U_26 ex:confirmationOfAddressChange true}.
-{ex:movemap gps:description (true true {?U_27 ex:confirmationOfAddressChange true} step:confirmAddressChangeVisit 10 10 0.9 0.9)} <= {?U_27 a o-persoon:Inwoner. ?U_27 foaf:familyName ?U_28. ?U_27 foaf:givenName ?U_29. ?U_27 ex:movingAddress ?U_30. ?U_27 ex:movingCity ?U_31. ?U_27 ex:movingDate ?U_32. ?U_27 ex:nationalNumber ?U_33. ?U_27 schema:hasOccupation ?U_34. ?U_35 o-persoon:datum ?U_36. ?U_27 o-persoon:heeftGeboorte ?U_35. ?U_27 o-persoon:heeftGeboorte ?U_37. ?U_37 o-persoon:plaats ?U_38. ?U_27 schema:contactPoint ?U_39. ?U_27 schema:contactPoint ?U_40. ?U_39 schema:contactType "gsm". ?U_40 schema:contactType "telephone". ?U_39 schema:telephone ?U_41. ?U_40 schema:telephone ?U_42}.
+{ex:movemap gps:description (true true {?U_39 ex:numberOfRequested40LiterPaperWasteContainers ?U_40} step:provideNumberOf40LiterPaperWasteContainersManually 1 1 0.97 0.97)} <= {(?U_39 ex:numberOfRequested40LiterPaperWasteContainers) e:skolem ?U_40. ?U_39 a o-persoon:Inwoner}.
+{ex:movemap gps:description (true true {?U_41 ex:numberOfRequested240LiterPaperWasteContainers ?U_42} step:provideNumberOf240LiterPaperWasteContainersManually 1 1 0.97 0.97)} <= {(?U_41 ex:numberOfRequested240LiterPaperWasteContainers) e:skolem ?U_42. ?U_41 a o-persoon:Inwoner}.
+{ex:movemap gps:description (true true {?U_43 ex:numberOfRequested1100LiterPaperWasteContainers ?U_44} step:provideNumberOf1100LiterPaperWasteContainersManually 1 1 0.97 0.97)} <= {(?U_43 ex:numberOfRequested1100LiterPaperWasteContainers) e:skolem ?U_44. ?U_43 a o-persoon:Inwoner}.
 
-#2020-03-31T13:18:02.830Z in=104 out=2 ent=4 step=8 brake=2 inf=390518 sec=0.100 inf/sec=3905180
+#2020-03-31T13:18:06.057Z in=201 out=3 ent=6 step=12 brake=2 inf=693924 sec=0.177 inf/sec=3920475
 #ENDS
 

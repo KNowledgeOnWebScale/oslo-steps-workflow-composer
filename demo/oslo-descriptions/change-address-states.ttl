@@ -234,6 +234,14 @@ state:greenWasteContainerInfo a o-steps:State ;
       shape:greenWateContainerLockShape,
       shape:greenWasteContainerStopCollectingInfoShape .
 
+state:greenWasteInfo a o-steps:State ;
+  rdfs:label "Green GFT waste container(s)"@en ;
+  rdfs:label "Groene GFT container(s)"@nl ;
+  rdfs:label "Biomüllcontainer"@de ;
+  o-steps:hasStateShape  
+      shape:greenWasteInfoShape.
+
+
 state:numberOf40LiterGreenWasteContainers a o-steps:State ;
   rdfs:label "Number of 40 liter green waste containers"@en ;
   rdfs:label "Aantal 40 liter GFT containers"@nl ;
@@ -353,7 +361,5 @@ state:availability a o-steps:State ;
 
 state:detailFamilyMember a o-steps:State ;
   o-steps:hasStateShape shape:detailFamilyMemberShape .
-
-
 
 

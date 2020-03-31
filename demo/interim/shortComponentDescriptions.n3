@@ -27,7 +27,7 @@
 @prefix math: <http://www.w3.org/2000/10/swap/math#>.
 @prefix oslo: <https://example.org/ns/oslo#>.
 @prefix ns2: <http://josd.github.io/.well-known/genid/pP7dSETOSHCTU6bSn:iLn_1X3mg#>.
-@prefix ns3: <http://josd.github.io/.well-known/genid/yEN8ZyZ0SPTFzzs:GEskirSt5ng#>.
+@prefix ns3: <http://josd.github.io/.well-known/genid/Gxg0wWbCpZV0kxehf5GsD36Zrsg#>.
 @prefix : <http://example.org#>.
 
 {{(?U_0 ex:hasAppointmentDate) e:skolem ?U_1. ?U_0 a o-persoon:Inwoner. ?U_0 ex:confirmationOfAddressChange true} step:makeAppointmentForAddressChange {?U_0 ex:hasAppointmentDate ?U_1}} a :ShortDescription.
@@ -46,94 +46,135 @@
 {{(?U_42 ex:nationalNumber) e:skolem ?U_43. ?U_42 a o-persoon:Inwoner} step:provideCitizenNationalNumberManually {?U_42 ex:nationalNumber ?U_43}} a :ShortDescription.
 {{(?U_44 ex:bankAccountNumber) e:skolem ?U_45. ?U_44 a o-persoon:Inwoner} step:provideCitizenBankAccountNumberManually {?U_44 ex:bankAccountNumber ?U_45}} a :ShortDescription.
 {{?U_46 a o-persoon:Inwoner} step:provideCitizenResidencePermitManually true} a :ShortDescription.
-{{(?U_49 o-persoon:heeftGeboorte) e:skolem ?U_47. (?U_47 o-persoon:datum) e:skolem ?U_48. ?U_49 a o-persoon:Inwoner} step:provideCitizenBirthDateManually {?U_47 o-persoon:datum ?U_48. ?U_49 o-persoon:heeftGeboorte ?U_47}} a :ShortDescription.
-{{(?U_50 o-persoon:heeftGeboorte) e:skolem ?U_51. (?U_51 o-persoon:plaats) e:skolem ?U_52. ?U_50 a o-persoon:Inwoner} step:provideCitizenBirthPlaceManually {?U_50 o-persoon:heeftGeboorte ?U_51. ?U_51 o-persoon:plaats ?U_52}} a :ShortDescription.
-{{(?U_53 o-persoon:heeftVerblijfplaats) e:skolem ?U_54. (?U_54 o-persoon:verblijfsadres) e:skolem ?U_55. ?U_53 a o-persoon:Inwoner} step:provideCitizenAddressManually {?U_53 o-persoon:heeftVerblijfplaats ?U_54. ?U_54 o-persoon:verblijfsadres ?U_55}} a :ShortDescription.
+{{(?U_47 o-persoon:datum) e:skolem ?U_48. (?U_49 o-persoon:heeftGeboorte) e:skolem ?U_47. ?U_49 a o-persoon:Inwoner} step:provideCitizenBirthDateManually {?U_47 o-persoon:datum ?U_48. ?U_49 o-persoon:heeftGeboorte ?U_47}} a :ShortDescription.
+{{(?U_51 o-persoon:plaats) e:skolem ?U_52. (?U_50 o-persoon:heeftGeboorte) e:skolem ?U_51. ?U_50 a o-persoon:Inwoner} step:provideCitizenBirthPlaceManually {?U_50 o-persoon:heeftGeboorte ?U_51. ?U_51 o-persoon:plaats ?U_52}} a :ShortDescription.
+{{(?U_54 o-persoon:verblijfsadres) e:skolem ?U_55. (?U_53 o-persoon:heeftVerblijfplaats) e:skolem ?U_54. ?U_53 a o-persoon:Inwoner} step:provideCitizenAddressManually {?U_53 o-persoon:heeftVerblijfplaats ?U_54. ?U_54 o-persoon:verblijfsadres ?U_55}} a :ShortDescription.
 {{(?U_56 schema:hasOccupation) e:skolem ?U_57. ?U_56 a o-persoon:Inwoner} step:provideCitizenProfessionManually {?U_56 schema:hasOccupation ?U_57}} a :ShortDescription.
 {{(?U_58 ex:movingDate) e:skolem ?U_59. ?U_58 a o-persoon:Inwoner} step:provideMovingDateManually {?U_58 ex:movingDate ?U_59}} a :ShortDescription.
 {{(?U_60 ex:movingCity) e:skolem ?U_61. ?U_60 a o-persoon:Inwoner} step:provideMovingCityManually {?U_60 ex:movingCity ?U_61}} a :ShortDescription.
 {{(?U_62 ex:movingAddress) e:skolem ?U_63. ?U_62 a o-persoon:Inwoner} step:provideMovingAddressManually {?U_62 ex:movingAddress ?U_63}} a :ShortDescription.
 {{(?U_64 ex:billingAddress) e:skolem ?U_65. ?U_64 a o-persoon:Inwoner} step:provideBillingAddressManually {?U_64 ex:billingAddress ?U_65}} a :ShortDescription.
-{ex:movemap gps:description (true true {?U_66 ex:hasAppointmentDate ?U_67} step:makeAppointmentForAddressChange 1 1 0.97 0.97)} :reliesOn {(?U_66 ex:hasAppointmentDate) e:skolem ?U_67}.
-{ex:movemap gps:description (true true {?U_68 ex:hasAppointmentDate ?U_69} step:makeAppointmentForAddressChange 1 1 0.97 0.97)} :reliesOn {?U_68 a o-persoon:Inwoner}.
-{ex:movemap gps:description (true true {?U_70 ex:hasAppointmentDate ?U_71} step:makeAppointmentForAddressChange 1 1 0.97 0.97)} :reliesOn {?U_70 ex:confirmationOfAddressChange true}.
-{ex:movemap gps:description (true true {?U_72 ex:addressChanged true} step:visitOfficeForAddressChange 1 1 0.97 0.97)} :reliesOn {?U_72 a o-persoon:Inwoner}.
-{ex:movemap gps:description (true true {?U_74 ex:addressChanged true} step:visitOfficeForAddressChange 1 1 0.97 0.97)} :reliesOn {?U_74 ex:hasAppointmentDate ?U_75}.
-{ex:movemap gps:description (true true {?U_76 ex:policeVisitRequested true} step:requestPoliceVisit 1 1 0.97 0.97)} :reliesOn {?U_76 a o-persoon:Inwoner}.
-{ex:movemap gps:description (true true {?U_93 ex:policeVisitRequested true} step:requestPoliceVisit 1 1 0.97 0.97)} :reliesOn {?U_93 foaf:familyName ?U_94}.
-{ex:movemap gps:description (true true {?U_110 ex:policeVisitRequested true} step:requestPoliceVisit 1 1 0.97 0.97)} :reliesOn {?U_110 foaf:givenName ?U_112}.
-{ex:movemap gps:description (true true {?U_127 ex:policeVisitRequested true} step:requestPoliceVisit 1 1 0.97 0.97)} :reliesOn {?U_127 ex:availabilityInfo ?U_130}.
-{ex:movemap gps:description (true true {?U_144 ex:policeVisitRequested true} step:requestPoliceVisit 1 1 0.97 0.97)} :reliesOn {?U_144 ex:movingAddress ?U_148}.
-{ex:movemap gps:description (true true {?U_161 ex:policeVisitRequested true} step:requestPoliceVisit 1 1 0.97 0.97)} :reliesOn {?U_161 ex:movingCity ?U_166}.
-{ex:movemap gps:description (true true {?U_178 ex:policeVisitRequested true} step:requestPoliceVisit 1 1 0.97 0.97)} :reliesOn {?U_178 ex:movingDate ?U_184}.
-{ex:movemap gps:description (true true {?U_195 ex:policeVisitRequested true} step:requestPoliceVisit 1 1 0.97 0.97)} :reliesOn {?U_195 ex:nationalNumber ?U_202}.
-{ex:movemap gps:description (true true {?U_212 ex:policeVisitRequested true} step:requestPoliceVisit 1 1 0.97 0.97)} :reliesOn {?U_212 ex:providedFamilyInformation true}.
-{ex:movemap gps:description (true true {?U_229 ex:policeVisitRequested true} step:requestPoliceVisit 1 1 0.97 0.97)} :reliesOn {?U_229 schema:hasOccupation ?U_237}.
-{ex:movemap gps:description (true true {?U_246 ex:policeVisitRequested true} step:requestPoliceVisit 1 1 0.97 0.97)} :reliesOn {?U_255 o-persoon:datum ?U_256}.
-{ex:movemap gps:description (true true {?U_263 ex:policeVisitRequested true} step:requestPoliceVisit 1 1 0.97 0.97)} :reliesOn {?U_263 o-persoon:heeftGeboorte ?U_272}.
-{ex:movemap gps:description (true true {?U_280 ex:policeVisitRequested true} step:requestPoliceVisit 1 1 0.97 0.97)} :reliesOn {?U_291 o-persoon:plaats ?U_292}.
-{ex:movemap gps:description (true true {?U_297 ex:policeVisitRequested true} step:requestPoliceVisit 1 1 0.97 0.97)} :reliesOn {?U_297 schema:contactPoint ?U_310}.
-{ex:movemap gps:description (true true {?U_314 ex:policeVisitRequested true} step:requestPoliceVisit 1 1 0.97 0.97)} :reliesOn {?U_327 schema:contactType "gsm"}.
-{ex:movemap gps:description (true true {?U_331 ex:policeVisitRequested true} step:requestPoliceVisit 1 1 0.97 0.97)} :reliesOn {?U_345 schema:contactType "telephone"}.
-{ex:movemap gps:description (true true {?U_348 ex:policeVisitRequested true} step:requestPoliceVisit 1 1 0.97 0.97)} :reliesOn {?U_361 schema:telephone ?U_363}.
-{ex:movemap gps:description (true true {?U_365 ex:familyMember ?U_366} step:provideDataOfFamilyMembers 1 1 0.97 0.97)} :reliesOn {(?U_365 ex:familyMember) e:skolem ?U_366}.
-{ex:movemap gps:description (true true {?U_367 ex:familyMember ?U_368} step:provideDataOfFamilyMembers 1 1 0.97 0.97)} :reliesOn {?U_367 a o-persoon:Inwoner}.
-{ex:movemap gps:description (true true {?U_369 ex:confirmationOfAddressChange true} step:getPolicevisit 1 1 0.97 0.97)} :reliesOn {?U_369 a o-persoon:Inwoner}.
-{ex:movemap gps:description (true true {?U_370 ex:confirmationOfAddressChange true} step:getPolicevisit 1 1 0.97 0.97)} :reliesOn {?U_370 ex:policeVisitRequested true}.
-{ex:movemap gps:description (true true {?U_371 ex:availabilityInfo ?U_372} step:provideAvailability 1 1 0.97 0.97)} :reliesOn {(?U_371 ex:availabilityInfo) e:skolem ?U_372}.
-{ex:movemap gps:description (true true {?U_373 ex:availabilityInfo ?U_374} step:provideAvailability 1 1 0.97 0.97)} :reliesOn {?U_373 a o-persoon:Inwoner}.
-{ex:movemap gps:description (true true {?U_375 ex:numberOfFamilyMembers ?U_376} step:provideNumberOfFamilyMembersManually 1 1 0.97 0.97)} :reliesOn {(?U_375 ex:numberOfFamilyMembers) e:skolem ?U_376}.
-{ex:movemap gps:description (true true {?U_377 ex:numberOfFamilyMembers ?U_378} step:provideNumberOfFamilyMembersManually 1 1 0.97 0.97)} :reliesOn {?U_377 a o-persoon:Inwoner}.
-{ex:movemap gps:description (true true {?U_379 foaf:givenName ?U_380} step:provideCitizenFirstNameManually 1 1 0.97 0.97)} :reliesOn {(?U_379 foaf:givenName) e:skolem ?U_380}.
-{ex:movemap gps:description (true true {?U_381 foaf:givenName ?U_382} step:provideCitizenFirstNameManually 1 1 0.97 0.97)} :reliesOn {?U_381 a o-persoon:Inwoner}.
-{ex:movemap gps:description (true true {?U_383 foaf:familyName ?U_384} step:provideCitizenLastNameManually 1 1 0.97 0.97)} :reliesOn {(?U_383 foaf:familyName) e:skolem ?U_384}.
-{ex:movemap gps:description (true true {?U_385 foaf:familyName ?U_386} step:provideCitizenLastNameManually 1 1 0.97 0.97)} :reliesOn {?U_385 a o-persoon:Inwoner}.
-{ex:movemap gps:description (true true {?U_387 o-persoon:geslacht ?U_388} step:provideCitizenGenderManually 1 1 0.97 0.97)} :reliesOn {(?U_387 o-persoon:geslacht) e:skolem ?U_388}.
-{ex:movemap gps:description (true true {?U_389 o-persoon:geslacht ?U_390} step:provideCitizenGenderManually 1 1 0.97 0.97)} :reliesOn {?U_389 a o-persoon:Inwoner}.
-{ex:movemap gps:description (true true {?U_391 schema:email ?U_392} step:provideCitizenEmailManually 1 1 0.97 0.97)} :reliesOn {(?U_391 schema:email) e:skolem ?U_392}.
-{ex:movemap gps:description (true true {?U_393 schema:email ?U_394} step:provideCitizenEmailManually 1 1 0.97 0.97)} :reliesOn {?U_393 a o-persoon:Inwoner}.
-{ex:movemap gps:description (true true {?U_395 schema:contactPoint ?U_396. ?U_396 schema:contactType "gsm". ?U_396 schema:telephone ?U_397} step:provideCitizenMobilePhoneNumberManually 1 1 0.97 0.97)} :reliesOn {(?U_395 schema:contactPoint schema:contactType "gsm") e:skolem ?U_396}.
-{ex:movemap gps:description (true true {?U_398 schema:contactPoint ?U_399. ?U_399 schema:contactType "gsm". ?U_399 schema:telephone ?U_400} step:provideCitizenMobilePhoneNumberManually 1 1 0.97 0.97)} :reliesOn {(?U_398 schema:contactPoint schema:contactType "gsm" schema:telephone) e:skolem ?U_400}.
-{ex:movemap gps:description (true true {?U_401 schema:contactPoint ?U_402. ?U_402 schema:contactType "gsm". ?U_402 schema:telephone ?U_403} step:provideCitizenMobilePhoneNumberManually 1 1 0.97 0.97)} :reliesOn {?U_401 a o-persoon:Inwoner}.
-{ex:movemap gps:description (true true {?U_404 schema:contactPoint ?U_405. ?U_405 schema:contactType "telephone". ?U_405 schema:telephone ?U_406} step:provideCitizenPhoneNumberManually 1 1 0.97 0.97)} :reliesOn {(?U_404 schema:contactPoint schema:contactType "telephone") e:skolem ?U_405}.
-{ex:movemap gps:description (true true {?U_407 schema:contactPoint ?U_408. ?U_408 schema:contactType "telephone". ?U_408 schema:telephone ?U_409} step:provideCitizenPhoneNumberManually 1 1 0.97 0.97)} :reliesOn {(?U_407 schema:contactPoint schema:contactType "telephone" schema:telephone) e:skolem ?U_409}.
-{ex:movemap gps:description (true true {?U_410 schema:contactPoint ?U_411. ?U_411 schema:contactType "telephone". ?U_411 schema:telephone ?U_412} step:provideCitizenPhoneNumberManually 1 1 0.97 0.97)} :reliesOn {?U_410 a o-persoon:Inwoner}.
-{ex:movemap gps:description (true true {?U_413 ex:nationalNumber ?U_414} step:provideCitizenNationalNumberManually 1 1 0.97 0.97)} :reliesOn {(?U_413 ex:nationalNumber) e:skolem ?U_414}.
-{ex:movemap gps:description (true true {?U_415 ex:nationalNumber ?U_416} step:provideCitizenNationalNumberManually 1 1 0.97 0.97)} :reliesOn {?U_415 a o-persoon:Inwoner}.
-{ex:movemap gps:description (true true {?U_417 ex:bankAccountNumber ?U_418} step:provideCitizenBankAccountNumberManually 1 1 0.97 0.97)} :reliesOn {(?U_417 ex:bankAccountNumber) e:skolem ?U_418}.
-{ex:movemap gps:description (true true {?U_419 ex:bankAccountNumber ?U_420} step:provideCitizenBankAccountNumberManually 1 1 0.97 0.97)} :reliesOn {?U_419 a o-persoon:Inwoner}.
-{ex:movemap gps:description (true true true step:provideCitizenResidencePermitManually 1 1 0.97 0.97)} :reliesOn {?U_421 a o-persoon:Inwoner}.
-{ex:movemap gps:description (true true {?U_422 o-persoon:datum ?U_423. ?U_424 o-persoon:heeftGeboorte ?U_422} step:provideCitizenBirthDateManually 1 1 0.97 0.97)} :reliesOn {(?U_424 o-persoon:heeftGeboorte) e:skolem ?U_422}.
-{ex:movemap gps:description (true true {?U_425 o-persoon:datum ?U_426. ?U_427 o-persoon:heeftGeboorte ?U_425} step:provideCitizenBirthDateManually 1 1 0.97 0.97)} :reliesOn {(?U_425 o-persoon:datum) e:skolem ?U_426}.
-{ex:movemap gps:description (true true {?U_428 o-persoon:datum ?U_429. ?U_430 o-persoon:heeftGeboorte ?U_428} step:provideCitizenBirthDateManually 1 1 0.97 0.97)} :reliesOn {?U_430 a o-persoon:Inwoner}.
-{ex:movemap gps:description (true true {?U_431 o-persoon:heeftGeboorte ?U_432. ?U_432 o-persoon:plaats ?U_433} step:provideCitizenBirthPlaceManually 1 1 0.97 0.97)} :reliesOn {(?U_431 o-persoon:heeftGeboorte) e:skolem ?U_432}.
-{ex:movemap gps:description (true true {?U_434 o-persoon:heeftGeboorte ?U_435. ?U_435 o-persoon:plaats ?U_436} step:provideCitizenBirthPlaceManually 1 1 0.97 0.97)} :reliesOn {(?U_435 o-persoon:plaats) e:skolem ?U_436}.
-{ex:movemap gps:description (true true {?U_437 o-persoon:heeftGeboorte ?U_438. ?U_438 o-persoon:plaats ?U_439} step:provideCitizenBirthPlaceManually 1 1 0.97 0.97)} :reliesOn {?U_437 a o-persoon:Inwoner}.
-{ex:movemap gps:description (true true {?U_440 o-persoon:heeftVerblijfplaats ?U_441. ?U_441 o-persoon:verblijfsadres ?U_442} step:provideCitizenAddressManually 1 1 0.97 0.97)} :reliesOn {(?U_440 o-persoon:heeftVerblijfplaats) e:skolem ?U_441}.
-{ex:movemap gps:description (true true {?U_443 o-persoon:heeftVerblijfplaats ?U_444. ?U_444 o-persoon:verblijfsadres ?U_445} step:provideCitizenAddressManually 1 1 0.97 0.97)} :reliesOn {(?U_444 o-persoon:verblijfsadres) e:skolem ?U_445}.
-{ex:movemap gps:description (true true {?U_446 o-persoon:heeftVerblijfplaats ?U_447. ?U_447 o-persoon:verblijfsadres ?U_448} step:provideCitizenAddressManually 1 1 0.97 0.97)} :reliesOn {?U_446 a o-persoon:Inwoner}.
-{ex:movemap gps:description (true true {?U_449 schema:hasOccupation ?U_450} step:provideCitizenProfessionManually 1 1 0.97 0.97)} :reliesOn {(?U_449 schema:hasOccupation) e:skolem ?U_450}.
-{ex:movemap gps:description (true true {?U_451 schema:hasOccupation ?U_452} step:provideCitizenProfessionManually 1 1 0.97 0.97)} :reliesOn {?U_451 a o-persoon:Inwoner}.
-{ex:movemap gps:description (true true {?U_453 ex:movingDate ?U_454} step:provideMovingDateManually 1 1 0.97 0.97)} :reliesOn {(?U_453 ex:movingDate) e:skolem ?U_454}.
-{ex:movemap gps:description (true true {?U_455 ex:movingDate ?U_456} step:provideMovingDateManually 1 1 0.97 0.97)} :reliesOn {?U_455 a o-persoon:Inwoner}.
-{ex:movemap gps:description (true true {?U_457 ex:movingCity ?U_458} step:provideMovingCityManually 1 1 0.97 0.97)} :reliesOn {(?U_457 ex:movingCity) e:skolem ?U_458}.
-{ex:movemap gps:description (true true {?U_459 ex:movingCity ?U_460} step:provideMovingCityManually 1 1 0.97 0.97)} :reliesOn {?U_459 a o-persoon:Inwoner}.
-{ex:movemap gps:description (true true {?U_461 ex:movingAddress ?U_462} step:provideMovingAddressManually 1 1 0.97 0.97)} :reliesOn {(?U_461 ex:movingAddress) e:skolem ?U_462}.
-{ex:movemap gps:description (true true {?U_463 ex:movingAddress ?U_464} step:provideMovingAddressManually 1 1 0.97 0.97)} :reliesOn {?U_463 a o-persoon:Inwoner}.
-{ex:movemap gps:description (true true {?U_465 ex:billingAddress ?U_466} step:provideBillingAddressManually 1 1 0.97 0.97)} :reliesOn {(?U_465 ex:billingAddress) e:skolem ?U_466}.
-{ex:movemap gps:description (true true {?U_467 ex:billingAddress ?U_468} step:provideBillingAddressManually 1 1 0.97 0.97)} :reliesOn {?U_467 a o-persoon:Inwoner}.
-{?U_469 ex:paperWorkForMovementComplete true} :reliesOn {?U_469 ex:wasteCollectionRequested true}.
-{?U_473 ex:paperWorkForMovementComplete true} :reliesOn {?U_473 ex:addressChangeDeclared true}.
-{?U_477 ex:paperWorkForMovementComplete true} :reliesOn {?U_477 ex:transportRequested ?U_478}.
-{?U_481 ex:paperWorkForMovementComplete true} :reliesOn {?U_481 ex:mobilityRequested ?U_483}.
-{?U_485 ex:paperWorkForMovementComplete true} :reliesOn {?U_485 ex:drivingLicenceExchangeRequested ?U_488}.
-{?U_489 ex:providedFamilyInformation true} :reliesOn {?U_489 ex:numberOfFamilyMembers 1}.
-{?U_490 ex:providedFamilyInformation true} :reliesOn {?U_492 e:findall (?U_493 {?U_490 ex:familyMember ?U_493} ?U_494)}.
-{?U_496 ex:providedFamilyInformation true} :reliesOn {?U_500 e:length ?U_501}.
-{?U_502 ex:providedFamilyInformation true} :reliesOn {(?U_507 ?U_503) math:difference 1}.
-{?U_508 ex:providedFamilyInformation true} :reliesOn {?U_509 e:label ?U_510}.
-{?U_512 ex:providedFamilyInformation true} :reliesOn {?U_512 ex:familyMember ?U_515}.
+{{(?U_66 ex:numberOfRequested40LiterGreenWasteContainers) e:skolem ?U_67. ?U_66 a o-persoon:Inwoner} step:provideNumberOf40LiterGreenWasteContainersManually {?U_66 ex:numberOfRequested40LiterGreenWasteContainers ?U_67}} a :ShortDescription.
+{{(?U_68 ex:numberOfRequested120LiterGreenWasteContainers) e:skolem ?U_69. ?U_68 a o-persoon:Inwoner} step:provideNumberOf120LiterGreenWasteContainersManually {?U_68 ex:numberOfRequested120LiterGreenWasteContainers ?U_69}} a :ShortDescription.
+{{(?U_70 ex:stopGreeWasteContainer) e:skolem ?U_71. ?U_70 a o-persoon:Inwoner} step:provideGreenWasteContainerCollectionStopInfoManually {?U_70 ex:stopGreeWasteContainer ?U_71}} a :ShortDescription.
+{{(?U_72 ex:lockNeededForGreenWasteContainer) e:skolem ?U_73. ?U_72 a o-persoon:Inwoner} step:provideGreenWasteContainerLockInfoManually {?U_72 ex:lockNeededForGreenWasteContainer ?U_73}} a :ShortDescription.
+{{(?U_74 ex:needForGreenWasteContainer) e:skolem ?U_75. ?U_74 a o-persoon:Inwoner} step:provideGreenWasteContainerOwnCompostInfoManually {?U_74 ex:needForGreenWasteContainer ?U_75}} a :ShortDescription.
+{{(?U_76 ex:numberOfRequested40LiterGreyWasteContainers) e:skolem ?U_77. ?U_76 a o-persoon:Inwoner} step:provideNumberOf40LiterGreyWasteContainersManually {?U_76 ex:numberOfRequested40LiterGreyWasteContainers ?U_77}} a :ShortDescription.
+{{(?U_78 ex:numberOfRequested120LiterGreyWasteContainers) e:skolem ?U_79. ?U_78 a o-persoon:Inwoner} step:provideNumberOf120LiterGreyWasteContainersManualy {?U_78 ex:numberOfRequested120LiterGreyWasteContainers ?U_79}} a :ShortDescription.
+{{(?U_80 ex:numberOfRequested240LiterGreyWasteContainers) e:skolem ?U_81. ?U_80 a o-persoon:Inwoner} step:provideNumberOf240LiterGreyWasteContainers {?U_80 ex:numberOfRequested240LiterGreyWasteContainers ?U_81}} a :ShortDescription.
+{{(?U_82 ex:lockNeededForGreyWasteContainer) e:skolem ?U_83. ?U_82 a o-persoon:Inwoner} step:provideGreyWasteContainerLockInfoManually {?U_82 ex:lockNeededForGreyWasteContainer ?U_83}} a :ShortDescription.
+{{(?U_84 ex:numberOfRequested40LiterPaperWasteContainers) e:skolem ?U_85. ?U_84 a o-persoon:Inwoner} step:provideNumberOf40LiterPaperWasteContainersManually {?U_84 ex:numberOfRequested40LiterPaperWasteContainers ?U_85}} a :ShortDescription.
+{{(?U_86 ex:numberOfRequested240LiterPaperWasteContainers) e:skolem ?U_87. ?U_86 a o-persoon:Inwoner} step:provideNumberOf240LiterPaperWasteContainersManually {?U_86 ex:numberOfRequested240LiterPaperWasteContainers ?U_87}} a :ShortDescription.
+{{(?U_88 ex:numberOfRequested1100LiterPaperWasteContainers) e:skolem ?U_89. ?U_88 a o-persoon:Inwoner} step:provideNumberOf1100LiterPaperWasteContainersManually {?U_88 ex:numberOfRequested1100LiterPaperWasteContainers ?U_89}} a :ShortDescription.
+{ex:movemap gps:description (true true {?U_90 ex:hasAppointmentDate ?U_91} step:makeAppointmentForAddressChange 1 1 0.97 0.97)} :reliesOn {(?U_90 ex:hasAppointmentDate) e:skolem ?U_91}.
+{ex:movemap gps:description (true true {?U_92 ex:hasAppointmentDate ?U_93} step:makeAppointmentForAddressChange 1 1 0.97 0.97)} :reliesOn {?U_92 a o-persoon:Inwoner}.
+{ex:movemap gps:description (true true {?U_94 ex:hasAppointmentDate ?U_95} step:makeAppointmentForAddressChange 1 1 0.97 0.97)} :reliesOn {?U_94 ex:confirmationOfAddressChange true}.
+{ex:movemap gps:description (true true {?U_96 ex:addressChanged true} step:visitOfficeForAddressChange 1 1 0.97 0.97)} :reliesOn {?U_96 a o-persoon:Inwoner}.
+{ex:movemap gps:description (true true {?U_98 ex:addressChanged true} step:visitOfficeForAddressChange 1 1 0.97 0.97)} :reliesOn {?U_98 ex:hasAppointmentDate ?U_99}.
+{ex:movemap gps:description (true true {?U_100 ex:policeVisitRequested true} step:requestPoliceVisit 1 1 0.97 0.97)} :reliesOn {?U_100 a o-persoon:Inwoner}.
+{ex:movemap gps:description (true true {?U_117 ex:policeVisitRequested true} step:requestPoliceVisit 1 1 0.97 0.97)} :reliesOn {?U_117 foaf:familyName ?U_118}.
+{ex:movemap gps:description (true true {?U_134 ex:policeVisitRequested true} step:requestPoliceVisit 1 1 0.97 0.97)} :reliesOn {?U_134 foaf:givenName ?U_136}.
+{ex:movemap gps:description (true true {?U_151 ex:policeVisitRequested true} step:requestPoliceVisit 1 1 0.97 0.97)} :reliesOn {?U_151 ex:availabilityInfo ?U_154}.
+{ex:movemap gps:description (true true {?U_168 ex:policeVisitRequested true} step:requestPoliceVisit 1 1 0.97 0.97)} :reliesOn {?U_168 ex:movingAddress ?U_172}.
+{ex:movemap gps:description (true true {?U_185 ex:policeVisitRequested true} step:requestPoliceVisit 1 1 0.97 0.97)} :reliesOn {?U_185 ex:movingCity ?U_190}.
+{ex:movemap gps:description (true true {?U_202 ex:policeVisitRequested true} step:requestPoliceVisit 1 1 0.97 0.97)} :reliesOn {?U_202 ex:movingDate ?U_208}.
+{ex:movemap gps:description (true true {?U_219 ex:policeVisitRequested true} step:requestPoliceVisit 1 1 0.97 0.97)} :reliesOn {?U_219 ex:nationalNumber ?U_226}.
+{ex:movemap gps:description (true true {?U_236 ex:policeVisitRequested true} step:requestPoliceVisit 1 1 0.97 0.97)} :reliesOn {?U_236 ex:providedFamilyInformation true}.
+{ex:movemap gps:description (true true {?U_253 ex:policeVisitRequested true} step:requestPoliceVisit 1 1 0.97 0.97)} :reliesOn {?U_253 schema:hasOccupation ?U_261}.
+{ex:movemap gps:description (true true {?U_270 ex:policeVisitRequested true} step:requestPoliceVisit 1 1 0.97 0.97)} :reliesOn {?U_279 o-persoon:datum ?U_280}.
+{ex:movemap gps:description (true true {?U_287 ex:policeVisitRequested true} step:requestPoliceVisit 1 1 0.97 0.97)} :reliesOn {?U_287 o-persoon:heeftGeboorte ?U_296}.
+{ex:movemap gps:description (true true {?U_304 ex:policeVisitRequested true} step:requestPoliceVisit 1 1 0.97 0.97)} :reliesOn {?U_315 o-persoon:plaats ?U_316}.
+{ex:movemap gps:description (true true {?U_321 ex:policeVisitRequested true} step:requestPoliceVisit 1 1 0.97 0.97)} :reliesOn {?U_321 schema:contactPoint ?U_334}.
+{ex:movemap gps:description (true true {?U_338 ex:policeVisitRequested true} step:requestPoliceVisit 1 1 0.97 0.97)} :reliesOn {?U_351 schema:contactType "gsm"}.
+{ex:movemap gps:description (true true {?U_355 ex:policeVisitRequested true} step:requestPoliceVisit 1 1 0.97 0.97)} :reliesOn {?U_369 schema:contactType "telephone"}.
+{ex:movemap gps:description (true true {?U_372 ex:policeVisitRequested true} step:requestPoliceVisit 1 1 0.97 0.97)} :reliesOn {?U_385 schema:telephone ?U_387}.
+{ex:movemap gps:description (true true {?U_389 ex:familyMember ?U_390} step:provideDataOfFamilyMembers 1 1 0.97 0.97)} :reliesOn {(?U_389 ex:familyMember) e:skolem ?U_390}.
+{ex:movemap gps:description (true true {?U_391 ex:familyMember ?U_392} step:provideDataOfFamilyMembers 1 1 0.97 0.97)} :reliesOn {?U_391 a o-persoon:Inwoner}.
+{ex:movemap gps:description (true true {?U_393 ex:confirmationOfAddressChange true} step:getPolicevisit 1 1 0.97 0.97)} :reliesOn {?U_393 a o-persoon:Inwoner}.
+{ex:movemap gps:description (true true {?U_394 ex:confirmationOfAddressChange true} step:getPolicevisit 1 1 0.97 0.97)} :reliesOn {?U_394 ex:policeVisitRequested true}.
+{ex:movemap gps:description (true true {?U_395 ex:availabilityInfo ?U_396} step:provideAvailability 1 1 0.97 0.97)} :reliesOn {(?U_395 ex:availabilityInfo) e:skolem ?U_396}.
+{ex:movemap gps:description (true true {?U_397 ex:availabilityInfo ?U_398} step:provideAvailability 1 1 0.97 0.97)} :reliesOn {?U_397 a o-persoon:Inwoner}.
+{ex:movemap gps:description (true true {?U_399 ex:numberOfFamilyMembers ?U_400} step:provideNumberOfFamilyMembersManually 1 1 0.97 0.97)} :reliesOn {(?U_399 ex:numberOfFamilyMembers) e:skolem ?U_400}.
+{ex:movemap gps:description (true true {?U_401 ex:numberOfFamilyMembers ?U_402} step:provideNumberOfFamilyMembersManually 1 1 0.97 0.97)} :reliesOn {?U_401 a o-persoon:Inwoner}.
+{ex:movemap gps:description (true true {?U_403 foaf:givenName ?U_404} step:provideCitizenFirstNameManually 1 1 0.97 0.97)} :reliesOn {(?U_403 foaf:givenName) e:skolem ?U_404}.
+{ex:movemap gps:description (true true {?U_405 foaf:givenName ?U_406} step:provideCitizenFirstNameManually 1 1 0.97 0.97)} :reliesOn {?U_405 a o-persoon:Inwoner}.
+{ex:movemap gps:description (true true {?U_407 foaf:familyName ?U_408} step:provideCitizenLastNameManually 1 1 0.97 0.97)} :reliesOn {(?U_407 foaf:familyName) e:skolem ?U_408}.
+{ex:movemap gps:description (true true {?U_409 foaf:familyName ?U_410} step:provideCitizenLastNameManually 1 1 0.97 0.97)} :reliesOn {?U_409 a o-persoon:Inwoner}.
+{ex:movemap gps:description (true true {?U_411 o-persoon:geslacht ?U_412} step:provideCitizenGenderManually 1 1 0.97 0.97)} :reliesOn {(?U_411 o-persoon:geslacht) e:skolem ?U_412}.
+{ex:movemap gps:description (true true {?U_413 o-persoon:geslacht ?U_414} step:provideCitizenGenderManually 1 1 0.97 0.97)} :reliesOn {?U_413 a o-persoon:Inwoner}.
+{ex:movemap gps:description (true true {?U_415 schema:email ?U_416} step:provideCitizenEmailManually 1 1 0.97 0.97)} :reliesOn {(?U_415 schema:email) e:skolem ?U_416}.
+{ex:movemap gps:description (true true {?U_417 schema:email ?U_418} step:provideCitizenEmailManually 1 1 0.97 0.97)} :reliesOn {?U_417 a o-persoon:Inwoner}.
+{ex:movemap gps:description (true true {?U_419 schema:contactPoint ?U_420. ?U_420 schema:contactType "gsm". ?U_420 schema:telephone ?U_421} step:provideCitizenMobilePhoneNumberManually 1 1 0.97 0.97)} :reliesOn {(?U_419 schema:contactPoint schema:contactType "gsm") e:skolem ?U_420}.
+{ex:movemap gps:description (true true {?U_422 schema:contactPoint ?U_423. ?U_423 schema:contactType "gsm". ?U_423 schema:telephone ?U_424} step:provideCitizenMobilePhoneNumberManually 1 1 0.97 0.97)} :reliesOn {(?U_422 schema:contactPoint schema:contactType "gsm" schema:telephone) e:skolem ?U_424}.
+{ex:movemap gps:description (true true {?U_425 schema:contactPoint ?U_426. ?U_426 schema:contactType "gsm". ?U_426 schema:telephone ?U_427} step:provideCitizenMobilePhoneNumberManually 1 1 0.97 0.97)} :reliesOn {?U_425 a o-persoon:Inwoner}.
+{ex:movemap gps:description (true true {?U_428 schema:contactPoint ?U_429. ?U_429 schema:contactType "telephone". ?U_429 schema:telephone ?U_430} step:provideCitizenPhoneNumberManually 1 1 0.97 0.97)} :reliesOn {(?U_428 schema:contactPoint schema:contactType "telephone") e:skolem ?U_429}.
+{ex:movemap gps:description (true true {?U_431 schema:contactPoint ?U_432. ?U_432 schema:contactType "telephone". ?U_432 schema:telephone ?U_433} step:provideCitizenPhoneNumberManually 1 1 0.97 0.97)} :reliesOn {(?U_431 schema:contactPoint schema:contactType "telephone" schema:telephone) e:skolem ?U_433}.
+{ex:movemap gps:description (true true {?U_434 schema:contactPoint ?U_435. ?U_435 schema:contactType "telephone". ?U_435 schema:telephone ?U_436} step:provideCitizenPhoneNumberManually 1 1 0.97 0.97)} :reliesOn {?U_434 a o-persoon:Inwoner}.
+{ex:movemap gps:description (true true {?U_437 ex:nationalNumber ?U_438} step:provideCitizenNationalNumberManually 1 1 0.97 0.97)} :reliesOn {(?U_437 ex:nationalNumber) e:skolem ?U_438}.
+{ex:movemap gps:description (true true {?U_439 ex:nationalNumber ?U_440} step:provideCitizenNationalNumberManually 1 1 0.97 0.97)} :reliesOn {?U_439 a o-persoon:Inwoner}.
+{ex:movemap gps:description (true true {?U_441 ex:bankAccountNumber ?U_442} step:provideCitizenBankAccountNumberManually 1 1 0.97 0.97)} :reliesOn {(?U_441 ex:bankAccountNumber) e:skolem ?U_442}.
+{ex:movemap gps:description (true true {?U_443 ex:bankAccountNumber ?U_444} step:provideCitizenBankAccountNumberManually 1 1 0.97 0.97)} :reliesOn {?U_443 a o-persoon:Inwoner}.
+{ex:movemap gps:description (true true true step:provideCitizenResidencePermitManually 1 1 0.97 0.97)} :reliesOn {?U_445 a o-persoon:Inwoner}.
+{ex:movemap gps:description (true true {?U_446 o-persoon:datum ?U_447. ?U_448 o-persoon:heeftGeboorte ?U_446} step:provideCitizenBirthDateManually 1 1 0.97 0.97)} :reliesOn {(?U_446 o-persoon:datum) e:skolem ?U_447}.
+{ex:movemap gps:description (true true {?U_449 o-persoon:datum ?U_450. ?U_451 o-persoon:heeftGeboorte ?U_449} step:provideCitizenBirthDateManually 1 1 0.97 0.97)} :reliesOn {(?U_451 o-persoon:heeftGeboorte) e:skolem ?U_449}.
+{ex:movemap gps:description (true true {?U_452 o-persoon:datum ?U_453. ?U_454 o-persoon:heeftGeboorte ?U_452} step:provideCitizenBirthDateManually 1 1 0.97 0.97)} :reliesOn {?U_454 a o-persoon:Inwoner}.
+{ex:movemap gps:description (true true {?U_455 o-persoon:heeftGeboorte ?U_456. ?U_456 o-persoon:plaats ?U_457} step:provideCitizenBirthPlaceManually 1 1 0.97 0.97)} :reliesOn {(?U_456 o-persoon:plaats) e:skolem ?U_457}.
+{ex:movemap gps:description (true true {?U_458 o-persoon:heeftGeboorte ?U_459. ?U_459 o-persoon:plaats ?U_460} step:provideCitizenBirthPlaceManually 1 1 0.97 0.97)} :reliesOn {(?U_458 o-persoon:heeftGeboorte) e:skolem ?U_459}.
+{ex:movemap gps:description (true true {?U_461 o-persoon:heeftGeboorte ?U_462. ?U_462 o-persoon:plaats ?U_463} step:provideCitizenBirthPlaceManually 1 1 0.97 0.97)} :reliesOn {?U_461 a o-persoon:Inwoner}.
+{ex:movemap gps:description (true true {?U_464 o-persoon:heeftVerblijfplaats ?U_465. ?U_465 o-persoon:verblijfsadres ?U_466} step:provideCitizenAddressManually 1 1 0.97 0.97)} :reliesOn {(?U_465 o-persoon:verblijfsadres) e:skolem ?U_466}.
+{ex:movemap gps:description (true true {?U_467 o-persoon:heeftVerblijfplaats ?U_468. ?U_468 o-persoon:verblijfsadres ?U_469} step:provideCitizenAddressManually 1 1 0.97 0.97)} :reliesOn {(?U_467 o-persoon:heeftVerblijfplaats) e:skolem ?U_468}.
+{ex:movemap gps:description (true true {?U_470 o-persoon:heeftVerblijfplaats ?U_471. ?U_471 o-persoon:verblijfsadres ?U_472} step:provideCitizenAddressManually 1 1 0.97 0.97)} :reliesOn {?U_470 a o-persoon:Inwoner}.
+{ex:movemap gps:description (true true {?U_473 schema:hasOccupation ?U_474} step:provideCitizenProfessionManually 1 1 0.97 0.97)} :reliesOn {(?U_473 schema:hasOccupation) e:skolem ?U_474}.
+{ex:movemap gps:description (true true {?U_475 schema:hasOccupation ?U_476} step:provideCitizenProfessionManually 1 1 0.97 0.97)} :reliesOn {?U_475 a o-persoon:Inwoner}.
+{ex:movemap gps:description (true true {?U_477 ex:movingDate ?U_478} step:provideMovingDateManually 1 1 0.97 0.97)} :reliesOn {(?U_477 ex:movingDate) e:skolem ?U_478}.
+{ex:movemap gps:description (true true {?U_479 ex:movingDate ?U_480} step:provideMovingDateManually 1 1 0.97 0.97)} :reliesOn {?U_479 a o-persoon:Inwoner}.
+{ex:movemap gps:description (true true {?U_481 ex:movingCity ?U_482} step:provideMovingCityManually 1 1 0.97 0.97)} :reliesOn {(?U_481 ex:movingCity) e:skolem ?U_482}.
+{ex:movemap gps:description (true true {?U_483 ex:movingCity ?U_484} step:provideMovingCityManually 1 1 0.97 0.97)} :reliesOn {?U_483 a o-persoon:Inwoner}.
+{ex:movemap gps:description (true true {?U_485 ex:movingAddress ?U_486} step:provideMovingAddressManually 1 1 0.97 0.97)} :reliesOn {(?U_485 ex:movingAddress) e:skolem ?U_486}.
+{ex:movemap gps:description (true true {?U_487 ex:movingAddress ?U_488} step:provideMovingAddressManually 1 1 0.97 0.97)} :reliesOn {?U_487 a o-persoon:Inwoner}.
+{ex:movemap gps:description (true true {?U_489 ex:billingAddress ?U_490} step:provideBillingAddressManually 1 1 0.97 0.97)} :reliesOn {(?U_489 ex:billingAddress) e:skolem ?U_490}.
+{ex:movemap gps:description (true true {?U_491 ex:billingAddress ?U_492} step:provideBillingAddressManually 1 1 0.97 0.97)} :reliesOn {?U_491 a o-persoon:Inwoner}.
+{ex:movemap gps:description (true true {?U_493 ex:numberOfRequested40LiterGreenWasteContainers ?U_494} step:provideNumberOf40LiterGreenWasteContainersManually 1 1 0.97 0.97)} :reliesOn {(?U_493 ex:numberOfRequested40LiterGreenWasteContainers) e:skolem ?U_494}.
+{ex:movemap gps:description (true true {?U_495 ex:numberOfRequested40LiterGreenWasteContainers ?U_496} step:provideNumberOf40LiterGreenWasteContainersManually 1 1 0.97 0.97)} :reliesOn {?U_495 a o-persoon:Inwoner}.
+{ex:movemap gps:description (true true {?U_497 ex:numberOfRequested120LiterGreenWasteContainers ?U_498} step:provideNumberOf120LiterGreenWasteContainersManually 1 1 0.97 0.97)} :reliesOn {(?U_497 ex:numberOfRequested120LiterGreenWasteContainers) e:skolem ?U_498}.
+{ex:movemap gps:description (true true {?U_499 ex:numberOfRequested120LiterGreenWasteContainers ?U_500} step:provideNumberOf120LiterGreenWasteContainersManually 1 1 0.97 0.97)} :reliesOn {?U_499 a o-persoon:Inwoner}.
+{ex:movemap gps:description (true true {?U_501 ex:stopGreeWasteContainer ?U_502} step:provideGreenWasteContainerCollectionStopInfoManually 1 1 0.97 0.97)} :reliesOn {(?U_501 ex:stopGreeWasteContainer) e:skolem ?U_502}.
+{ex:movemap gps:description (true true {?U_503 ex:stopGreeWasteContainer ?U_504} step:provideGreenWasteContainerCollectionStopInfoManually 1 1 0.97 0.97)} :reliesOn {?U_503 a o-persoon:Inwoner}.
+{ex:movemap gps:description (true true {?U_505 ex:lockNeededForGreenWasteContainer ?U_506} step:provideGreenWasteContainerLockInfoManually 1 1 0.97 0.97)} :reliesOn {(?U_505 ex:lockNeededForGreenWasteContainer) e:skolem ?U_506}.
+{ex:movemap gps:description (true true {?U_507 ex:lockNeededForGreenWasteContainer ?U_508} step:provideGreenWasteContainerLockInfoManually 1 1 0.97 0.97)} :reliesOn {?U_507 a o-persoon:Inwoner}.
+{ex:movemap gps:description (true true {?U_509 ex:needForGreenWasteContainer ?U_510} step:provideGreenWasteContainerOwnCompostInfoManually 1 1 0.97 0.97)} :reliesOn {(?U_509 ex:needForGreenWasteContainer) e:skolem ?U_510}.
+{ex:movemap gps:description (true true {?U_511 ex:needForGreenWasteContainer ?U_512} step:provideGreenWasteContainerOwnCompostInfoManually 1 1 0.97 0.97)} :reliesOn {?U_511 a o-persoon:Inwoner}.
+{ex:movemap gps:description (true true {?U_513 ex:numberOfRequested40LiterGreyWasteContainers ?U_514} step:provideNumberOf40LiterGreyWasteContainersManually 1 1 0.97 0.97)} :reliesOn {(?U_513 ex:numberOfRequested40LiterGreyWasteContainers) e:skolem ?U_514}.
+{ex:movemap gps:description (true true {?U_515 ex:numberOfRequested40LiterGreyWasteContainers ?U_516} step:provideNumberOf40LiterGreyWasteContainersManually 1 1 0.97 0.97)} :reliesOn {?U_515 a o-persoon:Inwoner}.
+{ex:movemap gps:description (true true {?U_517 ex:numberOfRequested120LiterGreyWasteContainers ?U_518} step:provideNumberOf120LiterGreyWasteContainersManualy 1 1 0.97 0.97)} :reliesOn {(?U_517 ex:numberOfRequested120LiterGreyWasteContainers) e:skolem ?U_518}.
+{ex:movemap gps:description (true true {?U_519 ex:numberOfRequested120LiterGreyWasteContainers ?U_520} step:provideNumberOf120LiterGreyWasteContainersManualy 1 1 0.97 0.97)} :reliesOn {?U_519 a o-persoon:Inwoner}.
+{ex:movemap gps:description (true true {?U_521 ex:numberOfRequested240LiterGreyWasteContainers ?U_522} step:provideNumberOf240LiterGreyWasteContainers 1 1 0.97 0.97)} :reliesOn {(?U_521 ex:numberOfRequested240LiterGreyWasteContainers) e:skolem ?U_522}.
+{ex:movemap gps:description (true true {?U_523 ex:numberOfRequested240LiterGreyWasteContainers ?U_524} step:provideNumberOf240LiterGreyWasteContainers 1 1 0.97 0.97)} :reliesOn {?U_523 a o-persoon:Inwoner}.
+{ex:movemap gps:description (true true {?U_525 ex:lockNeededForGreyWasteContainer ?U_526} step:provideGreyWasteContainerLockInfoManually 1 1 0.97 0.97)} :reliesOn {(?U_525 ex:lockNeededForGreyWasteContainer) e:skolem ?U_526}.
+{ex:movemap gps:description (true true {?U_527 ex:lockNeededForGreyWasteContainer ?U_528} step:provideGreyWasteContainerLockInfoManually 1 1 0.97 0.97)} :reliesOn {?U_527 a o-persoon:Inwoner}.
+{ex:movemap gps:description (true true {?U_529 ex:numberOfRequested40LiterPaperWasteContainers ?U_530} step:provideNumberOf40LiterPaperWasteContainersManually 1 1 0.97 0.97)} :reliesOn {(?U_529 ex:numberOfRequested40LiterPaperWasteContainers) e:skolem ?U_530}.
+{ex:movemap gps:description (true true {?U_531 ex:numberOfRequested40LiterPaperWasteContainers ?U_532} step:provideNumberOf40LiterPaperWasteContainersManually 1 1 0.97 0.97)} :reliesOn {?U_531 a o-persoon:Inwoner}.
+{ex:movemap gps:description (true true {?U_533 ex:numberOfRequested240LiterPaperWasteContainers ?U_534} step:provideNumberOf240LiterPaperWasteContainersManually 1 1 0.97 0.97)} :reliesOn {(?U_533 ex:numberOfRequested240LiterPaperWasteContainers) e:skolem ?U_534}.
+{ex:movemap gps:description (true true {?U_535 ex:numberOfRequested240LiterPaperWasteContainers ?U_536} step:provideNumberOf240LiterPaperWasteContainersManually 1 1 0.97 0.97)} :reliesOn {?U_535 a o-persoon:Inwoner}.
+{ex:movemap gps:description (true true {?U_537 ex:numberOfRequested1100LiterPaperWasteContainers ?U_538} step:provideNumberOf1100LiterPaperWasteContainersManually 1 1 0.97 0.97)} :reliesOn {(?U_537 ex:numberOfRequested1100LiterPaperWasteContainers) e:skolem ?U_538}.
+{ex:movemap gps:description (true true {?U_539 ex:numberOfRequested1100LiterPaperWasteContainers ?U_540} step:provideNumberOf1100LiterPaperWasteContainersManually 1 1 0.97 0.97)} :reliesOn {?U_539 a o-persoon:Inwoner}.
+{?U_541 ex:paperWorkForMovementComplete true} :reliesOn {?U_541 ex:wasteCollectionRequested true}.
+{?U_545 ex:paperWorkForMovementComplete true} :reliesOn {?U_545 ex:addressChangeDeclared true}.
+{?U_549 ex:paperWorkForMovementComplete true} :reliesOn {?U_549 ex:transportRequested ?U_550}.
+{?U_553 ex:paperWorkForMovementComplete true} :reliesOn {?U_553 ex:mobilityRequested ?U_555}.
+{?U_557 ex:paperWorkForMovementComplete true} :reliesOn {?U_557 ex:drivingLicenceExchangeRequested ?U_560}.
+{?U_561 ex:providedFamilyInformation true} :reliesOn {?U_561 ex:numberOfFamilyMembers 1}.
+{?U_562 ex:providedFamilyInformation true} :reliesOn {?U_564 e:findall (?U_565 {?U_562 ex:familyMember ?U_565} ?U_566)}.
+{?U_568 ex:providedFamilyInformation true} :reliesOn {?U_572 e:length ?U_573}.
+{?U_574 ex:providedFamilyInformation true} :reliesOn {(?U_579 ?U_575) math:difference 1}.
+{?U_580 ex:providedFamilyInformation true} :reliesOn {?U_581 e:label ?U_582}.
+{?U_584 ex:providedFamilyInformation true} :reliesOn {?U_584 ex:familyMember ?U_587}.
+{?U_588 ex:providedGreenWasteInformation true} :reliesOn {?U_588 ex:needForGreenWasteContainer false}.
+{?U_589 ex:providedGreenWasteInformation true} :reliesOn {?U_589 ex:numberOfRequested40LiterGreenWasteContainers ?U_591}.
+{?U_595 ex:providedGreenWasteInformation true} :reliesOn {?U_595 ex:numberOfRequested120LiterGreenWasteContainers ?U_598}.
+{?U_601 ex:providedGreenWasteInformation true} :reliesOn {?U_601 ex:stopGreeWasteContainer ?U_605}.
+{?U_607 ex:providedGreenWasteInformation true} :reliesOn {?U_607 ex:lockNeededForGreenWasteContainer ?U_612}.
 
-#2020-03-30T14:57:41.559Z in=31 out=103 ent=103 step=108 brake=1 inf=285349 sec=0.091 inf/sec=3135703
+#2020-03-31T13:18:03.286Z in=45 out=144 ent=144 step=150 brake=1 inf=374730 sec=0.118 inf/sec=3175678
 #ENDS
 

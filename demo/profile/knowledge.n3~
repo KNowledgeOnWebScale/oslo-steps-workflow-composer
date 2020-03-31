@@ -69,7 +69,7 @@ _:x e:findall (?member {?user ex:familyMember ?member} ?members ).
 ?user ex:numberOfRequested40LiterGreenWasteContainers ?b.
 ?user ex:numberOfRequested120LiterGreenWasteContainers ?c.
 ?user ex:stopGreeWasteContainer ?d.
-?user ex:lockNeededForGreenWasteContainer ?e.
+?user ex:lockNededForGreenWasteContainer ?e.
 }.
 
 
