@@ -27,9 +27,9 @@
 @prefix math: <http://www.w3.org/2000/10/swap/math#>.
 @prefix oslo: <https://example.org/ns/oslo#>.
 @prefix ns2: <http://josd.github.io/.well-known/genid/pP7dSETOSHCTU6bSn:iLn_1X3mg#>.
-@prefix ns3: <http://josd.github.io/.well-known/genid/R6UTffIY1rQS3OvnWjMF_ax_H3I#>.
+@prefix ns3: <http://josd.github.io/.well-known/genid/BCUvWfaoWJ49RHrPv3vEOMm9yt4#>.
 @prefix : <http://example.org#>.
-@prefix ns4: <http://josd.github.io/.well-known/genid/TTf2cdmH7U16PG1WCr1oynWkqMk#>.
+@prefix ns4: <http://josd.github.io/.well-known/genid/bDjaJpF89F2HR9F6DV:7ZBzvy7M#>.
 @prefix plan: <http://https://github.com/doerthe/plan#>.
 
 {ex:movemap gps:description (true true {?U_44 ex:numberOfRequested40LiterGreenWasteContainers ?U_45} step:provideNumberOf40LiterGreenWasteContainersManually 1 1 0.97 0.97)} <= {(?U_44 ex:numberOfRequested40LiterGreenWasteContainers) e:skolem ?U_45. ?U_44 a o-persoon:Inwoner}.
@@ -38,6 +38,6 @@
 {ex:movemap gps:description (true true {?U_50 ex:lockNeededForGreenWasteContainer ?U_51} step:provideGreenWasteContainerLockInfoManually 1 1 0.97 0.97)} <= {(?U_50 ex:lockNeededForGreenWasteContainer) e:skolem ?U_51. ?U_50 a o-persoon:Inwoner}.
 {ex:movemap gps:description (true true {?U_52 ex:needForGreenWasteContainer ?U_53} step:provideGreenWasteContainerOwnCompostInfoManually 1 1 0.97 0.97)} <= {(?U_52 ex:needForGreenWasteContainer) e:skolem ?U_53. ?U_52 a o-persoon:Inwoner}.
 
-#2020-03-31T14:22:44.600Z in=218 out=5 ent=10 step=20 brake=2 inf=736400 sec=0.148 inf/sec=4975676
+#2020-04-07T12:58:51.237Z in=217 out=5 ent=10 step=20 brake=2 inf=736011 sec=0.163 inf/sec=4515405
 #ENDS
 

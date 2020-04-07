@@ -1,5 +1,5 @@
 #Processed by EYE v20.0313.1435 josd
-#eye oslo-descriptions/change-address-steps.ttl oslo-descriptions/change-address-states.ttl oslo-descriptions/change-address-shapes.ttl translation/step-reasoning.n3 translation/aux.n3 translation/createPattern.n3 --query translation/mappingRuleCreationContainer.n3 --nope --no-skolem http://josd.github.io/.well-known/genid/
+#eye oslo-descriptions/change-address-steps.ttl oslo-descriptions/change-address-states.ttl oslo-descriptions/change-address-shapes.ttl translation/step-reasoning.n3 translation/help.n3 translation/createPattern.n3 --query translation/mappingRuleCreationContainer.n3 --nope --no-skolem http://josd.github.io/.well-known/genid/
 
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
 @prefix o-address: <https://data.vlaanderen.be/ns/adres#>.
@@ -27,7 +27,7 @@
 @prefix math: <http://www.w3.org/2000/10/swap/math#>.
 @prefix oslo: <https://example.org/ns/oslo#>.
 @prefix ns2: <http://josd.github.io/.well-known/genid/pP7dSETOSHCTU6bSn:iLn_1X3mg#>.
-@prefix ns3: <http://josd.github.io/.well-known/genid/TTf2cdmH7U16PG1WCr1oynWkqMk#>.
+@prefix ns3: <http://josd.github.io/.well-known/genid/bDjaJpF89F2HR9F6DV:7ZBzvy7M#>.
 
 {ex:movemap gps:description (true true {?t_6 ex:confirmationOfAddressChange true} step:confirmAddressChangeVisit 10 10 0.9 0.9)} <= {?t_6 a o-persoon:Inwoner. ?t_6 foaf:familyName ?U_5. ?t_6 foaf:givenName ?U_4. ?t_6 ex:movingAddress ?U_13. ?t_6 ex:movingCity ?U_15. ?t_6 ex:movingDate ?U_12. ?t_6 ex:nationalNumber ?U_8. ?t_6 schema:hasOccupation ?U_10. ?t_7 o-persoon:datum ?t_8. ?t_6 o-persoon:heeftGeboorte ?t_7. ?t_6 o-persoon:heeftGeboorte ?t_9. ?t_9 o-persoon:plaats ?t_10. ?t_6 schema:contactPoint ?U_0. ?t_6 schema:contactPoint ?U_2. ?U_0 schema:contactType "gsm". ?U_2 schema:contactType "telephone". ?U_0 schema:telephone ?U_1. ?U_2 schema:telephone ?U_3}.
 {ex:movemap gps:description (true true {?t_6 ex:addressChanged true} step:addressChangeOnEIDInOffice 10 10 0.9 0.9)} <= {?t_6 a o-persoon:Inwoner. ?t_6 ex:confirmationOfAddressChange true}.
@@ -36,6 +36,6 @@
 {ex:movemap gps:description (true true {?t_6 ex:providedGreenWasteInformation true} step:provideGreenWasteContainerInfo 10 10 0.9 0.9)} <= {?t_6 a o-persoon:Inwoner}.
 {ex:movemap gps:description (true true {?t_6 ex:numberOfRequested1100LiterPaperWasteContainers ?U_27. ?t_6 ex:numberOfRequested240LiterPaperWasteContainers ?U_26. ?t_6 ex:numberOfRequested40LiterPaperWasteContainers ?U_25} step:providePaperWasteContainerInfo 10 10 0.9 0.9)} <= {(?t_6 ex:numberOfRequested1100LiterPaperWasteContainers) e:skolem ?U_27. (?t_6 ex:numberOfRequested240LiterPaperWasteContainers) e:skolem ?U_26. (?t_6 ex:numberOfRequested40LiterPaperWasteContainers) e:skolem ?U_25. ?t_6 a o-persoon:Inwoner}.
 
-#2020-03-31T14:22:40.359Z in=1062 out=6 ent=99 step=430 brake=4 inf=784382 sec=0.170 inf/sec=4614012
+#2020-04-07T12:58:46.956Z in=1345 out=6 ent=99 step=430 brake=4 inf=925640 sec=0.171 inf/sec=5413099
 #ENDS
 

@@ -27,14 +27,14 @@
 @prefix math: <http://www.w3.org/2000/10/swap/math#>.
 @prefix oslo: <https://example.org/ns/oslo#>.
 @prefix ns2: <http://josd.github.io/.well-known/genid/pP7dSETOSHCTU6bSn:iLn_1X3mg#>.
-@prefix ns3: <http://josd.github.io/.well-known/genid/R6UTffIY1rQS3OvnWjMF_ax_H3I#>.
+@prefix ns3: <http://josd.github.io/.well-known/genid/BCUvWfaoWJ49RHrPv3vEOMm9yt4#>.
 @prefix : <http://example.org#>.
-@prefix ns4: <http://josd.github.io/.well-known/genid/TTf2cdmH7U16PG1WCr1oynWkqMk#>.
+@prefix ns4: <http://josd.github.io/.well-known/genid/bDjaJpF89F2HR9F6DV:7ZBzvy7M#>.
 @prefix plan: <http://https://github.com/doerthe/plan#>.
 
 {ex:movemap gps:description (true true {?U_23 ex:wasteCollectionRequested true} step:submitWasteCollectionComponentLevel 1 1 0.97 0.97)} <= {?U_23 a o-persoon:Inwoner. ?U_23 ex:wasteInfoShownToUser true}.
 {ex:movemap gps:description (true true {?U_24 ex:wasteInfoShownToUser true} step:showWasteCollection 1 1 0.97 0.97)} <= {?U_24 a o-persoon:Inwoner. ?U_24 ex:lockNeededForGreyWasteContainer ?U_25. ?U_24 ex:movingAddress ?U_26. ?U_24 ex:movingCity ?U_27. ?U_24 ex:movingDate ?U_28. ?U_24 ex:numberOfRequested1100LiterPaperWasteContainers ?U_29. ?U_24 ex:numberOfRequested120LiterGreyWasteContainers ?U_30. ?U_24 ex:numberOfRequested240LiterGreyWasteContainers ?U_31. ?U_24 ex:numberOfRequested240LiterPaperWasteContainers ?U_32. ?U_24 ex:numberOfRequested40LiterGreyWasteContainers ?U_33. ?U_24 ex:numberOfRequested40LiterPaperWasteContainers ?U_34. ?U_24 ex:providedGreenWasteInformation true. ?U_24 o-persoon:heeftVerblijfplaats ?U_35. ?U_35 o-persoon:verblijfsadres ?U_36}.
 
-#2020-03-31T14:22:47.583Z in=231 out=2 ent=4 step=8 brake=2 inf=802086 sec=0.158 inf/sec=5076494
+#2020-04-07T12:58:54.307Z in=230 out=2 ent=4 step=8 brake=2 inf=801696 sec=0.169 inf/sec=4743763
 #ENDS
 

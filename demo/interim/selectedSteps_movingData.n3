@@ -1,5 +1,5 @@
 #Processed by EYE v20.0313.1435 josd
-#eye interim/component-level-steps.n3 interim/shortComponentDescriptions.n3 interim/Goal_provideMovingData.n3 preselection/preselection.n3 profile/knowledge.n3 --nope --query preselection/prequery.n3
+#eye interim/component-level-steps.n3 interim/shortComponentDescriptions.n3 interim/Goal_provideMovingData.n3 preselection/preselection.n3 profile/knowledge.n3 profile/personalInfo.n3 --nope --query preselection/prequery.n3
 
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
 @prefix o-address: <https://data.vlaanderen.be/ns/adres#>.
@@ -27,7 +27,7 @@
 @prefix math: <http://www.w3.org/2000/10/swap/math#>.
 @prefix oslo: <https://example.org/ns/oslo#>.
 @prefix ns2: <http://josd.github.io/.well-known/genid/pP7dSETOSHCTU6bSn:iLn_1X3mg#>.
-@prefix ns3: <http://josd.github.io/.well-known/genid/R6UTffIY1rQS3OvnWjMF_ax_H3I#>.
+@prefix ns3: <http://josd.github.io/.well-known/genid/BCUvWfaoWJ49RHrPv3vEOMm9yt4#>.
 @prefix : <http://example.org#>.
 @prefix shp: <https://example.org/ns/shapes#>.
 @prefix ns4: <file:///media/doerthe/4EC6F987C6F97017/store/FAST/base/steps#>.
@@ -38,6 +38,6 @@
 {ex:movemap gps:description (true true {?U_38 ex:movingCity ?U_39} step:provideMovingCityManually 1 1 0.97 0.97)} <= {(?U_38 ex:movingCity) e:skolem ?U_39. ?U_38 a o-persoon:Inwoner}.
 {ex:movemap gps:description (true true {?U_40 ex:movingAddress ?U_41} step:provideMovingAddressManually 1 1 0.97 0.97)} <= {(?U_40 ex:movingAddress) e:skolem ?U_41. ?U_40 a o-persoon:Inwoner}.
 
-#2020-03-31T14:23:07.279Z in=217 out=3 ent=6 step=12 brake=2 inf=733972 sec=0.157 inf/sec=4674981
+#2020-04-07T12:59:11.040Z in=217 out=3 ent=6 step=12 brake=2 inf=740603 sec=0.154 inf/sec=4809110
 #ENDS
 

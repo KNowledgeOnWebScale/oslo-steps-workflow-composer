@@ -1,6 +1,3 @@
-#Processed by EYE v20.0313.1435 josd
-#eye workflow-composer/gps-plugin_modified_noPermutations.n3 profile/knowledge.n3 profile/personalInfo.n3 interim/extraRule_waste.n3 subgoals/aux2.n3 interim/selectedSteps_waste.n3 oslo-descriptions/change-address-steps.ttl --query interim/createdGoal_Waste.n3 --nope
-
 @prefix math: <http://www.w3.org/2000/10/swap/math#>.
 @prefix list: <http://www.w3.org/2000/10/swap/list#>.
 @prefix log: <http://www.w3.org/2000/10/swap/log#>.
@@ -27,14 +24,7 @@
 @prefix ns1: <https://example.org/ns/oslo-steps#>.
 @prefix var: <https://example.org/ns/var#>.
 @prefix oslo: <https://example.org/ns/oslo#>.
-@prefix ns2: <http://josd.github.io/.well-known/genid/pP7dSETOSHCTU6bSn:iLn_1X3mg#>.
-@prefix ns3: <http://josd.github.io/.well-known/genid/yIzdbPNpHXf3gTpt6gXGi3eC4rs#>.
-@prefix ns4: <http://josd.github.io/.well-known/genid/bDjaJpF89F2HR9F6DV:7ZBzvy7M#>.
-@prefix plan: <http://https://github.com/doerthe/plan#>.
-@prefix ns5: <http://josd.github.io/.well-known/genid/OTg6b:m2loMgivMmdk9Yd:bf8kE#>.
 
-_:sk_13 gps:path ((("unorderedList" (step:provideGreyWasteContainerInfo step:provideGreenWasteContainerInfo step:providePaperWasteContainerInfo)) step:submitWasteCollectionContainerLevel) 40.0 40.0 0.6561000000000001 0.6561000000000001).
+#step:provideGreyWasteContainerInfo step:provideGreenWasteContainerInfo step:providePaperWasteContainerInfo step:submitWasteCollectionContainerLevel
 
-#2020-04-07T12:58:49.384Z in=663 out=1 ent=7 step=3 brake=4 inf=559549 sec=0.127 inf/sec=4405898
-#ENDS
-
+step:addressChangeOnEIDInOffice ex:subpathlink <https://fast.ilabt.imec.be/api/plan/component_addressChangeOnEIDInOffice>. 

@@ -1,5 +1,5 @@
 #Processed by EYE v20.0313.1435 josd
-#eye workflow-composer/gps-plugin_modified_noPermutations.n3 profile/knowledge.n3 interim/SelectedSteps_personalInfo.n3 oslo-descriptions/change-address-steps.ttl --query interim/goal_personalInformation.n3 --nope
+#eye workflow-composer/gps-plugin_modified_noPermutations.n3 profile/knowledge.n3 profile/personalInfo.n3 interim/SelectedSteps_personalInfo.n3 oslo-descriptions/change-address-steps.ttl --query interim/goal_personalInformation.n3 --nope
 
 @prefix math: <http://www.w3.org/2000/10/swap/math#>.
 @prefix list: <http://www.w3.org/2000/10/swap/list#>.
@@ -33,10 +33,10 @@
 @prefix ns4: <file:///media/doerthe/4EC6F987C6F97017/store/FAST/base/steps#>.
 @prefix ns5: <http://josd.github.io/.well-known/genid/bCHPrOjcGmNlvnxxC_gIZneJs1Y#>.
 @prefix plan: <http://https://github.com/doerthe/plan#>.
-@prefix ns6: <http://josd.github.io/.well-known/genid/:7_vX1X5gjXcL15CxWO3l9DwHkU#>.
+@prefix ns6: <http://josd.github.io/.well-known/genid/eMzv:LbXW0hRExGGpqYyI8oTMs0#>.
 
 _:sk_0 gps:path ((("unorderedList" (step:provideCitizenFirstNameManually step:provideCitizenLastNameManually step:provideCitizenMobilePhoneNumberManually step:provideCitizenPhoneNumberManually step:provideCitizenNationalNumberManually step:provideCitizenBirthPlaceManually step:provideCitizenAddressManually step:provideCitizenProfessionManually))) 8.0 8.0 0.783743359437696 0.783743359437696).
 
-#2020-03-31T14:23:07.001Z in=382 out=1 ent=1 step=1 brake=2 inf=56653853 sec=16.341 inf/sec=3466976
+#2020-04-07T12:59:10.767Z in=665 out=1 ent=1 step=1 brake=2 inf=56801722 sec=13.647 inf/sec=4162213
 #ENDS
 

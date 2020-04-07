@@ -1,5 +1,5 @@
 #Processed by EYE v20.0313.1435 josd
-#eye workflow-composer/gps-plugin_modified_noPermutations.n3 profile/knowledge.n3 interim/extraRule_greyWaste.n3 subgoals/aux2.n3 interim/selectedSteps_greyWaste.n3 oslo-descriptions/change-address-steps.ttl --query interim/createdGoal_greyWaste.n3 --nope
+#eye workflow-composer/gps-plugin_modified_noPermutations.n3 profile/knowledge.n3 profile/personalInfo.n3 interim/extraRule_greyWaste.n3 subgoals/aux2.n3 interim/selectedSteps_greyWaste.n3 oslo-descriptions/change-address-steps.ttl --query interim/createdGoal_greyWaste.n3 --nope
 
 @prefix math: <http://www.w3.org/2000/10/swap/math#>.
 @prefix list: <http://www.w3.org/2000/10/swap/list#>.
@@ -28,13 +28,13 @@
 @prefix var: <https://example.org/ns/var#>.
 @prefix oslo: <https://example.org/ns/oslo#>.
 @prefix ns2: <http://josd.github.io/.well-known/genid/pP7dSETOSHCTU6bSn:iLn_1X3mg#>.
-@prefix ns3: <http://josd.github.io/.well-known/genid/TTf2cdmH7U16PG1WCr1oynWkqMk#>.
-@prefix ns4: <http://josd.github.io/.well-known/genid/R6UTffIY1rQS3OvnWjMF_ax_H3I#>.
+@prefix ns3: <http://josd.github.io/.well-known/genid/bDjaJpF89F2HR9F6DV:7ZBzvy7M#>.
+@prefix ns4: <http://josd.github.io/.well-known/genid/BCUvWfaoWJ49RHrPv3vEOMm9yt4#>.
 @prefix plan: <http://https://github.com/doerthe/plan#>.
-@prefix ns5: <http://josd.github.io/.well-known/genid/ndF793DhksR2Y2OUSRwNkIohsIo#>.
+@prefix ns5: <http://josd.github.io/.well-known/genid/V0UNkdZuJ2j1w7QVtx9HMDw5ywc#>.
 
 _:sk_0 gps:path ((("unorderedList" (step:provideNumberOf40LiterGreyWasteContainersManually step:provideNumberOf120LiterGreyWasteContainersManualy step:provideNumberOf240LiterGreyWasteContainers step:provideGreyWasteContainerLockInfoManually))) 4.0 4.0 0.8852928099999999 0.8852928099999999).
 
-#2020-03-31T14:22:45.841Z in=380 out=1 ent=1 step=3 brake=4 inf=424148 sec=0.114 inf/sec=3720596
+#2020-04-07T12:58:52.497Z in=663 out=1 ent=1 step=3 brake=4 inf=572036 sec=0.146 inf/sec=3918055
 #ENDS
 

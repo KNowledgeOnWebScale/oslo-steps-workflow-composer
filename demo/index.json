@@ -3,19 +3,11 @@
         "@vocab": "http://www.example.org#"
     },
     "features": {
-                  "journey-level-steps": {
-           "description": "creation of the journal level steps described in internal reasoning format",
-           "inference": {
-               "data": [ "./demo/oslo-descriptions/*", "./demo/translation/step-reasoning.n3", "./demo/translation/aux.n3", "./demo/translation/createPattern.n3" ],
-               "query" : "./demo/translation/mappingRuleCreationJourney.n3",
-               "eye:flags" : "--no-skolem http://josd.github.io/.well-known/genid/"
-            }
-        },
-        "shortJourneyDescriptions" : {
-             "description" : "To preselect steps based on a goal, we need shart descriptions of all steps",
-             "inference" : {
-                 "data" : ["./demo/interim/journey-level-steps.n3", "./demo/profile/*"],
-                 "query" : "./demo/preselection/pregeneration.n3"
+         "component_addressChangeOnEIDInOffice": {
+            "description": "component level  for change eid in office",
+            "inference": {
+                "data": ["./demo/profile/*", "./demo/workflow-composer/gps-plugin_modified_noPermutations.n3",  "./demo/oslo-descriptions/change-address-steps.ttl",   "./demo/interim/selectedSteps_addressChangeInOffice.n3", "./demo/interim/extraRule_addressChangeInOffice.n3", "./demo/subgoals/aux2.n3"],
+                "query": "./demo/interim/createdGoal_addressChangeInOffice.n3"
             }
         },
         "journey_moving": {
@@ -59,6 +51,34 @@
                 "data": ["./demo/profile/*", "./demo/workflow-composer/gps-plugin_modified_noPermutations.n3",  "./demo/oslo-descriptions/change-address-steps.ttl",   "./demo/interim/selectedSteps_movingData.n3"],
                 "query": "./demo/interim/Goal_provideMovingData.n3"
             }
-        }
+        },
+         "component_provideGreenWasteContainerInfo": {
+            "description": "component level  for green waste container info",
+            "inference": {
+                "data": ["./demo/profile/*", "./demo/workflow-composer/gps-plugin_modified_noPermutations.n3",  "./demo/oslo-descriptions/change-address-steps.ttl",   "./demo/interim/selectedSteps_greenWaste.n3", "./demo/interim/extraRule_greenWaste.n3", "./demo/subgoals/aux2.n3"],
+                "query": "./demo/interim/createdGoal_greenWaste.n3"
+            }
+        },
+         "component_provideGreyWasteContainerInfo": {
+            "description": "component level  for grey waste container info",
+            "inference": {
+                "data": ["./demo/profile/*", "./demo/workflow-composer/gps-plugin_modified_noPermutations.n3",  "./demo/oslo-descriptions/change-address-steps.ttl",   "./demo/interim/selectedSteps_greyWaste.n3", "./demo/interim/extraRule_greyWaste.n3", "./demo/subgoals/aux2.n3"],
+                "query": "./demo/interim/createdGoal_greyWaste.n3"
+            }
+        },
+         "component_providePaperWasteContainerInfo": {
+            "description": "component level  for paper waste container info",
+            "inference": {
+                "data": ["./demo/profile/*", "./demo/workflow-composer/gps-plugin_modified_noPermutations.n3",  "./demo/oslo-descriptions/change-address-steps.ttl",   "./demo/interim/selectedSteps_paperWaste.n3", "./demo/interim/extraRule_paperWaste.n3", "./demo/subgoals/aux2.n3"],
+                "query": "./demo/interim/createdGoal_paperWaste.n3"
+            }
+        },
+         "component_submitWasteCollectionContainerLevel": {
+            "description": "component level for final check and submission of waste container info",
+            "inference": {
+                "data": ["./demo/workflow-composer/gps-plugin_modified_noPermutations.n3",  "./demo/profile/*", "./demo/interim/extraRule_submitWasteInfo.n3",  "./demo/subgoals/aux2.n3",   "./demo/interim/selectedSteps_submitWasteInfo.n3", "./demo/oslo-descriptions/change-address-steps.ttl"],
+                "query": "./demo/interim/createdGoal_submitWasteInfo.n3"
+            }
+        }    
     }    
 }
