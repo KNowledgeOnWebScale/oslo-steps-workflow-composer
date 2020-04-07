@@ -4,12 +4,13 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
 @prefix o-address: <https://data.vlaanderen.be/ns/adres#>.
 @prefix o-steps: <https://fast.ilabt.imec.be/ns/oslo-steps/0.2#>.
+@prefix ex: <http://example.org/ns/example#>.
 @prefix xl: <http://www.w3.org/2008/05/skos-xl#>.
 @prefix state: <https://fast.ilabt.imec.be/api/v5/states#>.
 @prefix shape: <https://fast.ilabt.imec.be/api/v5/shapes#>.
 @prefix step: <https://fast.ilabt.imec.be/api/v5/steps#>.
 @prefix p-plan: <http://purl.org/net/p-plan#>.
-@prefix ex: <https://example.org/ns/example#>.
+@prefix ns1: <https://example.org/ns/example#>.
 @prefix foaf: <http://xmlns.com/foaf/0.1/>.
 @prefix sh: <http://www.w3.org/ns/shacl#>.
 @prefix schema: <https://schema.org/>.
@@ -17,7 +18,7 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#>.
 @prefix ops: <https://data.vlaanderen.be/shacl/persoon-basis#>.
 @prefix o-persoon: <https://data.vlaanderen.be/ns/persoon#>.
-@prefix ns1: <https://example.org/ns/oslo-steps#>.
+@prefix ns2: <https://example.org/ns/oslo-steps#>.
 @prefix var: <https://example.org/ns/var#>.
 @prefix log: <http://www.w3.org/2000/10/swap/log#>.
 @prefix e: <http://eulersharp.sourceforge.net/2003/03swap/log-rules#>.
@@ -26,18 +27,18 @@
 @prefix list: <http://www.w3.org/2000/10/swap/list#>.
 @prefix math: <http://www.w3.org/2000/10/swap/math#>.
 @prefix oslo: <https://example.org/ns/oslo#>.
-@prefix ns2: <http://josd.github.io/.well-known/genid/pP7dSETOSHCTU6bSn:iLn_1X3mg#>.
-@prefix ns3: <http://josd.github.io/.well-known/genid/BCUvWfaoWJ49RHrPv3vEOMm9yt4#>.
+@prefix ns3: <http://josd.github.io/.well-known/genid/pP7dSETOSHCTU6bSn:iLn_1X3mg#>.
+@prefix ns4: <http://josd.github.io/.well-known/genid/3xusu:8P3::CpVSgPAirSB1FrCA#>.
 @prefix : <http://example.org#>.
 @prefix shp: <https://example.org/ns/shapes#>.
-@prefix ns4: <file:///media/doerthe/4EC6F987C6F97017/store/FAST/base/steps#>.
-@prefix ns5: <http://josd.github.io/.well-known/genid/bCHPrOjcGmNlvnxxC_gIZneJs1Y#>.
+@prefix ns5: <file:///media/doerthe/4EC6F987C6F97017/store/FAST/base/steps#>.
+@prefix ns6: <http://josd.github.io/.well-known/genid/bCHPrOjcGmNlvnxxC_gIZneJs1Y#>.
 @prefix plan: <http://https://github.com/doerthe/plan#>.
 
-{ex:movemap gps:description (true true {?U_36 ex:movingDate ?U_37} step:provideMovingDateManually 1 1 0.97 0.97)} <= {(?U_36 ex:movingDate) e:skolem ?U_37. ?U_36 a o-persoon:Inwoner}.
-{ex:movemap gps:description (true true {?U_38 ex:movingCity ?U_39} step:provideMovingCityManually 1 1 0.97 0.97)} <= {(?U_38 ex:movingCity) e:skolem ?U_39. ?U_38 a o-persoon:Inwoner}.
-{ex:movemap gps:description (true true {?U_40 ex:movingAddress ?U_41} step:provideMovingAddressManually 1 1 0.97 0.97)} <= {(?U_40 ex:movingAddress) e:skolem ?U_41. ?U_40 a o-persoon:Inwoner}.
+{ns1:movemap gps:description (true true {?U_36 ns1:movingDate ?U_37} step:provideMovingDateManually 1 1 0.97 0.97)} <= {(?U_36 ns1:movingDate) e:skolem ?U_37. ?U_36 a o-persoon:Inwoner}.
+{ns1:movemap gps:description (true true {?U_38 ns1:movingCity ?U_39} step:provideMovingCityManually 1 1 0.97 0.97)} <= {(?U_38 ns1:movingCity) e:skolem ?U_39. ?U_38 a o-persoon:Inwoner}.
+{ns1:movemap gps:description (true true {?U_40 ns1:movingAddress ?U_41} step:provideMovingAddressManually 1 1 0.97 0.97)} <= {(?U_40 ns1:movingAddress) e:skolem ?U_41. ?U_40 a o-persoon:Inwoner}.
 
-#2020-04-07T12:59:11.040Z in=217 out=3 ent=6 step=12 brake=2 inf=740603 sec=0.154 inf/sec=4809110
+#2020-04-07T13:57:17.839Z in=217 out=3 ent=6 step=12 brake=2 inf=743203 sec=0.148 inf/sec=5021642
 #ENDS
 

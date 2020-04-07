@@ -3,13 +3,6 @@
         "@vocab": "http://www.example.org#"
     },
     "features": {
-         "component_addressChangeOnEIDInOffice": {
-            "description": "component level  for change eid in office",
-            "inference": {
-                "data": ["./demo/profile/*", "./demo/workflow-composer/gps-plugin_modified_noPermutations.n3",  "./demo/oslo-descriptions/change-address-steps.ttl",   "./demo/interim/selectedSteps_addressChangeInOffice.n3", "./demo/interim/extraRule_addressChangeInOffice.n3", "./demo/subgoals/aux2.n3"],
-                "query": "./demo/interim/createdGoal_addressChangeInOffice.n3"
-            }
-        },
         "journey_moving": {
             "description": "journey moving",
             "inference": {
@@ -78,6 +71,13 @@
             "inference": {
                 "data": ["./demo/workflow-composer/gps-plugin_modified_noPermutations.n3",  "./demo/profile/*", "./demo/interim/extraRule_submitWasteInfo.n3",  "./demo/subgoals/aux2.n3",   "./demo/interim/selectedSteps_submitWasteInfo.n3", "./demo/oslo-descriptions/change-address-steps.ttl"],
                 "query": "./demo/interim/createdGoal_submitWasteInfo.n3"
+            }
+        },
+         "component_addressChangeOnEIDInOffice": {
+            "description": "component level  for change eid in office",
+            "inference": {
+                "data": ["./demo/profile/*", "./demo/workflow-composer/gps-plugin_modified_noPermutations.n3",  "./demo/oslo-descriptions/change-address-steps.ttl",   "./demo/interim/selectedSteps_addressChangeInOffice.n3", "./demo/interim/extraRule_addressChangeInOffice.n3", "./demo/subgoals/aux2.n3"],
+                "query": "./demo/interim/createdGoal_addressChangeInOffice.n3"
             }
         }    
     }    

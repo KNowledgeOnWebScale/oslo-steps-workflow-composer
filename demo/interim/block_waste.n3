@@ -6,11 +6,12 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
 @prefix o-address: <https://data.vlaanderen.be/ns/adres#>.
 @prefix o-steps: <https://fast.ilabt.imec.be/ns/oslo-steps/0.2#>.
+@prefix ex: <http://example.org/ns/example#>.
 @prefix xl: <http://www.w3.org/2008/05/skos-xl#>.
 @prefix state: <https://fast.ilabt.imec.be/api/v5/states#>.
 @prefix shape: <https://fast.ilabt.imec.be/api/v5/shapes#>.
 @prefix p-plan: <http://purl.org/net/p-plan#>.
-@prefix ex: <https://example.org/ns/example#>.
+@prefix ns1: <https://example.org/ns/example#>.
 @prefix foaf: <http://xmlns.com/foaf/0.1/>.
 @prefix sh: <http://www.w3.org/ns/shacl#>.
 @prefix schema: <https://schema.org/>.
@@ -18,7 +19,7 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#>.
 @prefix ops: <https://data.vlaanderen.be/shacl/persoon-basis#>.
 @prefix o-persoon: <https://data.vlaanderen.be/ns/persoon#>.
-@prefix ns1: <https://example.org/ns/oslo-steps#>.
+@prefix ns2: <https://example.org/ns/oslo-steps#>.
 @prefix var: <https://example.org/ns/var#>.
 @prefix log: <http://www.w3.org/2000/10/swap/log#>.
 @prefix e: <http://eulersharp.sourceforge.net/2003/03swap/log-rules#>.
@@ -27,16 +28,16 @@
 @prefix list: <http://www.w3.org/2000/10/swap/list#>.
 @prefix math: <http://www.w3.org/2000/10/swap/math#>.
 @prefix oslo: <https://example.org/ns/oslo#>.
-@prefix ns2: <http://josd.github.io/.well-known/genid/pP7dSETOSHCTU6bSn:iLn_1X3mg#>.
-@prefix ns3: <http://josd.github.io/.well-known/genid/yIzdbPNpHXf3gTpt6gXGi3eC4rs#>.
+@prefix ns3: <http://josd.github.io/.well-known/genid/pP7dSETOSHCTU6bSn:iLn_1X3mg#>.
+@prefix ns4: <http://josd.github.io/.well-known/genid/CMEt0ek5S9nHwHmLvHJrBytNRM8#>.
 
 {_:sk_0 a o-persoon:Inwoner} :inInputRule true.
 {_:sk_0 o-persoon:heeftVerblijfplaats _:sk_4} :inInputRule true.
 {_:sk_4 o-persoon:verblijfsadres _:sk_5} :inInputRule true.
-{_:sk_0 ex:movingAddress _:sk_1} :inInputRule true.
-{_:sk_0 ex:movingCity _:sk_2} :inInputRule true.
-{_:sk_0 ex:movingDate _:sk_3} :inInputRule true.
+{_:sk_0 ns1:movingAddress _:sk_1} :inInputRule true.
+{_:sk_0 ns1:movingCity _:sk_2} :inInputRule true.
+{_:sk_0 ns1:movingDate _:sk_3} :inInputRule true.
 
-#2020-04-07T12:58:48.898Z in=6 out=6 ent=6 step=6 brake=1 inf=74631 sec=0.051 inf/sec=1463353
+#2020-04-07T13:56:55.777Z in=6 out=6 ent=6 step=6 brake=1 inf=75137 sec=0.057 inf/sec=1318193
 #ENDS
 

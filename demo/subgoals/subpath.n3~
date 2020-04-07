@@ -38,7 +38,7 @@ step:changeAddress ex:subpathlink <https://fast.ilabt.imec.be/api/plan/container
 step:submitWasteInfo ex:subpathlink <https://fast.ilabt.imec.be/api/plan/container_submitWasteInfo>.
 
 #component paths
-step:confirmAddressChangeVisit ex:subpathlink  <https://fast.ilabt.imec.be/api/plan/component_confirmAddressChangeVisit>.
+step:confirmAddressChangeVisit ex:subpathlink  <https://fast.ilabt.imec.be/api/plan/component_confirmAddressChangeVisit>,
 
 step:addressChangeOnEIDInOffice ex:subpathlink <https://fast.ilabt.imec.be/api/plan/component_addressChangeOnEIDInOffice>. 
 
@@ -48,7 +48,7 @@ step:provideGreenWasteContainerInfo ex:subpathlink <https://fast.ilabt.imec.be/a
 
 step:providePaperWasteContainerInfo ex:subpathlink <https://fast.ilabt.imec.be/api/plan/component_providePaperWasteContainerInfo>.
 
-step:submitWasteCollectionContainerLevel ex:subpathlink <https://fast.ilabt.imec.be/api/plan/component_submitWasteCollectionContainerLevel>.
+
 
 
 

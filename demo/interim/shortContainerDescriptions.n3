@@ -4,12 +4,13 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
 @prefix o-address: <https://data.vlaanderen.be/ns/adres#>.
 @prefix o-steps: <https://fast.ilabt.imec.be/ns/oslo-steps/0.2#>.
+@prefix ex: <http://example.org/ns/example#>.
 @prefix xl: <http://www.w3.org/2008/05/skos-xl#>.
 @prefix state: <https://fast.ilabt.imec.be/api/v5/states#>.
 @prefix shape: <https://fast.ilabt.imec.be/api/v5/shapes#>.
 @prefix step: <https://fast.ilabt.imec.be/api/v5/steps#>.
 @prefix p-plan: <http://purl.org/net/p-plan#>.
-@prefix ex: <https://example.org/ns/example#>.
+@prefix ns1: <https://example.org/ns/example#>.
 @prefix foaf: <http://xmlns.com/foaf/0.1/>.
 @prefix sh: <http://www.w3.org/ns/shacl#>.
 @prefix schema: <https://schema.org/>.
@@ -17,7 +18,7 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#>.
 @prefix ops: <https://data.vlaanderen.be/shacl/persoon-basis#>.
 @prefix o-persoon: <https://data.vlaanderen.be/ns/persoon#>.
-@prefix ns1: <https://example.org/ns/oslo-steps#>.
+@prefix ns2: <https://example.org/ns/oslo-steps#>.
 @prefix var: <https://example.org/ns/var#>.
 @prefix log: <http://www.w3.org/2000/10/swap/log#>.
 @prefix e: <http://eulersharp.sourceforge.net/2003/03swap/log-rules#>.
@@ -26,74 +27,74 @@
 @prefix list: <http://www.w3.org/2000/10/swap/list#>.
 @prefix math: <http://www.w3.org/2000/10/swap/math#>.
 @prefix oslo: <https://example.org/ns/oslo#>.
-@prefix ns2: <http://josd.github.io/.well-known/genid/pP7dSETOSHCTU6bSn:iLn_1X3mg#>.
-@prefix ns3: <http://josd.github.io/.well-known/genid/bDjaJpF89F2HR9F6DV:7ZBzvy7M#>.
+@prefix ns3: <http://josd.github.io/.well-known/genid/pP7dSETOSHCTU6bSn:iLn_1X3mg#>.
+@prefix ns4: <http://josd.github.io/.well-known/genid/avPQ7MqsjbTol:G9LBftZlQkaXY#>.
 @prefix : <http://example.org#>.
 
-{{?U_0 a o-persoon:Inwoner. ?U_0 foaf:familyName ?U_1. ?U_0 foaf:givenName ?U_2. ?U_0 ex:movingAddress ?U_3. ?U_0 ex:movingCity ?U_4. ?U_0 ex:movingDate ?U_5. ?U_0 ex:nationalNumber ?U_6. ?U_0 schema:hasOccupation ?U_7. ?U_8 o-persoon:datum ?U_9. ?U_0 o-persoon:heeftGeboorte ?U_8. ?U_0 o-persoon:heeftGeboorte ?U_10. ?U_10 o-persoon:plaats ?U_11. ?U_0 schema:contactPoint ?U_12. ?U_0 schema:contactPoint ?U_13. ?U_12 schema:contactType "gsm". ?U_13 schema:contactType "telephone". ?U_12 schema:telephone ?U_14. ?U_13 schema:telephone ?U_15} step:confirmAddressChangeVisit {?U_0 ex:confirmationOfAddressChange true}} a :ShortDescription.
-{{?U_16 a o-persoon:Inwoner. ?U_16 ex:confirmationOfAddressChange true} step:addressChangeOnEIDInOffice {?U_16 ex:addressChanged true}} a :ShortDescription.
-{{?U_17 a o-persoon:Inwoner. ?U_17 ex:lockNeededForGreyWasteContainer ?U_18. ?U_17 ex:movingAddress ?U_19. ?U_17 ex:movingCity ?U_20. ?U_17 ex:movingDate ?U_21. ?U_17 ex:numberOfRequested1100LiterPaperWasteContainers ?U_22. ?U_17 ex:numberOfRequested120LiterGreyWasteContainers ?U_23. ?U_17 ex:numberOfRequested240LiterGreyWasteContainers ?U_24. ?U_17 ex:numberOfRequested240LiterPaperWasteContainers ?U_25. ?U_17 ex:numberOfRequested40LiterGreyWasteContainers ?U_26. ?U_17 ex:numberOfRequested40LiterPaperWasteContainers ?U_27. ?U_17 ex:providedGreenWasteInformation true. ?U_17 o-persoon:heeftVerblijfplaats ?U_28. ?U_28 o-persoon:verblijfsadres ?U_29} step:submitWasteCollectionContainerLevel {?U_17 ex:wasteCollectionRequested true}} a :ShortDescription.
-{{(?U_30 ex:lockNeededForGreyWasteContainer) e:skolem ?U_31. (?U_30 ex:numberOfRequested120LiterGreyWasteContainers) e:skolem ?U_32. (?U_30 ex:numberOfRequested240LiterGreyWasteContainers) e:skolem ?U_33. (?U_30 ex:numberOfRequested40LiterGreyWasteContainers) e:skolem ?U_34. ?U_30 a o-persoon:Inwoner} step:provideGreyWasteContainerInfo {?U_30 ex:lockNeededForGreyWasteContainer ?U_31. ?U_30 ex:numberOfRequested120LiterGreyWasteContainers ?U_32. ?U_30 ex:numberOfRequested240LiterGreyWasteContainers ?U_33. ?U_30 ex:numberOfRequested40LiterGreyWasteContainers ?U_34}} a :ShortDescription.
-{{?U_35 a o-persoon:Inwoner} step:provideGreenWasteContainerInfo {?U_35 ex:providedGreenWasteInformation true}} a :ShortDescription.
-{{(?U_36 ex:numberOfRequested1100LiterPaperWasteContainers) e:skolem ?U_37. (?U_36 ex:numberOfRequested240LiterPaperWasteContainers) e:skolem ?U_38. (?U_36 ex:numberOfRequested40LiterPaperWasteContainers) e:skolem ?U_39. ?U_36 a o-persoon:Inwoner} step:providePaperWasteContainerInfo {?U_36 ex:numberOfRequested1100LiterPaperWasteContainers ?U_37. ?U_36 ex:numberOfRequested240LiterPaperWasteContainers ?U_38. ?U_36 ex:numberOfRequested40LiterPaperWasteContainers ?U_39}} a :ShortDescription.
-{ex:movemap gps:description (true true {?U_40 ex:confirmationOfAddressChange true} step:confirmAddressChangeVisit 10 10 0.9 0.9)} :reliesOn {?U_40 a o-persoon:Inwoner}.
-{ex:movemap gps:description (true true {?U_56 ex:confirmationOfAddressChange true} step:confirmAddressChangeVisit 10 10 0.9 0.9)} :reliesOn {?U_56 foaf:familyName ?U_57}.
-{ex:movemap gps:description (true true {?U_72 ex:confirmationOfAddressChange true} step:confirmAddressChangeVisit 10 10 0.9 0.9)} :reliesOn {?U_72 foaf:givenName ?U_74}.
-{ex:movemap gps:description (true true {?U_88 ex:confirmationOfAddressChange true} step:confirmAddressChangeVisit 10 10 0.9 0.9)} :reliesOn {?U_88 ex:movingAddress ?U_91}.
-{ex:movemap gps:description (true true {?U_104 ex:confirmationOfAddressChange true} step:confirmAddressChangeVisit 10 10 0.9 0.9)} :reliesOn {?U_104 ex:movingCity ?U_108}.
-{ex:movemap gps:description (true true {?U_120 ex:confirmationOfAddressChange true} step:confirmAddressChangeVisit 10 10 0.9 0.9)} :reliesOn {?U_120 ex:movingDate ?U_125}.
-{ex:movemap gps:description (true true {?U_136 ex:confirmationOfAddressChange true} step:confirmAddressChangeVisit 10 10 0.9 0.9)} :reliesOn {?U_136 ex:nationalNumber ?U_142}.
-{ex:movemap gps:description (true true {?U_152 ex:confirmationOfAddressChange true} step:confirmAddressChangeVisit 10 10 0.9 0.9)} :reliesOn {?U_152 schema:hasOccupation ?U_159}.
-{ex:movemap gps:description (true true {?U_168 ex:confirmationOfAddressChange true} step:confirmAddressChangeVisit 10 10 0.9 0.9)} :reliesOn {?U_176 o-persoon:datum ?U_177}.
-{ex:movemap gps:description (true true {?U_184 ex:confirmationOfAddressChange true} step:confirmAddressChangeVisit 10 10 0.9 0.9)} :reliesOn {?U_184 o-persoon:heeftGeboorte ?U_192}.
-{ex:movemap gps:description (true true {?U_200 ex:confirmationOfAddressChange true} step:confirmAddressChangeVisit 10 10 0.9 0.9)} :reliesOn {?U_210 o-persoon:plaats ?U_211}.
-{ex:movemap gps:description (true true {?U_216 ex:confirmationOfAddressChange true} step:confirmAddressChangeVisit 10 10 0.9 0.9)} :reliesOn {?U_216 schema:contactPoint ?U_228}.
-{ex:movemap gps:description (true true {?U_232 ex:confirmationOfAddressChange true} step:confirmAddressChangeVisit 10 10 0.9 0.9)} :reliesOn {?U_244 schema:contactType "gsm"}.
-{ex:movemap gps:description (true true {?U_248 ex:confirmationOfAddressChange true} step:confirmAddressChangeVisit 10 10 0.9 0.9)} :reliesOn {?U_261 schema:contactType "telephone"}.
-{ex:movemap gps:description (true true {?U_264 ex:confirmationOfAddressChange true} step:confirmAddressChangeVisit 10 10 0.9 0.9)} :reliesOn {?U_276 schema:telephone ?U_278}.
-{ex:movemap gps:description (true true {?U_280 ex:addressChanged true} step:addressChangeOnEIDInOffice 10 10 0.9 0.9)} :reliesOn {?U_280 a o-persoon:Inwoner}.
-{ex:movemap gps:description (true true {?U_281 ex:addressChanged true} step:addressChangeOnEIDInOffice 10 10 0.9 0.9)} :reliesOn {?U_281 ex:confirmationOfAddressChange true}.
-{ex:movemap gps:description (true true {?U_282 ex:wasteCollectionRequested true} step:submitWasteCollectionContainerLevel 10 10 0.9 0.9)} :reliesOn {?U_282 a o-persoon:Inwoner}.
-{ex:movemap gps:description (true true {?U_295 ex:wasteCollectionRequested true} step:submitWasteCollectionContainerLevel 10 10 0.9 0.9)} :reliesOn {?U_295 ex:lockNeededForGreyWasteContainer ?U_296}.
-{ex:movemap gps:description (true true {?U_308 ex:wasteCollectionRequested true} step:submitWasteCollectionContainerLevel 10 10 0.9 0.9)} :reliesOn {?U_308 ex:movingAddress ?U_310}.
-{ex:movemap gps:description (true true {?U_321 ex:wasteCollectionRequested true} step:submitWasteCollectionContainerLevel 10 10 0.9 0.9)} :reliesOn {?U_321 ex:movingCity ?U_324}.
-{ex:movemap gps:description (true true {?U_334 ex:wasteCollectionRequested true} step:submitWasteCollectionContainerLevel 10 10 0.9 0.9)} :reliesOn {?U_334 ex:movingDate ?U_338}.
-{ex:movemap gps:description (true true {?U_347 ex:wasteCollectionRequested true} step:submitWasteCollectionContainerLevel 10 10 0.9 0.9)} :reliesOn {?U_347 ex:numberOfRequested1100LiterPaperWasteContainers ?U_352}.
-{ex:movemap gps:description (true true {?U_360 ex:wasteCollectionRequested true} step:submitWasteCollectionContainerLevel 10 10 0.9 0.9)} :reliesOn {?U_360 ex:numberOfRequested120LiterGreyWasteContainers ?U_366}.
-{ex:movemap gps:description (true true {?U_373 ex:wasteCollectionRequested true} step:submitWasteCollectionContainerLevel 10 10 0.9 0.9)} :reliesOn {?U_373 ex:numberOfRequested240LiterGreyWasteContainers ?U_380}.
-{ex:movemap gps:description (true true {?U_386 ex:wasteCollectionRequested true} step:submitWasteCollectionContainerLevel 10 10 0.9 0.9)} :reliesOn {?U_386 ex:numberOfRequested240LiterPaperWasteContainers ?U_394}.
-{ex:movemap gps:description (true true {?U_399 ex:wasteCollectionRequested true} step:submitWasteCollectionContainerLevel 10 10 0.9 0.9)} :reliesOn {?U_399 ex:numberOfRequested40LiterGreyWasteContainers ?U_408}.
-{ex:movemap gps:description (true true {?U_412 ex:wasteCollectionRequested true} step:submitWasteCollectionContainerLevel 10 10 0.9 0.9)} :reliesOn {?U_412 ex:numberOfRequested40LiterPaperWasteContainers ?U_422}.
-{ex:movemap gps:description (true true {?U_425 ex:wasteCollectionRequested true} step:submitWasteCollectionContainerLevel 10 10 0.9 0.9)} :reliesOn {?U_425 ex:providedGreenWasteInformation true}.
-{ex:movemap gps:description (true true {?U_438 ex:wasteCollectionRequested true} step:submitWasteCollectionContainerLevel 10 10 0.9 0.9)} :reliesOn {?U_438 o-persoon:heeftVerblijfplaats ?U_449}.
-{ex:movemap gps:description (true true {?U_451 ex:wasteCollectionRequested true} step:submitWasteCollectionContainerLevel 10 10 0.9 0.9)} :reliesOn {?U_462 o-persoon:verblijfsadres ?U_463}.
-{ex:movemap gps:description (true true {?U_464 ex:lockNeededForGreyWasteContainer ?U_465. ?U_464 ex:numberOfRequested120LiterGreyWasteContainers ?U_466. ?U_464 ex:numberOfRequested240LiterGreyWasteContainers ?U_467. ?U_464 ex:numberOfRequested40LiterGreyWasteContainers ?U_468} step:provideGreyWasteContainerInfo 10 10 0.9 0.9)} :reliesOn {(?U_464 ex:lockNeededForGreyWasteContainer) e:skolem ?U_465}.
-{ex:movemap gps:description (true true {?U_469 ex:lockNeededForGreyWasteContainer ?U_470. ?U_469 ex:numberOfRequested120LiterGreyWasteContainers ?U_471. ?U_469 ex:numberOfRequested240LiterGreyWasteContainers ?U_472. ?U_469 ex:numberOfRequested40LiterGreyWasteContainers ?U_473} step:provideGreyWasteContainerInfo 10 10 0.9 0.9)} :reliesOn {(?U_469 ex:numberOfRequested120LiterGreyWasteContainers) e:skolem ?U_471}.
-{ex:movemap gps:description (true true {?U_474 ex:lockNeededForGreyWasteContainer ?U_475. ?U_474 ex:numberOfRequested120LiterGreyWasteContainers ?U_476. ?U_474 ex:numberOfRequested240LiterGreyWasteContainers ?U_477. ?U_474 ex:numberOfRequested40LiterGreyWasteContainers ?U_478} step:provideGreyWasteContainerInfo 10 10 0.9 0.9)} :reliesOn {(?U_474 ex:numberOfRequested240LiterGreyWasteContainers) e:skolem ?U_477}.
-{ex:movemap gps:description (true true {?U_479 ex:lockNeededForGreyWasteContainer ?U_480. ?U_479 ex:numberOfRequested120LiterGreyWasteContainers ?U_481. ?U_479 ex:numberOfRequested240LiterGreyWasteContainers ?U_482. ?U_479 ex:numberOfRequested40LiterGreyWasteContainers ?U_483} step:provideGreyWasteContainerInfo 10 10 0.9 0.9)} :reliesOn {(?U_479 ex:numberOfRequested40LiterGreyWasteContainers) e:skolem ?U_483}.
-{ex:movemap gps:description (true true {?U_484 ex:lockNeededForGreyWasteContainer ?U_485. ?U_484 ex:numberOfRequested120LiterGreyWasteContainers ?U_486. ?U_484 ex:numberOfRequested240LiterGreyWasteContainers ?U_487. ?U_484 ex:numberOfRequested40LiterGreyWasteContainers ?U_488} step:provideGreyWasteContainerInfo 10 10 0.9 0.9)} :reliesOn {?U_484 a o-persoon:Inwoner}.
-{ex:movemap gps:description (true true {?U_489 ex:providedGreenWasteInformation true} step:provideGreenWasteContainerInfo 10 10 0.9 0.9)} :reliesOn {?U_489 a o-persoon:Inwoner}.
-{ex:movemap gps:description (true true {?U_490 ex:numberOfRequested1100LiterPaperWasteContainers ?U_491. ?U_490 ex:numberOfRequested240LiterPaperWasteContainers ?U_492. ?U_490 ex:numberOfRequested40LiterPaperWasteContainers ?U_493} step:providePaperWasteContainerInfo 10 10 0.9 0.9)} :reliesOn {(?U_490 ex:numberOfRequested1100LiterPaperWasteContainers) e:skolem ?U_491}.
-{ex:movemap gps:description (true true {?U_494 ex:numberOfRequested1100LiterPaperWasteContainers ?U_495. ?U_494 ex:numberOfRequested240LiterPaperWasteContainers ?U_496. ?U_494 ex:numberOfRequested40LiterPaperWasteContainers ?U_497} step:providePaperWasteContainerInfo 10 10 0.9 0.9)} :reliesOn {(?U_494 ex:numberOfRequested240LiterPaperWasteContainers) e:skolem ?U_496}.
-{ex:movemap gps:description (true true {?U_498 ex:numberOfRequested1100LiterPaperWasteContainers ?U_499. ?U_498 ex:numberOfRequested240LiterPaperWasteContainers ?U_500. ?U_498 ex:numberOfRequested40LiterPaperWasteContainers ?U_501} step:providePaperWasteContainerInfo 10 10 0.9 0.9)} :reliesOn {(?U_498 ex:numberOfRequested40LiterPaperWasteContainers) e:skolem ?U_501}.
-{ex:movemap gps:description (true true {?U_502 ex:numberOfRequested1100LiterPaperWasteContainers ?U_503. ?U_502 ex:numberOfRequested240LiterPaperWasteContainers ?U_504. ?U_502 ex:numberOfRequested40LiterPaperWasteContainers ?U_505} step:providePaperWasteContainerInfo 10 10 0.9 0.9)} :reliesOn {?U_502 a o-persoon:Inwoner}.
-{?U_506 ex:paperWorkForMovementComplete true} :reliesOn {?U_506 ex:wasteCollectionRequested true}.
-{?U_510 ex:paperWorkForMovementComplete true} :reliesOn {?U_510 ex:addressChangeDeclared true}.
-{?U_514 ex:paperWorkForMovementComplete true} :reliesOn {?U_514 ex:transportRequested ?U_515}.
-{?U_518 ex:paperWorkForMovementComplete true} :reliesOn {?U_518 ex:mobilityRequested ?U_520}.
-{?U_522 ex:paperWorkForMovementComplete true} :reliesOn {?U_522 ex:drivingLicenceExchangeRequested ?U_525}.
-{?U_526 ex:providedFamilyInformation true} :reliesOn {?U_526 ex:numberOfFamilyMembers 1}.
-{?U_527 ex:providedFamilyInformation true} :reliesOn {?U_529 e:findall (?U_530 {?U_527 ex:familyMember ?U_530} ?U_531)}.
-{?U_533 ex:providedFamilyInformation true} :reliesOn {?U_537 e:length ?U_538}.
-{?U_539 ex:providedFamilyInformation true} :reliesOn {(?U_544 ?U_540) math:difference 1}.
-{?U_545 ex:providedFamilyInformation true} :reliesOn {?U_546 e:label ?U_547}.
-{?U_549 ex:providedFamilyInformation true} :reliesOn {?U_549 ex:familyMember ?U_552}.
-{?U_553 ex:providedGreenWasteInformation true} :reliesOn {?U_553 ex:needForGreenWasteContainer false}.
-{?U_554 ex:providedGreenWasteInformation true} :reliesOn {?U_554 ex:numberOfRequested40LiterGreenWasteContainers ?U_556}.
-{?U_560 ex:providedGreenWasteInformation true} :reliesOn {?U_560 ex:numberOfRequested120LiterGreenWasteContainers ?U_563}.
-{?U_566 ex:providedGreenWasteInformation true} :reliesOn {?U_566 ex:stopGreeWasteContainer ?U_570}.
-{?U_572 ex:providedGreenWasteInformation true} :reliesOn {?U_572 ex:lockNeededForGreenWasteContainer ?U_577}.
+{{?U_0 a o-persoon:Inwoner. ?U_0 foaf:familyName ?U_1. ?U_0 foaf:givenName ?U_2. ?U_0 ns1:movingAddress ?U_3. ?U_0 ns1:movingCity ?U_4. ?U_0 ns1:movingDate ?U_5. ?U_0 ns1:nationalNumber ?U_6. ?U_0 schema:hasOccupation ?U_7. ?U_8 o-persoon:datum ?U_9. ?U_0 o-persoon:heeftGeboorte ?U_8. ?U_0 o-persoon:heeftGeboorte ?U_10. ?U_10 o-persoon:plaats ?U_11. ?U_0 schema:contactPoint ?U_12. ?U_0 schema:contactPoint ?U_13. ?U_12 schema:contactType "gsm". ?U_13 schema:contactType "telephone". ?U_12 schema:telephone ?U_14. ?U_13 schema:telephone ?U_15} step:confirmAddressChangeVisit {?U_0 ns1:confirmationOfAddressChange true}} a :ShortDescription.
+{{?U_16 a o-persoon:Inwoner. ?U_16 ns1:confirmationOfAddressChange true} step:addressChangeOnEIDInOffice {?U_16 ns1:addressChanged true}} a :ShortDescription.
+{{?U_17 a o-persoon:Inwoner. ?U_17 ns1:lockNeededForGreyWasteContainer ?U_18. ?U_17 ns1:movingAddress ?U_19. ?U_17 ns1:movingCity ?U_20. ?U_17 ns1:movingDate ?U_21. ?U_17 ns1:numberOfRequested1100LiterPaperWasteContainers ?U_22. ?U_17 ns1:numberOfRequested120LiterGreyWasteContainers ?U_23. ?U_17 ns1:numberOfRequested240LiterGreyWasteContainers ?U_24. ?U_17 ns1:numberOfRequested240LiterPaperWasteContainers ?U_25. ?U_17 ns1:numberOfRequested40LiterGreyWasteContainers ?U_26. ?U_17 ns1:numberOfRequested40LiterPaperWasteContainers ?U_27. ?U_17 ns1:providedGreenWasteInformation true. ?U_17 o-persoon:heeftVerblijfplaats ?U_28. ?U_28 o-persoon:verblijfsadres ?U_29} step:submitWasteCollectionContainerLevel {?U_17 ns1:wasteCollectionRequested true}} a :ShortDescription.
+{{(?U_30 ns1:lockNeededForGreyWasteContainer) e:skolem ?U_31. (?U_30 ns1:numberOfRequested120LiterGreyWasteContainers) e:skolem ?U_32. (?U_30 ns1:numberOfRequested240LiterGreyWasteContainers) e:skolem ?U_33. (?U_30 ns1:numberOfRequested40LiterGreyWasteContainers) e:skolem ?U_34. ?U_30 a o-persoon:Inwoner} step:provideGreyWasteContainerInfo {?U_30 ns1:lockNeededForGreyWasteContainer ?U_31. ?U_30 ns1:numberOfRequested120LiterGreyWasteContainers ?U_32. ?U_30 ns1:numberOfRequested240LiterGreyWasteContainers ?U_33. ?U_30 ns1:numberOfRequested40LiterGreyWasteContainers ?U_34}} a :ShortDescription.
+{{?U_35 a o-persoon:Inwoner} step:provideGreenWasteContainerInfo {?U_35 ns1:providedGreenWasteInformation true}} a :ShortDescription.
+{{(?U_36 ns1:numberOfRequested1100LiterPaperWasteContainers) e:skolem ?U_37. (?U_36 ns1:numberOfRequested240LiterPaperWasteContainers) e:skolem ?U_38. (?U_36 ns1:numberOfRequested40LiterPaperWasteContainers) e:skolem ?U_39. ?U_36 a o-persoon:Inwoner} step:providePaperWasteContainerInfo {?U_36 ns1:numberOfRequested1100LiterPaperWasteContainers ?U_37. ?U_36 ns1:numberOfRequested240LiterPaperWasteContainers ?U_38. ?U_36 ns1:numberOfRequested40LiterPaperWasteContainers ?U_39}} a :ShortDescription.
+{ns1:movemap gps:description (true true {?U_40 ns1:confirmationOfAddressChange true} step:confirmAddressChangeVisit 10 10 0.9 0.9)} :reliesOn {?U_40 a o-persoon:Inwoner}.
+{ns1:movemap gps:description (true true {?U_56 ns1:confirmationOfAddressChange true} step:confirmAddressChangeVisit 10 10 0.9 0.9)} :reliesOn {?U_56 foaf:familyName ?U_57}.
+{ns1:movemap gps:description (true true {?U_72 ns1:confirmationOfAddressChange true} step:confirmAddressChangeVisit 10 10 0.9 0.9)} :reliesOn {?U_72 foaf:givenName ?U_74}.
+{ns1:movemap gps:description (true true {?U_88 ns1:confirmationOfAddressChange true} step:confirmAddressChangeVisit 10 10 0.9 0.9)} :reliesOn {?U_88 ns1:movingAddress ?U_91}.
+{ns1:movemap gps:description (true true {?U_104 ns1:confirmationOfAddressChange true} step:confirmAddressChangeVisit 10 10 0.9 0.9)} :reliesOn {?U_104 ns1:movingCity ?U_108}.
+{ns1:movemap gps:description (true true {?U_120 ns1:confirmationOfAddressChange true} step:confirmAddressChangeVisit 10 10 0.9 0.9)} :reliesOn {?U_120 ns1:movingDate ?U_125}.
+{ns1:movemap gps:description (true true {?U_136 ns1:confirmationOfAddressChange true} step:confirmAddressChangeVisit 10 10 0.9 0.9)} :reliesOn {?U_136 ns1:nationalNumber ?U_142}.
+{ns1:movemap gps:description (true true {?U_152 ns1:confirmationOfAddressChange true} step:confirmAddressChangeVisit 10 10 0.9 0.9)} :reliesOn {?U_152 schema:hasOccupation ?U_159}.
+{ns1:movemap gps:description (true true {?U_168 ns1:confirmationOfAddressChange true} step:confirmAddressChangeVisit 10 10 0.9 0.9)} :reliesOn {?U_176 o-persoon:datum ?U_177}.
+{ns1:movemap gps:description (true true {?U_184 ns1:confirmationOfAddressChange true} step:confirmAddressChangeVisit 10 10 0.9 0.9)} :reliesOn {?U_184 o-persoon:heeftGeboorte ?U_192}.
+{ns1:movemap gps:description (true true {?U_200 ns1:confirmationOfAddressChange true} step:confirmAddressChangeVisit 10 10 0.9 0.9)} :reliesOn {?U_210 o-persoon:plaats ?U_211}.
+{ns1:movemap gps:description (true true {?U_216 ns1:confirmationOfAddressChange true} step:confirmAddressChangeVisit 10 10 0.9 0.9)} :reliesOn {?U_216 schema:contactPoint ?U_228}.
+{ns1:movemap gps:description (true true {?U_232 ns1:confirmationOfAddressChange true} step:confirmAddressChangeVisit 10 10 0.9 0.9)} :reliesOn {?U_244 schema:contactType "gsm"}.
+{ns1:movemap gps:description (true true {?U_248 ns1:confirmationOfAddressChange true} step:confirmAddressChangeVisit 10 10 0.9 0.9)} :reliesOn {?U_261 schema:contactType "telephone"}.
+{ns1:movemap gps:description (true true {?U_264 ns1:confirmationOfAddressChange true} step:confirmAddressChangeVisit 10 10 0.9 0.9)} :reliesOn {?U_276 schema:telephone ?U_278}.
+{ns1:movemap gps:description (true true {?U_280 ns1:addressChanged true} step:addressChangeOnEIDInOffice 10 10 0.9 0.9)} :reliesOn {?U_280 a o-persoon:Inwoner}.
+{ns1:movemap gps:description (true true {?U_281 ns1:addressChanged true} step:addressChangeOnEIDInOffice 10 10 0.9 0.9)} :reliesOn {?U_281 ns1:confirmationOfAddressChange true}.
+{ns1:movemap gps:description (true true {?U_282 ns1:wasteCollectionRequested true} step:submitWasteCollectionContainerLevel 10 10 0.9 0.9)} :reliesOn {?U_282 a o-persoon:Inwoner}.
+{ns1:movemap gps:description (true true {?U_295 ns1:wasteCollectionRequested true} step:submitWasteCollectionContainerLevel 10 10 0.9 0.9)} :reliesOn {?U_295 ns1:lockNeededForGreyWasteContainer ?U_296}.
+{ns1:movemap gps:description (true true {?U_308 ns1:wasteCollectionRequested true} step:submitWasteCollectionContainerLevel 10 10 0.9 0.9)} :reliesOn {?U_308 ns1:movingAddress ?U_310}.
+{ns1:movemap gps:description (true true {?U_321 ns1:wasteCollectionRequested true} step:submitWasteCollectionContainerLevel 10 10 0.9 0.9)} :reliesOn {?U_321 ns1:movingCity ?U_324}.
+{ns1:movemap gps:description (true true {?U_334 ns1:wasteCollectionRequested true} step:submitWasteCollectionContainerLevel 10 10 0.9 0.9)} :reliesOn {?U_334 ns1:movingDate ?U_338}.
+{ns1:movemap gps:description (true true {?U_347 ns1:wasteCollectionRequested true} step:submitWasteCollectionContainerLevel 10 10 0.9 0.9)} :reliesOn {?U_347 ns1:numberOfRequested1100LiterPaperWasteContainers ?U_352}.
+{ns1:movemap gps:description (true true {?U_360 ns1:wasteCollectionRequested true} step:submitWasteCollectionContainerLevel 10 10 0.9 0.9)} :reliesOn {?U_360 ns1:numberOfRequested120LiterGreyWasteContainers ?U_366}.
+{ns1:movemap gps:description (true true {?U_373 ns1:wasteCollectionRequested true} step:submitWasteCollectionContainerLevel 10 10 0.9 0.9)} :reliesOn {?U_373 ns1:numberOfRequested240LiterGreyWasteContainers ?U_380}.
+{ns1:movemap gps:description (true true {?U_386 ns1:wasteCollectionRequested true} step:submitWasteCollectionContainerLevel 10 10 0.9 0.9)} :reliesOn {?U_386 ns1:numberOfRequested240LiterPaperWasteContainers ?U_394}.
+{ns1:movemap gps:description (true true {?U_399 ns1:wasteCollectionRequested true} step:submitWasteCollectionContainerLevel 10 10 0.9 0.9)} :reliesOn {?U_399 ns1:numberOfRequested40LiterGreyWasteContainers ?U_408}.
+{ns1:movemap gps:description (true true {?U_412 ns1:wasteCollectionRequested true} step:submitWasteCollectionContainerLevel 10 10 0.9 0.9)} :reliesOn {?U_412 ns1:numberOfRequested40LiterPaperWasteContainers ?U_422}.
+{ns1:movemap gps:description (true true {?U_425 ns1:wasteCollectionRequested true} step:submitWasteCollectionContainerLevel 10 10 0.9 0.9)} :reliesOn {?U_425 ns1:providedGreenWasteInformation true}.
+{ns1:movemap gps:description (true true {?U_438 ns1:wasteCollectionRequested true} step:submitWasteCollectionContainerLevel 10 10 0.9 0.9)} :reliesOn {?U_438 o-persoon:heeftVerblijfplaats ?U_449}.
+{ns1:movemap gps:description (true true {?U_451 ns1:wasteCollectionRequested true} step:submitWasteCollectionContainerLevel 10 10 0.9 0.9)} :reliesOn {?U_462 o-persoon:verblijfsadres ?U_463}.
+{ns1:movemap gps:description (true true {?U_464 ns1:lockNeededForGreyWasteContainer ?U_465. ?U_464 ns1:numberOfRequested120LiterGreyWasteContainers ?U_466. ?U_464 ns1:numberOfRequested240LiterGreyWasteContainers ?U_467. ?U_464 ns1:numberOfRequested40LiterGreyWasteContainers ?U_468} step:provideGreyWasteContainerInfo 10 10 0.9 0.9)} :reliesOn {(?U_464 ns1:lockNeededForGreyWasteContainer) e:skolem ?U_465}.
+{ns1:movemap gps:description (true true {?U_469 ns1:lockNeededForGreyWasteContainer ?U_470. ?U_469 ns1:numberOfRequested120LiterGreyWasteContainers ?U_471. ?U_469 ns1:numberOfRequested240LiterGreyWasteContainers ?U_472. ?U_469 ns1:numberOfRequested40LiterGreyWasteContainers ?U_473} step:provideGreyWasteContainerInfo 10 10 0.9 0.9)} :reliesOn {(?U_469 ns1:numberOfRequested120LiterGreyWasteContainers) e:skolem ?U_471}.
+{ns1:movemap gps:description (true true {?U_474 ns1:lockNeededForGreyWasteContainer ?U_475. ?U_474 ns1:numberOfRequested120LiterGreyWasteContainers ?U_476. ?U_474 ns1:numberOfRequested240LiterGreyWasteContainers ?U_477. ?U_474 ns1:numberOfRequested40LiterGreyWasteContainers ?U_478} step:provideGreyWasteContainerInfo 10 10 0.9 0.9)} :reliesOn {(?U_474 ns1:numberOfRequested240LiterGreyWasteContainers) e:skolem ?U_477}.
+{ns1:movemap gps:description (true true {?U_479 ns1:lockNeededForGreyWasteContainer ?U_480. ?U_479 ns1:numberOfRequested120LiterGreyWasteContainers ?U_481. ?U_479 ns1:numberOfRequested240LiterGreyWasteContainers ?U_482. ?U_479 ns1:numberOfRequested40LiterGreyWasteContainers ?U_483} step:provideGreyWasteContainerInfo 10 10 0.9 0.9)} :reliesOn {(?U_479 ns1:numberOfRequested40LiterGreyWasteContainers) e:skolem ?U_483}.
+{ns1:movemap gps:description (true true {?U_484 ns1:lockNeededForGreyWasteContainer ?U_485. ?U_484 ns1:numberOfRequested120LiterGreyWasteContainers ?U_486. ?U_484 ns1:numberOfRequested240LiterGreyWasteContainers ?U_487. ?U_484 ns1:numberOfRequested40LiterGreyWasteContainers ?U_488} step:provideGreyWasteContainerInfo 10 10 0.9 0.9)} :reliesOn {?U_484 a o-persoon:Inwoner}.
+{ns1:movemap gps:description (true true {?U_489 ns1:providedGreenWasteInformation true} step:provideGreenWasteContainerInfo 10 10 0.9 0.9)} :reliesOn {?U_489 a o-persoon:Inwoner}.
+{ns1:movemap gps:description (true true {?U_490 ns1:numberOfRequested1100LiterPaperWasteContainers ?U_491. ?U_490 ns1:numberOfRequested240LiterPaperWasteContainers ?U_492. ?U_490 ns1:numberOfRequested40LiterPaperWasteContainers ?U_493} step:providePaperWasteContainerInfo 10 10 0.9 0.9)} :reliesOn {(?U_490 ns1:numberOfRequested1100LiterPaperWasteContainers) e:skolem ?U_491}.
+{ns1:movemap gps:description (true true {?U_494 ns1:numberOfRequested1100LiterPaperWasteContainers ?U_495. ?U_494 ns1:numberOfRequested240LiterPaperWasteContainers ?U_496. ?U_494 ns1:numberOfRequested40LiterPaperWasteContainers ?U_497} step:providePaperWasteContainerInfo 10 10 0.9 0.9)} :reliesOn {(?U_494 ns1:numberOfRequested240LiterPaperWasteContainers) e:skolem ?U_496}.
+{ns1:movemap gps:description (true true {?U_498 ns1:numberOfRequested1100LiterPaperWasteContainers ?U_499. ?U_498 ns1:numberOfRequested240LiterPaperWasteContainers ?U_500. ?U_498 ns1:numberOfRequested40LiterPaperWasteContainers ?U_501} step:providePaperWasteContainerInfo 10 10 0.9 0.9)} :reliesOn {(?U_498 ns1:numberOfRequested40LiterPaperWasteContainers) e:skolem ?U_501}.
+{ns1:movemap gps:description (true true {?U_502 ns1:numberOfRequested1100LiterPaperWasteContainers ?U_503. ?U_502 ns1:numberOfRequested240LiterPaperWasteContainers ?U_504. ?U_502 ns1:numberOfRequested40LiterPaperWasteContainers ?U_505} step:providePaperWasteContainerInfo 10 10 0.9 0.9)} :reliesOn {?U_502 a o-persoon:Inwoner}.
+{?U_506 ns1:paperWorkForMovementComplete true} :reliesOn {?U_506 ns1:wasteCollectionRequested true}.
+{?U_510 ns1:paperWorkForMovementComplete true} :reliesOn {?U_510 ns1:addressChangeDeclared true}.
+{?U_514 ns1:paperWorkForMovementComplete true} :reliesOn {?U_514 ns1:transportRequested ?U_515}.
+{?U_518 ns1:paperWorkForMovementComplete true} :reliesOn {?U_518 ns1:mobilityRequested ?U_520}.
+{?U_522 ns1:paperWorkForMovementComplete true} :reliesOn {?U_522 ns1:drivingLicenceExchangeRequested ?U_525}.
+{?U_526 ns1:providedFamilyInformation true} :reliesOn {?U_526 ns1:numberOfFamilyMembers 1}.
+{?U_527 ns1:providedFamilyInformation true} :reliesOn {?U_529 e:findall (?U_530 {?U_527 ns1:familyMember ?U_530} ?U_531)}.
+{?U_533 ns1:providedFamilyInformation true} :reliesOn {?U_537 e:length ?U_538}.
+{?U_539 ns1:providedFamilyInformation true} :reliesOn {(?U_544 ?U_540) math:difference 1}.
+{?U_545 ns1:providedFamilyInformation true} :reliesOn {?U_546 e:label ?U_547}.
+{?U_549 ns1:providedFamilyInformation true} :reliesOn {?U_549 ns1:familyMember ?U_552}.
+{?U_553 ns1:providedGreenWasteInformation true} :reliesOn {?U_553 ns1:needForGreenWasteContainer false}.
+{?U_554 ns1:providedGreenWasteInformation true} :reliesOn {?U_554 ns1:numberOfRequested40LiterGreenWasteContainers ?U_556}.
+{?U_560 ns1:providedGreenWasteInformation true} :reliesOn {?U_560 ns1:numberOfRequested120LiterGreenWasteContainers ?U_563}.
+{?U_566 ns1:providedGreenWasteInformation true} :reliesOn {?U_566 ns1:stopGreeWasteContainer ?U_570}.
+{?U_572 ns1:providedGreenWasteInformation true} :reliesOn {?U_572 ns1:lockNeededForGreenWasteContainer ?U_577}.
 
-#2020-04-07T12:58:48.405Z in=14 out=63 ent=63 step=69 brake=1 inf=201788 sec=0.071 inf/sec=2842085
+#2020-04-07T13:56:55.281Z in=14 out=63 ent=63 step=69 brake=1 inf=202371 sec=0.077 inf/sec=2628195
 #ENDS
 

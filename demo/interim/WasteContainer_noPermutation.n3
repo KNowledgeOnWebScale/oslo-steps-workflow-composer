@@ -18,23 +18,24 @@
 @prefix foaf: <http://xmlns.com/foaf/0.1/>.
 @prefix schema: <https://schema.org/>.
 @prefix step: <https://fast.ilabt.imec.be/api/v5/steps#>.
+@prefix ns1: <http://example.org/ns/example#>.
 @prefix state: <https://fast.ilabt.imec.be/api/v5/states#>.
 @prefix shape: <https://fast.ilabt.imec.be/api/v5/shapes#>.
 @prefix sh: <http://www.w3.org/ns/shacl#>.
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
 @prefix skos: <http://www.w3.org/2004/02/skos/core#>.
 @prefix ops: <https://data.vlaanderen.be/shacl/persoon-basis#>.
-@prefix ns1: <https://example.org/ns/oslo-steps#>.
+@prefix ns2: <https://example.org/ns/oslo-steps#>.
 @prefix var: <https://example.org/ns/var#>.
 @prefix oslo: <https://example.org/ns/oslo#>.
-@prefix ns2: <http://josd.github.io/.well-known/genid/pP7dSETOSHCTU6bSn:iLn_1X3mg#>.
-@prefix ns3: <http://josd.github.io/.well-known/genid/yIzdbPNpHXf3gTpt6gXGi3eC4rs#>.
-@prefix ns4: <http://josd.github.io/.well-known/genid/bDjaJpF89F2HR9F6DV:7ZBzvy7M#>.
+@prefix ns3: <http://josd.github.io/.well-known/genid/pP7dSETOSHCTU6bSn:iLn_1X3mg#>.
+@prefix ns4: <http://josd.github.io/.well-known/genid/CMEt0ek5S9nHwHmLvHJrBytNRM8#>.
+@prefix ns5: <http://josd.github.io/.well-known/genid/avPQ7MqsjbTol:G9LBftZlQkaXY#>.
 @prefix plan: <http://https://github.com/doerthe/plan#>.
-@prefix ns5: <http://josd.github.io/.well-known/genid/OTg6b:m2loMgivMmdk9Yd:bf8kE#>.
+@prefix ns6: <http://josd.github.io/.well-known/genid/RBkRP1EosqLuLwHVjAfIO0GRe7g#>.
 
 _:sk_13 gps:path ((("unorderedList" (step:provideGreyWasteContainerInfo step:provideGreenWasteContainerInfo step:providePaperWasteContainerInfo)) step:submitWasteCollectionContainerLevel) 40.0 40.0 0.6561000000000001 0.6561000000000001).
 
-#2020-04-07T12:58:49.384Z in=663 out=1 ent=7 step=3 brake=4 inf=559549 sec=0.127 inf/sec=4405898
+#2020-04-07T13:56:56.253Z in=673 out=1 ent=7 step=3 brake=4 inf=569899 sec=0.126 inf/sec=4523008
 #ENDS
 

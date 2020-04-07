@@ -4,12 +4,13 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
 @prefix o-address: <https://data.vlaanderen.be/ns/adres#>.
 @prefix o-steps: <https://fast.ilabt.imec.be/ns/oslo-steps/0.2#>.
+@prefix ex: <http://example.org/ns/example#>.
 @prefix xl: <http://www.w3.org/2008/05/skos-xl#>.
 @prefix state: <https://fast.ilabt.imec.be/api/v5/states#>.
 @prefix shape: <https://fast.ilabt.imec.be/api/v5/shapes#>.
 @prefix step: <https://fast.ilabt.imec.be/api/v5/steps#>.
 @prefix p-plan: <http://purl.org/net/p-plan#>.
-@prefix ex: <https://example.org/ns/example#>.
+@prefix ns1: <https://example.org/ns/example#>.
 @prefix foaf: <http://xmlns.com/foaf/0.1/>.
 @prefix sh: <http://www.w3.org/ns/shacl#>.
 @prefix schema: <https://schema.org/>.
@@ -17,7 +18,7 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#>.
 @prefix ops: <https://data.vlaanderen.be/shacl/persoon-basis#>.
 @prefix o-persoon: <https://data.vlaanderen.be/ns/persoon#>.
-@prefix ns1: <https://example.org/ns/oslo-steps#>.
+@prefix ns2: <https://example.org/ns/oslo-steps#>.
 @prefix var: <https://example.org/ns/var#>.
 @prefix log: <http://www.w3.org/2000/10/swap/log#>.
 @prefix e: <http://eulersharp.sourceforge.net/2003/03swap/log-rules#>.
@@ -26,18 +27,18 @@
 @prefix list: <http://www.w3.org/2000/10/swap/list#>.
 @prefix math: <http://www.w3.org/2000/10/swap/math#>.
 @prefix oslo: <https://example.org/ns/oslo#>.
-@prefix ns2: <http://josd.github.io/.well-known/genid/pP7dSETOSHCTU6bSn:iLn_1X3mg#>.
-@prefix ns3: <http://josd.github.io/.well-known/genid/BCUvWfaoWJ49RHrPv3vEOMm9yt4#>.
+@prefix ns3: <http://josd.github.io/.well-known/genid/pP7dSETOSHCTU6bSn:iLn_1X3mg#>.
+@prefix ns4: <http://josd.github.io/.well-known/genid/3xusu:8P3::CpVSgPAirSB1FrCA#>.
 @prefix : <http://example.org#>.
-@prefix ns4: <http://josd.github.io/.well-known/genid/bDjaJpF89F2HR9F6DV:7ZBzvy7M#>.
+@prefix ns5: <http://josd.github.io/.well-known/genid/avPQ7MqsjbTol:G9LBftZlQkaXY#>.
 @prefix plan: <http://https://github.com/doerthe/plan#>.
 
-{ex:movemap gps:description (true true {?U_62 ex:confirmationOfAddressChange true} step:getPolicevisit 1 1 0.97 0.97)} <= {?U_62 a o-persoon:Inwoner. ?U_62 ex:policeVisitRequested true}.
-{ex:movemap gps:description (true true {?U_63 ex:policeVisitRequested true} step:requestPoliceVisit 1 1 0.97 0.97)} <= {?U_63 a o-persoon:Inwoner. ?U_63 foaf:familyName ?U_64. ?U_63 foaf:givenName ?U_65. ?U_63 ex:availabilityInfo ?U_66. ?U_63 ex:movingAddress ?U_67. ?U_63 ex:movingCity ?U_68. ?U_63 ex:movingDate ?U_69. ?U_63 ex:nationalNumber ?U_70. ?U_63 ex:providedFamilyInformation true. ?U_63 schema:hasOccupation ?U_71. ?U_72 o-persoon:datum ?U_73. ?U_63 o-persoon:heeftGeboorte ?U_72. ?U_63 o-persoon:heeftGeboorte ?U_74. ?U_74 o-persoon:plaats ?U_75. ?U_63 schema:contactPoint ?U_76. ?U_63 schema:contactPoint ?U_77. ?U_76 schema:contactType "gsm". ?U_77 schema:contactType "telephone". ?U_76 schema:telephone ?U_78. ?U_77 schema:telephone ?U_79}.
-{ex:movemap gps:description (true true {?U_80 ex:familyMember ?U_81} step:provideDataOfFamilyMembers 1 1 0.97 0.97)} <= {(?U_80 ex:familyMember) e:skolem ?U_81. ?U_80 a o-persoon:Inwoner}.
-{ex:movemap gps:description (true true {?U_82 ex:numberOfFamilyMembers ?U_83} step:provideNumberOfFamilyMembersManually 1 1 0.97 0.97)} <= {(?U_82 ex:numberOfFamilyMembers) e:skolem ?U_83. ?U_82 a o-persoon:Inwoner}.
-{ex:movemap gps:description (true true {?U_103 ex:availabilityInfo ?U_104} step:provideAvailability 1 1 0.97 0.97)} <= {(?U_103 ex:availabilityInfo) e:skolem ?U_104. ?U_103 a o-persoon:Inwoner}.
+{ns1:movemap gps:description (true true {?U_62 ns1:confirmationOfAddressChange true} step:getPolicevisit 1 1 0.97 0.97)} <= {?U_62 a o-persoon:Inwoner. ?U_62 ns1:policeVisitRequested true}.
+{ns1:movemap gps:description (true true {?U_63 ns1:policeVisitRequested true} step:requestPoliceVisit 1 1 0.97 0.97)} <= {?U_63 a o-persoon:Inwoner. ?U_63 foaf:familyName ?U_64. ?U_63 foaf:givenName ?U_65. ?U_63 ns1:availabilityInfo ?U_66. ?U_63 ns1:movingAddress ?U_67. ?U_63 ns1:movingCity ?U_68. ?U_63 ns1:movingDate ?U_69. ?U_63 ns1:nationalNumber ?U_70. ?U_63 ns1:providedFamilyInformation true. ?U_63 schema:hasOccupation ?U_71. ?U_72 o-persoon:datum ?U_73. ?U_63 o-persoon:heeftGeboorte ?U_72. ?U_63 o-persoon:heeftGeboorte ?U_74. ?U_74 o-persoon:plaats ?U_75. ?U_63 schema:contactPoint ?U_76. ?U_63 schema:contactPoint ?U_77. ?U_76 schema:contactType "gsm". ?U_77 schema:contactType "telephone". ?U_76 schema:telephone ?U_78. ?U_77 schema:telephone ?U_79}.
+{ns1:movemap gps:description (true true {?U_80 ns1:familyMember ?U_81} step:provideDataOfFamilyMembers 1 1 0.97 0.97)} <= {(?U_80 ns1:familyMember) e:skolem ?U_81. ?U_80 a o-persoon:Inwoner}.
+{ns1:movemap gps:description (true true {?U_82 ns1:numberOfFamilyMembers ?U_83} step:provideNumberOfFamilyMembersManually 1 1 0.97 0.97)} <= {(?U_82 ns1:numberOfFamilyMembers) e:skolem ?U_83. ?U_82 a o-persoon:Inwoner}.
+{ns1:movemap gps:description (true true {?U_103 ns1:availabilityInfo ?U_104} step:provideAvailability 1 1 0.97 0.97)} <= {(?U_103 ns1:availabilityInfo) e:skolem ?U_104. ?U_103 a o-persoon:Inwoner}.
 
-#2020-04-07T12:58:55.366Z in=234 out=5 ent=10 step=28 brake=3 inf=987481 sec=0.221 inf/sec=4468240
+#2020-04-07T13:57:02.535Z in=234 out=5 ent=10 step=28 brake=3 inf=990930 sec=0.277 inf/sec=3577365
 #ENDS
 

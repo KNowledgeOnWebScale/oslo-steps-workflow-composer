@@ -6,11 +6,12 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
 @prefix o-address: <https://data.vlaanderen.be/ns/adres#>.
 @prefix o-steps: <https://fast.ilabt.imec.be/ns/oslo-steps/0.2#>.
+@prefix ex: <http://example.org/ns/example#>.
 @prefix xl: <http://www.w3.org/2008/05/skos-xl#>.
 @prefix state: <https://fast.ilabt.imec.be/api/v5/states#>.
 @prefix shape: <https://fast.ilabt.imec.be/api/v5/shapes#>.
 @prefix p-plan: <http://purl.org/net/p-plan#>.
-@prefix ex: <https://example.org/ns/example#>.
+@prefix ns1: <https://example.org/ns/example#>.
 @prefix foaf: <http://xmlns.com/foaf/0.1/>.
 @prefix sh: <http://www.w3.org/ns/shacl#>.
 @prefix schema: <https://schema.org/>.
@@ -18,7 +19,7 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#>.
 @prefix ops: <https://data.vlaanderen.be/shacl/persoon-basis#>.
 @prefix o-persoon: <https://data.vlaanderen.be/ns/persoon#>.
-@prefix ns1: <https://example.org/ns/oslo-steps#>.
+@prefix ns2: <https://example.org/ns/oslo-steps#>.
 @prefix var: <https://example.org/ns/var#>.
 @prefix log: <http://www.w3.org/2000/10/swap/log#>.
 @prefix e: <http://eulersharp.sourceforge.net/2003/03swap/log-rules#>.
@@ -27,8 +28,8 @@
 @prefix list: <http://www.w3.org/2000/10/swap/list#>.
 @prefix math: <http://www.w3.org/2000/10/swap/math#>.
 @prefix oslo: <https://example.org/ns/oslo#>.
-@prefix ns2: <http://josd.github.io/.well-known/genid/pP7dSETOSHCTU6bSn:iLn_1X3mg#>.
-@prefix ns3: <http://josd.github.io/.well-known/genid/yIzdbPNpHXf3gTpt6gXGi3eC4rs#>.
+@prefix ns3: <http://josd.github.io/.well-known/genid/pP7dSETOSHCTU6bSn:iLn_1X3mg#>.
+@prefix ns4: <http://josd.github.io/.well-known/genid/CMEt0ek5S9nHwHmLvHJrBytNRM8#>.
 
 {_:sk_0 a o-persoon:Inwoner} :inInputRule true.
 {_:sk_0 foaf:familyName _:sk_1} :inInputRule true.
@@ -37,10 +38,10 @@
 {_:sk_0 o-persoon:heeftGeboorte _:sk_10} :inInputRule true.
 {_:sk_0 o-persoon:heeftGeboorte _:sk_8} :inInputRule true.
 {_:sk_10 o-persoon:plaats _:sk_11} :inInputRule true.
-{_:sk_0 ex:movingAddress _:sk_3} :inInputRule true.
-{_:sk_0 ex:movingCity _:sk_4} :inInputRule true.
-{_:sk_0 ex:movingDate _:sk_5} :inInputRule true.
-{_:sk_0 ex:nationalNumber _:sk_6} :inInputRule true.
+{_:sk_0 ns1:movingAddress _:sk_3} :inInputRule true.
+{_:sk_0 ns1:movingCity _:sk_4} :inInputRule true.
+{_:sk_0 ns1:movingDate _:sk_5} :inInputRule true.
+{_:sk_0 ns1:nationalNumber _:sk_6} :inInputRule true.
 {_:sk_0 schema:contactPoint _:sk_12} :inInputRule true.
 {_:sk_0 schema:contactPoint _:sk_13} :inInputRule true.
 {_:sk_12 schema:contactType "gsm"} :inInputRule true.
@@ -49,6 +50,6 @@
 {_:sk_12 schema:telephone _:sk_14} :inInputRule true.
 {_:sk_13 schema:telephone _:sk_15} :inInputRule true.
 
-#2020-04-07T12:58:49.865Z in=6 out=18 ent=18 step=18 brake=1 inf=97494 sec=0.049 inf/sec=1989673
+#2020-04-07T13:56:56.755Z in=6 out=18 ent=18 step=18 brake=1 inf=97998 sec=0.056 inf/sec=1749964
 #ENDS
 

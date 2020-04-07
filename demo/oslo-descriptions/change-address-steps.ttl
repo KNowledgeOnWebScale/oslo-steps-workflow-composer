@@ -1,7 +1,7 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix o-address: <https://data.vlaanderen.be/ns/adres#> .
 @prefix o-steps: <https://fast.ilabt.imec.be/ns/oslo-steps/0.2#> .
-#@prefix step: <https://example.org/ns/example#> .
+@prefix ex: <http://example.org/ns/example#> .
 @prefix xl: <http://www.w3.org/2008/05/skos-xl#> .
 
 @prefix state: <https://fast.ilabt.imec.be/api/v5/states#> .
@@ -15,6 +15,7 @@
 #Journey level steps
 #provide personal details
 step:providePersonalInformation a o-steps:JourneyLevelStep ;
+  ex:subpathlink <https://fast.ilabt.imec.be/api/plan/component_providePersonalInformation>;
   o-steps:hasDescription [ xl:literalForm "Personal data"@en ],
                          [ xl:literalForm "Persoonlijke gegevens"@nl ],
                          [ xl:literalForm "Persönliche Daten"@de ];
@@ -33,6 +34,7 @@ step:providePersonalInformation a o-steps:JourneyLevelStep ;
 
 #provide moving details
 step:provideMovingData a o-steps:JourneyLevelStep ;
+  ex:subpathlink <https://fast.ilabt.imec.be/api/plan/component_provideMovingData>;
   o-steps:hasDescription [ xl:literalForm "Data over the planned move"@en ],
                          [ xl:literalForm "Gegevens over de geplande verhuizing"@nl ],
                          [ xl:literalForm "Details über den geplanten Umzug"@de ];
@@ -42,6 +44,7 @@ step:provideMovingData a o-steps:JourneyLevelStep ;
 
 #get address  changed
 step:changeAddress a o-steps:JourneyLevelStep  ;
+  ex:subpathlink <https://fast.ilabt.imec.be/api/plan/container_changeAddress>;
   o-steps:hasDescription [ xl:literalForm "Get address changed"@en ],
                          [ xl:literalForm "Laat het adres wijzigen"@nl ],
                          [ xl:literalForm "Die Adresse ändern lassen"@de ];
@@ -62,6 +65,7 @@ step:changeAddress a o-steps:JourneyLevelStep  ;
 
 #container level
 step:confirmAddressChangeVisit a o-steps:ContainerLevelStep ;
+  ex:subpathlink  <https://fast.ilabt.imec.be/api/plan/component_confirmAddressChangeVisit>;
   rdfs:label "Confirmation of address change"@en ;
   rdfs:label "Bevestiging van adreswijziging"@nl ;
   rdfs:label "Bestätigung der Adressänderung"@de ;
@@ -85,6 +89,7 @@ step:confirmAddressChangeVisit a o-steps:ContainerLevelStep ;
                         state:citizenEmail .
 
 step:addressChangeOnEIDInOffice a o-steps:ContainerLevelStep ;
+  ex:subpathlink <https://fast.ilabt.imec.be/api/plan/component_addressChangeOnEIDInOffice>;
   rdfs:label "Update address on eID card"@en ;
   rdfs:label "Adreswijziging op eID kaart"@nl ;
   rdfs:label "Änderung der Adresse auf eID Karte"@de ;
@@ -116,6 +121,7 @@ step:visitOfficeForAddressChange a o-steps:ComponentLevelStep ;
                         
 #submit waste info
 step:submitWasteInfo a o-steps:JourneyLevelStep ;
+  ex:subpathlink <https://fast.ilabt.imec.be/api/plan/container_submitWasteInfo>;
   o-steps:hasDescription [ xl:literalForm "Waste info"@en ],
                          [ xl:literalForm "Informatie over afvalverwijdering"@nl ],
                          [ xl:literalForm "Informationen bezüglich der Abfallentsorgung "@de ];
@@ -387,6 +393,7 @@ step:provideBillingAddressManually a o-steps:ComponentLevelStep ;
 
 
 step:submitWasteCollectionContainerLevel a o-steps:ContainerLevelStep ;
+  ex:subpathlink <https://fast.ilabt.imec.be/api/plan/component_submitWasteCollectionContainerLevel>;
   o-steps:hasDescription [ xl:literalForm  "Request Waste Collection"@en ],
    [ xl:literalForm  "Vraag afvalinzameling aan"@nl ],
    [ xl:literalForm  "Anfrage fuer Abfallabholung"@de ] ;
@@ -406,6 +413,7 @@ step:submitWasteCollectionContainerLevel a o-steps:ContainerLevelStep ;
   .
 
 step:provideGreyWasteContainerInfo a o-steps:ContainerLevelStep ;
+  ex:subpathlink <https://fast.ilabt.imec.be/api/plan/component_provideGreyWasteContainerInfo>;
   rdfs:label "Grey waste container(s)"@en ;
   rdfs:label "Grijze restafvalcontainer(s)"@nl ;
   rdfs:label "Graue Restabfallcontainer"@de ;
@@ -421,6 +429,7 @@ step:provideGreyWasteContainerInfo a o-steps:ContainerLevelStep ;
     state:greyWasteContainerLockInfo .
 
 step:provideGreenWasteContainerInfo a o-steps:ContainerLevelStep ;
+  ex:subpathlink <https://fast.ilabt.imec.be/api/plan/component_provideGreenWasteContainerInfo>;
 	rdfs:label "Green GFT waste container(s)"@en ;
   rdfs:label "Groene GFT container(s)"@nl ;
   rdfs:label "Grüne Biomüllcontainer"@de ;
@@ -433,6 +442,7 @@ step:provideGreenWasteContainerInfo a o-steps:ContainerLevelStep ;
            state:greenWasteInfo .
 
 step:providePaperWasteContainerInfo a o-steps:ContainerLevelStep ;
+  ex:subpathlink <https://fast.ilabt.imec.be/api/plan/component_providePaperWasteContainerInfo>;
   rdfs:label "Paper waste container(s)"@en ;
   rdfs:label "Papier container(s)"@nl ;
   rdfs:label "Papiercontainer"@de ;

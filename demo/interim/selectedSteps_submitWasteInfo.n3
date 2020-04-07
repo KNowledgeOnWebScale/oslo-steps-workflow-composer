@@ -4,12 +4,13 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
 @prefix o-address: <https://data.vlaanderen.be/ns/adres#>.
 @prefix o-steps: <https://fast.ilabt.imec.be/ns/oslo-steps/0.2#>.
+@prefix ex: <http://example.org/ns/example#>.
 @prefix xl: <http://www.w3.org/2008/05/skos-xl#>.
 @prefix state: <https://fast.ilabt.imec.be/api/v5/states#>.
 @prefix shape: <https://fast.ilabt.imec.be/api/v5/shapes#>.
 @prefix step: <https://fast.ilabt.imec.be/api/v5/steps#>.
 @prefix p-plan: <http://purl.org/net/p-plan#>.
-@prefix ex: <https://example.org/ns/example#>.
+@prefix ns1: <https://example.org/ns/example#>.
 @prefix foaf: <http://xmlns.com/foaf/0.1/>.
 @prefix sh: <http://www.w3.org/ns/shacl#>.
 @prefix schema: <https://schema.org/>.
@@ -17,7 +18,7 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#>.
 @prefix ops: <https://data.vlaanderen.be/shacl/persoon-basis#>.
 @prefix o-persoon: <https://data.vlaanderen.be/ns/persoon#>.
-@prefix ns1: <https://example.org/ns/oslo-steps#>.
+@prefix ns2: <https://example.org/ns/oslo-steps#>.
 @prefix var: <https://example.org/ns/var#>.
 @prefix log: <http://www.w3.org/2000/10/swap/log#>.
 @prefix e: <http://eulersharp.sourceforge.net/2003/03swap/log-rules#>.
@@ -26,15 +27,15 @@
 @prefix list: <http://www.w3.org/2000/10/swap/list#>.
 @prefix math: <http://www.w3.org/2000/10/swap/math#>.
 @prefix oslo: <https://example.org/ns/oslo#>.
-@prefix ns2: <http://josd.github.io/.well-known/genid/pP7dSETOSHCTU6bSn:iLn_1X3mg#>.
-@prefix ns3: <http://josd.github.io/.well-known/genid/BCUvWfaoWJ49RHrPv3vEOMm9yt4#>.
+@prefix ns3: <http://josd.github.io/.well-known/genid/pP7dSETOSHCTU6bSn:iLn_1X3mg#>.
+@prefix ns4: <http://josd.github.io/.well-known/genid/3xusu:8P3::CpVSgPAirSB1FrCA#>.
 @prefix : <http://example.org#>.
-@prefix ns4: <http://josd.github.io/.well-known/genid/bDjaJpF89F2HR9F6DV:7ZBzvy7M#>.
+@prefix ns5: <http://josd.github.io/.well-known/genid/avPQ7MqsjbTol:G9LBftZlQkaXY#>.
 @prefix plan: <http://https://github.com/doerthe/plan#>.
 
-{ex:movemap gps:description (true true {?U_23 ex:wasteCollectionRequested true} step:submitWasteCollectionComponentLevel 1 1 0.97 0.97)} <= {?U_23 a o-persoon:Inwoner. ?U_23 ex:wasteInfoShownToUser true}.
-{ex:movemap gps:description (true true {?U_24 ex:wasteInfoShownToUser true} step:showWasteCollection 1 1 0.97 0.97)} <= {?U_24 a o-persoon:Inwoner. ?U_24 ex:lockNeededForGreyWasteContainer ?U_25. ?U_24 ex:movingAddress ?U_26. ?U_24 ex:movingCity ?U_27. ?U_24 ex:movingDate ?U_28. ?U_24 ex:numberOfRequested1100LiterPaperWasteContainers ?U_29. ?U_24 ex:numberOfRequested120LiterGreyWasteContainers ?U_30. ?U_24 ex:numberOfRequested240LiterGreyWasteContainers ?U_31. ?U_24 ex:numberOfRequested240LiterPaperWasteContainers ?U_32. ?U_24 ex:numberOfRequested40LiterGreyWasteContainers ?U_33. ?U_24 ex:numberOfRequested40LiterPaperWasteContainers ?U_34. ?U_24 ex:providedGreenWasteInformation true. ?U_24 o-persoon:heeftVerblijfplaats ?U_35. ?U_35 o-persoon:verblijfsadres ?U_36}.
+{ns1:movemap gps:description (true true {?U_23 ns1:wasteCollectionRequested true} step:submitWasteCollectionComponentLevel 1 1 0.97 0.97)} <= {?U_23 a o-persoon:Inwoner. ?U_23 ns1:wasteInfoShownToUser true}.
+{ns1:movemap gps:description (true true {?U_24 ns1:wasteInfoShownToUser true} step:showWasteCollection 1 1 0.97 0.97)} <= {?U_24 a o-persoon:Inwoner. ?U_24 ns1:lockNeededForGreyWasteContainer ?U_25. ?U_24 ns1:movingAddress ?U_26. ?U_24 ns1:movingCity ?U_27. ?U_24 ns1:movingDate ?U_28. ?U_24 ns1:numberOfRequested1100LiterPaperWasteContainers ?U_29. ?U_24 ns1:numberOfRequested120LiterGreyWasteContainers ?U_30. ?U_24 ns1:numberOfRequested240LiterGreyWasteContainers ?U_31. ?U_24 ns1:numberOfRequested240LiterPaperWasteContainers ?U_32. ?U_24 ns1:numberOfRequested40LiterGreyWasteContainers ?U_33. ?U_24 ns1:numberOfRequested40LiterPaperWasteContainers ?U_34. ?U_24 ns1:providedGreenWasteInformation true. ?U_24 o-persoon:heeftVerblijfplaats ?U_35. ?U_35 o-persoon:verblijfsadres ?U_36}.
 
-#2020-04-07T12:58:54.307Z in=230 out=2 ent=4 step=8 brake=2 inf=801696 sec=0.169 inf/sec=4743763
+#2020-04-07T13:57:01.297Z in=230 out=2 ent=4 step=8 brake=2 inf=805172 sec=0.176 inf/sec=4574841
 #ENDS
 

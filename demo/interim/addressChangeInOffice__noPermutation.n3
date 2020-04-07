@@ -18,23 +18,24 @@
 @prefix foaf: <http://xmlns.com/foaf/0.1/>.
 @prefix schema: <https://schema.org/>.
 @prefix step: <https://fast.ilabt.imec.be/api/v5/steps#>.
+@prefix ns1: <http://example.org/ns/example#>.
 @prefix state: <https://fast.ilabt.imec.be/api/v5/states#>.
 @prefix shape: <https://fast.ilabt.imec.be/api/v5/shapes#>.
 @prefix sh: <http://www.w3.org/ns/shacl#>.
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
 @prefix skos: <http://www.w3.org/2004/02/skos/core#>.
 @prefix ops: <https://data.vlaanderen.be/shacl/persoon-basis#>.
-@prefix ns1: <https://example.org/ns/oslo-steps#>.
+@prefix ns2: <https://example.org/ns/oslo-steps#>.
 @prefix var: <https://example.org/ns/var#>.
 @prefix oslo: <https://example.org/ns/oslo#>.
-@prefix ns2: <http://josd.github.io/.well-known/genid/pP7dSETOSHCTU6bSn:iLn_1X3mg#>.
-@prefix ns3: <http://josd.github.io/.well-known/genid/bDjaJpF89F2HR9F6DV:7ZBzvy7M#>.
-@prefix ns4: <http://josd.github.io/.well-known/genid/BCUvWfaoWJ49RHrPv3vEOMm9yt4#>.
+@prefix ns3: <http://josd.github.io/.well-known/genid/pP7dSETOSHCTU6bSn:iLn_1X3mg#>.
+@prefix ns4: <http://josd.github.io/.well-known/genid/avPQ7MqsjbTol:G9LBftZlQkaXY#>.
+@prefix ns5: <http://josd.github.io/.well-known/genid/3xusu:8P3::CpVSgPAirSB1FrCA#>.
 @prefix plan: <http://https://github.com/doerthe/plan#>.
-@prefix ns5: <http://josd.github.io/.well-known/genid/aQGUB43QHi8xyMnfFLV7ZHp8y1k#>.
+@prefix ns6: <http://josd.github.io/.well-known/genid/skoEuRaXf5f29Tb7OrE7m:5dpa0#>.
 
 _:sk_3 gps:path ((step:makeAppointmentForAddressChange step:visitOfficeForAddressChange) 2.0 2.0 0.9409 0.9409).
 
-#2020-04-07T12:58:56.646Z in=661 out=1 ent=3 step=4 brake=4 inf=535203 sec=0.134 inf/sec=3994052
+#2020-04-07T13:57:03.832Z in=671 out=1 ent=3 step=4 brake=4 inf=545448 sec=0.145 inf/sec=3761710
 #ENDS
 

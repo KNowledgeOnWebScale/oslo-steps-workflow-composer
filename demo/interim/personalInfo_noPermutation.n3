@@ -33,10 +33,11 @@
 @prefix ns4: <file:///media/doerthe/4EC6F987C6F97017/store/FAST/base/steps#>.
 @prefix ns5: <http://josd.github.io/.well-known/genid/bCHPrOjcGmNlvnxxC_gIZneJs1Y#>.
 @prefix plan: <http://https://github.com/doerthe/plan#>.
-@prefix ns6: <http://josd.github.io/.well-known/genid/eMzv:LbXW0hRExGGpqYyI8oTMs0#>.
+@prefix ns6: <http://example.org/ns/example#>.
+@prefix ns7: <http://josd.github.io/.well-known/genid/6_:0AKdqa4H:iWAVoWSqMsZdvDw#>.
 
 _:sk_0 gps:path ((("unorderedList" (step:provideCitizenFirstNameManually step:provideCitizenLastNameManually step:provideCitizenMobilePhoneNumberManually step:provideCitizenPhoneNumberManually step:provideCitizenNationalNumberManually step:provideCitizenBirthPlaceManually step:provideCitizenAddressManually step:provideCitizenProfessionManually))) 8.0 8.0 0.783743359437696 0.783743359437696).
 
-#2020-04-07T12:59:10.767Z in=665 out=1 ent=1 step=1 brake=2 inf=56801722 sec=13.647 inf/sec=4162213
+#2020-04-07T13:57:17.570Z in=675 out=1 ent=1 step=1 brake=2 inf=56810683 sec=13.270 inf/sec=4281137
 #ENDS
 

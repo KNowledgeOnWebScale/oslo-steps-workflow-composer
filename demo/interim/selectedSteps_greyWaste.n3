@@ -4,12 +4,13 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
 @prefix o-address: <https://data.vlaanderen.be/ns/adres#>.
 @prefix o-steps: <https://fast.ilabt.imec.be/ns/oslo-steps/0.2#>.
+@prefix ex: <http://example.org/ns/example#>.
 @prefix xl: <http://www.w3.org/2008/05/skos-xl#>.
 @prefix state: <https://fast.ilabt.imec.be/api/v5/states#>.
 @prefix shape: <https://fast.ilabt.imec.be/api/v5/shapes#>.
 @prefix step: <https://fast.ilabt.imec.be/api/v5/steps#>.
 @prefix p-plan: <http://purl.org/net/p-plan#>.
-@prefix ex: <https://example.org/ns/example#>.
+@prefix ns1: <https://example.org/ns/example#>.
 @prefix foaf: <http://xmlns.com/foaf/0.1/>.
 @prefix sh: <http://www.w3.org/ns/shacl#>.
 @prefix schema: <https://schema.org/>.
@@ -17,7 +18,7 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#>.
 @prefix ops: <https://data.vlaanderen.be/shacl/persoon-basis#>.
 @prefix o-persoon: <https://data.vlaanderen.be/ns/persoon#>.
-@prefix ns1: <https://example.org/ns/oslo-steps#>.
+@prefix ns2: <https://example.org/ns/oslo-steps#>.
 @prefix var: <https://example.org/ns/var#>.
 @prefix log: <http://www.w3.org/2000/10/swap/log#>.
 @prefix e: <http://eulersharp.sourceforge.net/2003/03swap/log-rules#>.
@@ -26,17 +27,17 @@
 @prefix list: <http://www.w3.org/2000/10/swap/list#>.
 @prefix math: <http://www.w3.org/2000/10/swap/math#>.
 @prefix oslo: <https://example.org/ns/oslo#>.
-@prefix ns2: <http://josd.github.io/.well-known/genid/pP7dSETOSHCTU6bSn:iLn_1X3mg#>.
-@prefix ns3: <http://josd.github.io/.well-known/genid/BCUvWfaoWJ49RHrPv3vEOMm9yt4#>.
+@prefix ns3: <http://josd.github.io/.well-known/genid/pP7dSETOSHCTU6bSn:iLn_1X3mg#>.
+@prefix ns4: <http://josd.github.io/.well-known/genid/3xusu:8P3::CpVSgPAirSB1FrCA#>.
 @prefix : <http://example.org#>.
-@prefix ns4: <http://josd.github.io/.well-known/genid/bDjaJpF89F2HR9F6DV:7ZBzvy7M#>.
+@prefix ns5: <http://josd.github.io/.well-known/genid/avPQ7MqsjbTol:G9LBftZlQkaXY#>.
 @prefix plan: <http://https://github.com/doerthe/plan#>.
 
-{ex:movemap gps:description (true true {?U_56 ex:numberOfRequested40LiterGreyWasteContainers ?U_57} step:provideNumberOf40LiterGreyWasteContainersManually 1 1 0.97 0.97)} <= {(?U_56 ex:numberOfRequested40LiterGreyWasteContainers) e:skolem ?U_57. ?U_56 a o-persoon:Inwoner}.
-{ex:movemap gps:description (true true {?U_58 ex:numberOfRequested120LiterGreyWasteContainers ?U_59} step:provideNumberOf120LiterGreyWasteContainersManualy 1 1 0.97 0.97)} <= {(?U_58 ex:numberOfRequested120LiterGreyWasteContainers) e:skolem ?U_59. ?U_58 a o-persoon:Inwoner}.
-{ex:movemap gps:description (true true {?U_60 ex:numberOfRequested240LiterGreyWasteContainers ?U_61} step:provideNumberOf240LiterGreyWasteContainers 1 1 0.97 0.97)} <= {(?U_60 ex:numberOfRequested240LiterGreyWasteContainers) e:skolem ?U_61. ?U_60 a o-persoon:Inwoner}.
-{ex:movemap gps:description (true true {?U_62 ex:lockNeededForGreyWasteContainer ?U_63} step:provideGreyWasteContainerLockInfoManually 1 1 0.97 0.97)} <= {(?U_62 ex:lockNeededForGreyWasteContainer) e:skolem ?U_63. ?U_62 a o-persoon:Inwoner}.
+{ns1:movemap gps:description (true true {?U_56 ns1:numberOfRequested40LiterGreyWasteContainers ?U_57} step:provideNumberOf40LiterGreyWasteContainersManually 1 1 0.97 0.97)} <= {(?U_56 ns1:numberOfRequested40LiterGreyWasteContainers) e:skolem ?U_57. ?U_56 a o-persoon:Inwoner}.
+{ns1:movemap gps:description (true true {?U_58 ns1:numberOfRequested120LiterGreyWasteContainers ?U_59} step:provideNumberOf120LiterGreyWasteContainersManualy 1 1 0.97 0.97)} <= {(?U_58 ns1:numberOfRequested120LiterGreyWasteContainers) e:skolem ?U_59. ?U_58 a o-persoon:Inwoner}.
+{ns1:movemap gps:description (true true {?U_60 ns1:numberOfRequested240LiterGreyWasteContainers ?U_61} step:provideNumberOf240LiterGreyWasteContainers 1 1 0.97 0.97)} <= {(?U_60 ns1:numberOfRequested240LiterGreyWasteContainers) e:skolem ?U_61. ?U_60 a o-persoon:Inwoner}.
+{ns1:movemap gps:description (true true {?U_62 ns1:lockNeededForGreyWasteContainer ?U_63} step:provideGreyWasteContainerLockInfoManually 1 1 0.97 0.97)} <= {(?U_62 ns1:lockNeededForGreyWasteContainer) e:skolem ?U_63. ?U_62 a o-persoon:Inwoner}.
 
-#2020-04-07T12:58:52.330Z in=221 out=4 ent=8 step=16 brake=2 inf=784707 sec=0.191 inf/sec=4108414
+#2020-04-07T13:56:59.346Z in=221 out=4 ent=8 step=16 brake=2 inf=788147 sec=0.180 inf/sec=4378594
 #ENDS
 
