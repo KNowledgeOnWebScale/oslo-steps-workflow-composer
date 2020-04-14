@@ -1,0 +1,23 @@
+@prefix : <http://example.org#>.
+@prefix e: <http://eulersharp.sourceforge.net/2003/03swap/log-rules#>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
+
+#the second element needs to be a list of graphs
+{
+(?result () ) :unifyList ?result.
+}
+<={}.
+
+{
+(?graph1 ?graphlist ) :unifyList ?result.
+}
+<=
+{
+?graphlist rdf:first ?first.
+
+?graphlist rdf:rest ?rest.
+?graph1 e:graphMember ?first.
+(?graph1 ?rest) :unifyList ?result.
+}.
+
+

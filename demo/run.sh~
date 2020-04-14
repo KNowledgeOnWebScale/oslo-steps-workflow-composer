@@ -178,7 +178,7 @@ eye workflow-composer/gps-plugin_modified_noPermutations.n3 profile/knowledge.n3
 
 # produce the data used
 # todo
-
+eye profile/knowledge.n3  profile/personalInfo.n3 interim/extraRule_submitWasteInfo.n3 subgoals/aux2.n3 --nope --query show/waste-info.n3 > interim/show-waste-Info.n3
 
 
 
@@ -243,6 +243,11 @@ eye interim/component-level-steps.n3 interim/shortComponentDescriptions.n3 inter
 
 
 eye workflow-composer/gps-plugin_modified_noPermutations.n3 profile/knowledge.n3  profile/personalInfo.n3  interim/selectedSteps_movingData.n3 oslo-descriptions/change-address-steps.ttl --query interim/Goal_provideMovingData.n3 --nope > interim/movingData_noPermutation.n3
+
+#########################################################
+# create input form for each component step
+#########################################################
+eye profile/knowledge.n3  profile/personalInfo.n3  interim/component-level-steps.n3 --query external-input/CreateInputPattern.n3 --nope > interim/input_patterns.n3
 
 
 

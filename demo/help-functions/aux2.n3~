@@ -14,6 +14,7 @@
 <=
 {
 ?graphlist rdf:first ?first.
+_:x e:trace "hier".
 ?graphlist rdf:rest ?rest.
 ?graph1 e:graphMember ?first.
 (?graph1 ?rest) :unifyList ?result.
