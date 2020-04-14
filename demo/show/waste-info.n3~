@@ -1,9 +1,0 @@
-
-
-
-
-
-
-{?t_6 a o-persoon:Inwoner. ?t_6 ns1:lockNeededForGreyWasteContainer ?U_19. ?t_6 ns1:movingAddress ?U_13. ?t_6 ns1:movingCity ?U_15. ?t_6 ns1:movingDate ?U_12. ?t_6 ns1:numberOfRequested1100LiterPaperWasteContainers ?U_27. ?t_6 ns1:numberOfRequested120LiterGreyWasteContainers ?U_17. ?t_6 ns1:numberOfRequested240LiterGreyWasteContainers ?U_18. ?t_6 ns1:numberOfRequested240LiterPaperWasteContainers ?U_26. ?t_6 ns1:numberOfRequested40LiterGreyWasteContainers ?U_16. ?t_6 ns1:numberOfRequested40LiterPaperWasteContainers ?U_25. ?t_6 ns1:providedGreenWasteInformation true. ?t_6 o-persoon:heeftVerblijfplaats ?t_11. ?t_11 o-persoon:verblijfsadres ?t_12}
-=>
-{?t_6 a o-persoon:Inwoner. ?t_6 ns1:lockNeededForGreyWasteContainer ?U_19. ?t_6 ns1:movingAddress ?U_13. ?t_6 ns1:movingCity ?U_15. ?t_6 ns1:movingDate ?U_12. ?t_6 ns1:numberOfRequested1100LiterPaperWasteContainers ?U_27. ?t_6 ns1:numberOfRequested120LiterGreyWasteContainers ?U_17. ?t_6 ns1:numberOfRequested240LiterGreyWasteContainers ?U_18. ?t_6 ns1:numberOfRequested240LiterPaperWasteContainers ?U_26. ?t_6 ns1:numberOfRequested40LiterGreyWasteContainers ?U_16. ?t_6 ns1:numberOfRequested40LiterPaperWasteContainers ?U_25. ?t_6 ns1:providedGreenWasteInformation true. ?t_6 o-persoon:heeftVerblijfplaats ?t_11. ?t_11 o-persoon:verblijfsadres ?t_12}.
