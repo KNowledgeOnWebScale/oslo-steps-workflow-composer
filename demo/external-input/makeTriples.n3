@@ -1,0 +1,10 @@
+@prefix : <http://example.org#>.
+@prefix e: <http://eulersharp.sourceforge.net/2003/03swap/log-rules#>.
+
+{
+?step :value ?value.
+?step :expectedTriples ?triples.
+?step :variablesToReplace ?var. 
+}
+=>
+?triples.

@@ -64,7 +64,7 @@ eye choices/selected_Waste.n3 interim/journey-level-steps.n3 --query subgoals/cr
 eye interim/container-level-steps.n3 interim/shortContainerDescriptions.n3 interim/createdGoal_Waste.n3 preselection/preselection.n3 profile/knowledge.n3 interim/block_waste.n3 --nope --query preselection/prequery.n3 >interim/selectedSteps_waste.n3
 
 #create path
-eye workflow-composer/gps-plugin_modified_noPermutations.n3 profile/knowledge.n3  profile/personalInfo.n3  interim/extraRule_waste.n3 subgoals/aux2.n3 interim/selectedSteps_waste.n3 oslo-descriptions/change-address-steps.ttl --query interim/createdGoal_Waste.n3 --nope > interim/WasteContainer_noPermutation.n3
+eye workflow-composer/gps-plugin_modified_noPermutations.n3 profile/knowledge.n3  profile/personalInfo.n3  interim/extraRule_waste.n3 help-functions/aux2.n3 interim/selectedSteps_waste.n3 oslo-descriptions/change-address-steps.ttl --query interim/createdGoal_Waste.n3 --nope > interim/WasteContainer_noPermutation.n3
 
 
 
@@ -86,7 +86,7 @@ eye choices/selected_AddressSubmission.n3 interim/journey-level-steps.n3 --query
 eye interim/container-level-steps.n3 interim/shortContainerDescriptions.n3 interim/createdGoal_address.n3 preselection/preselection.n3 profile/knowledge.n3 interim/block_addresschange.n3 --nope --query preselection/prequery.n3 >interim/selectedSteps_addresschange.n3
 
 #createPath
-eye workflow-composer/gps-plugin_modified_noPermutations.n3 profile/knowledge.n3  profile/personalInfo.n3  interim/extraRule_addresschange.n3 subgoals/aux2.n3 interim/selectedSteps_addresschange.n3 oslo-descriptions/change-address-steps.ttl --query interim/createdGoal_address.n3 --nope > interim/ChangeAddress_noPermutation.n3
+eye workflow-composer/gps-plugin_modified_noPermutations.n3 profile/knowledge.n3  profile/personalInfo.n3  interim/extraRule_addresschange.n3 help-functions/aux2.n3 interim/selectedSteps_addresschange.n3 oslo-descriptions/change-address-steps.ttl --query interim/createdGoal_address.n3 --nope > interim/ChangeAddress_noPermutation.n3
 
 
 #####################################################
@@ -111,7 +111,7 @@ eye choices/selected_GreenWaste.n3 interim/container-level-steps.n3 --query subg
 eye interim/component-level-steps.n3 interim/shortComponentDescriptions.n3 interim/createdGoal_greenWaste.n3 preselection/preselection.n3 profile/knowledge.n3  interim/block_greenWaste.n3 --nope --query preselection/prequery.n3 >interim/selectedSteps_greenWaste.n3
 
 #createPath
-eye workflow-composer/gps-plugin_modified_noPermutations.n3 profile/knowledge.n3  profile/personalInfo.n3  interim/extraRule_greenWaste.n3 subgoals/aux2.n3 interim/selectedSteps_greenWaste.n3 oslo-descriptions/change-address-steps.ttl --query interim/createdGoal_greenWaste.n3 --nope > interim/GreenWaste_noPermutation.n3
+eye workflow-composer/gps-plugin_modified_noPermutations.n3 profile/knowledge.n3  profile/personalInfo.n3  interim/extraRule_greenWaste.n3 help-functions/aux2.n3 interim/selectedSteps_greenWaste.n3 oslo-descriptions/change-address-steps.ttl --query interim/createdGoal_greenWaste.n3 --nope > interim/GreenWaste_noPermutation.n3
 
 #
 # Grey Waste
@@ -130,7 +130,7 @@ eye choices/selected_GreyWaste.n3 interim/container-level-steps.n3 --query subgo
 eye interim/component-level-steps.n3 interim/shortComponentDescriptions.n3 interim/createdGoal_greyWaste.n3 preselection/preselection.n3 profile/knowledge.n3  interim/block_greyWaste.n3 --nope --query preselection/prequery.n3 >interim/selectedSteps_greyWaste.n3
 
 #createPath
-eye workflow-composer/gps-plugin_modified_noPermutations.n3 profile/knowledge.n3  profile/personalInfo.n3  interim/extraRule_greyWaste.n3 subgoals/aux2.n3 interim/selectedSteps_greyWaste.n3 oslo-descriptions/change-address-steps.ttl --query interim/createdGoal_greyWaste.n3 --nope > interim/GreyWaste_noPermutation.n3
+eye workflow-composer/gps-plugin_modified_noPermutations.n3 profile/knowledge.n3  profile/personalInfo.n3  interim/extraRule_greyWaste.n3 help-functions/aux2.n3 interim/selectedSteps_greyWaste.n3 oslo-descriptions/change-address-steps.ttl --query interim/createdGoal_greyWaste.n3 --nope > interim/GreyWaste_noPermutation.n3
 
 
 
@@ -151,7 +151,7 @@ eye choices/selected_PaperWaste.n3 interim/container-level-steps.n3 --query subg
 eye interim/component-level-steps.n3 interim/shortComponentDescriptions.n3 interim/createdGoal_paperWaste.n3 preselection/preselection.n3 profile/knowledge.n3  interim/block_paperWaste.n3 --nope --query preselection/prequery.n3 >interim/selectedSteps_paperWaste.n3
 
 #createPath
-eye workflow-composer/gps-plugin_modified_noPermutations.n3 profile/knowledge.n3  profile/personalInfo.n3  interim/extraRule_paperWaste.n3 subgoals/aux2.n3 interim/selectedSteps_paperWaste.n3 oslo-descriptions/change-address-steps.ttl --query interim/createdGoal_paperWaste.n3 --nope > interim/PaperWaste_noPermutation.n3
+eye workflow-composer/gps-plugin_modified_noPermutations.n3 profile/knowledge.n3  profile/personalInfo.n3  interim/extraRule_paperWaste.n3 help-functions/aux2.n3 interim/selectedSteps_paperWaste.n3 oslo-descriptions/change-address-steps.ttl --query interim/createdGoal_paperWaste.n3 --nope > interim/PaperWaste_noPermutation.n3
 
 
 #
@@ -171,14 +171,14 @@ eye choices/selected_SubmitWasteInfo.n3 interim/container-level-steps.n3 --query
 eye interim/component-level-steps.n3 interim/shortComponentDescriptions.n3 interim/createdGoal_submitWasteInfo.n3 preselection/preselection.n3 profile/knowledge.n3  interim/block_submitWasteInfo.n3 --nope --query preselection/prequery.n3 >interim/selectedSteps_submitWasteInfo.n3
 
 #createPath
-eye workflow-composer/gps-plugin_modified_noPermutations.n3 profile/knowledge.n3  profile/personalInfo.n3  interim/extraRule_submitWasteInfo.n3 subgoals/aux2.n3 interim/selectedSteps_submitWasteInfo.n3 oslo-descriptions/change-address-steps.ttl --query interim/createdGoal_submitWasteInfo.n3 --nope > interim/SubmitWasteInfo_noPermutation.n3
+eye workflow-composer/gps-plugin_modified_noPermutations.n3 profile/knowledge.n3  profile/personalInfo.n3  interim/extraRule_submitWasteInfo.n3 help-functions/aux2.n3 interim/selectedSteps_submitWasteInfo.n3 oslo-descriptions/change-address-steps.ttl --query interim/createdGoal_submitWasteInfo.n3 --nope > interim/SubmitWasteInfo_noPermutation.n3
 
     
 
 
 # produce the data used
 # todo
-eye profile/knowledge.n3  profile/personalInfo.n3 interim/extraRule_submitWasteInfo.n3 subgoals/aux2.n3 --nope --query show/waste-info.n3 > interim/show-waste-Info.n3
+eye profile/knowledge.n3  profile/personalInfo.n3 interim/extraRule_submitWasteInfo.n3 help-functions/aux2.n3 --nope --query show/waste-info.n3 > interim/show-waste-Info.n3
 
 
 
@@ -201,7 +201,7 @@ eye choices/selected_Policevisit.n3 interim/container-level-steps.n3 --query sub
 eye interim/component-level-steps.n3 interim/shortComponentDescriptions.n3 interim/createdGoal_police.n3 preselection/preselection.n3 profile/knowledge.n3  interim/block_police.n3 --nope --query preselection/prequery.n3 >interim/selectedSteps_policevisit.n3
 
 #createPath
-eye workflow-composer/gps-plugin_modified_noPermutations.n3 profile/knowledge.n3  profile/personalInfo.n3  interim/extraRule_police.n3 subgoals/aux2.n3 interim/selectedSteps_policevisit.n3 oslo-descriptions/change-address-steps.ttl --query interim/createdGoal_police.n3 --nope > interim/Policevisit_noPermutation.n3
+eye workflow-composer/gps-plugin_modified_noPermutations.n3 profile/knowledge.n3  profile/personalInfo.n3  interim/extraRule_police.n3 help-functions/aux2.n3 interim/selectedSteps_policevisit.n3 oslo-descriptions/change-address-steps.ttl --query interim/createdGoal_police.n3 --nope > interim/Policevisit_noPermutation.n3
 
 
 #
@@ -221,7 +221,7 @@ eye choices/selected_AddressChangeInOffice.n3 interim/container-level-steps.n3 -
 eye interim/component-level-steps.n3 interim/shortComponentDescriptions.n3 interim/createdGoal_addressChangeInOffice.n3 preselection/preselection.n3 profile/knowledge.n3 interim/block_addressChangeInOffice.n3 --nope --query preselection/prequery.n3 >interim/selectedSteps_addressChangeInOffice.n3
 
 #createPath
-eye workflow-composer/gps-plugin_modified_noPermutations.n3 profile/knowledge.n3  profile/personalInfo.n3  interim/extraRule_addressChangeInOffice.n3 subgoals/aux2.n3 interim/selectedSteps_addressChangeInOffice.n3 oslo-descriptions/change-address-steps.ttl --query interim/createdGoal_addressChangeInOffice.n3 --nope > interim/addressChangeInOffice__noPermutation.n3
+eye workflow-composer/gps-plugin_modified_noPermutations.n3 profile/knowledge.n3  profile/personalInfo.n3  interim/extraRule_addressChangeInOffice.n3 help-functions/aux2.n3 interim/selectedSteps_addressChangeInOffice.n3 oslo-descriptions/change-address-steps.ttl --query interim/createdGoal_addressChangeInOffice.n3 --nope > interim/addressChangeInOffice__noPermutation.n3
 
 
 
@@ -247,7 +247,21 @@ eye workflow-composer/gps-plugin_modified_noPermutations.n3 profile/knowledge.n3
 #########################################################
 # create input form for each component step
 #########################################################
-eye profile/knowledge.n3  profile/personalInfo.n3  interim/component-level-steps.n3 --query external-input/CreateInputPattern.n3 --nope > interim/input_patterns.n3
+eye help-functions/aux2.n3 profile/knowledge.n3  profile/personalInfo.n3  interim/component-level-steps.n3 --query external-input/CreateInputPattern.n3 --nope > interim/input_patterns.n3
+
+# value pattern to input pattern:
+
+#create a triple for the inpit you receive. Example: external-input/example.n3
+
+#then run the following query
+eye interim/input_patterns.n3 external-input/example.n3 --query external-input/makeTriples.n3 > interim/newData.n3
+
+
+eye external-input/example.n3 help-functions/aux2.n3 profile/knowledge.n3  profile/personalInfo.n3  interim/component-level-steps.n3 external-input/replaceValue.n3 --query external-input/CreateInputTriple.n3 --nope > interim/input_triples.n3
+
+
+
+
 
 
 

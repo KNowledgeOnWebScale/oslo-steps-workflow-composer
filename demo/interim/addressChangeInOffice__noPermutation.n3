@@ -1,5 +1,5 @@
 #Processed by EYE v20.0313.1435 josd
-#eye workflow-composer/gps-plugin_modified_noPermutations.n3 profile/knowledge.n3 profile/personalInfo.n3 interim/extraRule_addressChangeInOffice.n3 subgoals/aux2.n3 interim/selectedSteps_addressChangeInOffice.n3 oslo-descriptions/change-address-steps.ttl --query interim/createdGoal_addressChangeInOffice.n3 --nope
+#eye workflow-composer/gps-plugin_modified_noPermutations.n3 profile/knowledge.n3 profile/personalInfo.n3 interim/extraRule_addressChangeInOffice.n3 help-functions/aux2.n3 interim/selectedSteps_addressChangeInOffice.n3 oslo-descriptions/change-address-steps.ttl --query interim/createdGoal_addressChangeInOffice.n3 --nope
 
 @prefix math: <http://www.w3.org/2000/10/swap/math#>.
 @prefix list: <http://www.w3.org/2000/10/swap/list#>.
@@ -29,13 +29,13 @@
 @prefix var: <https://example.org/ns/var#>.
 @prefix oslo: <https://example.org/ns/oslo#>.
 @prefix ns3: <http://josd.github.io/.well-known/genid/pP7dSETOSHCTU6bSn:iLn_1X3mg#>.
-@prefix ns4: <http://josd.github.io/.well-known/genid/avPQ7MqsjbTol:G9LBftZlQkaXY#>.
-@prefix ns5: <http://josd.github.io/.well-known/genid/3xusu:8P3::CpVSgPAirSB1FrCA#>.
+@prefix ns4: <http://josd.github.io/.well-known/genid/gfxIz_nS4C1asUMHN6NOACBTE2Y#>.
+@prefix ns5: <http://josd.github.io/.well-known/genid/Z3CjB_jPfjKCU1wk8esQpsWXKKM#>.
 @prefix plan: <http://https://github.com/doerthe/plan#>.
-@prefix ns6: <http://josd.github.io/.well-known/genid/skoEuRaXf5f29Tb7OrE7m:5dpa0#>.
+@prefix ns6: <http://josd.github.io/.well-known/genid/x2MDN0NqIfV6mSaJabcQ3d2qFDg#>.
 
 _:sk_3 gps:path ((step:makeAppointmentForAddressChange step:visitOfficeForAddressChange) 2.0 2.0 0.9409 0.9409).
 
-#2020-04-07T13:57:03.832Z in=671 out=1 ent=3 step=4 brake=4 inf=545448 sec=0.145 inf/sec=3761710
+#2020-04-14T14:07:46.913Z in=671 out=1 ent=3 step=4 brake=4 inf=545567 sec=0.145 inf/sec=3762531
 #ENDS
 

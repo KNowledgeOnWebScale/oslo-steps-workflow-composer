@@ -29,14 +29,14 @@
 @prefix var: <https://example.org/ns/var#>.
 @prefix oslo: <https://example.org/ns/oslo#>.
 @prefix ns3: <http://josd.github.io/.well-known/genid/pP7dSETOSHCTU6bSn:iLn_1X3mg#>.
-@prefix ns4: <http://josd.github.io/.well-known/genid/CMEt0ek5S9nHwHmLvHJrBytNRM8#>.
+@prefix ns4: <http://josd.github.io/.well-known/genid/p5V5SbLOu2W9kZ8jjqPgFi4yti0#>.
 @prefix plan: <http://https://github.com/doerthe/plan#>.
-@prefix ns5: <http://josd.github.io/.well-known/genid/NC5TZQ0VNapaJ43ulc8IAvnqL5E#>.
+@prefix ns5: <http://josd.github.io/.well-known/genid/zHCbrqbBt6wHHUXceYgOevgRQwU#>.
 
 ex:user gps:path ((("unorderedList" (step:providePersonalInformation step:provideMovingData)) step:changeAddress step:submitWasteInfo) 400.0 400.0 0.6561000000000001 0.6561000000000001).
 ex:user gps:path ((("unorderedList" (step:providePersonalInformation step:provideMovingData)) step:submitWasteInfo step:changeAddress) 400.0 400.0 0.6561000000000001 0.6561000000000001).
 ex:user gps:path ((("unorderedList" (step:provideMovingData)) step:submitWasteInfo ("unorderedList" (step:providePersonalInformation)) step:changeAddress) 400.0 400.0 0.6561000000000001 0.6561000000000001).
 
-#2020-04-07T13:56:55.087Z in=670 out=3 ent=3 step=3 brake=2 inf=547357 sec=0.157 inf/sec=3486350
+#2020-04-14T14:07:37.841Z in=670 out=3 ent=3 step=3 brake=2 inf=547357 sec=0.121 inf/sec=4523612
 #ENDS
 

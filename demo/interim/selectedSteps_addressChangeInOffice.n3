@@ -28,14 +28,14 @@
 @prefix math: <http://www.w3.org/2000/10/swap/math#>.
 @prefix oslo: <https://example.org/ns/oslo#>.
 @prefix ns3: <http://josd.github.io/.well-known/genid/pP7dSETOSHCTU6bSn:iLn_1X3mg#>.
-@prefix ns4: <http://josd.github.io/.well-known/genid/3xusu:8P3::CpVSgPAirSB1FrCA#>.
+@prefix ns4: <http://josd.github.io/.well-known/genid/Z3CjB_jPfjKCU1wk8esQpsWXKKM#>.
 @prefix : <http://example.org#>.
-@prefix ns5: <http://josd.github.io/.well-known/genid/avPQ7MqsjbTol:G9LBftZlQkaXY#>.
+@prefix ns5: <http://josd.github.io/.well-known/genid/gfxIz_nS4C1asUMHN6NOACBTE2Y#>.
 @prefix plan: <http://https://github.com/doerthe/plan#>.
 
 {ns1:movemap gps:description (true true {?U_14 ns1:addressChanged true} step:visitOfficeForAddressChange 1 1 0.97 0.97)} <= {?U_14 a o-persoon:Inwoner. ?U_14 ns1:hasAppointmentDate ?U_15}.
 {ns1:movemap gps:description (true true {?U_16 ns1:hasAppointmentDate ?U_17} step:makeAppointmentForAddressChange 1 1 0.97 0.97)} <= {(?U_16 ns1:hasAppointmentDate) e:skolem ?U_17. ?U_16 a o-persoon:Inwoner. ?U_16 ns1:confirmationOfAddressChange true}.
 
-#2020-04-07T13:57:03.563Z in=218 out=2 ent=4 step=8 brake=2 inf=726263 sec=0.149 inf/sec=4874248
+#2020-04-14T14:07:46.646Z in=218 out=2 ent=4 step=8 brake=2 inf=726239 sec=0.146 inf/sec=4974240
 #ENDS
 

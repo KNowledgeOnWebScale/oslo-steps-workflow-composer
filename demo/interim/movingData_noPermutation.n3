@@ -29,15 +29,15 @@
 @prefix var: <https://example.org/ns/var#>.
 @prefix oslo: <https://example.org/ns/oslo#>.
 @prefix ns3: <http://josd.github.io/.well-known/genid/pP7dSETOSHCTU6bSn:iLn_1X3mg#>.
-@prefix ns4: <http://josd.github.io/.well-known/genid/3xusu:8P3::CpVSgPAirSB1FrCA#>.
+@prefix ns4: <http://josd.github.io/.well-known/genid/Z3CjB_jPfjKCU1wk8esQpsWXKKM#>.
 @prefix shp: <https://example.org/ns/shapes#>.
 @prefix ns5: <file:///media/doerthe/4EC6F987C6F97017/store/FAST/base/steps#>.
 @prefix ns6: <http://josd.github.io/.well-known/genid/bCHPrOjcGmNlvnxxC_gIZneJs1Y#>.
 @prefix plan: <http://https://github.com/doerthe/plan#>.
-@prefix ns7: <http://josd.github.io/.well-known/genid/CdvXiUHDExu9aOq5h9xgy9oaBSI#>.
+@prefix ns7: <http://josd.github.io/.well-known/genid/jtcoc24Eo8xhAHgUGPSK0nmMXXw#>.
 
 ex:user gps:path ((("unorderedList" (step:provideMovingDateManually step:provideMovingCityManually step:provideMovingAddressManually))) 3.0 3.0 0.912673 0.912673).
 
-#2020-04-07T13:57:18.092Z in=669 out=1 ent=1 step=1 brake=2 inf=525383 sec=0.129 inf/sec=4072736
+#2020-04-14T14:08:00.492Z in=669 out=1 ent=1 step=1 brake=2 inf=525403 sec=0.117 inf/sec=4490624
 #ENDS
 

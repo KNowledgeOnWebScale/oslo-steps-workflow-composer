@@ -28,7 +28,7 @@
 @prefix math: <http://www.w3.org/2000/10/swap/math#>.
 @prefix oslo: <https://example.org/ns/oslo#>.
 @prefix ns3: <http://josd.github.io/.well-known/genid/pP7dSETOSHCTU6bSn:iLn_1X3mg#>.
-@prefix ns4: <http://josd.github.io/.well-known/genid/3xusu:8P3::CpVSgPAirSB1FrCA#>.
+@prefix ns4: <http://josd.github.io/.well-known/genid/Z3CjB_jPfjKCU1wk8esQpsWXKKM#>.
 @prefix : <http://example.org#>.
 
 {{(?U_0 ns1:hasAppointmentDate) e:skolem ?U_1. ?U_0 a o-persoon:Inwoner. ?U_0 ns1:confirmationOfAddressChange true} step:makeAppointmentForAddressChange {?U_0 ns1:hasAppointmentDate ?U_1}} a :ShortDescription.
@@ -194,6 +194,6 @@
 {?U_799 ns1:providedGreenWasteInformation true} :reliesOn {?U_799 ns1:stopGreeWasteContainer ?U_803}.
 {?U_805 ns1:providedGreenWasteInformation true} :reliesOn {?U_805 ns1:lockNeededForGreenWasteContainer ?U_810}.
 
-#2020-04-07T13:56:57.473Z in=46 out=162 ent=162 step=168 brake=1 inf=417332 sec=0.125 inf/sec=3338656
+#2020-04-14T14:07:40.276Z in=46 out=162 ent=162 step=168 brake=1 inf=417332 sec=0.118 inf/sec=3536712
 #ENDS
 

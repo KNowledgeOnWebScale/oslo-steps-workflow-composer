@@ -28,7 +28,7 @@
 @prefix math: <http://www.w3.org/2000/10/swap/math#>.
 @prefix oslo: <https://example.org/ns/oslo#>.
 @prefix ns3: <http://josd.github.io/.well-known/genid/pP7dSETOSHCTU6bSn:iLn_1X3mg#>.
-@prefix ns4: <http://josd.github.io/.well-known/genid/avPQ7MqsjbTol:G9LBftZlQkaXY#>.
+@prefix ns4: <http://josd.github.io/.well-known/genid/gfxIz_nS4C1asUMHN6NOACBTE2Y#>.
 
 {ns1:movemap gps:description (true true {?t_6 ns1:confirmationOfAddressChange true} step:confirmAddressChangeVisit 10 10 0.9 0.9)} <= {?t_6 a o-persoon:Inwoner. ?t_6 foaf:familyName ?U_5. ?t_6 foaf:givenName ?U_4. ?t_6 ns1:movingAddress ?U_13. ?t_6 ns1:movingCity ?U_15. ?t_6 ns1:movingDate ?U_12. ?t_6 ns1:nationalNumber ?U_8. ?t_6 schema:hasOccupation ?U_10. ?t_7 o-persoon:datum ?t_8. ?t_6 o-persoon:heeftGeboorte ?t_7. ?t_6 o-persoon:heeftGeboorte ?t_9. ?t_9 o-persoon:plaats ?t_10. ?t_6 schema:contactPoint ?U_0. ?t_6 schema:contactPoint ?U_2. ?U_0 schema:contactType "gsm". ?U_2 schema:contactType "telephone". ?U_0 schema:telephone ?U_1. ?U_2 schema:telephone ?U_3}.
 {ns1:movemap gps:description (true true {?t_6 ns1:addressChanged true} step:addressChangeOnEIDInOffice 10 10 0.9 0.9)} <= {?t_6 a o-persoon:Inwoner. ?t_6 ns1:confirmationOfAddressChange true}.
@@ -37,6 +37,6 @@
 {ns1:movemap gps:description (true true {?t_6 ns1:providedGreenWasteInformation true} step:provideGreenWasteContainerInfo 10 10 0.9 0.9)} <= {?t_6 a o-persoon:Inwoner}.
 {ns1:movemap gps:description (true true {?t_6 ns1:numberOfRequested1100LiterPaperWasteContainers ?U_27. ?t_6 ns1:numberOfRequested240LiterPaperWasteContainers ?U_26. ?t_6 ns1:numberOfRequested40LiterPaperWasteContainers ?U_25} step:providePaperWasteContainerInfo 10 10 0.9 0.9)} <= {(?t_6 ns1:numberOfRequested1100LiterPaperWasteContainers) e:skolem ?U_27. (?t_6 ns1:numberOfRequested240LiterPaperWasteContainers) e:skolem ?U_26. (?t_6 ns1:numberOfRequested40LiterPaperWasteContainers) e:skolem ?U_25. ?t_6 a o-persoon:Inwoner}.
 
-#2020-04-07T13:56:53.768Z in=1355 out=6 ent=99 step=430 brake=4 inf=934601 sec=0.181 inf/sec=5163541
+#2020-04-14T14:07:36.475Z in=1355 out=6 ent=99 step=430 brake=4 inf=934599 sec=0.203 inf/sec=4603936
 #ENDS
 
