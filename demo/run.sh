@@ -245,7 +245,7 @@ eye interim/component-level-steps.n3 interim/shortComponentDescriptions.n3 inter
 eye workflow-composer/gps-plugin_modified_noPermutations.n3 profile/knowledge.n3  profile/personalInfo.n3  interim/selectedSteps_movingData.n3 oslo-descriptions/change-address-steps.ttl --query interim/Goal_provideMovingData.n3 --nope > interim/movingData_noPermutation.n3
 
 #########################################################
-# create input form for each component step
+# create input for each component step
 #########################################################
 
 
@@ -256,9 +256,13 @@ eye workflow-composer/gps-plugin_modified_noPermutations.n3 profile/knowledge.n3
 #then run the following query
 eye external-input/example.n3 help-functions/aux2.n3 profile/knowledge.n3  profile/personalInfo.n3  interim/component-level-steps.n3 external-input/replaceValue.n3 --query external-input/CreateInputTriple.n3 --nope > interim/input_triples.n3
 
+#this is just a test
+eye external-input/example2.n3 interim/input_triples.n3 help-functions/aux2.n3 profile/knowledge.n3  profile/personalInfo.n3  interim/component-level-steps.n3 external-input/replaceValue.n3 --query external-input/CreateInputTriple.n3 --nope > interim/input_triples2.n3
+
 
 #alternative: use the query below and replace the values by the input values
 eye help-functions/aux2.n3 profile/knowledge.n3  profile/personalInfo.n3  interim/component-level-steps.n3 --query external-input/CreateInputPattern.n3 --nope > interim/input_patterns.n3
+
 
 
 

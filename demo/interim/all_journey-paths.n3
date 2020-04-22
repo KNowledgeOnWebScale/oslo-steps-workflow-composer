@@ -28,10 +28,10 @@
 @prefix var: <https://example.org/ns/var#>.
 @prefix oslo: <https://example.org/ns/oslo#>.
 @prefix ns3: <http://josd.github.io/.well-known/genid/pP7dSETOSHCTU6bSn:iLn_1X3mg#>.
-@prefix ns4: <http://josd.github.io/.well-known/genid/p5V5SbLOu2W9kZ8jjqPgFi4yti0#>.
+@prefix ns4: <http://josd.github.io/.well-known/genid/eCEyc_Ru4PVY:tpfo5mfeYDk7vQ#>.
 @prefix : <http://example.org#>.
 @prefix plan: <http://https://github.com/doerthe/plan#>.
-@prefix ns5: <http://josd.github.io/.well-known/genid/hOjE6eRu:mLLKXuVMzZvqqx1rzM#>.
+@prefix ns5: <http://josd.github.io/.well-known/genid/DpjYJty7z2NTT7OsYwGb:7kff_k#>.
 
 ex:user gps:path ((step:providePersonalInformation step:provideMovingData step:changeAddress step:submitWasteInfo) 400.0 400.0 0.6561000000000001 0.6561000000000001).
 ex:user gps:path ((step:providePersonalInformation step:provideMovingData step:submitWasteInfo step:changeAddress) 400.0 400.0 0.6561000000000001 0.6561000000000001).
@@ -39,6 +39,6 @@ ex:user gps:path ((step:provideMovingData step:submitWasteInfo step:providePerso
 ex:user gps:path ((step:provideMovingData step:providePersonalInformation step:changeAddress step:submitWasteInfo) 400.0 400.0 0.6561000000000001 0.6561000000000001).
 ex:user gps:path ((step:provideMovingData step:providePersonalInformation step:submitWasteInfo step:changeAddress) 400.0 400.0 0.6561000000000001 0.6561000000000001).
 
-#2020-04-14T14:07:37.601Z in=667 out=5 ent=5 step=5 brake=2 inf=543413 sec=0.170 inf/sec=3196547
+#2020-04-22T11:31:10.401Z in=667 out=5 ent=5 step=5 brake=2 inf=543402 sec=0.138 inf/sec=3937696
 #ENDS
 

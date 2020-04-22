@@ -28,7 +28,7 @@
 @prefix math: <http://www.w3.org/2000/10/swap/math#>.
 @prefix oslo: <https://example.org/ns/oslo#>.
 @prefix ns3: <http://josd.github.io/.well-known/genid/pP7dSETOSHCTU6bSn:iLn_1X3mg#>.
-@prefix ns4: <http://josd.github.io/.well-known/genid/p5V5SbLOu2W9kZ8jjqPgFi4yti0#>.
+@prefix ns4: <http://josd.github.io/.well-known/genid/eCEyc_Ru4PVY:tpfo5mfeYDk7vQ#>.
 @prefix : <http://example.org#>.
 
 {{(?U_5 o-persoon:datum) e:skolem ?U_6. (?U_7 o-persoon:plaats) e:skolem ?U_9. (?U_8 o-persoon:verblijfsadres) e:skolem ?U_10. (?U_0 foaf:familyName) e:skolem ?U_1. (?U_0 foaf:givenName) e:skolem ?U_2. (?U_0 o-persoon:heeftGeboorte) e:skolem ?U_5. (?U_0 o-persoon:heeftGeboorte) e:skolem ?U_7. (?U_0 o-persoon:heeftVerblijfplaats) e:skolem ?U_8. (?U_0 ns1:nationalNumber) e:skolem ?U_3. (?U_0 schema:contactPoint schema:contactType "gsm") e:skolem ?U_11. (?U_0 schema:contactPoint schema:contactType "gsm" schema:telephone) e:skolem ?U_13. (?U_0 schema:contactPoint schema:contactType "telephone") e:skolem ?U_12. (?U_0 schema:contactPoint schema:contactType "telephone" schema:telephone) e:skolem ?U_14. (?U_0 schema:hasOccupation) e:skolem ?U_4. ?U_0 a o-persoon:Inwoner} step:providePersonalInformation {?U_0 foaf:familyName ?U_1. ?U_0 foaf:givenName ?U_2. ?U_0 ns1:nationalNumber ?U_3. ?U_0 schema:hasOccupation ?U_4. ?U_5 o-persoon:datum ?U_6. ?U_0 o-persoon:heeftGeboorte ?U_5. ?U_0 o-persoon:heeftGeboorte ?U_7. ?U_0 o-persoon:heeftVerblijfplaats ?U_8. ?U_7 o-persoon:plaats ?U_9. ?U_8 o-persoon:verblijfsadres ?U_10. ?U_0 schema:contactPoint ?U_11. ?U_0 schema:contactPoint ?U_12. ?U_11 schema:contactType "gsm". ?U_12 schema:contactType "telephone". ?U_11 schema:telephone ?U_13. ?U_12 schema:telephone ?U_14}} a :ShortDescription.
@@ -92,6 +92,6 @@
 {?U_618 ns1:providedGreenWasteInformation true} :reliesOn {?U_618 ns1:stopGreeWasteContainer ?U_622}.
 {?U_624 ns1:providedGreenWasteInformation true} :reliesOn {?U_624 ns1:lockNeededForGreenWasteContainer ?U_629}.
 
-#2020-04-14T14:07:37.057Z in=12 out=60 ent=60 step=66 brake=1 inf=246458 sec=0.130 inf/sec=1895831
+#2020-04-22T11:31:09.897Z in=12 out=60 ent=60 step=66 brake=1 inf=246469 sec=0.088 inf/sec=2800784
 #ENDS
 

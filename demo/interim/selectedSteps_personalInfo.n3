@@ -28,7 +28,7 @@
 @prefix math: <http://www.w3.org/2000/10/swap/math#>.
 @prefix oslo: <https://example.org/ns/oslo#>.
 @prefix ns3: <http://josd.github.io/.well-known/genid/pP7dSETOSHCTU6bSn:iLn_1X3mg#>.
-@prefix ns4: <http://josd.github.io/.well-known/genid/Z3CjB_jPfjKCU1wk8esQpsWXKKM#>.
+@prefix ns4: <http://josd.github.io/.well-known/genid/WQJoFFVtBY71226DuM:gm3eWrCM#>.
 @prefix : <http://example.org#>.
 @prefix shp: <https://example.org/ns/shapes#>.
 @prefix ns5: <file:///media/doerthe/4EC6F987C6F97017/store/FAST/base/steps#>.
@@ -45,6 +45,6 @@
 {ns1:movemap gps:description (true true {?U_239 o-persoon:heeftVerblijfplaats ?U_240. ?U_240 o-persoon:verblijfsadres ?U_241} step:provideCitizenAddressManually 1 1 0.97 0.97)} <= {(?U_240 o-persoon:verblijfsadres) e:skolem ?U_241. (?U_239 o-persoon:heeftVerblijfplaats) e:skolem ?U_240. ?U_239 a o-persoon:Inwoner}.
 {ns1:movemap gps:description (true true {?U_242 schema:hasOccupation ?U_243} step:provideCitizenProfessionManually 1 1 0.97 0.97)} <= {(?U_242 schema:hasOccupation) e:skolem ?U_243. ?U_242 a o-persoon:Inwoner}.
 
-#2020-04-14T14:07:47.282Z in=216 out=9 ent=18 step=62 brake=2 inf=982069 sec=0.244 inf/sec=4024873
+#2020-04-22T11:31:20.267Z in=216 out=9 ent=18 step=62 brake=2 inf=982061 sec=0.262 inf/sec=3748324
 #ENDS
 

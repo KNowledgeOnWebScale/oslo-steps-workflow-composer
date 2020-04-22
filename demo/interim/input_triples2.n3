@@ -1,5 +1,5 @@
 #Processed by EYE v20.0313.1435 josd
-#eye external-input/example.n3 help-functions/aux2.n3 profile/knowledge.n3 profile/personalInfo.n3 interim/component-level-steps.n3 external-input/replaceValue.n3 --query external-input/CreateInputTriple.n3 --nope
+#eye external-input/example2.n3 interim/input_triples.n3 help-functions/aux2.n3 profile/knowledge.n3 profile/personalInfo.n3 interim/component-level-steps.n3 external-input/replaceValue.n3 --query external-input/CreateInputTriple.n3 --nope
 
 @prefix : <http://example.org#>.
 @prefix step: <https://fast.ilabt.imec.be/api/v5/steps#>.
@@ -32,11 +32,12 @@
 @prefix ns4: <http://josd.github.io/.well-known/genid/WQJoFFVtBY71226DuM:gm3eWrCM#>.
 @prefix ns5: <http://josd.github.io/.well-known/genid/3xusu:8P3::CpVSgPAirSB1FrCA#>.
 @prefix ns6: <http://josd.github.io/.well-known/genid/xlADeggHb0tb1ddumZfSfDF:6rc#>.
+@prefix ns7: <http://josd.github.io/.well-known/genid/wMPL:NRnVzXwX6nlI:oGNx7l0NU#>.
 
-ex:user schema:contactPoint ns6:t_0.
-ns6:t_0 schema:contactType "gsm".
-ns6:t_0 schema:telephone "12345".
+ex:user schema:contactPoint ns7:t_0.
+ns7:t_0 schema:contactType "telephone".
+ns7:t_0 schema:telephone "1234577".
 
-#2020-04-22T11:31:34.530Z in=53 out=3 ent=3 step=1 brake=2 inf=238469 sec=0.076 inf/sec=3137750
+#2020-04-22T11:31:34.723Z in=56 out=3 ent=3 step=1 brake=2 inf=257066 sec=0.076 inf/sec=3382447
 #ENDS
 
