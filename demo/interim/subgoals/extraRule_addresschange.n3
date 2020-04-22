@@ -1,0 +1,38 @@
+#Processed by EYE v20.0313.1435 josd
+#eye choices/selected_AddressSubmission.n3 interim/steps/journey-level-steps.n3 --query subgoals/creationOfRuleForMissingData.n3 --nope
+
+@prefix step: <https://fast.ilabt.imec.be/api/v5/steps#>.
+@prefix : <http://example.org#>.
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix o-address: <https://data.vlaanderen.be/ns/adres#>.
+@prefix o-steps: <https://fast.ilabt.imec.be/ns/oslo-steps/0.2#>.
+@prefix ex: <http://example.org/ns/example#>.
+@prefix xl: <http://www.w3.org/2008/05/skos-xl#>.
+@prefix state: <https://fast.ilabt.imec.be/api/v5/states#>.
+@prefix shape: <https://fast.ilabt.imec.be/api/v5/shapes#>.
+@prefix p-plan: <http://purl.org/net/p-plan#>.
+@prefix ns1: <https://example.org/ns/example#>.
+@prefix foaf: <http://xmlns.com/foaf/0.1/>.
+@prefix sh: <http://www.w3.org/ns/shacl#>.
+@prefix schema: <https://schema.org/>.
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
+@prefix skos: <http://www.w3.org/2004/02/skos/core#>.
+@prefix ops: <https://data.vlaanderen.be/shacl/persoon-basis#>.
+@prefix o-persoon: <https://data.vlaanderen.be/ns/persoon#>.
+@prefix ns2: <https://example.org/ns/oslo-steps#>.
+@prefix var: <https://example.org/ns/var#>.
+@prefix log: <http://www.w3.org/2000/10/swap/log#>.
+@prefix e: <http://eulersharp.sourceforge.net/2003/03swap/log-rules#>.
+@prefix gps: <http://josd.github.io/eye/reasoning/gps/gps-schema#>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
+@prefix list: <http://www.w3.org/2000/10/swap/list#>.
+@prefix math: <http://www.w3.org/2000/10/swap/math#>.
+@prefix oslo: <https://example.org/ns/oslo#>.
+@prefix ns3: <http://josd.github.io/.well-known/genid/pP7dSETOSHCTU6bSn:iLn_1X3mg#>.
+@prefix ns4: <http://josd.github.io/.well-known/genid/T8FNFilA:qsUZg4NrcUULqgZjhI#>.
+
+{?U_35 e:findall ({?U_37 ?U_36 ?U_38} {{?U_0 a o-persoon:Inwoner. ?U_0 foaf:familyName ?U_1. ?U_0 foaf:givenName ?U_2. ?U_8 o-persoon:datum ?U_9. ?U_0 o-persoon:heeftGeboorte ?U_10. ?U_0 o-persoon:heeftGeboorte ?U_8. ?U_10 o-persoon:plaats ?U_11. ?U_0 ns1:movingAddress ?U_3. ?U_0 ns1:movingCity ?U_4. ?U_0 ns1:movingDate ?U_5. ?U_0 ns1:nationalNumber ?U_6. ?U_0 schema:contactPoint ?U_12. ?U_0 schema:contactPoint ?U_13. ?U_12 schema:contactType "gsm". ?U_13 schema:contactType "telephone". ?U_0 schema:hasOccupation ?U_7. ?U_12 schema:telephone ?U_14. ?U_13 schema:telephone ?U_15} log:includes {?U_37 ?U_36 ?U_38}. ?U_35 e:call {?U_37 ?U_36 ?U_38}} ?U_39). ({?U_0 a o-persoon:Inwoner. ?U_0 foaf:familyName ?U_1. ?U_0 foaf:givenName ?U_2. ?U_8 o-persoon:datum ?U_9. ?U_0 o-persoon:heeftGeboorte ?U_10. ?U_0 o-persoon:heeftGeboorte ?U_8. ?U_10 o-persoon:plaats ?U_11. ?U_0 ns1:movingAddress ?U_3. ?U_0 ns1:movingCity ?U_4. ?U_0 ns1:movingDate ?U_5. ?U_0 ns1:nationalNumber ?U_6. ?U_0 schema:contactPoint ?U_12. ?U_0 schema:contactPoint ?U_13. ?U_12 schema:contactType "gsm". ?U_13 schema:contactType "telephone". ?U_0 schema:hasOccupation ?U_7. ?U_12 schema:telephone ?U_14. ?U_13 schema:telephone ?U_15} ?U_39) :unifyList {?U_0 a o-persoon:Inwoner. ?U_0 foaf:familyName ?U_1. ?U_0 foaf:givenName ?U_2. ?U_8 o-persoon:datum ?U_9. ?U_0 o-persoon:heeftGeboorte ?U_10. ?U_0 o-persoon:heeftGeboorte ?U_8. ?U_10 o-persoon:plaats ?U_11. ?U_0 ns1:movingAddress ?U_3. ?U_0 ns1:movingCity ?U_4. ?U_0 ns1:movingDate ?U_5. ?U_0 ns1:nationalNumber ?U_6. ?U_0 schema:contactPoint ?U_12. ?U_0 schema:contactPoint ?U_13. ?U_12 schema:contactType "gsm". ?U_13 schema:contactType "telephone". ?U_0 schema:hasOccupation ?U_7. ?U_12 schema:telephone ?U_14. ?U_13 schema:telephone ?U_15}. {?U_0 a o-persoon:Inwoner. ?U_0 foaf:familyName ?U_1. ?U_0 foaf:givenName ?U_2. ?U_8 o-persoon:datum ?U_9. ?U_0 o-persoon:heeftGeboorte ?U_10. ?U_0 o-persoon:heeftGeboorte ?U_8. ?U_10 o-persoon:plaats ?U_11. ?U_0 ns1:movingAddress ?U_3. ?U_0 ns1:movingCity ?U_4. ?U_0 ns1:movingDate ?U_5. ?U_0 ns1:nationalNumber ?U_6. ?U_0 schema:contactPoint ?U_12. ?U_0 schema:contactPoint ?U_13. ?U_12 schema:contactType "gsm". ?U_13 schema:contactType "telephone". ?U_0 schema:hasOccupation ?U_7. ?U_12 schema:telephone ?U_14. ?U_13 schema:telephone ?U_15} e:labelvars ?U_40} => ?U_40.
+
+#2020-04-22T13:43:34.303Z in=6 out=1 ent=1 step=1 brake=2 inf=89970 sec=0.051 inf/sec=1764118
+#ENDS
+
