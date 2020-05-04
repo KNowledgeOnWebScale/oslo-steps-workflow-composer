@@ -1,4 +1,0 @@
-
-
-
-{?a ex:usesData ?b} => {?a ex:usesData ?b}.
