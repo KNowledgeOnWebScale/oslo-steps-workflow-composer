@@ -1,4 +1,4 @@
-#Processed by EYE v20.0313.1435 josd
+#Processed by EYE v20.0423.1748 josd
 #eye interim/steps/component-level-steps.n3 interim/steps/shortComponentDescriptions.n3 interim/subgoals/createdGoal_submitWasteInfo.n3 preselection/preselection.n3 profile/knowledge.n3 interim/subgoals/block_submitWasteInfo.n3 --nope --query preselection/prequery.n3
 
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
@@ -28,14 +28,14 @@
 @prefix math: <http://www.w3.org/2000/10/swap/math#>.
 @prefix oslo: <https://example.org/ns/oslo#>.
 @prefix ns3: <http://josd.github.io/.well-known/genid/pP7dSETOSHCTU6bSn:iLn_1X3mg#>.
-@prefix ns4: <http://josd.github.io/.well-known/genid/:tHTegye1FGwpsQIhl5PQuRaB50#>.
+@prefix ns4: <http://josd.github.io/.well-known/genid/_klQ8ZHleh80x09kGhAskxiFVrs#>.
 @prefix : <http://example.org#>.
-@prefix ns5: <http://josd.github.io/.well-known/genid/3L8QxQ969Ni6dy7zDRrr3iMjU50#>.
+@prefix ns5: <http://josd.github.io/.well-known/genid/X6QIzRAdVuk2OOWKMziQRlt_0Ak#>.
 @prefix plan: <http://https://github.com/doerthe/plan#>.
 
 {ns1:movemap gps:description (true true {?U_23 ns1:wasteCollectionRequested true} step:submitWasteCollectionComponentLevel 1 1 0.97 0.97)} <= {?U_23 a o-persoon:Inwoner. ?U_23 ns1:wasteInfoShownToUser true}.
 {ns1:movemap gps:description (true true {?U_24 ns1:wasteInfoShownToUser true} step:showWasteCollection 1 1 0.97 0.97)} <= {?U_24 a o-persoon:Inwoner. ?U_24 ns1:lockNeededForGreyWasteContainer ?U_25. ?U_24 ns1:movingAddress ?U_26. ?U_24 ns1:movingCity ?U_27. ?U_24 ns1:movingDate ?U_28. ?U_24 ns1:numberOfRequested1100LiterPaperWasteContainers ?U_29. ?U_24 ns1:numberOfRequested120LiterGreyWasteContainers ?U_30. ?U_24 ns1:numberOfRequested240LiterGreyWasteContainers ?U_31. ?U_24 ns1:numberOfRequested240LiterPaperWasteContainers ?U_32. ?U_24 ns1:numberOfRequested40LiterGreyWasteContainers ?U_33. ?U_24 ns1:numberOfRequested40LiterPaperWasteContainers ?U_34. ?U_24 ns1:providedGreenWasteInformation true. ?U_24 o-persoon:heeftVerblijfplaats ?U_35. ?U_35 o-persoon:verblijfsadres ?U_36}.
 
-#2020-04-22T13:43:39.248Z in=230 out=2 ent=4 step=8 brake=2 inf=805531 sec=0.181 inf/sec=4450448
+#2020-05-04T10:08:31.867Z in=231 out=2 ent=4 step=8 brake=2 inf=806849 sec=0.175 inf/sec=4610566
 #ENDS
 

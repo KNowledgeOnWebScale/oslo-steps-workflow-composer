@@ -1,4 +1,4 @@
-#Processed by EYE v20.0313.1435 josd
+#Processed by EYE v20.0423.1748 josd
 #eye choices/selected_PaperWaste.n3 interim/steps/container-level-steps.n3 --query subgoals/subgoalCreation.n3 --nope --no-skolem http://josd.github.io/.well-known/genid/
 
 @prefix step: <https://fast.ilabt.imec.be/api/v5/steps#>.
@@ -29,10 +29,10 @@
 @prefix math: <http://www.w3.org/2000/10/swap/math#>.
 @prefix oslo: <https://example.org/ns/oslo#>.
 @prefix ns3: <http://josd.github.io/.well-known/genid/pP7dSETOSHCTU6bSn:iLn_1X3mg#>.
-@prefix ns4: <http://josd.github.io/.well-known/genid/3L8QxQ969Ni6dy7zDRrr3iMjU50#>.
+@prefix ns4: <http://josd.github.io/.well-known/genid/X6QIzRAdVuk2OOWKMziQRlt_0Ak#>.
 
 {?t_0 gps:findpath ({?U_0 ns1:numberOfRequested1100LiterPaperWasteContainers ?U_1. ?U_0 ns1:numberOfRequested240LiterPaperWasteContainers ?U_2. ?U_0 ns1:numberOfRequested40LiterPaperWasteContainers ?U_3} ?t_1 ?t_2 ?t_3 ?t_4 ?t_5 (10 10 0.2 0.2))} => {_:t_6 gps:path (?t_1 ?t_2 ?t_3 ?t_4 ?t_5)}.
 
-#2020-04-22T13:43:37.551Z in=8 out=1 ent=1 step=1 brake=1 inf=73201 sec=0.048 inf/sec=1525021
+#2020-05-04T10:08:30.045Z in=8 out=1 ent=1 step=1 brake=1 inf=73229 sec=0.049 inf/sec=1494469
 #ENDS
 

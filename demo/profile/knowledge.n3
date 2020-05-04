@@ -52,13 +52,7 @@ _:x e:findall (?member {?user ex:familyMember ?member} ?members ).
 
 }.
 
-{
-?user ex:providedGreenWasteInformation true.
-}
-<=
-{
-?user ex:needForGreenWasteContainer false.
-}.
+
 
 {
 ?user ex:providedGreenWasteInformation true.
@@ -72,7 +66,13 @@ _:x e:findall (?member {?user ex:familyMember ?member} ?members ).
 ?user ex:lockNeededForGreenWasteContainer ?e.
 }.
 
-
+{
+?user ex:providedGreenWasteInformation true.
+}
+<=
+{
+?user ex:needForGreenWasteContainer false.
+}.
 
 
 

@@ -1,4 +1,4 @@
-#Processed by EYE v20.0313.1435 josd
+#Processed by EYE v20.0423.1748 josd
 #eye interim/steps/container-level-steps.n3 interim/steps/shortContainerDescriptions.n3 interim/subgoals/createdGoal_Waste.n3 preselection/preselection.n3 profile/knowledge.n3 interim/subgoals/block_waste.n3 --nope --query preselection/prequery.n3
 
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
@@ -28,9 +28,9 @@
 @prefix math: <http://www.w3.org/2000/10/swap/math#>.
 @prefix oslo: <https://example.org/ns/oslo#>.
 @prefix ns3: <http://josd.github.io/.well-known/genid/pP7dSETOSHCTU6bSn:iLn_1X3mg#>.
-@prefix ns4: <http://josd.github.io/.well-known/genid/3L8QxQ969Ni6dy7zDRrr3iMjU50#>.
+@prefix ns4: <http://josd.github.io/.well-known/genid/X6QIzRAdVuk2OOWKMziQRlt_0Ak#>.
 @prefix : <http://example.org#>.
-@prefix ns5: <http://josd.github.io/.well-known/genid/T8FNFilA:qsUZg4NrcUULqgZjhI#>.
+@prefix ns5: <http://josd.github.io/.well-known/genid/UQGBnXA0WPcbSbjDP7DXm0iLNiA#>.
 @prefix plan: <http://https://github.com/doerthe/plan#>.
 
 {ns1:movemap gps:description (true true {?U_70 ns1:wasteCollectionRequested true} step:submitWasteCollectionContainerLevel 10 10 0.9 0.9)} <= {?U_70 a o-persoon:Inwoner. ?U_70 ns1:lockNeededForGreyWasteContainer ?U_71. ?U_70 ns1:movingAddress ?U_72. ?U_70 ns1:movingCity ?U_73. ?U_70 ns1:movingDate ?U_74. ?U_70 ns1:numberOfRequested1100LiterPaperWasteContainers ?U_75. ?U_70 ns1:numberOfRequested120LiterGreyWasteContainers ?U_76. ?U_70 ns1:numberOfRequested240LiterGreyWasteContainers ?U_77. ?U_70 ns1:numberOfRequested240LiterPaperWasteContainers ?U_78. ?U_70 ns1:numberOfRequested40LiterGreyWasteContainers ?U_79. ?U_70 ns1:numberOfRequested40LiterPaperWasteContainers ?U_80. ?U_70 ns1:providedGreenWasteInformation true. ?U_70 o-persoon:heeftVerblijfplaats ?U_81. ?U_81 o-persoon:verblijfsadres ?U_82}.
@@ -38,6 +38,6 @@
 {ns1:movemap gps:description (true true {?U_88 ns1:providedGreenWasteInformation true} step:provideGreenWasteContainerInfo 10 10 0.9 0.9)} <= {?U_88 a o-persoon:Inwoner}.
 {ns1:movemap gps:description (true true {?U_89 ns1:numberOfRequested1100LiterPaperWasteContainers ?U_90. ?U_89 ns1:numberOfRequested240LiterPaperWasteContainers ?U_91. ?U_89 ns1:numberOfRequested40LiterPaperWasteContainers ?U_92} step:providePaperWasteContainerInfo 10 10 0.9 0.9)} <= {(?U_89 ns1:numberOfRequested1100LiterPaperWasteContainers) e:skolem ?U_90. (?U_89 ns1:numberOfRequested240LiterPaperWasteContainers) e:skolem ?U_91. (?U_89 ns1:numberOfRequested40LiterPaperWasteContainers) e:skolem ?U_92. ?U_89 a o-persoon:Inwoner}.
 
-#2020-04-22T13:43:33.732Z in=91 out=4 ent=8 step=26 brake=2 inf=398859 sec=0.099 inf/sec=4028879
+#2020-05-04T10:08:26.113Z in=92 out=4 ent=8 step=26 brake=2 inf=400287 sec=0.145 inf/sec=2760600
 #ENDS
 

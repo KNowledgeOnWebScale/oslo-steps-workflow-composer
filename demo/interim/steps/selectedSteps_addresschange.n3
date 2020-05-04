@@ -1,4 +1,4 @@
-#Processed by EYE v20.0313.1435 josd
+#Processed by EYE v20.0423.1748 josd
 #eye interim/steps/container-level-steps.n3 interim/steps/shortContainerDescriptions.n3 interim/subgoals/createdGoal_address.n3 preselection/preselection.n3 profile/knowledge.n3 interim/subgoals/block_addresschange.n3 --nope --query preselection/prequery.n3
 
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
@@ -28,14 +28,14 @@
 @prefix math: <http://www.w3.org/2000/10/swap/math#>.
 @prefix oslo: <https://example.org/ns/oslo#>.
 @prefix ns3: <http://josd.github.io/.well-known/genid/pP7dSETOSHCTU6bSn:iLn_1X3mg#>.
-@prefix ns4: <http://josd.github.io/.well-known/genid/3L8QxQ969Ni6dy7zDRrr3iMjU50#>.
+@prefix ns4: <http://josd.github.io/.well-known/genid/X6QIzRAdVuk2OOWKMziQRlt_0Ak#>.
 @prefix : <http://example.org#>.
-@prefix ns5: <http://josd.github.io/.well-known/genid/T8FNFilA:qsUZg4NrcUULqgZjhI#>.
+@prefix ns5: <http://josd.github.io/.well-known/genid/UQGBnXA0WPcbSbjDP7DXm0iLNiA#>.
 @prefix plan: <http://https://github.com/doerthe/plan#>.
 
 {ns1:movemap gps:description (true true {?U_26 ns1:addressChanged true} step:addressChangeOnEIDInOffice 10 10 0.9 0.9)} <= {?U_26 a o-persoon:Inwoner. ?U_26 ns1:confirmationOfAddressChange true}.
 {ns1:movemap gps:description (true true {?U_27 ns1:confirmationOfAddressChange true} step:confirmAddressChangeVisit 10 10 0.9 0.9)} <= {?U_27 a o-persoon:Inwoner. ?U_27 foaf:familyName ?U_28. ?U_27 foaf:givenName ?U_29. ?U_27 ns1:movingAddress ?U_30. ?U_27 ns1:movingCity ?U_31. ?U_27 ns1:movingDate ?U_32. ?U_27 ns1:nationalNumber ?U_33. ?U_27 schema:hasOccupation ?U_34. ?U_35 o-persoon:datum ?U_36. ?U_27 o-persoon:heeftGeboorte ?U_35. ?U_27 o-persoon:heeftGeboorte ?U_37. ?U_37 o-persoon:plaats ?U_38. ?U_27 schema:contactPoint ?U_39. ?U_27 schema:contactPoint ?U_40. ?U_39 schema:contactType "gsm". ?U_40 schema:contactType "telephone". ?U_39 schema:telephone ?U_41. ?U_40 schema:telephone ?U_42}.
 
-#2020-04-22T13:43:34.687Z in=103 out=2 ent=4 step=8 brake=2 inf=393078 sec=0.101 inf/sec=3891861
+#2020-05-04T10:08:27.104Z in=104 out=2 ent=4 step=8 brake=2 inf=394395 sec=0.091 inf/sec=4334011
 #ENDS
 

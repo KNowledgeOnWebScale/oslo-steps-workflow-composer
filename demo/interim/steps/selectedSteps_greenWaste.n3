@@ -1,4 +1,4 @@
-#Processed by EYE v20.0313.1435 josd
+#Processed by EYE v20.0423.1748 josd
 #eye interim/steps/component-level-steps.n3 interim/steps/shortComponentDescriptions.n3 interim/subgoals/createdGoal_greenWaste.n3 preselection/preselection.n3 profile/knowledge.n3 interim/subgoals/block_greenWaste.n3 --nope --query preselection/prequery.n3
 
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
@@ -28,17 +28,17 @@
 @prefix math: <http://www.w3.org/2000/10/swap/math#>.
 @prefix oslo: <https://example.org/ns/oslo#>.
 @prefix ns3: <http://josd.github.io/.well-known/genid/pP7dSETOSHCTU6bSn:iLn_1X3mg#>.
-@prefix ns4: <http://josd.github.io/.well-known/genid/:tHTegye1FGwpsQIhl5PQuRaB50#>.
+@prefix ns4: <http://josd.github.io/.well-known/genid/_klQ8ZHleh80x09kGhAskxiFVrs#>.
 @prefix : <http://example.org#>.
-@prefix ns5: <http://josd.github.io/.well-known/genid/3L8QxQ969Ni6dy7zDRrr3iMjU50#>.
+@prefix ns5: <http://josd.github.io/.well-known/genid/X6QIzRAdVuk2OOWKMziQRlt_0Ak#>.
 @prefix plan: <http://https://github.com/doerthe/plan#>.
 
-{ns1:movemap gps:description (true true {?U_44 ns1:numberOfRequested40LiterGreenWasteContainers ?U_45} step:provideNumberOf40LiterGreenWasteContainersManually 1 1 0.97 0.97)} <= {(?U_44 ns1:numberOfRequested40LiterGreenWasteContainers) e:skolem ?U_45. ?U_44 a o-persoon:Inwoner}.
-{ns1:movemap gps:description (true true {?U_46 ns1:numberOfRequested120LiterGreenWasteContainers ?U_47} step:provideNumberOf120LiterGreenWasteContainersManually 1 1 0.97 0.97)} <= {(?U_46 ns1:numberOfRequested120LiterGreenWasteContainers) e:skolem ?U_47. ?U_46 a o-persoon:Inwoner}.
-{ns1:movemap gps:description (true true {?U_48 ns1:stopGreeWasteContainer ?U_49} step:provideGreenWasteContainerCollectionStopInfoManually 1 1 0.97 0.97)} <= {(?U_48 ns1:stopGreeWasteContainer) e:skolem ?U_49. ?U_48 a o-persoon:Inwoner}.
-{ns1:movemap gps:description (true true {?U_50 ns1:lockNeededForGreenWasteContainer ?U_51} step:provideGreenWasteContainerLockInfoManually 1 1 0.97 0.97)} <= {(?U_50 ns1:lockNeededForGreenWasteContainer) e:skolem ?U_51. ?U_50 a o-persoon:Inwoner}.
-{ns1:movemap gps:description (true true {?U_52 ns1:needForGreenWasteContainer ?U_53} step:provideGreenWasteContainerOwnCompostInfoManually 1 1 0.97 0.97)} <= {(?U_52 ns1:needForGreenWasteContainer) e:skolem ?U_53. ?U_52 a o-persoon:Inwoner}.
+{ns1:movemap gps:description (true true {?U_45 ns1:numberOfRequested40LiterGreenWasteContainers ?U_46} step:provideNumberOf40LiterGreenWasteContainersManually 1 1 0.97 0.97)} <= {(?U_45 ns1:numberOfRequested40LiterGreenWasteContainers) e:skolem ?U_46. ?U_45 a o-persoon:Inwoner}.
+{ns1:movemap gps:description (true true {?U_47 ns1:numberOfRequested120LiterGreenWasteContainers ?U_48} step:provideNumberOf120LiterGreenWasteContainersManually 1 1 0.97 0.97)} <= {(?U_47 ns1:numberOfRequested120LiterGreenWasteContainers) e:skolem ?U_48. ?U_47 a o-persoon:Inwoner}.
+{ns1:movemap gps:description (true true {?U_49 ns1:stopGreeWasteContainer ?U_50} step:provideGreenWasteContainerCollectionStopInfoManually 1 1 0.97 0.97)} <= {(?U_49 ns1:stopGreeWasteContainer) e:skolem ?U_50. ?U_49 a o-persoon:Inwoner}.
+{ns1:movemap gps:description (true true {?U_51 ns1:lockNeededForGreenWasteContainer ?U_52} step:provideGreenWasteContainerLockInfoManually 1 1 0.97 0.97)} <= {(?U_51 ns1:lockNeededForGreenWasteContainer) e:skolem ?U_52. ?U_51 a o-persoon:Inwoner}.
+{ns1:movemap gps:description (true true {?U_53 ns1:needForGreenWasteContainer ?U_54} step:provideGreenWasteContainerOwnCompostInfoManually 1 1 0.97 0.97)} <= {(?U_53 ns1:needForGreenWasteContainer) e:skolem ?U_54. ?U_53 a o-persoon:Inwoner}.
 
-#2020-04-22T13:43:35.964Z in=217 out=5 ent=10 step=20 brake=2 inf=739804 sec=0.168 inf/sec=4403595
+#2020-05-04T10:08:28.478Z in=218 out=5 ent=10 step=20 brake=2 inf=741527 sec=0.170 inf/sec=4361924
 #ENDS
 

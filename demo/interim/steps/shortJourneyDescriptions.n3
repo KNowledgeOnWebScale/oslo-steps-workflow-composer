@@ -1,4 +1,4 @@
-#Processed by EYE v20.0313.1435 josd
+#Processed by EYE v20.0423.1748 josd
 #eye interim/steps/journey-level-steps.n3 profile/knowledge.n3 --query preselection/pregeneration.n3 --nope
 
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
@@ -28,7 +28,7 @@
 @prefix math: <http://www.w3.org/2000/10/swap/math#>.
 @prefix oslo: <https://example.org/ns/oslo#>.
 @prefix ns3: <http://josd.github.io/.well-known/genid/pP7dSETOSHCTU6bSn:iLn_1X3mg#>.
-@prefix ns4: <http://josd.github.io/.well-known/genid/T8FNFilA:qsUZg4NrcUULqgZjhI#>.
+@prefix ns4: <http://josd.github.io/.well-known/genid/UQGBnXA0WPcbSbjDP7DXm0iLNiA#>.
 @prefix : <http://example.org#>.
 
 {{(?U_5 o-persoon:datum) e:skolem ?U_6. (?U_7 o-persoon:plaats) e:skolem ?U_9. (?U_8 o-persoon:verblijfsadres) e:skolem ?U_10. (?U_0 foaf:familyName) e:skolem ?U_1. (?U_0 foaf:givenName) e:skolem ?U_2. (?U_0 o-persoon:heeftGeboorte) e:skolem ?U_5. (?U_0 o-persoon:heeftGeboorte) e:skolem ?U_7. (?U_0 o-persoon:heeftVerblijfplaats) e:skolem ?U_8. (?U_0 ns1:nationalNumber) e:skolem ?U_3. (?U_0 schema:contactPoint schema:contactType "gsm") e:skolem ?U_11. (?U_0 schema:contactPoint schema:contactType "gsm" schema:telephone) e:skolem ?U_13. (?U_0 schema:contactPoint schema:contactType "telephone") e:skolem ?U_12. (?U_0 schema:contactPoint schema:contactType "telephone" schema:telephone) e:skolem ?U_14. (?U_0 schema:hasOccupation) e:skolem ?U_4. ?U_0 a o-persoon:Inwoner} step:providePersonalInformation {?U_0 foaf:familyName ?U_1. ?U_0 foaf:givenName ?U_2. ?U_0 ns1:nationalNumber ?U_3. ?U_0 schema:hasOccupation ?U_4. ?U_5 o-persoon:datum ?U_6. ?U_0 o-persoon:heeftGeboorte ?U_5. ?U_0 o-persoon:heeftGeboorte ?U_7. ?U_0 o-persoon:heeftVerblijfplaats ?U_8. ?U_7 o-persoon:plaats ?U_9. ?U_8 o-persoon:verblijfsadres ?U_10. ?U_0 schema:contactPoint ?U_11. ?U_0 schema:contactPoint ?U_12. ?U_11 schema:contactType "gsm". ?U_12 schema:contactType "telephone". ?U_11 schema:telephone ?U_13. ?U_12 schema:telephone ?U_14}} a :ShortDescription.
@@ -86,12 +86,13 @@
 {?U_591 ns1:providedFamilyInformation true} :reliesOn {(?U_596 ?U_592) math:difference 1}.
 {?U_597 ns1:providedFamilyInformation true} :reliesOn {?U_598 e:label ?U_599}.
 {?U_601 ns1:providedFamilyInformation true} :reliesOn {?U_601 ns1:familyMember ?U_604}.
-{?U_605 ns1:providedGreenWasteInformation true} :reliesOn {?U_605 ns1:needForGreenWasteContainer false}.
-{?U_606 ns1:providedGreenWasteInformation true} :reliesOn {?U_606 ns1:numberOfRequested40LiterGreenWasteContainers ?U_608}.
-{?U_612 ns1:providedGreenWasteInformation true} :reliesOn {?U_612 ns1:numberOfRequested120LiterGreenWasteContainers ?U_615}.
-{?U_618 ns1:providedGreenWasteInformation true} :reliesOn {?U_618 ns1:stopGreeWasteContainer ?U_622}.
-{?U_624 ns1:providedGreenWasteInformation true} :reliesOn {?U_624 ns1:lockNeededForGreenWasteContainer ?U_629}.
+{?U_605 ns1:providedGreenWasteInformation true} :reliesOn {?U_605 ns1:needForGreenWasteContainer ?U_606}.
+{?U_611 ns1:providedGreenWasteInformation true} :reliesOn {?U_611 ns1:numberOfRequested40LiterGreenWasteContainers ?U_613}.
+{?U_617 ns1:providedGreenWasteInformation true} :reliesOn {?U_617 ns1:numberOfRequested120LiterGreenWasteContainers ?U_620}.
+{?U_623 ns1:providedGreenWasteInformation true} :reliesOn {?U_623 ns1:stopGreeWasteContainer ?U_627}.
+{?U_629 ns1:providedGreenWasteInformation true} :reliesOn {?U_629 ns1:lockNeededForGreenWasteContainer ?U_634}.
+{?U_635 ns1:providedGreenWasteInformation true} :reliesOn {?U_635 ns1:needForGreenWasteContainer false}.
 
-#2020-04-22T13:43:32.122Z in=12 out=60 ent=60 step=66 brake=1 inf=246519 sec=0.084 inf/sec=2934750
+#2020-05-04T10:08:24.207Z in=12 out=61 ent=61 step=66 brake=1 inf=247317 sec=0.114 inf/sec=2169447
 #ENDS
 

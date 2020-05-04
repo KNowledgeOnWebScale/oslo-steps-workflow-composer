@@ -3,81 +3,81 @@
         "@vocab": "http://www.example.org#"
     },
     "features": {
-         "component_addressChangeOnEIDInOffice": {
-            "description": "component level  for change eid in office",
-            "inference": {
-                "data": ["./demo/profile/*", "./demo/workflow-composer/gps-plugin_modified_noPermutations.n3",  "./demo/oslo-descriptions/change-address-steps.ttl",   "./demo/interim/selectedSteps_addressChangeInOffice.n3", "./demo/interim/extraRule_addressChangeInOffice.n3", "./demo/subgoals/aux2.n3"],
-                "query": "./demo/interim/createdGoal_addressChangeInOffice.n3"
-            }
-        },
         "journey_moving": {
             "description": "journey moving",
             "inference": {
-                "data": ["./demo/interim/selectedSteps_Journey.n3", "./demo/oslo-descriptions/change-address-steps.ttl", "./demo/profile/*", "./demo/workflow-composer/gps-plugin_modified_noPermutations.n3"],
+                "data": ["./demo/interim/steps/selectedSteps_Journey.n3", "./demo/oslo-descriptions/change-address-steps.ttl", "./demo/profile/*", "./demo/workflow-composer/gps-plugin_modified_noPermutations.n3"],
                 "query": "./demo/journey/journeyGoal.n3"
             }
         },
            "container_submitWasteInfo": {
             "description": "container level paths for waste collection",
             "inference": {
-                "data": ["./demo/profile/*", "./demo/workflow-composer/gps-plugin_modified_noPermutations.n3", "./demo/interim/extraRule_waste.n3", "./demo/subgoals/aux2.n3", "./demo/interim/selectedSteps_waste.n3", "./demo/oslo-descriptions/change-address-steps.ttl"],
-                "query": "./demo/interim/createdGoal_Waste.n3"
+                "data": ["./demo/profile/*", "./demo/workflow-composer/gps-plugin_modified_noPermutations.n3", "./demo/interim/subgoals/extraRule_waste.n3", "./demo/subgoals/aux2.n3", "./demo/interim/steps/selectedSteps_waste.n3", "./demo/oslo-descriptions/change-address-steps.ttl"],
+                "query": "./demo/interim/subgoals/createdGoal_Waste.n3"
             }
         },
            "container_changeAddress": {
             "description": "container level paths for address change",
             "inference": {
-                "data": ["./demo/profile/*", "./demo/workflow-composer/gps-plugin_modified_noPermutations.n3", "./demo/interim/extraRule_addresschange.n3", "./demo/subgoals/aux2.n3", "./demo/interim/selectedSteps_addresschange.n3", "./demo/oslo-descriptions/change-address-steps.ttl"],
-                "query": "./demo/interim/createdGoal_address.n3"
+                "data": ["./demo/profile/*", "./demo/workflow-composer/gps-plugin_modified_noPermutations.n3", "./demo/interim/subgoals/extraRule_addresschange.n3", "./demo/subgoals/aux2.n3", "./demo/interim/steps/selectedSteps_addresschange.n3", "./demo/oslo-descriptions/change-address-steps.ttl"],
+                "query": "./demo/interim/subgoals/createdGoal_address.n3"
             }
         },
          "component_confirmAddressChangeVisit": {
             "description": "component level paths for address change",
             "inference": {
-                "data": ["./demo/profile/*", "./demo/workflow-composer/gps-plugin_modified_noPermutations.n3", "./demo/interim/extraRule_police.n3", "./demo/subgoals/aux2.n3", "./demo/interim/selectedSteps_policevisit.n3", "./demo/oslo-descriptions/change-address-steps.ttl"],
-                "query": "./demo/interim/createdGoal_police.n3"
+                "data": ["./demo/profile/*", "./demo/workflow-composer/gps-plugin_modified_noPermutations.n3", "./demo/interim/subgoals/extraRule_police.n3", "./demo/subgoals/aux2.n3", "./demo/interim/steps/selectedSteps_policevisit.n3", "./demo/oslo-descriptions/change-address-steps.ttl"],
+                "query": "./demo/interim/subgoals/createdGoal_police.n3"
             }
         },
          "component_providePersonalInformation": {
             "description": "component level paths for personal info (there is still no container level for that, this will be added)",
             "inference": {
-                "data": ["./demo/profile/*", "./demo/workflow-composer/gps-plugin_modified_noPermutations.n3",  "./demo/oslo-descriptions/change-address-steps.ttl",   "./demo/interim/selectedSteps_personalInfo.n3"],
-                "query": "./demo/interim/goal_personalInformation.n3"
+                "data": ["./demo/profile/*", "./demo/workflow-composer/gps-plugin_modified_noPermutations.n3",  "./demo/oslo-descriptions/change-address-steps.ttl",   "./demo/interim/steps/selectedSteps_personalInfo.n3"],
+                "query": "./demo/interim/subgoals/goal_personalInformation.n3"
             }
         },
          "component_provideMovingData": {
             "description": "component level paths for moving data (there is still no container level for that, this will be added)",
             "inference": {
-                "data": ["./demo/profile/*", "./demo/workflow-composer/gps-plugin_modified_noPermutations.n3",  "./demo/oslo-descriptions/change-address-steps.ttl",   "./demo/interim/selectedSteps_movingData.n3"],
-                "query": "./demo/interim/Goal_provideMovingData.n3"
+                "data": ["./demo/profile/*", "./demo/workflow-composer/gps-plugin_modified_noPermutations.n3",  "./demo/oslo-descriptions/change-address-steps.ttl",   "./demo/interim/steps/selectedSteps_movingData.n3"],
+                "query": "./demo/interim/subgoals/Goal_provideMovingData.n3"
             }
         },
          "component_provideGreenWasteContainerInfo": {
             "description": "component level  for green waste container info",
             "inference": {
-                "data": ["./demo/profile/*", "./demo/workflow-composer/gps-plugin_modified_noPermutations.n3",  "./demo/oslo-descriptions/change-address-steps.ttl",   "./demo/interim/selectedSteps_greenWaste.n3", "./demo/interim/extraRule_greenWaste.n3", "./demo/subgoals/aux2.n3"],
-                "query": "./demo/interim/createdGoal_greenWaste.n3"
+                "data": ["./demo/profile/*", "./demo/workflow-composer/gps-plugin_modified_noPermutations.n3",  "./demo/oslo-descriptions/change-address-steps.ttl",   "./demo/interim/steps/selectedSteps_greenWaste.n3", "./demo/interim/subgoals/extraRule_greenWaste.n3", "./demo/subgoals/aux2.n3"],
+                "query": "./demo/interim/subgoals/createdGoal_greenWaste.n3"
             }
         },
          "component_provideGreyWasteContainerInfo": {
             "description": "component level  for grey waste container info",
             "inference": {
-                "data": ["./demo/profile/*", "./demo/workflow-composer/gps-plugin_modified_noPermutations.n3",  "./demo/oslo-descriptions/change-address-steps.ttl",   "./demo/interim/selectedSteps_greyWaste.n3", "./demo/interim/extraRule_greyWaste.n3", "./demo/subgoals/aux2.n3"],
-                "query": "./demo/interim/createdGoal_greyWaste.n3"
+                "data": ["./demo/profile/*", "./demo/workflow-composer/gps-plugin_modified_noPermutations.n3",  "./demo/oslo-descriptions/change-address-steps.ttl",   "./demo/interim/steps/selectedSteps_greyWaste.n3", "./demo/interim/subgoals/extraRule_greyWaste.n3", "./demo/subgoals/aux2.n3"],
+                "query": "./demo/interim/subgoals/createdGoal_greyWaste.n3"
             }
         },
          "component_providePaperWasteContainerInfo": {
             "description": "component level  for paper waste container info",
             "inference": {
-                "data": ["./demo/profile/*", "./demo/workflow-composer/gps-plugin_modified_noPermutations.n3",  "./demo/oslo-descriptions/change-address-steps.ttl",   "./demo/interim/selectedSteps_paperWaste.n3", "./demo/interim/extraRule_paperWaste.n3", "./demo/subgoals/aux2.n3"],
-                "query": "./demo/interim/createdGoal_paperWaste.n3"
+                "data": ["./demo/profile/*", "./demo/workflow-composer/gps-plugin_modified_noPermutations.n3",  "./demo/oslo-descriptions/change-address-steps.ttl",   "./demo/interim/steps/selectedSteps_paperWaste.n3", "./demo/interim/subgoals/extraRule_paperWaste.n3", "./demo/subgoals/aux2.n3"],
+                "query": "./demo/interim/subgoals/createdGoal_paperWaste.n3"
             }
         },
          "component_submitWasteCollectionContainerLevel": {
             "description": "component level for final check and submission of waste container info",
             "inference": {
-                "data": ["./demo/workflow-composer/gps-plugin_modified_noPermutations.n3",  "./demo/profile/*", "./demo/interim/extraRule_submitWasteInfo.n3",  "./demo/subgoals/aux2.n3",   "./demo/interim/selectedSteps_submitWasteInfo.n3", "./demo/oslo-descriptions/change-address-steps.ttl"],
-                "query": "./demo/interim/createdGoal_submitWasteInfo.n3"
+                "data": ["./demo/workflow-composer/gps-plugin_modified_noPermutations.n3",  "./demo/profile/*", "./demo/interim/subgoals/extraRule_submitWasteInfo.n3",  "./demo/subgoals/aux2.n3",   "./demo/interim/steps/selectedSteps_submitWasteInfo.n3", "./demo/oslo-descriptions/change-address-steps.ttl"],
+                "query": "./demo/interim/subgoals/createdGoal_submitWasteInfo.n3"
+            }
+        },
+         "component_addressChangeOnEIDInOffice": {
+            "description": "component level  for change eid in office",
+            "inference": {
+                "data": ["./demo/profile/*", "./demo/workflow-composer/gps-plugin_modified_noPermutations.n3",  "./demo/oslo-descriptions/change-address-steps.ttl",   "./demo/interim/steps/selectedSteps_addressChangeInOffice.n3", "./demo/interim/subgoals/extraRule_addressChangeInOffice.n3", "./demo/subgoals/aux2.n3"],
+                "query": "./demo/interim/subgoals/createdGoal_addressChangeInOffice.n3"
             }
         }    
     }    

@@ -1,0 +1,52 @@
+@prefix : <http://example.org#>.
+@prefix e: <http://eulersharp.sourceforge.net/2003/03swap/log-rules#>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
+@prefix list: <http://www.w3.org/2000/10/swap/list#>.
+@prefix log: <http://www.w3.org/2000/10/swap/log#>.
+
+{
+ (() ?out) :replace ?out.
+} <= 
+{}.
+
+{
+ (?list ?replaced) :replace ?out.
+} <= 
+{
+
+
+?list rdf:first ?first.
+?list rdf:rest ?rest.
+
+?first log:equalTo {?s ?p ?o}.
+
+{?s ?p ?o} <= ?body.
+
+?body log:notEqualTo true.
+
+?scope e:optional ?body.
+
+
+
+("!") e:derive true.
+
+(?replaced (?body)) list:append ?replaced2.
+
+(?rest ?replaced2) :replace ?out.
+
+}.
+
+{
+ (?list ?replaced) :replace ?out.
+} <= 
+{
+?list rdf:first ?first.
+?list rdf:rest ?rest.
+
+?scope e:optional ?first.
+
+(?replaced (?first)) list:append ?replaced2.
+
+(?rest ?replaced2) :replace ?out.
+
+}.

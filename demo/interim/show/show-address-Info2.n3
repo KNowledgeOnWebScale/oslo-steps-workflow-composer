@@ -1,0 +1,80 @@
+#Processed by EYE v20.0423.1748 josd
+#eye profile/knowledge.n3 profile/personalInfo.n3 show/getInfo.n3 interim/steps/journey-level-steps.n3 show/Request_showInfoUsed_changeAddress.n3 --query show/query_InfoUsed.n3 --nope
+
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix p-plan: <http://purl.org/net/p-plan#>.
+@prefix o-address: <https://data.vlaanderen.be/ns/adres#>.
+@prefix o-steps: <https://fast.ilabt.imec.be/ns/oslo-steps/0.2#>.
+@prefix ex: <https://example.org/ns/example#>.
+@prefix xl: <http://www.w3.org/2008/05/skos-xl#>.
+@prefix o-persoon: <https://data.vlaanderen.be/ns/persoon#>.
+@prefix foaf: <http://xmlns.com/foaf/0.1/>.
+@prefix schema: <https://schema.org/>.
+@prefix math: <http://www.w3.org/2000/10/swap/math#>.
+@prefix e: <http://eulersharp.sourceforge.net/2003/03swap/log-rules#>.
+@prefix : <http://example.org#>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
+@prefix list: <http://www.w3.org/2000/10/swap/list#>.
+@prefix log: <http://www.w3.org/2000/10/swap/log#>.
+@prefix ns1: <http://example.org/ns/example#>.
+@prefix state: <https://fast.ilabt.imec.be/api/v5/states#>.
+@prefix shape: <https://fast.ilabt.imec.be/api/v5/shapes#>.
+@prefix step: <https://fast.ilabt.imec.be/api/v5/steps#>.
+@prefix sh: <http://www.w3.org/ns/shacl#>.
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
+@prefix skos: <http://www.w3.org/2004/02/skos/core#>.
+@prefix ops: <https://data.vlaanderen.be/shacl/persoon-basis#>.
+@prefix ns2: <https://example.org/ns/oslo-steps#>.
+@prefix var: <https://example.org/ns/var#>.
+@prefix gps: <http://josd.github.io/eye/reasoning/gps/gps-schema#>.
+@prefix oslo: <https://example.org/ns/oslo#>.
+@prefix ns3: <http://josd.github.io/.well-known/genid/pP7dSETOSHCTU6bSn:iLn_1X3mg#>.
+@prefix ns4: <http://josd.github.io/.well-known/genid/bsB:E0UfZT3pPLeOYgUr_QOOUBI#>.
+
+step:changeAddress ns1:usesData {
+ex:user a o-persoon:Inwoner. 
+ex:user foaf:familyName _:sk_0. 
+ex:user foaf:givenName _:sk_1. 
+_:sk_7 o-persoon:datum _:sk_8. 
+ex:user o-persoon:heeftGeboorte _:sk_7. 
+_:sk_7 o-persoon:plaats _:sk_9. 
+ex:user ex:movingAddress _:sk_2. 
+ex:user ex:movingCity _:sk_3. 
+ex:user ex:movingDate _:sk_4. 
+ex:user ex:nationalNumber _:sk_5. 
+ex:user schema:contactPoint ex:t_10. 
+ex:user schema:contactPoint ex:t_8. 
+ex:t_10 schema:contactType "telephone". 
+ex:t_8 schema:contactType "gsm". 
+ex:user schema:hasOccupation _:sk_6. 
+ex:t_10 schema:telephone ex:t_11. 
+ex:t_8 schema:telephone ex:t_9
+}.
+step:changeAddress ns1:usesData {
+ex:user a o-persoon:Inwoner. 
+ex:user foaf:familyName _:sk_25. 
+ex:user foaf:givenName _:sk_26. 
+_:sk_32 o-persoon:datum _:sk_33. 
+ex:user o-persoon:heeftGeboorte _:sk_32.
+_:sk_34 o-persoon:plaats _:sk_35. 
+ex:user ex:movingAddress _:sk_27. 
+ex:user ex:movingCity _:sk_28. 
+ex:user ex:movingDate _:sk_29. 
+ex:user ex:nationalNumber _:sk_30. 
+ex:user schema:contactPoint ex:t_10. 
+ex:user schema:contactPoint ex:t_8. 
+ex:t_10 schema:contactType "telephone". 
+ex:t_8 schema:contactType "gsm". 
+ex:user schema:hasOccupation _:sk_31. 
+ex:t_10 schema:telephone ex:t_11. 
+ex:t_8 schema:telephone ex:t_9
+}.
+step:changeAddress ns1:usesData {
+ex:user a o-persoon:Inwoner. 
+ex:user foaf:familyName _:sk_52. 
+ex:user foaf:givenName _:sk_53. 
+_:sk_59 o-persoon:datum _:sk_60. ex:user o-persoon:heeftGeboorte _:sk_61. _:sk_61 o-persoon:plaats _:sk_62. ex:user ex:movingAddress _:sk_54. ex:user ex:movingCity _:sk_55. ex:user ex:movingDate _:sk_56. ex:user ex:nationalNumber _:sk_57. ex:user schema:contactPoint ex:t_10. ex:user schema:contactPoint ex:t_8. ex:t_10 schema:contactType "telephone". ex:t_8 schema:contactType "gsm". ex:user schema:hasOccupation _:sk_58. ex:t_10 schema:telephone ex:t_11. ex:t_8 schema:telephone ex:t_9}.
+
+#2020-04-30T13:07:05.639Z in=28 out=3 ent=3 step=16 brake=2 inf=564269708 sec=106.507 inf/sec=5297959
+#ENDS
+

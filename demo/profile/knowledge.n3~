@@ -1,0 +1,91 @@
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix p-plan: <http://purl.org/net/p-plan#> .
+@prefix o-address: <https://data.vlaanderen.be/ns/adres#> .
+@prefix o-steps: <https://fast.ilabt.imec.be/ns/oslo-steps/0.2#> .
+@prefix ex: <https://example.org/ns/example#> .
+@prefix xl: <http://www.w3.org/2008/05/skos-xl#> .
+@prefix : <https://example.org/ns/example#> .
+@prefix o-persoon: <https://data.vlaanderen.be/ns/persoon#>.
+@prefix foaf: <http://xmlns.com/foaf/0.1/>.
+@prefix schema: <https://schema.org/>.
+@prefix math: <http://www.w3.org/2000/10/swap/math#>.
+PREFIX e: <http://eulersharp.sourceforge.net/2003/03swap/log-rules#>
+
+{?user :paperWorkForMovementComplete true} <= 
+  {
+  ?user ex:wasteCollectionRequested true.
+  ?user ex:addressChangeDeclared true.
+  ?user ex:transportRequested ?v.
+  ?user ex:mobilityRequested ?w.
+  ?user ex:drivingLicenceExchangeRequested ?z
+  }.
+
+
+{?user ex:providedFamilyInformation true}
+<=
+{
+?user ex:numberOfFamilyMembers 1.
+
+("!") e:derive true.
+}.
+
+{?user ex:providedFamilyInformation true}
+<=
+{
+?user ex:numberOfFamilyMembers ?n.
+_:x e:findall (?member {?user ex:familyMember ?member} ?members ).
+
+
+?members e:length ?m.
+(?m ?n) math:difference 1.
+("!") e:derive true.
+}.
+
+{?user ex:providedFamilyInformation true}
+<=
+{
+?user ex:numberOfFamilyMembers ?n.
+?n e:label ?j.
+
+#if there is no number, we assume a family member to have a better workflow.
+?user ex:familyMember ?member.
+
+}.
+
+{
+?user ex:providedGreenWasteInformation true.
+}
+<=
+{
+?user ex:needForGreenWasteContainer false.
+}.
+
+{
+?user ex:providedGreenWasteInformation true.
+}
+<=
+{
+?user ex:needForGreenWasteContainer ?a.
+?user ex:numberOfRequested40LiterGreenWasteContainers ?b.
+?user ex:numberOfRequested120LiterGreenWasteContainers ?c.
+?user ex:stopGreeWasteContainer ?d.
+?user ex:lockNeededForGreenWasteContainer ?e.
+}.
+
+
+
+
+
+# this here below is just for testing
+# :bob foaf:familyName :U_91. 
+#:bob foaf:givenName :U_92. 
+#:bob o-persoon:heeftGeboorte :U_93. 
+#:bob ex:movingAddress :U_95. :bob ex:movingDate :U_96.
+# :bob ex:nationalNumber :U_97. 
+# :bob schema:hasOccupation :U_98.
+# :bob schema:contactPoint :U_99. 
+#:bob schema:contactPoint :U_100. 
+#:U_99 schema:contactType "gsm". 
+#:U_100 schema:contactType "phone". 
+#:U_99 schema:telephone :U_101.
+# :U_100 schema:telephone :U_102.

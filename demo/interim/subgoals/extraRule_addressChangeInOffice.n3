@@ -1,4 +1,4 @@
-#Processed by EYE v20.0313.1435 josd
+#Processed by EYE v20.0423.1748 josd
 #eye choices/selected_AddressChangeInOffice.n3 interim/steps/container-level-steps.n3 --query subgoals/creationOfRuleForMissingData.n3 --nope
 
 @prefix step: <https://fast.ilabt.imec.be/api/v5/steps#>.
@@ -29,10 +29,10 @@
 @prefix math: <http://www.w3.org/2000/10/swap/math#>.
 @prefix oslo: <https://example.org/ns/oslo#>.
 @prefix ns3: <http://josd.github.io/.well-known/genid/pP7dSETOSHCTU6bSn:iLn_1X3mg#>.
-@prefix ns4: <http://josd.github.io/.well-known/genid/3L8QxQ969Ni6dy7zDRrr3iMjU50#>.
+@prefix ns4: <http://josd.github.io/.well-known/genid/X6QIzRAdVuk2OOWKMziQRlt_0Ak#>.
 
 {?U_5 e:findall ({?U_7 ?U_6 ?U_8} {{?U_0 a o-persoon:Inwoner. ?U_0 ns1:confirmationOfAddressChange true} log:includes {?U_7 ?U_6 ?U_8}. ?U_5 e:call {?U_7 ?U_6 ?U_8}} ?U_9). ({?U_0 a o-persoon:Inwoner. ?U_0 ns1:confirmationOfAddressChange true} ?U_9) :unifyList {?U_0 a o-persoon:Inwoner. ?U_0 ns1:confirmationOfAddressChange true}. {?U_0 a o-persoon:Inwoner. ?U_0 ns1:confirmationOfAddressChange true} e:labelvars ?U_10} => ?U_10.
 
-#2020-04-22T13:43:40.929Z in=8 out=1 ent=1 step=1 brake=2 inf=76811 sec=0.061 inf/sec=1259197
+#2020-05-04T10:08:33.712Z in=8 out=1 ent=1 step=1 brake=2 inf=76837 sec=0.075 inf/sec=1024493
 #ENDS
 

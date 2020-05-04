@@ -173,15 +173,8 @@ eye interim/steps/component-level-steps.n3 interim/steps/shortComponentDescripti
 #createPath
 eye workflow-composer/gps-plugin_modified_noPermutations.n3 profile/knowledge.n3  profile/personalInfo.n3  interim/subgoals/extraRule_submitWasteInfo.n3 help-functions/aux2.n3 interim/steps/selectedSteps_submitWasteInfo.n3 oslo-descriptions/change-address-steps.ttl --query interim/subgoals/createdGoal_submitWasteInfo.n3 --nope > interim/paths/SubmitWasteInfo_noPermutation.n3
 
-    
 
-
-# produce the data used
-# todo
-eye profile/knowledge.n3  profile/personalInfo.n3 interim/subgoals/extraRule_submitWasteInfo.n3 help-functions/aux2.n3 --nope --query show/waste-info.n3 > interim/paths/show-waste-Info.n3
-
-
-
+   
 # Todo add link to all info used
 
 #
@@ -251,7 +244,7 @@ eye workflow-composer/gps-plugin_modified_noPermutations.n3 profile/knowledge.n3
 
 
 
-#create a triple for the inpit you receive. Example: external-input/example.n3
+#create a triple for the input you receive. Example: external-input/example.n3
 
 #then run the following query
 eye external-input/example.n3 help-functions/aux2.n3 profile/knowledge.n3  profile/personalInfo.n3  interim/steps/component-level-steps.n3 external-input/replaceValue.n3 --query external-input/CreateInputTriple.n3 --nope > interim/input/input_triples.n3
@@ -264,5 +257,22 @@ eye external-input/example2.n3 interim/input/input_triples.n3 help-functions/aux
 eye help-functions/aux2.n3 profile/knowledge.n3  profile/personalInfo.n3  interim/steps/component-level-steps.n3 --query external-input/CreateInputPattern.n3 --nope > interim/input/input_patterns.n3
 
 
+###############################
+# Produce the info used by a step
+###############################
 
 
+#Example show waste info
+
+# we need a file in which the request is stated. Here we have: show/Request_showInfoUsed_wasteCollection.n3
+
+#Using that file, we can make a query
+eye profile/knowledge.n3  profile/personalInfo.n3 show/getInfo.n3 interim/steps/component-level-steps.n3 show/Request_showInfoUsed_wasteCollection.n3 --query show/query_InfoUsed.n3 --nope > interim/show/show-waste-Info.n3
+
+
+# Example: address info
+# File: show/Request_showInfoUsed_changeAddress.n3
+# Query:
+#eye profile/knowledge.n3  profile/personalInfo.n3 show/getInfo.n3 interim/steps/journey-level-steps.n3 show/Request_showInfoUsed_changeAddress.n3 --query show/query_InfoUsed.n3 --nope > interim/show/show-address-Info.n3
+
+#currently the latter has serious performance issues

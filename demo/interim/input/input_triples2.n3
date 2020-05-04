@@ -1,4 +1,4 @@
-#Processed by EYE v20.0313.1435 josd
+#Processed by EYE v20.0423.1748 josd
 #eye external-input/example2.n3 interim/input/input_triples.n3 help-functions/aux2.n3 profile/knowledge.n3 profile/personalInfo.n3 interim/steps/component-level-steps.n3 external-input/replaceValue.n3 --query external-input/CreateInputTriple.n3 --nope
 
 @prefix : <http://example.org#>.
@@ -29,15 +29,15 @@
 @prefix list: <http://www.w3.org/2000/10/swap/list#>.
 @prefix oslo: <https://example.org/ns/oslo#>.
 @prefix ns3: <http://josd.github.io/.well-known/genid/pP7dSETOSHCTU6bSn:iLn_1X3mg#>.
-@prefix ns4: <http://josd.github.io/.well-known/genid/:tHTegye1FGwpsQIhl5PQuRaB50#>.
+@prefix ns4: <http://josd.github.io/.well-known/genid/_klQ8ZHleh80x09kGhAskxiFVrs#>.
 @prefix ns5: <http://josd.github.io/.well-known/genid/3xusu:8P3::CpVSgPAirSB1FrCA#>.
-@prefix ns6: <http://josd.github.io/.well-known/genid/EFDEZKRKfp7P5iwByeIi92NrieA#>.
-@prefix ns7: <http://josd.github.io/.well-known/genid/vGxB4a96DsJA1zr7er0aQReE61o#>.
+@prefix ns6: <http://josd.github.io/.well-known/genid/pg2b58KI2jZwaTG5COAfuG2rF2Q#>.
+@prefix ns7: <http://josd.github.io/.well-known/genid/qK8WITvg1j4itziVLuCtlWbZYIU#>.
 
 ex:user schema:contactPoint ns7:t_0.
 ns7:t_0 schema:contactType "telephone".
 ns7:t_0 schema:telephone "1234577".
 
-#2020-04-22T13:43:56.685Z in=56 out=3 ent=3 step=1 brake=2 inf=257219 sec=0.080 inf/sec=3215238
+#2020-05-04T10:08:46.350Z in=58 out=3 ent=3 step=1 brake=2 inf=258835 sec=0.107 inf/sec=2419019
 #ENDS
 

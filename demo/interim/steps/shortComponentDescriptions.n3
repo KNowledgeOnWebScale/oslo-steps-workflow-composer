@@ -1,4 +1,4 @@
-#Processed by EYE v20.0313.1435 josd
+#Processed by EYE v20.0423.1748 josd
 #eye interim/steps/component-level-steps.n3 profile/knowledge.n3 --query preselection/pregeneration.n3 --nope
 
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
@@ -28,7 +28,7 @@
 @prefix math: <http://www.w3.org/2000/10/swap/math#>.
 @prefix oslo: <https://example.org/ns/oslo#>.
 @prefix ns3: <http://josd.github.io/.well-known/genid/pP7dSETOSHCTU6bSn:iLn_1X3mg#>.
-@prefix ns4: <http://josd.github.io/.well-known/genid/:tHTegye1FGwpsQIhl5PQuRaB50#>.
+@prefix ns4: <http://josd.github.io/.well-known/genid/_klQ8ZHleh80x09kGhAskxiFVrs#>.
 @prefix : <http://example.org#>.
 
 {{(?U_0 ns1:hasAppointmentDate) e:skolem ?U_1. ?U_0 a o-persoon:Inwoner. ?U_0 ns1:confirmationOfAddressChange true} step:makeAppointmentForAddressChange {?U_0 ns1:hasAppointmentDate ?U_1}} a :ShortDescription.
@@ -188,12 +188,13 @@
 {?U_772 ns1:providedFamilyInformation true} :reliesOn {(?U_777 ?U_773) math:difference 1}.
 {?U_778 ns1:providedFamilyInformation true} :reliesOn {?U_779 e:label ?U_780}.
 {?U_782 ns1:providedFamilyInformation true} :reliesOn {?U_782 ns1:familyMember ?U_785}.
-{?U_786 ns1:providedGreenWasteInformation true} :reliesOn {?U_786 ns1:needForGreenWasteContainer false}.
-{?U_787 ns1:providedGreenWasteInformation true} :reliesOn {?U_787 ns1:numberOfRequested40LiterGreenWasteContainers ?U_789}.
-{?U_793 ns1:providedGreenWasteInformation true} :reliesOn {?U_793 ns1:numberOfRequested120LiterGreenWasteContainers ?U_796}.
-{?U_799 ns1:providedGreenWasteInformation true} :reliesOn {?U_799 ns1:stopGreeWasteContainer ?U_803}.
-{?U_805 ns1:providedGreenWasteInformation true} :reliesOn {?U_805 ns1:lockNeededForGreenWasteContainer ?U_810}.
+{?U_786 ns1:providedGreenWasteInformation true} :reliesOn {?U_786 ns1:needForGreenWasteContainer ?U_787}.
+{?U_792 ns1:providedGreenWasteInformation true} :reliesOn {?U_792 ns1:numberOfRequested40LiterGreenWasteContainers ?U_794}.
+{?U_798 ns1:providedGreenWasteInformation true} :reliesOn {?U_798 ns1:numberOfRequested120LiterGreenWasteContainers ?U_801}.
+{?U_804 ns1:providedGreenWasteInformation true} :reliesOn {?U_804 ns1:stopGreeWasteContainer ?U_808}.
+{?U_810 ns1:providedGreenWasteInformation true} :reliesOn {?U_810 ns1:lockNeededForGreenWasteContainer ?U_815}.
+{?U_816 ns1:providedGreenWasteInformation true} :reliesOn {?U_816 ns1:needForGreenWasteContainer false}.
 
-#2020-04-22T13:43:35.194Z in=46 out=162 ent=162 step=168 brake=1 inf=417393 sec=0.120 inf/sec=3478275
+#2020-05-04T10:08:27.611Z in=46 out=163 ent=163 step=168 brake=1 inf=418192 sec=0.149 inf/sec=2806658
 #ENDS
 

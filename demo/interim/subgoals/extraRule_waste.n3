@@ -1,4 +1,4 @@
-#Processed by EYE v20.0313.1435 josd
+#Processed by EYE v20.0423.1748 josd
 #eye choices/selected_Waste.n3 interim/steps/journey-level-steps.n3 --query subgoals/creationOfRuleForMissingData.n3 --nope
 
 @prefix step: <https://fast.ilabt.imec.be/api/v5/steps#>.
@@ -29,10 +29,10 @@
 @prefix math: <http://www.w3.org/2000/10/swap/math#>.
 @prefix oslo: <https://example.org/ns/oslo#>.
 @prefix ns3: <http://josd.github.io/.well-known/genid/pP7dSETOSHCTU6bSn:iLn_1X3mg#>.
-@prefix ns4: <http://josd.github.io/.well-known/genid/T8FNFilA:qsUZg4NrcUULqgZjhI#>.
+@prefix ns4: <http://josd.github.io/.well-known/genid/UQGBnXA0WPcbSbjDP7DXm0iLNiA#>.
 
 {?U_15 e:findall ({?U_17 ?U_16 ?U_18} {{?U_0 a o-persoon:Inwoner. ?U_0 o-persoon:heeftVerblijfplaats ?U_4. ?U_4 o-persoon:verblijfsadres ?U_5. ?U_0 ns1:movingAddress ?U_1. ?U_0 ns1:movingCity ?U_2. ?U_0 ns1:movingDate ?U_3} log:includes {?U_17 ?U_16 ?U_18}. ?U_15 e:call {?U_17 ?U_16 ?U_18}} ?U_19). ({?U_0 a o-persoon:Inwoner. ?U_0 o-persoon:heeftVerblijfplaats ?U_4. ?U_4 o-persoon:verblijfsadres ?U_5. ?U_0 ns1:movingAddress ?U_1. ?U_0 ns1:movingCity ?U_2. ?U_0 ns1:movingDate ?U_3} ?U_19) :unifyList {?U_0 a o-persoon:Inwoner. ?U_0 o-persoon:heeftVerblijfplaats ?U_4. ?U_4 o-persoon:verblijfsadres ?U_5. ?U_0 ns1:movingAddress ?U_1. ?U_0 ns1:movingCity ?U_2. ?U_0 ns1:movingDate ?U_3}. {?U_0 a o-persoon:Inwoner. ?U_0 o-persoon:heeftVerblijfplaats ?U_4. ?U_4 o-persoon:verblijfsadres ?U_5. ?U_0 ns1:movingAddress ?U_1. ?U_0 ns1:movingCity ?U_2. ?U_0 ns1:movingDate ?U_3} e:labelvars ?U_20} => ?U_20.
 
-#2020-04-22T13:43:33.355Z in=6 out=1 ent=1 step=1 brake=2 inf=80229 sec=0.051 inf/sec=1573118
+#2020-05-04T10:08:25.656Z in=6 out=1 ent=1 step=1 brake=2 inf=80255 sec=0.052 inf/sec=1543365
 #ENDS
 

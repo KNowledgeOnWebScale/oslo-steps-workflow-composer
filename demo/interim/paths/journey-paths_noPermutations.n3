@@ -1,4 +1,4 @@
-#Processed by EYE v20.0313.1435 josd
+#Processed by EYE v20.0423.1748 josd
 #eye workflow-composer/gps-plugin_modified_noPermutations.n3 profile/knowledge.n3 profile/personalInfo.n3 interim/steps/selectedSteps_Journey.n3 oslo-descriptions/change-address-steps.ttl --query journey/journeyGoal.n3 --nope
 
 @prefix math: <http://www.w3.org/2000/10/swap/math#>.
@@ -29,14 +29,14 @@
 @prefix var: <https://example.org/ns/var#>.
 @prefix oslo: <https://example.org/ns/oslo#>.
 @prefix ns3: <http://josd.github.io/.well-known/genid/pP7dSETOSHCTU6bSn:iLn_1X3mg#>.
-@prefix ns4: <http://josd.github.io/.well-known/genid/T8FNFilA:qsUZg4NrcUULqgZjhI#>.
+@prefix ns4: <http://josd.github.io/.well-known/genid/UQGBnXA0WPcbSbjDP7DXm0iLNiA#>.
 @prefix plan: <http://https://github.com/doerthe/plan#>.
-@prefix ns5: <http://josd.github.io/.well-known/genid/6BemPzIMU8XXMrBZferm2fKYgRE#>.
+@prefix ns5: <http://josd.github.io/.well-known/genid/ie1SHbXokb178orH9t8NYnzzqcg#>.
 
 ex:user gps:path ((("unorderedList" (step:providePersonalInformation step:provideMovingData)) step:changeAddress step:submitWasteInfo) 400.0 400.0 0.6561000000000001 0.6561000000000001).
 ex:user gps:path ((("unorderedList" (step:providePersonalInformation step:provideMovingData)) step:submitWasteInfo step:changeAddress) 400.0 400.0 0.6561000000000001 0.6561000000000001).
 ex:user gps:path ((("unorderedList" (step:provideMovingData)) step:submitWasteInfo ("unorderedList" (step:providePersonalInformation)) step:changeAddress) 400.0 400.0 0.6561000000000001 0.6561000000000001).
 
-#2020-04-22T13:43:32.850Z in=670 out=3 ent=3 step=3 brake=2 inf=547443 sec=0.121 inf/sec=4524322
+#2020-05-04T10:08:25.114Z in=672 out=3 ent=3 step=3 brake=2 inf=549067 sec=0.163 inf/sec=3368509
 #ENDS
 

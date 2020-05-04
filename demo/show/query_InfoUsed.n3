@@ -1,0 +1,53 @@
+@prefix ex: <http://example.org/ns/example#>.
+@prefix step: <https://fast.ilabt.imec.be/api/v5/steps#>.
+@prefix gps: <http://josd.github.io/eye/reasoning/gps/gps-schema#>.
+@prefix e: <http://eulersharp.sourceforge.net/2003/03swap/log-rules#>.
+@prefix log: <http://www.w3.org/2000/10/swap/log#>.
+@prefix list: <http://www.w3.org/2000/10/swap/list#>.
+@prefix : <http://example.org#>.
+
+
+{
+?step ex:usesData ?where2
+}
+<=
+{
+?step ex:displayInput true.
+
+{?map gps:description (?from ?between ?to ?step ?duration ?cost ?belief ?comfort) } <= ?where.
+
+
+
+
+_:x e:findall ( {?s ?p ?o} {?where log:includes {?s ?p ?o}. ?p log:notEqualTo e:skolem. ?x e:optional {?s ?p ?o}} ?list ).
+
+#_:ss e:trace ("ohoho").
+
+?list log:conjunction ?con.
+
+#_:xs e:trace ("input von intersection?" ?con ?where). 
+
+("!") e:derive true.
+
+
+(?where ?con) e:graphIntersection ?con.
+
+("!") e:derive true.
+
+#_:xs e:trace ("con nach Intersection 1" ?con). 
+
+("!") e:derive true.
+#_:xs e:trace ("where nach Intersection 1" ?where).
+
+
+
+("!") e:derive true.
+
+?con :getInfo ?info.
+("!") e:derive true.
+
+?info e:graphCopy ?where2.
+
+
+}.
+

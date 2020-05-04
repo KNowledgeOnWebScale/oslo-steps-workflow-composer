@@ -1,0 +1,17 @@
+#Processed by EYE v20.0423.1748 josd
+#eye help-functions/replace.n3 --nope show/smallTest.n3 --query show/testquery.n3
+
+@prefix : <http://example.org#>.
+@prefix e: <http://eulersharp.sourceforge.net/2003/03swap/log-rules#>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
+@prefix list: <http://www.w3.org/2000/10/swap/list#>.
+@prefix log: <http://www.w3.org/2000/10/swap/log#>.
+@prefix ex: <http://example.org/ns/example#>.
+@prefix step: <https://fast.ilabt.imec.be/api/v5/steps#>.
+@prefix gps: <http://josd.github.io/eye/reasoning/gps/gps-schema#>.
+
+_:sk_0 ex:usesData {:a :b :c. :g :h :i}.
+
+#2020-04-29T09:06:25.147Z in=8 out=1 ent=2 step=4 brake=4 inf=38586 sec=0.047 inf/sec=820979
+#ENDS
+

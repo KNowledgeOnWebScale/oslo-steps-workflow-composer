@@ -1,4 +1,4 @@
-#Processed by EYE v20.0313.1435 josd
+#Processed by EYE v20.0423.1748 josd
 #eye workflow-composer/gps-plugin_modified_noPermutations.n3 profile/knowledge.n3 profile/personalInfo.n3 interim/steps/selectedSteps_movingData.n3 oslo-descriptions/change-address-steps.ttl --query interim/subgoals/Goal_provideMovingData.n3 --nope
 
 @prefix math: <http://www.w3.org/2000/10/swap/math#>.
@@ -29,15 +29,15 @@
 @prefix var: <https://example.org/ns/var#>.
 @prefix oslo: <https://example.org/ns/oslo#>.
 @prefix ns3: <http://josd.github.io/.well-known/genid/pP7dSETOSHCTU6bSn:iLn_1X3mg#>.
-@prefix ns4: <http://josd.github.io/.well-known/genid/:tHTegye1FGwpsQIhl5PQuRaB50#>.
+@prefix ns4: <http://josd.github.io/.well-known/genid/_klQ8ZHleh80x09kGhAskxiFVrs#>.
 @prefix shp: <https://example.org/ns/shapes#>.
 @prefix ns5: <file:///media/doerthe/4EC6F987C6F97017/store/FAST/base/steps#>.
 @prefix ns6: <http://josd.github.io/.well-known/genid/bCHPrOjcGmNlvnxxC_gIZneJs1Y#>.
 @prefix plan: <http://https://github.com/doerthe/plan#>.
-@prefix ns7: <http://josd.github.io/.well-known/genid/9leo_Fqhj3l3NUWSAsmsevXW8kw#>.
+@prefix ns7: <http://josd.github.io/.well-known/genid/Wj0xONzYXmXXXy_jZ617ZFoKgFc#>.
 
 ex:user gps:path ((("unorderedList" (step:provideMovingDateManually step:provideMovingCityManually step:provideMovingAddressManually))) 3.0 3.0 0.912673 0.912673).
 
-#2020-04-22T13:43:56.300Z in=669 out=1 ent=1 step=1 brake=2 inf=525555 sec=0.134 inf/sec=3922052
+#2020-05-04T10:08:45.892Z in=671 out=1 ent=1 step=1 brake=2 inf=527179 sec=0.157 inf/sec=3357828
 #ENDS
 
