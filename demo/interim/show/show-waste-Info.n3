@@ -1,4 +1,4 @@
-#Processed by EYE v20.0423.1748 josd
+#Processed by EYE v20.0510.2019 josd
 #eye profile/knowledge.n3 profile/personalInfo.n3 show/getInfo.n3 interim/steps/component-level-steps.n3 show/Request_showInfoUsed_wasteCollection.n3 --query show/query_InfoUsed.n3 --nope
 
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
@@ -29,10 +29,10 @@
 @prefix gps: <http://josd.github.io/eye/reasoning/gps/gps-schema#>.
 @prefix oslo: <https://example.org/ns/oslo#>.
 @prefix ns3: <http://josd.github.io/.well-known/genid/pP7dSETOSHCTU6bSn:iLn_1X3mg#>.
-@prefix ns4: <http://josd.github.io/.well-known/genid/_klQ8ZHleh80x09kGhAskxiFVrs#>.
+@prefix ns4: <http://josd.github.io/.well-known/genid/Z0JWWsANjvrfqoBt1plItBUD4AQ#>.
 
 step:showWasteCollection ns1:usesData {ex:user ex:lockNeededForGreenWasteContainer _:sk_12. ex:user ex:needForGreenWasteContainer _:sk_9. ex:user ex:numberOfRequested120LiterGreenWasteContainers _:sk_10. ex:user ex:numberOfRequested40LiterGreenWasteContainers 99 . ex:user ex:stopGreeWasteContainer _:sk_11. ex:user a o-persoon:Inwoner. ex:user o-persoon:heeftVerblijfplaats _:sk_13. _:sk_13 o-persoon:verblijfsadres _:sk_14. ex:user ex:lockNeededForGreyWasteContainer _:sk_0. ex:user ex:movingAddress _:sk_1. ex:user ex:movingCity _:sk_2. ex:user ex:movingDate _:sk_3. ex:user ex:numberOfRequested1100LiterPaperWasteContainers _:sk_4. ex:user ex:numberOfRequested120LiterGreyWasteContainers _:sk_5. ex:user ex:numberOfRequested240LiterGreyWasteContainers _:sk_6. ex:user ex:numberOfRequested240LiterPaperWasteContainers _:sk_7. ex:user ex:numberOfRequested40LiterGreyWasteContainers _:sk_8. ex:user ex:numberOfRequested40LiterPaperWasteContainers 5}.
 
-#2020-05-04T10:08:47.712Z in=56 out=1 ent=0 step=0 brake=1 inf=6167557 sec=1.003 inf/sec=6149110
+#2020-05-14T15:55:34.175Z in=63 out=1 ent=0 step=0 brake=1 inf=6173223 sec=1.193 inf/sec=5174537
 #ENDS
 

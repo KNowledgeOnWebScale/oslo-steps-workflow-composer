@@ -1,4 +1,4 @@
-#Processed by EYE v20.0423.1748 josd
+#Processed by EYE v20.0510.2019 josd
 #eye help-functions/aux2.n3 profile/knowledge.n3 profile/personalInfo.n3 interim/steps/component-level-steps.n3 --query external-input/CreateInputPattern.n3 --nope
 
 @prefix : <http://example.org#>.
@@ -29,9 +29,9 @@
 @prefix list: <http://www.w3.org/2000/10/swap/list#>.
 @prefix oslo: <https://example.org/ns/oslo#>.
 @prefix ns3: <http://josd.github.io/.well-known/genid/pP7dSETOSHCTU6bSn:iLn_1X3mg#>.
-@prefix ns4: <http://josd.github.io/.well-known/genid/_klQ8ZHleh80x09kGhAskxiFVrs#>.
+@prefix ns4: <http://josd.github.io/.well-known/genid/Z0JWWsANjvrfqoBt1plItBUD4AQ#>.
 @prefix ns5: <http://josd.github.io/.well-known/genid/3xusu:8P3::CpVSgPAirSB1FrCA#>.
-@prefix ns6: <http://josd.github.io/.well-known/genid/Gpl1Zz8CcYzZnXwpBnM4Y0ctTZk#>.
+@prefix ns6: <http://josd.github.io/.well-known/genid/kCyMKNrPKes5Zu_Hvfhqk1k1:00#>.
 
 step:makeAppointmentForAddressChange :expectedTriples {ex:user ex:hasAppointmentDate ns6:t_0}.
 step:makeAppointmentForAddressChange :variablesToReplace ns6:t_0.
@@ -52,54 +52,52 @@ step:provideCitizenGenderManually :expectedTriples {ex:user o-persoon:geslacht n
 step:provideCitizenGenderManually :variablesToReplace ns6:t_6.
 step:provideCitizenEmailManually :expectedTriples {ex:user schema:email ns6:t_7}.
 step:provideCitizenEmailManually :variablesToReplace ns6:t_7.
-step:provideCitizenMobilePhoneNumberManually :expectedTriples {ex:user schema:contactPoint ns6:t_8. ns6:t_8 schema:contactType "gsm". ns6:t_8 schema:telephone ns6:t_9}.
-step:provideCitizenMobilePhoneNumberManually :variablesToReplace ns6:t_9.
-step:provideCitizenPhoneNumberManually :expectedTriples {ex:user schema:contactPoint ns6:t_10. ns6:t_10 schema:contactType "telephone". ns6:t_10 schema:telephone ns6:t_11}.
-step:provideCitizenPhoneNumberManually :variablesToReplace ns6:t_11.
 step:provideCitizenNationalNumberManually :expectedTriples {ex:user ex:nationalNumber ns6:t_12}.
 step:provideCitizenNationalNumberManually :variablesToReplace ns6:t_12.
-step:provideCitizenBankAccountNumberManually :expectedTriples {ex:user ex:bankAccountNumber ns6:t_13}.
-step:provideCitizenBankAccountNumberManually :variablesToReplace ns6:t_13.
+step:provideCitizensNationalityManually :expectedTriples {ex:user o-persoon:heeftNationaliteit ns6:t_13}.
+step:provideCitizensNationalityManually :variablesToReplace ns6:t_13.
+step:provideCitizenBankAccountNumberManually :expectedTriples {ex:user ex:bankAccountNumber ns6:t_14}.
+step:provideCitizenBankAccountNumberManually :variablesToReplace ns6:t_14.
 step:provideCitizenResidencePermitManually :expectedTriples true.
-step:provideCitizenBirthDateManually :expectedTriples {ns6:t_14 o-persoon:datum ns6:t_15. ex:user o-persoon:heeftGeboorte ns6:t_14}.
-step:provideCitizenBirthDateManually :variablesToReplace ns6:t_15.
-step:provideCitizenBirthPlaceManually :expectedTriples {ex:user o-persoon:heeftGeboorte ns6:t_14. ns6:t_14 o-persoon:plaats ns6:t_16}.
-step:provideCitizenBirthPlaceManually :variablesToReplace ns6:t_16.
-step:provideCitizenAddressManually :expectedTriples {ex:user o-persoon:heeftVerblijfplaats ns6:t_17. ns6:t_17 o-persoon:verblijfsadres ns6:t_18}.
-step:provideCitizenAddressManually :variablesToReplace ns6:t_18.
-step:provideCitizenProfessionManually :expectedTriples {ex:user schema:hasOccupation ns6:t_19}.
-step:provideCitizenProfessionManually :variablesToReplace ns6:t_19.
-step:provideMovingDateManually :expectedTriples {ex:user ex:movingDate ns6:t_20}.
-step:provideMovingDateManually :variablesToReplace ns6:t_20.
-step:provideMovingCityManually :expectedTriples {ex:user ex:movingCity ns6:t_21}.
-step:provideMovingCityManually :variablesToReplace ns6:t_21.
-step:provideMovingAddressManually :expectedTriples {ex:user ex:movingAddress ns6:t_22}.
-step:provideMovingAddressManually :variablesToReplace ns6:t_22.
-step:provideBillingAddressManually :expectedTriples {ex:user ex:billingAddress ns6:t_23}.
-step:provideBillingAddressManually :variablesToReplace ns6:t_23.
-step:provideNumberOf120LiterGreenWasteContainersManually :expectedTriples {ex:user ex:numberOfRequested120LiterGreenWasteContainers ns6:t_25}.
-step:provideNumberOf120LiterGreenWasteContainersManually :variablesToReplace ns6:t_25.
-step:provideGreenWasteContainerCollectionStopInfoManually :expectedTriples {ex:user ex:stopGreeWasteContainer ns6:t_26}.
-step:provideGreenWasteContainerCollectionStopInfoManually :variablesToReplace ns6:t_26.
-step:provideGreenWasteContainerLockInfoManually :expectedTriples {ex:user ex:lockNeededForGreenWasteContainer ns6:t_27}.
-step:provideGreenWasteContainerLockInfoManually :variablesToReplace ns6:t_27.
-step:provideGreenWasteContainerOwnCompostInfoManually :expectedTriples {ex:user ex:needForGreenWasteContainer ns6:t_28}.
-step:provideGreenWasteContainerOwnCompostInfoManually :variablesToReplace ns6:t_28.
-step:provideNumberOf40LiterGreyWasteContainersManually :expectedTriples {ex:user ex:numberOfRequested40LiterGreyWasteContainers ns6:t_29}.
-step:provideNumberOf40LiterGreyWasteContainersManually :variablesToReplace ns6:t_29.
-step:provideNumberOf120LiterGreyWasteContainersManualy :expectedTriples {ex:user ex:numberOfRequested120LiterGreyWasteContainers ns6:t_30}.
-step:provideNumberOf120LiterGreyWasteContainersManualy :variablesToReplace ns6:t_30.
-step:provideNumberOf240LiterGreyWasteContainers :expectedTriples {ex:user ex:numberOfRequested240LiterGreyWasteContainers ns6:t_31}.
-step:provideNumberOf240LiterGreyWasteContainers :variablesToReplace ns6:t_31.
-step:provideGreyWasteContainerLockInfoManually :expectedTriples {ex:user ex:lockNeededForGreyWasteContainer ns6:t_32}.
-step:provideGreyWasteContainerLockInfoManually :variablesToReplace ns6:t_32.
-step:provideNumberOf240LiterPaperWasteContainersManually :expectedTriples {ex:user ex:numberOfRequested240LiterPaperWasteContainers ns6:t_34}.
-step:provideNumberOf240LiterPaperWasteContainersManually :variablesToReplace ns6:t_34.
-step:provideNumberOf1100LiterPaperWasteContainersManually :expectedTriples {ex:user ex:numberOfRequested1100LiterPaperWasteContainers ns6:t_35}.
-step:provideNumberOf1100LiterPaperWasteContainersManually :variablesToReplace ns6:t_35.
+step:provideCitizenBirthDateManually :expectedTriples {ns6:t_15 o-persoon:datum ns6:t_16. ex:user o-persoon:heeftGeboorte ns6:t_15}.
+step:provideCitizenBirthDateManually :variablesToReplace ns6:t_16.
+step:provideCitizenBirthPlaceManually :expectedTriples {ex:user o-persoon:heeftGeboorte ns6:t_15. ns6:t_15 o-persoon:plaats ns6:t_17}.
+step:provideCitizenBirthPlaceManually :variablesToReplace ns6:t_17.
+step:provideCitizenAddressManually :expectedTriples {ex:user o-persoon:heeftVerblijfplaats ns6:t_18. ns6:t_18 o-persoon:verblijfsadres ns6:t_19}.
+step:provideCitizenAddressManually :variablesToReplace ns6:t_19.
+step:provideCitizenProfessionManually :expectedTriples {ex:user schema:hasOccupation ns6:t_20}.
+step:provideCitizenProfessionManually :variablesToReplace ns6:t_20.
+step:provideMovingDateManually :expectedTriples {ex:user ex:movingDate ns6:t_21}.
+step:provideMovingDateManually :variablesToReplace ns6:t_21.
+step:provideMovingCityManually :expectedTriples {ex:user ex:movingCity ns6:t_22}.
+step:provideMovingCityManually :variablesToReplace ns6:t_22.
+step:provideMovingAddressManually :expectedTriples {ex:user ex:movingAddress ns6:t_23}.
+step:provideMovingAddressManually :variablesToReplace ns6:t_23.
+step:provideBillingAddressManually :expectedTriples {ex:user ex:billingAddress ns6:t_24}.
+step:provideBillingAddressManually :variablesToReplace ns6:t_24.
+step:provideNumberOf120LiterGreenWasteContainersManually :expectedTriples {ex:user ex:numberOfRequested120LiterGreenWasteContainers ns6:t_26}.
+step:provideNumberOf120LiterGreenWasteContainersManually :variablesToReplace ns6:t_26.
+step:provideGreenWasteContainerCollectionStopInfoManually :expectedTriples {ex:user ex:stopGreeWasteContainer ns6:t_27}.
+step:provideGreenWasteContainerCollectionStopInfoManually :variablesToReplace ns6:t_27.
+step:provideGreenWasteContainerLockInfoManually :expectedTriples {ex:user ex:lockNeededForGreenWasteContainer ns6:t_28}.
+step:provideGreenWasteContainerLockInfoManually :variablesToReplace ns6:t_28.
+step:provideGreenWasteContainerOwnCompostInfoManually :expectedTriples {ex:user ex:needForGreenWasteContainer ns6:t_29}.
+step:provideGreenWasteContainerOwnCompostInfoManually :variablesToReplace ns6:t_29.
+step:provideNumberOf40LiterGreyWasteContainersManually :expectedTriples {ex:user ex:numberOfRequested40LiterGreyWasteContainers ns6:t_30}.
+step:provideNumberOf40LiterGreyWasteContainersManually :variablesToReplace ns6:t_30.
+step:provideNumberOf120LiterGreyWasteContainersManualy :expectedTriples {ex:user ex:numberOfRequested120LiterGreyWasteContainers ns6:t_31}.
+step:provideNumberOf120LiterGreyWasteContainersManualy :variablesToReplace ns6:t_31.
+step:provideNumberOf240LiterGreyWasteContainers :expectedTriples {ex:user ex:numberOfRequested240LiterGreyWasteContainers ns6:t_32}.
+step:provideNumberOf240LiterGreyWasteContainers :variablesToReplace ns6:t_32.
+step:provideGreyWasteContainerLockInfoManually :expectedTriples {ex:user ex:lockNeededForGreyWasteContainer ns6:t_33}.
+step:provideGreyWasteContainerLockInfoManually :variablesToReplace ns6:t_33.
+step:provideNumberOf240LiterPaperWasteContainersManually :expectedTriples {ex:user ex:numberOfRequested240LiterPaperWasteContainers ns6:t_35}.
+step:provideNumberOf240LiterPaperWasteContainersManually :variablesToReplace ns6:t_35.
+step:provideNumberOf1100LiterPaperWasteContainersManually :expectedTriples {ex:user ex:numberOfRequested1100LiterPaperWasteContainers ns6:t_36}.
+step:provideNumberOf1100LiterPaperWasteContainersManually :variablesToReplace ns6:t_36.
 step:submitWasteCollectionComponentLevel :expectedTriples {ex:user ex:wasteCollectionRequested true}.
 step:showWasteCollection :expectedTriples {ex:user ex:wasteInfoShownToUser true}.
 
-#2020-05-04T10:08:46.586Z in=50 out=66 ent=66 step=36 brake=2 inf=303584 sec=0.116 inf/sec=2617103
+#2020-05-14T15:55:32.865Z in=57 out=64 ent=64 step=35 brake=2 inf=305486 sec=0.094 inf/sec=3249851
 #ENDS
 

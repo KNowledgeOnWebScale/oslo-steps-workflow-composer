@@ -56,8 +56,15 @@
 
     ?From e:becomes ?To.
 
+
+#?Goal :goalCheck true.
+
     {?SCOPE gps:findpaths (?Maps_t ?Goal ?Path_t ?Duration_t ?Cost_t ?Belief_t ?Comfort_t ?Path ?Duration ?Cost ?Belief ?Comfort (?MaxDuration ?MaxCost ?MinBelief ?MinComfort ?MaxStagecount))} e:finalize {?To e:becomes ?From}.
+
+
 }.
+
+
 
 # counting the number of stages (a stage is a sequence of steps in the same map)
 {() gps:stagecount 1} <= {
@@ -206,4 +213,23 @@
 ((?last) ?int  ) list:append ?int2.
 ?first :mark (?int2  ?markedPath)
 }.
+
+#
+# predicate used for debugging: is the goal true?
+#
+{?goal :goalCheck true}
+<=
+{
+?scope e:call ?goal.
+
+
+}.
+
+{?goal :goalCheck true}
+<=
+{
+?scope e:fail ?goal.
+
+}.
+
 

@@ -1,4 +1,4 @@
-#Processed by EYE v20.0423.1748 josd
+#Processed by EYE v20.0510.2019 josd
 #eye interim/steps/component-level-steps.n3 interim/steps/shortComponentDescriptions.n3 interim/subgoals/createdGoal_addressChangeInOffice.n3 preselection/preselection.n3 profile/knowledge.n3 interim/subgoals/block_addressChangeInOffice.n3 --nope --query preselection/prequery.n3
 
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
@@ -28,14 +28,14 @@
 @prefix math: <http://www.w3.org/2000/10/swap/math#>.
 @prefix oslo: <https://example.org/ns/oslo#>.
 @prefix ns3: <http://josd.github.io/.well-known/genid/pP7dSETOSHCTU6bSn:iLn_1X3mg#>.
-@prefix ns4: <http://josd.github.io/.well-known/genid/_klQ8ZHleh80x09kGhAskxiFVrs#>.
+@prefix ns4: <http://josd.github.io/.well-known/genid/Z0JWWsANjvrfqoBt1plItBUD4AQ#>.
 @prefix : <http://example.org#>.
-@prefix ns5: <http://josd.github.io/.well-known/genid/X6QIzRAdVuk2OOWKMziQRlt_0Ak#>.
+@prefix ns5: <http://josd.github.io/.well-known/genid/SlEOZh1MezKuXGDcMOHnbF:Z_jc#>.
 @prefix plan: <http://https://github.com/doerthe/plan#>.
 
 {ns1:movemap gps:description (true true {?U_14 ns1:addressChanged true} step:visitOfficeForAddressChange 1 1 0.97 0.97)} <= {?U_14 a o-persoon:Inwoner. ?U_14 ns1:hasAppointmentDate ?U_15}.
 {ns1:movemap gps:description (true true {?U_16 ns1:hasAppointmentDate ?U_17} step:makeAppointmentForAddressChange 1 1 0.97 0.97)} <= {(?U_16 ns1:hasAppointmentDate) e:skolem ?U_17. ?U_16 a o-persoon:Inwoner. ?U_16 ns1:confirmationOfAddressChange true}.
 
-#2020-05-04T10:08:34.189Z in=219 out=2 ent=4 step=8 brake=2 inf=727941 sec=0.184 inf/sec=3956201
+#2020-05-14T15:55:27.268Z in=225 out=2 ent=4 step=8 brake=2 inf=744650 sec=0.151 inf/sec=4931457
 #ENDS
 

@@ -1,4 +1,4 @@
-#Processed by EYE v20.0423.1748 josd
+#Processed by EYE v20.0510.2019 josd
 #eye choices/selected_SubmitWasteInfo.n3 interim/steps/container-level-steps.n3 --query subgoals/creationOfBlockingInfo.n3 --nope
 
 @prefix step: <https://fast.ilabt.imec.be/api/v5/steps#>.
@@ -29,7 +29,7 @@
 @prefix math: <http://www.w3.org/2000/10/swap/math#>.
 @prefix oslo: <https://example.org/ns/oslo#>.
 @prefix ns3: <http://josd.github.io/.well-known/genid/pP7dSETOSHCTU6bSn:iLn_1X3mg#>.
-@prefix ns4: <http://josd.github.io/.well-known/genid/X6QIzRAdVuk2OOWKMziQRlt_0Ak#>.
+@prefix ns4: <http://josd.github.io/.well-known/genid/SlEOZh1MezKuXGDcMOHnbF:Z_jc#>.
 
 {_:sk_0 a o-persoon:Inwoner} :inInputRule true.
 {_:sk_0 o-persoon:heeftVerblijfplaats _:sk_11} :inInputRule true.
@@ -46,6 +46,6 @@
 {_:sk_0 ns1:numberOfRequested40LiterPaperWasteContainers _:sk_10} :inInputRule true.
 {_:sk_0 ns1:providedGreenWasteInformation true} :inInputRule true.
 
-#2020-05-04T10:08:31.570Z in=8 out=14 ent=14 step=14 brake=1 inf=87411 sec=0.038 inf/sec=2300289
+#2020-05-14T15:55:24.801Z in=12 out=14 ent=14 step=14 brake=1 inf=112120 sec=0.054 inf/sec=2076296
 #ENDS
 

@@ -1,0 +1,21 @@
+eye workflow-composer/gps-plugin_modified_noPermutations.n3 profile/personalInfo.n3 help-functions/aux2.n3 interim/steps/selectedSteps_birthData.n3 --query interim/subgoals/createdGoal_birthData.n3 --nope
+EYE v20.0423.1748 josd
+SWI-Prolog version 8.0.3
+starting 41 [msec cputime] 50 [msec walltime]
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/workflow-composer/gps-plugin_modified_noPermutations.n3 SC=21
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/profile/personalInfo.n3 SC=3
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/help-functions/aux2.n3 SC=2
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/interim/steps/selectedSteps_birthData.n3 SC=2
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/interim/subgoals/createdGoal_birthData.n3 SC=1
+networking 26 [msec cputime] 29 [msec walltime]
+TRACE ("path" (step:provideCitizenBirthDateManually))
+TRACE ("path" (step:provideCitizenBirthDateManually step:provideCitizenBirthPlaceManually))
+TRACE ("goal" {<http://josd.github.io/.well-known/genid/p0eQLyAnE:Y4hYMhTBFygjwpr9s#t_0> o-persoon:datum <http://josd.github.io/.well-known/genid/p0eQLyAnE:Y4hYMhTBFygjwpr9s#t_1>. ex:user o-persoon:heeftGeboorte <http://josd.github.io/.well-known/genid/p0eQLyAnE:Y4hYMhTBFygjwpr9s#t_0>. ex:user o-persoon:heeftGeboorte <http://josd.github.io/.well-known/genid/p0eQLyAnE:Y4hYMhTBFygjwpr9s#t_0>. <http://josd.github.io/.well-known/genid/p0eQLyAnE:Y4hYMhTBFygjwpr9s#t_0> o-persoon:plaats <http://josd.github.io/.well-known/genid/p0eQLyAnE:Y4hYMhTBFygjwpr9s#t_2>})
+TRACE ("goal false" {<http://josd.github.io/.well-known/genid/p0eQLyAnE:Y4hYMhTBFygjwpr9s#t_0> o-persoon:datum <http://josd.github.io/.well-known/genid/p0eQLyAnE:Y4hYMhTBFygjwpr9s#t_1>. ex:user o-persoon:heeftGeboorte <http://josd.github.io/.well-known/genid/p0eQLyAnE:Y4hYMhTBFygjwpr9s#t_0>. ex:user o-persoon:heeftGeboorte <http://josd.github.io/.well-known/genid/p0eQLyAnE:Y4hYMhTBFygjwpr9s#t_0>. <http://josd.github.io/.well-known/genid/p0eQLyAnE:Y4hYMhTBFygjwpr9s#t_0> o-persoon:plaats <http://josd.github.io/.well-known/genid/p0eQLyAnE:Y4hYMhTBFygjwpr9s#t_2>})
+TRACE ("goal false" {<http://josd.github.io/.well-known/genid/p0eQLyAnE:Y4hYMhTBFygjwpr9s#t_0> o-persoon:datum <http://josd.github.io/.well-known/genid/p0eQLyAnE:Y4hYMhTBFygjwpr9s#t_1>. ex:user o-persoon:heeftGeboorte <http://josd.github.io/.well-known/genid/p0eQLyAnE:Y4hYMhTBFygjwpr9s#t_0>. ex:user o-persoon:heeftGeboorte <http://josd.github.io/.well-known/genid/p0eQLyAnE:Y4hYMhTBFygjwpr9s#t_0>. <http://josd.github.io/.well-known/genid/p0eQLyAnE:Y4hYMhTBFygjwpr9s#t_0> o-persoon:plaats <http://josd.github.io/.well-known/genid/p0eQLyAnE:Y4hYMhTBFygjwpr9s#t_2>})
+TRACE ("path" (step:provideCitizenBirthPlaceManually))
+TRACE ("goal" {<http://josd.github.io/.well-known/genid/p0eQLyAnE:Y4hYMhTBFygjwpr9s#t_0> o-persoon:datum <http://josd.github.io/.well-known/genid/p0eQLyAnE:Y4hYMhTBFygjwpr9s#t_1>. ex:user o-persoon:heeftGeboorte <http://josd.github.io/.well-known/genid/p0eQLyAnE:Y4hYMhTBFygjwpr9s#t_0>. ex:user o-persoon:heeftGeboorte <http://josd.github.io/.well-known/genid/p0eQLyAnE:Y4hYMhTBFygjwpr9s#t_0>. <http://josd.github.io/.well-known/genid/p0eQLyAnE:Y4hYMhTBFygjwpr9s#t_0> o-persoon:plaats <http://josd.github.io/.well-known/genid/p0eQLyAnE:Y4hYMhTBFygjwpr9s#t_2>})
+TRACE ("goal false" {<http://josd.github.io/.well-known/genid/p0eQLyAnE:Y4hYMhTBFygjwpr9s#t_0> o-persoon:datum <http://josd.github.io/.well-known/genid/p0eQLyAnE:Y4hYMhTBFygjwpr9s#t_1>. ex:user o-persoon:heeftGeboorte <http://josd.github.io/.well-known/genid/p0eQLyAnE:Y4hYMhTBFygjwpr9s#t_0>. ex:user o-persoon:heeftGeboorte <http://josd.github.io/.well-known/genid/p0eQLyAnE:Y4hYMhTBFygjwpr9s#t_0>. <http://josd.github.io/.well-known/genid/p0eQLyAnE:Y4hYMhTBFygjwpr9s#t_0> o-persoon:plaats <http://josd.github.io/.well-known/genid/p0eQLyAnE:Y4hYMhTBFygjwpr9s#t_2>})
+reasoning 16 [msec cputime] 22 [msec walltime]
+2020-05-07T09:02:21.078Z in=29 out=2 ent=2 step=2 brake=2 inf=158290 sec=0.083 inf/sec=1907108
+

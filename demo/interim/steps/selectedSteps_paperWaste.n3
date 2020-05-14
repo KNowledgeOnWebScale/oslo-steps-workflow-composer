@@ -1,4 +1,4 @@
-#Processed by EYE v20.0423.1748 josd
+#Processed by EYE v20.0510.2019 josd
 #eye interim/steps/component-level-steps.n3 interim/steps/shortComponentDescriptions.n3 interim/subgoals/createdGoal_paperWaste.n3 preselection/preselection.n3 profile/knowledge.n3 interim/subgoals/block_paperWaste.n3 --nope --query preselection/prequery.n3
 
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
@@ -28,15 +28,15 @@
 @prefix math: <http://www.w3.org/2000/10/swap/math#>.
 @prefix oslo: <https://example.org/ns/oslo#>.
 @prefix ns3: <http://josd.github.io/.well-known/genid/pP7dSETOSHCTU6bSn:iLn_1X3mg#>.
-@prefix ns4: <http://josd.github.io/.well-known/genid/_klQ8ZHleh80x09kGhAskxiFVrs#>.
+@prefix ns4: <http://josd.github.io/.well-known/genid/Z0JWWsANjvrfqoBt1plItBUD4AQ#>.
 @prefix : <http://example.org#>.
-@prefix ns5: <http://josd.github.io/.well-known/genid/X6QIzRAdVuk2OOWKMziQRlt_0Ak#>.
+@prefix ns5: <http://josd.github.io/.well-known/genid/SlEOZh1MezKuXGDcMOHnbF:Z_jc#>.
 @prefix plan: <http://https://github.com/doerthe/plan#>.
 
 {ns1:movemap gps:description (true true {?U_39 ns1:numberOfRequested40LiterPaperWasteContainers ?U_40} step:provideNumberOf40LiterPaperWasteContainersManually 1 1 0.97 0.97)} <= {(?U_39 ns1:numberOfRequested40LiterPaperWasteContainers) e:skolem ?U_40. ?U_39 a o-persoon:Inwoner}.
 {ns1:movemap gps:description (true true {?U_41 ns1:numberOfRequested240LiterPaperWasteContainers ?U_42} step:provideNumberOf240LiterPaperWasteContainersManually 1 1 0.97 0.97)} <= {(?U_41 ns1:numberOfRequested240LiterPaperWasteContainers) e:skolem ?U_42. ?U_41 a o-persoon:Inwoner}.
 {ns1:movemap gps:description (true true {?U_43 ns1:numberOfRequested1100LiterPaperWasteContainers ?U_44} step:provideNumberOf1100LiterPaperWasteContainersManually 1 1 0.97 0.97)} <= {(?U_43 ns1:numberOfRequested1100LiterPaperWasteContainers) e:skolem ?U_44. ?U_43 a o-persoon:Inwoner}.
 
-#2020-05-04T10:08:30.751Z in=221 out=3 ent=6 step=12 brake=2 inf=762148 sec=0.202 inf/sec=3773010
+#2020-05-14T15:55:24.024Z in=227 out=3 ent=6 step=12 brake=2 inf=779562 sec=0.168 inf/sec=4640250
 #ENDS
 

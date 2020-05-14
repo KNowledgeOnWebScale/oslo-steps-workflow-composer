@@ -1,4 +1,4 @@
-#Processed by EYE v20.0423.1748 josd
+#Processed by EYE v20.0510.2019 josd
 #eye workflow-composer/gps-plugin_modified_noPermutations.n3 profile/knowledge.n3 profile/personalInfo.n3 interim/subgoals/extraRule_paperWaste.n3 help-functions/aux2.n3 interim/steps/selectedSteps_paperWaste.n3 oslo-descriptions/change-address-steps.ttl --query interim/subgoals/createdGoal_paperWaste.n3 --nope
 
 @prefix math: <http://www.w3.org/2000/10/swap/math#>.
@@ -29,13 +29,13 @@
 @prefix var: <https://example.org/ns/var#>.
 @prefix oslo: <https://example.org/ns/oslo#>.
 @prefix ns3: <http://josd.github.io/.well-known/genid/pP7dSETOSHCTU6bSn:iLn_1X3mg#>.
-@prefix ns4: <http://josd.github.io/.well-known/genid/X6QIzRAdVuk2OOWKMziQRlt_0Ak#>.
-@prefix ns5: <http://josd.github.io/.well-known/genid/_klQ8ZHleh80x09kGhAskxiFVrs#>.
+@prefix ns4: <http://josd.github.io/.well-known/genid/SlEOZh1MezKuXGDcMOHnbF:Z_jc#>.
+@prefix ns5: <http://josd.github.io/.well-known/genid/Z0JWWsANjvrfqoBt1plItBUD4AQ#>.
 @prefix plan: <http://https://github.com/doerthe/plan#>.
-@prefix ns6: <http://josd.github.io/.well-known/genid/8d1xcdOzPqiCTyBYeOhbaain:4A#>.
+@prefix ns6: <http://josd.github.io/.well-known/genid/n1QHgkZYxfFZYEb5UpagRoSz5t0#>.
 
 _:sk_0 gps:path ((("unorderedList" (step:provideNumberOf240LiterPaperWasteContainersManually step:provideNumberOf1100LiterPaperWasteContainersManually))) 2.0 2.0 0.9409 0.9409).
 
-#2020-05-04T10:08:31.047Z in=674 out=1 ent=1 step=3 brake=4 inf=550993 sec=0.168 inf/sec=3279720
+#2020-05-14T15:55:24.290Z in=740 out=1 ent=1 step=3 brake=4 inf=584546 sec=0.144 inf/sec=4059347
 #ENDS
 

@@ -1,4 +1,4 @@
-#Processed by EYE v20.0423.1748 josd
+#Processed by EYE v20.0510.2019 josd
 #eye interim/steps/component-level-steps.n3 interim/steps/shortComponentDescriptions.n3 interim/subgoals/createdGoal_police.n3 preselection/preselection.n3 profile/knowledge.n3 interim/subgoals/block_police.n3 --nope --query preselection/prequery.n3
 
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
@@ -28,17 +28,17 @@
 @prefix math: <http://www.w3.org/2000/10/swap/math#>.
 @prefix oslo: <https://example.org/ns/oslo#>.
 @prefix ns3: <http://josd.github.io/.well-known/genid/pP7dSETOSHCTU6bSn:iLn_1X3mg#>.
-@prefix ns4: <http://josd.github.io/.well-known/genid/_klQ8ZHleh80x09kGhAskxiFVrs#>.
+@prefix ns4: <http://josd.github.io/.well-known/genid/Z0JWWsANjvrfqoBt1plItBUD4AQ#>.
 @prefix : <http://example.org#>.
-@prefix ns5: <http://josd.github.io/.well-known/genid/X6QIzRAdVuk2OOWKMziQRlt_0Ak#>.
+@prefix ns5: <http://josd.github.io/.well-known/genid/SlEOZh1MezKuXGDcMOHnbF:Z_jc#>.
 @prefix plan: <http://https://github.com/doerthe/plan#>.
 
-{ns1:movemap gps:description (true true {?U_62 ns1:confirmationOfAddressChange true} step:getPolicevisit 1 1 0.97 0.97)} <= {?U_62 a o-persoon:Inwoner. ?U_62 ns1:policeVisitRequested true}.
-{ns1:movemap gps:description (true true {?U_63 ns1:policeVisitRequested true} step:requestPoliceVisit 1 1 0.97 0.97)} <= {?U_63 a o-persoon:Inwoner. ?U_63 foaf:familyName ?U_64. ?U_63 foaf:givenName ?U_65. ?U_63 ns1:availabilityInfo ?U_66. ?U_63 ns1:movingAddress ?U_67. ?U_63 ns1:movingCity ?U_68. ?U_63 ns1:movingDate ?U_69. ?U_63 ns1:nationalNumber ?U_70. ?U_63 ns1:providedFamilyInformation true. ?U_63 schema:hasOccupation ?U_71. ?U_72 o-persoon:datum ?U_73. ?U_63 o-persoon:heeftGeboorte ?U_72. ?U_63 o-persoon:heeftGeboorte ?U_74. ?U_74 o-persoon:plaats ?U_75. ?U_63 schema:contactPoint ?U_76. ?U_63 schema:contactPoint ?U_77. ?U_76 schema:contactType "gsm". ?U_77 schema:contactType "telephone". ?U_76 schema:telephone ?U_78. ?U_77 schema:telephone ?U_79}.
-{ns1:movemap gps:description (true true {?U_80 ns1:familyMember ?U_81} step:provideDataOfFamilyMembers 1 1 0.97 0.97)} <= {(?U_80 ns1:familyMember) e:skolem ?U_81. ?U_80 a o-persoon:Inwoner}.
-{ns1:movemap gps:description (true true {?U_82 ns1:numberOfFamilyMembers ?U_83} step:provideNumberOfFamilyMembersManually 1 1 0.97 0.97)} <= {(?U_82 ns1:numberOfFamilyMembers) e:skolem ?U_83. ?U_82 a o-persoon:Inwoner}.
-{ns1:movemap gps:description (true true {?U_103 ns1:availabilityInfo ?U_104} step:provideAvailability 1 1 0.97 0.97)} <= {(?U_103 ns1:availabilityInfo) e:skolem ?U_104. ?U_103 a o-persoon:Inwoner}.
+{ns1:movemap gps:description (true true {?U_68 ns1:confirmationOfAddressChange true} step:getPolicevisit 1 1 0.97 0.97)} <= {?U_68 a o-persoon:Inwoner. ?U_68 ns1:policeVisitRequested true}.
+{ns1:movemap gps:description (true true {?U_69 ns1:policeVisitRequested true} step:requestPoliceVisit 1 1 0.97 0.97)} <= {?U_69 a o-persoon:Inwoner. ?U_69 foaf:familyName ?U_70. ?U_69 foaf:givenName ?U_71. ?U_69 o-persoon:heeftNationaliteit ?U_72. ?U_69 ns1:availabilityInfo ?U_73. ?U_69 ns1:movingAddress ?U_74. ?U_69 ns1:movingCity ?U_75. ?U_69 ns1:movingDate ?U_76. ?U_69 ns1:nationalNumber ?U_77. ?U_69 ns1:providedFamilyInformation true. ?U_69 schema:email ?U_78. ?U_69 schema:hasOccupation ?U_79. ?U_80 o-persoon:datum ?U_81. ?U_69 o-persoon:heeftGeboorte ?U_80. ?U_69 o-persoon:heeftGeboorte ?U_82. ?U_82 o-persoon:plaats ?U_83. ?U_69 schema:contactPoint ?U_84. ?U_69 schema:contactPoint ?U_85. ?U_84 schema:contactType "gsm". ?U_85 schema:contactType "telephone". ?U_84 schema:telephone ?U_86. ?U_85 schema:telephone ?U_87}.
+{ns1:movemap gps:description (true true {?U_88 ns1:familyMember ?U_89} step:provideDataOfFamilyMembers 1 1 0.97 0.97)} <= {(?U_88 ns1:familyMember) e:skolem ?U_89. ?U_88 a o-persoon:Inwoner}.
+{ns1:movemap gps:description (true true {?U_90 ns1:numberOfFamilyMembers ?U_91} step:provideNumberOfFamilyMembersManually 1 1 0.97 0.97)} <= {(?U_90 ns1:numberOfFamilyMembers) e:skolem ?U_91. ?U_90 a o-persoon:Inwoner}.
+{ns1:movemap gps:description (true true {?U_113 ns1:availabilityInfo ?U_114} step:provideAvailability 1 1 0.97 0.97)} <= {(?U_113 ns1:availabilityInfo) e:skolem ?U_114. ?U_113 a o-persoon:Inwoner}.
 
-#2020-05-04T10:08:33.028Z in=235 out=5 ent=10 step=28 brake=3 inf=992607 sec=0.260 inf/sec=3817719
+#2020-05-14T15:55:26.217Z in=243 out=5 ent=10 step=28 brake=3 inf=1037043 sec=0.231 inf/sec=4489364
 #ENDS
 

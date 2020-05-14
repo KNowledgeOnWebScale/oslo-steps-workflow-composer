@@ -1,0 +1,43 @@
+#Processed by EYE v20.0423.1748 josd
+#eye interim/steps/component-level-steps.n3 interim/steps/shortComponentDescriptions.n3 interim/subgoals/createdGoal_birthData.n3 preselection/preselection.n3 profile/knowledge.n3 interim/subgoals/block_birthData.n3 --nope --query preselection/prequery.n3
+
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix o-address: <https://data.vlaanderen.be/ns/adres#>.
+@prefix o-steps: <https://fast.ilabt.imec.be/ns/oslo-steps/0.2#>.
+@prefix ex: <http://example.org/ns/example#>.
+@prefix xl: <http://www.w3.org/2008/05/skos-xl#>.
+@prefix state: <https://fast.ilabt.imec.be/api/v5/states#>.
+@prefix shape: <https://fast.ilabt.imec.be/api/v5/shapes#>.
+@prefix step: <https://fast.ilabt.imec.be/api/v5/steps#>.
+@prefix p-plan: <http://purl.org/net/p-plan#>.
+@prefix ns1: <https://example.org/ns/example#>.
+@prefix foaf: <http://xmlns.com/foaf/0.1/>.
+@prefix sh: <http://www.w3.org/ns/shacl#>.
+@prefix schema: <https://schema.org/>.
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
+@prefix skos: <http://www.w3.org/2004/02/skos/core#>.
+@prefix ops: <https://data.vlaanderen.be/shacl/persoon-basis#>.
+@prefix o-persoon: <https://data.vlaanderen.be/ns/persoon#>.
+@prefix ns2: <https://example.org/ns/oslo-steps#>.
+@prefix var: <https://example.org/ns/var#>.
+@prefix log: <http://www.w3.org/2000/10/swap/log#>.
+@prefix e: <http://eulersharp.sourceforge.net/2003/03swap/log-rules#>.
+@prefix gps: <http://josd.github.io/eye/reasoning/gps/gps-schema#>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
+@prefix list: <http://www.w3.org/2000/10/swap/list#>.
+@prefix math: <http://www.w3.org/2000/10/swap/math#>.
+@prefix oslo: <https://example.org/ns/oslo#>.
+@prefix ns3: <http://josd.github.io/.well-known/genid/pP7dSETOSHCTU6bSn:iLn_1X3mg#>.
+@prefix ns4: <http://josd.github.io/.well-known/genid/ej_32bIHG2UKFhgL7w:p6PIn5WA#>.
+@prefix : <http://example.org#>.
+@prefix ns5: <http://josd.github.io/.well-known/genid/bzj43hkjIwXn_Fx1V:zf5qnfwro#>.
+@prefix plan: <http://https://github.com/doerthe/plan#>.
+
+
+{ns1:movemap gps:description (true true {?U_33 o-persoon:heeftGeboorte ?U_34. ?U_34 o-persoon:plaats ?U_35} step:provideCitizenBirthPlaceManually 1 1 0.97 0.97)} <= {(?U_34 o-persoon:plaats) e:skolem ?U_35. (?U_33 o-persoon:heeftGeboorte) e:skolem ?U_34. ?U_33 a o-persoon:Inwoner}.
+{ns1:movemap gps:description (true true { ?U_32 o-persoon:heeftGeboorte ?U_30. ?U_30 o-persoon:datum ?U_31.} step:provideCitizenBirthDateManually 1 1 0.97 0.97)} <= {(?U_30 o-persoon:datum) e:skolem ?U_31. (?U_32 o-persoon:heeftGeboorte) e:skolem ?U_30. ?U_32 a o-persoon:Inwoner}.
+
+
+#2020-05-06T21:36:36.415Z in=223 out=2 ent=4 step=16 brake=2 inf=767552 sec=0.176 inf/sec=4361091
+#ENDS
+

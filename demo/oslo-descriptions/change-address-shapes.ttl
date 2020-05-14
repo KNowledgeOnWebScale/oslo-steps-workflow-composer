@@ -274,7 +274,8 @@ shape:nationalityShape a o-steps:StateShape ;
 shape:validNationality a sh:PropertyShape ;
   rdfs:label "Valid nationality"@en ;
   sh:path o-persoon:heeftNationaliteit ;
-  sh:class o-persoon:Nationaliteit .
+  sh:class o-persoon:Nationaliteit ;
+  sh:minCount 1  .
 
 #
 # nationality (ui)

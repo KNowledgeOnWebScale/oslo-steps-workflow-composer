@@ -1,4 +1,4 @@
-#Processed by EYE v20.0423.1748 josd
+#Processed by EYE v20.0510.2019 josd
 #eye choices/selected_Waste.n3 interim/steps/journey-level-steps.n3 --query subgoals/creationOfBlockingInfo.n3 --nope
 
 @prefix step: <https://fast.ilabt.imec.be/api/v5/steps#>.
@@ -29,7 +29,7 @@
 @prefix math: <http://www.w3.org/2000/10/swap/math#>.
 @prefix oslo: <https://example.org/ns/oslo#>.
 @prefix ns3: <http://josd.github.io/.well-known/genid/pP7dSETOSHCTU6bSn:iLn_1X3mg#>.
-@prefix ns4: <http://josd.github.io/.well-known/genid/UQGBnXA0WPcbSbjDP7DXm0iLNiA#>.
+@prefix ns4: <http://josd.github.io/.well-known/genid/7ENuFqQXTr1TcILtU_HS5B0MSdM#>.
 
 {_:sk_0 a o-persoon:Inwoner} :inInputRule true.
 {_:sk_0 o-persoon:heeftVerblijfplaats _:sk_4} :inInputRule true.
@@ -38,6 +38,6 @@
 {_:sk_0 ns1:movingCity _:sk_2} :inInputRule true.
 {_:sk_0 ns1:movingDate _:sk_3} :inInputRule true.
 
-#2020-05-04T10:08:25.843Z in=6 out=6 ent=6 step=6 brake=1 inf=75225 sec=0.070 inf/sec=1074643
+#2020-05-14T15:55:19.352Z in=6 out=6 ent=6 step=6 brake=1 inf=77874 sec=0.057 inf/sec=1366211
 #ENDS
 

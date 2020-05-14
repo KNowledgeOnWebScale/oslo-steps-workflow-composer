@@ -43,8 +43,29 @@ eye  interim/steps/container-level-steps.n3 profile/knowledge.n3 --query presele
 #eye container-level-steps.n3 shortContainerDescriptions.n3 containerGoal_addressChange.n3 Preselection/preselection.n3 knowledge.n3 --nope --query Preselection/prequery.n3 >AddressChangeSelected.n3
 
 
+
+
 #eye gps-plugin_modified_noPermutations.n3 knowledge.n3 AddressChangeSelected.n3 change-address-steps.ttl --query containerGoal_addressChange.n3 --nope > container-address-paths.n3
 
+#
+# Goal Personal Info
+#
+
+# create goal based on step name
+eye choices/selected_PersonalInfo.n3 interim/steps/journey-level-steps.n3 --query subgoals/subgoalCreation.n3 --nope --no-skolem http://josd.github.io/.well-known/genid/ > interim/subgoals/createdGoal_PersonalInfo.n3
+
+#create a dummy step which creates the input data of the step (this is needed if we want to create sub-workflows for steps which rely on others).
+eye choices/selected_PersonalInfo.n3 interim/steps/journey-level-steps.n3 --query subgoals/creationOfRuleForMissingData.n3 --nope  > interim/subgoals/extraRule_personalInfo.n3
+
+# mark the triples which can be created by the extra rule to block them for step selection
+eye choices/selected_PersonalInfo.n3 interim/steps/journey-level-steps.n3 --query subgoals/creationOfBlockingInfo.n3 --nope >interim/subgoals/block_personalInfo.n3
+
+#preselect 
+eye interim/steps/container-level-steps.n3 interim/steps/shortContainerDescriptions.n3 interim/subgoals/createdGoal_PersonalInfo.n3 preselection/preselection.n3 profile/knowledge.n3 interim/subgoals/block_personalInfo.n3 --nope --query preselection/prequery.n3 >interim/steps/selectedSteps_personalInfo.n3
+
+#create path
+eye workflow-composer/gps-plugin_modified_noPermutations.n3 profile/knowledge.n3  profile/personalInfo.n3  interim/subgoals/extraRule_personalInfo.n3 help-functions/aux2.n3 interim/steps/selectedSteps_personalInfo.n3 oslo-descriptions/change-address-steps.ttl --query interim/subgoals/createdGoal_PersonalInfo.n3 --nope > interim/paths/PersonalInfo_noPermutation.n3
+#todo:add to server
 
 #
 # Goal Waste collection
@@ -87,6 +108,8 @@ eye interim/steps/container-level-steps.n3 interim/steps/shortContainerDescripti
 
 #createPath
 eye workflow-composer/gps-plugin_modified_noPermutations.n3 profile/knowledge.n3  profile/personalInfo.n3  interim/subgoals/extraRule_addresschange.n3 help-functions/aux2.n3 interim/steps/selectedSteps_addresschange.n3 oslo-descriptions/change-address-steps.ttl --query interim/subgoals/createdGoal_address.n3 --nope > interim/paths/ChangeAddress_noPermutation.n3
+
+
 
 
 #####################################################
@@ -214,14 +237,93 @@ eye choices/selected_AddressChangeInOffice.n3 interim/steps/container-level-step
 eye interim/steps/component-level-steps.n3 interim/steps/shortComponentDescriptions.n3 interim/subgoals/createdGoal_addressChangeInOffice.n3 preselection/preselection.n3 profile/knowledge.n3 interim/subgoals/block_addressChangeInOffice.n3 --nope --query preselection/prequery.n3 >interim/steps/selectedSteps_addressChangeInOffice.n3
 
 #createPath
-eye workflow-composer/gps-plugin_modified_noPermutations.n3 profile/knowledge.n3  profile/personalInfo.n3  interim/subgoals/extraRule_addressChangeInOffice.n3 help-functions/aux2.n3 interim/steps/selectedSteps_addressChangeInOffice.n3 oslo-descriptions/change-address-steps.ttl --query interim/subgoals/createdGoal_addressChangeInOffice.n3 --nope > interim/paths/addressChangeInOffice__noPermutation.n3
+eye workflow-composer/gps-plugin_modified_noPermutations.n3 profile/knowledge.n3  profile/personalInfo.n3  interim/subgoals/extraRule_addressChangeInOffice.n3 help-functions/aux2.n3 interim/steps/selectedSteps_addressChangeInOffice.n3 oslo-descriptions/change-address-steps.ttl --query interim/subgoals/createdGoal_addressChangeInOffice.n3 --nope > interim/paths/AddressChangeInOffice_noPermutation.n3
+
+#todo: add subpath links and add to the server
+
+#
+# citizen name
+#
+
+# create goal based on step name
+eye choices/selected_CitizenName.n3 interim/steps/container-level-steps.n3 --query subgoals/subgoalCreation.n3 --nope --no-skolem http://josd.github.io/.well-known/genid/ > interim/subgoals/createdGoal_citizenName.n3
+
+# create rule to add input info for the step
+eye choices/selected_CitizenName.n3 interim/steps/container-level-steps.n3 --query subgoals/creationOfRuleForMissingData.n3 --nope >interim/subgoals/extraRule_citizenName.n3
+
+# mark the triples which can be created by the extra rule to block them for step selection
+eye choices/selected_CitizenName.n3 interim/steps/container-level-steps.n3 --query subgoals/creationOfBlockingInfo.n3 --nope >interim/subgoals/block_citizenName.n3
+
+#preselect
+eye interim/steps/component-level-steps.n3 interim/steps/shortComponentDescriptions.n3 interim/subgoals/createdGoal_citizenName.n3 preselection/preselection.n3 profile/knowledge.n3 interim/subgoals/block_citizenName.n3 --nope --query preselection/prequery.n3 >interim/steps/selectedSteps_citizenName.n3
+
+#createPath
+eye workflow-composer/gps-plugin_modified_noPermutations.n3 profile/knowledge.n3  profile/personalInfo.n3  interim/subgoals/extraRule_citizenName.n3 help-functions/aux2.n3 interim/steps/selectedSteps_citizenName.n3 oslo-descriptions/change-address-steps.ttl --query interim/subgoals/createdGoal_citizenName.n3 --nope > interim/paths/CitizenName_noPermutation.n3
+
+#
+# contact data
+#
+
+# create goal based on step name
+eye choices/selected_ContactData.n3 interim/steps/container-level-steps.n3 --query subgoals/subgoalCreation.n3 --nope --no-skolem http://josd.github.io/.well-known/genid/ > interim/subgoals/createdGoal_contactData.n3
+
+# create rule to add input info for the step
+eye choices/selected_ContactData.n3 interim/steps/container-level-steps.n3 --query subgoals/creationOfRuleForMissingData.n3 --nope >interim/subgoals/extraRule_contactData.n3
+
+# mark the triples which can be created by the extra rule to block them for step selection
+eye choices/selected_ContactData.n3 interim/steps/container-level-steps.n3 --query subgoals/creationOfBlockingInfo.n3 --nope >interim/subgoals/block_contactData.n3
+
+#preselect
+eye interim/steps/component-level-steps.n3 interim/steps/shortComponentDescriptions.n3 interim/subgoals/createdGoal_contactData.n3 preselection/preselection.n3 profile/knowledge.n3 interim/subgoals/block_contactData.n3 --nope --query preselection/prequery.n3 >interim/steps/selectedSteps_contactData.n3
+
+#createPath
+eye workflow-composer/gps-plugin_modified_noPermutations.n3 profile/knowledge.n3  profile/personalInfo.n3  interim/subgoals/extraRule_contactData.n3 help-functions/aux2.n3 interim/steps/selectedSteps_contactData.n3 oslo-descriptions/change-address-steps.ttl --query interim/subgoals/createdGoal_contactData.n3 --nope > interim/paths/ContactData_noPermutation.n3
+
+#
+# birth data
+#
+
+# create goal based on step name
+eye choices/selected_BirthData.n3 interim/steps/container-level-steps.n3 --query subgoals/subgoalCreation.n3 --nope --no-skolem http://josd.github.io/.well-known/genid/ > interim/subgoals/createdGoal_birthData.n3
+
+# create rule to add input info for the step
+eye choices/selected_BirthData.n3 interim/steps/container-level-steps.n3 --query subgoals/creationOfRuleForMissingData.n3 --nope >interim/subgoals/extraRule_birthData.n3
+
+# mark the triples which can be created by the extra rule to block them for step selection
+eye choices/selected_BirthData.n3 interim/steps/container-level-steps.n3 --query subgoals/creationOfBlockingInfo.n3 --nope >interim/subgoals/block_birthData.n3
+
+#preselect
+eye interim/steps/component-level-steps.n3 interim/steps/shortComponentDescriptions.n3 interim/subgoals/createdGoal_birthData.n3 preselection/preselection.n3 profile/knowledge.n3 interim/subgoals/block_birthData.n3 --nope --query preselection/prequery.n3 >interim/steps/selectedSteps_birthData.n3
+
+#createPath
+eye workflow-composer/gps-plugin_modified_noPermutations.n3 profile/knowledge.n3  profile/personalInfo.n3  interim/subgoals/extraRule_birthData.n3 help-functions/aux2.n3 interim/steps/selectedSteps_birthData.n3 oslo-descriptions/change-address-steps.ttl --query interim/subgoals/createdGoal_birthData.n3 --nope > interim/paths/BirthData_noPermutation.n3
+
+#
+# additional data
+#
+
+# create goal based on step name
+eye choices/selected_AdditionalData.n3 interim/steps/container-level-steps.n3 --query subgoals/subgoalCreation.n3 --nope --no-skolem http://josd.github.io/.well-known/genid/ > interim/subgoals/createdGoal_additionalData.n3
+
+# create rule to add input info for the step
+eye choices/selected_AdditionalData.n3 interim/steps/container-level-steps.n3 --query subgoals/creationOfRuleForMissingData.n3 --nope >interim/subgoals/extraRule_additionalData.n3
+
+# mark the triples which can be created by the extra rule to block them for step selection
+eye choices/selected_AdditionalData.n3 interim/steps/container-level-steps.n3 --query subgoals/creationOfBlockingInfo.n3 --nope >interim/subgoals/block_additionalData.n3
+
+#preselect
+eye interim/steps/component-level-steps.n3 interim/steps/shortComponentDescriptions.n3 interim/subgoals/createdGoal_additionalData.n3 preselection/preselection.n3 profile/knowledge.n3 interim/subgoals/block_additionalData.n3 --nope --query preselection/prequery.n3 >interim/steps/selectedSteps_additionalData.n3
+
+#createPath
+eye workflow-composer/gps-plugin_modified_noPermutations.n3 profile/knowledge.n3  profile/personalInfo.n3  interim/subgoals/extraRule_additionalData.n3 help-functions/aux2.n3 interim/steps/selectedSteps_additionalData.n3 oslo-descriptions/change-address-steps.ttl --query interim/subgoals/createdGoal_additionalData.n3 --nope > interim/paths/AdditionalData_noPermutation.n3
+
 
 
 
 #################################3
 #to be adjusted, here a container level is still missing (is that necessary?)
 
-eye interim/steps/component-level-steps.n3 interim/steps/shortComponentDescriptions.n3 interim/subgoals/goal_personalInformation.n3 preselection/preselection.n3 profile/knowledge.n3 --nope --query preselection/prequery.n3 >interim/steps/selectedSteps_personalInfo.n3
+#eye interim/steps/component-level-steps.n3 interim/steps/shortComponentDescriptions.n3 interim/subgoals/goal_personalInformation.n3 preselection/preselection.n3 profile/knowledge.n3 --nope --query preselection/prequery.n3 >interim/steps/selectedSteps_personalInfo.n3
 
 
 #here, we get the output with all permutations, that is not really what we want, therefore that is commented out
@@ -229,7 +331,8 @@ eye interim/steps/component-level-steps.n3 interim/steps/shortComponentDescripti
 
 
 # personalInfo
-eye workflow-composer/gps-plugin_modified_noPermutations.n3 profile/knowledge.n3  profile/personalInfo.n3  interim/steps/selectedSteps_personalInfo.n3 oslo-descriptions/change-address-steps.ttl --query interim/subgoals/goal_personalInformation.n3 --nope > interim/paths/personalInfo_noPermutation.n3
+# todo:remove
+#eye workflow-composer/gps-plugin_modified_noPermutations.n3 profile/knowledge.n3  profile/personalInfo.n3  interim/steps/selectedSteps_personalInfo.n3 oslo-descriptions/change-address-steps.ttl --query interim/subgoals/goal_personalInformation.n3 --nope > interim/paths/personalInfo_noPermutation.n3
 
 #moving data
 eye interim/steps/component-level-steps.n3 interim/steps/shortComponentDescriptions.n3 interim/subgoals/Goal_provideMovingData.n3 preselection/preselection.n3 profile/knowledge.n3  profile/personalInfo.n3  --nope --query preselection/prequery.n3 >interim/steps/selectedSteps_movingData.n3
@@ -249,6 +352,7 @@ eye workflow-composer/gps-plugin_modified_noPermutations.n3 profile/knowledge.n3
 #then run the following query
 eye external-input/example.n3 help-functions/aux2.n3 profile/knowledge.n3  profile/personalInfo.n3  interim/steps/component-level-steps.n3 external-input/replaceValue.n3 --query external-input/CreateInputTriple.n3 --nope > interim/input/input_triples.n3
 
+
 #this is just a test
 eye external-input/example2.n3 interim/input/input_triples.n3 help-functions/aux2.n3 profile/knowledge.n3  profile/personalInfo.n3  interim/steps/component-level-steps.n3 external-input/replaceValue.n3 --query external-input/CreateInputTriple.n3 --nope > interim/input/input_triples2.n3
 
@@ -256,6 +360,9 @@ eye external-input/example2.n3 interim/input/input_triples.n3 help-functions/aux
 #alternative: use the query below and replace the values by the input values
 eye help-functions/aux2.n3 profile/knowledge.n3  profile/personalInfo.n3  interim/steps/component-level-steps.n3 --query external-input/CreateInputPattern.n3 --nope > interim/input/input_patterns.n3
 
+#create input patterns for states
+#eye profile/knowledge.n3  profile/personalInfo.n3 help-functions/aux2.n3  oslo-descriptions/change-address-states.ttl oslo-descriptions/change-address-shapes.ttl translation/help.n3 translation/createPattern.n3 --query translation/statePatternCreation.n3 --nope  > out.n3
+#I am still working on this
 
 ###############################
 # Produce the info used by a step
@@ -276,3 +383,5 @@ eye profile/knowledge.n3  profile/personalInfo.n3 show/getInfo.n3 interim/steps/
 #eye profile/knowledge.n3  profile/personalInfo.n3 show/getInfo.n3 interim/steps/journey-level-steps.n3 show/Request_showInfoUsed_changeAddress.n3 --query show/query_InfoUsed.n3 --nope > interim/show/show-address-Info.n3
 
 #currently the latter has serious performance issues
+
+# Todo: test everything with phone info and/or cell phone (complicated pattern)
