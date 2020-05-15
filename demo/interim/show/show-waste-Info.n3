@@ -29,10 +29,10 @@
 @prefix gps: <http://josd.github.io/eye/reasoning/gps/gps-schema#>.
 @prefix oslo: <https://example.org/ns/oslo#>.
 @prefix ns3: <http://josd.github.io/.well-known/genid/pP7dSETOSHCTU6bSn:iLn_1X3mg#>.
-@prefix ns4: <http://josd.github.io/.well-known/genid/Z0JWWsANjvrfqoBt1plItBUD4AQ#>.
+@prefix ns4: <http://josd.github.io/.well-known/genid/MrQRvtqG0ST5d52vG44BZSDGCOQ#>.
 
 step:showWasteCollection ns1:usesData {ex:user ex:lockNeededForGreenWasteContainer _:sk_12. ex:user ex:needForGreenWasteContainer _:sk_9. ex:user ex:numberOfRequested120LiterGreenWasteContainers _:sk_10. ex:user ex:numberOfRequested40LiterGreenWasteContainers 99 . ex:user ex:stopGreeWasteContainer _:sk_11. ex:user a o-persoon:Inwoner. ex:user o-persoon:heeftVerblijfplaats _:sk_13. _:sk_13 o-persoon:verblijfsadres _:sk_14. ex:user ex:lockNeededForGreyWasteContainer _:sk_0. ex:user ex:movingAddress _:sk_1. ex:user ex:movingCity _:sk_2. ex:user ex:movingDate _:sk_3. ex:user ex:numberOfRequested1100LiterPaperWasteContainers _:sk_4. ex:user ex:numberOfRequested120LiterGreyWasteContainers _:sk_5. ex:user ex:numberOfRequested240LiterGreyWasteContainers _:sk_6. ex:user ex:numberOfRequested240LiterPaperWasteContainers _:sk_7. ex:user ex:numberOfRequested40LiterGreyWasteContainers _:sk_8. ex:user ex:numberOfRequested40LiterPaperWasteContainers 5}.
 
-#2020-05-14T15:55:34.175Z in=63 out=1 ent=0 step=0 brake=1 inf=6173223 sec=1.193 inf/sec=5174537
+#2020-05-15T08:38:17.127Z in=63 out=1 ent=0 step=0 brake=1 inf=6173234 sec=1.203 inf/sec=5131533
 #ENDS
 

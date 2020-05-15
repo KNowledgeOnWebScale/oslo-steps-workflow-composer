@@ -28,9 +28,9 @@
 @prefix math: <http://www.w3.org/2000/10/swap/math#>.
 @prefix oslo: <https://example.org/ns/oslo#>.
 @prefix ns3: <http://josd.github.io/.well-known/genid/pP7dSETOSHCTU6bSn:iLn_1X3mg#>.
-@prefix ns4: <http://josd.github.io/.well-known/genid/SlEOZh1MezKuXGDcMOHnbF:Z_jc#>.
+@prefix ns4: <http://josd.github.io/.well-known/genid/_u70RXuhxwJkcbZTNtvm2PNG8k4#>.
 @prefix : <http://example.org#>.
-@prefix ns5: <http://josd.github.io/.well-known/genid/7ENuFqQXTr1TcILtU_HS5B0MSdM#>.
+@prefix ns5: <http://josd.github.io/.well-known/genid/9c2WDZOmzZSyOVPw4dX1EEJvpi0#>.
 @prefix plan: <http://https://github.com/doerthe/plan#>.
 
 {ns1:movemap gps:description (true true {?U_116 foaf:familyName ?U_117. ?U_116 foaf:givenName ?U_118} step:provideCitizenNameManually 10 10 0.9 0.9)} <= {(?U_116 foaf:familyName) e:skolem ?U_117. (?U_116 foaf:givenName) e:skolem ?U_118. ?U_116 a o-persoon:Inwoner}.
@@ -38,6 +38,6 @@
 {ns1:movemap gps:description (true true {?U_127 o-persoon:datum ?U_128. ?U_129 o-persoon:heeftGeboorte ?U_127. ?U_129 o-persoon:heeftGeboorte ?U_130. ?U_130 o-persoon:plaats ?U_131} step:provideBirthData 10 10 0.9 0.9)} <= {(?U_127 o-persoon:datum) e:skolem ?U_128. (?U_130 o-persoon:plaats) e:skolem ?U_131. (?U_129 o-persoon:heeftGeboorte) e:skolem ?U_127. (?U_129 o-persoon:heeftGeboorte) e:skolem ?U_130. ?U_129 a o-persoon:Inwoner}.
 {ns1:movemap gps:description (true true {?U_132 o-persoon:heeftNationaliteit ?U_133. ?U_132 ns1:nationalNumber ?U_134. ?U_132 schema:hasOccupation ?U_135} step:provideAdditionalInfo 10 10 0.9 0.9)} <= {(?U_132 o-persoon:heeftNationaliteit) e:skolem ?U_133. (?U_132 ns1:nationalNumber) e:skolem ?U_134. (?U_132 schema:hasOccupation) e:skolem ?U_135. ?U_132 a o-persoon:Inwoner}.
 
-#2020-05-14T15:55:18.585Z in=133 out=4 ent=8 step=56 brake=2 inf=658429 sec=0.140 inf/sec=4703064
+#2020-05-15T08:38:01.252Z in=139 out=4 ent=8 step=56 brake=2 inf=690859 sec=0.143 inf/sec=4831182
 #ENDS
 

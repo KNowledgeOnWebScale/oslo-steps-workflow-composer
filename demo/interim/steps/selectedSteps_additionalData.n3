@@ -28,15 +28,15 @@
 @prefix math: <http://www.w3.org/2000/10/swap/math#>.
 @prefix oslo: <https://example.org/ns/oslo#>.
 @prefix ns3: <http://josd.github.io/.well-known/genid/pP7dSETOSHCTU6bSn:iLn_1X3mg#>.
-@prefix ns4: <http://josd.github.io/.well-known/genid/Z0JWWsANjvrfqoBt1plItBUD4AQ#>.
+@prefix ns4: <http://josd.github.io/.well-known/genid/MrQRvtqG0ST5d52vG44BZSDGCOQ#>.
 @prefix : <http://example.org#>.
-@prefix ns5: <http://josd.github.io/.well-known/genid/SlEOZh1MezKuXGDcMOHnbF:Z_jc#>.
+@prefix ns5: <http://josd.github.io/.well-known/genid/_u70RXuhxwJkcbZTNtvm2PNG8k4#>.
 @prefix plan: <http://https://github.com/doerthe/plan#>.
 
 {ns1:movemap gps:description (true true {?U_39 ns1:nationalNumber ?U_40} step:provideCitizenNationalNumberManually 1 1 0.97 0.97)} <= {(?U_39 ns1:nationalNumber) e:skolem ?U_40. ?U_39 a o-persoon:Inwoner}.
 {ns1:movemap gps:description (true true {?U_41 o-persoon:heeftNationaliteit ?U_42} step:provideCitizensNationalityManually 1 1 0.97 0.97)} <= {(?U_41 o-persoon:heeftNationaliteit) e:skolem ?U_42. ?U_41 a o-persoon:Inwoner}.
 {ns1:movemap gps:description (true true {?U_43 schema:hasOccupation ?U_44} step:provideCitizenProfessionManually 1 1 0.97 0.97)} <= {(?U_43 schema:hasOccupation) e:skolem ?U_44. ?U_43 a o-persoon:Inwoner}.
 
-#2020-05-14T15:55:31.520Z in=227 out=3 ent=6 step=12 brake=2 inf=778739 sec=0.171 inf/sec=4554029
+#2020-05-15T08:38:13.882Z in=227 out=3 ent=6 step=12 brake=2 inf=778753 sec=0.168 inf/sec=4635435
 #ENDS
 

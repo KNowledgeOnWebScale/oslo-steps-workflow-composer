@@ -29,12 +29,12 @@
 @prefix var: <https://example.org/ns/var#>.
 @prefix oslo: <https://example.org/ns/oslo#>.
 @prefix ns3: <http://josd.github.io/.well-known/genid/pP7dSETOSHCTU6bSn:iLn_1X3mg#>.
-@prefix ns4: <http://josd.github.io/.well-known/genid/SlEOZh1MezKuXGDcMOHnbF:Z_jc#>.
-@prefix ns5: <http://josd.github.io/.well-known/genid/Z0JWWsANjvrfqoBt1plItBUD4AQ#>.
+@prefix ns4: <http://josd.github.io/.well-known/genid/_u70RXuhxwJkcbZTNtvm2PNG8k4#>.
+@prefix ns5: <http://josd.github.io/.well-known/genid/MrQRvtqG0ST5d52vG44BZSDGCOQ#>.
 @prefix plan: <http://https://github.com/doerthe/plan#>.
 
 _:sk_25 gps:path ((step:showWasteCollection step:submitWasteCollectionComponentLevel) 2.0 2.0 0.9409 0.9409).
 
-#2020-05-14T15:55:25.354Z in=739 out=1 ent=15 step=4 brake=4 inf=604350 sec=0.132 inf/sec=4578409
+#2020-05-15T08:38:07.716Z in=740 out=1 ent=15 step=4 brake=4 inf=604703 sec=0.120 inf/sec=5039192
 #ENDS
 

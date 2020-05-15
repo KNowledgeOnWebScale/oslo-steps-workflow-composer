@@ -29,13 +29,13 @@
 @prefix var: <https://example.org/ns/var#>.
 @prefix oslo: <https://example.org/ns/oslo#>.
 @prefix ns3: <http://josd.github.io/.well-known/genid/pP7dSETOSHCTU6bSn:iLn_1X3mg#>.
-@prefix ns4: <http://josd.github.io/.well-known/genid/SlEOZh1MezKuXGDcMOHnbF:Z_jc#>.
-@prefix ns5: <http://josd.github.io/.well-known/genid/Z0JWWsANjvrfqoBt1plItBUD4AQ#>.
+@prefix ns4: <http://josd.github.io/.well-known/genid/_u70RXuhxwJkcbZTNtvm2PNG8k4#>.
+@prefix ns5: <http://josd.github.io/.well-known/genid/MrQRvtqG0ST5d52vG44BZSDGCOQ#>.
 @prefix plan: <http://https://github.com/doerthe/plan#>.
-@prefix ns6: <http://josd.github.io/.well-known/genid/Qdw:5rf8giLXAZf4ipWtoSZdZD0#>.
+@prefix ns6: <http://josd.github.io/.well-known/genid/nJfp7dZjzZHY_UI6pclEU4bx8Bo#>.
 
 _:sk_0 gps:path ((("unorderedList" (step:provideNumberOf40LiterGreyWasteContainersManually step:provideNumberOf120LiterGreyWasteContainersManualy step:provideNumberOf240LiterGreyWasteContainers step:provideGreyWasteContainerLockInfoManually))) 4.0 4.0 0.8852928099999999 0.8852928099999999).
 
-#2020-05-14T15:55:23.227Z in=741 out=1 ent=1 step=3 brake=4 inf=617799 sec=0.157 inf/sec=3935025
+#2020-05-15T08:38:05.619Z in=742 out=1 ent=1 step=3 brake=4 inf=618152 sec=0.144 inf/sec=4292722
 #ENDS
 

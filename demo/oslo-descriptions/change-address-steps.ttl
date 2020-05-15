@@ -32,8 +32,9 @@ step:providePersonalInformation a o-steps:JourneyLevelStep ;
                         state:citizenAddress;
   o-steps:requiresState o-steps:emptyState.
 
+
 #provide moving details
-step:provideMovingData a o-steps:JourneyLevelStep ;
+step:provideMovingData a o-steps:JourneyLevelStep, o-steps:ContainerLevelStep ;
   ex:subpathlink <https://fast.ilabt.imec.be/api/plan/component_provideMovingData>;
   o-steps:hasDescription [ xl:literalForm "Data over the planned move"@en ],
                          [ xl:literalForm "Gegevens over de geplande verhuizing"@nl ],

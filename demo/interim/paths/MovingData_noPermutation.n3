@@ -1,5 +1,5 @@
 #Processed by EYE v20.0510.2019 josd
-#eye workflow-composer/gps-plugin_modified_noPermutations.n3 profile/knowledge.n3 profile/personalInfo.n3 interim/subgoals/extraRule_personalInfo.n3 help-functions/aux2.n3 interim/steps/selectedSteps_personalInfo.n3 oslo-descriptions/change-address-steps.ttl --query interim/subgoals/createdGoal_PersonalInfo.n3 --nope
+#eye workflow-composer/gps-plugin_modified_noPermutations.n3 profile/knowledge.n3 profile/personalInfo.n3 interim/subgoals/extraRule_movingData.n3 help-functions/aux2.n3 interim/steps/selectedSteps_movingData.n3 oslo-descriptions/change-address-steps.ttl --query interim/subgoals/createdGoal_movingData.n3 --nope
 
 @prefix math: <http://www.w3.org/2000/10/swap/math#>.
 @prefix list: <http://www.w3.org/2000/10/swap/list#>.
@@ -29,13 +29,13 @@
 @prefix var: <https://example.org/ns/var#>.
 @prefix oslo: <https://example.org/ns/oslo#>.
 @prefix ns3: <http://josd.github.io/.well-known/genid/pP7dSETOSHCTU6bSn:iLn_1X3mg#>.
-@prefix ns4: <http://josd.github.io/.well-known/genid/9c2WDZOmzZSyOVPw4dX1EEJvpi0#>.
-@prefix ns5: <http://josd.github.io/.well-known/genid/_u70RXuhxwJkcbZTNtvm2PNG8k4#>.
+@prefix ns4: <http://josd.github.io/.well-known/genid/_u70RXuhxwJkcbZTNtvm2PNG8k4#>.
+@prefix ns5: <http://josd.github.io/.well-known/genid/MrQRvtqG0ST5d52vG44BZSDGCOQ#>.
 @prefix plan: <http://https://github.com/doerthe/plan#>.
-@prefix ns6: <http://josd.github.io/.well-known/genid/Y0Wt3VWFEX1WkHkJYAjgN5h346U#>.
+@prefix ns6: <http://josd.github.io/.well-known/genid/fBZ8viGnO:k6clfPFsNWES7gT8U#>.
 
-_:sk_0 gps:path ((("unorderedList" (step:provideCitizenNameManually step:provideContactInformation step:provideBirthData step:provideAdditionalInfo))) 40.0 40.0 0.6561000000000001 0.6561000000000001).
+_:sk_0 gps:path ((("unorderedList" (step:provideMovingDateManually step:provideMovingCityManually step:provideMovingAddressManually))) 3.0 3.0 0.912673 0.912673).
 
-#2020-05-15T08:38:01.510Z in=742 out=1 ent=1 step=3 brake=4 inf=642827 sec=0.140 inf/sec=4591621
+#2020-05-15T08:38:15.220Z in=741 out=1 ent=1 step=3 brake=4 inf=589157 sec=0.146 inf/sec=4035322
 #ENDS
 

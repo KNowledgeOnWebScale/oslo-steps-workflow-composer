@@ -1,0 +1,1074 @@
+eye oslo-descriptions/change-address-steps.ttl oslo-descriptions/change-address-states.ttl oslo-descriptions/change-address-shapes.ttl translation/step-reasoning.n3 translation/help.n3 translation/createPattern.n3 --query translation/mappingRuleCreationJourney.n3 --nope --no-skolem http://josd.github.io/.well-known/genid/
+EYE v20.0510.2019 josd
+SWI-Prolog version 8.0.3
+starting 32 [msec cputime] 39 [msec walltime]
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/oslo-descriptions/change-address-steps.ttl SC=698
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/oslo-descriptions/change-address-states.ttl SC=260
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/oslo-descriptions/change-address-shapes.ttl SC=443
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/translation/step-reasoning.n3 SC=3
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/translation/help.n3 SC=2
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/translation/createPattern.n3 SC=8
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/translation/mappingRuleCreationJourney.n3 SC=1
+networking 151 [msec cputime] 171 [msec walltime]
+reasoning 34 [msec cputime] 37 [msec walltime]
+2020-05-15T08:37:58.239Z in=1415 out=4 ent=103 step=432 brake=4 inf=999045 sec=0.217 inf/sec=4603894
+
+eye oslo-descriptions/change-address-steps.ttl oslo-descriptions/change-address-states.ttl oslo-descriptions/change-address-shapes.ttl translation/step-reasoning.n3 translation/help.n3 translation/createPattern.n3 --query translation/mappingRuleCreationContainer.n3 --nope --no-skolem http://josd.github.io/.well-known/genid/
+EYE v20.0510.2019 josd
+SWI-Prolog version 8.0.3
+starting 32 [msec cputime] 37 [msec walltime]
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/oslo-descriptions/change-address-steps.ttl SC=698
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/oslo-descriptions/change-address-states.ttl SC=260
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/oslo-descriptions/change-address-shapes.ttl SC=443
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/translation/step-reasoning.n3 SC=3
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/translation/help.n3 SC=2
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/translation/createPattern.n3 SC=8
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/translation/mappingRuleCreationContainer.n3 SC=1
+networking 138 [msec cputime] 147 [msec walltime]
+reasoning 42 [msec cputime] 43 [msec walltime]
+2020-05-15T08:37:58.572Z in=1415 out=11 ent=110 step=542 brake=4 inf=1037362 sec=0.212 inf/sec=4893217
+
+eye oslo-descriptions/change-address-steps.ttl oslo-descriptions/change-address-states.ttl oslo-descriptions/change-address-shapes.ttl translation/step-reasoning.n3 translation/help.n3 translation/createPattern.n3 --query translation/mappingRuleCreationComponent.n3 --nope --no-skolem http://josd.github.io/.well-known/genid/
+EYE v20.0510.2019 josd
+SWI-Prolog version 8.0.3
+starting 35 [msec cputime] 39 [msec walltime]
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/oslo-descriptions/change-address-steps.ttl SC=698
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/oslo-descriptions/change-address-states.ttl SC=260
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/oslo-descriptions/change-address-shapes.ttl SC=443
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/translation/step-reasoning.n3 SC=3
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/translation/help.n3 SC=2
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/translation/createPattern.n3 SC=8
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/translation/mappingRuleCreationComponent.n3 SC=1
+networking 147 [msec cputime] 154 [msec walltime]
+reasoning 35 [msec cputime] 36 [msec walltime]
+2020-05-15T08:37:58.907Z in=1415 out=39 ent=138 step=478 brake=4 inf=1011460 sec=0.217 inf/sec=4661106
+
+eye interim/steps/journey-level-steps.n3 profile/knowledge.n3 --query preselection/pregeneration.n3 --nope
+EYE v20.0510.2019 josd
+SWI-Prolog version 8.0.3
+starting 34 [msec cputime] 38 [msec walltime]
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/interim/steps/journey-level-steps.n3 SC=4
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/profile/knowledge.n3 SC=6
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/preselection/pregeneration.n3 SC=2
+networking 13 [msec cputime] 15 [msec walltime]
+reasoning 50 [msec cputime] 53 [msec walltime]
+2020-05-15T08:37:59.119Z in=12 out=65 ent=65 step=70 brake=1 inf=274306 sec=0.097 inf/sec=2827897
+
+eye interim/steps/journey-level-steps.n3 interim/steps/shortJourneyDescriptions.n3 journey/journeyGoal.n3 preselection/preselection.n3 profile/knowledge.n3 --nope --query preselection/prequery.n3
+EYE v20.0510.2019 josd
+SWI-Prolog version 8.0.3
+starting 33 [msec cputime] 38 [msec walltime]
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/interim/steps/journey-level-steps.n3 SC=4
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/interim/steps/shortJourneyDescriptions.n3 SC=65
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/journey/journeyGoal.n3 SC=1
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/preselection/preselection.n3 SC=8
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/profile/knowledge.n3 SC=6
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/preselection/prequery.n3 SC=1
+networking 80 [msec cputime] 87 [msec walltime]
+reasoning 29 [msec cputime] 29 [msec walltime]
+2020-05-15T08:37:59.379Z in=85 out=4 ent=8 step=72 brake=2 inf=588644 sec=0.142 inf/sec=4145380
+
+eye workflow-composer/gps-plugin_modified.n3 profile/knowledge.n3 profile/personalInfo.n3 interim/steps/selectedSteps_Journey.n3 oslo-descriptions/change-address-steps.ttl --query journey/journeyGoal.n3 --nope
+EYE v20.0510.2019 josd
+SWI-Prolog version 8.0.3
+starting 35 [msec cputime] 41 [msec walltime]
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/workflow-composer/gps-plugin_modified.n3 SC=16
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/profile/knowledge.n3 SC=6
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/profile/personalInfo.n3 SC=9
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/interim/steps/selectedSteps_Journey.n3 SC=4
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/oslo-descriptions/change-address-steps.ttl SC=698
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/journey/journeyGoal.n3 SC=1
+networking 80 [msec cputime] 89 [msec walltime]
+reasoning 265 [msec cputime] 265 [msec walltime]
+2020-05-15T08:37:59.882Z in=734 out=4 ent=4 step=1024 brake=2 inf=1706048 sec=0.380 inf/sec=4489600
+
+eye workflow-composer/gps-plugin_modified_noPermutations.n3 profile/knowledge.n3 profile/personalInfo.n3 interim/steps/selectedSteps_Journey.n3 oslo-descriptions/change-address-steps.ttl --query journey/journeyGoal.n3 --nope
+EYE v20.0510.2019 josd
+SWI-Prolog version 8.0.3
+starting 35 [msec cputime] 39 [msec walltime]
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/workflow-composer/gps-plugin_modified_noPermutations.n3 SC=21
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/profile/knowledge.n3 SC=6
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/profile/personalInfo.n3 SC=9
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/interim/steps/selectedSteps_Journey.n3 SC=4
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/oslo-descriptions/change-address-steps.ttl SC=698
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/journey/journeyGoal.n3 SC=1
+networking 90 [msec cputime] 101 [msec walltime]
+reasoning 149 [msec cputime] 149 [msec walltime]
+2020-05-15T08:38:00.276Z in=739 out=2 ent=2 step=512 brake=2 inf=1145726 sec=0.274 inf/sec=4181482
+
+eye interim/steps/container-level-steps.n3 profile/knowledge.n3 --query preselection/pregeneration.n3 --nope
+EYE v20.0510.2019 josd
+SWI-Prolog version 8.0.3
+starting 31 [msec cputime] 36 [msec walltime]
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/interim/steps/container-level-steps.n3 SC=11
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/profile/knowledge.n3 SC=6
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/preselection/pregeneration.n3 SC=2
+networking 18 [msec cputime] 20 [msec walltime]
+reasoning 51 [msec cputime] 55 [msec walltime]
+2020-05-15T08:38:00.494Z in=19 out=95 ent=95 step=100 brake=1 inf=303837 sec=0.100 inf/sec=3038370
+
+eye choices/selected_PersonalInfo.n3 interim/steps/journey-level-steps.n3 --query subgoals/subgoalCreation.n3 --nope --no-skolem http://josd.github.io/.well-known/genid/
+EYE v20.0510.2019 josd
+SWI-Prolog version 8.0.3
+starting 34 [msec cputime] 38 [msec walltime]
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/choices/selected_PersonalInfo.n3 SC=1
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/interim/steps/journey-level-steps.n3 SC=4
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/subgoals/subgoalCreation.n3 SC=1
+networking 13 [msec cputime] 14 [msec walltime]
+reasoning 3 [msec cputime] 4 [msec walltime]
+2020-05-15T08:38:00.657Z in=6 out=1 ent=1 step=1 brake=1 inf=79904 sec=0.050 inf/sec=1598080
+
+eye choices/selected_PersonalInfo.n3 interim/steps/journey-level-steps.n3 --query subgoals/creationOfRuleForMissingData.n3 --nope
+EYE v20.0510.2019 josd
+SWI-Prolog version 8.0.3
+starting 31 [msec cputime] 35 [msec walltime]
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/choices/selected_PersonalInfo.n3 SC=1
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/interim/steps/journey-level-steps.n3 SC=4
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/subgoals/creationOfRuleForMissingData.n3 SC=1
+networking 12 [msec cputime] 13 [msec walltime]
+reasoning 2 [msec cputime] 3 [msec walltime]
+2020-05-15T08:38:00.815Z in=6 out=1 ent=1 step=1 brake=2 inf=82025 sec=0.045 inf/sec=1822778
+
+eye choices/selected_PersonalInfo.n3 interim/steps/journey-level-steps.n3 --query subgoals/creationOfBlockingInfo.n3 --nope
+EYE v20.0510.2019 josd
+SWI-Prolog version 8.0.3
+starting 36 [msec cputime] 40 [msec walltime]
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/choices/selected_PersonalInfo.n3 SC=1
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/interim/steps/journey-level-steps.n3 SC=4
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/subgoals/creationOfBlockingInfo.n3 SC=1
+networking 13 [msec cputime] 17 [msec walltime]
+reasoning 9 [msec cputime] 11 [msec walltime]
+2020-05-15T08:38:00.990Z in=6 out=17 ent=17 step=17 brake=1 inf=111410 sec=0.058 inf/sec=1920862
+
+eye interim/steps/container-level-steps.n3 interim/steps/shortContainerDescriptions.n3 interim/subgoals/createdGoal_PersonalInfo.n3 preselection/preselection.n3 profile/knowledge.n3 interim/subgoals/block_personalInfo.n3 --nope --query preselection/prequery.n3
+EYE v20.0510.2019 josd
+SWI-Prolog version 8.0.3
+starting 31 [msec cputime] 35 [msec walltime]
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/interim/steps/container-level-steps.n3 SC=11
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/interim/steps/shortContainerDescriptions.n3 SC=95
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/interim/subgoals/createdGoal_PersonalInfo.n3 SC=1
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/preselection/preselection.n3 SC=8
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/profile/knowledge.n3 SC=6
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/interim/subgoals/block_personalInfo.n3 SC=17
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/preselection/prequery.n3 SC=1
+networking 80 [msec cputime] 86 [msec walltime]
+reasoning 32 [msec cputime] 33 [msec walltime]
+2020-05-15T08:38:01.252Z in=139 out=4 ent=8 step=56 brake=2 inf=690859 sec=0.143 inf/sec=4831182
+
+eye workflow-composer/gps-plugin_modified_noPermutations.n3 profile/knowledge.n3 profile/personalInfo.n3 interim/subgoals/extraRule_personalInfo.n3 help-functions/aux2.n3 interim/steps/selectedSteps_personalInfo.n3 oslo-descriptions/change-address-steps.ttl --query interim/subgoals/createdGoal_PersonalInfo.n3 --nope
+EYE v20.0510.2019 josd
+SWI-Prolog version 8.0.3
+starting 34 [msec cputime] 36 [msec walltime]
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/workflow-composer/gps-plugin_modified_noPermutations.n3 SC=21
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/profile/knowledge.n3 SC=6
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/profile/personalInfo.n3 SC=9
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/interim/subgoals/extraRule_personalInfo.n3 SC=1
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/help-functions/aux2.n3 SC=2
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/interim/steps/selectedSteps_personalInfo.n3 SC=4
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/oslo-descriptions/change-address-steps.ttl SC=698
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/interim/subgoals/createdGoal_PersonalInfo.n3 SC=1
+networking 86 [msec cputime] 94 [msec walltime]
+reasoning 20 [msec cputime] 21 [msec walltime]
+2020-05-15T08:38:01.510Z in=742 out=1 ent=1 step=3 brake=4 inf=642827 sec=0.140 inf/sec=4591621
+
+eye choices/selected_Waste.n3 interim/steps/journey-level-steps.n3 --query subgoals/subgoalCreation.n3 --nope --no-skolem http://josd.github.io/.well-known/genid/
+EYE v20.0510.2019 josd
+SWI-Prolog version 8.0.3
+starting 33 [msec cputime] 36 [msec walltime]
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/choices/selected_Waste.n3 SC=1
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/interim/steps/journey-level-steps.n3 SC=4
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/subgoals/subgoalCreation.n3 SC=1
+networking 13 [msec cputime] 15 [msec walltime]
+reasoning 2 [msec cputime] 2 [msec walltime]
+2020-05-15T08:38:01.670Z in=6 out=1 ent=1 step=1 brake=1 inf=76066 sec=0.048 inf/sec=1584708
+
+eye choices/selected_Waste.n3 interim/steps/journey-level-steps.n3 --query subgoals/creationOfRuleForMissingData.n3 --nope
+EYE v20.0510.2019 josd
+SWI-Prolog version 8.0.3
+starting 35 [msec cputime] 38 [msec walltime]
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/choices/selected_Waste.n3 SC=1
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/interim/steps/journey-level-steps.n3 SC=4
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/subgoals/creationOfRuleForMissingData.n3 SC=1
+networking 12 [msec cputime] 14 [msec walltime]
+reasoning 3 [msec cputime] 3 [msec walltime]
+2020-05-15T08:38:01.832Z in=6 out=1 ent=1 step=1 brake=2 inf=82934 sec=0.050 inf/sec=1658680
+
+eye choices/selected_Waste.n3 interim/steps/journey-level-steps.n3 --query subgoals/creationOfBlockingInfo.n3 --nope
+EYE v20.0510.2019 josd
+SWI-Prolog version 8.0.3
+starting 28 [msec cputime] 34 [msec walltime]
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/choices/selected_Waste.n3 SC=1
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/interim/steps/journey-level-steps.n3 SC=4
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/subgoals/creationOfBlockingInfo.n3 SC=1
+networking 10 [msec cputime] 11 [msec walltime]
+reasoning 2 [msec cputime] 3 [msec walltime]
+2020-05-15T08:38:01.987Z in=6 out=6 ent=6 step=6 brake=1 inf=77902 sec=0.040 inf/sec=1947550
+
+eye interim/steps/container-level-steps.n3 interim/steps/shortContainerDescriptions.n3 interim/subgoals/createdGoal_Waste.n3 preselection/preselection.n3 profile/knowledge.n3 interim/subgoals/block_waste.n3 --nope --query preselection/prequery.n3
+EYE v20.0510.2019 josd
+SWI-Prolog version 8.0.3
+starting 30 [msec cputime] 35 [msec walltime]
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/interim/steps/container-level-steps.n3 SC=11
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/interim/steps/shortContainerDescriptions.n3 SC=95
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/interim/subgoals/createdGoal_Waste.n3 SC=1
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/preselection/preselection.n3 SC=8
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/profile/knowledge.n3 SC=6
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/interim/subgoals/block_waste.n3 SC=6
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/preselection/prequery.n3 SC=1
+networking 86 [msec cputime] 92 [msec walltime]
+reasoning 24 [msec cputime] 25 [msec walltime]
+2020-05-15T08:38:02.246Z in=128 out=4 ent=8 step=26 brake=2 inf=618876 sec=0.140 inf/sec=4420543
+
+eye workflow-composer/gps-plugin_modified_noPermutations.n3 profile/knowledge.n3 profile/personalInfo.n3 interim/subgoals/extraRule_waste.n3 help-functions/aux2.n3 interim/steps/selectedSteps_waste.n3 oslo-descriptions/change-address-steps.ttl --query interim/subgoals/createdGoal_Waste.n3 --nope
+EYE v20.0510.2019 josd
+SWI-Prolog version 8.0.3
+starting 33 [msec cputime] 38 [msec walltime]
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/workflow-composer/gps-plugin_modified_noPermutations.n3 SC=21
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/profile/knowledge.n3 SC=6
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/profile/personalInfo.n3 SC=9
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/interim/subgoals/extraRule_waste.n3 SC=1
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/help-functions/aux2.n3 SC=2
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/interim/steps/selectedSteps_waste.n3 SC=4
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/oslo-descriptions/change-address-steps.ttl SC=698
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/interim/subgoals/createdGoal_Waste.n3 SC=1
+networking 87 [msec cputime] 97 [msec walltime]
+reasoning 7 [msec cputime] 7 [msec walltime]
+2020-05-15T08:38:02.494Z in=742 out=1 ent=7 step=6 brake=4 inf=608450 sec=0.127 inf/sec=4790945
+
+eye choices/selected_AddressSubmission.n3 interim/steps/journey-level-steps.n3 --query subgoals/subgoalCreation.n3 --nope --no-skolem http://josd.github.io/.well-known/genid/
+EYE v20.0510.2019 josd
+SWI-Prolog version 8.0.3
+starting 31 [msec cputime] 35 [msec walltime]
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/choices/selected_AddressSubmission.n3 SC=1
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/interim/steps/journey-level-steps.n3 SC=4
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/subgoals/subgoalCreation.n3 SC=1
+networking 12 [msec cputime] 13 [msec walltime]
+reasoning 2 [msec cputime] 2 [msec walltime]
+2020-05-15T08:38:02.651Z in=6 out=1 ent=1 step=1 brake=1 inf=76362 sec=0.045 inf/sec=1696933
+
+eye choices/selected_AddressSubmission.n3 interim/steps/journey-level-steps.n3 --query subgoals/creationOfRuleForMissingData.n3 --nope
+EYE v20.0510.2019 josd
+SWI-Prolog version 8.0.3
+starting 35 [msec cputime] 39 [msec walltime]
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/choices/selected_AddressSubmission.n3 SC=1
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/interim/steps/journey-level-steps.n3 SC=4
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/subgoals/creationOfRuleForMissingData.n3 SC=1
+networking 15 [msec cputime] 15 [msec walltime]
+reasoning 5 [msec cputime] 5 [msec walltime]
+2020-05-15T08:38:02.818Z in=6 out=1 ent=1 step=1 brake=2 inf=94287 sec=0.055 inf/sec=1714309
+
+eye choices/selected_AddressSubmission.n3 interim/steps/journey-level-steps.n3 --query subgoals/creationOfBlockingInfo.n3 --nope
+EYE v20.0510.2019 josd
+SWI-Prolog version 8.0.3
+starting 31 [msec cputime] 35 [msec walltime]
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/choices/selected_AddressSubmission.n3 SC=1
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/interim/steps/journey-level-steps.n3 SC=4
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/subgoals/creationOfBlockingInfo.n3 SC=1
+networking 11 [msec cputime] 12 [msec walltime]
+reasoning 7 [msec cputime] 7 [msec walltime]
+2020-05-15T08:38:02.978Z in=6 out=20 ent=20 step=20 brake=1 inf=105901 sec=0.049 inf/sec=2161245
+
+eye interim/steps/container-level-steps.n3 interim/steps/shortContainerDescriptions.n3 interim/subgoals/createdGoal_address.n3 preselection/preselection.n3 profile/knowledge.n3 interim/subgoals/block_addresschange.n3 --nope --query preselection/prequery.n3
+EYE v20.0510.2019 josd
+SWI-Prolog version 8.0.3
+starting 30 [msec cputime] 34 [msec walltime]
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/interim/steps/container-level-steps.n3 SC=11
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/interim/steps/shortContainerDescriptions.n3 SC=95
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/interim/subgoals/createdGoal_address.n3 SC=1
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/preselection/preselection.n3 SC=8
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/profile/knowledge.n3 SC=6
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/interim/subgoals/block_addresschange.n3 SC=20
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/preselection/prequery.n3 SC=1
+networking 83 [msec cputime] 89 [msec walltime]
+reasoning 17 [msec cputime] 18 [msec walltime]
+2020-05-15T08:38:03.225Z in=142 out=2 ent=4 step=8 brake=2 inf=613361 sec=0.130 inf/sec=4718162
+
+eye workflow-composer/gps-plugin_modified_noPermutations.n3 profile/knowledge.n3 profile/personalInfo.n3 interim/subgoals/extraRule_addresschange.n3 help-functions/aux2.n3 interim/steps/selectedSteps_addresschange.n3 oslo-descriptions/change-address-steps.ttl --query interim/subgoals/createdGoal_address.n3 --nope
+EYE v20.0510.2019 josd
+SWI-Prolog version 8.0.3
+starting 31 [msec cputime] 35 [msec walltime]
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/workflow-composer/gps-plugin_modified_noPermutations.n3 SC=21
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/profile/knowledge.n3 SC=6
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/profile/personalInfo.n3 SC=9
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/interim/subgoals/extraRule_addresschange.n3 SC=1
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/help-functions/aux2.n3 SC=2
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/interim/steps/selectedSteps_addresschange.n3 SC=2
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/oslo-descriptions/change-address-steps.ttl SC=698
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/interim/subgoals/createdGoal_address.n3 SC=1
+networking 94 [msec cputime] 104 [msec walltime]
+reasoning 18 [msec cputime] 18 [msec walltime]
+2020-05-15T08:38:03.490Z in=740 out=1 ent=21 step=4 brake=4 inf=626172 sec=0.143 inf/sec=4378825
+
+eye interim/steps/component-level-steps.n3 profile/knowledge.n3 --query preselection/pregeneration.n3 --nope
+EYE v20.0510.2019 josd
+SWI-Prolog version 8.0.3
+starting 36 [msec cputime] 40 [msec walltime]
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/interim/steps/component-level-steps.n3 SC=39
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/profile/knowledge.n3 SC=6
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/preselection/pregeneration.n3 SC=2
+networking 28 [msec cputime] 30 [msec walltime]
+reasoning 56 [msec cputime] 63 [msec walltime]
+2020-05-15T08:38:03.730Z in=47 out=168 ent=168 step=173 brake=1 inf=430927 sec=0.120 inf/sec=3591058
+
+eye choices/selected_GreenWaste.n3 interim/steps/container-level-steps.n3 --query subgoals/subgoalCreation.n3 --nope --no-skolem http://josd.github.io/.well-known/genid/
+EYE v20.0510.2019 josd
+SWI-Prolog version 8.0.3
+starting 35 [msec cputime] 39 [msec walltime]
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/choices/selected_GreenWaste.n3 SC=1
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/interim/steps/container-level-steps.n3 SC=11
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/subgoals/subgoalCreation.n3 SC=1
+networking 18 [msec cputime] 19 [msec walltime]
+reasoning 2 [msec cputime] 2 [msec walltime]
+2020-05-15T08:38:03.898Z in=13 out=1 ent=1 step=1 brake=1 inf=101807 sec=0.055 inf/sec=1851036
+
+eye choices/selected_GreenWaste.n3 interim/steps/container-level-steps.n3 --query subgoals/creationOfRuleForMissingData.n3 --nope
+EYE v20.0510.2019 josd
+SWI-Prolog version 8.0.3
+starting 28 [msec cputime] 33 [msec walltime]
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/choices/selected_GreenWaste.n3 SC=1
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/interim/steps/container-level-steps.n3 SC=11
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/subgoals/creationOfRuleForMissingData.n3 SC=1
+networking 15 [msec cputime] 16 [msec walltime]
+reasoning 2 [msec cputime] 2 [msec walltime]
+2020-05-15T08:38:03.957Z in=13 out=1 ent=1 step=1 brake=2 inf=104966 sec=0.045 inf/sec=2332578
+
+eye choices/selected_GreenWaste.n3 interim/steps/container-level-steps.n3 --query subgoals/creationOfBlockingInfo.n3 --nope
+EYE v20.0510.2019 josd
+SWI-Prolog version 8.0.3
+starting 31 [msec cputime] 36 [msec walltime]
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/choices/selected_GreenWaste.n3 SC=1
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/interim/steps/container-level-steps.n3 SC=11
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/subgoals/creationOfBlockingInfo.n3 SC=1
+networking 19 [msec cputime] 20 [msec walltime]
+reasoning 1 [msec cputime] 2 [msec walltime]
+2020-05-15T08:38:04.122Z in=13 out=1 ent=1 step=1 brake=1 inf=99070 sec=0.051 inf/sec=1942549
+
+eye interim/steps/component-level-steps.n3 interim/steps/shortComponentDescriptions.n3 interim/subgoals/createdGoal_greenWaste.n3 preselection/preselection.n3 profile/knowledge.n3 interim/subgoals/block_greenWaste.n3 --nope --query preselection/prequery.n3
+EYE v20.0510.2019 josd
+SWI-Prolog version 8.0.3
+starting 36 [msec cputime] 44 [msec walltime]
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/interim/steps/component-level-steps.n3 SC=39
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/interim/steps/shortComponentDescriptions.n3 SC=168
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/interim/subgoals/createdGoal_greenWaste.n3 SC=1
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/preselection/preselection.n3 SC=8
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/profile/knowledge.n3 SC=6
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/interim/subgoals/block_greenWaste.n3 SC=1
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/preselection/prequery.n3 SC=1
+networking 117 [msec cputime] 127 [msec walltime]
+reasoning 23 [msec cputime] 24 [msec walltime]
+2020-05-15T08:38:04.422Z in=224 out=5 ent=10 step=20 brake=2 inf=758477 sec=0.176 inf/sec=4309528
+
+eye workflow-composer/gps-plugin_modified_noPermutations.n3 profile/knowledge.n3 profile/personalInfo.n3 interim/subgoals/extraRule_greenWaste.n3 help-functions/aux2.n3 interim/steps/selectedSteps_greenWaste.n3 oslo-descriptions/change-address-steps.ttl --query interim/subgoals/createdGoal_greenWaste.n3 --nope
+EYE v20.0510.2019 josd
+SWI-Prolog version 8.0.3
+starting 29 [msec cputime] 32 [msec walltime]
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/workflow-composer/gps-plugin_modified_noPermutations.n3 SC=21
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/profile/knowledge.n3 SC=6
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/profile/personalInfo.n3 SC=9
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/interim/subgoals/extraRule_greenWaste.n3 SC=1
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/help-functions/aux2.n3 SC=2
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/interim/steps/selectedSteps_greenWaste.n3 SC=5
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/oslo-descriptions/change-address-steps.ttl SC=698
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/interim/subgoals/createdGoal_greenWaste.n3 SC=1
+networking 84 [msec cputime] 94 [msec walltime]
+reasoning 10 [msec cputime] 11 [msec walltime]
+2020-05-15T08:38:04.666Z in=743 out=1 ent=1 step=3 brake=4 inf=610185 sec=0.123 inf/sec=4960854
+
+eye choices/selected_GreyWaste.n3 interim/steps/container-level-steps.n3 --query subgoals/subgoalCreation.n3 --nope --no-skolem http://josd.github.io/.well-known/genid/
+EYE v20.0510.2019 josd
+SWI-Prolog version 8.0.3
+starting 30 [msec cputime] 37 [msec walltime]
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/choices/selected_GreyWaste.n3 SC=1
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/interim/steps/container-level-steps.n3 SC=11
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/subgoals/subgoalCreation.n3 SC=1
+networking 18 [msec cputime] 19 [msec walltime]
+reasoning 2 [msec cputime] 2 [msec walltime]
+2020-05-15T08:38:04.731Z in=13 out=1 ent=1 step=1 brake=1 inf=102543 sec=0.050 inf/sec=2050860
+
+eye choices/selected_GreyWaste.n3 interim/steps/container-level-steps.n3 --query subgoals/creationOfRuleForMissingData.n3 --nope
+EYE v20.0510.2019 josd
+SWI-Prolog version 8.0.3
+starting 29 [msec cputime] 33 [msec walltime]
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/choices/selected_GreyWaste.n3 SC=1
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/interim/steps/container-level-steps.n3 SC=11
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/subgoals/creationOfRuleForMissingData.n3 SC=1
+networking 16 [msec cputime] 17 [msec walltime]
+reasoning 2 [msec cputime] 3 [msec walltime]
+2020-05-15T08:38:04.891Z in=13 out=1 ent=1 step=1 brake=2 inf=105479 sec=0.047 inf/sec=2244234
+
+eye choices/selected_GreyWaste.n3 interim/steps/container-level-steps.n3 --query subgoals/creationOfBlockingInfo.n3 --nope
+EYE v20.0510.2019 josd
+SWI-Prolog version 8.0.3
+starting 32 [msec cputime] 40 [msec walltime]
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/choices/selected_GreyWaste.n3 SC=1
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/interim/steps/container-level-steps.n3 SC=11
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/subgoals/creationOfBlockingInfo.n3 SC=1
+networking 18 [msec cputime] 21 [msec walltime]
+reasoning 3 [msec cputime] 2 [msec walltime]
+2020-05-15T08:38:05.061Z in=13 out=5 ent=5 step=5 brake=1 inf=103491 sec=0.053 inf/sec=1952660
+
+eye interim/steps/component-level-steps.n3 interim/steps/shortComponentDescriptions.n3 interim/subgoals/createdGoal_greyWaste.n3 preselection/preselection.n3 profile/knowledge.n3 interim/subgoals/block_greyWaste.n3 --nope --query preselection/prequery.n3
+EYE v20.0510.2019 josd
+SWI-Prolog version 8.0.3
+starting 36 [msec cputime] 41 [msec walltime]
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/interim/steps/component-level-steps.n3 SC=39
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/interim/steps/shortComponentDescriptions.n3 SC=168
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/interim/subgoals/createdGoal_greyWaste.n3 SC=1
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/preselection/preselection.n3 SC=8
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/profile/knowledge.n3 SC=6
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/interim/subgoals/block_greyWaste.n3 SC=5
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/preselection/prequery.n3 SC=1
+networking 100 [msec cputime] 109 [msec walltime]
+reasoning 35 [msec cputime] 36 [msec walltime]
+2020-05-15T08:38:05.354Z in=228 out=4 ent=8 step=16 brake=2 inf=807884 sec=0.171 inf/sec=4724468
+
+eye workflow-composer/gps-plugin_modified_noPermutations.n3 profile/knowledge.n3 profile/personalInfo.n3 interim/subgoals/extraRule_greyWaste.n3 help-functions/aux2.n3 interim/steps/selectedSteps_greyWaste.n3 oslo-descriptions/change-address-steps.ttl --query interim/subgoals/createdGoal_greyWaste.n3 --nope
+EYE v20.0510.2019 josd
+SWI-Prolog version 8.0.3
+starting 33 [msec cputime] 38 [msec walltime]
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/workflow-composer/gps-plugin_modified_noPermutations.n3 SC=21
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/profile/knowledge.n3 SC=6
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/profile/personalInfo.n3 SC=9
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/interim/subgoals/extraRule_greyWaste.n3 SC=1
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/help-functions/aux2.n3 SC=2
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/interim/steps/selectedSteps_greyWaste.n3 SC=4
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/oslo-descriptions/change-address-steps.ttl SC=698
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/interim/subgoals/createdGoal_greyWaste.n3 SC=1
+networking 90 [msec cputime] 99 [msec walltime]
+reasoning 21 [msec cputime] 22 [msec walltime]
+2020-05-15T08:38:05.619Z in=742 out=1 ent=1 step=3 brake=4 inf=618152 sec=0.144 inf/sec=4292722
+
+eye choices/selected_PaperWaste.n3 interim/steps/container-level-steps.n3 --query subgoals/subgoalCreation.n3 --nope --no-skolem http://josd.github.io/.well-known/genid/
+EYE v20.0510.2019 josd
+SWI-Prolog version 8.0.3
+starting 34 [msec cputime] 39 [msec walltime]
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/choices/selected_PaperWaste.n3 SC=1
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/interim/steps/container-level-steps.n3 SC=11
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/subgoals/subgoalCreation.n3 SC=1
+networking 16 [msec cputime] 19 [msec walltime]
+reasoning 2 [msec cputime] 3 [msec walltime]
+2020-05-15T08:38:05.787Z in=13 out=1 ent=1 step=1 brake=1 inf=102315 sec=0.052 inf/sec=1967596
+
+eye choices/selected_PaperWaste.n3 interim/steps/container-level-steps.n3 --query subgoals/creationOfRuleForMissingData.n3 --nope
+EYE v20.0510.2019 josd
+SWI-Prolog version 8.0.3
+starting 32 [msec cputime] 35 [msec walltime]
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/choices/selected_PaperWaste.n3 SC=1
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/interim/steps/container-level-steps.n3 SC=11
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/subgoals/creationOfRuleForMissingData.n3 SC=1
+networking 19 [msec cputime] 20 [msec walltime]
+reasoning 2 [msec cputime] 3 [msec walltime]
+2020-05-15T08:38:05.952Z in=13 out=1 ent=1 step=1 brake=2 inf=105355 sec=0.053 inf/sec=1987830
+
+eye choices/selected_PaperWaste.n3 interim/steps/container-level-steps.n3 --query subgoals/creationOfBlockingInfo.n3 --nope
+EYE v20.0510.2019 josd
+SWI-Prolog version 8.0.3
+starting 31 [msec cputime] 36 [msec walltime]
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/choices/selected_PaperWaste.n3 SC=1
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/interim/steps/container-level-steps.n3 SC=11
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/subgoals/creationOfBlockingInfo.n3 SC=1
+networking 19 [msec cputime] 21 [msec walltime]
+reasoning 2 [msec cputime] 3 [msec walltime]
+2020-05-15T08:38:06.118Z in=13 out=4 ent=4 step=4 brake=1 inf=102197 sec=0.052 inf/sec=1965327
+
+eye interim/steps/component-level-steps.n3 interim/steps/shortComponentDescriptions.n3 interim/subgoals/createdGoal_paperWaste.n3 preselection/preselection.n3 profile/knowledge.n3 interim/subgoals/block_paperWaste.n3 --nope --query preselection/prequery.n3
+EYE v20.0510.2019 josd
+SWI-Prolog version 8.0.3
+starting 32 [msec cputime] 35 [msec walltime]
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/interim/steps/component-level-steps.n3 SC=39
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/interim/steps/shortComponentDescriptions.n3 SC=168
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/interim/subgoals/createdGoal_paperWaste.n3 SC=1
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/preselection/preselection.n3 SC=8
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/profile/knowledge.n3 SC=6
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/interim/subgoals/block_paperWaste.n3 SC=4
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/preselection/prequery.n3 SC=1
+networking 98 [msec cputime] 107 [msec walltime]
+reasoning 28 [msec cputime] 28 [msec walltime]
+2020-05-15T08:38:06.394Z in=227 out=3 ent=6 step=12 brake=2 inf=779596 sec=0.158 inf/sec=4934152
+
+eye workflow-composer/gps-plugin_modified_noPermutations.n3 profile/knowledge.n3 profile/personalInfo.n3 interim/subgoals/extraRule_paperWaste.n3 help-functions/aux2.n3 interim/steps/selectedSteps_paperWaste.n3 oslo-descriptions/change-address-steps.ttl --query interim/subgoals/createdGoal_paperWaste.n3 --nope
+EYE v20.0510.2019 josd
+SWI-Prolog version 8.0.3
+starting 33 [msec cputime] 36 [msec walltime]
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/workflow-composer/gps-plugin_modified_noPermutations.n3 SC=21
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/profile/knowledge.n3 SC=6
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/profile/personalInfo.n3 SC=9
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/interim/subgoals/extraRule_paperWaste.n3 SC=1
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/help-functions/aux2.n3 SC=2
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/interim/steps/selectedSteps_paperWaste.n3 SC=3
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/oslo-descriptions/change-address-steps.ttl SC=698
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/interim/subgoals/createdGoal_paperWaste.n3 SC=1
+networking 97 [msec cputime] 109 [msec walltime]
+reasoning 14 [msec cputime] 14 [msec walltime]
+2020-05-15T08:38:06.660Z in=741 out=1 ent=1 step=3 brake=4 inf=584902 sec=0.144 inf/sec=4061819
+
+eye choices/selected_SubmitWasteInfo.n3 interim/steps/container-level-steps.n3 --query subgoals/subgoalCreation.n3 --nope --no-skolem http://josd.github.io/.well-known/genid/
+EYE v20.0510.2019 josd
+SWI-Prolog version 8.0.3
+starting 33 [msec cputime] 37 [msec walltime]
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/choices/selected_SubmitWasteInfo.n3 SC=1
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/interim/steps/container-level-steps.n3 SC=11
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/subgoals/subgoalCreation.n3 SC=1
+networking 17 [msec cputime] 19 [msec walltime]
+reasoning 2 [msec cputime] 3 [msec walltime]
+2020-05-15T08:38:06.826Z in=13 out=1 ent=1 step=1 brake=1 inf=102032 sec=0.052 inf/sec=1962154
+
+eye choices/selected_SubmitWasteInfo.n3 interim/steps/container-level-steps.n3 --query subgoals/creationOfRuleForMissingData.n3 --nope
+EYE v20.0510.2019 josd
+SWI-Prolog version 8.0.3
+starting 37 [msec cputime] 41 [msec walltime]
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/choices/selected_SubmitWasteInfo.n3 SC=1
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/interim/steps/container-level-steps.n3 SC=11
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/subgoals/creationOfRuleForMissingData.n3 SC=1
+networking 17 [msec cputime] 19 [msec walltime]
+reasoning 3 [msec cputime] 4 [msec walltime]
+2020-05-15T08:38:06.996Z in=13 out=1 ent=1 step=1 brake=2 inf=115324 sec=0.057 inf/sec=2023228
+
+eye choices/selected_SubmitWasteInfo.n3 interim/steps/container-level-steps.n3 --query subgoals/creationOfBlockingInfo.n3 --nope
+EYE v20.0510.2019 josd
+SWI-Prolog version 8.0.3
+starting 34 [msec cputime] 37 [msec walltime]
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/choices/selected_SubmitWasteInfo.n3 SC=1
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/interim/steps/container-level-steps.n3 SC=11
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/subgoals/creationOfBlockingInfo.n3 SC=1
+networking 16 [msec cputime] 18 [msec walltime]
+reasoning 5 [msec cputime] 5 [msec walltime]
+2020-05-15T08:38:07.165Z in=13 out=14 ent=14 step=14 brake=1 inf=116510 sec=0.055 inf/sec=2118364
+
+eye interim/steps/component-level-steps.n3 interim/steps/shortComponentDescriptions.n3 interim/subgoals/createdGoal_submitWasteInfo.n3 preselection/preselection.n3 profile/knowledge.n3 interim/subgoals/block_submitWasteInfo.n3 --nope --query preselection/prequery.n3
+EYE v20.0510.2019 josd
+SWI-Prolog version 8.0.3
+starting 36 [msec cputime] 40 [msec walltime]
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/interim/steps/component-level-steps.n3 SC=39
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/interim/steps/shortComponentDescriptions.n3 SC=168
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/interim/subgoals/createdGoal_submitWasteInfo.n3 SC=1
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/preselection/preselection.n3 SC=8
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/profile/knowledge.n3 SC=6
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/interim/subgoals/block_submitWasteInfo.n3 SC=14
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/preselection/prequery.n3 SC=1
+networking 114 [msec cputime] 126 [msec walltime]
+reasoning 34 [msec cputime] 40 [msec walltime]
+2020-05-15T08:38:07.477Z in=237 out=2 ent=4 step=8 brake=2 inf=825193 sec=0.184 inf/sec=4484745
+
+eye workflow-composer/gps-plugin_modified_noPermutations.n3 profile/knowledge.n3 profile/personalInfo.n3 interim/subgoals/extraRule_submitWasteInfo.n3 help-functions/aux2.n3 interim/steps/selectedSteps_submitWasteInfo.n3 oslo-descriptions/change-address-steps.ttl --query interim/subgoals/createdGoal_submitWasteInfo.n3 --nope
+EYE v20.0510.2019 josd
+SWI-Prolog version 8.0.3
+starting 33 [msec cputime] 37 [msec walltime]
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/workflow-composer/gps-plugin_modified_noPermutations.n3 SC=21
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/profile/knowledge.n3 SC=6
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/profile/personalInfo.n3 SC=9
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/interim/subgoals/extraRule_submitWasteInfo.n3 SC=1
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/help-functions/aux2.n3 SC=2
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/interim/steps/selectedSteps_submitWasteInfo.n3 SC=2
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/oslo-descriptions/change-address-steps.ttl SC=698
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/interim/subgoals/createdGoal_submitWasteInfo.n3 SC=1
+networking 84 [msec cputime] 92 [msec walltime]
+reasoning 3 [msec cputime] 3 [msec walltime]
+2020-05-15T08:38:07.716Z in=740 out=1 ent=15 step=4 brake=4 inf=604703 sec=0.120 inf/sec=5039192
+
+eye choices/selected_Policevisit.n3 interim/steps/container-level-steps.n3 --query subgoals/subgoalCreation.n3 --nope --no-skolem http://josd.github.io/.well-known/genid/
+EYE v20.0510.2019 josd
+SWI-Prolog version 8.0.3
+starting 37 [msec cputime] 40 [msec walltime]
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/choices/selected_Policevisit.n3 SC=1
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/interim/steps/container-level-steps.n3 SC=11
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/subgoals/subgoalCreation.n3 SC=1
+networking 18 [msec cputime] 20 [msec walltime]
+reasoning 2 [msec cputime] 5 [msec walltime]
+2020-05-15T08:38:07.889Z in=13 out=1 ent=1 step=1 brake=1 inf=102042 sec=0.057 inf/sec=1790211
+
+eye choices/selected_Policevisit.n3 interim/steps/container-level-steps.n3 --query subgoals/creationOfRuleForMissingData.n3 --nope
+EYE v20.0510.2019 josd
+SWI-Prolog version 8.0.3
+starting 33 [msec cputime] 39 [msec walltime]
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/choices/selected_Policevisit.n3 SC=1
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/interim/steps/container-level-steps.n3 SC=11
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/subgoals/creationOfRuleForMissingData.n3 SC=1
+networking 19 [msec cputime] 21 [msec walltime]
+reasoning 4 [msec cputime] 5 [msec walltime]
+2020-05-15T08:38:08.059Z in=13 out=1 ent=1 step=1 brake=2 inf=119954 sec=0.056 inf/sec=2142036
+
+eye choices/selected_Policevisit.n3 interim/steps/container-level-steps.n3 --query subgoals/creationOfBlockingInfo.n3 --nope
+EYE v20.0510.2019 josd
+SWI-Prolog version 8.0.3
+starting 33 [msec cputime] 38 [msec walltime]
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/choices/selected_Policevisit.n3 SC=1
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/interim/steps/container-level-steps.n3 SC=11
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/subgoals/creationOfBlockingInfo.n3 SC=1
+networking 15 [msec cputime] 16 [msec walltime]
+reasoning 7 [msec cputime] 8 [msec walltime]
+2020-05-15T08:38:08.228Z in=13 out=20 ent=20 step=20 brake=1 inf=131565 sec=0.055 inf/sec=2392091
+
+eye interim/steps/component-level-steps.n3 interim/steps/shortComponentDescriptions.n3 interim/subgoals/createdGoal_police.n3 preselection/preselection.n3 profile/knowledge.n3 interim/subgoals/block_police.n3 --nope --query preselection/prequery.n3
+EYE v20.0510.2019 josd
+SWI-Prolog version 8.0.3
+starting 34 [msec cputime] 39 [msec walltime]
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/interim/steps/component-level-steps.n3 SC=39
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/interim/steps/shortComponentDescriptions.n3 SC=168
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/interim/subgoals/createdGoal_police.n3 SC=1
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/preselection/preselection.n3 SC=8
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/profile/knowledge.n3 SC=6
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/interim/subgoals/block_police.n3 SC=20
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/preselection/prequery.n3 SC=1
+networking 116 [msec cputime] 125 [msec walltime]
+reasoning 89 [msec cputime] 91 [msec walltime]
+2020-05-15T08:38:08.589Z in=243 out=5 ent=10 step=28 brake=3 inf=1037074 sec=0.239 inf/sec=4339222
+
+eye workflow-composer/gps-plugin_modified_noPermutations.n3 profile/knowledge.n3 profile/personalInfo.n3 interim/subgoals/extraRule_police.n3 help-functions/aux2.n3 interim/steps/selectedSteps_policevisit.n3 oslo-descriptions/change-address-steps.ttl --query interim/subgoals/createdGoal_police.n3 --nope
+EYE v20.0510.2019 josd
+SWI-Prolog version 8.0.3
+starting 32 [msec cputime] 35 [msec walltime]
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/workflow-composer/gps-plugin_modified_noPermutations.n3 SC=21
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/profile/knowledge.n3 SC=6
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/profile/personalInfo.n3 SC=9
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/interim/subgoals/extraRule_police.n3 SC=1
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/help-functions/aux2.n3 SC=2
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/interim/steps/selectedSteps_policevisit.n3 SC=5
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/oslo-descriptions/change-address-steps.ttl SC=698
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/interim/subgoals/createdGoal_police.n3 SC=1
+networking 93 [msec cputime] 103 [msec walltime]
+reasoning 19 [msec cputime] 20 [msec walltime]
+2020-05-15T08:38:08.853Z in=743 out=1 ent=21 step=3 brake=4 inf=644994 sec=0.144 inf/sec=4479125
+
+eye choices/selected_AddressChangeInOffice.n3 interim/steps/container-level-steps.n3 --query subgoals/subgoalCreation.n3 --nope --no-skolem http://josd.github.io/.well-known/genid/
+EYE v20.0510.2019 josd
+SWI-Prolog version 8.0.3
+starting 35 [msec cputime] 40 [msec walltime]
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/choices/selected_AddressChangeInOffice.n3 SC=1
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/interim/steps/container-level-steps.n3 SC=11
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/subgoals/subgoalCreation.n3 SC=1
+networking 16 [msec cputime] 20 [msec walltime]
+reasoning 2 [msec cputime] 3 [msec walltime]
+2020-05-15T08:38:09.023Z in=13 out=1 ent=1 step=1 brake=1 inf=101886 sec=0.053 inf/sec=1922377
+
+eye choices/selected_AddressChangeInOffice.n3 interim/steps/container-level-steps.n3 --query subgoals/creationOfRuleForMissingData.n3 --nope
+EYE v20.0510.2019 josd
+SWI-Prolog version 8.0.3
+starting 36 [msec cputime] 41 [msec walltime]
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/choices/selected_AddressChangeInOffice.n3 SC=1
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/interim/steps/container-level-steps.n3 SC=11
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/subgoals/creationOfRuleForMissingData.n3 SC=1
+networking 15 [msec cputime] 16 [msec walltime]
+reasoning 1 [msec cputime] 2 [msec walltime]
+2020-05-15T08:38:09.189Z in=13 out=1 ent=1 step=1 brake=2 inf=105935 sec=0.052 inf/sec=2037212
+
+eye choices/selected_AddressChangeInOffice.n3 interim/steps/container-level-steps.n3 --query subgoals/creationOfBlockingInfo.n3 --nope
+EYE v20.0510.2019 josd
+SWI-Prolog version 8.0.3
+starting 34 [msec cputime] 38 [msec walltime]
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/choices/selected_AddressChangeInOffice.n3 SC=1
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/interim/steps/container-level-steps.n3 SC=11
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/subgoals/creationOfBlockingInfo.n3 SC=1
+networking 18 [msec cputime] 20 [msec walltime]
+reasoning 1 [msec cputime] 2 [msec walltime]
+2020-05-15T08:38:09.355Z in=13 out=2 ent=2 step=2 brake=1 inf=99912 sec=0.053 inf/sec=1885132
+
+eye interim/steps/component-level-steps.n3 interim/steps/shortComponentDescriptions.n3 interim/subgoals/createdGoal_addressChangeInOffice.n3 preselection/preselection.n3 profile/knowledge.n3 interim/subgoals/block_addressChangeInOffice.n3 --nope --query preselection/prequery.n3
+EYE v20.0510.2019 josd
+SWI-Prolog version 8.0.3
+starting 33 [msec cputime] 37 [msec walltime]
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/interim/steps/component-level-steps.n3 SC=39
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/interim/steps/shortComponentDescriptions.n3 SC=168
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/interim/subgoals/createdGoal_addressChangeInOffice.n3 SC=1
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/preselection/preselection.n3 SC=8
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/profile/knowledge.n3 SC=6
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/interim/subgoals/block_addressChangeInOffice.n3 SC=2
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/preselection/prequery.n3 SC=1
+networking 114 [msec cputime] 123 [msec walltime]
+reasoning 15 [msec cputime] 16 [msec walltime]
+2020-05-15T08:38:09.637Z in=225 out=2 ent=4 step=8 brake=2 inf=744681 sec=0.162 inf/sec=4596796
+
+eye workflow-composer/gps-plugin_modified_noPermutations.n3 profile/knowledge.n3 profile/personalInfo.n3 interim/subgoals/extraRule_addressChangeInOffice.n3 help-functions/aux2.n3 interim/steps/selectedSteps_addressChangeInOffice.n3 oslo-descriptions/change-address-steps.ttl --query interim/subgoals/createdGoal_addressChangeInOffice.n3 --nope
+EYE v20.0510.2019 josd
+SWI-Prolog version 8.0.3
+starting 32 [msec cputime] 35 [msec walltime]
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/workflow-composer/gps-plugin_modified_noPermutations.n3 SC=21
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/profile/knowledge.n3 SC=6
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/profile/personalInfo.n3 SC=9
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/interim/subgoals/extraRule_addressChangeInOffice.n3 SC=1
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/help-functions/aux2.n3 SC=2
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/interim/steps/selectedSteps_addressChangeInOffice.n3 SC=2
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/oslo-descriptions/change-address-steps.ttl SC=698
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/interim/subgoals/createdGoal_addressChangeInOffice.n3 SC=1
+networking 104 [msec cputime] 112 [msec walltime]
+reasoning 11 [msec cputime] 12 [msec walltime]
+2020-05-15T08:38:09.904Z in=740 out=1 ent=3 step=4 brake=4 inf=581450 sec=0.147 inf/sec=3955442
+
+eye choices/selected_CitizenName.n3 interim/steps/container-level-steps.n3 --query subgoals/subgoalCreation.n3 --nope --no-skolem http://josd.github.io/.well-known/genid/
+EYE v20.0510.2019 josd
+SWI-Prolog version 8.0.3
+starting 32 [msec cputime] 37 [msec walltime]
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/choices/selected_CitizenName.n3 SC=1
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/interim/steps/container-level-steps.n3 SC=11
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/subgoals/subgoalCreation.n3 SC=1
+networking 17 [msec cputime] 19 [msec walltime]
+reasoning 2 [msec cputime] 2 [msec walltime]
+2020-05-15T08:38:10.071Z in=13 out=1 ent=1 step=1 brake=1 inf=102003 sec=0.051 inf/sec=2000059
+
+eye choices/selected_CitizenName.n3 interim/steps/container-level-steps.n3 --query subgoals/creationOfRuleForMissingData.n3 --nope
+EYE v20.0510.2019 josd
+SWI-Prolog version 8.0.3
+starting 32 [msec cputime] 36 [msec walltime]
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/choices/selected_CitizenName.n3 SC=1
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/interim/steps/container-level-steps.n3 SC=11
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/subgoals/creationOfRuleForMissingData.n3 SC=1
+networking 16 [msec cputime] 18 [msec walltime]
+reasoning 2 [msec cputime] 3 [msec walltime]
+2020-05-15T08:38:10.234Z in=13 out=1 ent=1 step=1 brake=2 inf=105184 sec=0.050 inf/sec=2103680
+
+eye choices/selected_CitizenName.n3 interim/steps/container-level-steps.n3 --query subgoals/creationOfBlockingInfo.n3 --nope
+EYE v20.0510.2019 josd
+SWI-Prolog version 8.0.3
+starting 33 [msec cputime] 38 [msec walltime]
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/choices/selected_CitizenName.n3 SC=1
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/interim/steps/container-level-steps.n3 SC=11
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/subgoals/creationOfBlockingInfo.n3 SC=1
+networking 18 [msec cputime] 23 [msec walltime]
+reasoning 2 [msec cputime] 3 [msec walltime]
+2020-05-15T08:38:10.405Z in=13 out=3 ent=3 step=3 brake=1 inf=100973 sec=0.053 inf/sec=1905151
+
+eye interim/steps/component-level-steps.n3 interim/steps/shortComponentDescriptions.n3 interim/subgoals/createdGoal_citizenName.n3 preselection/preselection.n3 profile/knowledge.n3 interim/subgoals/block_citizenName.n3 --nope --query preselection/prequery.n3
+EYE v20.0510.2019 josd
+SWI-Prolog version 8.0.3
+starting 31 [msec cputime] 34 [msec walltime]
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/interim/steps/component-level-steps.n3 SC=39
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/interim/steps/shortComponentDescriptions.n3 SC=168
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/interim/subgoals/createdGoal_citizenName.n3 SC=1
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/preselection/preselection.n3 SC=8
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/profile/knowledge.n3 SC=6
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/interim/subgoals/block_citizenName.n3 SC=3
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/preselection/prequery.n3 SC=1
+networking 101 [msec cputime] 111 [msec walltime]
+reasoning 15 [msec cputime] 16 [msec walltime]
+2020-05-15T08:38:10.672Z in=226 out=2 ent=4 step=8 brake=2 inf=750423 sec=0.147 inf/sec=5104918
+
+eye workflow-composer/gps-plugin_modified_noPermutations.n3 profile/knowledge.n3 profile/personalInfo.n3 interim/subgoals/extraRule_citizenName.n3 help-functions/aux2.n3 interim/steps/selectedSteps_citizenName.n3 oslo-descriptions/change-address-steps.ttl --query interim/subgoals/createdGoal_citizenName.n3 --nope
+EYE v20.0510.2019 josd
+SWI-Prolog version 8.0.3
+starting 35 [msec cputime] 38 [msec walltime]
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/workflow-composer/gps-plugin_modified_noPermutations.n3 SC=21
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/profile/knowledge.n3 SC=6
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/profile/personalInfo.n3 SC=9
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/interim/subgoals/extraRule_citizenName.n3 SC=1
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/help-functions/aux2.n3 SC=2
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/interim/steps/selectedSteps_citizenName.n3 SC=2
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/oslo-descriptions/change-address-steps.ttl SC=698
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/interim/subgoals/createdGoal_citizenName.n3 SC=1
+networking 99 [msec cputime] 109 [msec walltime]
+reasoning 13 [msec cputime] 14 [msec walltime]
+2020-05-15T08:38:10.941Z in=740 out=1 ent=1 step=3 brake=4 inf=579887 sec=0.147 inf/sec=3944810
+
+eye choices/selected_ContactData.n3 interim/steps/container-level-steps.n3 --query subgoals/subgoalCreation.n3 --nope --no-skolem http://josd.github.io/.well-known/genid/
+EYE v20.0510.2019 josd
+SWI-Prolog version 8.0.3
+starting 31 [msec cputime] 35 [msec walltime]
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/choices/selected_ContactData.n3 SC=1
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/interim/steps/container-level-steps.n3 SC=11
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/subgoals/subgoalCreation.n3 SC=1
+networking 16 [msec cputime] 17 [msec walltime]
+reasoning 2 [msec cputime] 2 [msec walltime]
+2020-05-15T08:38:11.101Z in=13 out=1 ent=1 step=1 brake=1 inf=103506 sec=0.049 inf/sec=2112367
+
+eye choices/selected_ContactData.n3 interim/steps/container-level-steps.n3 --query subgoals/creationOfRuleForMissingData.n3 --nope
+EYE v20.0510.2019 josd
+SWI-Prolog version 8.0.3
+starting 37 [msec cputime] 40 [msec walltime]
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/choices/selected_ContactData.n3 SC=1
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/interim/steps/container-level-steps.n3 SC=11
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/subgoals/creationOfRuleForMissingData.n3 SC=1
+networking 18 [msec cputime] 20 [msec walltime]
+reasoning 2 [msec cputime] 2 [msec walltime]
+2020-05-15T08:38:11.271Z in=13 out=1 ent=1 step=1 brake=2 inf=106420 sec=0.057 inf/sec=1867018
+
+eye choices/selected_ContactData.n3 interim/steps/container-level-steps.n3 --query subgoals/creationOfBlockingInfo.n3 --nope
+EYE v20.0510.2019 josd
+SWI-Prolog version 8.0.3
+starting 30 [msec cputime] 33 [msec walltime]
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/choices/selected_ContactData.n3 SC=1
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/interim/steps/container-level-steps.n3 SC=11
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/subgoals/creationOfBlockingInfo.n3 SC=1
+networking 17 [msec cputime] 18 [msec walltime]
+reasoning 4 [msec cputime] 5 [msec walltime]
+2020-05-15T08:38:11.435Z in=13 out=8 ent=8 step=8 brake=1 inf=111477 sec=0.051 inf/sec=2185824
+
+eye interim/steps/component-level-steps.n3 interim/steps/shortComponentDescriptions.n3 interim/subgoals/createdGoal_contactData.n3 preselection/preselection.n3 profile/knowledge.n3 interim/subgoals/block_contactData.n3 --nope --query preselection/prequery.n3
+EYE v20.0510.2019 josd
+SWI-Prolog version 8.0.3
+starting 34 [msec cputime] 37 [msec walltime]
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/interim/steps/component-level-steps.n3 SC=39
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/interim/steps/shortComponentDescriptions.n3 SC=168
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/interim/subgoals/createdGoal_contactData.n3 SC=1
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/preselection/preselection.n3 SC=8
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/profile/knowledge.n3 SC=6
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/interim/subgoals/block_contactData.n3 SC=8
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/preselection/prequery.n3 SC=1
+networking 110 [msec cputime] 120 [msec walltime]
+reasoning 47 [msec cputime] 49 [msec walltime]
+2020-05-15T08:38:11.748Z in=231 out=4 ent=8 step=34 brake=2 inf=872082 sec=0.191 inf/sec=4565874
+
+eye workflow-composer/gps-plugin_modified_noPermutations.n3 profile/knowledge.n3 profile/personalInfo.n3 interim/subgoals/extraRule_contactData.n3 help-functions/aux2.n3 interim/steps/selectedSteps_contactData.n3 oslo-descriptions/change-address-steps.ttl --query interim/subgoals/createdGoal_contactData.n3 --nope
+EYE v20.0510.2019 josd
+SWI-Prolog version 8.0.3
+starting 33 [msec cputime] 36 [msec walltime]
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/workflow-composer/gps-plugin_modified_noPermutations.n3 SC=21
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/profile/knowledge.n3 SC=6
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/profile/personalInfo.n3 SC=9
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/interim/subgoals/extraRule_contactData.n3 SC=1
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/help-functions/aux2.n3 SC=2
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/interim/steps/selectedSteps_contactData.n3 SC=4
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/oslo-descriptions/change-address-steps.ttl SC=698
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/interim/subgoals/createdGoal_contactData.n3 SC=1
+networking 105 [msec cputime] 115 [msec walltime]
+reasoning 14 [msec cputime] 16 [msec walltime]
+2020-05-15T08:38:12.021Z in=742 out=1 ent=1 step=3 brake=4 inf=593896 sec=0.152 inf/sec=3907211
+
+eye choices/selected_BirthData.n3 interim/steps/container-level-steps.n3 --query subgoals/subgoalCreation.n3 --nope --no-skolem http://josd.github.io/.well-known/genid/
+EYE v20.0510.2019 josd
+SWI-Prolog version 8.0.3
+starting 30 [msec cputime] 33 [msec walltime]
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/choices/selected_BirthData.n3 SC=1
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/interim/steps/container-level-steps.n3 SC=11
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/subgoals/subgoalCreation.n3 SC=1
+networking 15 [msec cputime] 16 [msec walltime]
+reasoning 2 [msec cputime] 2 [msec walltime]
+2020-05-15T08:38:12.179Z in=13 out=1 ent=1 step=1 brake=1 inf=102251 sec=0.047 inf/sec=2175553
+
+eye choices/selected_BirthData.n3 interim/steps/container-level-steps.n3 --query subgoals/creationOfRuleForMissingData.n3 --nope
+EYE v20.0510.2019 josd
+SWI-Prolog version 8.0.3
+starting 32 [msec cputime] 37 [msec walltime]
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/choices/selected_BirthData.n3 SC=1
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/interim/steps/container-level-steps.n3 SC=11
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/subgoals/creationOfRuleForMissingData.n3 SC=1
+networking 17 [msec cputime] 19 [msec walltime]
+reasoning 1 [msec cputime] 2 [msec walltime]
+2020-05-15T08:38:12.344Z in=13 out=1 ent=1 step=1 brake=2 inf=105389 sec=0.050 inf/sec=2107780
+
+eye choices/selected_BirthData.n3 interim/steps/container-level-steps.n3 --query subgoals/creationOfBlockingInfo.n3 --nope
+EYE v20.0510.2019 josd
+SWI-Prolog version 8.0.3
+starting 35 [msec cputime] 41 [msec walltime]
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/choices/selected_BirthData.n3 SC=1
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/interim/steps/container-level-steps.n3 SC=11
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/subgoals/creationOfBlockingInfo.n3 SC=1
+networking 17 [msec cputime] 19 [msec walltime]
+reasoning 3 [msec cputime] 3 [msec walltime]
+2020-05-15T08:38:12.514Z in=13 out=5 ent=5 step=5 brake=1 inf=103200 sec=0.055 inf/sec=1876364
+
+eye interim/steps/component-level-steps.n3 interim/steps/shortComponentDescriptions.n3 interim/subgoals/createdGoal_birthData.n3 preselection/preselection.n3 profile/knowledge.n3 interim/subgoals/block_birthData.n3 --nope --query preselection/prequery.n3
+EYE v20.0510.2019 josd
+SWI-Prolog version 8.0.3
+starting 31 [msec cputime] 35 [msec walltime]
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/interim/steps/component-level-steps.n3 SC=39
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/interim/steps/shortComponentDescriptions.n3 SC=168
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/interim/subgoals/createdGoal_birthData.n3 SC=1
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/preselection/preselection.n3 SC=8
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/profile/knowledge.n3 SC=6
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/interim/subgoals/block_birthData.n3 SC=5
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/preselection/prequery.n3 SC=1
+networking 122 [msec cputime] 134 [msec walltime]
+reasoning 28 [msec cputime] 29 [msec walltime]
+2020-05-15T08:38:12.818Z in=228 out=2 ent=4 step=16 brake=2 inf=781928 sec=0.181 inf/sec=4320044
+
+eye workflow-composer/gps-plugin_modified_noPermutations.n3 profile/knowledge.n3 profile/personalInfo.n3 interim/subgoals/extraRule_birthData.n3 help-functions/aux2.n3 interim/steps/selectedSteps_birthData.n3 oslo-descriptions/change-address-steps.ttl --query interim/subgoals/createdGoal_birthData.n3 --nope
+EYE v20.0510.2019 josd
+SWI-Prolog version 8.0.3
+starting 32 [msec cputime] 36 [msec walltime]
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/workflow-composer/gps-plugin_modified_noPermutations.n3 SC=21
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/profile/knowledge.n3 SC=6
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/profile/personalInfo.n3 SC=9
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/interim/subgoals/extraRule_birthData.n3 SC=1
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/help-functions/aux2.n3 SC=2
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/interim/steps/selectedSteps_birthData.n3 SC=2
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/oslo-descriptions/change-address-steps.ttl SC=698
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/interim/subgoals/createdGoal_birthData.n3 SC=1
+networking 93 [msec cputime] 104 [msec walltime]
+reasoning 14 [msec cputime] 14 [msec walltime]
+2020-05-15T08:38:13.081Z in=740 out=1 ent=1 step=3 brake=4 inf=583148 sec=0.139 inf/sec=4195309
+
+eye choices/selected_AdditionalData.n3 interim/steps/container-level-steps.n3 --query subgoals/subgoalCreation.n3 --nope --no-skolem http://josd.github.io/.well-known/genid/
+EYE v20.0510.2019 josd
+SWI-Prolog version 8.0.3
+starting 37 [msec cputime] 41 [msec walltime]
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/choices/selected_AdditionalData.n3 SC=1
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/interim/steps/container-level-steps.n3 SC=11
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/subgoals/subgoalCreation.n3 SC=1
+networking 17 [msec cputime] 22 [msec walltime]
+reasoning 3 [msec cputime] 3 [msec walltime]
+2020-05-15T08:38:13.254Z in=13 out=1 ent=1 step=1 brake=1 inf=102216 sec=0.057 inf/sec=1793263
+
+eye choices/selected_AdditionalData.n3 interim/steps/container-level-steps.n3 --query subgoals/creationOfRuleForMissingData.n3 --nope
+EYE v20.0510.2019 josd
+SWI-Prolog version 8.0.3
+starting 34 [msec cputime] 39 [msec walltime]
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/choices/selected_AdditionalData.n3 SC=1
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/interim/steps/container-level-steps.n3 SC=11
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/subgoals/creationOfRuleForMissingData.n3 SC=1
+networking 16 [msec cputime] 18 [msec walltime]
+reasoning 2 [msec cputime] 2 [msec walltime]
+2020-05-15T08:38:13.419Z in=13 out=1 ent=1 step=1 brake=2 inf=105331 sec=0.052 inf/sec=2025596
+
+eye choices/selected_AdditionalData.n3 interim/steps/container-level-steps.n3 --query subgoals/creationOfBlockingInfo.n3 --nope
+EYE v20.0510.2019 josd
+SWI-Prolog version 8.0.3
+starting 33 [msec cputime] 44 [msec walltime]
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/choices/selected_AdditionalData.n3 SC=1
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/interim/steps/container-level-steps.n3 SC=11
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/subgoals/creationOfBlockingInfo.n3 SC=1
+networking 17 [msec cputime] 19 [msec walltime]
+reasoning 2 [msec cputime] 3 [msec walltime]
+2020-05-15T08:38:13.591Z in=13 out=4 ent=4 step=4 brake=1 inf=102100 sec=0.052 inf/sec=1963462
+
+eye interim/steps/component-level-steps.n3 interim/steps/shortComponentDescriptions.n3 interim/subgoals/createdGoal_additionalData.n3 preselection/preselection.n3 profile/knowledge.n3 interim/subgoals/block_additionalData.n3 --nope --query preselection/prequery.n3
+EYE v20.0510.2019 josd
+SWI-Prolog version 8.0.3
+starting 32 [msec cputime] 35 [msec walltime]
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/interim/steps/component-level-steps.n3 SC=39
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/interim/steps/shortComponentDescriptions.n3 SC=168
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/interim/subgoals/createdGoal_additionalData.n3 SC=1
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/preselection/preselection.n3 SC=8
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/profile/knowledge.n3 SC=6
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/interim/subgoals/block_additionalData.n3 SC=4
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/preselection/prequery.n3 SC=1
+networking 111 [msec cputime] 122 [msec walltime]
+reasoning 25 [msec cputime] 26 [msec walltime]
+2020-05-15T08:38:13.882Z in=227 out=3 ent=6 step=12 brake=2 inf=778753 sec=0.168 inf/sec=4635435
+
+eye workflow-composer/gps-plugin_modified_noPermutations.n3 profile/knowledge.n3 profile/personalInfo.n3 interim/subgoals/extraRule_additionalData.n3 help-functions/aux2.n3 interim/steps/selectedSteps_additionalData.n3 oslo-descriptions/change-address-steps.ttl --query interim/subgoals/createdGoal_additionalData.n3 --nope
+EYE v20.0510.2019 josd
+SWI-Prolog version 8.0.3
+starting 31 [msec cputime] 36 [msec walltime]
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/workflow-composer/gps-plugin_modified_noPermutations.n3 SC=21
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/profile/knowledge.n3 SC=6
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/profile/personalInfo.n3 SC=9
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/interim/subgoals/extraRule_additionalData.n3 SC=1
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/help-functions/aux2.n3 SC=2
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/interim/steps/selectedSteps_additionalData.n3 SC=3
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/oslo-descriptions/change-address-steps.ttl SC=698
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/interim/subgoals/createdGoal_additionalData.n3 SC=1
+networking 88 [msec cputime] 96 [msec walltime]
+reasoning 14 [msec cputime] 15 [msec walltime]
+2020-05-15T08:38:14.136Z in=741 out=1 ent=1 step=3 brake=4 inf=589800 sec=0.133 inf/sec=4434586
+
+eye choices/selected_MovingData.n3 interim/steps/container-level-steps.n3 --query subgoals/subgoalCreation.n3 --nope --no-skolem http://josd.github.io/.well-known/genid/
+EYE v20.0510.2019 josd
+SWI-Prolog version 8.0.3
+starting 36 [msec cputime] 40 [msec walltime]
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/choices/selected_MovingData.n3 SC=1
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/interim/steps/container-level-steps.n3 SC=11
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/subgoals/subgoalCreation.n3 SC=1
+networking 16 [msec cputime] 18 [msec walltime]
+reasoning 2 [msec cputime] 3 [msec walltime]
+2020-05-15T08:38:14.303Z in=13 out=1 ent=1 step=1 brake=1 inf=102128 sec=0.054 inf/sec=1891259
+
+eye choices/selected_MovingData.n3 interim/steps/container-level-steps.n3 --query subgoals/creationOfRuleForMissingData.n3 --nope
+EYE v20.0510.2019 josd
+SWI-Prolog version 8.0.3
+starting 32 [msec cputime] 36 [msec walltime]
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/choices/selected_MovingData.n3 SC=1
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/interim/steps/container-level-steps.n3 SC=11
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/subgoals/creationOfRuleForMissingData.n3 SC=1
+networking 19 [msec cputime] 20 [msec walltime]
+reasoning 2 [msec cputime] 3 [msec walltime]
+2020-05-15T08:38:14.468Z in=13 out=1 ent=1 step=1 brake=2 inf=105271 sec=0.053 inf/sec=1986245
+
+eye choices/selected_MovingData.n3 interim/steps/container-level-steps.n3 --query subgoals/creationOfBlockingInfo.n3 --nope
+EYE v20.0510.2019 josd
+SWI-Prolog version 8.0.3
+starting 36 [msec cputime] 45 [msec walltime]
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/choices/selected_MovingData.n3 SC=1
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/interim/steps/container-level-steps.n3 SC=11
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/subgoals/creationOfBlockingInfo.n3 SC=1
+networking 13 [msec cputime] 15 [msec walltime]
+reasoning 2 [msec cputime] 2 [msec walltime]
+2020-05-15T08:38:14.637Z in=13 out=4 ent=4 step=4 brake=1 inf=102011 sec=0.051 inf/sec=2000216
+
+eye interim/steps/component-level-steps.n3 interim/steps/shortComponentDescriptions.n3 interim/subgoals/createdGoal_movingData.n3 preselection/preselection.n3 profile/knowledge.n3 interim/subgoals/block_movingData.n3 --nope --query preselection/prequery.n3
+EYE v20.0510.2019 josd
+SWI-Prolog version 8.0.3
+starting 37 [msec cputime] 44 [msec walltime]
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/interim/steps/component-level-steps.n3 SC=39
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/interim/steps/shortComponentDescriptions.n3 SC=168
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/interim/subgoals/createdGoal_movingData.n3 SC=1
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/preselection/preselection.n3 SC=8
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/profile/knowledge.n3 SC=6
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/interim/subgoals/block_movingData.n3 SC=4
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/preselection/prequery.n3 SC=1
+networking 116 [msec cputime] 135 [msec walltime]
+reasoning 26 [msec cputime] 27 [msec walltime]
+2020-05-15T08:38:14.949Z in=227 out=3 ent=6 step=12 brake=2 inf=778377 sec=0.179 inf/sec=4348475
+
+eye workflow-composer/gps-plugin_modified_noPermutations.n3 profile/knowledge.n3 profile/personalInfo.n3 interim/subgoals/extraRule_movingData.n3 help-functions/aux2.n3 interim/steps/selectedSteps_movingData.n3 oslo-descriptions/change-address-steps.ttl --query interim/subgoals/createdGoal_movingData.n3 --nope
+EYE v20.0510.2019 josd
+SWI-Prolog version 8.0.3
+starting 30 [msec cputime] 35 [msec walltime]
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/workflow-composer/gps-plugin_modified_noPermutations.n3 SC=21
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/profile/knowledge.n3 SC=6
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/profile/personalInfo.n3 SC=9
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/interim/subgoals/extraRule_movingData.n3 SC=1
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/help-functions/aux2.n3 SC=2
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/interim/steps/selectedSteps_movingData.n3 SC=3
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/oslo-descriptions/change-address-steps.ttl SC=698
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/interim/subgoals/createdGoal_movingData.n3 SC=1
+networking 103 [msec cputime] 115 [msec walltime]
+reasoning 13 [msec cputime] 14 [msec walltime]
+2020-05-15T08:38:15.220Z in=741 out=1 ent=1 step=3 brake=4 inf=589157 sec=0.146 inf/sec=4035322
+
+eye external-input/example.n3 help-functions/aux2.n3 profile/knowledge.n3 profile/personalInfo.n3 interim/steps/component-level-steps.n3 external-input/replaceValue.n3 --query external-input/CreateInputTriple.n3 --nope
+EYE v20.0510.2019 josd
+SWI-Prolog version 8.0.3
+starting 33 [msec cputime] 37 [msec walltime]
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/external-input/example.n3 SC=1
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/help-functions/aux2.n3 SC=2
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/profile/knowledge.n3 SC=6
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/profile/personalInfo.n3 SC=9
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/interim/steps/component-level-steps.n3 SC=39
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/external-input/replaceValue.n3 SC=4
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/external-input/CreateInputTriple.n3 SC=1
+networking 35 [msec cputime] 40 [msec walltime]
+reasoning 1 [msec cputime] 1 [msec walltime]
+2020-05-15T08:38:15.405Z in=62 out=0 ent=0 step=0 brake=2 inf=242219 sec=0.069 inf/sec=3510420
+
+eye external-input/example2.n3 interim/input/input_triples.n3 help-functions/aux2.n3 profile/knowledge.n3 profile/personalInfo.n3 interim/steps/component-level-steps.n3 external-input/replaceValue.n3 --query external-input/CreateInputTriple.n3 --nope
+EYE v20.0510.2019 josd
+SWI-Prolog version 8.0.3
+starting 35 [msec cputime] 39 [msec walltime]
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/external-input/example2.n3 SC=1
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/interim/input/input_triples.n3 SC=0
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/help-functions/aux2.n3 SC=2
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/profile/knowledge.n3 SC=6
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/profile/personalInfo.n3 SC=9
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/interim/steps/component-level-steps.n3 SC=39
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/external-input/replaceValue.n3 SC=4
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/external-input/CreateInputTriple.n3 SC=1
+networking 40 [msec cputime] 45 [msec walltime]
+reasoning 1 [msec cputime] 1 [msec walltime]
+2020-05-15T08:38:15.596Z in=62 out=0 ent=0 step=0 brake=2 inf=258565 sec=0.076 inf/sec=3402171
+
+eye help-functions/aux2.n3 profile/knowledge.n3 profile/personalInfo.n3 interim/steps/component-level-steps.n3 --query external-input/CreateInputPattern.n3 --nope
+EYE v20.0510.2019 josd
+SWI-Prolog version 8.0.3
+starting 33 [msec cputime] 37 [msec walltime]
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/help-functions/aux2.n3 SC=2
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/profile/knowledge.n3 SC=6
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/profile/personalInfo.n3 SC=9
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/interim/steps/component-level-steps.n3 SC=39
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/external-input/CreateInputPattern.n3 SC=1
+networking 38 [msec cputime] 41 [msec walltime]
+reasoning 23 [msec cputime] 25 [msec walltime]
+2020-05-15T08:38:15.806Z in=57 out=64 ent=64 step=35 brake=2 inf=305495 sec=0.094 inf/sec=3249947
+
+eye profile/knowledge.n3 profile/personalInfo.n3 show/getInfo.n3 interim/steps/component-level-steps.n3 show/Request_showInfoUsed_wasteCollection.n3 --query show/query_InfoUsed.n3 --nope
+EYE v20.0510.2019 josd
+SWI-Prolog version 8.0.3
+starting 34 [msec cputime] 37 [msec walltime]
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/profile/knowledge.n3 SC=6
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/profile/personalInfo.n3 SC=9
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/show/getInfo.n3 SC=7
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/interim/steps/component-level-steps.n3 SC=39
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/show/Request_showInfoUsed_wasteCollection.n3 SC=1
+GET file:///media/doerthe/4EC6F987C6F97017/store/FAST/demo/show/query_InfoUsed.n3 SC=1
+networking 40 [msec cputime] 48 [msec walltime]
+reasoning 1129 [msec cputime] 1130 [msec walltime]
+2020-05-15T08:38:17.127Z in=63 out=1 ent=0 step=0 brake=1 inf=6173234 sec=1.203 inf/sec=5131533
+

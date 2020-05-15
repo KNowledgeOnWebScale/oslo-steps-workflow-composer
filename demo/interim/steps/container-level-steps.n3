@@ -28,8 +28,9 @@
 @prefix math: <http://www.w3.org/2000/10/swap/math#>.
 @prefix oslo: <https://example.org/ns/oslo#>.
 @prefix ns3: <http://josd.github.io/.well-known/genid/pP7dSETOSHCTU6bSn:iLn_1X3mg#>.
-@prefix ns4: <http://josd.github.io/.well-known/genid/SlEOZh1MezKuXGDcMOHnbF:Z_jc#>.
+@prefix ns4: <http://josd.github.io/.well-known/genid/_u70RXuhxwJkcbZTNtvm2PNG8k4#>.
 
+{ns1:movemap gps:description (true true {?t_6 ns1:movingAddress ?U_14. ?t_6 ns1:movingCity ?U_16. ?t_6 ns1:movingDate ?U_13} step:provideMovingData 10 10 0.9 0.9)} <= {(?t_6 ns1:movingAddress) e:skolem ?U_14. (?t_6 ns1:movingCity) e:skolem ?U_16. (?t_6 ns1:movingDate) e:skolem ?U_13. ?t_6 a o-persoon:Inwoner}.
 {ns1:movemap gps:description (true true {?t_6 ns1:confirmationOfAddressChange true} step:confirmAddressChangeVisit 10 10 0.9 0.9)} <= {?t_6 a o-persoon:Inwoner. ?t_6 foaf:familyName ?U_5. ?t_6 foaf:givenName ?U_4. ?t_6 o-persoon:heeftNationaliteit ?U_10. ?t_6 ns1:movingAddress ?U_14. ?t_6 ns1:movingCity ?U_16. ?t_6 ns1:movingDate ?U_13. ?t_6 ns1:nationalNumber ?U_8. ?t_6 schema:email ?U_7. ?t_6 schema:hasOccupation ?U_11. ?t_7 o-persoon:datum ?t_8. ?t_6 o-persoon:heeftGeboorte ?t_7. ?t_6 o-persoon:heeftGeboorte ?t_9. ?t_9 o-persoon:plaats ?t_10. ?t_6 schema:contactPoint ?U_0. ?t_6 schema:contactPoint ?U_2. ?U_0 schema:contactType "gsm". ?U_2 schema:contactType "telephone". ?U_0 schema:telephone ?U_1. ?U_2 schema:telephone ?U_3}.
 {ns1:movemap gps:description (true true {?t_6 ns1:addressChanged true} step:addressChangeOnEIDInOffice 10 10 0.9 0.9)} <= {?t_6 a o-persoon:Inwoner. ?t_6 ns1:confirmationOfAddressChange true}.
 {ns1:movemap gps:description (true true {?t_6 foaf:familyName ?U_5. ?t_6 foaf:givenName ?U_4} step:provideCitizenNameManually 10 10 0.9 0.9)} <= {(?t_6 foaf:familyName) e:skolem ?U_5. (?t_6 foaf:givenName) e:skolem ?U_4. ?t_6 a o-persoon:Inwoner}.
@@ -41,6 +42,6 @@
 {ns1:movemap gps:description (true true {?t_6 ns1:providedGreenWasteInformation true} step:provideGreenWasteContainerInfo 10 10 0.9 0.9)} <= {?t_6 a o-persoon:Inwoner}.
 {ns1:movemap gps:description (true true {?t_6 ns1:numberOfRequested1100LiterPaperWasteContainers ?U_28. ?t_6 ns1:numberOfRequested240LiterPaperWasteContainers ?U_27. ?t_6 ns1:numberOfRequested40LiterPaperWasteContainers ?U_26} step:providePaperWasteContainerInfo 10 10 0.9 0.9)} <= {(?t_6 ns1:numberOfRequested1100LiterPaperWasteContainers) e:skolem ?U_28. (?t_6 ns1:numberOfRequested240LiterPaperWasteContainers) e:skolem ?U_27. (?t_6 ns1:numberOfRequested40LiterPaperWasteContainers) e:skolem ?U_26. ?t_6 a o-persoon:Inwoner}.
 
-#2020-05-14T15:55:15.963Z in=1414 out=10 ent=109 step=520 brake=4 inf=1024206 sec=0.222 inf/sec=4613541
+#2020-05-15T08:37:58.572Z in=1415 out=11 ent=110 step=542 brake=4 inf=1037362 sec=0.212 inf/sec=4893217
 #ENDS
 

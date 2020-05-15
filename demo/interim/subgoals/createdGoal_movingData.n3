@@ -1,5 +1,5 @@
 #Processed by EYE v20.0510.2019 josd
-#eye choices/selected_PaperWaste.n3 interim/steps/container-level-steps.n3 --query subgoals/subgoalCreation.n3 --nope --no-skolem http://josd.github.io/.well-known/genid/
+#eye choices/selected_MovingData.n3 interim/steps/container-level-steps.n3 --query subgoals/subgoalCreation.n3 --nope --no-skolem http://josd.github.io/.well-known/genid/
 
 @prefix step: <https://fast.ilabt.imec.be/api/v5/steps#>.
 @prefix : <http://example.org#>.
@@ -31,8 +31,8 @@
 @prefix ns3: <http://josd.github.io/.well-known/genid/pP7dSETOSHCTU6bSn:iLn_1X3mg#>.
 @prefix ns4: <http://josd.github.io/.well-known/genid/_u70RXuhxwJkcbZTNtvm2PNG8k4#>.
 
-{?t_0 gps:findpath ({?U_0 ns1:numberOfRequested1100LiterPaperWasteContainers ?U_1. ?U_0 ns1:numberOfRequested240LiterPaperWasteContainers ?U_2. ?U_0 ns1:numberOfRequested40LiterPaperWasteContainers ?U_3} ?t_1 ?t_2 ?t_3 ?t_4 ?t_5 (10 10 0.2 0.2))} => {_:t_6 gps:path (?t_1 ?t_2 ?t_3 ?t_4 ?t_5)}.
+{?t_0 gps:findpath ({?U_0 ns1:movingAddress ?U_1. ?U_0 ns1:movingCity ?U_2. ?U_0 ns1:movingDate ?U_3} ?t_1 ?t_2 ?t_3 ?t_4 ?t_5 (10 10 0.2 0.2))} => {_:t_6 gps:path (?t_1 ?t_2 ?t_3 ?t_4 ?t_5)}.
 
-#2020-05-15T08:38:05.787Z in=13 out=1 ent=1 step=1 brake=1 inf=102315 sec=0.052 inf/sec=1967596
+#2020-05-15T08:38:14.303Z in=13 out=1 ent=1 step=1 brake=1 inf=102128 sec=0.054 inf/sec=1891259
 #ENDS
 

@@ -29,10 +29,10 @@
 @prefix math: <http://www.w3.org/2000/10/swap/math#>.
 @prefix oslo: <https://example.org/ns/oslo#>.
 @prefix ns3: <http://josd.github.io/.well-known/genid/pP7dSETOSHCTU6bSn:iLn_1X3mg#>.
-@prefix ns4: <http://josd.github.io/.well-known/genid/SlEOZh1MezKuXGDcMOHnbF:Z_jc#>.
+@prefix ns4: <http://josd.github.io/.well-known/genid/_u70RXuhxwJkcbZTNtvm2PNG8k4#>.
 
 {?t_0 gps:findpath ({?U_0 ns1:wasteCollectionRequested true} ?t_1 ?t_2 ?t_3 ?t_4 ?t_5 (10 10 0.2 0.2))} => {_:t_6 gps:path (?t_1 ?t_2 ?t_3 ?t_4 ?t_5)}.
 
-#2020-05-14T15:55:24.459Z in=12 out=1 ent=1 step=1 brake=1 inf=97646 sec=0.053 inf/sec=1842377
+#2020-05-15T08:38:06.826Z in=13 out=1 ent=1 step=1 brake=1 inf=102032 sec=0.052 inf/sec=1962154
 #ENDS
 
