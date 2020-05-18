@@ -28,7 +28,7 @@
 @prefix math: <http://www.w3.org/2000/10/swap/math#>.
 @prefix oslo: <https://example.org/ns/oslo#>.
 @prefix ns3: <http://josd.github.io/.well-known/genid/pP7dSETOSHCTU6bSn:iLn_1X3mg#>.
-@prefix ns4: <http://josd.github.io/.well-known/genid/_u70RXuhxwJkcbZTNtvm2PNG8k4#>.
+@prefix ns4: <http://josd.github.io/.well-known/genid/XqSwTQoLFrkTMG4t0v0wJ5x26y0#>.
 @prefix : <http://example.org#>.
 
 {{(?U_0 ns1:movingAddress) e:skolem ?U_1. (?U_0 ns1:movingCity) e:skolem ?U_2. (?U_0 ns1:movingDate) e:skolem ?U_3. ?U_0 a o-persoon:Inwoner} step:provideMovingData {?U_0 ns1:movingAddress ?U_1. ?U_0 ns1:movingCity ?U_2. ?U_0 ns1:movingDate ?U_3}} a :ShortDescription.
@@ -127,6 +127,6 @@
 {?U_799 ns1:providedGreenWasteInformation true} :reliesOn {?U_799 ns1:lockNeededForGreenWasteContainer ?U_804}.
 {?U_805 ns1:providedGreenWasteInformation true} :reliesOn {?U_805 ns1:needForGreenWasteContainer false}.
 
-#2020-05-15T08:38:00.494Z in=19 out=95 ent=95 step=100 brake=1 inf=303837 sec=0.100 inf/sec=3038370
+#2020-05-18T15:46:48.114Z in=19 out=95 ent=95 step=100 brake=1 inf=303807 sec=0.105 inf/sec=2893400
 #ENDS
 

@@ -18,9 +18,12 @@
 ?graphlist rdf:first ?first.
 
 ?graphlist rdf:rest ?rest.
+
 ?graph1 e:graphMember ?first.
 (?graph1 ?rest) :unifyList ?result.
 ("!") e:derive true.
 }.
+
+
 
 

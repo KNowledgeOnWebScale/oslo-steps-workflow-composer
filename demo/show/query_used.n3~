@@ -1,0 +1,67 @@
+@prefix ex: <http://example.org/ns/example#>.
+@prefix step: <https://fast.ilabt.imec.be/api/v5/steps#>.
+@prefix gps: <http://josd.github.io/eye/reasoning/gps/gps-schema#>.
+@prefix e: <http://eulersharp.sourceforge.net/2003/03swap/log-rules#>.
+@prefix log: <http://www.w3.org/2000/10/swap/log#>.
+@prefix list: <http://www.w3.org/2000/10/swap/list#>.
+@prefix o-persoon: <https://data.vlaanderen.be/ns/persoon#>.
+@prefix : <http://example.org#>.
+
+
+
+{
+?step ex:displayInput true.
+{?map gps:description (?from ?between ?to ?step ?duration ?cost ?belief ?comfort) } <= ?where.
+?scope e:call ?where.
+
+?step :hasInput ?input.
+
+(?where ?input) e:graphIntersection ?where.
+
+
+?scope e:findall ( {?s ?p ?o} {?input log:includes {?s ?p ?o}. ?scope e:call {?s ?p ?o}} ?triples   ).
+
+?triples log:conjunction ?con.
+}
+=>
+{?step :uses ?con.
+?step :possiblyMissing :nothing.
+}.
+
+
+
+{
+?step ex:displayInput true.
+{?map gps:description (?from ?between ?to ?step ?duration ?cost ?belief ?comfort) } <= ?where.
+?scope e:fail ?where.
+?scope e:call {?x a o-persoon:Inwoner}.
+
+?step :hasInput ?input.
+
+(?input  {?x a o-persoon:Inwoner}) e:graphIntersection  {?x a o-persoon:Inwoner}.
+
+_:x e:trace (1 ?input).
+?scope e:findall ( {?s ?p ?o} {?input log:includes {?s ?p ?o}. ?scope e:call {?s ?p ?o}
+} ?triples   ).
+
+?scope e:findall ( {?s ?p ?o} {?input log:includes {?s ?p ?o}. ?scope e:fail {?s ?p ?o}
+} ?triples2   ).
+
+_:x e:trace (2 ?triples).
+
+(?triples (true)) list:append ?list.
+
+_:x e:trace 4.
+?list log:conjunction ?con.
+?con e:labelvars ?i2.
+_:x e:trace 5.
+
+(?triples2 (true)) list:append ?list2.
+?list2 log:conjunction ?con2.
+?con2 e:labelvars ?i3.
+
+}
+=>
+{ ?step :uses ?i2. ?step :possiblyMissing ?i3 }.
+
+

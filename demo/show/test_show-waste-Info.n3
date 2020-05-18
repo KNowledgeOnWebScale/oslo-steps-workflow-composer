@@ -33,6 +33,7 @@
 @prefix ns5: <http://josd.github.io/.well-known/genid/3xusu:8P3::CpVSgPAirSB1FrCA#>.
 
 ex:user a o-persoon:Inwoner.
+#ex:user99 a o-persoon:Inwoner.
 ex:user ex:lockNeededForGreyWasteContainer :sk_2.
 ex:user ex:movingAddress :sk_3.
 ex:user ex:movingCity :sk_4.
@@ -47,6 +48,7 @@ ex:user ex:numberOfRequested40LiterPaperWasteContainers :sk_11.
 ex:user o-persoon:heeftVerblijfplaats :sk_0.
 :sk_0 o-persoon:verblijfsadres :sk_1.
 
+:sk_0007 o-persoon:verblijfsadres :sk_1.
 #ex:user ex:providedGreenWasteInformation true.
 ex:user ex:needForGreenWasteContainer false.
 

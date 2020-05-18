@@ -28,7 +28,7 @@
 @prefix math: <http://www.w3.org/2000/10/swap/math#>.
 @prefix oslo: <https://example.org/ns/oslo#>.
 @prefix ns3: <http://josd.github.io/.well-known/genid/pP7dSETOSHCTU6bSn:iLn_1X3mg#>.
-@prefix ns4: <http://josd.github.io/.well-known/genid/9c2WDZOmzZSyOVPw4dX1EEJvpi0#>.
+@prefix ns4: <http://josd.github.io/.well-known/genid/lCKEzKuHOnHSuswLJkeo9rqffVU#>.
 @prefix : <http://example.org#>.
 @prefix plan: <http://https://github.com/doerthe/plan#>.
 
@@ -37,6 +37,6 @@
 {ns1:movemap gps:description (true true {?U_119 foaf:familyName ?U_120. ?U_119 foaf:givenName ?U_121. ?U_119 o-persoon:heeftNationaliteit ?U_122. ?U_119 ns1:nationalNumber ?U_123. ?U_119 schema:email ?U_124. ?U_119 schema:hasOccupation ?U_125. ?U_126 o-persoon:datum ?U_127. ?U_119 o-persoon:heeftGeboorte ?U_126. ?U_119 o-persoon:heeftGeboorte ?U_128. ?U_119 o-persoon:heeftVerblijfplaats ?U_129. ?U_128 o-persoon:plaats ?U_130. ?U_129 o-persoon:verblijfsadres ?U_131. ?U_119 schema:contactPoint ?U_132. ?U_119 schema:contactPoint ?U_133. ?U_132 schema:contactType "gsm". ?U_133 schema:contactType "telephone". ?U_132 schema:telephone ?U_134. ?U_133 schema:telephone ?U_135} step:providePersonalInformation 100 100 0.9 0.9)} <= {(?U_126 o-persoon:datum) e:skolem ?U_127. (?U_128 o-persoon:plaats) e:skolem ?U_130. (?U_129 o-persoon:verblijfsadres) e:skolem ?U_131. (?U_119 foaf:familyName) e:skolem ?U_120. (?U_119 foaf:givenName) e:skolem ?U_121. (?U_119 o-persoon:heeftGeboorte) e:skolem ?U_126. (?U_119 o-persoon:heeftGeboorte) e:skolem ?U_128. (?U_119 o-persoon:heeftNationaliteit) e:skolem ?U_122. (?U_119 o-persoon:heeftVerblijfplaats) e:skolem ?U_129. (?U_119 ns1:nationalNumber) e:skolem ?U_123. (?U_119 schema:contactPoint schema:contactType "gsm") e:skolem ?U_132. (?U_119 schema:contactPoint schema:contactType "gsm" schema:telephone) e:skolem ?U_134. (?U_119 schema:contactPoint schema:contactType "telephone") e:skolem ?U_133. (?U_119 schema:contactPoint schema:contactType "telephone" schema:telephone) e:skolem ?U_135. (?U_119 schema:email) e:skolem ?U_124. (?U_119 schema:hasOccupation) e:skolem ?U_125. ?U_119 a o-persoon:Inwoner}.
 {ns1:movemap gps:description (true true {?U_136 ns1:movingAddress ?U_137. ?U_136 ns1:movingCity ?U_138. ?U_136 ns1:movingDate ?U_139} step:provideMovingData 100 100 0.9 0.9)} <= {(?U_136 ns1:movingAddress) e:skolem ?U_137. (?U_136 ns1:movingCity) e:skolem ?U_138. (?U_136 ns1:movingDate) e:skolem ?U_139. ?U_136 a o-persoon:Inwoner}.
 
-#2020-05-15T08:37:59.379Z in=85 out=4 ent=8 step=72 brake=2 inf=588644 sec=0.142 inf/sec=4145380
+#2020-05-18T15:46:47.044Z in=85 out=4 ent=8 step=72 brake=2 inf=588635 sec=0.150 inf/sec=3924233
 #ENDS
 

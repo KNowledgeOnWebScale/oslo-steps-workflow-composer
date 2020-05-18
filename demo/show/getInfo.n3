@@ -96,7 +96,7 @@ _:x e:findall ( {?s2 ?p2 ?o2} { ?graph log:includes {?s2 ?p2 ?o2}.
 (?replaced (?first)) list:append ?replaced2.
 
 (?rest ?replaced2) :replace ?out.
-
+("!") e:derive true.
 }.
 
 {?first :findEvidence ?info}
