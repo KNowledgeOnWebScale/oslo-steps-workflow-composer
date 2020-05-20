@@ -1,5 +1,5 @@
 #Processed by EYE v20.0510.2019 josd
-#eye profile/knowledge.n3 profile/personalInfo.n3 show/getInfo.n3 interim/show/query-patterns.n3 interim/steps/component-level-steps.n3 interim/steps/container-level-steps.n3 interim/steps/journey-level-steps.n3 show/test_show-waste-Info.n3 show/Request_showInfoUsed_wasteCollection.n3 --query show/query_used.n3 --nope
+#eye profile/knowledge.n3 profile/personalInfo.n3 show/getInfo.n3 interim/show/query-patterns.n3 interim/steps/component-level-steps.n3 interim/steps/container-level-steps.n3 interim/steps/journey-level-steps.n3 show/test_show-waste-Info.n3 show/Request_showInfoUsed_wasteCollection.n3 help-functions/built-ins.n3 --query show/query_used.n3 --nope
 
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
 @prefix p-plan: <http://purl.org/net/p-plan#>.
@@ -29,9 +29,9 @@
 @prefix gps: <http://josd.github.io/eye/reasoning/gps/gps-schema#>.
 @prefix oslo: <https://example.org/ns/oslo#>.
 @prefix ns3: <http://josd.github.io/.well-known/genid/pP7dSETOSHCTU6bSn:iLn_1X3mg#>.
-@prefix ns4: <http://josd.github.io/.well-known/genid/i0iloo1Q5EcNTbGP7MxlegzRraM#>.
-@prefix ns5: <http://josd.github.io/.well-known/genid/XqSwTQoLFrkTMG4t0v0wJ5x26y0#>.
-@prefix ns6: <http://josd.github.io/.well-known/genid/lCKEzKuHOnHSuswLJkeo9rqffVU#>.
+@prefix ns4: <http://josd.github.io/.well-known/genid/ek8grb_6hX7YIH1xQM4Tqno8154#>.
+@prefix ns5: <http://josd.github.io/.well-known/genid/voWA2L0pPOolbu9UrhLtNQOekoo#>.
+@prefix ns6: <http://josd.github.io/.well-known/genid/u1I_5KGTUyE2zqKIxEDcUpkXJvA#>.
 @prefix fn: <http://www.w3.org/2006/xpath-functions#>.
 @prefix crypto: <http://www.w3.org/2000/10/swap/crypto#>.
 @prefix string: <http://www.w3.org/2000/10/swap/string#>.
@@ -46,6 +46,6 @@ step:showWasteCollection :canUse {ex:user a o-persoon:Inwoner. ex:user o-persoon
 step:showWasteCollection :possiblyMissing :nothing.
 step:showWasteCollection :canUse {ex:user a o-persoon:Inwoner. ex:user o-persoon:heeftVerblijfplaats :sk_0. :sk_0 o-persoon:verblijfsadres :sk_1. ex:user ex:lockNeededForGreyWasteContainer :sk_2. ex:user ex:movingAddress :sk_3. ex:user ex:movingCity :sk_4. ex:user ex:movingDate :sk_5. ex:user ex:needForGreenWasteContainer false. ex:user ex:numberOfRequested1100LiterPaperWasteContainers :sk_6. ex:user ex:numberOfRequested120LiterGreyWasteContainers :sk_7. ex:user ex:numberOfRequested240LiterGreyWasteContainers :sk_8. ex:user ex:numberOfRequested240LiterPaperWasteContainers :sk_9. ex:user ex:numberOfRequested40LiterGreenWasteContainers 99 . ex:user ex:numberOfRequested40LiterGreyWasteContainers :sk_10. ex:user ex:numberOfRequested40LiterPaperWasteContainers :sk_11. ex:user ex:providedGreenWasteInformation true}.
 
-#2020-05-18T15:47:06.924Z in=146 out=3 ent=4 step=2 brake=2 inf=9050735 sec=2.097 inf/sec=4316040
+#2020-05-20T09:15:36.117Z in=696 out=3 ent=4 step=2 brake=2 inf=9652571 sec=2.001 inf/sec=4823874
 #ENDS
 

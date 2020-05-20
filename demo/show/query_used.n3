@@ -14,9 +14,16 @@
 {?map gps:description (?from ?between ?to ?step ?duration ?cost ?belief ?comfort) } <= ?where.
 ?scope e:call ?where.
 
+
+
 ?step :hasInput ?input.
 
-(?where ?input) e:graphIntersection ?where.
+?scope e:findall ({?s ?p ?o} {?where log:includes {?s ?p ?o}. ?scope e:fail {?p a e:Builtin }} ?shortWherePre).
+
+?shortWherePre log:conjunction ?shortWhere.
+
+
+(?shortWhere ?input) e:graphIntersection ?shortWhere.
 
 
 ?scope e:findall ( {?s ?p ?o} {?input log:includes {?s ?p ?o}. ?scope e:call {?s ?p ?o}} ?triples   ).
@@ -40,21 +47,19 @@
 
 (?input  {?x a o-persoon:Inwoner}) e:graphIntersection  {?x a o-persoon:Inwoner}.
 
-_:x e:trace (1 ?input).
+
 ?scope e:findall ( {?s ?p ?o} {?input log:includes {?s ?p ?o}. ?scope e:call {?s ?p ?o}
 } ?triples   ).
 
 ?scope e:findall ( {?s ?p ?o} {?input log:includes {?s ?p ?o}. ?scope e:fail {?s ?p ?o}
 } ?triples2   ).
 
-_:x e:trace (2 ?triples).
-
 (?triples (true)) list:append ?list.
 
-_:x e:trace 4.
+
 ?list log:conjunction ?con.
 ?con e:labelvars ?i2.
-_:x e:trace 5.
+
 
 (?triples2 (true)) list:append ?list2.
 ?list2 log:conjunction ?con2.

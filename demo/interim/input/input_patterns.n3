@@ -29,9 +29,9 @@
 @prefix list: <http://www.w3.org/2000/10/swap/list#>.
 @prefix oslo: <https://example.org/ns/oslo#>.
 @prefix ns3: <http://josd.github.io/.well-known/genid/pP7dSETOSHCTU6bSn:iLn_1X3mg#>.
-@prefix ns4: <http://josd.github.io/.well-known/genid/i0iloo1Q5EcNTbGP7MxlegzRraM#>.
+@prefix ns4: <http://josd.github.io/.well-known/genid/ek8grb_6hX7YIH1xQM4Tqno8154#>.
 @prefix ns5: <http://josd.github.io/.well-known/genid/3xusu:8P3::CpVSgPAirSB1FrCA#>.
-@prefix ns6: <http://josd.github.io/.well-known/genid/hEUqpjhQVgwL58SdeOalHBE7RxE#>.
+@prefix ns6: <http://josd.github.io/.well-known/genid/Lqlx925iXAcQEdRtQi9WjeLPjfI#>.
 
 step:makeAppointmentForAddressChange :expectedTriples {ex:user ex:hasAppointmentDate ns6:t_0}.
 step:makeAppointmentForAddressChange :variablesToReplace ns6:t_0.
@@ -96,6 +96,6 @@ step:provideNumberOf1100LiterPaperWasteContainersManually :variablesToReplace ns
 step:submitWasteCollectionComponentLevel :expectedTriples {ex:user ex:wasteCollectionRequested true}.
 step:showWasteCollection :expectedTriples {ex:user ex:wasteInfoShownToUser true}.
 
-#2020-05-18T15:47:04.061Z in=58 out=62 ent=62 step=34 brake=2 inf=303989 sec=0.085 inf/sec=3576341
+#2020-05-20T09:15:33.399Z in=58 out=62 ent=62 step=34 brake=2 inf=303979 sec=0.096 inf/sec=3166448
 #ENDS
 

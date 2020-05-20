@@ -29,10 +29,10 @@
 @prefix math: <http://www.w3.org/2000/10/swap/math#>.
 @prefix oslo: <https://example.org/ns/oslo#>.
 @prefix ns3: <http://josd.github.io/.well-known/genid/pP7dSETOSHCTU6bSn:iLn_1X3mg#>.
-@prefix ns4: <http://josd.github.io/.well-known/genid/lCKEzKuHOnHSuswLJkeo9rqffVU#>.
+@prefix ns4: <http://josd.github.io/.well-known/genid/u1I_5KGTUyE2zqKIxEDcUpkXJvA#>.
 
 {?t_0 gps:findpath ({?U_0 foaf:familyName ?U_1. ?U_0 foaf:givenName ?U_2. ?U_0 o-persoon:heeftNationaliteit ?U_3. ?U_0 ns1:nationalNumber ?U_4. ?U_0 schema:email ?U_5. ?U_0 schema:hasOccupation ?U_6. ?U_7 o-persoon:datum ?U_8. ?U_0 o-persoon:heeftGeboorte ?U_7. ?U_0 o-persoon:heeftGeboorte ?U_9. ?U_0 o-persoon:heeftVerblijfplaats ?U_10. ?U_9 o-persoon:plaats ?U_11. ?U_10 o-persoon:verblijfsadres ?U_12. ?U_0 schema:contactPoint ?U_13. ?U_0 schema:contactPoint ?U_14. ?U_13 schema:contactType "gsm". ?U_14 schema:contactType "telephone". ?U_13 schema:telephone ?U_15. ?U_14 schema:telephone ?U_16} ?t_1 ?t_2 ?t_3 ?t_4 ?t_5 (100 100 0.2 0.2))} => {_:t_6 gps:path (?t_1 ?t_2 ?t_3 ?t_4 ?t_5)}.
 
-#2020-05-18T15:46:48.279Z in=6 out=1 ent=1 step=1 brake=1 inf=79874 sec=0.052 inf/sec=1536038
+#2020-05-20T09:15:17.909Z in=6 out=1 ent=1 step=1 brake=1 inf=79884 sec=0.056 inf/sec=1426500
 #ENDS
 

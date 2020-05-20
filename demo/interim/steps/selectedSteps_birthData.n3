@@ -28,14 +28,14 @@
 @prefix math: <http://www.w3.org/2000/10/swap/math#>.
 @prefix oslo: <https://example.org/ns/oslo#>.
 @prefix ns3: <http://josd.github.io/.well-known/genid/pP7dSETOSHCTU6bSn:iLn_1X3mg#>.
-@prefix ns4: <http://josd.github.io/.well-known/genid/i0iloo1Q5EcNTbGP7MxlegzRraM#>.
+@prefix ns4: <http://josd.github.io/.well-known/genid/ek8grb_6hX7YIH1xQM4Tqno8154#>.
 @prefix : <http://example.org#>.
-@prefix ns5: <http://josd.github.io/.well-known/genid/XqSwTQoLFrkTMG4t0v0wJ5x26y0#>.
+@prefix ns5: <http://josd.github.io/.well-known/genid/voWA2L0pPOolbu9UrhLtNQOekoo#>.
 @prefix plan: <http://https://github.com/doerthe/plan#>.
 
 {ns1:movemap gps:description (true true {?U_30 o-persoon:datum ?U_31. ?U_32 o-persoon:heeftGeboorte ?U_30} step:provideCitizenBirthDateManually 1 1 0.97 0.97)} <= {(?U_30 o-persoon:datum) e:skolem ?U_31. (?U_32 o-persoon:heeftGeboorte) e:skolem ?U_30. ?U_32 a o-persoon:Inwoner}.
 {ns1:movemap gps:description (true true {?U_33 o-persoon:heeftGeboorte ?U_34. ?U_34 o-persoon:plaats ?U_35} step:provideCitizenBirthPlaceManually 1 1 0.97 0.97)} <= {(?U_34 o-persoon:plaats) e:skolem ?U_35. (?U_33 o-persoon:heeftGeboorte) e:skolem ?U_34. ?U_33 a o-persoon:Inwoner}.
 
-#2020-05-18T15:47:01.177Z in=228 out=2 ent=4 step=16 brake=2 inf=781940 sec=0.173 inf/sec=4519884
+#2020-05-20T09:15:30.353Z in=228 out=2 ent=4 step=16 brake=2 inf=781928 sec=0.173 inf/sec=4519815
 #ENDS
 

@@ -370,13 +370,16 @@ eye interim/steps/component-level-steps.n3 interim/steps/container-level-steps.n
 # we need a file in which the request is stated. Here we have: show/Request_showInfoUsed_wasteCollection.n3
 
 #Using that file, we can make a query
-eye profile/knowledge.n3  profile/personalInfo.n3 show/getInfo.n3 interim/show/query-patterns.n3 interim/steps/component-level-steps.n3 interim/steps/container-level-steps.n3 interim/steps/journey-level-steps.n3 show/Request_showInfoUsed_wasteCollection.n3 --query show/query_used.n3 --nope > interim/show/show-waste-Info.n3
+eye profile/knowledge.n3  profile/personalInfo.n3 show/getInfo.n3 interim/show/query-patterns.n3 interim/steps/component-level-steps.n3 interim/steps/container-level-steps.n3 interim/steps/journey-level-steps.n3 show/Request_showInfoUsed_wasteCollection.n3 --query show/query_used.n3 help-functions/built-ins.n3 --nope > interim/show/show-waste-Info.n3
 
 # a test with complete input data (just to be sure that works)
-eye profile/knowledge.n3  profile/personalInfo.n3 show/getInfo.n3 interim/show/query-patterns.n3 interim/steps/component-level-steps.n3 interim/steps/container-level-steps.n3 interim/steps/journey-level-steps.n3 show/test_show-waste-Info.n3 show/Request_showInfoUsed_wasteCollection.n3 --query show/query_used.n3 --nope > interim/show/show-waste-Info.n3
+eye profile/knowledge.n3  profile/personalInfo.n3 show/getInfo.n3 interim/show/query-patterns.n3 interim/steps/component-level-steps.n3 interim/steps/container-level-steps.n3 interim/steps/journey-level-steps.n3 show/test_show-waste-Info.n3 show/Request_showInfoUsed_wasteCollection.n3 help-functions/built-ins.n3 --query show/query_used.n3 --nope > interim/show/show-waste-Info.n3
+
+#Example: last name
+eye profile/knowledge.n3  profile/personalInfo.n3 show/getInfo.n3 interim/show/query-patterns.n3 interim/steps/component-level-steps.n3 interim/steps/container-level-steps.n3 interim/steps/journey-level-steps.n3 show/Request_showInfoUsed_lastName.n3 help-functions/built-ins.n3  --query show/query_used.n3 --nope > interim/show/show-lastName-Info.n3
 
 # Example: address info
-eye profile/knowledge.n3  profile/personalInfo.n3 show/getInfo.n3 interim/show/query-patterns.n3 interim/steps/component-level-steps.n3 interim/steps/container-level-steps.n3 interim/steps/journey-level-steps.n3 show/test_show-waste-Info.n3 show/Request_showInfoUsed_changeAddress.n3 --query show/query_used.n3 --nope > interim/show/show-address-Info.n3
+eye profile/knowledge.n3  profile/personalInfo.n3 show/getInfo.n3 interim/show/query-patterns.n3 interim/steps/component-level-steps.n3 interim/steps/container-level-steps.n3 interim/steps/journey-level-steps.n3 show/test_show-waste-Info.n3 show/Request_showInfoUsed_changeAddress.n3 help-functions/built-ins.n3 --query show/query_used.n3 --nope > interim/show/show-address-Info.n3
 
 
 
