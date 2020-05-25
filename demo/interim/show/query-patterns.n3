@@ -28,9 +28,9 @@
 @prefix math: <http://www.w3.org/2000/10/swap/math#>.
 @prefix oslo: <https://example.org/ns/oslo#>.
 @prefix ns3: <http://josd.github.io/.well-known/genid/pP7dSETOSHCTU6bSn:iLn_1X3mg#>.
-@prefix ns4: <http://josd.github.io/.well-known/genid/ek8grb_6hX7YIH1xQM4Tqno8154#>.
-@prefix ns5: <http://josd.github.io/.well-known/genid/voWA2L0pPOolbu9UrhLtNQOekoo#>.
-@prefix ns6: <http://josd.github.io/.well-known/genid/u1I_5KGTUyE2zqKIxEDcUpkXJvA#>.
+@prefix ns4: <http://josd.github.io/.well-known/genid/Kuh89jdSNDEhEuUpQ3sUkWiaOhY#>.
+@prefix ns5: <http://josd.github.io/.well-known/genid/n:8dYyA:stt1OX6XZX_Tb9P0YWE#>.
+@prefix ns6: <http://josd.github.io/.well-known/genid/pAEHknnuioDtWVlJ6KlFG_efQqE#>.
 @prefix : <http://example.org#>.
 @prefix fn: <http://www.w3.org/2006/xpath-functions#>.
 @prefix crypto: <http://www.w3.org/2000/10/swap/crypto#>.
@@ -83,17 +83,17 @@ step:provideMovingData :hasInput {?U_108 a o-persoon:Inwoner}.
 step:confirmAddressChangeVisit :hasInput {?U_112 a o-persoon:Inwoner. ?U_112 foaf:familyName ?U_113. ?U_112 foaf:givenName ?U_114. ?U_122 o-persoon:datum ?U_123. ?U_112 o-persoon:heeftGeboorte ?U_122. ?U_112 o-persoon:heeftGeboorte ?U_124. ?U_112 o-persoon:heeftNationaliteit ?U_115. ?U_124 o-persoon:plaats ?U_125. ?U_112 ns1:movingAddress ?U_116. ?U_112 ns1:movingCity ?U_117. ?U_112 ns1:movingDate ?U_118. ?U_112 ns1:nationalNumber ?U_119. ?U_112 schema:contactPoint ?U_126. ?U_112 schema:contactPoint ?U_127. ?U_126 schema:contactType "gsm". ?U_127 schema:contactType "telephone". ?U_112 schema:email ?U_120. ?U_112 schema:hasOccupation ?U_121. ?U_126 schema:telephone ?U_128. ?U_127 schema:telephone ?U_129}.
 step:addressChangeOnEIDInOffice :hasInput {?U_130 a o-persoon:Inwoner. ?U_130 ns1:confirmationOfAddressChange true}.
 step:provideCitizenNameManually :hasInput {?U_131 a o-persoon:Inwoner}.
-step:provideContactInformation :hasInput {?U_134 a o-persoon:Inwoner}.
-step:provideBirthData :hasInput {?U_142 a o-persoon:Inwoner}.
+step:provideContactInformation :hasInput {?U_136 a o-persoon:Inwoner}.
+step:provideBirthData :hasInput {?U_146 a o-persoon:Inwoner}.
 step:provideAdditionalInfo :hasInput {?U_147 a o-persoon:Inwoner}.
 step:submitWasteCollectionContainerLevel :hasInput {?U_95 a o-persoon:Inwoner. ?U_95 o-persoon:heeftVerblijfplaats ?U_106. ?U_106 o-persoon:verblijfsadres ?U_107. ?U_95 ns1:lockNeededForGreyWasteContainer ?U_96. ?U_95 ns1:movingAddress ?U_97. ?U_95 ns1:movingCity ?U_98. ?U_95 ns1:movingDate ?U_99. ?U_95 ns1:numberOfRequested1100LiterPaperWasteContainers ?U_100. ?U_95 ns1:numberOfRequested120LiterGreyWasteContainers ?U_101. ?U_95 ns1:numberOfRequested240LiterGreyWasteContainers ?U_102. ?U_95 ns1:numberOfRequested240LiterPaperWasteContainers ?U_103. ?U_95 ns1:numberOfRequested40LiterGreyWasteContainers ?U_104. ?U_95 ns1:numberOfRequested40LiterPaperWasteContainers ?U_105. ?U_95 ns1:providedGreenWasteInformation true. ?U_95 ns1:lockNeededForGreenWasteContainer ?U_664. ?U_95 ns1:needForGreenWasteContainer false. ?U_95 ns1:needForGreenWasteContainer ?U_660. ?U_95 ns1:numberOfRequested120LiterGreenWasteContainers ?U_662. ?U_95 ns1:numberOfRequested40LiterGreenWasteContainers ?U_661. ?U_95 ns1:stopGreeWasteContainer ?U_663}.
 step:provideGreyWasteContainerInfo :hasInput {?U_151 a o-persoon:Inwoner}.
 step:provideGreenWasteContainerInfo :hasInput {?U_50 a o-persoon:Inwoner}.
 step:providePaperWasteContainerInfo :hasInput {?U_156 a o-persoon:Inwoner}.
-step:providePersonalInformation :hasInput {?U_160 a o-persoon:Inwoner}.
+step:providePersonalInformation :hasInput {?U_166 a o-persoon:Inwoner}.
 step:changeAddress :hasInput {?U_112 a o-persoon:Inwoner. ?U_112 foaf:familyName ?U_113. ?U_112 foaf:givenName ?U_114. ?U_122 o-persoon:datum ?U_123. ?U_112 o-persoon:heeftGeboorte ?U_122. ?U_112 o-persoon:heeftGeboorte ?U_124. ?U_112 o-persoon:heeftNationaliteit ?U_115. ?U_124 o-persoon:plaats ?U_125. ?U_112 ns1:movingAddress ?U_116. ?U_112 ns1:movingCity ?U_117. ?U_112 ns1:movingDate ?U_118. ?U_112 ns1:nationalNumber ?U_119. ?U_112 schema:contactPoint ?U_126. ?U_112 schema:contactPoint ?U_127. ?U_126 schema:contactType "gsm". ?U_127 schema:contactType "telephone". ?U_112 schema:email ?U_120. ?U_112 schema:hasOccupation ?U_121. ?U_126 schema:telephone ?U_128. ?U_127 schema:telephone ?U_129}.
 step:submitWasteInfo :hasInput {?U_177 a o-persoon:Inwoner. ?U_177 o-persoon:heeftVerblijfplaats ?U_181. ?U_181 o-persoon:verblijfsadres ?U_182. ?U_177 ns1:movingAddress ?U_178. ?U_177 ns1:movingCity ?U_179. ?U_177 ns1:movingDate ?U_180}.
 
-#2020-05-20T09:15:33.729Z in=670 out=53 ent=53 step=54 brake=2 inf=1003741 sec=0.203 inf/sec=4944537
+#2020-05-20T12:43:32.016Z in=670 out=53 ent=53 step=54 brake=2 inf=1003725 sec=0.210 inf/sec=4779643
 #ENDS
 

@@ -28,14 +28,14 @@
 @prefix math: <http://www.w3.org/2000/10/swap/math#>.
 @prefix oslo: <https://example.org/ns/oslo#>.
 @prefix ns3: <http://josd.github.io/.well-known/genid/pP7dSETOSHCTU6bSn:iLn_1X3mg#>.
-@prefix ns4: <http://josd.github.io/.well-known/genid/ek8grb_6hX7YIH1xQM4Tqno8154#>.
+@prefix ns4: <http://josd.github.io/.well-known/genid/Kuh89jdSNDEhEuUpQ3sUkWiaOhY#>.
 @prefix : <http://example.org#>.
-@prefix ns5: <http://josd.github.io/.well-known/genid/voWA2L0pPOolbu9UrhLtNQOekoo#>.
+@prefix ns5: <http://josd.github.io/.well-known/genid/n:8dYyA:stt1OX6XZX_Tb9P0YWE#>.
 @prefix plan: <http://https://github.com/doerthe/plan#>.
 
 {ns1:movemap gps:description (true true {?U_24 foaf:givenName ?U_25} step:provideCitizenFirstNameManually 1 1 0.97 0.97)} <= {(?U_24 foaf:givenName) e:skolem ?U_25. ?U_24 a o-persoon:Inwoner}.
 {ns1:movemap gps:description (true true {?U_26 foaf:familyName ?U_27} step:provideCitizenLastNameManually 1 1 0.97 0.97)} <= {(?U_26 foaf:familyName) e:skolem ?U_27. ?U_26 a o-persoon:Inwoner}.
 
-#2020-05-20T09:15:28.179Z in=226 out=2 ent=4 step=8 brake=2 inf=750424 sec=0.142 inf/sec=5284676
+#2020-05-20T12:43:26.676Z in=226 out=2 ent=4 step=8 brake=2 inf=750415 sec=0.150 inf/sec=5002767
 #ENDS
 

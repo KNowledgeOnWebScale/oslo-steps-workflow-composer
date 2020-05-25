@@ -28,14 +28,14 @@
 @prefix math: <http://www.w3.org/2000/10/swap/math#>.
 @prefix oslo: <https://example.org/ns/oslo#>.
 @prefix ns3: <http://josd.github.io/.well-known/genid/pP7dSETOSHCTU6bSn:iLn_1X3mg#>.
-@prefix ns4: <http://josd.github.io/.well-known/genid/voWA2L0pPOolbu9UrhLtNQOekoo#>.
+@prefix ns4: <http://josd.github.io/.well-known/genid/n:8dYyA:stt1OX6XZX_Tb9P0YWE#>.
 @prefix : <http://example.org#>.
-@prefix ns5: <http://josd.github.io/.well-known/genid/u1I_5KGTUyE2zqKIxEDcUpkXJvA#>.
+@prefix ns5: <http://josd.github.io/.well-known/genid/pAEHknnuioDtWVlJ6KlFG_efQqE#>.
 @prefix plan: <http://https://github.com/doerthe/plan#>.
 
 {ns1:movemap gps:description (true true {?U_28 ns1:addressChanged true} step:addressChangeOnEIDInOffice 10 10 0.9 0.9)} <= {?U_28 a o-persoon:Inwoner. ?U_28 ns1:confirmationOfAddressChange true}.
 {ns1:movemap gps:description (true true {?U_29 ns1:confirmationOfAddressChange true} step:confirmAddressChangeVisit 10 10 0.9 0.9)} <= {?U_29 a o-persoon:Inwoner. ?U_29 foaf:familyName ?U_30. ?U_29 foaf:givenName ?U_31. ?U_29 o-persoon:heeftNationaliteit ?U_32. ?U_29 ns1:movingAddress ?U_33. ?U_29 ns1:movingCity ?U_34. ?U_29 ns1:movingDate ?U_35. ?U_29 ns1:nationalNumber ?U_36. ?U_29 schema:email ?U_37. ?U_29 schema:hasOccupation ?U_38. ?U_39 o-persoon:datum ?U_40. ?U_29 o-persoon:heeftGeboorte ?U_39. ?U_29 o-persoon:heeftGeboorte ?U_41. ?U_41 o-persoon:plaats ?U_42. ?U_29 schema:contactPoint ?U_43. ?U_29 schema:contactPoint ?U_44. ?U_43 schema:contactType "gsm". ?U_44 schema:contactType "telephone". ?U_43 schema:telephone ?U_45. ?U_44 schema:telephone ?U_46}.
 
-#2020-05-20T09:15:20.545Z in=142 out=2 ent=4 step=8 brake=2 inf=613338 sec=0.148 inf/sec=4144176
+#2020-05-20T12:43:19.069Z in=142 out=2 ent=4 step=8 brake=2 inf=613330 sec=0.136 inf/sec=4509779
 #ENDS
 

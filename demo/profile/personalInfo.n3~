@@ -14,11 +14,11 @@ PREFIX e: <http://eulersharp.sourceforge.net/2003/03swap/log-rules#>
 
 
 :user  a o-persoon:Inwoner.
-#:user :needForGreenWasteContainer false.
-#:user :numberOfRequested40LiterGreenWasteContainers 99.
-#:user ex:numberOfRequested40LiterPaperWasteContainers 5.
+:user :needForGreenWasteContainer false.
+:user :numberOfRequested40LiterGreenWasteContainers 99.
+:user ex:numberOfRequested40LiterPaperWasteContainers 5.
 
-#ex:user schema:contactPoint :node. :node schema:contactType "gsm". :node schema:telephone "128".
-#ex:user schema:contactPoint :t_10. :t_10 schema:contactType "telephone". :t_10 schema:telephone :t_11.
+ex:user schema:contactPoint :node. :node schema:contactType "gsm". :node schema:telephone "128".
+ex:user schema:contactPoint :t_10. :t_10 schema:contactType "telephone". :t_10 schema:telephone :t_11.
 
 

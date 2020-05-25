@@ -28,9 +28,9 @@
 @prefix math: <http://www.w3.org/2000/10/swap/math#>.
 @prefix oslo: <https://example.org/ns/oslo#>.
 @prefix ns3: <http://josd.github.io/.well-known/genid/pP7dSETOSHCTU6bSn:iLn_1X3mg#>.
-@prefix ns4: <http://josd.github.io/.well-known/genid/ek8grb_6hX7YIH1xQM4Tqno8154#>.
+@prefix ns4: <http://josd.github.io/.well-known/genid/Kuh89jdSNDEhEuUpQ3sUkWiaOhY#>.
 @prefix : <http://example.org#>.
-@prefix ns5: <http://josd.github.io/.well-known/genid/voWA2L0pPOolbu9UrhLtNQOekoo#>.
+@prefix ns5: <http://josd.github.io/.well-known/genid/n:8dYyA:stt1OX6XZX_Tb9P0YWE#>.
 @prefix plan: <http://https://github.com/doerthe/plan#>.
 
 {ns1:movemap gps:description (true true {?U_68 ns1:confirmationOfAddressChange true} step:getPolicevisit 1 1 0.97 0.97)} <= {?U_68 a o-persoon:Inwoner. ?U_68 ns1:policeVisitRequested true}.
@@ -39,6 +39,6 @@
 {ns1:movemap gps:description (true true {?U_90 ns1:numberOfFamilyMembers ?U_91} step:provideNumberOfFamilyMembersManually 1 1 0.97 0.97)} <= {(?U_90 ns1:numberOfFamilyMembers) e:skolem ?U_91. ?U_90 a o-persoon:Inwoner}.
 {ns1:movemap gps:description (true true {?U_113 ns1:availabilityInfo ?U_114} step:provideAvailability 1 1 0.97 0.97)} <= {(?U_113 ns1:availabilityInfo) e:skolem ?U_114. ?U_113 a o-persoon:Inwoner}.
 
-#2020-05-20T09:15:26.158Z in=243 out=5 ent=10 step=28 brake=3 inf=1037052 sec=0.215 inf/sec=4823498
+#2020-05-20T12:43:24.594Z in=243 out=5 ent=10 step=28 brake=3 inf=1037045 sec=0.233 inf/sec=4450837
 #ENDS
 

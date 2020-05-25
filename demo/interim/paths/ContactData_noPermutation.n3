@@ -29,13 +29,13 @@
 @prefix var: <https://example.org/ns/var#>.
 @prefix oslo: <https://example.org/ns/oslo#>.
 @prefix ns3: <http://josd.github.io/.well-known/genid/pP7dSETOSHCTU6bSn:iLn_1X3mg#>.
-@prefix ns4: <http://josd.github.io/.well-known/genid/voWA2L0pPOolbu9UrhLtNQOekoo#>.
-@prefix ns5: <http://josd.github.io/.well-known/genid/ek8grb_6hX7YIH1xQM4Tqno8154#>.
+@prefix ns4: <http://josd.github.io/.well-known/genid/n:8dYyA:stt1OX6XZX_Tb9P0YWE#>.
+@prefix ns5: <http://josd.github.io/.well-known/genid/Kuh89jdSNDEhEuUpQ3sUkWiaOhY#>.
 @prefix plan: <http://https://github.com/doerthe/plan#>.
-@prefix ns6: <http://josd.github.io/.well-known/genid/54tnqXfE4K7ad5qafdEKK7g2230#>.
+@prefix ns6: <http://josd.github.io/.well-known/genid/4UVM5iuaKSWMeMdXEQcdQfJxjaU#>.
 
-_:sk_0 gps:path ((("unorderedList" (step:provideCitizenEmailManually step:provideCitizenAddressManually))) 2.0 2.0 0.9409 0.9409).
+_:sk_0 gps:path ((("unorderedList" (step:provideCitizenEmailManually step:provideCitizenMobilePhoneNumberManually step:provideCitizenPhoneNumberManually step:provideCitizenAddressManually))) 4.0 4.0 0.8852928099999999 0.8852928099999999).
 
-#2020-05-20T09:15:29.537Z in=743 out=1 ent=1 step=3 brake=4 inf=594292 sec=0.141 inf/sec=4214837
+#2020-05-20T12:43:27.945Z in=734 out=1 ent=1 step=3 brake=4 inf=622221 sec=0.153 inf/sec=4066804
 #ENDS
 

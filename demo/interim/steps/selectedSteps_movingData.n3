@@ -28,15 +28,15 @@
 @prefix math: <http://www.w3.org/2000/10/swap/math#>.
 @prefix oslo: <https://example.org/ns/oslo#>.
 @prefix ns3: <http://josd.github.io/.well-known/genid/pP7dSETOSHCTU6bSn:iLn_1X3mg#>.
-@prefix ns4: <http://josd.github.io/.well-known/genid/ek8grb_6hX7YIH1xQM4Tqno8154#>.
+@prefix ns4: <http://josd.github.io/.well-known/genid/Kuh89jdSNDEhEuUpQ3sUkWiaOhY#>.
 @prefix : <http://example.org#>.
-@prefix ns5: <http://josd.github.io/.well-known/genid/voWA2L0pPOolbu9UrhLtNQOekoo#>.
+@prefix ns5: <http://josd.github.io/.well-known/genid/n:8dYyA:stt1OX6XZX_Tb9P0YWE#>.
 @prefix plan: <http://https://github.com/doerthe/plan#>.
 
 {ns1:movemap gps:description (true true {?U_39 ns1:movingDate ?U_40} step:provideMovingDateManually 1 1 0.97 0.97)} <= {(?U_39 ns1:movingDate) e:skolem ?U_40. ?U_39 a o-persoon:Inwoner}.
 {ns1:movemap gps:description (true true {?U_41 ns1:movingCity ?U_42} step:provideMovingCityManually 1 1 0.97 0.97)} <= {(?U_41 ns1:movingCity) e:skolem ?U_42. ?U_41 a o-persoon:Inwoner}.
 {ns1:movemap gps:description (true true {?U_43 ns1:movingAddress ?U_44} step:provideMovingAddressManually 1 1 0.97 0.97)} <= {(?U_43 ns1:movingAddress) e:skolem ?U_44. ?U_43 a o-persoon:Inwoner}.
 
-#2020-05-20T09:15:32.492Z in=227 out=3 ent=6 step=12 brake=2 inf=778378 sec=0.159 inf/sec=4895459
+#2020-05-20T12:43:30.842Z in=227 out=3 ent=6 step=12 brake=2 inf=778370 sec=0.167 inf/sec=4660898
 #ENDS
 

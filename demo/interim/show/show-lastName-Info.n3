@@ -29,9 +29,9 @@
 @prefix gps: <http://josd.github.io/eye/reasoning/gps/gps-schema#>.
 @prefix oslo: <https://example.org/ns/oslo#>.
 @prefix ns3: <http://josd.github.io/.well-known/genid/pP7dSETOSHCTU6bSn:iLn_1X3mg#>.
-@prefix ns4: <http://josd.github.io/.well-known/genid/ek8grb_6hX7YIH1xQM4Tqno8154#>.
-@prefix ns5: <http://josd.github.io/.well-known/genid/voWA2L0pPOolbu9UrhLtNQOekoo#>.
-@prefix ns6: <http://josd.github.io/.well-known/genid/u1I_5KGTUyE2zqKIxEDcUpkXJvA#>.
+@prefix ns4: <http://josd.github.io/.well-known/genid/Kuh89jdSNDEhEuUpQ3sUkWiaOhY#>.
+@prefix ns5: <http://josd.github.io/.well-known/genid/n:8dYyA:stt1OX6XZX_Tb9P0YWE#>.
+@prefix ns6: <http://josd.github.io/.well-known/genid/pAEHknnuioDtWVlJ6KlFG_efQqE#>.
 @prefix fn: <http://www.w3.org/2006/xpath-functions#>.
 @prefix crypto: <http://www.w3.org/2000/10/swap/crypto#>.
 @prefix string: <http://www.w3.org/2000/10/swap/string#>.
@@ -39,11 +39,11 @@
 @prefix func: <http://www.w3.org/2007/rif-builtin-function#>.
 @prefix pred: <http://www.w3.org/2007/rif-builtin-predicate#>.
 @prefix prolog: <http://eulersharp.sourceforge.net/2003/03swap/prolog#>.
-@prefix ns7: <http://josd.github.io/.well-known/genid/QvM8RNiBPcPbyTfFwujKY1s0oRM#>.
+@prefix ns7: <http://josd.github.io/.well-known/genid/cIygqEFTxl_vLSIkuiBBnHYkMRo#>.
 
 step:provideCitizenLastNameManually :canUse {ex:user a o-persoon:Inwoner}.
 step:provideCitizenLastNameManually :possiblyMissing :nothing.
 
-#2020-05-20T09:15:36.393Z in=683 out=2 ent=2 step=1 brake=2 inf=747709 sec=0.149 inf/sec=5018181
+#2020-05-20T12:43:33.727Z in=674 out=2 ent=2 step=1 brake=2 inf=744080 sec=0.150 inf/sec=4960533
 #ENDS
 

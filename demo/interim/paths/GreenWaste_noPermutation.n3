@@ -29,12 +29,13 @@
 @prefix var: <https://example.org/ns/var#>.
 @prefix oslo: <https://example.org/ns/oslo#>.
 @prefix ns3: <http://josd.github.io/.well-known/genid/pP7dSETOSHCTU6bSn:iLn_1X3mg#>.
-@prefix ns4: <http://josd.github.io/.well-known/genid/voWA2L0pPOolbu9UrhLtNQOekoo#>.
-@prefix ns5: <http://josd.github.io/.well-known/genid/ek8grb_6hX7YIH1xQM4Tqno8154#>.
+@prefix ns4: <http://josd.github.io/.well-known/genid/n:8dYyA:stt1OX6XZX_Tb9P0YWE#>.
+@prefix ns5: <http://josd.github.io/.well-known/genid/Kuh89jdSNDEhEuUpQ3sUkWiaOhY#>.
 @prefix plan: <http://https://github.com/doerthe/plan#>.
+@prefix ns6: <http://josd.github.io/.well-known/genid/nQNi08zAY01AQEgcP4WrxIWnprs#>.
 
-_:sk_0 gps:path (() 0.0 0.0 1.0 1.0).
+_:sk_0 gps:path ((("unorderedList" (step:provideNumberOf40LiterGreenWasteContainersManually step:provideNumberOf120LiterGreenWasteContainersManually step:provideGreenWasteContainerCollectionStopInfoManually step:provideGreenWasteContainerLockInfoManually step:provideGreenWasteContainerOwnCompostInfoManually))) 5.0 5.0 0.8587340256999999 0.8587340256999999).
 
-#2020-05-20T09:15:22.112Z in=744 out=1 ent=1 step=4 brake=4 inf=577123 sec=0.142 inf/sec=4064246
+#2020-05-20T12:43:20.657Z in=735 out=1 ent=1 step=3 brake=4 inf=706105 sec=0.165 inf/sec=4279424
 #ENDS
 

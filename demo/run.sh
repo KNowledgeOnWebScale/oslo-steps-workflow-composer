@@ -65,7 +65,7 @@ eye interim/steps/container-level-steps.n3 interim/steps/shortContainerDescripti
 
 #create path
 eye workflow-composer/gps-plugin_modified_noPermutations.n3 profile/knowledge.n3  profile/personalInfo.n3  interim/subgoals/extraRule_personalInfo.n3 help-functions/aux2.n3 interim/steps/selectedSteps_personalInfo.n3 oslo-descriptions/change-address-steps.ttl --query interim/subgoals/createdGoal_PersonalInfo.n3 --nope > interim/paths/PersonalInfo_noPermutation.n3
-#todo:add to server
+
 
 #
 # Goal Waste collection
@@ -239,7 +239,7 @@ eye interim/steps/component-level-steps.n3 interim/steps/shortComponentDescripti
 #createPath
 eye workflow-composer/gps-plugin_modified_noPermutations.n3 profile/knowledge.n3  profile/personalInfo.n3  interim/subgoals/extraRule_addressChangeInOffice.n3 help-functions/aux2.n3 interim/steps/selectedSteps_addressChangeInOffice.n3 oslo-descriptions/change-address-steps.ttl --query interim/subgoals/createdGoal_addressChangeInOffice.n3 --nope > interim/paths/AddressChangeInOffice_noPermutation.n3
 
-#todo: add subpath links and add to the server
+
 
 #
 # citizen name
