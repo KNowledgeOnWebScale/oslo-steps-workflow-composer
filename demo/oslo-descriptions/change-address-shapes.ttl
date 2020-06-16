@@ -36,53 +36,32 @@ shape:firstNameShape a o-steps:StateShape ;
 
 shape:firstNameLength a sh:PropertyShape ;
   rdfs:label "First name length constraints"@en ;
-  rdfs:comment "Minimum and maximum for a valid first name"@en ;
+  rdfs:comment "Shape for a valid first name"@en ;
   sh:path foaf:givenName ;
   sh:minLength 2 ;
-  sh:maxLength 25 ;
+  sh:maxLength 100 ;
+  sh:datatype xsd:string ;
+  sh:maxCount 1 ;
   sh:minCount 1 .
-
-#
-# first name (ui shape)
-#
-shape:firstNameUIShape a o-steps:UIShape ;
-  rdfs:label "UI shape: first name"@en ;
-  rdfs:comment ""@en ;
-  sh:targetClass o-persoon:Inwoner ;
-  sh:property [
-    sh:path foaf:givenName ;
-    sh:datatype xsd:string ;
-  ] .
 
 #
 # last name (state shape)
 #
 shape:lastNameShape a o-steps:StateShape ;
   rdfs:label "A citizen's last name"@en ;
-  rdfs:comment "User with valid first name"@en ;
+  rdfs:comment "User with valid last name"@en ;
   sh:targetClass o-persoon:Inwoner ;
   sh:property shape:lastNameLength .
 
 shape:lastNameLength a sh:PropertyShape ;
-  rdfs:label "First name length constraints"@en ;
-  rdfs:comment "Minimum and maximum for a valid first name"@en ;
+  rdfs:label "Last name constraints"@en ;
+  rdfs:comment "Constraints for a valid last name"@en ;
   sh:path foaf:familyName ;
+  sh:datatype xsd:string ;
   sh:minLength 2 ;
-  sh:maxLength 55 ;
+  sh:maxLength 100 ;
+  sh:maxCount 1 ;
   sh:minCount 1 .
-
-#
-# last name (ui shape)
-#
-shape:lastNameUIShape a o-steps:UIShape ;
-  rdfs:label "UI shape: last name"@en ;
-  rdfs:comment ""@en ;
-  sh:targetClass o-persoon:Inwoner ;
-  sh:property [
-    sh:path foaf:familyName ;
-    sh:datatype xsd:string ;
-  ] .
-
 
 
 #
@@ -98,27 +77,8 @@ shape:genderValidValues a sh:PropertyShape ;
   rdfs:label "Valid gender values"@en ;
   sh:path o-persoon:geslacht ;
   sh:in ( "male" "female" );
+  sh:maxCount 1 ;
   sh:minCount 1  .
-
-#
-# gender constraints (UI)
-#
-shape:genderMale a skos:Concept ;
-  rdfs:label "male gender"@en ;
-  rdfs:label "mannelijk geslacht"@nl .
-
-shape:genderFemale a skos:Concept ;
-  rdfs:label "female gender"@en ;
-  rdfs:label "vrouwelijk geslacht"@nl . 
-
-shape:genderUIShape a o-steps:UIShape ;
-  rdfs:label "UI shape: gender"@en ;
-  sh:targetClass o-persoon:Inwoner ;
-  sh:property [
-    sh:path o-persoon:geslacht ;
-    sh:in ( shape:genderMale shape:genderFemale) ;
-  ] .    
-
 
 #
 # Email address (state)
@@ -132,20 +92,11 @@ shape:emailAddressShape a o-steps:StateShape ;
 shape:emailPattern a sh:PropertyShape ;
   rdfs:label "Valid email address"@en ;
   sh:path schema:email ;
-  sh:pattern "todo" ;
+  sh:datatype xsd:string ;
+  sh:pattern "^\\w+@[a-zA-Z_]+?\\.[a-zA-Z]{2,3}$" ;
   sh:minCount 1 .
 
-#
-# Email address (ui)
-#
-shape:emailAddressUIShape a o-steps:UIShape ;
-  rdfs:label "UI shape: email address"@en ;
-  sh:targetClass o-persoon:Inwoner ;
-  sh:property [
-    sh:path schema:email ;
-    sh:datatype xsd:string ;
-    sh:pattern "todo" ;
-  ] .
+
 
 #
 # Mobile phone number
@@ -162,9 +113,9 @@ shape:mobilePhoneNumberShape a o-steps:StateShape ;
     ] ;
     sh:property [ 
       sh:path schema:telephone;
-      sh:datatype xsd:integer ;
+      sh:datatype xsd:string ;
+      sh:pattern "^(\\+)?([ 0-9]){4,16}$";
       sh:minCount 1;
-      ex:valueKind "UI input"
     ];
     sh:qualifiedMinCount 1 ;
   ]  .
@@ -185,7 +136,7 @@ shape:phoneNumberShape a o-steps:StateShape ;
     ] ;
     sh:property [ 
       sh:path schema:telephone;
-     
+      sh:pattern "^(\\+)?([ 0-9]){4,16}$";
       sh:minCount 1 
     ];
     sh:qualifiedMinCount 1 ;
@@ -203,14 +154,6 @@ shape:nationalNumberBelgiumShape a o-steps:StateShape ;
   sh:property shape:nationalNumberPatternBelgium ;
   sh:property shape:nationalNumberObliged .
 
-shape:nationalNumberPatternBelgium a sh:PropertyShape ;
-  rdfs:label "The regular expression of a Belgian national number"@en ;
-  rdfs:label "De reguliere expressie van een Belgisch Rijksregisternummer"@nl ;
-  rdfs:label "Der reguläre Ausdruck einer belgischen Reichsregisternummer"@de ;
-  sh:path o-persoon:registratie .
-# This statement raises syntax errors in n3
-#  sh:pattern """^[0-9]{2}[.\- ]{0,1}[0-9]{2}[.\- ]{0,1}[0-9]{2}[.\- ]{0,1}[0-9]{3}[.\- ]{0,1}[0-9]{2}$""" .
-
 shape:nationalNumberObliged a sh:PropertyShape ;
   rdfs:label "Obliged national number"@en ;
   rdfs:label "Verplicht nationaal nummer"@nl ;
@@ -218,22 +161,12 @@ shape:nationalNumberObliged a sh:PropertyShape ;
   rdfs:comment "There can be exactly one national number"@en ;
   rdfs:comment "Er kan precies één nationaal nummer zijn"@nl ;
   rdfs:comment "Es kann nur genau eine Personenkennzeichnung geben"@de ;
-  sh:path ex:nationalNumber ;
+  sh:path o-persoon:registratie ;
+  sh:datatype xsd:string ;
+    # original pattern (without escaping): "^[0-9]{2}[.\- ]{0,1}[0-9]{2}[.\- ]{0,1}[0-9]{2}[.\- ]{0,1}[0-9]{3}[.\- ]{0,1}[0-9]{2}$" 
+  sh:pattern "^[0-9]{2}[.\\- ]{0,1}[0-9]{2}[.\\- ]{0,1}[0-9]{2}[.\\- ]{0,1}[0-9]{3}[.\\- ]{0,1}[0-9]{2}$" ;
   sh:minCount 1 ;
   sh:maxCount 1 .
-
-#
-# national number (ui)
-#
-shape:nationalNumberUIShape a o-steps:UIShape ;
-  rdfs:label "UI shape: national number"@en ;
-  sh:targetClass o-persoon:Inwoner ;
-  sh:property [
-    sh:path o-persoon:registratie ;
-    sh:datatype xsd:string ;
-    # original pattern (without escaping): "^[0-9]{2}[.\- ]{0,1}[0-9]{2}[.\- ]{0,1}[0-9]{2}[.\- ]{0,1}[0-9]{3}[.\- ]{0,1}[0-9]{2}$" 
-    sh:pattern "^[0-9]{2}[.\\- ]{0,1}[0-9]{2}[.\\- ]{0,1}[0-9]{2}[.\\- ]{0,1}[0-9]{3}[.\\- ]{0,1}[0-9]{2}$" ;
-  ] .
 
 #
 # bank account number (state)
@@ -248,19 +181,11 @@ shape:bankAccountNumberPatternEurope a sh:PropertyShape ;
   rdfs:label "IBAN pattern"@en ;
   rdfs:comment "The regular expression of a European bank account number (IBAN)"@en ;
   sh:path ex:bankAccountNumber ;
-  sh:pattern "todo" ;
+  sh:datatype xsd:string ;
+  sh:pattern "([A-Z]{2})\\s*\\t*\\d+";
   sh:minCount 1 . 
 
-#
-# bank account number (ui)
-#
-shape:bankAccountNumberEuropeUIShape a o-steps:UIShape ;
-  rdfs:label "UI shape: bank account European"@en ;
-  sh:targetClass o-persoon:Inwoner ;
-  sh:property [
-    sh:path ex:bankAccountNumber ;
-    sh:datatype xsd:string ;
-  ] .
+
 
 #
 # nationality (state)
@@ -273,49 +198,29 @@ shape:nationalityShape a o-steps:StateShape ;
 
 shape:validNationality a sh:PropertyShape ;
   rdfs:label "Valid nationality"@en ;
-  sh:path o-persoon:heeftNationaliteit ;
-  sh:class o-persoon:Nationaliteit ;
+  sh:path (o-persoon:heeftNationaliteit o-persoon:nationaliteit);
+  sh:datatype xsd:string;
   sh:minCount 1  .
 
-#
-# nationality (ui)
-#
-shape:nationalityUIShape a o-steps:UIShape ;
-  rdfs:label "UI shape: nationality" ;
-  sh:targetClass o-persoon:Inwoner ;
-  sh:property [
-    sh:path o-persoon:heeftNationaliteit ;
-    # todo: there is a class Nationaliteit which links via nationaliteit to country codes (skos:Concept)
-  ] .
 
 #
 # residence permit (state)
 #
-shape:residencePermitShape a o-steps:StateShape ;
-  rdfs:label "Citizen residence permit"@en ;
-  rdfs:comment "User with valid residence permit"@en ;
-  rdfs:comment "Assuming that if a Citizen has an official address there is also a residence permit. Needs a change!"@en ;
-  sh:targetClass o-persoon:Inwoner ;
-  sh:property shape:validResidence .
+#shape:residencePermitShape a o-steps:StateShape ;
+#  rdfs:label "Citizen residence permit"@en ;
+#  rdfs:comment "User with valid residence permit"@en ;
+#  rdfs:comment "Assuming that if a Citizen has an official address there is also a residence permit. Needs a change!"@en ;
+#  sh:targetClass o-persoon:Inwoner ;
+#  sh:property shape:validResidence .
 
-shape:validResidence a sh:PropertyShape ;
-  rdfs:label "Valid residence"@en ;
-  rdfs:comment "Assuming that if a Citizen has an official address there is also a residence permit. Needs a change!"@en ;
-  sh:path ex:residencePermit ;
+#shape:validResidence a sh:PropertyShape ;
+#  rdfs:label "Valid residence"@en ;
+#  rdfs:comment "Assuming that if a Citizen has an official address there is also a residence permit. Needs a change!"@en ;
+#  sh:path ex:residencePermit ;
   # there is no residence permit in OSLO, first trial was to use Verblijfsplaats instead, but someone can have an address without a residence permit
   # sh:path o-persoon:heeftVerblijfplaats ;
-  sh:class o-persoon:Verblijfplaats .
-
-#
-# residence permit (ui)
-#
-shape:residencePermitUIShape a o-steps:UIShape ;
-  rdfs:label "UI shape: residence permit"@en ;
-  sh:targetClass o-persoon:Inwoner ;
-  sh:property [
-    sh:path ex:residencePermit ;
-    sh:minCount 1 ;
-  ] .
+#  sh:datatype xsd:string;
+#  sh:minCount 1  .
 
 #
 # birth date (state)
@@ -330,20 +235,10 @@ shape:validBirthDate a sh:PropertyShape ;
   rdfs:label "Valid date of birth"@en ;
   sh:path ( o-persoon:heeftGeboorte o-persoon:datum ); # o-persoon:heeftGeboorte ;
   sh:minCount 1 ;
+  sh:datatype xsd:date;
   sh:maxCount 1 .
-#  sh:class o-persoon:Geboorte ;
-#  sh:node ops:PersoonsgebeurtenisShape .
 
-#
-# birth date (ui)
-#
-shape:birthDateUIShape a o-steps:UIShape ;
-  rdfs:label "UI shape: birthdate"@en ;
-  sh:targetClass o-persoon:Inwoner ;
-  sh:property [
-    sh:path ( o-persoon:heeftGeboorte o-persoon:datum ) ;
-    sh:datatype xsd:date ;
-  ] .
+
 #
 # applicatnt info
 #
@@ -363,25 +258,15 @@ shape:cityOfBirthShape a o-steps:StateShape ;
   sh:property shape:validBirth .
 
 shape:validBirth a sh:PropertyShape ;
-  rdfs:label "Valid date of birth"@en ;
+  rdfs:label "Valid city of birth"@en ;
   sh:path ( o-persoon:heeftGeboorte o-persoon:plaats ) ;
   sh:minCount 1 ;
   sh:maxCount 1 ;
+  sh:datatype xsd:string;
   sh:class o-persoon:Geboorte ;
 #  sh:node ops:PersoonsgebeurtenisShape 
 .
 
-#
-# city of birth (ui)
-#
-shape:cityOfBirthUIShape a o-steps:UIShape , o-steps:StateShape;
-  rdfs:label "UI shape: city of birth" ;
-  sh:targetClass o-persoon:Inwoner ;
-  sh:property [ 
-    sh:path ( o-persoon:heeftGeboorte o-persoon:plaats ) ;
-    # todo: type of this attribute is http://purl.org/dc/terms/Location
-     sh:minCount 1 
-  ] .
 
 #
 # address
@@ -389,16 +274,14 @@ shape:cityOfBirthUIShape a o-steps:UIShape , o-steps:StateShape;
 shape:addressShape a o-steps:StateShape ;
   rdfs:label "Citizen address"@en ;
   sh:targetClass o-persoon:Inwoner ;
-  sh:property shape:validAddress , shape:addressExistence  .
-
-shape:validAddress a sh:PropertyShape ;
-  rdfs:label "valid address"@en ;
-  sh:path o-persoon:verblijfsadres ;
-  sh:node ops:VerblijfplaatsShape .
+  sh:property shape:addressExistence  .
 
 shape:addressExistence a sh:PropertyShape ;
   sh:path ( o-persoon:heeftVerblijfplaats o-persoon:verblijfsadres) ;
+  sh:datatype xsd:string;
+  sh:maxCount 1 ;
   sh:minCount 1 .
+# todo: address should be linked to http://www.w3.org/ns/locn#fullAddress
 
 #
 # profession
@@ -411,6 +294,7 @@ shape:professionShape a o-steps:StateShape ;
 shape:validProfession a sh:PropertyShape ;
   rdfs:label "Valid profession" ;
   sh:path schema:hasOccupation ;
+  sh:datatype xsd:string;
   sh:minCount 1 .
 
 #
@@ -424,8 +308,10 @@ shape:numberOfFamilyMembersShape a o-steps:StateShape ;
 shape:validNumberOfFamilyMembers a sh:PropertyShape ;
   rdfs:label "valid number of family members"@en ;
   sh:path ex:numberOfFamilyMembers ;
+  sh:datatype xsd:integer;
   sh:minInclusive 1 ;
-  sh:minCount 1 .
+  sh:minCount 1 ;
+  sh:maxCount 1 .
 
 #
 # moving date
@@ -439,6 +325,7 @@ shape:validMovingDate a sh:PropertyShape ;
   rdfs:label "valid date" ;
   sh:path ex:movingDate ;
   sh:datatype xsd:date ;
+  sh:maxCount 1 ;
   sh:minCount 1 .
 
 #
@@ -452,7 +339,8 @@ shape:movingAddressShape a o-steps:StateShape ;
 shape:validMovingAddress a sh:PropertyShape ;
   rdfs:label "valid moving address"@en ;
   sh:path ex:movingAddress ;
-  sh:node ops:VerblijfplaatsShape ;
+  sh:datatype xsd:string ;
+  sh:maxCount 1 ;
   sh:minCount 1 .
   
 #
@@ -466,7 +354,8 @@ shape:billingAddressShape a o-steps:StateShape ;
 shape:validBillingAddress a sh:PropertyShape ;
   rdfs:label "valid billing address"@en ;
   sh:path ex:billingAddress ;
-  sh:node ops:VerblijfplaatsShape ;
+  sh:datatype xsd:string ;
+  sh:maxCount 1 ;
   sh:minCount 1  .
 
 #
@@ -482,6 +371,8 @@ shape:movingCityShape a o-steps:StateShape ;
 
 shape:movingCityExistence a sh:PropertyShape ;
   sh:path ex:movingCity;
+  sh:datatype xsd:string ;
+  sh:maxCount 1 ;
   sh:minCount 1 .
 
 
@@ -492,6 +383,8 @@ shape:number40LiterGreyWasteContainerShape a o-steps:StateShape ;
 
 shape:number40LiterGreyWasteContainerExistence a sh:PropertyShape ;
   sh:path ex:numberOfRequested40LiterGreyWasteContainers;
+  sh:in (0 1 2 3);
+  sh:maxCount 1 ;
   sh:minCount 1 .
 
 shape:number120LiterGreyWasteContainerShape a o-steps:StateShape ;
@@ -500,6 +393,8 @@ shape:number120LiterGreyWasteContainerShape a o-steps:StateShape ;
 
 shape:number120LiterGreyWasteContainerExistence a sh:PropertyShape ;
   sh:path ex:numberOfRequested120LiterGreyWasteContainers;
+  sh:in (0 1);
+  sh:maxCount 1 ;
   sh:minCount 1 .
 
 shape:number240LiterGreyWasteContainerShape a o-steps:StateShape ;
@@ -508,6 +403,8 @@ shape:number240LiterGreyWasteContainerShape a o-steps:StateShape ;
 
 shape:number240LiterGreyWasteContainerExistence a sh:PropertyShape ;
   sh:path ex:numberOfRequested240LiterGreyWasteContainers;
+  sh:in (0 1);
+  sh:maxCount 1 ;
   sh:minCount 1 .
 
 shape:greyWasteContainerLockShape a o-steps:StateShape ;
@@ -516,6 +413,8 @@ shape:greyWasteContainerLockShape a o-steps:StateShape ;
 
 shape:lockNeededGreyWasteContainerExistence a sh:PropertyShape ;
   sh:path ex:lockNeededForGreyWasteContainer;
+  sh:datatype xsd:boolean;
+  sh:maxCount 1 ;
   sh:minCount 1 .
 
 shape:number40LiterGreenWasteContainerShape a o-steps:StateShape ;
@@ -524,6 +423,8 @@ shape:number40LiterGreenWasteContainerShape a o-steps:StateShape ;
 
 shape:number40LiterGreenWasteContainerExistence a sh:PropertyShape ;
   sh:path ex:numberOfRequested40LiterGreenWasteContainers;
+  sh:in (0 1 2 3);
+  sh:maxCount 1 ;
   sh:minCount 1 .
 
 shape:number120LiterGreenWasteContainerShape a o-steps:StateShape ;
@@ -532,6 +433,8 @@ shape:number120LiterGreenWasteContainerShape a o-steps:StateShape ;
 
 shape:number120LiterGreenWasteContainerExistence a sh:PropertyShape ;
   sh:path ex:numberOfRequested120LiterGreenWasteContainers;
+  sh:in (0 1 2);
+  sh:maxCount 1 ;
   sh:minCount 1 .
 
 shape:greenWasteContainerLockShape  a o-steps:StateShape ;
@@ -540,6 +443,8 @@ shape:greenWasteContainerLockShape  a o-steps:StateShape ;
 
 shape:lockNeededGreenWasteContainerExistence a sh:PropertyShape ;
   sh:path ex:lockNeededForGreenWasteContainer;
+  sh:datatype xsd:boolean;
+  sh:maxCount 1 ;
   sh:minCount 1 .
 
 #todo: make a shortcut rule for "yes"
@@ -549,6 +454,8 @@ shape:greenWasteSelfCompostShape a o-steps:StateShape ;
 
 shape:greenWasteSelfCompostExistence a sh:PropertyShape ;
   sh:path ex:needForGreenWasteContainer;
+  sh:datatype xsd:boolean;
+  sh:maxCount 1 ;
   sh:minCount 1 .
 
 shape:greenWasteContainerStopCollectingInfoShape  a o-steps:StateShape ;
@@ -557,6 +464,8 @@ shape:greenWasteContainerStopCollectingInfoShape  a o-steps:StateShape ;
 
 shape:greenWasteContainerStopExistence a sh:PropertyShape ;
   sh:path ex:stopGreeWasteContainer;
+  sh:datatype xsd:boolean;
+  sh:maxCount 1 ;
   sh:minCount 1 .
 
 shape:greenWasteInfoShape a o-steps:StateShape ;
@@ -574,6 +483,8 @@ shape:number40LiterPaperWasteContainerShape a o-steps:StateShape ;
 
 shape:number40LiterPaperWasteContainerExistence a sh:PropertyShape ;
   sh:path ex:numberOfRequested40LiterPaperWasteContainers;
+  sh:in (0 1 2 3);
+  sh:maxCount 1 ;
   sh:minCount 1 .
 
 shape:number240LiterPaperWasteContainerShape a o-steps:StateShape ;
@@ -582,6 +493,8 @@ shape:number240LiterPaperWasteContainerShape a o-steps:StateShape ;
 
 shape:number240LiterPaperWasteContainerExistence a sh:PropertyShape ;
   sh:path ex:numberOfRequested240LiterPaperWasteContainers;
+  sh:in (0 1);
+  sh:maxCount 1 ;
   sh:minCount 1 .
 
 shape:number1100LiterPaperWasteContainerShape a o-steps:StateShape ;
@@ -590,6 +503,8 @@ shape:number1100LiterPaperWasteContainerShape a o-steps:StateShape ;
 
 shape:number1100LiterPaperWasteContainerExistence a sh:PropertyShape ;
   sh:path ex:numberOfRequested1100LiterPaperWasteContainers;
+  sh:in (0 1);
+  sh:maxCount 1 ;
   sh:minCount 1 .
 
 shape:wasteInfoShownShape a o-steps:StateShape ;
@@ -623,6 +538,8 @@ shape:appointmentShape a o-steps:StateShape ;
 
 shape:appointmentExistence a sh:PropertyShape ;
   sh:path ex:hasAppointmentDate;
+  sh:datatype xsd:date;
+  sh:maxCount 1 ;
   sh:minCount 1 .
 
 shape:wasteCollection a o-steps:StateShape ;
@@ -648,6 +565,8 @@ shape:transportRequestedShape a o-steps:StateShape ;
 
 shape:transportRequestedExistence  a sh:PropertyShape ;
   sh:path ex:transportRequested;
+  sh:datatype xsd:boolean;
+  sh:maxCount 1 ;
   sh:minCount 1 .
 
 shape:mobilityRequestedShape a o-steps:StateShape ;
@@ -656,6 +575,8 @@ shape:mobilityRequestedShape a o-steps:StateShape ;
 
 shape:mobilityRequestedExistence  a sh:PropertyShape ;
   sh:path ex:mobilityRequested;
+  sh:datatype xsd:boolean;
+  sh:maxCount 1 ;
   sh:minCount 1 .
 
 shape:drivingLicenceExchangeRequestedShape a o-steps:StateShape ;
@@ -664,6 +585,8 @@ shape:drivingLicenceExchangeRequestedShape a o-steps:StateShape ;
 
 shape:drivingLicenceExchangeExistence  a sh:PropertyShape ;
   sh:path ex:drivingLicenceExchangeRequested;
+  sh:datatype xsd:boolean;
+  sh:maxCount 1 ;
   sh:minCount 1 .
 
 shape:policeVisitRequestedShape a o-steps:StateShape ;
@@ -686,16 +609,21 @@ shape:availabilityShape a o-steps:StateShape ;
   sh:targetClass o-persoon:Inwoner ;
   sh:property shape:availabilityExistence .
 
+
 shape:availabilityExistence  a sh:PropertyShape ;
   sh:path ex:availabilityInfo ;
+  sh:datatype xsd:dateTime;
+  sh:maxCount 5 ;
   sh:minCount 1 .
 
 shape:detailFamilyMemberShape a o-steps:StateShape ;
   sh:targetClass o-persoon:Inwoner ;
   sh:property shape:detailFamilyMemberExistence .
 
+
 shape:detailFamilyMemberExistence  a sh:PropertyShape ;
   sh:path ex:familyMember ;
+  sh:datatype xsd:string ;
   sh:minCount 1 .
 
 #
