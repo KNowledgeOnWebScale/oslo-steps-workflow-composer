@@ -1,4 +1,4 @@
-#Processed by EYE v20.0510.2019 josd
+#Processed by EYE v20.0606.1810 josd
 #eye choices/selected_SubmitWasteInfo.n3 interim/steps/container-level-steps.n3 --query subgoals/subgoalCreation.n3 --nope --no-skolem http://josd.github.io/.well-known/genid/
 
 @prefix step: <https://fast.ilabt.imec.be/api/v5/steps#>.
@@ -29,10 +29,10 @@
 @prefix math: <http://www.w3.org/2000/10/swap/math#>.
 @prefix oslo: <https://example.org/ns/oslo#>.
 @prefix ns3: <http://josd.github.io/.well-known/genid/pP7dSETOSHCTU6bSn:iLn_1X3mg#>.
-@prefix ns4: <http://josd.github.io/.well-known/genid/n:8dYyA:stt1OX6XZX_Tb9P0YWE#>.
+@prefix ns4: <http://josd.github.io/.well-known/genid/9uO7fkqjsRU57NGmJYeJeFhLTFM#>.
 
 {?t_0 gps:findpath ({?U_0 ns1:wasteCollectionRequested true} ?t_1 ?t_2 ?t_3 ?t_4 ?t_5 (10 10 0.2 0.2))} => {_:t_6 gps:path (?t_1 ?t_2 ?t_3 ?t_4 ?t_5)}.
 
-#2020-05-20T12:43:22.931Z in=13 out=1 ent=1 step=1 brake=1 inf=102006 sec=0.055 inf/sec=1854655
+#2020-07-10T14:52:15.948Z in=13 out=1 ent=1 step=1 brake=1 inf=102832 sec=0.093 inf/sec=1105720
 #ENDS
 

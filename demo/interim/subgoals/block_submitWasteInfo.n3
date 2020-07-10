@@ -1,4 +1,4 @@
-#Processed by EYE v20.0510.2019 josd
+#Processed by EYE v20.0606.1810 josd
 #eye choices/selected_SubmitWasteInfo.n3 interim/steps/container-level-steps.n3 --query subgoals/creationOfBlockingInfo.n3 --nope
 
 @prefix step: <https://fast.ilabt.imec.be/api/v5/steps#>.
@@ -29,23 +29,23 @@
 @prefix math: <http://www.w3.org/2000/10/swap/math#>.
 @prefix oslo: <https://example.org/ns/oslo#>.
 @prefix ns3: <http://josd.github.io/.well-known/genid/pP7dSETOSHCTU6bSn:iLn_1X3mg#>.
-@prefix ns4: <http://josd.github.io/.well-known/genid/n:8dYyA:stt1OX6XZX_Tb9P0YWE#>.
+@prefix ns4: <http://josd.github.io/.well-known/genid/9uO7fkqjsRU57NGmJYeJeFhLTFM#>.
 
 {_:sk_0 a o-persoon:Inwoner} :inInputRule true.
-{_:sk_0 o-persoon:heeftVerblijfplaats _:sk_11} :inInputRule true.
-{_:sk_11 o-persoon:verblijfsadres _:sk_12} :inInputRule true.
-{_:sk_0 ns1:lockNeededForGreyWasteContainer _:sk_1} :inInputRule true.
-{_:sk_0 ns1:movingAddress _:sk_2} :inInputRule true.
-{_:sk_0 ns1:movingCity _:sk_3} :inInputRule true.
-{_:sk_0 ns1:movingDate _:sk_4} :inInputRule true.
-{_:sk_0 ns1:numberOfRequested1100LiterPaperWasteContainers _:sk_5} :inInputRule true.
-{_:sk_0 ns1:numberOfRequested120LiterGreyWasteContainers _:sk_6} :inInputRule true.
-{_:sk_0 ns1:numberOfRequested240LiterGreyWasteContainers _:sk_7} :inInputRule true.
-{_:sk_0 ns1:numberOfRequested240LiterPaperWasteContainers _:sk_8} :inInputRule true.
-{_:sk_0 ns1:numberOfRequested40LiterGreyWasteContainers _:sk_9} :inInputRule true.
-{_:sk_0 ns1:numberOfRequested40LiterPaperWasteContainers _:sk_10} :inInputRule true.
+{_:sk_0 o-persoon:heeftVerblijfplaats _:sk_1} :inInputRule true.
+{_:sk_1 o-persoon:verblijfsadres _:sk_2} :inInputRule true.
+{_:sk_0 ns1:lockNeededForGreyWasteContainer _:sk_3} :inInputRule true.
+{_:sk_0 ns1:movingAddress _:sk_4} :inInputRule true.
+{_:sk_0 ns1:movingCity _:sk_5} :inInputRule true.
+{_:sk_0 ns1:movingDate _:sk_6} :inInputRule true.
+{_:sk_0 ns1:numberOfRequested1100LiterPaperWasteContainers _:sk_7} :inInputRule true.
+{_:sk_0 ns1:numberOfRequested120LiterGreyWasteContainers _:sk_8} :inInputRule true.
+{_:sk_0 ns1:numberOfRequested240LiterGreyWasteContainers _:sk_9} :inInputRule true.
+{_:sk_0 ns1:numberOfRequested240LiterPaperWasteContainers _:sk_10} :inInputRule true.
+{_:sk_0 ns1:numberOfRequested40LiterGreyWasteContainers _:sk_11} :inInputRule true.
+{_:sk_0 ns1:numberOfRequested40LiterPaperWasteContainers _:sk_12} :inInputRule true.
 {_:sk_0 ns1:providedGreenWasteInformation true} :inInputRule true.
 
-#2020-05-20T12:43:23.159Z in=13 out=14 ent=14 step=14 brake=1 inf=116482 sec=0.051 inf/sec=2283961
+#2020-07-10T14:52:16.372Z in=13 out=14 ent=14 step=14 brake=1 inf=117352 sec=0.096 inf/sec=1222417
 #ENDS
 

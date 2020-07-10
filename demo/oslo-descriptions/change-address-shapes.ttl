@@ -9,6 +9,7 @@
 @prefix o-steps: <https://fast.ilabt.imec.be/ns/oslo-steps/0.2#> .
 @prefix o-persoon: <https://data.vlaanderen.be/ns/persoon#> .
 
+
 @prefix state: <https://fast.ilabt.imec.be/api/v5/states#> .
 @prefix shape: <https://fast.ilabt.imec.be/api/v5/shapes#> .
 @prefix step: <https://fast.ilabt.imec.be/api/v5/steps#> .

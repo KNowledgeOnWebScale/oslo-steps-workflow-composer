@@ -1,4 +1,4 @@
-#Processed by EYE v20.0510.2019 josd
+#Processed by EYE v20.0606.1810 josd
 #eye choices/selected_AddressSubmission.n3 interim/steps/journey-level-steps.n3 --query subgoals/subgoalCreation.n3 --nope --no-skolem http://josd.github.io/.well-known/genid/
 
 @prefix step: <https://fast.ilabt.imec.be/api/v5/steps#>.
@@ -29,10 +29,10 @@
 @prefix math: <http://www.w3.org/2000/10/swap/math#>.
 @prefix oslo: <https://example.org/ns/oslo#>.
 @prefix ns3: <http://josd.github.io/.well-known/genid/pP7dSETOSHCTU6bSn:iLn_1X3mg#>.
-@prefix ns4: <http://josd.github.io/.well-known/genid/pAEHknnuioDtWVlJ6KlFG_efQqE#>.
+@prefix ns4: <http://josd.github.io/.well-known/genid/u1SqM5heLNY5N5WzeJYnDQkct:E#>.
 
 {?t_0 gps:findpath ({?U_0 ns1:addressChanged true} ?t_1 ?t_2 ?t_3 ?t_4 ?t_5 (100 100 0.2 0.2))} => {_:t_6 gps:path (?t_1 ?t_2 ?t_3 ?t_4 ?t_5)}.
 
-#2020-05-20T12:43:18.475Z in=6 out=1 ent=1 step=1 brake=1 inf=76334 sec=0.059 inf/sec=1293797
+#2020-07-10T14:52:10.701Z in=6 out=1 ent=1 step=1 brake=1 inf=77156 sec=0.056 inf/sec=1377786
 #ENDS
 

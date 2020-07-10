@@ -1,4 +1,4 @@
-#Processed by EYE v20.0510.2019 josd
+#Processed by EYE v20.0606.1810 josd
 #eye choices/selected_Waste.n3 interim/steps/journey-level-steps.n3 --query subgoals/creationOfBlockingInfo.n3 --nope
 
 @prefix step: <https://fast.ilabt.imec.be/api/v5/steps#>.
@@ -29,15 +29,15 @@
 @prefix math: <http://www.w3.org/2000/10/swap/math#>.
 @prefix oslo: <https://example.org/ns/oslo#>.
 @prefix ns3: <http://josd.github.io/.well-known/genid/pP7dSETOSHCTU6bSn:iLn_1X3mg#>.
-@prefix ns4: <http://josd.github.io/.well-known/genid/pAEHknnuioDtWVlJ6KlFG_efQqE#>.
+@prefix ns4: <http://josd.github.io/.well-known/genid/u1SqM5heLNY5N5WzeJYnDQkct:E#>.
 
 {_:sk_0 a o-persoon:Inwoner} :inInputRule true.
-{_:sk_0 o-persoon:heeftVerblijfplaats _:sk_4} :inInputRule true.
-{_:sk_4 o-persoon:verblijfsadres _:sk_5} :inInputRule true.
-{_:sk_0 ns1:movingAddress _:sk_1} :inInputRule true.
-{_:sk_0 ns1:movingCity _:sk_2} :inInputRule true.
-{_:sk_0 ns1:movingDate _:sk_3} :inInputRule true.
+{_:sk_0 o-persoon:heeftVerblijfplaats _:sk_1} :inInputRule true.
+{_:sk_1 o-persoon:verblijfsadres _:sk_2} :inInputRule true.
+{_:sk_0 ns1:movingAddress _:sk_3} :inInputRule true.
+{_:sk_0 ns1:movingCity _:sk_4} :inInputRule true.
+{_:sk_0 ns1:movingDate _:sk_5} :inInputRule true.
 
-#2020-05-20T12:43:17.788Z in=6 out=6 ent=6 step=6 brake=1 inf=77875 sec=0.054 inf/sec=1442130
+#2020-07-10T14:52:09.958Z in=6 out=6 ent=6 step=6 brake=1 inf=78726 sec=0.069 inf/sec=1140957
 #ENDS
 

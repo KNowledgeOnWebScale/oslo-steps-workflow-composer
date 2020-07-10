@@ -1,4 +1,4 @@
-#Processed by EYE v20.0510.2019 josd
+#Processed by EYE v20.0606.1810 josd
 #eye interim/steps/component-level-steps.n3 interim/steps/shortComponentDescriptions.n3 interim/subgoals/createdGoal_birthData.n3 preselection/preselection.n3 profile/knowledge.n3 interim/subgoals/block_birthData.n3 --nope --query preselection/prequery.n3
 
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
@@ -28,14 +28,14 @@
 @prefix math: <http://www.w3.org/2000/10/swap/math#>.
 @prefix oslo: <https://example.org/ns/oslo#>.
 @prefix ns3: <http://josd.github.io/.well-known/genid/pP7dSETOSHCTU6bSn:iLn_1X3mg#>.
-@prefix ns4: <http://josd.github.io/.well-known/genid/Kuh89jdSNDEhEuUpQ3sUkWiaOhY#>.
+@prefix ns4: <http://josd.github.io/.well-known/genid/_BBQWsN_irway9H5rfgxjBuAVyE#>.
 @prefix : <http://example.org#>.
-@prefix ns5: <http://josd.github.io/.well-known/genid/n:8dYyA:stt1OX6XZX_Tb9P0YWE#>.
+@prefix ns5: <http://josd.github.io/.well-known/genid/9uO7fkqjsRU57NGmJYeJeFhLTFM#>.
 @prefix plan: <http://https://github.com/doerthe/plan#>.
 
 {ns1:movemap gps:description (true true {?U_30 o-persoon:datum ?U_31. ?U_32 o-persoon:heeftGeboorte ?U_30} step:provideCitizenBirthDateManually 1 1 0.97 0.97)} <= {(?U_30 o-persoon:datum) e:skolem ?U_31. (?U_32 o-persoon:heeftGeboorte) e:skolem ?U_30. ?U_32 a o-persoon:Inwoner}.
 {ns1:movemap gps:description (true true {?U_33 o-persoon:heeftGeboorte ?U_34. ?U_34 o-persoon:plaats ?U_35} step:provideCitizenBirthPlaceManually 1 1 0.97 0.97)} <= {(?U_34 o-persoon:plaats) e:skolem ?U_35. (?U_33 o-persoon:heeftGeboorte) e:skolem ?U_34. ?U_33 a o-persoon:Inwoner}.
 
-#2020-05-20T12:43:28.742Z in=228 out=2 ent=4 step=16 brake=2 inf=781922 sec=0.159 inf/sec=4917748
+#2020-07-10T14:52:22.734Z in=230 out=2 ent=4 step=16 brake=2 inf=809241 sec=0.184 inf/sec=4398049
 #ENDS
 

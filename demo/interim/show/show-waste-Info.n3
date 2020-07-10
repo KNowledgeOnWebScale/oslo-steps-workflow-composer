@@ -1,4 +1,4 @@
-#Processed by EYE v20.0510.2019 josd
+#Processed by EYE v20.0606.1810 josd
 #eye profile/knowledge.n3 profile/personalInfo.n3 show/getInfo.n3 interim/show/query-patterns.n3 interim/steps/component-level-steps.n3 interim/steps/container-level-steps.n3 interim/steps/journey-level-steps.n3 show/test_show-waste-Info.n3 show/Request_showInfoUsed_wasteCollection.n3 help-functions/built-ins.n3 --query show/query_used.n3 --nope
 
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
@@ -29,9 +29,9 @@
 @prefix gps: <http://josd.github.io/eye/reasoning/gps/gps-schema#>.
 @prefix oslo: <https://example.org/ns/oslo#>.
 @prefix ns3: <http://josd.github.io/.well-known/genid/pP7dSETOSHCTU6bSn:iLn_1X3mg#>.
-@prefix ns4: <http://josd.github.io/.well-known/genid/Kuh89jdSNDEhEuUpQ3sUkWiaOhY#>.
-@prefix ns5: <http://josd.github.io/.well-known/genid/n:8dYyA:stt1OX6XZX_Tb9P0YWE#>.
-@prefix ns6: <http://josd.github.io/.well-known/genid/pAEHknnuioDtWVlJ6KlFG_efQqE#>.
+@prefix ns4: <http://josd.github.io/.well-known/genid/_BBQWsN_irway9H5rfgxjBuAVyE#>.
+@prefix ns5: <http://josd.github.io/.well-known/genid/9uO7fkqjsRU57NGmJYeJeFhLTFM#>.
+@prefix ns6: <http://josd.github.io/.well-known/genid/u1SqM5heLNY5N5WzeJYnDQkct:E#>.
 @prefix fn: <http://www.w3.org/2006/xpath-functions#>.
 @prefix crypto: <http://www.w3.org/2000/10/swap/crypto#>.
 @prefix string: <http://www.w3.org/2000/10/swap/string#>.
@@ -45,6 +45,6 @@
 step:showWasteCollection :canUse {ex:user a o-persoon:Inwoner. ex:user o-persoon:heeftVerblijfplaats :sk_0. :sk_0 o-persoon:verblijfsadres :sk_1. ex:user ex:lockNeededForGreyWasteContainer :sk_2. ex:user ex:movingAddress :sk_3. ex:user ex:movingCity :sk_4. ex:user ex:movingDate :sk_5. ex:user ex:needForGreenWasteContainer false. ex:user ex:numberOfRequested1100LiterPaperWasteContainers :sk_6. ex:user ex:numberOfRequested120LiterGreyWasteContainers :sk_7. ex:user ex:numberOfRequested240LiterGreyWasteContainers :sk_8. ex:user ex:numberOfRequested240LiterPaperWasteContainers :sk_9. ex:user ex:numberOfRequested40LiterGreyWasteContainers :sk_10. ex:user ex:numberOfRequested40LiterPaperWasteContainers :sk_11. ex:user ex:providedGreenWasteInformation true}.
 step:showWasteCollection :possiblyMissing :nothing.
 
-#2020-05-20T12:43:33.457Z in=688 out=2 ent=2 step=1 brake=2 inf=5208936 sec=1.059 inf/sec=4918731
+#2020-07-10T14:52:28.178Z in=688 out=2 ent=2 step=1 brake=2 inf=6427702 sec=1.121 inf/sec=5733900
 #ENDS
 

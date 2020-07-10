@@ -26,23 +26,38 @@
 {?SCOPE gps:findpaths (?Maps ?Goal ?Path ?Duration ?Cost ?Belief ?Comfort ?Path ?Duration ?Cost ?Belief ?Comfort (?MaxDuration ?MaxCost ?MinBelief ?MinComfort ?MaxStagecount))} <= {
     ?SCOPE e:call ?Goal.
     ("!") e:derive true.
-_:x e:trace ("goal" ?Goal).
 }.
 {?SCOPE gps:findpaths (?Maps_s ?Goal ?Path_s ?Duration_s ?Cost_s ?Belief_s ?Comfort_s ?Path ?Duration ?Cost ?Belief ?Comfort (?MaxDuration ?MaxCost ?MinBelief ?MinComfort ?MaxStagecount))} <= { 
     {?Map gps:description (?From ?Transition ?To ?Action ?Duration_n ?Cost_n ?Belief_n ?Comfort_n)} <= ?Where.
-
+#    _:xx e:trace (?Action ?From).
+    
     ?SCOPE e:call ?From.
+
+#    _:xx e:trace 10.
+    
 
 #this test below can be critical in some applications
     ?SCOPE e:fail ?To.
+#    _:xx e:trace 11.
+    ?SCOPE e:findall (?Where {?SCOPE e:call ?Where.} ?ws).
+#    _:xx e:trace 12.
+    ?ws e:length ?l.
+    #_:x e:trace ("length" ?l "options" ?ws).
+    #choose one of the options and ignore the others
+    ?ws :chooseWhere ?cWhere.
+#    _:xx e:trace 13.
+#    _:x e:trace (?Where ?cWhere).
     ?SCOPE e:call ?Where.
+#    _:xx e:trace 1.
+    ?Where log:equalTo ?cWhere.
+#    _:ss e:trace 2.
 
 #modify here
     ?Path_s :permutationCheck ?Action.
 
     ?Map gps:description (?From ?Transition ?To ?Action ?Duration_n ?Cost_n ?Belief_n ?Comfort_n).
     (?Maps_s (?Map)) list:append ?Maps_t.
-
+#    _:ss e:trace 3.
     ?Maps_t gps:stagecount ?Stagecount.
     ?Stagecount math:notGreaterThan ?MaxStagecount.
     (?Duration_s ?Duration_n) math:sum ?Duration_t.
@@ -56,13 +71,14 @@ _:x e:trace ("goal" ?Goal).
     (?Path_s (?Action)) list:append ?Path_t.
 
     ?From e:becomes ?To.
+#    _:ss e:trace 4.
+#    _:ss e:trace ?Path_t.
 
-_:e e:trace ("path" ?Path_t).
-_:e e:trace ("to" ?To).
+
 #?Goal :goalCheck true.
 
     {?SCOPE gps:findpaths (?Maps_t ?Goal ?Path_t ?Duration_t ?Cost_t ?Belief_t ?Comfort_t ?Path ?Duration ?Cost ?Belief ?Comfort (?MaxDuration ?MaxCost ?MinBelief ?MinComfort ?MaxStagecount))} e:finalize {?To e:becomes ?From}.
-
+#_:xx e:trace 5.
 
 }.
 
@@ -217,14 +233,14 @@ _:e e:trace ("to" ?To).
 }.
 
 #
-# predicate used for debugging: is the goal true?
+# predicate used for debugging: is the goal true? (add traces)
 #
 {?goal :goalCheck true}
 <=
 {
 ?scope e:call ?goal.
 
-_:e e:trace ("goal true" ?goal)
+
 }.
 
 {?goal :goalCheck true}
@@ -232,7 +248,35 @@ _:e e:trace ("goal true" ?goal)
 {
 ?scope e:fail ?goal.
 
-_:e e:trace ("goal false" ?goal)
 }.
+
+#
+# choose Where
+#
+
+{?ws :chooseWhere ?cWhere.}
+<=
+{
+?cWhere list:in ?ws. ?cWhere :countBlanks ?BW.
+#_:xx e:trace 1. 
+_:x e:findall (?graph {?graph list:in ?ws. ?graph :countBlanks ?blanks. ?blanks math:lessThan ?BW } ()  ).
+#_:xx e:trace 3. 
+#(?cWhere ?BW) list:in ?out.
+#_:x e:findall ( ?blanks { (?graph ?blanks) list:in ?out. ?blanks math:lessThan ?BW  } () ).
+#_:xx e:trace 4. 
+#_:xx e:trace ?cWhere.
+
+}.
+
+#count blanks
+{?graph :countBlanks ?blanks}
+<=
+{
+_:x e:findall (1 {?graph log:includes ?triple. ?triple log:equalTo {?s ?p ?x}. ?x e:label ?label} ?xs ).
+?xs e:length ?blanks.
+}.
+
+
+
 
 

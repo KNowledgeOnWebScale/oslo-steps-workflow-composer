@@ -25,6 +25,9 @@ eye workflow-composer/gps-plugin_modified.n3 profile/knowledge.n3  profile/perso
 #To compute the highest level workflow without permutations use 
 eye workflow-composer/gps-plugin_modified_noPermutations.n3 profile/knowledge.n3  profile/personalInfo.n3  interim/steps/selectedSteps_Journey.n3 oslo-descriptions/change-address-steps.ttl --query journey/journeyGoal.n3 --nope > interim/paths/journey-paths_noPermutations.n3
 
+#extra test case (earlier that cause performance problems):
+eye workflow-composer/gps-plugin_modified_noPermutations.n3 profile/knowledge.n3  testData/personalInfo_testCase.n3  interim/steps/selectedSteps_Journey.n3 oslo-descriptions/change-address-steps.ttl --query journey/journeyGoal.n3 --nope > testData/journey-paths_noPermutations.n3
+
 #################################################
 # Container Level
 ###################################################

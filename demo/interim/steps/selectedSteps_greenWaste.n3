@@ -1,4 +1,4 @@
-#Processed by EYE v20.0510.2019 josd
+#Processed by EYE v20.0606.1810 josd
 #eye interim/steps/component-level-steps.n3 interim/steps/shortComponentDescriptions.n3 interim/subgoals/createdGoal_greenWaste.n3 preselection/preselection.n3 profile/knowledge.n3 interim/subgoals/block_greenWaste.n3 --nope --query preselection/prequery.n3
 
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
@@ -28,9 +28,9 @@
 @prefix math: <http://www.w3.org/2000/10/swap/math#>.
 @prefix oslo: <https://example.org/ns/oslo#>.
 @prefix ns3: <http://josd.github.io/.well-known/genid/pP7dSETOSHCTU6bSn:iLn_1X3mg#>.
-@prefix ns4: <http://josd.github.io/.well-known/genid/Kuh89jdSNDEhEuUpQ3sUkWiaOhY#>.
+@prefix ns4: <http://josd.github.io/.well-known/genid/_BBQWsN_irway9H5rfgxjBuAVyE#>.
 @prefix : <http://example.org#>.
-@prefix ns5: <http://josd.github.io/.well-known/genid/n:8dYyA:stt1OX6XZX_Tb9P0YWE#>.
+@prefix ns5: <http://josd.github.io/.well-known/genid/9uO7fkqjsRU57NGmJYeJeFhLTFM#>.
 @prefix plan: <http://https://github.com/doerthe/plan#>.
 
 {ns1:movemap gps:description (true true {?U_45 ns1:numberOfRequested40LiterGreenWasteContainers ?U_46} step:provideNumberOf40LiterGreenWasteContainersManually 1 1 0.97 0.97)} <= {(?U_45 ns1:numberOfRequested40LiterGreenWasteContainers) e:skolem ?U_46. ?U_45 a o-persoon:Inwoner}.
@@ -39,6 +39,6 @@
 {ns1:movemap gps:description (true true {?U_51 ns1:lockNeededForGreenWasteContainer ?U_52} step:provideGreenWasteContainerLockInfoManually 1 1 0.97 0.97)} <= {(?U_51 ns1:lockNeededForGreenWasteContainer) e:skolem ?U_52. ?U_51 a o-persoon:Inwoner}.
 {ns1:movemap gps:description (true true {?U_53 ns1:needForGreenWasteContainer ?U_54} step:provideGreenWasteContainerOwnCompostInfoManually 1 1 0.97 0.97)} <= {(?U_53 ns1:needForGreenWasteContainer) e:skolem ?U_54. ?U_53 a o-persoon:Inwoner}.
 
-#2020-05-20T12:43:20.367Z in=224 out=5 ent=10 step=20 brake=2 inf=758451 sec=0.160 inf/sec=4740319
+#2020-07-10T14:52:12.942Z in=226 out=5 ent=10 step=20 brake=2 inf=779647 sec=0.197 inf/sec=3957599
 #ENDS
 

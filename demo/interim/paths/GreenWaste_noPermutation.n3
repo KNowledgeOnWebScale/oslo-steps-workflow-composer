@@ -1,4 +1,4 @@
-#Processed by EYE v20.0510.2019 josd
+#Processed by EYE v20.0606.1810 josd
 #eye workflow-composer/gps-plugin_modified_noPermutations.n3 profile/knowledge.n3 profile/personalInfo.n3 interim/subgoals/extraRule_greenWaste.n3 help-functions/aux2.n3 interim/steps/selectedSteps_greenWaste.n3 oslo-descriptions/change-address-steps.ttl --query interim/subgoals/createdGoal_greenWaste.n3 --nope
 
 @prefix math: <http://www.w3.org/2000/10/swap/math#>.
@@ -29,13 +29,13 @@
 @prefix var: <https://example.org/ns/var#>.
 @prefix oslo: <https://example.org/ns/oslo#>.
 @prefix ns3: <http://josd.github.io/.well-known/genid/pP7dSETOSHCTU6bSn:iLn_1X3mg#>.
-@prefix ns4: <http://josd.github.io/.well-known/genid/n:8dYyA:stt1OX6XZX_Tb9P0YWE#>.
-@prefix ns5: <http://josd.github.io/.well-known/genid/Kuh89jdSNDEhEuUpQ3sUkWiaOhY#>.
+@prefix ns4: <http://josd.github.io/.well-known/genid/9uO7fkqjsRU57NGmJYeJeFhLTFM#>.
+@prefix ns5: <http://josd.github.io/.well-known/genid/_BBQWsN_irway9H5rfgxjBuAVyE#>.
 @prefix plan: <http://https://github.com/doerthe/plan#>.
-@prefix ns6: <http://josd.github.io/.well-known/genid/nQNi08zAY01AQEgcP4WrxIWnprs#>.
+@prefix ns6: <http://josd.github.io/.well-known/genid/lNFuCtyeDA_QORAun8sX6NaUlSw#>.
 
 _:sk_0 gps:path ((("unorderedList" (step:provideNumberOf40LiterGreenWasteContainersManually step:provideNumberOf120LiterGreenWasteContainersManually step:provideGreenWasteContainerCollectionStopInfoManually step:provideGreenWasteContainerLockInfoManually step:provideGreenWasteContainerOwnCompostInfoManually))) 5.0 5.0 0.8587340256999999 0.8587340256999999).
 
-#2020-05-20T12:43:20.657Z in=735 out=1 ent=1 step=3 brake=4 inf=706105 sec=0.165 inf/sec=4279424
+#2020-07-10T14:52:13.295Z in=737 out=1 ent=1 step=3 brake=4 inf=753531 sec=0.225 inf/sec=3349027
 #ENDS
 

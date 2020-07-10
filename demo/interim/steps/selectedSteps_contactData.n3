@@ -1,4 +1,4 @@
-#Processed by EYE v20.0510.2019 josd
+#Processed by EYE v20.0606.1810 josd
 #eye interim/steps/component-level-steps.n3 interim/steps/shortComponentDescriptions.n3 interim/subgoals/createdGoal_contactData.n3 preselection/preselection.n3 profile/knowledge.n3 interim/subgoals/block_contactData.n3 --nope --query preselection/prequery.n3
 
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
@@ -28,9 +28,9 @@
 @prefix math: <http://www.w3.org/2000/10/swap/math#>.
 @prefix oslo: <https://example.org/ns/oslo#>.
 @prefix ns3: <http://josd.github.io/.well-known/genid/pP7dSETOSHCTU6bSn:iLn_1X3mg#>.
-@prefix ns4: <http://josd.github.io/.well-known/genid/Kuh89jdSNDEhEuUpQ3sUkWiaOhY#>.
+@prefix ns4: <http://josd.github.io/.well-known/genid/_BBQWsN_irway9H5rfgxjBuAVyE#>.
 @prefix : <http://example.org#>.
-@prefix ns5: <http://josd.github.io/.well-known/genid/n:8dYyA:stt1OX6XZX_Tb9P0YWE#>.
+@prefix ns5: <http://josd.github.io/.well-known/genid/9uO7fkqjsRU57NGmJYeJeFhLTFM#>.
 @prefix plan: <http://https://github.com/doerthe/plan#>.
 
 {ns1:movemap gps:description (true true {?U_71 schema:email ?U_72} step:provideCitizenEmailManually 1 1 0.97 0.97)} <= {(?U_71 schema:email) e:skolem ?U_72. ?U_71 a o-persoon:Inwoner}.
@@ -38,6 +38,6 @@
 {ns1:movemap gps:description (true true {?U_76 schema:contactPoint ?U_77. ?U_77 schema:contactType "telephone". ?U_77 schema:telephone ?U_78} step:provideCitizenPhoneNumberManually 1 1 0.97 0.97)} <= {(?U_76 schema:contactPoint schema:contactType "telephone") e:skolem ?U_77. (?U_76 schema:contactPoint schema:contactType "telephone" schema:telephone) e:skolem ?U_78. ?U_76 a o-persoon:Inwoner}.
 {ns1:movemap gps:description (true true {?U_79 o-persoon:heeftVerblijfplaats ?U_80. ?U_80 o-persoon:verblijfsadres ?U_81} step:provideCitizenAddressManually 1 1 0.97 0.97)} <= {(?U_80 o-persoon:verblijfsadres) e:skolem ?U_81. (?U_79 o-persoon:heeftVerblijfplaats) e:skolem ?U_80. ?U_79 a o-persoon:Inwoner}.
 
-#2020-05-20T12:43:27.671Z in=231 out=4 ent=8 step=34 brake=2 inf=872074 sec=0.202 inf/sec=4317198
+#2020-07-10T14:52:21.552Z in=233 out=4 ent=8 step=34 brake=2 inf=915907 sec=0.233 inf/sec=3930931
 #ENDS
 

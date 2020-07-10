@@ -1,5 +1,5 @@
 #Processed by EYE v20.0606.1810 josd
-#eye workflow-composer/gps-plugin_modified_noPermutations.n3 profile/knowledge.n3 profile/personalInfo.n3 interim/subgoals/extraRule_paperWaste.n3 help-functions/aux2.n3 interim/steps/selectedSteps_paperWaste.n3 oslo-descriptions/change-address-steps.ttl --query interim/subgoals/createdGoal_paperWaste.n3 --nope
+#eye workflow-composer/gps-plugin_modified_noPermutations.n3 profile/knowledge.n3 testData/personalInfo_testCase.n3 interim/steps/selectedSteps_Journey.n3 oslo-descriptions/change-address-steps.ttl --query journey/journeyGoal.n3 --nope
 
 @prefix math: <http://www.w3.org/2000/10/swap/math#>.
 @prefix list: <http://www.w3.org/2000/10/swap/list#>.
@@ -17,10 +17,11 @@
 @prefix o-persoon: <https://data.vlaanderen.be/ns/persoon#>.
 @prefix foaf: <http://xmlns.com/foaf/0.1/>.
 @prefix schema: <https://schema.org/>.
-@prefix step: <https://fast.ilabt.imec.be/api/v5/steps#>.
+@prefix ns6: <http://josd.github.io/.well-known/genid/S:4gjfZoyt0eq_oRaxV4l_1GMZ0#>.
 @prefix ns1: <http://example.org/ns/example#>.
 @prefix state: <https://fast.ilabt.imec.be/api/v5/states#>.
 @prefix shape: <https://fast.ilabt.imec.be/api/v5/shapes#>.
+@prefix step: <https://fast.ilabt.imec.be/api/v5/steps#>.
 @prefix sh: <http://www.w3.org/ns/shacl#>.
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
 @prefix skos: <http://www.w3.org/2004/02/skos/core#>.
@@ -29,13 +30,14 @@
 @prefix var: <https://example.org/ns/var#>.
 @prefix oslo: <https://example.org/ns/oslo#>.
 @prefix ns3: <http://josd.github.io/.well-known/genid/pP7dSETOSHCTU6bSn:iLn_1X3mg#>.
-@prefix ns4: <http://josd.github.io/.well-known/genid/9uO7fkqjsRU57NGmJYeJeFhLTFM#>.
-@prefix ns5: <http://josd.github.io/.well-known/genid/_BBQWsN_irway9H5rfgxjBuAVyE#>.
+@prefix ns4: <http://josd.github.io/.well-known/genid/u1SqM5heLNY5N5WzeJYnDQkct:E#>.
 @prefix plan: <http://https://github.com/doerthe/plan#>.
-@prefix ns6: <http://josd.github.io/.well-known/genid/s:Ihqjod0GisUoWsmdyDPJZ6L9w#>.
+@prefix ns5: <http://josd.github.io/.well-known/genid/UsnVO_jyZGNfjkowagVioH5rPRE#>.
 
-_:sk_0 gps:path ((("unorderedList" (step:provideNumberOf40LiterPaperWasteContainersManually step:provideNumberOf240LiterPaperWasteContainersManually step:provideNumberOf1100LiterPaperWasteContainersManually))) 3.0 3.0 0.912673 0.912673).
+ex:user gps:path ((("unorderedList" (step:providePersonalInformation step:provideMovingData)) step:changeAddress step:submitWasteInfo) 400.0 400.0 0.6561000000000001 0.6561000000000001).
+ex:user gps:path ((("unorderedList" (step:providePersonalInformation step:provideMovingData)) step:submitWasteInfo step:changeAddress) 400.0 400.0 0.6561000000000001 0.6561000000000001).
+ex:user gps:path ((("unorderedList" (step:provideMovingData)) step:submitWasteInfo ("unorderedList" (step:providePersonalInformation)) step:changeAddress) 400.0 400.0 0.6561000000000001 0.6561000000000001).
 
-#2020-07-10T14:52:15.736Z in=735 out=1 ent=1 step=3 brake=4 inf=604492 sec=0.182 inf/sec=3321385
+#2020-07-10T14:52:07.785Z in=747 out=3 ent=3 step=23040 brake=2 inf=41219400 sec=7.907 inf/sec=5213026
 #ENDS
 

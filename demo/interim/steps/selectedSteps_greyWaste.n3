@@ -1,4 +1,4 @@
-#Processed by EYE v20.0510.2019 josd
+#Processed by EYE v20.0606.1810 josd
 #eye interim/steps/component-level-steps.n3 interim/steps/shortComponentDescriptions.n3 interim/subgoals/createdGoal_greyWaste.n3 preselection/preselection.n3 profile/knowledge.n3 interim/subgoals/block_greyWaste.n3 --nope --query preselection/prequery.n3
 
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
@@ -28,9 +28,9 @@
 @prefix math: <http://www.w3.org/2000/10/swap/math#>.
 @prefix oslo: <https://example.org/ns/oslo#>.
 @prefix ns3: <http://josd.github.io/.well-known/genid/pP7dSETOSHCTU6bSn:iLn_1X3mg#>.
-@prefix ns4: <http://josd.github.io/.well-known/genid/Kuh89jdSNDEhEuUpQ3sUkWiaOhY#>.
+@prefix ns4: <http://josd.github.io/.well-known/genid/_BBQWsN_irway9H5rfgxjBuAVyE#>.
 @prefix : <http://example.org#>.
-@prefix ns5: <http://josd.github.io/.well-known/genid/n:8dYyA:stt1OX6XZX_Tb9P0YWE#>.
+@prefix ns5: <http://josd.github.io/.well-known/genid/9uO7fkqjsRU57NGmJYeJeFhLTFM#>.
 @prefix plan: <http://https://github.com/doerthe/plan#>.
 
 {ns1:movemap gps:description (true true {?U_56 ns1:numberOfRequested40LiterGreyWasteContainers ?U_57} step:provideNumberOf40LiterGreyWasteContainersManually 1 1 0.97 0.97)} <= {(?U_56 ns1:numberOfRequested40LiterGreyWasteContainers) e:skolem ?U_57. ?U_56 a o-persoon:Inwoner}.
@@ -38,6 +38,6 @@
 {ns1:movemap gps:description (true true {?U_60 ns1:numberOfRequested240LiterGreyWasteContainers ?U_61} step:provideNumberOf240LiterGreyWasteContainers 1 1 0.97 0.97)} <= {(?U_60 ns1:numberOfRequested240LiterGreyWasteContainers) e:skolem ?U_61. ?U_60 a o-persoon:Inwoner}.
 {ns1:movemap gps:description (true true {?U_62 ns1:lockNeededForGreyWasteContainer ?U_63} step:provideGreyWasteContainerLockInfoManually 1 1 0.97 0.97)} <= {(?U_62 ns1:lockNeededForGreyWasteContainer) e:skolem ?U_63. ?U_62 a o-persoon:Inwoner}.
 
-#2020-05-20T12:43:21.443Z in=228 out=4 ent=8 step=16 brake=2 inf=807856 sec=0.167 inf/sec=4837461
+#2020-07-10T14:52:14.227Z in=230 out=4 ent=8 step=16 brake=2 inf=840838 sec=0.189 inf/sec=4448878
 #ENDS
 

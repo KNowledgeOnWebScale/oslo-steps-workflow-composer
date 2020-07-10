@@ -1,4 +1,4 @@
-#Processed by EYE v20.0510.2019 josd
+#Processed by EYE v20.0606.1810 josd
 #eye choices/selected_MovingData.n3 interim/steps/container-level-steps.n3 --query subgoals/creationOfRuleForMissingData.n3 --nope
 
 @prefix step: <https://fast.ilabt.imec.be/api/v5/steps#>.
@@ -29,10 +29,10 @@
 @prefix math: <http://www.w3.org/2000/10/swap/math#>.
 @prefix oslo: <https://example.org/ns/oslo#>.
 @prefix ns3: <http://josd.github.io/.well-known/genid/pP7dSETOSHCTU6bSn:iLn_1X3mg#>.
-@prefix ns4: <http://josd.github.io/.well-known/genid/n:8dYyA:stt1OX6XZX_Tb9P0YWE#>.
+@prefix ns4: <http://josd.github.io/.well-known/genid/9uO7fkqjsRU57NGmJYeJeFhLTFM#>.
 
 {?U_11 e:findall ({?U_13 ?U_12 ?U_14} {{?U_0 a o-persoon:Inwoner} log:includes {?U_13 ?U_12 ?U_14}. ?U_11 e:call {?U_13 ?U_12 ?U_14}} ?U_15). ({?U_0 a o-persoon:Inwoner} ?U_15) :unifyList {?U_0 a o-persoon:Inwoner}. {?U_0 a o-persoon:Inwoner} e:labelvars ?U_16} => ?U_16.
 
-#2020-05-20T12:43:30.388Z in=13 out=1 ent=1 step=1 brake=2 inf=105262 sec=0.059 inf/sec=1784102
+#2020-07-10T14:52:24.663Z in=13 out=1 ent=1 step=1 brake=2 inf=106119 sec=0.094 inf/sec=1128926
 #ENDS
 

@@ -1,4 +1,4 @@
-#Processed by EYE v20.0510.2019 josd
+#Processed by EYE v20.0606.1810 josd
 #eye choices/selected_AddressSubmission.n3 interim/steps/journey-level-steps.n3 --query subgoals/creationOfBlockingInfo.n3 --nope
 
 @prefix step: <https://fast.ilabt.imec.be/api/v5/steps#>.
@@ -29,29 +29,30 @@
 @prefix math: <http://www.w3.org/2000/10/swap/math#>.
 @prefix oslo: <https://example.org/ns/oslo#>.
 @prefix ns3: <http://josd.github.io/.well-known/genid/pP7dSETOSHCTU6bSn:iLn_1X3mg#>.
-@prefix ns4: <http://josd.github.io/.well-known/genid/pAEHknnuioDtWVlJ6KlFG_efQqE#>.
+@prefix ns4: <http://josd.github.io/.well-known/genid/u1SqM5heLNY5N5WzeJYnDQkct:E#>.
 
 {_:sk_0 a o-persoon:Inwoner} :inInputRule true.
 {_:sk_0 foaf:familyName _:sk_1} :inInputRule true.
 {_:sk_0 foaf:givenName _:sk_2} :inInputRule true.
-{_:sk_10 o-persoon:datum _:sk_11} :inInputRule true.
-{_:sk_0 o-persoon:heeftGeboorte _:sk_10} :inInputRule true.
-{_:sk_0 o-persoon:heeftGeboorte _:sk_12} :inInputRule true.
-{_:sk_0 o-persoon:heeftNationaliteit _:sk_3} :inInputRule true.
-{_:sk_12 o-persoon:plaats _:sk_13} :inInputRule true.
-{_:sk_0 ns1:movingAddress _:sk_4} :inInputRule true.
-{_:sk_0 ns1:movingCity _:sk_5} :inInputRule true.
-{_:sk_0 ns1:movingDate _:sk_6} :inInputRule true.
-{_:sk_0 ns1:nationalNumber _:sk_7} :inInputRule true.
+{_:sk_3 o-persoon:datum _:sk_4} :inInputRule true.
+{_:sk_0 o-persoon:heeftGeboorte _:sk_3} :inInputRule true.
+{_:sk_0 o-persoon:heeftGeboorte _:sk_5} :inInputRule true.
+{_:sk_0 o-persoon:heeftNationaliteit _:sk_6} :inInputRule true.
+{_:sk_6 o-persoon:nationaliteit _:sk_7} :inInputRule true.
+{_:sk_5 o-persoon:plaats _:sk_8} :inInputRule true.
+{_:sk_0 o-persoon:registratie _:sk_9} :inInputRule true.
+{_:sk_0 ns1:movingAddress _:sk_10} :inInputRule true.
+{_:sk_0 ns1:movingCity _:sk_11} :inInputRule true.
+{_:sk_0 ns1:movingDate _:sk_12} :inInputRule true.
+{_:sk_0 schema:contactPoint _:sk_13} :inInputRule true.
 {_:sk_0 schema:contactPoint _:sk_14} :inInputRule true.
-{_:sk_0 schema:contactPoint _:sk_15} :inInputRule true.
-{_:sk_14 schema:contactType "gsm"} :inInputRule true.
-{_:sk_15 schema:contactType "telephone"} :inInputRule true.
-{_:sk_0 schema:email _:sk_8} :inInputRule true.
-{_:sk_0 schema:hasOccupation _:sk_9} :inInputRule true.
-{_:sk_14 schema:telephone _:sk_16} :inInputRule true.
-{_:sk_15 schema:telephone _:sk_17} :inInputRule true.
+{_:sk_13 schema:contactType "gsm"} :inInputRule true.
+{_:sk_14 schema:contactType "telephone"} :inInputRule true.
+{_:sk_0 schema:email _:sk_15} :inInputRule true.
+{_:sk_0 schema:hasOccupation _:sk_16} :inInputRule true.
+{_:sk_13 schema:telephone _:sk_17} :inInputRule true.
+{_:sk_14 schema:telephone _:sk_18} :inInputRule true.
 
-#2020-05-20T12:43:18.815Z in=6 out=20 ent=20 step=20 brake=1 inf=105871 sec=0.060 inf/sec=1764517
+#2020-07-10T14:52:11.114Z in=6 out=21 ent=21 step=21 brake=1 inf=109461 sec=0.099 inf/sec=1105667
 #ENDS
 
