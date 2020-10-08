@@ -12,6 +12,7 @@ PREFIX list: <http://www.w3.org/2000/10/swap/list#>
 @prefix math: <http://www.w3.org/2000/10/swap/math#>.
 @prefix : <https://example.org/ns/example#> .
 
+# TODO give documentation
 {
 () :separate (?a ?a ?b ?b)
 }
@@ -19,6 +20,7 @@ PREFIX list: <http://www.w3.org/2000/10/swap/list#>
 {
 }.
 
+# TODO give documentation
 {
 ?outlist :separate (?a ?aresult  ?b ?bresult)
 }

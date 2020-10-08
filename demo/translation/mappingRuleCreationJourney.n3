@@ -45,6 +45,10 @@ _:x e:findall ( ?pattern {?step  o-steps:producesState ?y. ?y o-steps:hasStateSh
 =>
 {
 #the values here are currently fixed.
+# You should have meaningful numbers for these things: duration / cost / belief-success / comfort (how happy the user would be)
+# If you create a subpath of a step, it must be within that limit
+# TODO put these constraints in OSLO-STEPS vocabulary
+# TODO things stay at this point, they don't change
 {ex:movemap gps:description (true true ?out ?step 100 100 0.9 0.9)} <= ?ins.
 }.
 
