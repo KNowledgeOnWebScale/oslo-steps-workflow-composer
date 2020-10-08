@@ -14,7 +14,6 @@ PREFIX log: <http://www.w3.org/2000/10/swap/log#>
 ?Where e:graphList ?WhereList.
 (?FromList ?WhereList) list:append ?longlist.
 ?longlist log:conjunction ?con.
-
 }
 =>
 {

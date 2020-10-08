@@ -29,14 +29,10 @@ PREFIX list: <http://www.w3.org/2000/10/swap/list#>
 ?outlist rdf:first ?f.
 ?outlist rdf:rest ?r.
 
-
 ?f log:equalTo (?first ?second).
-
 
 (?a (?first)) list:append ?a1.
 (?b (?second)) list:append ?b1.
-
-
 
 ?r :separate (?a1 ?aresult ?b1 ?bresult)
 }.

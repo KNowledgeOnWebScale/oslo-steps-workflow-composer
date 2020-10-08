@@ -12,10 +12,11 @@
 @prefix e: <http://eulersharp.sourceforge.net/2003/03swap/log-rules#>.
 
 {
-    ?SCOPE gps:findpath ({
-
-?x :wasteCollectionRequested true; ex:addressChanged true.
-} ?PATH ?DURATION ?COST ?BELIEF ?COMFORT (1000 1000 0.2 0.2 )).
+    ?SCOPE gps:findpath (
+        {
+            ?x :wasteCollectionRequested true;
+                ex:addressChanged true.
+        } ?PATH ?DURATION ?COST ?BELIEF ?COMFORT ( 1000 1000 0.2 0.2 ) ).
 } => {
     ?x gps:path (?PATH ?DURATION ?COST ?BELIEF ?COMFORT).
 }.

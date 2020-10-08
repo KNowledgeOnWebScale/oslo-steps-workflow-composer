@@ -15,26 +15,18 @@ PREFIX list: <http://www.w3.org/2000/10/swap/list#>
 @prefix var: <http://josd.github.io/.well-known/genid/pP7dSETOSHCTU6bSn:iLn_1X3mg#>.
 
 {
-
 ?step a o-steps:JourneyLevelStep.
 
-
-
 ?step o-steps:producesState ?ov.
-
 
 _:x e:findall ( ?pattern { ?step o-steps:requiresState ?y. ?y o-steps:hasStateShape ?stateShape. ?stateShape :pattern ?pattern} ?inlist). 
 
 _:x e:findall ( ?pattern {?step  o-steps:producesState ?y. ?y o-steps:hasStateShape ?stateShape. ?stateShape :pattern ?pattern} ?outlist ).
 
-
-
 ?inlist :separate ((true) ?ins1 (true) ?skolI).
 ?outlist :separate ((true) ?outs (true) ?skol).
 
-
-
-(  ?ins1 ?skol ({var:x a o-persoon:Inwoner. }) ) list:append ?in.
+(  ?ins1 ?skol ( { var:x a o-persoon:Inwoner. } ) ) list:append ?in.
 
 #?outTriples  :produceSkolemfunctions (() ?skolem).
 #?outTriples log:conjunction ?out.

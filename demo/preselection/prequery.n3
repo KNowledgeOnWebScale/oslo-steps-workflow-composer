@@ -7,9 +7,8 @@ PREFIX plan: <http://https://github.com/doerthe/plan#>
 PREFIX :  <http://example.org#>
 
 {
-:keep :action ?action.
-{?map gps:description (?from ?inter ?to ?action ?a ?b ?c ?d)} <= ?condition.
-
-}=>{
-{?map gps:description (?from ?inter ?to ?action ?a ?b ?c ?d)} <= ?condition.
+    :keep :action ?action.
+    {?map gps:description (?from ?inter ?to ?action ?a ?b ?c ?d)} <= ?condition.
+} => {
+    {?map gps:description (?from ?inter ?to ?action ?a ?b ?c ?d)} <= ?condition.
 }.

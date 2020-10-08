@@ -8,172 +8,141 @@ PREFIX plan: <http://https://github.com/doerthe/plan#>
 PREFIX :  <http://example.org#>
 
 {
+    {
+        ?SCOPE gps:findpath (?Goal ?PATH ?DURATION ?COST ?BELIEF ?COMFORT ?list).
+    } => ?head.
 
+    ?ll a :ShortDescription.
+    ?ll log:equalTo {?extendedFrom ?action ?to}.
 
-{
-    ?SCOPE gps:findpath (?Goal ?PATH ?DURATION ?COST ?BELIEF ?COMFORT ?list).
-} => ?head.
+    ?Goal e:graphList ?glist.
+    ?l list:in ?glist. 
+    ?l log:equalTo {?s ?p ?o}.
 
+    #this here is a special extension for the use case
+    ?l :inputCheck true.
 
-
-
-?ll a :ShortDescription.
-
-?ll log:equalTo {?extendedFrom ?action ?to}.
-
-?Goal e:graphList ?glist.
-
-?l list:in ?glist. 
-
-?l log:equalTo {?s ?p ?o}.
-
-
-
-#this here is a special extension for the use case
-?l :inputCheck true.
-
-
-
-?to log:includes {?s ?p ?o}.
-
-}
-=>
-{:keep :action ?action}.
-
-
-{
-:keep :action ?action.
-
-
-
-?ll a :ShortDescription.
-?ll log:equalTo {?extendedFrom ?action ?to}.
-
-
-
-
-?lll a :ShortDescription.
-?lll log:equalTo {?extendedFrom2 ?action2 ?to2}.
-
-
-
-?extendedFrom e:graphList ?glist.
-?l list:in ?glist.  
-?l log:equalTo {?s ?p ?o}.
-#this here is a special extension for the use case
-?l :inputCheck true.
-
-
-
-?to2 log:includes {?s ?p ?o}.
+    ?to log:includes {?s ?p ?o}.
 }
 =>
 {
-:keep :action ?action2
+    :keep :action ?action
+}.
+
+
+{
+    :keep :action ?action.
+
+    ?ll a :ShortDescription.
+    ?ll log:equalTo {?extendedFrom ?action ?to}.
+
+    ?lll a :ShortDescription.
+    ?lll log:equalTo {?extendedFrom2 ?action2 ?to2}.
+
+    ?extendedFrom e:graphList ?glist.
+    ?l list:in ?glist.  
+    ?l log:equalTo {?s ?p ?o}.
+    #this here is a special extension for the use case
+    ?l :inputCheck true.
+
+    ?to2 log:includes {?s ?p ?o}.
+}
+=>
+{
+    :keep :action ?action2
 }.
 
 
 #include reasoning rules.
 {
-:keep :action ?action.
-?ll a :ShortDescription.
-?ll log:equalTo {?extendedFrom ?action ?to}.
+    :keep :action ?action.
+    ?ll a :ShortDescription.
+    ?ll log:equalTo {?extendedFrom ?action ?to}.
 
+    ?lll a :ShortDescription.
+    ?lll log:equalTo {?extendedFrom2 ?action2 ?to2}.
 
+    ?extendedFrom e:graphList ?glist.
+    ?l list:in ?glist.  
 
+    ?to2 e:graphList ?toglist.
+    ?tol list:in ?toglist.
 
-?lll a :ShortDescription.
-?lll log:equalTo {?extendedFrom2 ?action2 ?to2}.
+    ?l log:equalTo {?s ?p ?o}.
 
+    #this here is a special extension for the use case
+    ?l :inputCheck true.
 
-
-?extendedFrom e:graphList ?glist.
-?l list:in ?glist.  
-
-?to2 e:graphList ?toglist.
-?tol list:in ?toglist.
-
-?l log:equalTo {?s ?p ?o}.
-
-#this here is a special extension for the use case
-?l :inputCheck true.
-
-
-?l :reliesOnChain ?tol.
-#?to2 log:includes {?s ?p ?o}.
+    ?l :reliesOnChain ?tol.
+    #?to2 log:includes {?s ?p ?o}.
 }
 =>
 {
-:keep :action ?action2
+    :keep :action ?action2
 }.
 
 
-{?l :reliesOnChain ?tol.}
+{
+    ?l :reliesOnChain ?tol.
+}
 <=
 {
-?l :reliesOn ?tol.
-("!") e:derive true.
+    ?l :reliesOn ?tol.
+    ("!") e:derive true.
 }.
 
-{?a :reliesOnChain ?c.}
+# Transitive
+{
+    ?a :reliesOnChain ?c.
+}
 <=
 {
-?a :reliesOn ?b.
+    ?a :reliesOn ?b.
 
+    #this here is a special extension for the use case
+    ?a :inputCheck true.
 
-
-#this here is a special extension for the use case
-?a :inputCheck true.
-
-?b :reliesOnChain ?c.
+    ?b :reliesOnChain ?c.
 }.
 
 #reasoning rules directly on the goal 
 {
+    {
+        ?SCOPE gps:findpath (?Goal ?PATH ?DURATION ?COST ?BELIEF ?COMFORT ?list).
+    } => ?head.
 
+    ?Goal e:graphList ?glist.
+    ?l list:in ?glist. 
 
+    ?ll a :ShortDescription.
+    ?ll log:equalTo {?extendedFrom ?action ?to}.
+    ?to e:graphList ?lllist.
+    ?l2 list:in ?lllist.
 
-{
-    ?SCOPE gps:findpath (?Goal ?PATH ?DURATION ?COST ?BELIEF ?COMFORT ?list).
-} => ?head.
+    #this here is a special extension for the use case
+    ?l :inputCheck true.
 
-?Goal e:graphList ?glist.
-?l list:in ?glist. 
-
-
-?ll a :ShortDescription.
-?ll log:equalTo {?extendedFrom ?action ?to}.
-?to e:graphList ?lllist.
-?l2 list:in ?lllist.
-
-
-
-
-
-#this here is a special extension for the use case
-?l :inputCheck true.
-
-?l :reliesOnChain ?l2.
-
-
-
-
+    ?l :reliesOnChain ?l2.
 }
 =>
-{:keep :action ?action}.
-
-
-
-{?x :inputCheck true.}<=
 {
-?x :inInputRule true.
-?x log:equalTo {?s ?p ?o}.
-
-("!") e:derive true.
-("fail") e:derive true.
+    :keep :action ?action
 }.
 
-{?x :inputCheck true.}<={}.
+
+{
+    ?x :inputCheck true.
+}
+<=
+{
+    ?x :inInputRule true.
+    ?x log:equalTo {?s ?p ?o}.
+
+    ("!") e:derive true.
+    ("fail") e:derive true.
+}.
+
+{ ?x :inputCheck true. } <= {}.
 
 
 
