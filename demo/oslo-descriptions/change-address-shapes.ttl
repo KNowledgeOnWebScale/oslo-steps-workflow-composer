@@ -2,7 +2,7 @@
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
 @prefix sh: <http://www.w3.org/ns/shacl#> .
 @prefix ex: <https://example.org/ns/example#> .
-@prefix schema: <https://schema.org/> .
+@prefix schema: <http://schema.org/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix ops: <https://data.vlaanderen.be/shacl/persoon-basis#> .
@@ -19,7 +19,7 @@
 
 
 # needed for advanced shacl, to use prefixes in SPARQL query string
-<https://schema.org/> sh:prefix "schema" .
+<http://schema.org/> sh:prefix "schema" .
 <https://data.vlaanderen.be/doc/applicatieprofiel/persoon-basis#> sh:prefix "o-persoon" .
 
 

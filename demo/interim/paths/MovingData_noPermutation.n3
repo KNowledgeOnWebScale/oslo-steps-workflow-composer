@@ -16,11 +16,11 @@
 @prefix xl: <http://www.w3.org/2008/05/skos-xl#>.
 @prefix o-persoon: <https://data.vlaanderen.be/ns/persoon#>.
 @prefix foaf: <http://xmlns.com/foaf/0.1/>.
-@prefix schema: <https://schema.org/>.
-@prefix step: <https://fast.ilabt.imec.be/api/v5/steps#>.
+@prefix schema: <http://schema.org/>.
 @prefix ns1: <http://example.org/ns/example#>.
 @prefix state: <https://fast.ilabt.imec.be/api/v5/states#>.
 @prefix shape: <https://fast.ilabt.imec.be/api/v5/shapes#>.
+@prefix step: <https://fast.ilabt.imec.be/api/v5/steps#>.
 @prefix sh: <http://www.w3.org/ns/shacl#>.
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
 @prefix skos: <http://www.w3.org/2004/02/skos/core#>.

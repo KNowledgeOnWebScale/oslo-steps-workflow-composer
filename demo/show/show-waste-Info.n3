@@ -9,7 +9,7 @@
 @prefix xl: <http://www.w3.org/2008/05/skos-xl#>.
 @prefix o-persoon: <https://data.vlaanderen.be/ns/persoon#>.
 @prefix foaf: <http://xmlns.com/foaf/0.1/>.
-@prefix schema: <https://schema.org/>.
+@prefix schema: <http://schema.org/>.
 @prefix math: <http://www.w3.org/2000/10/swap/math#>.
 @prefix e: <http://eulersharp.sourceforge.net/2003/03swap/log-rules#>.
 @prefix step: <https://fast.ilabt.imec.be/api/v5/steps#>.

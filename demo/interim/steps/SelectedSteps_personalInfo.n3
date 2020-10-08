@@ -13,7 +13,7 @@
 @prefix ns1: <https://example.org/ns/example#>.
 @prefix foaf: <http://xmlns.com/foaf/0.1/>.
 @prefix sh: <http://www.w3.org/ns/shacl#>.
-@prefix schema: <https://schema.org/>.
+@prefix schema: <http://schema.org/>.
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
 @prefix skos: <http://www.w3.org/2004/02/skos/core#>.
 @prefix ops: <https://data.vlaanderen.be/shacl/persoon-basis#>.
@@ -40,4 +40,3 @@
 
 #2020-07-10T14:52:08.979Z in=142 out=4 ent=8 step=58 brake=2 inf=740375 sec=0.202 inf/sec=3665223
 #ENDS
-
