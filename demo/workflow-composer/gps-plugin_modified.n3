@@ -70,9 +70,8 @@
 #Check for permutations
 
 
-{?Path_s :permutationCheck ?Action.}<=
+{?Path_s :permutationCheck ?Action.} <=
 {
-
 ?Action  o-steps:requiresState o-steps:emptyState. 
 
 ("!") e:derive true.

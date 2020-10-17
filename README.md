@@ -32,7 +32,7 @@ noPermutations: makes sure you don't do any step twice, disable permutations
 |   |       app.handlebars
 |   |       index.json
 |   |
-|   +---choices
+|   +---choices: for each o-steps NOT componentLevelStep:Step you can try to create the subgoal (for GPS calculation), extraRule (required detailed data fields), and block (also required detailed data fields, in different format)
 |   |       selected_AdditionalData.n3
 |   |       selected_AddressChangeInOffice.n3
 |   |       selected_AddressSubmission.n3
@@ -41,9 +41,9 @@ noPermutations: makes sure you don't do any step twice, disable permutations
 |   |       selected_ContactData.n3
 |   |       selected_GreenWaste.n3
 |   |       selected_GreyWaste.n3
-|   |       selected_MovingData.n3
+|   |       selected_MovingData.n3: is both container and journey level step
 |   |       selected_PaperWaste.n3
-|   |       selected_PersonalInfo.n3
+|   |       selected_PersonalInfo.n3 `step:providePersonalInformation` #3.4
 |   |       selected_Policevisit.n3
 |   |       selected_SubmitWasteInfo.n3
 |   |       selected_Waste.n3
@@ -72,14 +72,14 @@ noPermutations: makes sure you don't do any step twice, disable permutations
 |   |   +---paths
 |   |   |       AdditionalData_noPermutation.n3
 |   |   |       AddressChangeInOffice_noPermutation.n3
-|   |   |       all_journey-paths.n3
+|   |   |       all_journey-paths.n3: output of GPS #2.2a
 |   |   |       BirthData_noPermutation.n3
 |   |   |       ChangeAddress_noPermutation.n3
 |   |   |       CitizenName_noPermutation.n3
 |   |   |       ContactData_noPermutation.n3
 |   |   |       GreenWaste_noPermutation.n3
 |   |   |       GreyWaste_noPermutation.n3
-|   |   |       journey-paths_noPermutations.n3
+|   |   |       journey-paths_noPermutations.n3: output of GPS #2.2b
 |   |   |       MovingData_noPermutation.n3
 |   |   |       PaperWaste_noPermutation.n3
 |   |   |       PersonalInfo_noPermutation.n3
@@ -97,7 +97,7 @@ noPermutations: makes sure you don't do any step twice, disable permutations
 |   |   |
 |   |   +---steps
 |   |   |       component-level-steps.n3: output of preprocessing: all component level steps in GPS #1.3
-|   |   |       container-level-steps.n3: output of preprocessing: all container level steps in GPS #1.2
+|   |   |       container-level-steps.n3: output of preprocessing: all container level steps in GPS #1.2,3.0
 |   |   |       GreyWaste_noPermutation.n3
 |   |   |       journey-level-steps.n3: output of preprocessing: all journey level steps in GPS #1.1, 2.0-1
 |   |   |       selectedSteps_additionalData.n3
@@ -108,7 +108,7 @@ noPermutations: makes sure you don't do any step twice, disable permutations
 |   |   |       selectedSteps_contactData.n3
 |   |   |       selectedSteps_greenWaste.n3
 |   |   |       selectedSteps_greyWaste.n3
-|   |   |       selectedSteps_Journey.n3: all preselected steps #2.1
+|   |   |       selectedSteps_Journey.n3: all preselected steps #2.1,2.2a-b
 |   |   |       selectedSteps_movingData.n3
 |   |   |       selectedSteps_paperWaste.n3
 |   |   |       SelectedSteps_personalInfo.n3
@@ -166,12 +166,12 @@ noPermutations: makes sure you don't do any step twice, disable permutations
 |   |           Goal_provideMovingData.n3
 |   |
 |   +---journey
-|   |       journeyGoal.n3: #2.1: the endgoal of the algorithm
+|   |       journeyGoal.n3: the endgoal of the algorithm #2.1,2.2a-b
 |   |
 |   +---oslo-descriptions: the descriptions of the algorithm/process
 |   |       change-address-shapes.ttl: the shapes of the different data elements #1.1-3
 |   |       change-address-states.ttl: the states, i.e., basically the label of a data element #1.1-3
-|   |       change-address-steps.ttl: the steps: how data flows from input to output per step #1.1-3
+|   |       change-address-steps.ttl: the steps: how data flows from input to output per step #1.1-3,2.2a-b
 |   |
 |   +---preselection
 |   |       pregeneration.n3: creates :ShortDescription and :reliesOn based on GPS rules #2.0
@@ -179,8 +179,8 @@ noPermutations: makes sure you don't do any step twice, disable permutations
 |   |       preselection.n3: checks which input is needed to reach the endgoal #2.1
 |   |
 |   +---profile
-|   |       knowledge.n3: #2.0-1 business rules
-|   |       personalInfo.n3
+|   |       knowledge.n3: business rules #2.0-2a-b,3.0
+|   |       personalInfo.n3: user data #2.2a-b
 |   |
 |   +---show
 |   |       getInfo.n3
@@ -222,8 +222,8 @@ noPermutations: makes sure you don't do any step twice, disable permutations
 |   |
 |   \---workflow-composer
 |           gps-plugin.n3
-|           gps-plugin_modified.n3
-|           gps-plugin_modified_noPermutations.n3
+|           gps-plugin_modified.n3: actual gps calculation #2.2a
+|           gps-plugin_modified_noPermutations.n3: actual gps calculation, not allowing permutations and each step can only be done once which increases performance #2.2b
 |
 +---ld-generation
 |       download-mapper.sh

@@ -29,35 +29,23 @@
 @prefix : <http://example.org#>.
 
 {
-{?map gps:description (?from ?between ?to ?step ?duration ?cost ?belief ?comfort)} <= ?Where.
+    {?map gps:description (?from ?between ?to ?step ?duration ?cost ?belief ?comfort)} <= ?Where.
 
+    (?Where ?to) log:conjunction ?all.
 
-(?Where ?to) log:conjunction ?all.
+    ?x e:findall ( {?ss ?pp ?oo}  {  ?all log:includes {?ss ?pp ?oo}. ?x e:call {?ss ?pp ?oo} } ?out ). 
 
+    (?all ?out) :unifyList ?all.
 
- ?x e:findall ( {?ss ?pp ?oo}  {  ?all log:includes {?ss ?pp ?oo}. ?x e:call {?ss ?pp ?oo} } ?out ). 
+    (?all ?to) e:graphIntersection ?to. 
 
+    ?x e:findall ( {?step :variablesToReplace ?o} {?to log:includes {?s ?p ?o. }. ?o e:label ?ooo. ?x e:fail { ?to log:includes {?o ?ppp ?oooo. }}. } ?lll ).
 
+    (({?step :expectedTriples ?to}) ?lll) list:append ?cons.
 
-(?all ?out) :unifyList ?all.
+    ?cons log:conjunction ?cons2.
 
-
-
-(?all ?to) e:graphIntersection ?to. 
-
-?x e:findall ( {?step :variablesToReplace ?o} {?to log:includes {?s ?p ?o. }. ?o e:label ?ooo. ?x e:fail { ?to log:includes {?o ?ppp ?oooo. }}. } ?lll ).
-
-
-
-
-
-
-(({?step :expectedTriples ?to}) ?lll) list:append ?cons.
-
-?cons log:conjunction ?cons2.
-
-?cons2 e:labelvars ?cons3.
-
+    ?cons2 e:labelvars ?cons3.
 }
 =>
 ?cons3.

@@ -6,31 +6,30 @@ PREFIX log: <http://www.w3.org/2000/10/swap/log#>
 @prefix list: <http://www.w3.org/2000/10/swap/list#>.
 
 {
-?head <= ?Where.
-?head log:equalTo {?Map gps:description ?list}.
-?list log:equalTo (?From ?Transition ?To ?Action ?Duration_n ?Cost_n ?Belief_n ?Comfort_n ).
-?From e:graphList ?FromList.
+    ?head <= ?Where.
+    ?head log:equalTo {?Map gps:description ?list}.
+    ?list log:equalTo (?From ?Transition ?To ?Action ?Duration_n ?Cost_n ?Belief_n ?Comfort_n ).
+    ?From e:graphList ?FromList.
 
-?Where e:graphList ?WhereList.
-(?FromList ?WhereList) list:append ?longlist.
-?longlist log:conjunction ?con.
+    ?Where e:graphList ?WhereList.
+    (?FromList ?WhereList) list:append ?longlist.
+    ?longlist log:conjunction ?con.
 }
 =>
 {
-{{?con ?Action ?To} a :ShortDescription.}<={}
+    {{?con ?Action ?To} a :ShortDescription.}<={}
 }.
 
 {
-?head <= ?body. 
-?body e:graphList ?list.
-?l list:in ?list.
-{?s ?p ?o} log:equalTo ?l. 
+    ?head <= ?body. 
+    ?body e:graphList ?list.
+    ?l list:in ?list.
+    {?s ?p ?o} log:equalTo ?l. 
 }
 =>
 {
-?head :reliesOn {?s ?p ?o}.
-{?head :reliesOn {?s ?p ?o}.}<={}.
-
+    ?head :reliesOn {?s ?p ?o}.
+    {?head :reliesOn {?s ?p ?o}.}<={}.
 }.
 
 

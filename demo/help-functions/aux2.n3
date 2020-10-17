@@ -4,24 +4,24 @@
 
 #the second element needs to be a list of graphs
 {
-(?result () ) :unifyList ?result.
+    (?result () ) :unifyList ?result.
 }
 <={
-("!") e:derive true.
+    ("!") e:derive true.
 }.
 
 {
-(?graph1 ?graphlist ) :unifyList ?result.
+    (?graph1 ?graphlist ) :unifyList ?result.
 }
 <=
 {
-?graphlist rdf:first ?first.
+    ?graphlist rdf:first ?first.
 
-?graphlist rdf:rest ?rest.
+    ?graphlist rdf:rest ?rest.
 
-?graph1 e:graphMember ?first.
-(?graph1 ?rest) :unifyList ?result.
-("!") e:derive true.
+    ?graph1 e:graphMember ?first.
+    (?graph1 ?rest) :unifyList ?result.
+    ("!") e:derive true.
 }.
 
 

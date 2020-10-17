@@ -5,84 +5,74 @@
 @prefix log: <http://www.w3.org/2000/10/swap/log#>.
 
 {
- (() ?out) :replace ?out.
+    (() ?out) :replace ?out.
 } <= 
 {}.
 
 {
- (?list ?replaced) :replace ?out.
+    (?list ?replaced) :replace ?out.
 } <= 
 {
+    ?list rdf:first ?first.
+    ?list rdf:rest ?rest.
 
+    ?first log:equalTo {?s ?p ?o}.
 
-?list rdf:first ?first.
-?list rdf:rest ?rest.
+    {?s ?p ?o} <= ?body.
 
-?first log:equalTo {?s ?p ?o}.
+    ?body log:notEqualTo true.
 
-{?s ?p ?o} <= ?body.
+    ?scope e:call ?body.
 
-?body log:notEqualTo true.
+    ("!") e:derive true.
 
-?scope e:call ?body.
+    (?replaced (?body)) list:append ?replaced2.
 
-
-
-("!") e:derive true.
-
-(?replaced (?body)) list:append ?replaced2.
-
-(?rest ?replaced2) :replace ?out.
-
+    (?rest ?replaced2) :replace ?out.
 }.
 
 {
- (?list ?replaced) :replace ?out.
+    (?list ?replaced) :replace ?out.
 } <= 
 {
+    ?list rdf:first ?first.
+    ?list rdf:rest ?rest.
 
+    ?first log:equalTo {?s ?p ?o}.
 
-?list rdf:first ?first.
-?list rdf:rest ?rest.
+    {?s ?p ?o} <= ?body.
 
-?first log:equalTo {?s ?p ?o}.
+    ?body log:notEqualTo true.
 
-{?s ?p ?o} <= ?body.
+    ("!") e:derive true.
 
-?body log:notEqualTo true.
+    (?replaced (?body)) list:append ?replaced2.
 
-("!") e:derive true.
-
-(?replaced (?body)) list:append ?replaced2.
-
-(?rest ?replaced2) :replace ?out.
-
+    (?rest ?replaced2) :replace ?out.
 }.
 
 {
- (?list ?replaced) :replace ?out.
+    (?list ?replaced) :replace ?out.
 } <= 
 {
-?list rdf:first ?first.
-?list rdf:rest ?rest.
+    ?list rdf:first ?first.
+    ?list rdf:rest ?rest.
 
-?scope e:call ?first.
+    ?scope e:call ?first.
 
-(?replaced (?first)) list:append ?replaced2.
+    (?replaced (?first)) list:append ?replaced2.
 
-(?rest ?replaced2) :replace ?out.
-
+    (?rest ?replaced2) :replace ?out.
 }.
 
 {
- (?list ?replaced) :replace ?out.
+    (?list ?replaced) :replace ?out.
 } <= 
 {
-?list rdf:first ?first.
-?list rdf:rest ?rest.
+    ?list rdf:first ?first.
+    ?list rdf:rest ?rest.
 
-(?replaced (?first)) list:append ?replaced2.
+    (?replaced (?first)) list:append ?replaced2.
 
-(?rest ?replaced2) :replace ?out.
-
+    (?rest ?replaced2) :replace ?out.
 }.

@@ -33,41 +33,40 @@
 { (?to ?value) :replaceValue ?newTo}
 <=
 {
-?to e:graphList ?list.
-(?to ?value ?list {}) :replace ?newTo.
+    ?to e:graphList ?list.
+    (?to ?value ?list {}) :replace ?newTo.
 }.
 
 {(?to ?value () ?newTo) :replace ?newTo.} <= {}.
 
 {
-(?to ?value ?list ?new) :replace ?newTo
+    (?to ?value ?list ?new) :replace ?newTo
 }<={
-?list rdf:first ?first.
-?list rdf:rest ?rest.
+    ?list rdf:first ?first.
+    ?list rdf:rest ?rest.
 
-?first log:equalTo {?s ?p ?o}.
+    ?first log:equalTo {?s ?p ?o}.
 
-?o e:label ?ooo. ?x e:fail { ?to log:includes {?o ?ppp ?oooo. }}.
+    ?o e:label ?ooo. ?x e:fail { ?to log:includes {?o ?ppp ?oooo. }}.
 
-("!") e:derive true.
+    ("!") e:derive true.
 
-(?new {?s ?p ?value}) log:conjunction ?new2.
+    (?new {?s ?p ?value}) log:conjunction ?new2.
 
-(?to ?value ?rest ?new2) :replace ?newTo
-
+    (?to ?value ?rest ?new2) :replace ?newTo
 }.
 
 {
-(?to ?value ?list ?new) :replace ?newTo
+    (?to ?value ?list ?new) :replace ?newTo
 }
 <=
 {
-?list rdf:first ?first.
-?list rdf:rest ?rest.
+    ?list rdf:first ?first.
+    ?list rdf:rest ?rest.
 
-(?new ?first) log:conjunction ?new2.
+    (?new ?first) log:conjunction ?new2.
 
-(?to ?value ?rest ?new2) :replace ?newTo.
+    (?to ?value ?rest ?new2) :replace ?newTo.
 }.
 
 

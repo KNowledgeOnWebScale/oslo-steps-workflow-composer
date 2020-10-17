@@ -29,29 +29,23 @@
 @prefix : <http://example.org#>.
 
 {
-?step :value ?value.
+    ?step :value ?value.
 
+    {?map gps:description (?from ?between ?to ?step ?duration ?cost ?belief ?comfort)} <= ?Where.
 
-{?map gps:description (?from ?between ?to ?step ?duration ?cost ?belief ?comfort)} <= ?Where.
+    _:x e:fail ?to.
 
-_:x e:fail ?to.
+    (?Where ?to) log:conjunction ?all.
 
-(?Where ?to) log:conjunction ?all.
+    ?x e:findall ( {?ss ?pp ?oo}  {  ?Where log:includes {?ss ?pp ?oo}. ?x e:call {?ss ?pp ?oo} } ?out ). 
 
+    (?all ?out) :unifyList ?all.
 
- ?x e:findall ( {?ss ?pp ?oo}  {  ?Where log:includes {?ss ?pp ?oo}. ?x e:call {?ss ?pp ?oo} } ?out ). 
+    (?all ?to) e:graphIntersection ?to. 
 
-(?all ?out) :unifyList ?all.
+    (?to ?value) :replaceValue ?result.
 
-(?all ?to) e:graphIntersection ?to. 
-
-(?to ?value) :replaceValue ?result.
-
-
-
-
-?result e:labelvars ?cons3.
-
+    ?result e:labelvars ?cons3.
 }
 =>
 ?cons3.

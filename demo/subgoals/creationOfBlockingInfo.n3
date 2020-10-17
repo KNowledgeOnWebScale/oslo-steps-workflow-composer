@@ -5,17 +5,14 @@
 @prefix log: <http://www.w3.org/2000/10/swap/log#>.
 
 {
-?action :findSubpath true.
+    ?action :findSubpath true.
 
+     {?map gps:description (?from ?between ?to ?action ?duration ?cost ?belief ?comfort) } <= ?body.
 
- {?map gps:description (?from ?between ?to ?action ?duration ?cost ?belief ?comfort) } <= ?body.
-
-?body e:graphCopy ?body2.
-?body2 log:includes {?s ?p ?o}. 
+    ?body e:graphCopy ?body2.
+    ?body2 log:includes {?s ?p ?o}. 
 }
 =>
 {
-{?s ?p ?o} :inInputRule true. 
+    {?s ?p ?o} :inInputRule true.
 }.
-
-

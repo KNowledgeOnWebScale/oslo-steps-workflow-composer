@@ -10,16 +10,16 @@
 @prefix : <http://example.org#>.
 
 # find paths in the state space from initial state to goal state within limits
-{?SCOPE gps:findpath (?Goal ?MarkedPath  ?Duration ?Cost ?Belief ?Comfort (?MaxDuration ?MaxCost ?MinBelief ?MinComfort))} <= {
+{?SCOPE gps:findpath (?Goal ?MarkedPath ?Duration ?Cost ?Belief ?Comfort (?MaxDuration ?MaxCost ?MinBelief ?MinComfort))} <= {
     ?SCOPE gps:findpaths (() ?Goal () 0.0 0.0 1.0 1.0 ?Path ?Duration ?Cost ?Belief ?Comfort (?MaxDuration ?MaxCost ?MinBelief ?MinComfort 1)).
 
-#mark independent subpaths
-?Path :mark (() ?MarkedPath).
+    #mark independent subpaths
+    ?Path :mark (() ?MarkedPath).
 }.
 
 
 {?SCOPE gps:findpath (?Goal ?Path ?Duration ?Cost ?Belief ?Comfort (?MaxDuration ?MaxCost ?MinBelief ?MinComfort ?MaxStagecount))} <= {
-    ?SCOPE gps:findpaths (() ?Goal () 0.0 0.0 1.0 1.0 ?Path  ?Duration ?Cost ?Belief ?Comfort (?MaxDuration ?MaxCost ?MinBelief ?MinComfort ?MaxStagecount)).
+    ?SCOPE gps:findpaths (() ?Goal () 0.0 0.0 1.0 1.0 ?Path ?Duration ?Cost ?Belief ?Comfort (?MaxDuration ?MaxCost ?MinBelief ?MinComfort ?MaxStagecount)).
 
 }.
 
@@ -36,7 +36,7 @@
 #    _:xx e:trace 10.
     
 
-#this test below can be critical in some applications
+    #this test below can be critical in some applications
     ?SCOPE e:fail ?To.
 #    _:xx e:trace 11.
     ?SCOPE e:findall (?Where {?SCOPE e:call ?Where.} ?ws).
@@ -79,10 +79,7 @@
 
     {?SCOPE gps:findpaths (?Maps_t ?Goal ?Path_t ?Duration_t ?Cost_t ?Belief_t ?Comfort_t ?Path ?Duration ?Cost ?Belief ?Comfort (?MaxDuration ?MaxCost ?MinBelief ?MinComfort ?MaxStagecount))} e:finalize {?To e:becomes ?From}.
 #_:xx e:trace 5.
-
 }.
-
-
 
 # counting the number of stages (a stage is a sequence of steps in the same map)
 {() gps:stagecount 1} <= {
@@ -162,8 +159,6 @@
 ?b :fullyIncludedIn ?a.
 }.
 
-
-
 {() :fullyIncludedIn ?a.} <= {}.
 
 {?b :fullyIncludedIn ?a.}
@@ -213,23 +208,23 @@
 {?Path :mark (?int  ?markedPath)}
 <=
 {
-?Path list:last ?last.
-?last o-steps:requiresState o-steps:emptyState. 
-("!") e:derive true.
+    ?Path list:last ?last.
+    ?last o-steps:requiresState o-steps:emptyState. 
+    ("!") e:derive true.
 
-?Path :independentTail (() ?tail).
-(?first ?tail ) list:append ?Path.
-((("unorderedList" ?tail)) ?int  ) list:append ?int2.
-?first :mark (?int2  ?markedPath)
+    ?Path :independentTail (() ?tail).
+    (?first ?tail ) list:append ?Path.
+    ((("unorderedList" ?tail)) ?int  ) list:append ?int2.
+    ?first :mark (?int2  ?markedPath)
 }.
 
 {?Path :mark (?int  ?markedPath)}
 <=
 {
-?Path list:last ?last.
-(?first (?last) ) list:append ?Path.
-((?last) ?int  ) list:append ?int2.
-?first :mark (?int2  ?markedPath)
+    ?Path list:last ?last.
+    (?first (?last) ) list:append ?Path.
+    ((?last) ?int  ) list:append ?int2.
+    ?first :mark (?int2  ?markedPath)
 }.
 
 #
@@ -238,16 +233,13 @@
 {?goal :goalCheck true}
 <=
 {
-?scope e:call ?goal.
-
-
+    ?scope e:call ?goal.
 }.
 
 {?goal :goalCheck true}
 <=
 {
-?scope e:fail ?goal.
-
+    ?scope e:fail ?goal.
 }.
 
 #
@@ -257,21 +249,19 @@
 {?ws :chooseWhere ?cWhere.}
 <=
 {
+    _:x e:findall ((?graph ?blanks) {?graph list:in ?ws. ?graph :countBlanks ?blanks. } ?out  ).
 
-_:x e:findall ((?graph ?blanks) {?graph list:in ?ws. ?graph :countBlanks ?blanks. } ?out  ).
-
-(?cWhere ?BW) list:in ?out.
-_:x e:findall ( ?blanks { (?graph ?blanks) list:in ?out. ?blanks math:lessThan ?BW  } () ).
-#_:xx e:trace ?cWhere.
-
+    (?cWhere ?BW) list:in ?out.
+    _:x e:findall ( ?blanks { (?graph ?blanks) list:in ?out. ?blanks math:lessThan ?BW  } () ).
+    #_:xx e:trace ?cWhere.
 }.
 
 #count blanks
 {?graph :countBlanks ?blanks}
 <=
 {
-_:x e:findall (1 {?graph log:includes ?triple. ?triple log:equalTo {?s ?p ?x}. ?x e:label ?label} ?xs ).
-?xs e:length ?blanks.
+    _:x e:findall (1 {?graph log:includes ?triple. ?triple log:equalTo {?s ?p ?x}. ?x e:label ?label} ?xs ).
+    ?xs e:length ?blanks.
 }.
 
 
