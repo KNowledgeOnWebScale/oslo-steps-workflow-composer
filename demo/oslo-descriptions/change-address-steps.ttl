@@ -30,7 +30,8 @@ step:providePersonalInformation a o-steps:JourneyLevelStep ;
                         state:citizenMobilePhoneNumber ,
                         state:citizenEmailAddress ,
                         state:citizenAddress;
-  o-steps:requiresState o-steps:emptyState.
+  o-steps:requiresState o-steps:emptyState;
+  rdfs:comment "Initialize all the administration concerning your general information".
 
 
 #provide moving details
@@ -40,7 +41,8 @@ step:provideMovingData a o-steps:JourneyLevelStep, o-steps:ContainerLevelStep ;
                          [ xl:literalForm "Gegevens over de geplande verhuizing"@nl ],
                          [ xl:literalForm "Details über den geplanten Umzug"@de ];
   o-steps:producesState state:movingDate, state:movingCity, state:movingAddress;
-  o-steps:requiresState o-steps:emptyState.
+  o-steps:requiresState o-steps:emptyState;
+  rdfs:comment "Initialize all the administration concerning your future destination".
 
 
 #get address  changed
@@ -62,7 +64,8 @@ step:changeAddress a o-steps:JourneyLevelStep  ;
                         state:movingCity, 
                         state:movingAddress ,
                         state:citizenEmailAddress ;
-  o-steps:producesState state:addressChangedOnEID .
+  o-steps:producesState state:addressChangedOnEID ;
+  rdfs:comment "The administration startup is ready, all that's left to do for you is enter the missing data about yourself".
 
 #container level
 step:confirmAddressChangeVisit a o-steps:ContainerLevelStep ;
@@ -126,15 +129,17 @@ step:submitWasteInfo a o-steps:JourneyLevelStep ;
   o-steps:hasDescription [ xl:literalForm "Waste info"@en ],
                          [ xl:literalForm "Informatie over afvalverwijdering"@nl ],
                          [ xl:literalForm "Informationen bezüglich der Abfallentsorgung "@de ];
-      o-steps:requiresState  state:movingDate, 
-                        state:movingCity, 
-                        state:citizenAddress,
-                        state:movingAddress;
-      o-steps:producesState state:wasteCollectionRequested.
+  o-steps:requiresState  state:movingDate,
+                         state:movingCity,
+                         state:citizenAddress,
+                         state:movingAddress;
+  o-steps:producesState state:wasteCollectionRequested;
+  rdfs:comment "The administration startup is ready, all that's left to do for you is enter the missing data about your future destination".
+
 
 #container level steps - personal info
-# Todo: add subpath links
 step:provideCitizenNameManually a o-steps:ContainerLevelStep ;
+  ex:subpathlink <https://fast.ilabt.imec.be/api/v5/plan/component_provideCitizenNameManually>;
   rdfs:label "Citizen's full name"@en ;
   rdfs:label "Inwoner naam"@nl ;
   rdfs:label "Einwohner Name"@de ;
@@ -145,6 +150,7 @@ step:provideCitizenNameManually a o-steps:ContainerLevelStep ;
   o-steps:producesState state:citizenFirstName, state:citizenLastName .
 
 step:provideContactInformation a o-steps:ContainerLevelStep ;
+  ex:subpathlink <https://fast.ilabt.imec.be/api/v5/plan/component_provideContactInformation>;
   o-steps:hasDescription [ xl:literalForm "Contact Information"@en ],
                          [ xl:literalForm "Contactgegevens"@nl ],
                          [ xl:literalForm "Kontaktinformationen"@de ];
@@ -152,25 +158,26 @@ step:provideContactInformation a o-steps:ContainerLevelStep ;
                         state:citizenMobilePhoneNumber ,
                         state:citizenEmailAddress ,
                         state:citizenAddress;
-  o-steps:requiresState o-steps:emptyState.
+  o-steps:requiresState o-steps:emptyState .
 
 step:provideBirthData a o-steps:ContainerLevelStep ;
+  ex:subpathlink <https://fast.ilabt.imec.be/api/v5/plan/component_provideBirthData>;
   o-steps:hasDescription [ xl:literalForm "Birth data"@en ],
                          [ xl:literalForm "Geboortegegevens"@nl ],
                          [ xl:literalForm "Geburtsdaten"@de ];
   o-steps:producesState state:citizenBirthDate ,
-                        state:citizenCityOfBirth ; 
-  o-steps:requiresState o-steps:emptyState.
-
+                        state:citizenCityOfBirth ;
+  o-steps:requiresState o-steps:emptyState .
 
 step:provideAdditionalInfo a o-steps:ContainerLevelStep ;
+  ex:subpathlink <https://fast.ilabt.imec.be/api/v5/plan/component_provideAdditionalInfo>;
   o-steps:hasDescription [ xl:literalForm "Additional data"@en ],
                          [ xl:literalForm "Aanvullende gegevens"@nl ],
                          [ xl:literalForm "Weitere Daten"@de ];
   o-steps:producesState state:citizenNationalNumber , 
                         state:citizenProfession ,                      
                         state:citizenNationality ; 
-  o-steps:requiresState o-steps:emptyState.
+  o-steps:requiresState o-steps:emptyState .
 
  
 
@@ -208,7 +215,7 @@ step:provideDataOfFamilyMembers a o-steps:ComponentLevelStep;
                                 [ xl:literalForm "Gegevens van gezinsleden"@nl ],
                                 [ xl:literalForm "Daten von Familienmitgliedern"@de ];
          o-steps:requiresState o-steps:emptyState ;
-         o-steps:producesState state:detailFamilyMember.
+         o-steps:producesState state:detailFamilyMember .
 
 
 step:getPolicevisit a o-steps:ComponentLevelStep;

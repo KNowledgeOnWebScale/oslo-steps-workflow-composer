@@ -19,11 +19,11 @@ PREFIX e: <http://eulersharp.sourceforge.net/2003/03swap/log-rules#>
 }
 <= 
 {
-?user ex:wasteCollectionRequested true.
-?user ex:addressChangeDeclared true.
-?user ex:transportRequested ?v.
-?user ex:mobilityRequested ?w.
-?user ex:drivingLicenceExchangeRequested ?z
+  ?user ex:wasteCollectionRequested true.
+  ?user ex:addressChangeDeclared true.
+  ?user ex:transportRequested ?v.
+  ?user ex:mobilityRequested ?w.
+  ?user ex:drivingLicenceExchangeRequested ?z
 }.
 
 
