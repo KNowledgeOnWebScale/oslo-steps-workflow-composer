@@ -14,9 +14,9 @@
 @prefix o-persoon: <https://data.vlaanderen.be/ns/persoon#>.
 @prefix foaf: <http://xmlns.com/foaf/0.1/>.
 @prefix schema: <http://schema.org/>.
-@prefix step: <https://fast.ilabt.imec.be/api/v5/steps#>.
-@prefix state: <https://fast.ilabt.imec.be/api/v5/states#>.
-@prefix shape: <https://fast.ilabt.imec.be/api/v5/shapes#>.
+@prefix step: <http://localhost:8000/steps#>.
+@prefix state: <http://localhost:8000/states#>.
+@prefix shape: <http://localhost:8000/shapes#>.
 @prefix sh: <http://www.w3.org/ns/shacl#>.
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
 @prefix skos: <http://www.w3.org/2004/02/skos/core#>.
@@ -28,27 +28,27 @@
 #container paths
 
 #todo: this still needs container steps
-step:providePersonalInformation ex:subpathlink <https://fast.ilabt.imec.be/api/v5/plan/component_providePersonalInformation>.
+step:providePersonalInformation ex:subpathlink <http://localhost:8000/plan/component_providePersonalInformation>.
 
 #todo: add container level
-step:provideMovingData ex:subpathlink <https://fast.ilabt.imec.be/api/v5/plan/component_provideMovingData>.
+step:provideMovingData ex:subpathlink <http://localhost:8000/plan/component_provideMovingData>.
 
-step:changeAddress ex:subpathlink <https://fast.ilabt.imec.be/api/v5/plan/container_changeAddress>.
+step:changeAddress ex:subpathlink <http://localhost:8000/plan/container_changeAddress>.
 
-step:submitWasteInfo ex:subpathlink <https://fast.ilabt.imec.be/api/v5/plan/container_submitWasteInfo>.
+step:submitWasteInfo ex:subpathlink <http://localhost:8000/plan/container_submitWasteInfo>.
 
 #component paths
-step:confirmAddressChangeVisit ex:subpathlink <https://fast.ilabt.imec.be/api/v5/plan/component_confirmAddressChangeVisit>.
+step:confirmAddressChangeVisit ex:subpathlink <http://localhost:8000/plan/component_confirmAddressChangeVisit>.
 
-step:addressChangeOnEIDInOffice ex:subpathlink <https://fast.ilabt.imec.be/api/v5/plan/component_addressChangeOnEIDInOffice>. 
+step:addressChangeOnEIDInOffice ex:subpathlink <http://localhost:8000/plan/component_addressChangeOnEIDInOffice>. 
 
-step:provideGreyWasteContainerInfo ex:subpathlink <https://fast.ilabt.imec.be/api/v5/plan/component_provideGreyWasteContainerInfo>.
+step:provideGreyWasteContainerInfo ex:subpathlink <http://localhost:8000/plan/component_provideGreyWasteContainerInfo>.
 
-step:provideGreenWasteContainerInfo ex:subpathlink <https://fast.ilabt.imec.be/api/v5/plan/component_provideGreenWasteContainerInfo>.
+step:provideGreenWasteContainerInfo ex:subpathlink <http://localhost:8000/plan/component_provideGreenWasteContainerInfo>.
 
-step:providePaperWasteContainerInfo ex:subpathlink <https://fast.ilabt.imec.be/api/v5/plan/component_providePaperWasteContainerInfo>.
+step:providePaperWasteContainerInfo ex:subpathlink <http://localhost:8000/plan/component_providePaperWasteContainerInfo>.
 
-step:submitWasteCollectionContainerLevel ex:subpathlink <https://fast.ilabt.imec.be/api/v5/plan/component_submitWasteCollectionContainerLevel>.
+step:submitWasteCollectionContainerLevel ex:subpathlink <http://localhost:8000/plan/component_submitWasteCollectionContainerLevel>.
 
 
 

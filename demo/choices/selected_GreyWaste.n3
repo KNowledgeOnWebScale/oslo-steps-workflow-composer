@@ -1,4 +1,4 @@
- @prefix step: <https://fast.ilabt.imec.be/api/v5/steps#> .
+@prefix step: <http://localhost:8000/steps#>.
 @prefix : <http://example.org#> .
 
 step:provideGreyWasteContainerInfo :findSubpath true.

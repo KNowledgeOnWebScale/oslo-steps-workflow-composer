@@ -8,7 +8,7 @@
 @prefix shp: <https://example.org/ns/shapes#>.
 @prefix sh: <http://www.w3.org/ns/shacl#>.
 @prefix xl: <http://www.w3.org/2008/05/skos-xl#>.
-@prefix step: <https://fast.ilabt.imec.be/api/v5/steps#>.
+@prefix step: <http://localhost:8000/steps#>.
 @prefix foaf: <http://xmlns.com/foaf/0.1/>.
 @prefix schema: <http://schema.org/>.
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#>.

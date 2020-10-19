@@ -1,4 +1,4 @@
 @prefix : <http://example.org#>.
-@prefix step: <https://fast.ilabt.imec.be/api/v5/steps#>.
+@prefix step: <http://localhost:8000/steps#>.
 
 step:provideCitizenPhoneNumberManually :value "1234577".

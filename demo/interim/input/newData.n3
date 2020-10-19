@@ -15,9 +15,9 @@
 @prefix schema: <http://schema.org/>.
 @prefix math: <http://www.w3.org/2000/10/swap/math#>.
 @prefix ns1: <http://example.org/ns/example#>.
-@prefix state: <https://fast.ilabt.imec.be/api/v5/states#>.
-@prefix shape: <https://fast.ilabt.imec.be/api/v5/shapes#>.
-@prefix step: <https://fast.ilabt.imec.be/api/v5/steps#>.
+@prefix state: <http://localhost:8000/states#>.
+@prefix shape: <http://localhost:8000/shapes#>.
+@prefix step: <http://localhost:8000/steps#>.
 @prefix sh: <http://www.w3.org/ns/shacl#>.
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
 @prefix skos: <http://www.w3.org/2004/02/skos/core#>.

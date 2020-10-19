@@ -4,18 +4,18 @@
 @prefix ex: <http://example.org/ns/example#> .
 @prefix xl: <http://www.w3.org/2008/05/skos-xl#> .
 
-@prefix state: <https://fast.ilabt.imec.be/api/v5/states#> .
-@prefix shape: <https://fast.ilabt.imec.be/api/v5/shapes#> .
-@prefix step: <https://fast.ilabt.imec.be/api/v5/steps#> .
+@prefix state: <http://localhost:8000/states#>.
+@prefix shape: <http://localhost:8000/shapes#>.
+@prefix step: <http://localhost:8000/steps#>.
 
-#@prefix state: <https://example.org/ns/example#> .
-#@prefix shape: <https://example.org/ns/example#> .
-#@prefix step: <https://example.org/ns/example#> .
+#@prefix state: <http://localhost:8000/states#>.
+#@prefix shape: <http://localhost:8000/shapes#>.
+#@prefix step: <http://localhost:8000/steps#>.
 
 #Journey level steps
 #provide personal details
 step:providePersonalInformation a o-steps:JourneyLevelStep ;
-  ex:subpathlink <https://fast.ilabt.imec.be/api/v5/plan/container_providePersonalInformation>;
+  ex:subpathlink <http://localhost:8000/plan/container_providePersonalInformation>;
   o-steps:hasDescription [ xl:literalForm "Personal data"@en ],
                          [ xl:literalForm "Persoonlijke gegevens"@nl ],
                          [ xl:literalForm "Persönliche Daten"@de ];
@@ -36,7 +36,7 @@ step:providePersonalInformation a o-steps:JourneyLevelStep ;
 
 #provide moving details
 step:provideMovingData a o-steps:JourneyLevelStep, o-steps:ContainerLevelStep ;
-  ex:subpathlink <https://fast.ilabt.imec.be/api/v5/plan/component_provideMovingData>;
+  ex:subpathlink <http://localhost:8000/plan/component_provideMovingData>;
   o-steps:hasDescription [ xl:literalForm "Data over the planned move"@en ],
                          [ xl:literalForm "Gegevens over de geplande verhuizing"@nl ],
                          [ xl:literalForm "Details über den geplanten Umzug"@de ];
@@ -47,7 +47,7 @@ step:provideMovingData a o-steps:JourneyLevelStep, o-steps:ContainerLevelStep ;
 
 #get address  changed
 step:changeAddress a o-steps:JourneyLevelStep  ;
-  ex:subpathlink <https://fast.ilabt.imec.be/api/v5/plan/container_changeAddress>;
+  ex:subpathlink <http://localhost:8000/plan/container_changeAddress>;
   o-steps:hasDescription [ xl:literalForm "Get address changed"@en ],
                          [ xl:literalForm "Laat het adres wijzigen"@nl ],
                          [ xl:literalForm "Die Adresse ändern lassen"@de ];
@@ -60,8 +60,8 @@ step:changeAddress a o-steps:JourneyLevelStep  ;
                         state:citizenProfession ,
                         state:citizenPhoneNumber ,
                         state:citizenMobilePhoneNumber ,
-                        state:movingDate, 
-                        state:movingCity, 
+                        state:movingDate,
+                        state:movingCity,
                         state:movingAddress ,
                         state:citizenEmailAddress ;
   o-steps:producesState state:addressChangedOnEID ;
@@ -69,7 +69,7 @@ step:changeAddress a o-steps:JourneyLevelStep  ;
 
 #container level
 step:confirmAddressChangeVisit a o-steps:ContainerLevelStep ;
-  ex:subpathlink <https://fast.ilabt.imec.be/api/v5/plan/component_confirmAddressChangeVisit>;
+  ex:subpathlink <http://localhost:8000/plan/component_confirmAddressChangeVisit>;
   rdfs:label "Confirmation of address change"@en ;
   rdfs:label "Bevestiging van adreswijziging"@nl ;
   rdfs:label "Bestätigung der Adressänderung"@de ;
@@ -87,13 +87,13 @@ step:confirmAddressChangeVisit a o-steps:ContainerLevelStep ;
                         state:citizenProfession ,
                         state:citizenPhoneNumber ,
                         state:citizenMobilePhoneNumber ,
-                        state:movingDate, 
-                        state:movingCity, 
+                        state:movingDate,
+                        state:movingCity,
                         state:movingAddress ,
                         state:citizenEmailAddress .
 
 step:addressChangeOnEIDInOffice a o-steps:ContainerLevelStep ;
-  ex:subpathlink <https://fast.ilabt.imec.be/api/v5/plan/component_addressChangeOnEIDInOffice>;
+  ex:subpathlink <http://localhost:8000/plan/component_addressChangeOnEIDInOffice>;
   rdfs:label "Update address on eID card"@en ;
   rdfs:label "Adreswijziging op eID kaart"@nl ;
   rdfs:label "Änderung der Adresse auf eID Karte"@de ;
@@ -122,10 +122,10 @@ step:visitOfficeForAddressChange a o-steps:ComponentLevelStep ;
   o-steps:producesState state:addressChangedOnEID  .
 
 
-                        
+
 #submit waste info
 step:submitWasteInfo a o-steps:JourneyLevelStep ;
-  ex:subpathlink <https://fast.ilabt.imec.be/api/v5/plan/container_submitWasteInfo>;
+  ex:subpathlink <http://localhost:8000/plan/container_submitWasteInfo>;
   o-steps:hasDescription [ xl:literalForm "Waste info"@en ],
                          [ xl:literalForm "Informatie over afvalverwijdering"@nl ],
                          [ xl:literalForm "Informationen bezüglich der Abfallentsorgung "@de ];
@@ -139,7 +139,7 @@ step:submitWasteInfo a o-steps:JourneyLevelStep ;
 
 #container level steps - personal info
 step:provideCitizenNameManually a o-steps:ContainerLevelStep ;
-  ex:subpathlink <https://fast.ilabt.imec.be/api/v5/plan/component_provideCitizenNameManually>;
+  ex:subpathlink <http://localhost:8000/plan/component_provideCitizenNameManually>;
   rdfs:label "Citizen's full name"@en ;
   rdfs:label "Inwoner naam"@nl ;
   rdfs:label "Einwohner Name"@de ;
@@ -150,7 +150,7 @@ step:provideCitizenNameManually a o-steps:ContainerLevelStep ;
   o-steps:producesState state:citizenFirstName, state:citizenLastName .
 
 step:provideContactInformation a o-steps:ContainerLevelStep ;
-  ex:subpathlink <https://fast.ilabt.imec.be/api/v5/plan/component_provideContactInformation>;
+  ex:subpathlink <http://localhost:8000/plan/component_provideContactInformation>;
   o-steps:hasDescription [ xl:literalForm "Contact Information"@en ],
                          [ xl:literalForm "Contactgegevens"@nl ],
                          [ xl:literalForm "Kontaktinformationen"@de ];
@@ -161,7 +161,7 @@ step:provideContactInformation a o-steps:ContainerLevelStep ;
   o-steps:requiresState o-steps:emptyState .
 
 step:provideBirthData a o-steps:ContainerLevelStep ;
-  ex:subpathlink <https://fast.ilabt.imec.be/api/v5/plan/component_provideBirthData>;
+  ex:subpathlink <http://localhost:8000/plan/component_provideBirthData>;
   o-steps:hasDescription [ xl:literalForm "Birth data"@en ],
                          [ xl:literalForm "Geboortegegevens"@nl ],
                          [ xl:literalForm "Geburtsdaten"@de ];
@@ -170,24 +170,24 @@ step:provideBirthData a o-steps:ContainerLevelStep ;
   o-steps:requiresState o-steps:emptyState .
 
 step:provideAdditionalInfo a o-steps:ContainerLevelStep ;
-  ex:subpathlink <https://fast.ilabt.imec.be/api/v5/plan/component_provideAdditionalInfo>;
+  ex:subpathlink <http://localhost:8000/plan/component_provideAdditionalInfo>;
   o-steps:hasDescription [ xl:literalForm "Additional data"@en ],
                          [ xl:literalForm "Aanvullende gegevens"@nl ],
                          [ xl:literalForm "Weitere Daten"@de ];
-  o-steps:producesState state:citizenNationalNumber , 
-                        state:citizenProfession ,                      
-                        state:citizenNationality ; 
+  o-steps:producesState state:citizenNationalNumber ,
+                        state:citizenProfession ,
+                        state:citizenNationality ;
   o-steps:requiresState o-steps:emptyState .
 
- 
-
-
-                      
 
 
 
 
-#component level steps 
+
+
+
+
+#component level steps
 step:requestPoliceVisit a o-steps:ComponentLevelStep;
   o-steps:hasDescription [ xl:literalForm "Request police visit"@en ],
                          [ xl:literalForm "Vraag politiebezoek aan"@nl ],
@@ -203,8 +203,8 @@ step:requestPoliceVisit a o-steps:ComponentLevelStep;
                         state:citizenProfession ,
                         state:citizenPhoneNumber ,
                         state:citizenMobilePhoneNumber ,
-                        state:movingDate, 
-                        state:movingCity, 
+                        state:movingDate,
+                        state:movingCity,
                         state:movingAddress ,
                         state:citizenEmailAddress,
                         state:familyInfoProvided,
@@ -223,14 +223,14 @@ step:getPolicevisit a o-steps:ComponentLevelStep;
                                 [ xl:literalForm "Politiebezoek"@nl ],
                                 [ xl:literalForm "Polizeibesuch"@de ];
          o-steps:requiresState  state:policeVisitRequested;
-         o-steps:producesState  state:addressChangeConfirmed .  
-            
+         o-steps:producesState  state:addressChangeConfirmed .
+
 step:provideAvailability a o-steps:ComponentLevelStep;
         o-steps:hasDescription [ xl:literalForm "Availability"@en ],
                                [ xl:literalForm "Beschikbaarheid"@nl ],
                                [ xl:literalForm "Verfügbarkeit"@de ];
         o-steps:requiresState o-steps:emptyState ;
-        o-steps:producesState state:availability .  
+        o-steps:producesState state:availability .
 
 step:provideNumberOfFamilyMembersManually a o-steps:ComponentLevelStep ;
   rdfs:label "Number of family members"@en ;
@@ -247,7 +247,7 @@ step:provideCitizenFirstNameManually a o-steps:ComponentLevelStep ;
   rdfs:label "Citizen's first name"@en ;
   rdfs:label "Inwoner voornaam"@nl ;
   rdfs:label "Einwohner Vorname"@de ;
-  o-steps:hasDescription step:firstNameDescriptionEnglish1 , 
+  o-steps:hasDescription step:firstNameDescriptionEnglish1 ,
                          [ xl:literalForm "Inwoner voornaam"@nl ],
                          [ xl:literalForm "Citizen's first name"@en ],
                          [ xl:literalForm "Einwohner Vorname"@de ];
@@ -278,7 +278,7 @@ step:provideCitizenGenderManually a o-steps:ComponentLevelStep ;
   o-steps:hasDescription step:genderDescriptionEnglish1 ,
                        [ xl:literalForm "Citizen's  gender"@en ],
                        [ xl:literalForm "Geslacht inwoner"@nl ],
-                       [ xl:literalForm "Einwohner Geschlecht"@de ];                       
+                       [ xl:literalForm "Einwohner Geschlecht"@de ];
   o-steps:requiresState o-steps:emptyState ;
   o-steps:producesState state:citizenGender .
 
@@ -292,7 +292,7 @@ step:provideCitizenEmailManually a o-steps:ComponentLevelStep ;
   o-steps:hasDescription step:emailDescriptionEnglish1  ,
                        [ xl:literalForm "Citizen's  email address"@en ],
                        [ xl:literalForm "Email inwoner"@nl ],
-                       [ xl:literalForm "Einwohner Email"@de ]; 
+                       [ xl:literalForm "Einwohner Email"@de ];
   o-steps:requiresState o-steps:emptyState ;
   o-steps:producesState state:citizenEmailAddress .
 
@@ -306,7 +306,7 @@ step:provideCitizenMobilePhoneNumberManually a o-steps:ComponentLevelStep ;
   o-steps:hasDescription step:mobilePhoneNumberDescriptionEnglish1 ,
                        [ xl:literalForm "Citizen's mobile phone number"@en ],
                        [ xl:literalForm "GSM inwoner"@nl ],
-                       [ xl:literalForm "Handynummer Einwohner"@de ]; 
+                       [ xl:literalForm "Handynummer Einwohner"@de ];
   o-steps:requiresState o-steps:emptyState ;
   o-steps:producesState state:citizenMobilePhoneNumber .
 
@@ -320,7 +320,7 @@ step:provideCitizenPhoneNumberManually a o-steps:ComponentLevelStep ;
   o-steps:hasDescription step:phoneNumberDescriptionEnglish1 ,
                        [ xl:literalForm "Citizen's  phone number"@en ],
                        [ xl:literalForm "Telefoon inwoner"@nl ],
-                       [ xl:literalForm "Telefonnummer Einwohner"@de ]; 
+                       [ xl:literalForm "Telefonnummer Einwohner"@de ];
   o-steps:requiresState o-steps:emptyState ;
   o-steps:producesState state:citizenPhoneNumber .
 
@@ -331,7 +331,7 @@ step:provideCitizenNationalNumberManually a o-steps:ComponentLevelStep ;
   rdfs:label "Citizen's national number"@en ;
   rdfs:label "Rijksregister inwoner"@nl ;
   rdfs:label "Einwohner Reichsregisternummer"@de ;
-  o-steps:hasDescription 
+  o-steps:hasDescription
                        [ xl:literalForm "Citizen's national number"@en ],
                        [ xl:literalForm "Rijksregister inwoner"@nl ],
                        [ xl:literalForm "Einwohner Reichsregisternummer"@de ];
@@ -342,7 +342,7 @@ step:provideCitizensNationalityManually a o-steps:ComponentLevelStep ;
   rdfs:label "Citizen's nationalaty"@en ;
   rdfs:label "Nationaliteit inwoner"@nl ;
   rdfs:label "Nationalität des Einwonders"@de ;
-  o-steps:hasDescription 
+  o-steps:hasDescription
                        [ xl:literalForm "Citizen's nationality"@en ],
                        [ xl:literalForm "Nationaliteit inwoner"@nl ],
                        [ xl:literalForm "Nationalität des Einwonders"@de ];
@@ -456,13 +456,13 @@ step:provideBillingAddressManually a o-steps:ComponentLevelStep ;
 
 
 step:submitWasteCollectionContainerLevel a o-steps:ContainerLevelStep ;
-  ex:subpathlink <https://fast.ilabt.imec.be/api/v5/plan/component_submitWasteCollectionContainerLevel>;
+  ex:subpathlink <http://localhost:8000/plan/component_submitWasteCollectionContainerLevel>;
   o-steps:hasDescription [ xl:literalForm  "Request Waste Collection"@en ],
    [ xl:literalForm  "Vraag afvalinzameling aan"@nl ],
    [ xl:literalForm  "Anfrage fuer Abfallabholung"@de ] ;
   o-steps:producesState state:wasteCollectionRequested  ;
-  o-steps:requiresState state:movingDate, 
-                        state:movingCity, 
+  o-steps:requiresState state:movingDate,
+                        state:movingCity,
                         state:citizenAddress,
                         state:movingAddress,
     state:numberOf40LiterGreyWasteContainers ,
@@ -472,11 +472,11 @@ step:submitWasteCollectionContainerLevel a o-steps:ContainerLevelStep ;
     state:greenWasteInfo,
     state:numberOf40LiterPaperWasteContainers ,
     state:numberOf240LiterPaperWasteContainers ,
-    state:numberOf1100LiterPaperWasteContainers 
+    state:numberOf1100LiterPaperWasteContainers
   .
 
 step:provideGreyWasteContainerInfo a o-steps:ContainerLevelStep ;
-  ex:subpathlink <https://fast.ilabt.imec.be/api/v5/plan/component_provideGreyWasteContainerInfo>;
+  ex:subpathlink <http://localhost:8000/plan/component_provideGreyWasteContainerInfo>;
   rdfs:label "Grey waste container(s)"@en ;
   rdfs:label "Grijze restafvalcontainer(s)"@nl ;
   rdfs:label "Graue Restabfallcontainer"@de ;
@@ -492,7 +492,7 @@ step:provideGreyWasteContainerInfo a o-steps:ContainerLevelStep ;
     state:greyWasteContainerLockInfo .
 
 step:provideGreenWasteContainerInfo a o-steps:ContainerLevelStep ;
-  ex:subpathlink <https://fast.ilabt.imec.be/api/v5/plan/component_provideGreenWasteContainerInfo>;
+  ex:subpathlink <http://localhost:8000/plan/component_provideGreenWasteContainerInfo>;
 	rdfs:label "Green GFT waste container(s)"@en ;
   rdfs:label "Groene GFT container(s)"@nl ;
   rdfs:label "Grüne Biomüllcontainer"@de ;
@@ -501,11 +501,11 @@ step:provideGreenWasteContainerInfo a o-steps:ContainerLevelStep ;
    [ xl:literalForm  "Groene GFT container(s)"@nl ],
    [ xl:literalForm  "Grüne Biomüllcontainer"@de ] ;
   o-steps:requiresState o-steps:emptyState ;
-  o-steps:producesState 
+  o-steps:producesState
            state:greenWasteInfo .
 
 step:providePaperWasteContainerInfo a o-steps:ContainerLevelStep ;
-  ex:subpathlink <https://fast.ilabt.imec.be/api/v5/plan/component_providePaperWasteContainerInfo>;
+  ex:subpathlink <http://localhost:8000/plan/component_providePaperWasteContainerInfo>;
   rdfs:label "Paper waste container(s)"@en ;
   rdfs:label "Papier container(s)"@nl ;
   rdfs:label "Papiercontainer"@de ;
@@ -652,8 +652,8 @@ step:showWasteCollection a o-steps:ComponentLevelStep ;
    [ xl:literalForm  "Toon afvalinfo"@nl ],
    [ xl:literalForm  "Zeige Abfallinfo"@de ] ;
   o-steps:producesState state:wasteInfoShownToUser  ;
-  o-steps:requiresState state:movingDate, 
-                        state:movingCity, 
+  o-steps:requiresState state:movingDate,
+                        state:movingCity,
                         state:citizenAddress,
                         state:movingAddress,
     state:numberOf40LiterGreyWasteContainers ,

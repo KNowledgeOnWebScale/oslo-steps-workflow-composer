@@ -3,9 +3,9 @@
 @prefix o-steps: <https://fast.ilabt.imec.be/ns/oslo-steps/0.2#>.
 @prefix ex: <http://example.org/ns/example#>.
 @prefix xl: <http://www.w3.org/2008/05/skos-xl#>.
-@prefix state: <https://fast.ilabt.imec.be/api/v5/states#>.
-@prefix shape: <https://fast.ilabt.imec.be/api/v5/shapes#>.
-@prefix step: <https://fast.ilabt.imec.be/api/v5/steps#>.
+@prefix state: <http://localhost:8000/states#>.
+@prefix shape: <http://localhost:8000/shapes#>.
+@prefix step: <http://localhost:8000/steps#>.
 @prefix p-plan: <http://purl.org/net/p-plan#>.
 @prefix ns1: <https://example.org/ns/example#>.
 @prefix foaf: <http://xmlns.com/foaf/0.1/>.
