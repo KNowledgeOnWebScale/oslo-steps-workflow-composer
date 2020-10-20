@@ -29,9 +29,9 @@
 @prefix gps: <http://josd.github.io/eye/reasoning/gps/gps-schema#>.
 @prefix oslo: <https://example.org/ns/oslo#>.
 @prefix ns3: <http://josd.github.io/.well-known/genid/pP7dSETOSHCTU6bSn:iLn_1X3mg#>.
-@prefix ns4: <http://josd.github.io/.well-known/genid/ZwZGj4qn:miZQNTCespnsOIwBjE#>.
-@prefix ns5: <http://josd.github.io/.well-known/genid/iqDI3CDkfzEYtWxiTXmD4bWoHSQ#>.
-@prefix ns6: <http://josd.github.io/.well-known/genid/SZ75YZFSwyx7nolvRCebvsP0IQw#>.
+@prefix ns4: <http://josd.github.io/.well-known/genid/_ERVLznVmLvCNsea1UtD:pT0MOc#>.
+@prefix ns5: <http://josd.github.io/.well-known/genid/UfewCvgjSt07d4kJ2xcxvZtqcx8#>.
+@prefix ns6: <http://josd.github.io/.well-known/genid/4Pq7cvYlrnRHfoJ1sMkLyBkmsQY#>.
 @prefix fn: <http://www.w3.org/2006/xpath-functions#>.
 @prefix crypto: <http://www.w3.org/2000/10/swap/crypto#>.
 @prefix string: <http://www.w3.org/2000/10/swap/string#>.
@@ -45,6 +45,6 @@
 step:showWasteCollection :canUse {ex:user a o-persoon:Inwoner. ex:user o-persoon:heeftVerblijfplaats :sk_0. :sk_0 o-persoon:verblijfsadres :sk_1. ex:user ex:lockNeededForGreyWasteContainer :sk_2. ex:user ex:movingAddress :sk_3. ex:user ex:movingCity :sk_4. ex:user ex:movingDate :sk_5. ex:user ex:needForGreenWasteContainer false. ex:user ex:numberOfRequested1100LiterPaperWasteContainers :sk_6. ex:user ex:numberOfRequested120LiterGreyWasteContainers :sk_7. ex:user ex:numberOfRequested240LiterGreyWasteContainers :sk_8. ex:user ex:numberOfRequested240LiterPaperWasteContainers :sk_9. ex:user ex:numberOfRequested40LiterGreyWasteContainers :sk_10. ex:user ex:numberOfRequested40LiterPaperWasteContainers :sk_11. ex:user ex:providedGreenWasteInformation true}.
 step:showWasteCollection :possiblyMissing :nothing.
 
-#2020-10-17T12:25:06.148Z in=688 out=2 ent=2 step=1 brake=2 inf=6443309 sec=1.718 inf/sec=3750471
+#2020-10-20T06:59:13.919Z in=688 out=2 ent=2 step=1 brake=2 inf=6441492 sec=2.562 inf/sec=2514244
 #ENDS
 

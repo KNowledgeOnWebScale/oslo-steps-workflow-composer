@@ -28,9 +28,9 @@
 @prefix math: <http://www.w3.org/2000/10/swap/math#>.
 @prefix oslo: <https://example.org/ns/oslo#>.
 @prefix ns3: <http://josd.github.io/.well-known/genid/pP7dSETOSHCTU6bSn:iLn_1X3mg#>.
-@prefix ns4: <http://josd.github.io/.well-known/genid/ZwZGj4qn:miZQNTCespnsOIwBjE#>.
+@prefix ns4: <http://josd.github.io/.well-known/genid/_ERVLznVmLvCNsea1UtD:pT0MOc#>.
 @prefix : <http://example.org#>.
-@prefix ns5: <http://josd.github.io/.well-known/genid/iqDI3CDkfzEYtWxiTXmD4bWoHSQ#>.
+@prefix ns5: <http://josd.github.io/.well-known/genid/UfewCvgjSt07d4kJ2xcxvZtqcx8#>.
 @prefix plan: <http://https://github.com/doerthe/plan#>.
 
 {ns1:movemap gps:description (true true {?U_71 schema:email ?U_72} step:provideCitizenEmailManually 1 1 0.97 0.97)} <= {(?U_71 schema:email) e:skolem ?U_72. ?U_71 a o-persoon:Inwoner}.
@@ -38,6 +38,6 @@
 {ns1:movemap gps:description (true true {?U_76 schema:contactPoint ?U_77. ?U_77 schema:contactType "telephone". ?U_77 schema:telephone ?U_78} step:provideCitizenPhoneNumberManually 1 1 0.97 0.97)} <= {(?U_76 schema:contactPoint schema:contactType "telephone") e:skolem ?U_77. (?U_76 schema:contactPoint schema:contactType "telephone" schema:telephone) e:skolem ?U_78. ?U_76 a o-persoon:Inwoner}.
 {ns1:movemap gps:description (true true {?U_79 o-persoon:heeftVerblijfplaats ?U_80. ?U_80 o-persoon:verblijfsadres ?U_81} step:provideCitizenAddressManually 1 1 0.97 0.97)} <= {(?U_80 o-persoon:verblijfsadres) e:skolem ?U_81. (?U_79 o-persoon:heeftVerblijfplaats) e:skolem ?U_80. ?U_79 a o-persoon:Inwoner}.
 
-#2020-10-17T12:24:55.013Z in=233 out=4 ent=8 step=34 brake=2 inf=1124402 sec=0.296 inf/sec=3798655
+#2020-10-20T06:58:57.394Z in=233 out=4 ent=8 step=34 brake=2 inf=1123144 sec=0.500 inf/sec=2246288
 #ENDS
 

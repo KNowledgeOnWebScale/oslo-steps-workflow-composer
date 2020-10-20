@@ -29,7 +29,7 @@
 @prefix math: <http://www.w3.org/2000/10/swap/math#>.
 @prefix oslo: <https://example.org/ns/oslo#>.
 @prefix ns3: <http://josd.github.io/.well-known/genid/pP7dSETOSHCTU6bSn:iLn_1X3mg#>.
-@prefix ns4: <http://josd.github.io/.well-known/genid/iqDI3CDkfzEYtWxiTXmD4bWoHSQ#>.
+@prefix ns4: <http://josd.github.io/.well-known/genid/UfewCvgjSt07d4kJ2xcxvZtqcx8#>.
 
 {_:sk_0 schema:contactPoint _:sk_1} :inInputRule true.
 {_:sk_0 schema:contactPoint _:sk_2} :inInputRule true.
@@ -53,6 +53,6 @@
 {_:sk_0 ns1:movingCity _:sk_17} :inInputRule true.
 {_:sk_0 ns1:movingDate _:sk_18} :inInputRule true.
 
-#2020-10-17T12:24:48.499Z in=13 out=21 ent=21 step=21 brake=1 inf=139994 sec=0.093 inf/sec=1505312
+#2020-10-20T06:58:47.585Z in=13 out=21 ent=21 step=21 brake=1 inf=139569 sec=0.156 inf/sec=894673
 #ENDS
 

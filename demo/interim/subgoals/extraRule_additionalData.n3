@@ -29,10 +29,10 @@
 @prefix math: <http://www.w3.org/2000/10/swap/math#>.
 @prefix oslo: <https://example.org/ns/oslo#>.
 @prefix ns3: <http://josd.github.io/.well-known/genid/pP7dSETOSHCTU6bSn:iLn_1X3mg#>.
-@prefix ns4: <http://josd.github.io/.well-known/genid/iqDI3CDkfzEYtWxiTXmD4bWoHSQ#>.
+@prefix ns4: <http://josd.github.io/.well-known/genid/UfewCvgjSt07d4kJ2xcxvZtqcx8#>.
 
 {?U_13 e:findall ({?U_15 ?U_14 ?U_16} {{?U_2 a o-persoon:Inwoner} log:includes {?U_15 ?U_14 ?U_16}. ?U_13 e:call {?U_15 ?U_14 ?U_16}} ?U_17). ({?U_2 a o-persoon:Inwoner} ?U_17) :unifyList {?U_2 a o-persoon:Inwoner}. {?U_2 a o-persoon:Inwoner} e:labelvars ?U_18} => ?U_18.
 
-#2020-10-17T12:24:58.079Z in=13 out=1 ent=1 step=1 brake=2 inf=110128 sec=0.078 inf/sec=1411897
+#2020-10-20T06:59:01.892Z in=13 out=1 ent=1 step=1 brake=2 inf=109736 sec=0.125 inf/sec=877888
 #ENDS
 

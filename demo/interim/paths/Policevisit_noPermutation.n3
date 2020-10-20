@@ -29,13 +29,13 @@
 @prefix var: <https://example.org/ns/var#>.
 @prefix oslo: <https://example.org/ns/oslo#>.
 @prefix ns3: <http://josd.github.io/.well-known/genid/pP7dSETOSHCTU6bSn:iLn_1X3mg#>.
-@prefix ns4: <http://josd.github.io/.well-known/genid/iqDI3CDkfzEYtWxiTXmD4bWoHSQ#>.
-@prefix ns5: <http://josd.github.io/.well-known/genid/ZwZGj4qn:miZQNTCespnsOIwBjE#>.
+@prefix ns4: <http://josd.github.io/.well-known/genid/UfewCvgjSt07d4kJ2xcxvZtqcx8#>.
+@prefix ns5: <http://josd.github.io/.well-known/genid/_ERVLznVmLvCNsea1UtD:pT0MOc#>.
 @prefix plan: <http://https://github.com/doerthe/plan#>.
-@prefix ns6: <http://josd.github.io/.well-known/genid/GuMRDSkfBPW_D8pnd768mYU6hGw#>.
+@prefix ns6: <http://josd.github.io/.well-known/genid/sOqxNYY7x8N7DfPYR2XcmSy7M4k#>.
 
 _:sk_39 gps:path ((("unorderedList" (step:provideDataOfFamilyMembers step:provideNumberOfFamilyMembersManually step:provideAvailability)) step:requestPoliceVisit step:getPolicevisit) 5.0 5.0 0.8587340256999999 0.8587340256999999).
 
-#2020-10-17T12:24:49.747Z in=737 out=1 ent=22 step=3 brake=4 inf=680271 sec=0.171 inf/sec=3978193
+#2020-10-20T06:58:49.276Z in=745 out=1 ent=22 step=3 brake=4 inf=687746 sec=0.250 inf/sec=2750984
 #ENDS
 

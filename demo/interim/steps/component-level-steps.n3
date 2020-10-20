@@ -28,7 +28,7 @@
 @prefix math: <http://www.w3.org/2000/10/swap/math#>.
 @prefix oslo: <https://example.org/ns/oslo#>.
 @prefix ns3: <http://josd.github.io/.well-known/genid/pP7dSETOSHCTU6bSn:iLn_1X3mg#>.
-@prefix ns4: <http://josd.github.io/.well-known/genid/ZwZGj4qn:miZQNTCespnsOIwBjE#>.
+@prefix ns4: <http://josd.github.io/.well-known/genid/_ERVLznVmLvCNsea1UtD:pT0MOc#>.
 
 {ns1:movemap gps:description (true true {?t_8 ns1:hasAppointmentDate ?U_28} step:makeAppointmentForAddressChange 1 1 0.97 0.97)} <= {(?t_8 ns1:hasAppointmentDate) e:skolem ?U_28. ?t_8 a o-persoon:Inwoner. ?t_8 ns1:confirmationOfAddressChange true}.
 {ns1:movemap gps:description (true true {?t_8 ns1:addressChanged true} step:visitOfficeForAddressChange 1 1 0.97 0.97)} <= {?t_8 a o-persoon:Inwoner. ?t_8 ns1:hasAppointmentDate ?U_28}.
@@ -70,6 +70,6 @@
 {ns1:movemap gps:description (true true {?t_8 ns1:wasteCollectionRequested true} step:submitWasteCollectionComponentLevel 1 1 0.97 0.97)} <= {?t_8 a o-persoon:Inwoner. ?t_8 ns1:wasteInfoShownToUser true}.
 {ns1:movemap gps:description (true true {?t_8 ns1:wasteInfoShownToUser true} step:showWasteCollection 1 1 0.97 0.97)} <= {?t_8 a o-persoon:Inwoner. ?t_8 o-persoon:heeftVerblijfplaats ?t_15. ?t_15 o-persoon:verblijfsadres ?t_16. ?t_8 ns1:lockNeededForGreyWasteContainer ?U_19. ?t_8 ns1:movingAddress ?U_13. ?t_8 ns1:movingCity ?U_15. ?t_8 ns1:movingDate ?U_12. ?t_8 ns1:numberOfRequested1100LiterPaperWasteContainers ?U_27. ?t_8 ns1:numberOfRequested120LiterGreyWasteContainers ?U_17. ?t_8 ns1:numberOfRequested240LiterGreyWasteContainers ?U_18. ?t_8 ns1:numberOfRequested240LiterPaperWasteContainers ?U_26. ?t_8 ns1:numberOfRequested40LiterGreyWasteContainers ?U_16. ?t_8 ns1:numberOfRequested40LiterPaperWasteContainers ?U_25. ?t_8 ns1:providedGreenWasteInformation true}.
 
-#2020-10-17T12:24:23.502Z in=1381 out=39 ent=137 step=474 brake=4 inf=1142064 sec=0.296 inf/sec=3858324
+#2020-10-20T06:58:17.541Z in=1389 out=39 ent=137 step=474 brake=4 inf=1149532 sec=0.500 inf/sec=2299064
 #ENDS
 

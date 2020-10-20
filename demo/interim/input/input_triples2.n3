@@ -29,15 +29,15 @@
 @prefix list: <http://www.w3.org/2000/10/swap/list#>.
 @prefix oslo: <https://example.org/ns/oslo#>.
 @prefix ns3: <http://josd.github.io/.well-known/genid/pP7dSETOSHCTU6bSn:iLn_1X3mg#>.
-@prefix ns4: <http://josd.github.io/.well-known/genid/ZwZGj4qn:miZQNTCespnsOIwBjE#>.
+@prefix ns4: <http://josd.github.io/.well-known/genid/_ERVLznVmLvCNsea1UtD:pT0MOc#>.
 @prefix ns5: <http://josd.github.io/.well-known/genid/3xusu:8P3::CpVSgPAirSB1FrCA#>.
-@prefix ns6: <http://josd.github.io/.well-known/genid/_LbPHzc6sudj8svK_9q7Qhhb2fc#>.
-@prefix ns7: <http://josd.github.io/.well-known/genid/lpsO24kT_sN62hwOiqdEX2aPVQA#>.
+@prefix ns6: <http://josd.github.io/.well-known/genid/_IvQj3Jq4DXuBE4wmBT9VgB17XI#>.
+@prefix ns7: <http://josd.github.io/.well-known/genid/Fm6pfIM1wydgsxwHGpYa6BVVnmY#>.
 
 ex:user schema:contactPoint ns7:t_0.
 ns7:t_0 schema:contactType "telephone".
 ns7:t_0 schema:telephone "1234577".
 
-#2020-10-17T12:25:02.699Z in=58 out=3 ent=3 step=1 brake=2 inf=273881 sec=0.140 inf/sec=1956293
+#2020-10-20T06:59:07.796Z in=58 out=3 ent=3 step=1 brake=2 inf=272515 sec=0.171 inf/sec=1593655
 #ENDS
 

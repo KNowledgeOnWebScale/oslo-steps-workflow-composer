@@ -29,9 +29,9 @@
 @prefix gps: <http://josd.github.io/eye/reasoning/gps/gps-schema#>.
 @prefix oslo: <https://example.org/ns/oslo#>.
 @prefix ns3: <http://josd.github.io/.well-known/genid/pP7dSETOSHCTU6bSn:iLn_1X3mg#>.
-@prefix ns4: <http://josd.github.io/.well-known/genid/ZwZGj4qn:miZQNTCespnsOIwBjE#>.
-@prefix ns5: <http://josd.github.io/.well-known/genid/iqDI3CDkfzEYtWxiTXmD4bWoHSQ#>.
-@prefix ns6: <http://josd.github.io/.well-known/genid/SZ75YZFSwyx7nolvRCebvsP0IQw#>.
+@prefix ns4: <http://josd.github.io/.well-known/genid/_ERVLznVmLvCNsea1UtD:pT0MOc#>.
+@prefix ns5: <http://josd.github.io/.well-known/genid/UfewCvgjSt07d4kJ2xcxvZtqcx8#>.
+@prefix ns6: <http://josd.github.io/.well-known/genid/4Pq7cvYlrnRHfoJ1sMkLyBkmsQY#>.
 @prefix fn: <http://www.w3.org/2006/xpath-functions#>.
 @prefix crypto: <http://www.w3.org/2000/10/swap/crypto#>.
 @prefix string: <http://www.w3.org/2000/10/swap/string#>.
@@ -45,6 +45,6 @@
 step:changeAddress :canUse {ex:user a o-persoon:Inwoner. ex:user ex:movingAddress :sk_3. ex:user ex:movingCity :sk_4. ex:user ex:movingDate :sk_5}.
 step:changeAddress :possiblyMissing {ex:user schema:contactPoint _:sk_0. ex:user schema:contactPoint _:sk_1. _:sk_2 schema:contactType "gsm". _:sk_3 schema:contactType "telephone". ex:user schema:email _:sk_4. ex:user schema:hasOccupation _:sk_5. _:sk_6 schema:telephone _:sk_7. _:sk_8 schema:telephone _:sk_9. ex:user foaf:familyName _:sk_10. ex:user foaf:givenName _:sk_11. _:sk_12 o-persoon:datum _:sk_13. ex:user o-persoon:heeftGeboorte _:sk_14. ex:user o-persoon:heeftGeboorte _:sk_15. ex:user o-persoon:heeftNationaliteit _:sk_16. _:sk_17 o-persoon:nationaliteit _:sk_18. _:sk_19 o-persoon:plaats _:sk_20. ex:user o-persoon:registratie _:sk_21}.
 
-#2020-10-17T12:25:07.720Z in=688 out=2 ent=2 step=1 brake=2 inf=800245 sec=0.328 inf/sec=2439771
+#2020-10-20T06:59:15.478Z in=688 out=2 ent=2 step=1 brake=2 inf=798426 sec=0.281 inf/sec=2841374
 #ENDS
 

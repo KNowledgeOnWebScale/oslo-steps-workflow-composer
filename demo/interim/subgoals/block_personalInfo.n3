@@ -29,7 +29,7 @@
 @prefix math: <http://www.w3.org/2000/10/swap/math#>.
 @prefix oslo: <https://example.org/ns/oslo#>.
 @prefix ns3: <http://josd.github.io/.well-known/genid/pP7dSETOSHCTU6bSn:iLn_1X3mg#>.
-@prefix ns4: <http://josd.github.io/.well-known/genid/SZ75YZFSwyx7nolvRCebvsP0IQw#>.
+@prefix ns4: <http://josd.github.io/.well-known/genid/4Pq7cvYlrnRHfoJ1sMkLyBkmsQY#>.
 
 {(_:sk_0 o-persoon:nationaliteit) e:skolem _:sk_1} :inInputRule true.
 {(_:sk_2 o-persoon:datum) e:skolem _:sk_3} :inInputRule true.
@@ -50,6 +50,6 @@
 {(_:sk_8 o-persoon:registratie) e:skolem _:sk_17} :inInputRule true.
 {_:sk_8 a o-persoon:Inwoner} :inInputRule true.
 
-#2020-10-17T12:24:29.902Z in=6 out=18 ent=18 step=18 brake=1 inf=121330 sec=0.093 inf/sec=1304624
+#2020-10-20T06:58:22.356Z in=6 out=18 ent=18 step=18 brake=1 inf=120905 sec=0.078 inf/sec=1550064
 #ENDS
 

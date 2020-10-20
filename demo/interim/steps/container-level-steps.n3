@@ -28,7 +28,7 @@
 @prefix math: <http://www.w3.org/2000/10/swap/math#>.
 @prefix oslo: <https://example.org/ns/oslo#>.
 @prefix ns3: <http://josd.github.io/.well-known/genid/pP7dSETOSHCTU6bSn:iLn_1X3mg#>.
-@prefix ns4: <http://josd.github.io/.well-known/genid/iqDI3CDkfzEYtWxiTXmD4bWoHSQ#>.
+@prefix ns4: <http://josd.github.io/.well-known/genid/UfewCvgjSt07d4kJ2xcxvZtqcx8#>.
 
 {ns1:movemap gps:description (true true {?t_8 ns1:movingAddress ?U_13. ?t_8 ns1:movingCity ?U_15. ?t_8 ns1:movingDate ?U_12} step:provideMovingData 10 10 0.9 0.9)} <= {(?t_8 ns1:movingAddress) e:skolem ?U_13. (?t_8 ns1:movingCity) e:skolem ?U_15. (?t_8 ns1:movingDate) e:skolem ?U_12. ?t_8 a o-persoon:Inwoner}.
 {ns1:movemap gps:description (true true {?t_8 ns1:confirmationOfAddressChange true} step:confirmAddressChangeVisit 10 10 0.9 0.9)} <= {?t_8 a o-persoon:Inwoner. ?t_8 schema:contactPoint ?U_0. ?t_8 schema:contactPoint ?U_2. ?U_0 schema:contactType "gsm". ?U_2 schema:contactType "telephone". ?t_8 schema:email ?U_7. ?t_8 schema:hasOccupation ?U_10. ?U_0 schema:telephone ?U_1. ?U_2 schema:telephone ?U_3. ?t_8 foaf:familyName ?U_5. ?t_8 foaf:givenName ?U_4. ?t_9 o-persoon:datum ?t_10. ?t_8 o-persoon:heeftGeboorte ?t_9. ?t_8 o-persoon:heeftGeboorte ?t_11. ?t_8 o-persoon:heeftNationaliteit ?t_12. ?t_12 o-persoon:nationaliteit ?t_13. ?t_11 o-persoon:plaats ?t_14. ?t_8 o-persoon:registratie ?U_8. ?t_8 ns1:movingAddress ?U_13. ?t_8 ns1:movingCity ?U_15. ?t_8 ns1:movingDate ?U_12}.
@@ -42,6 +42,6 @@
 {ns1:movemap gps:description (true true {?t_8 ns1:providedGreenWasteInformation true} step:provideGreenWasteContainerInfo 10 10 0.9 0.9)} <= {?t_8 a o-persoon:Inwoner}.
 {ns1:movemap gps:description (true true {?t_8 ns1:numberOfRequested1100LiterPaperWasteContainers ?U_27. ?t_8 ns1:numberOfRequested240LiterPaperWasteContainers ?U_26. ?t_8 ns1:numberOfRequested40LiterPaperWasteContainers ?U_25} step:providePaperWasteContainerInfo 10 10 0.9 0.9)} <= {(?t_8 ns1:numberOfRequested1100LiterPaperWasteContainers) e:skolem ?U_27. (?t_8 ns1:numberOfRequested240LiterPaperWasteContainers) e:skolem ?U_26. (?t_8 ns1:numberOfRequested40LiterPaperWasteContainers) e:skolem ?U_25. ?t_8 a o-persoon:Inwoner}.
 
-#2020-10-17T12:24:22.899Z in=1381 out=11 ent=109 step=538 brake=4 inf=1166955 sec=0.312 inf/sec=3740240
+#2020-10-20T06:58:16.369Z in=1389 out=11 ent=109 step=538 brake=4 inf=1174425 sec=0.250 inf/sec=4697700
 #ENDS
 

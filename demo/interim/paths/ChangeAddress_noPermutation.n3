@@ -29,12 +29,12 @@
 @prefix var: <https://example.org/ns/var#>.
 @prefix oslo: <https://example.org/ns/oslo#>.
 @prefix ns3: <http://josd.github.io/.well-known/genid/pP7dSETOSHCTU6bSn:iLn_1X3mg#>.
-@prefix ns4: <http://josd.github.io/.well-known/genid/SZ75YZFSwyx7nolvRCebvsP0IQw#>.
-@prefix ns5: <http://josd.github.io/.well-known/genid/iqDI3CDkfzEYtWxiTXmD4bWoHSQ#>.
+@prefix ns4: <http://josd.github.io/.well-known/genid/4Pq7cvYlrnRHfoJ1sMkLyBkmsQY#>.
+@prefix ns5: <http://josd.github.io/.well-known/genid/UfewCvgjSt07d4kJ2xcxvZtqcx8#>.
 @prefix plan: <http://https://github.com/doerthe/plan#>.
 
 _:sk_39 gps:path ((step:confirmAddressChangeVisit step:addressChangeOnEIDInOffice) 20.0 20.0 0.81 0.81).
 
-#2020-10-17T12:24:37.620Z in=734 out=1 ent=22 step=4 brake=4 inf=658968 sec=0.203 inf/sec=3246148
+#2020-10-20T06:58:31.848Z in=742 out=1 ent=22 step=4 brake=4 inf=666442 sec=0.218 inf/sec=3057073
 #ENDS
 

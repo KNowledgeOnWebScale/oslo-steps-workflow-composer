@@ -1,4 +1,4 @@
-#Processed by EYE v20.0423.1748 josd
+﻿#Processed by EYE v20.0423.1748 josd
 #eye profile/knowledge.n3 profile/personalInfo.n3 show/getInfo.n3 interim/steps/journey-level-steps.n3 show/Request_showInfoUsed_changeAddress.n3 --query show/query_InfoUsed.n3 --nope
 
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
