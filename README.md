@@ -19,6 +19,25 @@ DISSECT SBO deliverables: have descriptions about gps4ic
 
 noPermutations: makes sure you don't do any step twice, disable permutations
 
+## Docker
+
+We have our own Dockerfile. We typically do as follows:
+
+
+```
+docker build -t custom-eye .
+```
+
+for windows: edit src/services/reasoning.js to point to your current base path
+
+## Testing
+
+```
+cd src/
+npm install
+npm run test
+```
+
 ## Files
 
 |   run.*: testing script

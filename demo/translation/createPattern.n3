@@ -16,6 +16,7 @@ PREFIX list: <http://www.w3.org/2000/10/swap/list#>
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
 
 # Go from a state shape (= SHACL Shape) to :patterns
+# You basically have a SHACL shape: how does the data look like?
 # Very specific cases are momentarily supported
 
 # 1. shape with targetClasss AND qualifiedValueShape
