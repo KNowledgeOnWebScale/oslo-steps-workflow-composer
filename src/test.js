@@ -17,7 +17,7 @@ async function main() {
             states: "demo/_example1/example1_states.ttl",
             steps: "demo/_example1/example1_steps.ttl",
         },
-        goal: "?x a <https://data.vlaanderen.be/ns/persoon#Inwoner>; <http://example.org/ns/example#newPincodeRequested> true .",
+        goalState: "http://localhost:8000/states#newEidPincodeRequested",
     };
     // const config = {
     //     label: "moving",
@@ -50,7 +50,7 @@ async function main() {
 
     // 1️⃣
     // here we don't need block and extraRule
-    const goalPath = await generateJourneyGoal(config.goal, config.baseFolder);
+    const goalPath = await reasonJourneyGoal([config.oslo.steps, config.oslo.states, config.oslo.shapes], config.goalState, config.baseFolder);
     const journeyDescriptionsPath = await reasonShortStepDescriptions([journeyStepsPath], baseFolder, `journey`);
 
     // 2️⃣
@@ -304,36 +304,23 @@ async function reasonComponentLevelSteps(data, baseFolder) {
     return output;
 }
 
-async function generateJourneyGoal(data, baseFolder) {
-    const output = `${baseFolder}/goal_journey.n3`
-    if (cache[output]) {
-        return output;
+async function reasonJourneyGoal(data, goalState, baseFolder) {
+    const goalStatePath = `${baseFolder}/goal_journey_state.n3`
+    await fs.writeFile(path.resolve(basePath, goalStatePath), `<${goalState}> a <https://example.org/ns/example#goalState> .`, 'utf8');
+    const produceBase = {
+        data: [
+            "demo/translation/step-reasoning.n3",
+            "demo/translation/help.n3",
+            "demo/translation/createPattern.n3",
+            goalStatePath,
+        ].concat(data),
+        "eye:flags": [
+            "--quantify http://josd.github.io/.well-known/genid/",
+        ],
+        query: "demo/translation/createGoal.n3",
     }
-    const goal = `
-@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix p-plan: <http://purl.org/net/p-plan#> .
-@prefix o-address: <https://data.vlaanderen.be/ns/adres#> .
-@prefix o-steps: <https://fast.ilabt.imec.be/ns/oslo-steps/0.2#> .
-@prefix ex: <https://example.org/ns/example#> .
-@prefix xl: <http://www.w3.org/2008/05/skos-xl#> .
-@prefix : <https://example.org/ns/example#> .
-@prefix o-persoon: <https://data.vlaanderen.be/ns/persoon#>.
-
-@prefix gps: <http://josd.github.io/eye/reasoning/gps/gps-schema#>.
-@prefix math: <http://www.w3.org/2000/10/swap/math#>.
-@prefix e: <http://eulersharp.sourceforge.net/2003/03swap/log-rules#>.
-
-{
-    ?SCOPE gps:findpath (
-        {
-${data}
-        } ?PATH ?DURATION ?COST ?BELIEF ?COMFORT ( 1000 1000 0.2 0.2 ) ).
-} => {
-    ?x gps:path (?PATH ?DURATION ?COST ?BELIEF ?COMFORT).
-}.
-    `;
-    await fs.writeFile(path.resolve(basePath, output), goal, 'utf8');
-    cache[output] = output;
+    const output = `${baseFolder}/goal_journey.n3`;
+    await _cached(output, produceBase);
     return output;
 }
 

@@ -11,39 +11,26 @@ PREFIX list: <http://www.w3.org/2000/10/swap/list#>
 
 {
 
-?step a o-steps:ContainerLevelStep.
-
-
+?step a o-steps:Step.
 
 ?step o-steps:producesState ?ov.
 
-
-_:x e:findall ( ?pattern { ?step o-steps:requiresState ?y. ?y o-steps:hasStateShape ?stateShape. ?stateShape :pattern ?pattern} ?inlist). 
+?ov a :goalState .
 
 _:x e:findall ( ?pattern {?step  o-steps:producesState ?y. ?y o-steps:hasStateShape ?stateShape. ?stateShape :pattern ?pattern} ?outlist ).
 
-#_:h e:trace ?outlist.
-?step  o-steps:producesState ?y. ?y o-steps:hasStateShape ?stateShape. ?stateShape :pattern ?pattern.
-
-
-?inlist :separate ((true) ?ins1 (true) ?skolI).
 ?outlist :separate ((true) ?outs (true) ?skol).
 
-
-
-(  ?ins1 ?skol ({var:x a o-persoon:Inwoner. }) ) list:append ?in.
-
-#?outTriples  :produceSkolemfunctions (() ?skolem).
-#?outTriples log:conjunction ?out.
-
 ?outs log:conjunction ?out. 
-?in log:conjunction ?ins. 
+
 }
 =>
 {
-#the values here are currently fixed.
-{ex:movemap gps:description (true true ?out ?step 10 10 0.9 0.9)} <= ?ins.
-}.
+{
+    ?SCOPE gps:findpath (
+        ?out ?PATH ?DURATION ?COST ?BELIEF ?COMFORT ( 1000 1000 0.2 0.2 ) ).
+} => {
+    var:x gps:path (?PATH ?DURATION ?COST ?BELIEF ?COMFORT).
+}
 
-
-
+} .
