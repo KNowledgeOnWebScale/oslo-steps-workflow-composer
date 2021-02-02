@@ -2,7 +2,7 @@ const path = require('path');
 const fs = require('fs/promises');
 const eyePromise = require('./services/reasoning.js').eyePromise;
 const $rdf = require('rdflib')
-const {Namespace} = $rdf;
+const { Namespace } = $rdf;
 
 const basePath = path.resolve(__dirname, '..');
 const cache = {};
@@ -10,50 +10,73 @@ const cache = {};
 main();
 
 async function main() {
-    await fs.writeFile(path.resolve(basePath, 'demo/_TEST/profile.ttl'), '<https://example.org/ns/example#user> a <https://data.vlaanderen.be/ns/persoon#Inwoner> .', 'utf8');
     const config = {
+        label: "example1",
         oslo: {
-            steps: "demo/oslo-descriptions/change-address-steps.ttl",
-            states: "demo/oslo-descriptions/change-address-states.ttl",
-            shapes: "demo/oslo-descriptions/change-address-shapes.ttl",
+            shapes: "demo/_example1/example1_shapes.ttl",
+            states: "demo/_example1/example1_states.ttl",
+            steps: "demo/_example1/example1_steps.ttl",
         },
-        goal: "?x <https://example.org/ns/example#wasteCollectionRequested> true ; <https://example.org/ns/example#addressChanged> true .",
-        personalInfo: 'demo/_TEST/profile.ttl',
-
+        goal: "?x a <https://data.vlaanderen.be/ns/persoon#Inwoner>; <http://example.org/ns/example#newPincodeRequested> true .",
     };
+    // const config = {
+    //     label: "moving",
+    //     oslo: {
+    //         steps: "demo/oslo-descriptions/change-address-steps.ttl",
+    //         states: "demo/oslo-descriptions/change-address-states.ttl",
+    //         shapes: "demo/oslo-descriptions/change-address-shapes.ttl",
+    //     },
+    //     goal: "?x <https://example.org/ns/example#wasteCollectionRequested> true ; <https://example.org/ns/example#addressChanged> true .",
+    // };
+
+    try {
+        await fs.mkdir(path.resolve(basePath, 'demo/_result/'));
+    } catch (e) {
+        // OK already exists
+    }
+    try {
+    await fs.mkdir(path.resolve(basePath, 'demo/_result/', config.label));
+    } catch (e) {
+        // OK already exists
+    }
+    const baseFolder = `demo/_result/${config.label}`;
+    const personalInfoPath = baseFolder + '/profile.ttl';
+    config.baseFolder = baseFolder;
+    config.personalInfo = personalInfoPath;
+    await fs.writeFile(path.resolve(basePath, personalInfoPath), '<https://example.org/ns/example#user> a <https://data.vlaanderen.be/ns/persoon#Inwoner> .', 'utf8');
 
     // 0️⃣
-    const journeyStepsPath = await reasonJourneyLevelSteps([config.oslo.steps, config.oslo.states, config.oslo.shapes]);
+    const journeyStepsPath = await reasonJourneyLevelSteps([config.oslo.steps, config.oslo.states, config.oslo.shapes], baseFolder);
 
     // 1️⃣
     // here we don't need block and extraRule
-    const goalPath = await generateJourneyGoal(config.goal);
-    const journeyDescriptionsPath = await reasonShortStepDescriptions([journeyStepsPath], 'journey');
+    const goalPath = await generateJourneyGoal(config.goal, config.baseFolder);
+    const journeyDescriptionsPath = await reasonShortStepDescriptions([journeyStepsPath], baseFolder, `journey`);
 
     // 2️⃣
     // same as for other, but without block
-    const journeySelectedStepsPath = await reasonSelectedSteps([journeyStepsPath, journeyDescriptionsPath, goalPath], 'journey')
+    const journeySelectedStepsPath = await reasonSelectedSteps([journeyStepsPath, journeyDescriptionsPath, goalPath], config.baseFolder, `journey`, 'journey')
 
     // 3️⃣
     // not same as reasonPaths: this one doesn't include aux2
-    const journeyPathsPath = await reasonJourney([journeySelectedStepsPath, config.oslo.steps, config.personalInfo], goalPath);
+    const journeyPathsPath = await reasonJourney([journeySelectedStepsPath, config.oslo.steps, config.personalInfo], goalPath, config.baseFolder);
 
     const allJourneyLevelSteps = await parsePaths(journeyPathsPath);
     console.log(allJourneyLevelSteps.join(', '));
     for (const journeyLevelStep of allJourneyLevelSteps) {
         // 0️⃣
-        const containerStepsPath = await reasonContainerLevelSteps([config.oslo.steps, config.oslo.states, config.oslo.shapes]);
-        const containerDescriptionsPath = await reasonShortStepDescriptions([containerStepsPath], 'container');
+        const containerStepsPath = await reasonContainerLevelSteps([config.oslo.steps, config.oslo.states, config.oslo.shapes], config.baseFolder);
+        const containerDescriptionsPath = await reasonShortStepDescriptions([containerStepsPath], baseFolder, `container`);
         // 3️⃣
-        const containerPathsPath = await reasonStep(journeyLevelStep, containerStepsPath, containerDescriptionsPath, journeyStepsPath, config);
+        const containerPathsPath = await reasonStep(journeyLevelStep, containerStepsPath, containerDescriptionsPath, journeyStepsPath, config, 'containers');
         const allContainerLevelSteps = await parsePaths(containerPathsPath);
         console.log(`for journeyLevelStep ${journeyLevelStep}, we find following containerLevelSteps: ${allContainerLevelSteps.join(', ')}`);
         for (const containerLevelStep of allContainerLevelSteps) {
             // 0️⃣
-            const componentStepsPath = await reasonComponentLevelSteps([config.oslo.steps, config.oslo.states, config.oslo.shapes]);
-            const componentDescriptionsPath = await reasonShortStepDescriptions([componentStepsPath], 'component');
+            const componentStepsPath = await reasonComponentLevelSteps([config.oslo.steps, config.oslo.states, config.oslo.shapes], config.baseFolder);
+            const componentDescriptionsPath = await reasonShortStepDescriptions([componentStepsPath], baseFolder, `component`);
             // 3️⃣
-            const componentPathsPath = await reasonStep(containerLevelStep, componentStepsPath, componentDescriptionsPath, containerStepsPath, config);
+            const componentPathsPath = await reasonStep(containerLevelStep, componentStepsPath, componentDescriptionsPath, containerStepsPath, config, 'components');
             const allComponentLevelSteps = await parsePaths(componentPathsPath);
             console.log(`for containerLevelStep ${containerLevelStep}, we find following componentLevelSteps: ${allComponentLevelSteps.join(', ')}`);
         }
@@ -230,7 +253,7 @@ async function main() {
      */
 }
 
-async function reasonJourneyLevelSteps(data) {
+async function reasonJourneyLevelSteps(data, baseFolder) {
     const produceBase = {
         data: [
             "demo/translation/step-reasoning.n3",
@@ -242,12 +265,12 @@ async function reasonJourneyLevelSteps(data) {
         ],
         query: "demo/translation/mappingRuleCreationJourney.n3",
     }
-    const output = "demo/_TEST/journey_level_steps.n3";
+    const output = `${baseFolder}/steps_journey_level.n3`;
     await _cached(output, produceBase);
     return output;
 }
 
-async function reasonContainerLevelSteps(data) {
+async function reasonContainerLevelSteps(data, baseFolder) {
     const produceBase = {
         data: [
             "demo/translation/step-reasoning.n3",
@@ -259,12 +282,12 @@ async function reasonContainerLevelSteps(data) {
         ],
         query: "demo/translation/mappingRuleCreationContainer.n3",
     }
-    const output = "demo/_TEST/container_level_steps.n3";
+    const output = `${baseFolder}/steps_container_level.n3`;
     await _cached(output, produceBase);
     return output;
 }
 
-async function reasonComponentLevelSteps(data) {
+async function reasonComponentLevelSteps(data, baseFolder) {
     const produceBase = {
         data: [
             "demo/translation/step-reasoning.n3",
@@ -276,13 +299,13 @@ async function reasonComponentLevelSteps(data) {
         ],
         query: "demo/translation/mappingRuleCreationComponent.n3",
     }
-    const output = "demo/_TEST/component_level_steps.n3";
+    const output = `${baseFolder}/steps_component_level.n3`;
     await _cached(output, produceBase);
     return output;
 }
 
-async function generateJourneyGoal(data) {
-    const output = "demo/_TEST/journey_goal.n3"
+async function generateJourneyGoal(data, baseFolder) {
+    const output = `${baseFolder}/goal_journey.n3`
     if (cache[output]) {
         return output;
     }
@@ -314,19 +337,19 @@ ${data}
     return output;
 }
 
-async function reasonShortStepDescriptions(data, label) {
+async function reasonShortStepDescriptions(data, baseFolder, label) {
     const produceBase = {
         data: [
             "demo/profile/knowledge.n3",
         ].concat(data),
         query: "demo/preselection/pregeneration.n3",
     }
-    const output = `demo/_TEST/short_step_descriptions_${label}.n3`;
+    const output = `${baseFolder}/short_step_descriptions_${label}.n3`;
     await _cached(output, produceBase);
     return output;
 }
 
-async function reasonSelectedSteps(data, label) {
+async function reasonSelectedSteps(data, baseFolder, label, type) {
     const produceBase = {
         data: [
             "demo/preselection/preselection.n3",
@@ -334,12 +357,12 @@ async function reasonSelectedSteps(data, label) {
         ].concat(data),
         query: "demo/preselection/prequery.n3",
     }
-    const output = `demo/_TEST/selected_steps_${label}.n3`;
+    const output = `${baseFolder}/selected_steps_${type}_${label}.n3`;
     await _cached(output, produceBase);
     return output;
 }
 
-async function reasonJourney(data, query) {
+async function reasonJourney(data, query, baseFolder) {
     const produceBase = {
         data: [
             "demo/workflow-composer/gps-plugin_modified_noPermutations.n3",
@@ -347,7 +370,7 @@ async function reasonJourney(data, query) {
         ].concat(data),
         query,
     }
-    const output = `demo/_TEST/reason_journey.n3`;
+    const output = `${baseFolder}/reason_journey.n3`;
     await _cached(output, produceBase);
     return output;
 }
@@ -376,25 +399,25 @@ async function parsePaths(pathsPath) {
     return Object.values(steps);
 }
 
-async function reasonStep(parentLevelStep, stepsPath, descriptionsPath, parentStepsPath, config) {
+async function reasonStep(parentLevelStep, stepsPath, descriptionsPath, parentStepsPath, config, type) {
     const parentStepName = parentLevelStep.value.split('#')[1];
     // 0️⃣
-    const parentSelectedPath = await generateSelected(parentLevelStep, parentStepName)
+    const parentSelectedPath = await generateSelected(parentLevelStep, config.baseFolder, parentStepName, type)
 
     // 1️⃣
-    const parentBlockPath = await reasonBlock([parentSelectedPath, parentStepsPath], parentStepName)
-    const parentGoalPath = await reasonGoal([parentSelectedPath, parentStepsPath], parentStepName)
-    const parentExtraRulePath = await reasonExtraRule([parentSelectedPath, parentStepsPath], parentStepName)
+    const parentBlockPath = await reasonBlock([parentSelectedPath, parentStepsPath], config.baseFolder, parentStepName, type)
+    const parentGoalPath = await reasonGoal([parentSelectedPath, parentStepsPath], config.baseFolder, parentStepName, type)
+    const parentExtraRulePath = await reasonExtraRule([parentSelectedPath, parentStepsPath], config.baseFolder, parentStepName, type)
 
     // 2️⃣
-    const selectedStepsPath = await reasonSelectedSteps([stepsPath, descriptionsPath, parentGoalPath, parentBlockPath], parentStepName)
+    const selectedStepsPath = await reasonSelectedSteps([stepsPath, descriptionsPath, parentGoalPath, parentBlockPath], config.baseFolder, parentStepName, type)
 
     // 3️⃣
-    return await reasonPaths([selectedStepsPath, config.oslo.steps, config.personalInfo, parentExtraRulePath], parentGoalPath, parentStepName);
+    return await reasonPaths([selectedStepsPath, config.oslo.steps, config.personalInfo, parentExtraRulePath], parentGoalPath, config.baseFolder, parentStepName, type);
 }
 
-async function generateSelected(step, label) {
-    const output = `demo/_TEST/select_${label}.n3`
+async function generateSelected(step, baseFolder, label, type) {
+    const output = `${baseFolder}/select_${type}_${label}.n3`
     if (cache[output]) {
         return output;
     }
@@ -409,17 +432,17 @@ async function generateSelected(step, label) {
     return output;
 }
 
-async function reasonBlock(data, label) {
+async function reasonBlock(data, baseFolder, label, type) {
     const produceBase = {
         data,
         query: "demo/subgoals/creationOfBlockingInfo.n3",
     }
-    const output = `demo/_TEST/block_${label}.n3`;
+    const output = `${baseFolder}/block_${type}_${label}.n3`;
     await _cached(output, produceBase);
     return output;
 }
 
-async function reasonGoal(data, label) {
+async function reasonGoal(data, baseFolder, label, type) {
     const produceBase = {
         data,
         "eye:flags": [
@@ -427,22 +450,22 @@ async function reasonGoal(data, label) {
         ],
         query: "demo/subgoals/subgoalCreation.n3",
     }
-    const output = `demo/_TEST/goal_${label}.n3`;
+    const output = `${baseFolder}/goal_${type}_${label}.n3`;
     await _cached(output, produceBase);
     return output;
 }
 
-async function reasonExtraRule(data, label) {
+async function reasonExtraRule(data, baseFolder, label, type) {
     const produceBase = {
         data,
         query: "demo/subgoals/creationOfRuleForMissingData.n3",
     }
-    const output = `demo/_TEST/extra_rule_${label}.n3`;
+    const output = `${baseFolder}/extra_rule_${type}_${label}.n3`;
     await _cached(output, produceBase);
     return output;
 }
 
-async function reasonPaths(data, query, label) {
+async function reasonPaths(data, query, baseFolder, label, type) {
     const produceBase = {
         data: [
             "demo/workflow-composer/gps-plugin_modified_noPermutations.n3",
@@ -451,7 +474,7 @@ async function reasonPaths(data, query, label) {
         ].concat(data),
         query,
     }
-    const output = `demo/_TEST/reason_paths_${label}.n3`;
+    const output = `${baseFolder}/reason_paths_${type}_${label}.n3`;
     await _cached(output, produceBase);
     return output;
 }
