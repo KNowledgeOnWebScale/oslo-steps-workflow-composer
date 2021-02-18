@@ -1,7 +1,7 @@
 const path = require('path');
 const fs = require('fs/promises');
 const eyePromise = require('./services/reasoning.js').eyePromise;
-const $rdf = require('rdflib')
+const $rdf = require('rdflib');
 const { Namespace } = $rdf;
 
 const basePath = path.resolve(__dirname, '..');
@@ -358,7 +358,7 @@ async function reasonJourney(data, query, baseFolder) {
         query,
     }
     const output = `${baseFolder}/reason_journey.n3`;
-    await _cached(output, produceBase);
+    await _cached(output, produceBase, true);
     return output;
 }
 
@@ -404,7 +404,7 @@ async function reasonStep(parentLevelStep, stepsPath, descriptionsPath, parentSt
 }
 
 async function generateSelected(step, baseFolder, label, type) {
-    const output = `${baseFolder}/select_${type}_${label}.n3`
+    const output = `${baseFolder}/select_${type}_${label}.n3`;
     if (cache[output]) {
         return output;
     }
@@ -462,11 +462,14 @@ async function reasonPaths(data, query, baseFolder, label, type) {
         query,
     }
     const output = `${baseFolder}/reason_paths_${type}_${label}.n3`;
-    await _cached(output, produceBase);
+    await _cached(output, produceBase, true);
     return output;
 }
 
-async function _cached(output, config) {
+async function _cached(output, config, alwaysReason = false) {
+    if (!alwaysReason && await fileExists(path.resolve(basePath, output))) {
+        cache[output] = output;
+    }
     if (cache[output]) {
         return;
     }
@@ -482,20 +485,4 @@ async function _reason(step) {
     return await fs.writeFile(path.resolve(step.basePath, step.output), stdout, 'utf8');
 }
 
-function string_to_slug(str) {
-    str = str.replace(/^\s+|\s+$/g, ''); // trim
-    str = str.toLowerCase();
-
-    // remove accents, swap ñ for n, etc
-    var from = "àáäâèéëêìíïîòóöôùúüûñç·/_,:;";
-    var to = "aaaaeeeeiiiioooouuuunc------";
-    for (var i = 0, l = from.length; i < l; i++) {
-        str = str.replace(new RegExp(from.charAt(i), 'g'), to.charAt(i));
-    }
-
-    str = str.replace(/[^a-z0-9 -]/g, '') // remove invalid chars
-        .replace(/\s+/g, '-') // collapse whitespace and replace by -
-        .replace(/-+/g, '-'); // collapse dashes
-
-    return str;
-}
+const fileExists = async path => !!(await fs.stat(path).catch(e => false));
