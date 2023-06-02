@@ -85,7 +85,7 @@ async function main() {
     }
 
     // 3️⃣
-    // not same as reasonPaths: this one doesn't include aux2
+    // not same as reasonPaths: this one doesn't include util/graph.n3
     const journeyPathsPath = await reasonJourney([journeySelectedStepsPath, config.oslo.steps, config.personalInfo], goalPath, config.baseFolder);
 
     const allJourneyLevelSteps = await parsePaths(journeyPathsPath);
@@ -127,7 +127,7 @@ async function main() {
      * - journeyGoal -> GENERATED FOR JOURNEY FROM CONFIG
      * - preselection -> ENGINE
      * - knowledge -> ENGINE
-     * - Q prequery -> ENGINE
+     * - query_preselection -> ENGINE
      */
 
     /**
@@ -145,7 +145,7 @@ async function main() {
      * - step-reasoning -> ENGINE
      * - help -> ENGINE
      * - createPattern -> ENGINE
-     * - Q mappingRuleCreationJourney -> ENGINE
+     * - query_journeyStepToGPSDescription -> ENGINE
      */
 
     /**
@@ -160,7 +160,7 @@ async function main() {
      * - oslo-steps/steps -> CONFIG
      * - personalInfo -> RUNTIME
      * - extraRule_personalInfo -> INTERIM
-     * - aux2 -> ENGINE
+     * - util/graph -> ENGINE
      * - Q createdGoal_PersonalInfo -> INTERIM
      */
 
@@ -168,7 +168,7 @@ async function main() {
      * 1️⃣ extraRule_personalInfo
      * - selected_PersonalInfo -> GENERATED FOR CONTAINER
      * - journey-level-steps -> INTERIM
-     * - Q: creationOfRuleForMissingData -> ENGINE
+     * - query_creationOfRuleForMissingData -> ENGINE
      */
 
     /**
@@ -179,14 +179,14 @@ async function main() {
      * - preselection -> ENGINE
      * - knowledge -> ENGINE
      * - block_personalInfo -> INTERIM
-     * - Q prequery -> ENGINE
+     * - query_preselection -> ENGINE
      */
 
     /**
      * 1️⃣ createdGoal_PersonalInfo
      * - selected_PersonalInfo -> GENERATED FOR CONTAINER
      * - journey-level-steps -> INTERIM
-     * - Q subgoalCreation -> ENGINE
+     * - query_subgoalCreation -> ENGINE
      */
 
     /**
@@ -197,7 +197,7 @@ async function main() {
      * - step-reasoning -> ENGINE
      * - help -> ENGINE
      * - createPattern -> ENGINE
-     * - Q mappingRuleCreationContainer -> ENGINE
+     * - query_containerStepToGPSDescription -> ENGINE
      */
 
     /**
@@ -211,7 +211,7 @@ async function main() {
      * 1️⃣ block_personalInfo
      * - selected_PersonalInfo -> GENERATED FOR CONTAINER
      * - journey-level-steps -> INTERIM
-     * - Q: creationOfBlockingInfo -> ENGINE
+     * - query_creationOfBlockingInfo -> ENGINE
      */
 
     /**
@@ -224,7 +224,7 @@ async function main() {
      * - knowledge -> ENGINE
      * - personalInfo -> RUNTIME
      * - extraRule_citizenName -> INTERIM
-     * - aux2 -> ENGINE
+     * - util/graph -> ENGINE
      * - selectedSteps_citizenName -> INTERIM
      * - oslo-steps/steps -> CONFIG
      * - Q createdGoal_citizenName -> INTERIM
@@ -234,7 +234,7 @@ async function main() {
      * 1️⃣ extraRule_citizenName
      * - selected_CitizenName -> GENERATED FOR CONTAINER
      * - container-level-steps -> INTERIM
-     * - Q: creationOfRuleForMissingData -> ENGINE
+     * - query_creationOfRuleForMissingData -> ENGINE
      */
 
     /**
@@ -245,14 +245,14 @@ async function main() {
      * - preselection -> ENGINE
      * - knowledge -> ENGINE
      * - block_citizenName -> INTERIM
-     * - Q prequery -> ENGINE
+     * - query_preselection -> ENGINE
      */
 
     /**
      * 1️⃣ createdGoal_citizenName
      * - selected_CitizenName -> GENERATED FOR CONTAINER
      * - container-level-steps -> INTERIM
-     * - Q subgoalCreation -> ENGINE
+     * - query_subgoalCreation -> ENGINE
      */
 
     /**
@@ -263,7 +263,7 @@ async function main() {
      * - step-reasoning -> ENGINE
      * - help -> ENGINE
      * - createPattern -> ENGINE
-     * - Q mappingRuleCreationComponent -> ENGINE
+     * - query_componentStepToGPSDescription -> ENGINE
      */
 
     /**
@@ -277,7 +277,7 @@ async function main() {
      * 1️⃣ block_citizenName
      * - selected_CitizenName -> GENERATED FOR CONTAINER
      * - container-level-steps -> INTERIM
-     * - Q: creationOfBlockingInfo -> ENGINE
+     * - query_creationOfBlockingInfo -> ENGINE
      */
 }
 
@@ -285,13 +285,13 @@ async function reasonJourneyLevelSteps(data, baseFolder) {
     const produceBase = {
         data: [
             "rules/oslo-steps/step-reasoning.n3",
-            "rules/util/help.n3",
+            "rules/util/list.n3",
             "rules/shacl/createPattern.n3",
         ].concat(data),
         "eye:flags": [
             "--quantify http://josd.github.io/.well-known/genid/",
         ],
-        query: "rules/oslo-steps/mappingRuleCreationJourney_query.n3",
+        query: "rules/oslo-steps/query_journeyStepToGPSDescription.n3",
     }
     const output = `${baseFolder}/steps_journey_level.n3`;
     await _cached(output, produceBase);
@@ -302,13 +302,13 @@ async function reasonContainerLevelSteps(data, baseFolder) {
     const produceBase = {
         data: [
             "rules/oslo-steps/step-reasoning.n3",
-            "rules/util/help.n3",
+            "rules/util/list.n3",
             "rules/shacl/createPattern.n3",
         ].concat(data),
         "eye:flags": [
             "--quantify http://josd.github.io/.well-known/genid/",
         ],
-        query: "rules/oslo-steps/mappingRuleCreationContainer_query.n3",
+        query: "rules/oslo-steps/query_containerStepToGPSDescription.n3",
     }
     const output = `${baseFolder}/steps_container_level.n3`;
     await _cached(output, produceBase);
@@ -319,13 +319,13 @@ async function reasonComponentLevelSteps(data, baseFolder) {
     const produceBase = {
         data: [
             "rules/oslo-steps/step-reasoning.n3",
-            "rules/util/help.n3",
+            "rules/util/list.n3",
             "rules/shacl/createPattern.n3",
         ].concat(data),
         "eye:flags": [
             "--quantify http://josd.github.io/.well-known/genid/",
         ],
-        query: "rules/oslo-steps/mappingRuleCreationComponent_query.n3",
+        query: "rules/oslo-steps/query_componentStepToGPSDescription.n3",
     }
     const output = `${baseFolder}/steps_component_level.n3`;
     await _cached(output, produceBase);
@@ -338,14 +338,14 @@ async function reasonJourneyGoal(data, goalStates, baseFolder) {
     const produceBase = {
         data: [
             "rules/oslo-steps/step-reasoning.n3",
-            "rules/util/help.n3",
+            "rules/util/list.n3",
             "rules/shacl/createPattern.n3",
             goalStatePath,
         ].concat(data),
         "eye:flags": [
             "--quantify http://josd.github.io/.well-known/genid/",
         ],
-        query: "rules/oslo-steps/createGoal_query.n3",
+        query: "rules/oslo-steps/query_journeyGoalToGPSPath.n3",
     }
     const output = `${baseFolder}/goal_journey.n3`;
     await _cached(output, produceBase);
@@ -370,7 +370,7 @@ async function reasonSelectedSteps(data, baseFolder, label, type) {
             "rules/workflow-composer/preselection/preselection.n3",
             "scenarios/knowledge.n3",
         ].concat(data),
-        query: "rules/workflow-composer/preselection/prequery_query.n3",
+        query: "rules/workflow-composer/preselection/query_preselection.n3",
     }
     const output = `${baseFolder}/selected_steps_${type}_${label}.n3`;
     await _cached(output, produceBase);
@@ -435,7 +435,7 @@ async function reasonStep(parentLevelStep, stepsPath, descriptionsPath, parentSt
                 selectedStepsPath, config.oslo.steps, config.personalInfo, parentExtraRulePath,
                 "rules/workflow-composer/gps-plugin_modified_noPermutations.n3",
                 "scenarios/knowledge.n3",
-                "rules/util/aux2.n3",
+                "rules/util/graph.n3",
             ],
             query: parentGoalPath
         }
@@ -462,7 +462,7 @@ async function generateSelected(step, baseFolder, label, type) {
 async function reasonBlock(data, baseFolder, label, type) {
     const produceBase = {
         data,
-        query: "rules/workflow-composer/subgoals/creationOfBlockingInfo_query.n3",
+        query: "rules/workflow-composer/subgoals/query_creationOfBlockingInfo.n3",
     }
     const output = `${baseFolder}/block_${type}_${label}.n3`;
     await _cached(output, produceBase);
@@ -475,7 +475,7 @@ async function reasonGoal(data, baseFolder, label, type) {
         "eye:flags": [
             "--quantify http://josd.github.io/.well-known/genid/",
         ],
-        query: "rules/workflow-composer/subgoals/subgoalCreation_query.n3",
+        query: "rules/workflow-composer/subgoals/query_subgoalCreation.n3",
     }
     const output = `${baseFolder}/goal_${type}_${label}.n3`;
     await _cached(output, produceBase);
@@ -485,7 +485,7 @@ async function reasonGoal(data, baseFolder, label, type) {
 async function reasonExtraRule(data, baseFolder, label, type) {
     const produceBase = {
         data,
-        query: "rules/workflow-composer/creationOfRuleForMissingData_query.n3",
+        query: "rules/workflow-composer/query_creationOfRuleForMissingData.n3",
     }
     const output = `${baseFolder}/extra_rule_${type}_${label}.n3`;
     await _cached(output, produceBase);
@@ -497,7 +497,7 @@ async function reasonPaths(data, query, baseFolder, label, type) {
         data: [
             "rules/workflow-composer/gps-plugin_modified_noPermutations.n3",
             "scenarios/knowledge.n3",
-            "rules/util/aux2.n3",
+            "rules/util/graph.n3",
         ].concat(data),
         query,
     }
