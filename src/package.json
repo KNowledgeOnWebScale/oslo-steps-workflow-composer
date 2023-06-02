@@ -1,0 +1,20 @@
+{
+  "name": "src",
+  "version": "1.0.0",
+  "description": "",
+  "main": "test.js",
+  "scripts": {
+    "test": "node test.js",
+    "run:test": "node run_test.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@util.js/node-streams": "^0.41.0",
+    "child-process-promise": "^2.2.1",
+    "glob": "^7.1.6",
+    "graphy": "^4.3.3",
+    "rdflib": "^2.1.7"
+  }
+}

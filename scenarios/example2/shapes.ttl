@@ -1,0 +1,45 @@
+@prefix ex: <http://example.org/ns/example#>.
+@prefix o-persoon: <http://data.vlaanderen.be/ns/persoon#>.
+@prefix o-steps: <https://fast.ilabt.imec.be/ns/oslo-steps/0.2#>.
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix sh: <http://www.w3.org/ns/shacl#>.
+@prefix shapes: <http://fast.ilabt.imec.be/api/v7/shapes#>.
+@prefix states: <http://fast.ilabt.imec.be/api/v7/states#>.
+@prefix steps: <http://fast.ilabt.imec.be/api/v7/steps#>.
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
+
+<http://fast.ilabt.imec.be/api/v7/shapes> a <http://www.w3.org/ns/ldp#Container>.
+shapes:provideCitizenNationalNumberManually_shape rdfs:label "provideCitizenNationalNumberManually_shape"@en;
+    rdfs:comment "provideCitizenNationalNumberManually_shape"@en;
+    sh:targetClass <https://data.vlaanderen.be/ns/persoon#Inwoner>.
+<http://fast.ilabt.imec.be/api/v7/shapes#%40.3I%5BR_v*TuxH%23JnS%25QM> rdfs:label "*%23cffvg9n88%2CZl%2Bfty%3BR propertyString"@en;
+    sh:path o-persoon:registratie;
+    sh:datatype xsd:string;
+    sh:pattern "^[0-9]{2}[.\\\\- ]{0,1}[0-9]{2}[.\\\\- ]{0,1}[0-9]{2}[.\\\\- ]{0,1}[0-9]{3}[.\\\\- ]{0,1}[0-9]{2}$";
+    sh:minCount "1"^^xsd:integer;
+    sh:maxCount "1"^^xsd:integer;
+    a sh:PropertyShape.
+shapes:provideCitizenNationalNumberManually_shape sh:property <http://fast.ilabt.imec.be/api/v7/shapes#%40.3I%5BR_v*TuxH%23JnS%25QM>;
+    a <https://fast.ilabt.imec.be/ns/oslo-steps/0.2#StateShape>.
+shapes:provideCitizenEmailManually_shape rdfs:label "provideCitizenEmailManually_shape"@en;
+    rdfs:comment "provideCitizenEmailManually_shape"@en;
+    sh:targetClass <https://data.vlaanderen.be/ns/persoon#Inwoner>.
+<http://fast.ilabt.imec.be/api/v7/shapes#t%25(*p%7CA%2CR%24wkf%3DeO%60RGB> rdfs:label "8MzF%7DD%7C3K0DtL%7BxLy~3q propertyString"@en;
+    sh:path <schema:email>;
+    sh:datatype xsd:string;
+    sh:pattern "^\\\\w+@[a-zA-Z_]+?\\\\.[a-zA-Z]{2,3}$";
+    sh:minCount "1"^^xsd:integer;
+    a sh:PropertyShape.
+shapes:provideCitizenEmailManually_shape sh:property <http://fast.ilabt.imec.be/api/v7/shapes#t%25(*p%7CA%2CR%24wkf%3DeO%60RGB>;
+    a <https://fast.ilabt.imec.be/ns/oslo-steps/0.2#StateShape>.
+shapes:newEidPincodeRequested_shape rdfs:label "newEidPincodeRequested_shape"@en;
+    rdfs:comment "newEidPincodeRequested_shape"@en;
+    sh:targetClass <https://data.vlaanderen.be/ns/persoon#Inwoner>.
+<http://fast.ilabt.imec.be/api/v7/shapes#8~)gG7mw%7C%3DXkq%2BsXL0k%5D> rdfs:label "c%234%7BsCsV~%3AwOGq)%5BApQg propertyString"@en;
+    sh:path <http://fast.ilabt.imec.be/api/v7/example-vocab#newPincodeRequested>;
+    sh:datatype xsd:string;
+    sh:minCount "1"^^xsd:integer;
+    sh:value "true";
+    a sh:PropertyShape.
+shapes:newEidPincodeRequested_shape sh:property <http://fast.ilabt.imec.be/api/v7/shapes#8~)gG7mw%7C%3DXkq%2BsXL0k%5D>;
+    a <https://fast.ilabt.imec.be/ns/oslo-steps/0.2#StateShape>.

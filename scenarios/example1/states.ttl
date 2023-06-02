@@ -1,0 +1,34 @@
+# https://www.ibz.rrn.fgov.be/nl/identiteitsdocumenten/eid/aanvraag-pincode/
+
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix o-address: <https://data.vlaanderen.be/ns/adres#> .
+@prefix o-steps: <https://fast.ilabt.imec.be/ns/oslo-steps/0.2#> .
+@prefix o-persoon: <https://data.vlaanderen.be/ns/persoon#> .
+@prefix ex: <http://example.org/ns/example#> .
+@prefix xl: <http://www.w3.org/2008/05/skos-xl#> .
+@prefix locn: <http://www.w3.org/ns/locn#> .
+@prefix sh:      <http://www.w3.org/ns/shacl#> .
+@prefix schema: <https://schema.org/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+
+@prefix state: <http://localhost:8000/states#>.
+@prefix shape: <http://localhost:8000/shapes#>.
+@prefix step: <http://localhost:8000/steps#>.
+
+state:citizenNationalNumber a o-steps:State;
+  rdfs:label "Citizen national number"@en ;
+  rdfs:label "Inwoner Rijksregisternummer"@nl ;
+  o-steps:hasStateShape shape:nationalNumberBelgiumShape . 
+
+state:citizenEmailAddress a o-steps:State ;
+  rdfs:label "Citizen email address"@en ;
+  rdfs:label "Inwoner email address"@nl ;
+  rdfs:label "Einwohner Email Adresse"@de ;
+  o-steps:hasStateShape shape:emailAddressShape .
+
+state:newEidPincodeRequested a o-steps:State ;
+  rdfs:label "New pincode for eid requested"@en ;
+  rdfs:label "Nieuw pincode voor eid aangevraagt"@nl ;
+  rdfs:label "Neuer Pincode fuer EID angefragt"@de ;
+  o-steps:hasStateShape shape:newEidPincodeRequestedShape .

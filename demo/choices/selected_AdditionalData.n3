@@ -1,4 +1,0 @@
-@prefix step: <https://fast.ilabt.imec.be/api/v5/steps#> .
-@prefix : <http://example.org#> .
-
-step:provideAdditionalInfo :findSubpath true.

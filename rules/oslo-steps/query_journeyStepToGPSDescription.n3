@@ -1,0 +1,48 @@
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix p-plan: <http://purl.org/net/p-plan#> .
+@prefix o-address: <https://data.vlaanderen.be/ns/adres#> .
+@prefix o-steps: <https://fast.ilabt.imec.be/ns/oslo-steps/0.2#> .
+@prefix ex: <https://example.org/ns/example#> .
+@prefix var: <https://example.org/ns/var#> .
+PREFIX log: <http://www.w3.org/2000/10/swap/log#>
+PREFIX e: <http://eulersharp.sourceforge.net/2003/03swap/log-rules#>
+PREFIX gps: <http://josd.github.io/eye/reasoning/gps/gps-schema#>
+@prefix : <https://example.org/ns/example#> .
+PREFIX list: <http://www.w3.org/2000/10/swap/list#>
+@prefix log: <http://www.w3.org/2000/10/swap/log#>.
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix o-persoon: <https://data.vlaanderen.be/ns/persoon#> .
+@prefix var: <http://josd.github.io/.well-known/genid/pP7dSETOSHCTU6bSn:iLn_1X3mg#>.
+
+{
+?step a o-steps:JourneyLevelStep.
+
+?step o-steps:producesState ?ov.
+
+_:x e:findall ( ?pattern { ?step o-steps:requiresState ?y. ?y o-steps:hasStateShape ?stateShape. ?stateShape :pattern ?pattern} ?inlist). 
+
+_:x e:findall ( ?pattern {?step  o-steps:producesState ?y. ?y o-steps:hasStateShape ?stateShape. ?stateShape :pattern ?pattern} ?outlist ).
+
+?inlist :separate ((true) ?ins1 (true) ?skolI).
+?outlist :separate ((true) ?outs (true) ?skol).
+
+(  ?ins1 ?skol ( { var:x a o-persoon:Inwoner. } ) ) list:append ?in.
+
+#?outTriples  :produceSkolemfunctions (() ?skolem).
+#?outTriples log:conjunction ?out.
+
+?outs log:conjunction ?out. 
+?in log:conjunction ?ins. 
+}
+=>
+{
+#the values here are currently fixed.
+# You should have meaningful numbers for these things: duration / cost / belief-success / comfort (how happy the user would be)
+# If you create a subpath of a step, it must be within that limit
+# TODO put these constraints in OSLO-STEPS vocabulary
+# TODO things stay at this point, they don't change
+{ex:movemap gps:description (true true ?out ?step 100 100 0.9 0.9)} <= ?ins.
+}.
+
+
+

@@ -1,0 +1,37 @@
+# https://www.ibz.rrn.fgov.be/nl/identiteitsdocumenten/eid/aanvraag-pincode/
+
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix o-address: <https://data.vlaanderen.be/ns/adres#> .
+@prefix o-steps: <https://fast.ilabt.imec.be/ns/oslo-steps/0.2#> .
+@prefix o-persoon: <https://data.vlaanderen.be/ns/persoon#> .
+@prefix ex: <http://example.org/ns/example#> .
+@prefix xl: <http://www.w3.org/2008/05/skos-xl#> .
+@prefix locn: <http://www.w3.org/ns/locn#> .
+@prefix sh:      <http://www.w3.org/ns/shacl#> .
+@prefix schema: <https://schema.org/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+
+@prefix state: <http://localhost:8000/states#>.
+@prefix shape: <http://localhost:8000/shapes#>.
+@prefix step: <http://localhost:8000/steps#>.
+
+step:receiveMail a o-steps:JourneyLevelStep, o-steps:ContainerLevelStep, o-steps:ComponentLevelStep ;
+  o-steps:producesState state:receivedMail ;               
+  o-steps:requiresState o-steps:emptyState .
+
+step:processMail a o-steps:JourneyLevelStep, o-steps:ContainerLevelStep ;
+  o-steps:producesState state:processedMail ;               
+  o-steps:requiresState o-steps:receivedMail .
+
+step:manuallyProcessMail a o-steps:ComponentLevelStep ;
+  o-steps:requiresState o-steps:receivedMail ;
+  o-steps:producesState state:processedMail .
+
+step:automaticallyProcessMail a o-steps:ComponentLevelStep ;
+  o-steps:requiresState o-steps:receivedMail ;
+  o-steps:producesState state:processedMail .
+
+step:DoCalculationOnMail a o-steps:ComponentLevelStep ;
+  o-steps:requiresState o-steps:receivedMail ;
+  o-steps:producesState state:processedMail .

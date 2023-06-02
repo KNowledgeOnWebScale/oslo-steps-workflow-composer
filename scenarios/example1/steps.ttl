@@ -1,0 +1,58 @@
+# https://www.ibz.rrn.fgov.be/nl/identiteitsdocumenten/eid/aanvraag-pincode/
+
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix o-address: <https://data.vlaanderen.be/ns/adres#> .
+@prefix o-steps: <https://fast.ilabt.imec.be/ns/oslo-steps/0.2#> .
+@prefix o-persoon: <https://data.vlaanderen.be/ns/persoon#> .
+@prefix ex: <http://example.org/ns/example#> .
+@prefix xl: <http://www.w3.org/2008/05/skos-xl#> .
+@prefix locn: <http://www.w3.org/ns/locn#> .
+@prefix sh:      <http://www.w3.org/ns/shacl#> .
+@prefix schema: <https://schema.org/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+
+@prefix state: <http://localhost:8000/states#>.
+@prefix shape: <http://localhost:8000/shapes#>.
+@prefix step: <http://localhost:8000/steps#>.
+
+step:collectDataForPinRequest  a o-steps:JourneyLevelStep, o-steps:ContainerLevelStep ;
+  o-steps:hasDescription [ xl:literalForm "Data to request pin for e-id"@en ],
+                         [ xl:literalForm "Data eid aanvraag pincode"@nl ],
+                         [ xl:literalForm "Daten fuer Anfrage eines neuen EID-Pincodes"@de ];
+  o-steps:producesState state:citizenNationalNumber ,
+                        state:citizenEmailAddress ;               
+  o-steps:requiresState o-steps:emptyState .
+
+step:requestNewEidPin  a o-steps:JourneyLevelStep, o-steps:ContainerLevelStep, o-steps:ComponentLevelStep ;
+  o-steps:hasDescription [ xl:literalForm "Request new pin for e-id"@en ],
+                         [ xl:literalForm "Aanvraag nieuw eid pincode"@nl ],
+                         [ xl:literalForm "Anfrage eines neuen EID-Pincodes"@de ];
+  o-steps:requiresState state:citizenNationalNumber ,
+                        state:citizenEmailAddress ;               
+  o-steps:producesState state:newEidPincodeRequested .
+
+step:provideCitizenNationalNumberManually a o-steps:ComponentLevelStep ;
+  rdfs:label "Citizen's national number"@en ;
+  rdfs:label "Rijksregister inwoner"@nl ;
+  rdfs:label "Einwohner Reichsregisternummer"@de ;
+  o-steps:hasDescription 
+                       [ xl:literalForm "Citizen's national number"@en ],
+                       [ xl:literalForm "Rijksregister inwoner"@nl ],
+                       [ xl:literalForm "Einwohner Reichsregisternummer"@de ];
+  o-steps:requiresState o-steps:emptyState ;
+  o-steps:producesState state:citizenNationalNumber .
+
+step:provideCitizenEmailManually a o-steps:ComponentLevelStep ;
+  rdfs:label "Citizen's email address"@en ;
+  rdfs:label "Email inwoner"@nl ;
+  rdfs:label "Einwohner Email"@de ;
+  o-steps:hasDescription step:emailDescriptionEnglish1  ,
+                       [ xl:literalForm "Citizen's  email address"@en ],
+                       [ xl:literalForm "Email inwoner"@nl ],
+                       [ xl:literalForm "Einwohner Email"@de ]; 
+  o-steps:requiresState o-steps:emptyState ;
+  o-steps:producesState state:citizenEmailAddress .
+
+step:emailDescriptionEnglish1 a xl:Label ;
+  xl:literalForm "A valid email address containing the address, '@' symbol and hostname."@en .

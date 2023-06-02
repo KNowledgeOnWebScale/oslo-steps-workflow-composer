@@ -1,5 +1,0 @@
-@prefix : <http://example.org#>.
-@prefix step: <https://fast.ilabt.imec.be/api/v5/steps#>.
-
-step:provideCitizenMobilePhoneNumberManually :value "12345".
-step:provideCitizenMobilePhoneNumberManually :value "123485".

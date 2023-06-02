@@ -1,0 +1,33 @@
+@prefix o-steps: <https://fast.ilabt.imec.be/ns/oslo-steps/0.2#> .
+@prefix xl: <http://www.w3.org/2008/05/skos-xl#> .
+@prefix state: <https://fast.ilabt.imec.be/api/v5/states#> .
+@prefix step: <https://fast.ilabt.imec.be/api/v5/steps#> .
+@prefix shape: <https://fast.ilabt.imec.be/api/v5/shapes#> .
+@prefix cccev: <http://data.europa.eu/m8g/> .
+
+step:proveMajority a o-steps:JourneyLevelStep, o-steps:ContainerLevelStep ;
+    o-steps:hasDescription [ xl:literalForm "Prove your age"@nl ] ;
+    o-steps:requiresState o-steps:emptyState ;
+    o-steps:producesState state:provenMajority .
+
+step:provideIDcardInfo a o-steps:ComponentLevelStep ;
+    o-steps:hasDescription [ xl:literalForm "Retrieve your ID card info"@nl ] ;
+    o-steps:requiresState o-steps:emptyState ;
+    o-steps:producesState state:validatedIdcardInfo .
+
+# step:proveIDcardInfo a o-steps:ComponentLevelStep ;
+#     o-steps:hasDescription [ xl:literalForm "Prove your ID card info"@nl ] ;
+#     o-steps:requiresState state:idcardInfo ;
+#     o-steps:producesState state:validatedIdcardInfo . # TODO verifiable credential? additional step?
+
+step:proveAgeViaIDcardInfo a o-steps:ComponentLevelStep, o-steps:BusinessRule ; # TODO is this a step? is this automatic via a business rule? Additional class?
+    o-steps:hasDescription [ xl:literalForm "Prove your age via your validated birth date"@nl ] ;
+    o-steps:requiresState state:validatedBirthDate ; # you can infer your birthdate state is based on your idcardInfo state
+    o-steps:producesState state:validatedcitizenAge ; #if this would be an automatic step, you could generate _:evidence cccev:supportsValue _:suppordedValue
+    o-steps:businessRule """ {?x ex:birthdate ?y . ?x :now ?now . ?diff :diff (?now ?y) . ?years :diffToYears ?diff .} => {?x ex:age ?years}""" .
+
+step:proveMajorityComponent a o-steps:ComponentLevelStep, o-steps:BusinessRule ;
+    o-steps:hasDescription [ xl:literalForm "Prove your majority via your validated age"@en ] ;
+    o-steps:requiresState state:validatedcitizenAge ;
+    o-steps:producesState state:provenMajority ;
+    o-steps:businessRule """ {?x ex:age ?y . ?z :isLarger (?y 18)} => {?x ex:majority ?z} """ .

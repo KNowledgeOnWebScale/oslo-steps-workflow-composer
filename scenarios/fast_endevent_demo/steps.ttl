@@ -1,0 +1,677 @@
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix o-address: <https://data.vlaanderen.be/ns/adres#> .
+@prefix o-steps: <https://fast.ilabt.imec.be/ns/oslo-steps/0.2#> .
+@prefix ex: <http://example.org/ns/example#> .
+@prefix xl: <http://www.w3.org/2008/05/skos-xl#> .
+
+@prefix state: <http://localhost:8000/states#>.
+@prefix shape: <http://localhost:8000/shapes#>.
+@prefix step: <http://localhost:8000/steps#>.
+
+#@prefix state: <http://localhost:8000/states#>.
+#@prefix shape: <http://localhost:8000/shapes#>.
+#@prefix step: <http://localhost:8000/steps#>.
+
+#Journey level steps
+#provide personal details
+step:providePersonalInformation a o-steps:JourneyLevelStep ;
+  ex:subpathlink <http://localhost:8000/plan/container_providePersonalInformation>;
+  o-steps:hasDescription [ xl:literalForm "Personal data"@en ],
+                         [ xl:literalForm "Persoonlijke gegevens"@nl ],
+                         [ xl:literalForm "Persönliche Daten"@de ];
+  o-steps:producesState state:citizenFirstName ,
+                        state:citizenLastName ,
+                        state:citizenNationalNumber ,
+                        state:citizenBirthDate ,
+                        state:citizenCityOfBirth ,
+                        state:citizenNationality ,
+                        state:citizenProfession ,
+                        state:citizenPhoneNumber ,
+                        state:citizenMobilePhoneNumber ,
+                        state:citizenEmailAddress ,
+                        state:citizenAddress;
+  o-steps:requiresState o-steps:emptyState;
+  rdfs:comment "Initialize all the administration concerning your general information".
+
+
+#provide moving details
+step:provideMovingData a o-steps:JourneyLevelStep, o-steps:ContainerLevelStep ;
+  ex:subpathlink <http://localhost:8000/plan/component_provideMovingData>;
+  o-steps:hasDescription [ xl:literalForm "Data over the planned move"@en ],
+                         [ xl:literalForm "Gegevens over de geplande verhuizing"@nl ],
+                         [ xl:literalForm "Details über den geplanten Umzug"@de ];
+  o-steps:producesState state:movingDate, state:movingCity, state:movingAddress;
+  o-steps:requiresState o-steps:emptyState;
+  rdfs:comment "Initialize all the administration concerning your future destination".
+
+
+#get address  changed
+step:changeAddress a o-steps:JourneyLevelStep  ;
+  ex:subpathlink <http://localhost:8000/plan/container_changeAddress>;
+  o-steps:hasDescription [ xl:literalForm "Get address changed"@en ],
+                         [ xl:literalForm "Laat het adres wijzigen"@nl ],
+                         [ xl:literalForm "Die Adresse ändern lassen"@de ];
+  o-steps:requiresState state:citizenFirstName ,
+                        state:citizenLastName ,
+                        state:citizenNationalNumber ,
+                        state:citizenBirthDate ,
+                        state:citizenCityOfBirth ,
+                        state:citizenNationality ,
+                        state:citizenProfession ,
+                        state:citizenPhoneNumber ,
+                        state:citizenMobilePhoneNumber ,
+                        state:movingDate,
+                        state:movingCity,
+                        state:movingAddress ,
+                        state:citizenEmailAddress ;
+  o-steps:producesState state:addressChangedOnEID ;
+  rdfs:comment "The administration startup is ready, all that's left to do for you is enter the missing data about yourself".
+
+#container level
+step:confirmAddressChangeVisit a o-steps:ContainerLevelStep ;
+  ex:subpathlink <http://localhost:8000/plan/component_confirmAddressChangeVisit>;
+  rdfs:label "Confirmation of address change"@en ;
+  rdfs:label "Bevestiging van adreswijziging"@nl ;
+  rdfs:label "Bestätigung der Adressänderung"@de ;
+  o-steps:hasDescription [ xl:literalForm "Confirmation of address change"@en ],
+                         [ xl:literalForm "Bevestiging van adreswijziging"@nl ],
+                         [ xl:literalForm "Bestätigung der Adressänderung"@de ];
+  o-steps:producesState state:addressChangeConfirmed ;
+  o-steps:requiresState
+    state:citizenFirstName ,
+                        state:citizenLastName ,
+                        state:citizenNationalNumber ,
+                        state:citizenBirthDate ,
+                        state:citizenCityOfBirth ,
+                        state:citizenNationality ,
+                        state:citizenProfession ,
+                        state:citizenPhoneNumber ,
+                        state:citizenMobilePhoneNumber ,
+                        state:movingDate,
+                        state:movingCity,
+                        state:movingAddress ,
+                        state:citizenEmailAddress .
+
+step:addressChangeOnEIDInOffice a o-steps:ContainerLevelStep ;
+  ex:subpathlink <http://localhost:8000/plan/component_addressChangeOnEIDInOffice>;
+  rdfs:label "Update address on eID card"@en ;
+  rdfs:label "Adreswijziging op eID kaart"@nl ;
+  rdfs:label "Änderung der Adresse auf eID Karte"@de ;
+  o-steps:hasDescription [ xl:literalForm "Update address on eID card"@en ],
+                         [ xl:literalForm "Adreswijziging op eID kaart"@nl ],
+                         [ xl:literalForm "Änderung der Adresse auf eID Karte"@de ];
+  o-steps:requiresState
+    state:addressChangeConfirmed;
+  o-steps:producesState state:addressChangedOnEID  .
+
+
+step:makeAppointmentForAddressChange a o-steps:ComponentLevelStep ;
+  o-steps:hasDescription [ xl:literalForm "Make appointmane for address change"@en ],
+                         [ xl:literalForm "Vraag afspraak voor adreswijziging"@nl ],
+                         [ xl:literalForm "Termin für Adressaenderung anfragen"@de ];
+  o-steps:requiresState
+    state:addressChangeConfirmed;
+  o-steps:producesState state:appointmentMade  .
+
+step:visitOfficeForAddressChange a o-steps:ComponentLevelStep ;
+  o-steps:hasDescription [ xl:literalForm "Visit office for address change"@en ],
+                         [ xl:literalForm "Kantoorbezoek voor adreswijziging"@nl ],
+                         [ xl:literalForm "Bürobesuch für Adressaenderung"@de ];
+  o-steps:requiresState
+    state:appointmentMade ;
+  o-steps:producesState state:addressChangedOnEID  .
+
+
+
+#submit waste info
+step:submitWasteInfo a o-steps:JourneyLevelStep ;
+  ex:subpathlink <http://localhost:8000/plan/container_submitWasteInfo>;
+  o-steps:hasDescription [ xl:literalForm "Waste info"@en ],
+                         [ xl:literalForm "Informatie over afvalverwijdering"@nl ],
+                         [ xl:literalForm "Informationen bezüglich der Abfallentsorgung "@de ];
+  o-steps:requiresState  state:movingDate,
+                         state:movingCity,
+                         state:citizenAddress,
+                         state:movingAddress;
+  o-steps:producesState state:wasteCollectionRequested;
+  rdfs:comment "The administration startup is ready, all that's left to do for you is enter the missing data about your future destination".
+
+
+#container level steps - personal info
+step:provideCitizenNameManually a o-steps:ContainerLevelStep ;
+  ex:subpathlink <http://localhost:8000/plan/component_provideCitizenNameManually>;
+  rdfs:label "Citizen's full name"@en ;
+  rdfs:label "Inwoner naam"@nl ;
+  rdfs:label "Einwohner Name"@de ;
+  o-steps:hasDescription [ xl:literalForm "Inwoner naam"@nl ],
+                         [ xl:literalForm "Citizen's full name"@en ],
+                         [ xl:literalForm "Einwohner Name"@de ];
+  o-steps:requiresState o-steps:emptyState ;
+  o-steps:producesState state:citizenFirstName, state:citizenLastName .
+
+step:provideContactInformation a o-steps:ContainerLevelStep ;
+  ex:subpathlink <http://localhost:8000/plan/component_provideContactInformation>;
+  o-steps:hasDescription [ xl:literalForm "Contact Information"@en ],
+                         [ xl:literalForm "Contactgegevens"@nl ],
+                         [ xl:literalForm "Kontaktinformationen"@de ];
+  o-steps:producesState state:citizenPhoneNumber ,
+                        state:citizenMobilePhoneNumber ,
+                        state:citizenEmailAddress ,
+                        state:citizenAddress;
+  o-steps:requiresState o-steps:emptyState .
+
+step:provideBirthData a o-steps:ContainerLevelStep ;
+  ex:subpathlink <http://localhost:8000/plan/component_provideBirthData>;
+  o-steps:hasDescription [ xl:literalForm "Birth data"@en ],
+                         [ xl:literalForm "Geboortegegevens"@nl ],
+                         [ xl:literalForm "Geburtsdaten"@de ];
+  o-steps:producesState state:citizenBirthDate ,
+                        state:citizenCityOfBirth ;
+  o-steps:requiresState o-steps:emptyState .
+
+step:provideAdditionalInfo a o-steps:ContainerLevelStep ;
+  ex:subpathlink <http://localhost:8000/plan/component_provideAdditionalInfo>;
+  o-steps:hasDescription [ xl:literalForm "Additional data"@en ],
+                         [ xl:literalForm "Aanvullende gegevens"@nl ],
+                         [ xl:literalForm "Weitere Daten"@de ];
+  o-steps:producesState state:citizenNationalNumber ,
+                        state:citizenProfession ,
+                        state:citizenNationality ;
+  o-steps:requiresState o-steps:emptyState .
+
+
+
+
+
+
+
+
+
+#component level steps
+step:requestPoliceVisit a o-steps:ComponentLevelStep;
+  o-steps:hasDescription [ xl:literalForm "Request police visit"@en ],
+                         [ xl:literalForm "Vraag politiebezoek aan"@nl ],
+                         [ xl:literalForm "Anfrage  Polizeibesuch"@de ];
+    o-steps:producesState state:policeVisitRequested;
+    o-steps:requiresState
+                        state:citizenFirstName ,
+                        state:citizenLastName ,
+                        state:citizenNationalNumber ,
+                        state:citizenBirthDate ,
+                        state:citizenCityOfBirth ,
+                        state:citizenNationality ,
+                        state:citizenProfession ,
+                        state:citizenPhoneNumber ,
+                        state:citizenMobilePhoneNumber ,
+                        state:movingDate,
+                        state:movingCity,
+                        state:movingAddress ,
+                        state:citizenEmailAddress,
+                        state:familyInfoProvided,
+                        state:availability .
+
+step:provideDataOfFamilyMembers a o-steps:ComponentLevelStep;
+         o-steps:hasDescription [ xl:literalForm "Data of family members"@en ],
+                                [ xl:literalForm "Gegevens van gezinsleden"@nl ],
+                                [ xl:literalForm "Daten von Familienmitgliedern"@de ];
+         o-steps:requiresState o-steps:emptyState ;
+         o-steps:producesState state:detailFamilyMember .
+
+
+step:getPolicevisit a o-steps:ComponentLevelStep;
+         o-steps:hasDescription [ xl:literalForm "Policevisit"@en ],
+                                [ xl:literalForm "Politiebezoek"@nl ],
+                                [ xl:literalForm "Polizeibesuch"@de ];
+         o-steps:requiresState  state:policeVisitRequested;
+         o-steps:producesState  state:addressChangeConfirmed .
+
+step:provideAvailability a o-steps:ComponentLevelStep;
+        o-steps:hasDescription [ xl:literalForm "Availability"@en ],
+                               [ xl:literalForm "Beschikbaarheid"@nl ],
+                               [ xl:literalForm "Verfügbarkeit"@de ];
+        o-steps:requiresState o-steps:emptyState ;
+        o-steps:producesState state:availability .
+
+step:provideNumberOfFamilyMembersManually a o-steps:ComponentLevelStep ;
+  rdfs:label "Number of family members"@en ;
+  rdfs:label "Aantal gezinsleden"@nl ;
+  rdfs:label "Anzahl Familienmitglieder"@de ;
+o-steps:hasDescription [ xl:literalForm "Number of family members"@en ],
+                       [ xl:literalForm "Aantal gezinsleden"@nl ],
+                       [ xl:literalForm "Anzahl Familienmitglieder"@de ];
+  o-steps:requiresState o-steps:emptyState ;
+  o-steps:producesState state:numberOfFamilyMembers .
+
+
+step:provideCitizenFirstNameManually a o-steps:ComponentLevelStep ;
+  rdfs:label "Citizen's first name"@en ;
+  rdfs:label "Inwoner voornaam"@nl ;
+  rdfs:label "Einwohner Vorname"@de ;
+  o-steps:hasDescription step:firstNameDescriptionEnglish1 ,
+                         [ xl:literalForm "Inwoner voornaam"@nl ],
+                         [ xl:literalForm "Citizen's first name"@en ],
+                         [ xl:literalForm "Einwohner Vorname"@de ];
+  o-steps:requiresState o-steps:emptyState ;
+  o-steps:producesState state:citizenFirstName .
+
+step:firstNameDescriptionEnglish1 a xl:Label ;
+  xl:literalForm "The first name as indicated on your passport or ID card."@en .
+
+step:provideCitizenLastNameManually a o-steps:ComponentLevelStep ;
+  rdfs:label "Citizen's last name"@en ;
+  rdfs:label "Inwoner naam"@nl ;
+  rdfs:label "Einwohner Nachname"@de ;
+  o-steps:hasDescription step:lastNameDescriptionEnglish1 ,
+                       [ xl:literalForm "Citizen's last name"@en ],
+                       [ xl:literalForm "Inwoner naam"@nl ],
+                       [ xl:literalForm "Einwohner Nachname"@de ];
+  o-steps:requiresState o-steps:emptyState ;
+  o-steps:producesState state:citizenLastName .
+
+step:lastNameDescriptionEnglish2 a xl:Label ;
+  xl:literalForm "The last name as indicated on your passport or ID card."@en .
+
+step:provideCitizenGenderManually a o-steps:ComponentLevelStep ;
+  rdfs:label "Citizen's gender"@en ;
+  rdfs:label "Geslacht inwoner"@nl ;
+  rdfs:label "Einwohner Geschlecht"@de ;
+  o-steps:hasDescription step:genderDescriptionEnglish1 ,
+                       [ xl:literalForm "Citizen's  gender"@en ],
+                       [ xl:literalForm "Geslacht inwoner"@nl ],
+                       [ xl:literalForm "Einwohner Geschlecht"@de ];
+  o-steps:requiresState o-steps:emptyState ;
+  o-steps:producesState state:citizenGender .
+
+step:genderDescriptionEnglish1 a xl:Label ;
+  xl:literalForm "The biological gender as indicated on your passport or ID card."@en .
+
+step:provideCitizenEmailManually a o-steps:ComponentLevelStep ;
+  rdfs:label "Citizen's email address"@en ;
+  rdfs:label "Email inwoner"@nl ;
+  rdfs:label "Einwohner Email"@de ;
+  o-steps:hasDescription step:emailDescriptionEnglish1  ,
+                       [ xl:literalForm "Citizen's  email address"@en ],
+                       [ xl:literalForm "Email inwoner"@nl ],
+                       [ xl:literalForm "Einwohner Email"@de ];
+  o-steps:requiresState o-steps:emptyState ;
+  o-steps:producesState state:citizenEmailAddress .
+
+step:emailDescriptionEnglish1 a xl:Label ;
+  xl:literalForm "A valid email address containing the address, '@' symbol and hostname."@en .
+
+step:provideCitizenMobilePhoneNumberManually a o-steps:ComponentLevelStep ;
+  rdfs:label "Citizen's mobile phone number"@en ;
+  rdfs:label "GSM inwoner"@nl ;
+  rdfs:label "Handynummer Einwohner"@de ;
+  o-steps:hasDescription step:mobilePhoneNumberDescriptionEnglish1 ,
+                       [ xl:literalForm "Citizen's mobile phone number"@en ],
+                       [ xl:literalForm "GSM inwoner"@nl ],
+                       [ xl:literalForm "Handynummer Einwohner"@de ];
+  o-steps:requiresState o-steps:emptyState ;
+  o-steps:producesState state:citizenMobilePhoneNumber .
+
+step:mobilePhoneNumberDescriptionEnglish1 a xl:Label ;
+  xl:literalForm "A mobile phone number including a country code."@en .
+
+step:provideCitizenPhoneNumberManually a o-steps:ComponentLevelStep ;
+  rdfs:label "Citizen's phone number"@en ;
+  rdfs:label "Telefoon inwoner"@nl ;
+  rdfs:label "Telefonnummer Einwohner"@de ;
+  o-steps:hasDescription step:phoneNumberDescriptionEnglish1 ,
+                       [ xl:literalForm "Citizen's  phone number"@en ],
+                       [ xl:literalForm "Telefoon inwoner"@nl ],
+                       [ xl:literalForm "Telefonnummer Einwohner"@de ];
+  o-steps:requiresState o-steps:emptyState ;
+  o-steps:producesState state:citizenPhoneNumber .
+
+step:phoneNumberDescriptionEnglish1 a xl:Label ;
+  xl:literalForm "A landline phone number including a country code."@en .
+
+step:provideCitizenNationalNumberManually a o-steps:ComponentLevelStep ;
+  rdfs:label "Citizen's national number"@en ;
+  rdfs:label "Rijksregister inwoner"@nl ;
+  rdfs:label "Einwohner Reichsregisternummer"@de ;
+  o-steps:hasDescription
+                       [ xl:literalForm "Citizen's national number"@en ],
+                       [ xl:literalForm "Rijksregister inwoner"@nl ],
+                       [ xl:literalForm "Einwohner Reichsregisternummer"@de ];
+  o-steps:requiresState o-steps:emptyState ;
+  o-steps:producesState state:citizenNationalNumber .
+
+step:provideCitizensNationalityManually a o-steps:ComponentLevelStep ;
+  rdfs:label "Citizen's nationalaty"@en ;
+  rdfs:label "Nationaliteit inwoner"@nl ;
+  rdfs:label "Nationalität des Einwonders"@de ;
+  o-steps:hasDescription
+                       [ xl:literalForm "Citizen's nationality"@en ],
+                       [ xl:literalForm "Nationaliteit inwoner"@nl ],
+                       [ xl:literalForm "Nationalität des Einwonders"@de ];
+  o-steps:requiresState o-steps:emptyState ;
+  o-steps:producesState state:citizenNationality .
+
+step:provideCitizenBankAccountNumberManually a o-steps:ComponentLevelStep ;
+  rdfs:label "Citizen's bank account number"@en ;
+  rdfs:label "rekeningsnummer inwoner"@nl ;
+  rdfs:label "Bankverbindungsdaten Einwohner"@de ;
+  o-steps:hasDescription [ xl:literalForm  "Citizen's bank account number"@en],
+   [ xl:literalForm  "rekeningsnummer inwoner"@nl ],
+   [ xl:literalForm  "Bankverbindungsdaten Einwohner"@de ] ;
+  o-steps:requiresState o-steps:emptyState ;
+  o-steps:producesState state:citizenBankAccountNumber .
+
+step:provideCitizenResidencePermitManually a o-steps:ComponentLevelStep ;
+  rdfs:label "Citizen's residency permit"@en ;
+  rdfs:label "verblijfsvergunning"@nl ;
+  rdfs:label "Aufenthaltsgenehmigung"@de ;
+  o-steps:hasDescription [ xl:literalForm  "Citizen's residency permit"@en],
+   [ xl:literalForm  "verblijfsvergunning"@nl ],
+   [ xl:literalForm  "Aufenthaltsgenehmigung"@de ] ;
+  o-steps:requiresState o-steps:emptyState ;
+  o-steps:producesState state:citizenResidencePermit .
+
+step:provideCitizenBirthDateManually a o-steps:ComponentLevelStep ;
+  rdfs:label "Citizen's date of birth"@en ;
+  rdfs:label "geboortedatum inwoner"@nl ;
+  rdfs:label "Geburtsdatum Einwohner"@de ;
+  o-steps:hasDescription [ xl:literalForm  "Citizen's date of birth"@en ],
+   [ xl:literalForm  "geboortedatum inwoner"@nl ],
+   [ xl:literalForm  "Geburtsdatum Einwohner"@de ] ;
+  o-steps:requiresState o-steps:emptyState ;
+  o-steps:producesState state:citizenBirthDate .
+
+step:provideCitizenBirthPlaceManually a o-steps:ComponentLevelStep ;
+  o-steps:hasDescription [ xl:literalForm  "Citizen's place of birth"@en ],
+   [ xl:literalForm  "geboorteplaats inwoner"@nl ],
+   [ xl:literalForm  "Geburtsort Einwohner"@de ] ;
+  o-steps:requiresState o-steps:emptyState ;
+  o-steps:producesState state:citizenCityOfBirth .
+
+step:provideCitizenAddressManually a o-steps:ComponentLevelStep ;
+  rdfs:label "Citizen's address"@en ;
+  rdfs:label "adres inwoner"@nl ;
+  rdfs:label "Adresse Einwohner"@de ;
+  o-steps:hasDescription [ xl:literalForm  "Citizen's address"@en ],
+   [ xl:literalForm  "adres inwoner"@nl ],
+   [ xl:literalForm  "Adresse Einwohner"@de ] ;
+  o-steps:requiresState o-steps:emptyState ;
+  o-steps:producesState state:citizenAddress .
+
+step:provideCitizenProfessionManually a o-steps:ComponentLevelStep ;
+  rdfs:label "Citizen's profession"@en ;
+  rdfs:label "beroep inwoner"@nl ;
+  rdfs:label "Beruf Einwohner"@de ;
+  o-steps:hasDescription [ xl:literalForm  "Citizen's profession"@en ],
+   [ xl:literalForm  "beroep inwoner"@nl ],
+   [ xl:literalForm  "Beruf Einwohner"@de ] ;
+  o-steps:requiresState o-steps:emptyState ;
+  o-steps:producesState state:citizenProfession .
+
+
+
+#
+# Steps to provide information about moving in a manual fashion
+#
+step:provideMovingDateManually a o-steps:ComponentLevelStep ;
+  rdfs:label "Moving date"@en ;
+  rdfs:label "Verhuisdatum"@nl ;
+  rdfs:label "Umzungsdatum"@de ;
+  o-steps:requiresState o-steps:emptyState ;
+  o-steps:producesState state:movingDate .
+
+step:provideMovingCityManually a o-steps:ComponentLevelStep ;
+  rdfs:label "City to move to"@en ;
+  rdfs:label "Stad waarnaar wordt verplaatst"@nl ;
+  rdfs:label "Stadt in die umgezogen wird"@de ;
+  o-steps:hasDescription [ xl:literalForm  "City to move to"@en ],
+   [ xl:literalForm  "Stad waarnaar wordt verplaatst"@nl ],
+   [ xl:literalForm  "Stadt, in die umgezogen wird"@de ] ;
+  o-steps:requiresState o-steps:emptyState ;
+  o-steps:producesState state:movingCity .
+
+step:provideMovingAddressManually a o-steps:ComponentLevelStep ;
+  rdfs:label "Moving address"@en ;
+  rdfs:label "Adres waarnaar wordt verhuist"@nl ;
+  rdfs:label "Umzungsadresse"@de ;
+  o-steps:hasDescription [ xl:literalForm  "Moving address"@en ],
+   [ xl:literalForm  "Adres waarnaar wordt verplaatst"@nl ],
+   [ xl:literalForm  "Umzugsadresse"@de ] ;
+  o-steps:requiresState o-steps:emptyState ;
+  o-steps:producesState state:movingAddress .
+
+step:provideBillingAddressManually a o-steps:ComponentLevelStep ;
+  rdfs:label "Billing address"@en ;
+  rdfs:label "Facturatieadres"@nl ;
+  rdfs:label "Rechnungsadresse"@de ;
+  o-steps:hasDescription [ xl:literalForm  "Billing address"@en ],
+   [ xl:literalForm  "Facturatieadres"@nl ],
+   [ xl:literalForm  "Rechnungsadresse"@de ] ;
+  o-steps:requiresState o-steps:emptyState ;
+  o-steps:producesState state:billingAddress .
+
+#
+# Steps to provide waste collection information in a manual fashion
+#
+
+#submit waste info
+
+
+step:submitWasteCollectionContainerLevel a o-steps:ContainerLevelStep ;
+  ex:subpathlink <http://localhost:8000/plan/component_submitWasteCollectionContainerLevel>;
+  o-steps:hasDescription [ xl:literalForm  "Request Waste Collection"@en ],
+   [ xl:literalForm  "Vraag afvalinzameling aan"@nl ],
+   [ xl:literalForm  "Anfrage fuer Abfallabholung"@de ] ;
+  o-steps:producesState state:wasteCollectionRequested  ;
+  o-steps:requiresState state:movingDate,
+                        state:movingCity,
+                        state:citizenAddress,
+                        state:movingAddress,
+    state:numberOf40LiterGreyWasteContainers ,
+    state:numberOf120LiterGreyWasteContainers ,
+    state:numberOf240LiterGreyWasteContainers ,
+    state:greyWasteContainerLockInfo,
+    state:greenWasteInfo,
+    state:numberOf40LiterPaperWasteContainers ,
+    state:numberOf240LiterPaperWasteContainers ,
+    state:numberOf1100LiterPaperWasteContainers
+  .
+
+step:provideGreyWasteContainerInfo a o-steps:ContainerLevelStep ;
+  ex:subpathlink <http://localhost:8000/plan/component_provideGreyWasteContainerInfo>;
+  rdfs:label "Grey waste container(s)"@en ;
+  rdfs:label "Grijze restafvalcontainer(s)"@nl ;
+  rdfs:label "Graue Restabfallcontainer"@de ;
+  rdfs:comment "Information regarding grey waste container(s)"@en ;
+  o-steps:hasDescription [ xl:literalForm  "Grey waste container(s)"@en ],
+   [ xl:literalForm  "Grijze restafvalcontainer(s)"@nl ],
+   [ xl:literalForm  "Graue Restabfallcontainer"@de ] ;
+  o-steps:requiresState o-steps:emptyState ;
+  o-steps:producesState
+    state:numberOf40LiterGreyWasteContainers ,
+    state:numberOf120LiterGreyWasteContainers ,
+    state:numberOf240LiterGreyWasteContainers ,
+    state:greyWasteContainerLockInfo .
+
+step:provideGreenWasteContainerInfo a o-steps:ContainerLevelStep ;
+  ex:subpathlink <http://localhost:8000/plan/component_provideGreenWasteContainerInfo>;
+	rdfs:label "Green GFT waste container(s)"@en ;
+  rdfs:label "Groene GFT container(s)"@nl ;
+  rdfs:label "Grüne Biomüllcontainer"@de ;
+	rdfs:comment "Information regarding green waste container(s)"@en ;
+  o-steps:hasDescription [ xl:literalForm  "Green GFT waste container(s)"@en ],
+   [ xl:literalForm  "Groene GFT container(s)"@nl ],
+   [ xl:literalForm  "Grüne Biomüllcontainer"@de ] ;
+  o-steps:requiresState o-steps:emptyState ;
+  o-steps:producesState
+           state:greenWasteInfo .
+
+step:providePaperWasteContainerInfo a o-steps:ContainerLevelStep ;
+  ex:subpathlink <http://localhost:8000/plan/component_providePaperWasteContainerInfo>;
+  rdfs:label "Paper waste container(s)"@en ;
+  rdfs:label "Papier container(s)"@nl ;
+  rdfs:label "Papiercontainer"@de ;
+  rdfs:comment "Information regarding paper waste container(s)"@en ;
+  o-steps:hasDescription [ xl:literalForm  "Paper waste container(s)"@en ],
+   [ xl:literalForm  "Papier container(s)"@nl ],
+   [ xl:literalForm  "Papiercontainer"@de ] ;
+  o-steps:requiresState o-steps:emptyState ;
+  o-steps:producesState
+    state:numberOf40LiterPaperWasteContainers ,
+    state:numberOf240LiterPaperWasteContainers ,
+    state:numberOf1100LiterPaperWasteContainers  .
+
+
+step:provideNumberOf40LiterGreenWasteContainersManually a o-steps:ComponentLevelStep ;
+  rdfs:label "Number of 40 liter green waste container(s)"@en ;
+  rdfs:label "Aantal 40 liter GFT container(s)"@nl ;
+  rdfs:label "Anzahl Biomüllcontainer 40 liter"@de ;
+  o-steps:hasDescription [ xl:literalForm  "Number of 40 liter green waste container(s)"@en ],
+   [ xl:literalForm  "Aantal 40 liter GFT container(s)"@nl ],
+   [ xl:literalForm  "Anzahl Biomüllcontainer 40 liter"@de ] ;
+  o-steps:requiresState o-steps:emptyState ;
+  o-steps:producesState state:numberOf40LiterGreenWasteContainers .
+
+step:provideNumberOf120LiterGreenWasteContainersManually a o-steps:ComponentLevelStep ;
+  rdfs:label "Number of 120 liter green waste container(s)"@en ;
+  rdfs:label "Aantal 120 liter GFT container(s)"@nl ;
+  rdfs:label "Anzahl Biomüllcontainer 120 liter"@de ;
+  o-steps:hasDescription [ xl:literalForm  "Number of 120 liter green waste container(s)"@en ],
+   [ xl:literalForm  "Aantal 120 liter GFT container(s)"@nl ],
+   [ xl:literalForm  "Anzahl Biomüllcontainer 120 liter"@de ] ;
+  o-steps:requiresState o-steps:emptyState ;
+  o-steps:producesState state:numberOf120LiterGreenWasteContainers .
+
+step:provideGreenWasteContainerCollectionStopInfoManually a o-steps:ComponentLevelStep ;
+  rdfs:label "Stop collecting green waste containers"@en ;
+  rdfs:label "Ophaling GFT-container door stopzetting"@nl ;
+  rdfs:label "Abholung von Biomüll stoppen"@de ;
+  o-steps:hasDescription [ xl:literalForm  "Stop collecting green waste containers"@en ],
+   [ xl:literalForm  "Ophaling GFT-container door stopzetting"@nl ],
+   [ xl:literalForm  "Abholung von Biomüll stoppen"@de ] ;
+  o-steps:requiresState o-steps:emptyState ;
+  o-steps:producesState state:greenWasteContainerStopCollectingInfo .
+
+step:provideGreenWasteContainerLockInfoManually a o-steps:ComponentLevelStep ;
+  rdfs:label "I request a lock for my green waste container(s)"@en ;
+  rdfs:label "Ik vraag een slot voor mijn GFT container(s) aan"@nl ;
+  rdfs:label "Ich beantrage ein Schloss für meine Biomüllcontainer"@de ;
+  o-steps:hasDescription [ xl:literalForm  "I request a lock for my green waste container(s)"@en ],
+   [ xl:literalForm  "Ik vraag een slot voor mijn GFT container(s) aan"@nl ],
+   [ xl:literalForm  "Ich beantrage ein Schloss für meine Biomüllcontainer"@de ] ;
+  o-steps:requiresState o-steps:emptyState ;
+  o-steps:producesState state:greenWasteContainerLockInfo .
+
+step:provideGreenWasteContainerOwnCompostInfoManually a o-steps:ComponentLevelStep ;
+  rdfs:label "No green waste containers, because I compost on my own"@en ;
+  rdfs:label "Geen GFT containers, want ik composteer mijn GFT zelf"@nl ;
+  rdfs:label "Keine Biomüllcontainer, weil ich selbst kompostiere"@de ;
+  o-steps:hasDescription [ xl:literalForm  "No green waste containers, because I compost on my own"@en ],
+   [ xl:literalForm  "Geen GFT containers, want ik composteer mijn GFT zelf"@nl ],
+   [ xl:literalForm  "Keine Biomüllcontainer, weil ich selbst kompostiere"@de ] ;
+  o-steps:requiresState o-steps:emptyState ;
+  o-steps:producesState state:greenWasteContainerOwnCompostInfo .
+
+step:provideNumberOf40LiterGreyWasteContainersManually a o-steps:ComponentLevelStep ;
+  rdfs:label "Number of 40 liter grey waste container(s)"@en ;
+  rdfs:label "Aantal 40 liter grijze restafvalcontainer(s)"@nl ;
+  rdfs:label "Anzahl grauer Restabfallcontainer 40 liter"@de ;
+  o-steps:hasDescription [ xl:literalForm  "Number of 40 liter grey waste container(s)"@en ],
+   [ xl:literalForm  "Aantal 40 liter grijze restafvalcontainer(s)"@nl ],
+   [ xl:literalForm  "Anzahl grauer Restabfallcontainer 40 liter"@de ] ;
+  o-steps:requiresState o-steps:emptyState ;
+  o-steps:producesState state:numberOf40LiterGreyWasteContainers .
+
+step:provideNumberOf120LiterGreyWasteContainersManualy a o-steps:ComponentLevelStep ;
+  rdfs:label "Number of 120 liter grey waste container(s)"@en ;
+  rdfs:label "Aantal 120 liter grijze restafvalcontainer(s)"@nl ;
+  rdfs:label "Anzahl grauer Restabfallcontainer 120 liter"@de ;
+  o-steps:hasDescription [ xl:literalForm  "Number of 120 liter grey waste container(s)"@en ],
+   [ xl:literalForm  "Aantal 120 liter grijze restafvalcontainer(s)"@nl ],
+   [ xl:literalForm  "Anzahl grauer Restabfallcontainer 120 liter"@de ] ;
+  o-steps:requiresState o-steps:emptyState ;
+  o-steps:producesState state:numberOf120LiterGreyWasteContainers .
+
+step:provideNumberOf240LiterGreyWasteContainers a o-steps:ComponentLevelStep ;
+  rdfs:label "Number of 240 liter grey waste container(s)"@en ;
+  rdfs:label "Aantal 240 liter grijze restafvalcontainer(s)"@nl ;
+  rdfs:label "Anzahl grauer Restabfallcontainer 240 liter"@de ;
+  o-steps:hasDescription [ xl:literalForm  "Number of 240 liter grey waste container(s)"@en ],
+   [ xl:literalForm  "Aantal 240 liter grijze restafvalcontainer(s)"@nl ],
+   [ xl:literalForm  "Anzahl grauer Restabfallcontainer 240 liter"@de ] ;
+  o-steps:requiresState o-steps:emptyState ;
+  o-steps:producesState state:numberOf240LiterGreyWasteContainers .
+
+step:provideGreyWasteContainerLockInfoManually a o-steps:ComponentLevelStep ;
+  rdfs:label "I request a lock for my grey waste container(s)"@en ;
+  rdfs:label "Ik vraag een slot voor mijn grijze restafvalcontainer(s) aan"@nl ;
+  rdfs:label "Ich beantrage ein Schloss für meine Restabfallcontainer"@de ;
+  o-steps:hasDescription [ xl:literalForm  "I request a lock for my grey waste container(s)"@en ],
+   [ xl:literalForm  "Ik vraag een slot voor mijn grijze restafvalcontainer(s) aan"@nl ],
+   [ xl:literalForm  "Ich beantrage ein Schloss für meine Restabfallcontainer"@de ] ;
+  o-steps:requiresState o-steps:emptyState ;
+  o-steps:producesState state:greyWasteContainerLockInfo .
+
+step:provideNumberOf40LiterPaperWasteContainersManually a o-steps:ComponentLevelStep ;
+  rdfs:label "Number of 40 liter paper waste container(s)"@en ;
+  rdfs:label "Aantal 40 liter papier container(s)"@nl ;
+  rdfs:label "Anzahl Papiercontainer 40 liter"@de ;
+  o-steps:hasDescription [ xl:literalForm  "Number of 40 liter paper waste container(s)"@en ],
+   [ xl:literalForm  "Aantal 40 liter papier container(s)"@nl ],
+   [ xl:literalForm  "Anzahl Papiercontainer 40 liter"@de ] ;
+  o-steps:requiresState o-steps:emptyState ;
+  o-steps:producesState state:numberOf40LiterPaperWasteContainers .
+
+step:provideNumberOf240LiterPaperWasteContainersManually a o-steps:ComponentLevelStep ;
+  rdfs:label "Number of 240 liter paper waste container(s)"@en ;
+  rdfs:label "Aantal 240 liter papier container(s)"@nl ;
+  rdfs:label "Anzahl Papiercontainer 240 liter"@de ;
+  o-steps:hasDescription [ xl:literalForm  "Number of 240 liter paper waste container(s)"@en ],
+   [ xl:literalForm  "Aantal 240 liter papier container(s)"@nl ],
+   [ xl:literalForm  "Anzahl Papiercontainer 240 liter"@de ] ;
+  o-steps:requiresState o-steps:emptyState ;
+  o-steps:producesState state:numberOf240LiterPaperWasteContainers .
+
+step:provideNumberOf1100LiterPaperWasteContainersManually a o-steps:ComponentLevelStep ;
+  rdfs:label "Number of 1100 liter paper waste container(s)"@en ;
+  rdfs:label "Aantal 1100 liter papier container(s)"@nl ;
+  rdfs:label "Anzahl Papiercontainer 1100 liter"@de ;
+  o-steps:hasDescription [ xl:literalForm  "Number of 1100 liter paper waste container(s)"@en ],
+   [ xl:literalForm  "bevestiging "@nl ],
+   [ xl:literalForm  "Anzahl Papiercontainer 1100 liter"@de ] ;
+  o-steps:requiresState o-steps:emptyState ;
+  o-steps:producesState state:numberOf1100LiterPaperWasteContainers .
+
+step:submitWasteCollectionComponentLevel a o-steps:ComponentLevelStep ;
+  o-steps:hasDescription [ xl:literalForm  "Confirm waste info"@en ],
+   [ xl:literalForm  "Bevestigung afvalinfo"@nl ],
+   [ xl:literalForm  "Bestaetigung Abfallinfo"@de ] ;
+  o-steps:producesState state:wasteCollectionRequested  ;
+  o-steps:requiresState state:wasteInfoShownToUser .
+
+step:showWasteCollection a o-steps:ComponentLevelStep ;
+  o-steps:hasDescription [ xl:literalForm  "Show waste info"@en ],
+   [ xl:literalForm  "Toon afvalinfo"@nl ],
+   [ xl:literalForm  "Zeige Abfallinfo"@de ] ;
+  o-steps:producesState state:wasteInfoShownToUser  ;
+  o-steps:requiresState state:movingDate,
+                        state:movingCity,
+                        state:citizenAddress,
+                        state:movingAddress,
+    state:numberOf40LiterGreyWasteContainers ,
+    state:numberOf120LiterGreyWasteContainers ,
+    state:numberOf240LiterGreyWasteContainers ,
+    state:greyWasteContainerLockInfo,
+    state:greenWasteInfo,
+    state:numberOf40LiterPaperWasteContainers ,
+    state:numberOf240LiterPaperWasteContainers ,
+    state:numberOf1100LiterPaperWasteContainers .
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,29 @@
+PREFIX log: <http://www.w3.org/2000/10/swap/log#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX list: <http://www.w3.org/2000/10/swap/list#>
+@prefix : <https://example.org/ns/example#> .
+
+# TODO give documentation
+{
+() :separate (?a ?a ?b ?b)
+}
+<=
+{
+}.
+
+# TODO give documentation
+{
+?outlist :separate (?a ?aresult  ?b ?bresult)
+}
+<=
+{
+?outlist rdf:first ?f.
+?outlist rdf:rest ?r.
+
+?f log:equalTo (?first ?second).
+
+(?a (?first)) list:append ?a1.
+(?b (?second)) list:append ?b1.
+
+?r :separate (?a1 ?aresult ?b1 ?bresult)
+}.
