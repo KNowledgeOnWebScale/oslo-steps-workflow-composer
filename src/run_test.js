@@ -10,18 +10,34 @@ const cache = {};
 main();
 
 async function main() {
+
+    /*
+        const produceBase = {
+        data: [
+            "demo/translation/step-reasoning.n3",
+            "demo/translation/help.n3",
+            "demo/translation/createPattern.n3",
+            goalStatePath,
+        ].concat(data),
+        "eye:flags": [
+            "--quantify http://josd.github.io/.well-known/genid/",
+        ],
+        query: "demo/translation/createGoal.n3",
+    }
+    */
     const config = {
         data: [
             "demo/translation/step-reasoning.n3",
             "demo/translation/help.n3",
             "demo/translation/createPattern.n3",
-            "demo/_example1/example1_steps.ttl",
-            "demo/_example1/example1_shapes.ttl",
-            "demo/_example1/example1_states.ttl",
-            "demo/_example1/example1_goalState.ttl",
+            "demo/_example1/steps.ttl",
+            "demo/_example1/shapes.ttl",
+            "demo/_example1/states.ttl",
+            "demo/_result/example1/goal_journey_state.n3",
         ],
         "eye:flags": [
             "--quantify http://josd.github.io/.well-known/genid/",
+            // "--pass",
         ],
         query: "demo/translation/createGoal.n3",
     }

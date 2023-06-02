@@ -1,6 +1,7 @@
 #!/bin/sh
 
 #alias eye='docker run --rm -v $(pwd):/$(pwd) bdevloed/eye' #Linux
+alias eye='docker run --rm -v "$(pwd)":"$(pwd)" -w "$(pwd)" --net=host -i bdevloed/eye'
 # alias eye='docker run --rm -v "/c/Users/bjdmeest/Ben/Work/iMinds/Projects/2019 09 SEMIC - CGI/git/n3-mapping-rules/demo:/tmp" bdevloed/eye' #windows powershell
 
 #first we produce the steps on each level based on the OSLO steps descriptions

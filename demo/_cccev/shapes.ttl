@@ -1,0 +1,61 @@
+@prefix o-steps: <https://fast.ilabt.imec.be/ns/oslo-steps/0.2#> .
+@prefix xl: <http://www.w3.org/2008/05/skos-xl#> .
+@prefix state: <https://fast.ilabt.imec.be/api/v5/states#> .
+@prefix step: <https://fast.ilabt.imec.be/api/v5/steps#> .
+@prefix shape: <https://fast.ilabt.imec.be/api/v5/shapes#> .
+@prefix cccev: <http://data.europa.eu/m8g/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix o-persoon: <https://data.vlaanderen.be/ns/persoon#> .
+@prefix ex: <https://example.org/ns/example#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+shape:ageShape a o-steps:StateShape, cccev:Constraint ; # ALIGNMENT
+    rdfs:label "A citizen's age"@en ;
+    sh:targetClass o-persoon:Inwoner ;
+    sh:property shape:agePattern .
+
+shape:agePattern a sh:PropertyShape ;
+    rdfs:label "Valid age"@en ;
+    sh:path ex:age ; #TODO leeftijd?
+    sh:datatype xsd:int ;
+    sh:minCount 1 .
+
+shape:validatedIDcardInfoShape a o-steps:StateShape ;
+    rdfs:label "A validated ID card info"@en ;
+    sh:targetClass o-persoon:Inwoner ;
+    # sh:targetClass cccev:Evidence ; # ALIGNMENT?
+    sh:property shape:validatedIDcardInfoShapePattern . # TODO isAbout a person + all card info
+
+shape:validatedBirthDate a o-steps:StateShape ;
+    rdfs:label "A validated birth date"@en ;
+    sh:targetClass o-persoon:Inwoner ;
+    # sh:targetClass cccev:Evidence ; # ALIGNMENT?
+    sh:property shape:validatedIDcardInfoShapePattern . # TODO isAbout a person + all card info
+
+shape:validatedIDcardInfoShapePattern a sh:PropertyShape ;
+    rdfs:label "A validated ID card info pattern"@en ;
+    sh:path ex:birthdate ; #TODO leeftijd?
+    sh:datatype xsd:date ;
+    sh:minCount 1 .
+
+shape:validatedcitizenAgeShape a o-steps:StateShape ;
+    rdfs:label "A validated age"@en ;
+    sh:targetClass o-persoon:Inwoner ;
+    # sh:targetClass cccev:SupportedValue ; # ALIGNMENT?
+    sh:property shape:agePattern . # TODO isAbout a person + all card info
+
+shape:provenMajority a o-steps:StateShape, cccev:Constraint ; # ALIGNMENT
+    rdfs:label "A citizen's proven majority"@en ;
+    sh:targetClass o-persoon:Inwoner ;
+    sh:property shape:provenMajorityPattern .
+
+shape:provenMajorityPattern a sh:PropertyShape ;
+    rdfs: "Proven majority"@en ;
+    sh:path ex:majority ;
+    sh:datatype xsd:boolean ;
+    sh:hasValue 1 ;
+    sh:minCount 1 .
+
+# Question: how is 'age of the citizen' an informationrequirement? isn't 'citizen has reached majority' the informationrequirement? Could have different
+# Major different: CCCEV is descriptive (so you can clarify what is an evidence/supportedValue) etc, OSLO-STEPS is prescriptive (use x as evidence for ...). Out of OSLO-STEPS + actual journey, you should be able to generate the CCCEV.

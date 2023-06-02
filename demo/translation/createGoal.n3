@@ -1,5 +1,4 @@
 @prefix o-steps: <https://fast.ilabt.imec.be/ns/oslo-steps/0.2#> .
-@prefix ex: <https://example.org/ns/example#> .
 @prefix var: <https://example.org/ns/var#> .
 PREFIX e: <http://eulersharp.sourceforge.net/2003/03swap/log-rules#>
 PREFIX gps: <http://josd.github.io/eye/reasoning/gps/gps-schema#>

@@ -95,3 +95,21 @@ _:x e:findall (?member {?user ex:familyMember ?member} ?members ).
 #:U_100 schema:contactType "phone". 
 #:U_99 schema:telephone :U_101.
 # :U_100 schema:telephone :U_102.
+
+{
+  ?x ex:birthdate ?y .
+  # TODO find right N3 rules
+  # ?x :now ?now .
+  # ?diff :diff (?now ?y) .
+  # ?years :diffToYears ?diff .
+} => {
+  # ?x ex:age 21
+} .
+
+{
+  ?x ex:age ?y .
+  # TODO find right N3 rules
+  # ?z :isLarger (?y 18)
+} => {
+  # ?x ex:majority 1
+} .

@@ -288,6 +288,10 @@ npm run test
             +---paths
             \---steps
 
+## Development environment
+
+`./convert-encoding.ps1` on `./demo/` (you will get a prompt) makes sure that all input ttl/n3 files have the right encoding
+
 ## TODO
 
 - [ ] What is :pattern?

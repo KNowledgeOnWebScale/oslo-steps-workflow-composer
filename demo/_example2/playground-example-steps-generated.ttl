@@ -1,0 +1,53 @@
+@prefix ex: <http://example.org/ns/example#>.
+@prefix o-persoon: <http://data.vlaanderen.be/ns/persoon#>.
+@prefix o-steps: <https://fast.ilabt.imec.be/ns/oslo-steps/0.2#>.
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix sh: <http://www.w3.org/ns/shacl#>.
+@prefix shapes: <http://fast.ilabt.imec.be/api/v7/shapes#>.
+@prefix states: <http://fast.ilabt.imec.be/api/v7/states#>.
+@prefix steps: <http://fast.ilabt.imec.be/api/v7/steps#>.
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
+
+<http://fast.ilabt.imec.be/api/v7/steps> a <http://www.w3.org/ns/ldp#Container>.
+steps:collectDataForPinRequest ex:subpathlink <http://fast.ilabt.imec.be/api/v7/plan/component_collectDataForPinRequest>;
+    rdfs:label "collectDataForPinRequest"@en, "collectDataForPinRequest"@nl, "collectDataForPinRequest"@de;
+    <https://fast.ilabt.imec.be/ns/oslo-steps/0.2#hasDescription> _:n0, _:n1, _:n2;
+    <https://fast.ilabt.imec.be/ns/oslo-steps/0.2#requiresState> <https://fast.ilabt.imec.be/ns/oslo-steps/0.2#emptyState>;
+    <https://fast.ilabt.imec.be/ns/oslo-steps/0.2#producesState> states:provideCitizenNationalNumberManually, states:provideCitizenEmailManually;
+    a <https://fast.ilabt.imec.be/ns/oslo-steps/0.2#ContainerLevelStep>, <https://fast.ilabt.imec.be/ns/oslo-steps/0.2#JourneyLevelStep>.
+_:n0 <http://www.w3.org/2008/05/skos-xl#literalForm> "collectDataForPinRequest"@en.
+_:n1 <http://www.w3.org/2008/05/skos-xl#literalForm> "collectDataForPinRequest"@nl.
+_:n2 <http://www.w3.org/2008/05/skos-xl#literalForm> "collectDataForPinRequest"@de.
+steps:requestNewEidPin ex:subpathlink <http://fast.ilabt.imec.be/api/v7/plan/component_requestNewEidPin>;
+    rdfs:label "requestNewEidPin"@en, "requestNewEidPin"@nl, "requestNewEidPin"@de;
+    <https://fast.ilabt.imec.be/ns/oslo-steps/0.2#hasDescription> _:n3, _:n4, _:n5;
+    <https://fast.ilabt.imec.be/ns/oslo-steps/0.2#requiresState> states:provideCitizenNationalNumberManually, states:provideCitizenEmailManually;
+    <https://fast.ilabt.imec.be/ns/oslo-steps/0.2#producesState> states:newEidPincodeRequested;
+    a <https://fast.ilabt.imec.be/ns/oslo-steps/0.2#ContainerLevelStep>, <https://fast.ilabt.imec.be/ns/oslo-steps/0.2#JourneyLevelStep>.
+_:n3 <http://www.w3.org/2008/05/skos-xl#literalForm> "requestNewEidPin"@en.
+_:n4 <http://www.w3.org/2008/05/skos-xl#literalForm> "requestNewEidPin"@nl.
+_:n5 <http://www.w3.org/2008/05/skos-xl#literalForm> "requestNewEidPin"@de.
+steps:provideCitizenNationalNumberManuallyStep rdfs:label "provideCitizenNationalNumberManuallyStep"@en, "provideCitizenNationalNumberManuallyStep"@nl, "provideCitizenNationalNumberManuallyStep"@de;
+    <https://fast.ilabt.imec.be/ns/oslo-steps/0.2#hasDescription> _:n6, _:n7, _:n8;
+    <https://fast.ilabt.imec.be/ns/oslo-steps/0.2#requiresState> <https://fast.ilabt.imec.be/ns/oslo-steps/0.2#emptyState>;
+    <https://fast.ilabt.imec.be/ns/oslo-steps/0.2#producesState> states:provideCitizenNationalNumberManually;
+    a <https://fast.ilabt.imec.be/ns/oslo-steps/0.2#ComponentLevelStep>.
+_:n6 <http://www.w3.org/2008/05/skos-xl#literalForm> "provideCitizenNationalNumberManuallyStep"@en.
+_:n7 <http://www.w3.org/2008/05/skos-xl#literalForm> "provideCitizenNationalNumberManuallyStep"@nl.
+_:n8 <http://www.w3.org/2008/05/skos-xl#literalForm> "provideCitizenNationalNumberManuallyStep"@de.
+steps:provideCitizenEmailManuallyStep rdfs:label "provideCitizenEmailManuallyStep"@en, "provideCitizenEmailManuallyStep"@nl, "provideCitizenEmailManuallyStep"@de;
+    <https://fast.ilabt.imec.be/ns/oslo-steps/0.2#hasDescription> _:n9, _:n10, _:n11;
+    <https://fast.ilabt.imec.be/ns/oslo-steps/0.2#requiresState> <https://fast.ilabt.imec.be/ns/oslo-steps/0.2#emptyState>;
+    <https://fast.ilabt.imec.be/ns/oslo-steps/0.2#producesState> states:provideCitizenEmailManually;
+    a <https://fast.ilabt.imec.be/ns/oslo-steps/0.2#ComponentLevelStep>.
+_:n9 <http://www.w3.org/2008/05/skos-xl#literalForm> "provideCitizenEmailManuallyStep"@en.
+_:n10 <http://www.w3.org/2008/05/skos-xl#literalForm> "provideCitizenEmailManuallyStep"@nl.
+_:n11 <http://www.w3.org/2008/05/skos-xl#literalForm> "provideCitizenEmailManuallyStep"@de.
+steps:provideCitizenDataItsMe rdfs:label "provideCitizenDataItsMe"@en, "provideCitizenDataItsMe"@nl, "provideCitizenDataItsMe"@de;
+    <https://fast.ilabt.imec.be/ns/oslo-steps/0.2#hasDescription> _:n12, _:n13, _:n14;
+    <https://fast.ilabt.imec.be/ns/oslo-steps/0.2#requiresState> <https://fast.ilabt.imec.be/ns/oslo-steps/0.2#emptyState>;
+    <https://fast.ilabt.imec.be/ns/oslo-steps/0.2#producesState> states:provideCitizenEmailManually, states:provideCitizenNationalNumberManually;
+    a <https://fast.ilabt.imec.be/ns/oslo-steps/0.2#ComponentLevelStep>.
+_:n12 <http://www.w3.org/2008/05/skos-xl#literalForm> "provideCitizenDataItsMe"@en.
+_:n13 <http://www.w3.org/2008/05/skos-xl#literalForm> "provideCitizenDataItsMe"@nl.
+_:n14 <http://www.w3.org/2008/05/skos-xl#literalForm> "provideCitizenDataItsMe"@de.

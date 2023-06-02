@@ -1,4 +1,4 @@
-﻿#Processed by EYE v20.0313.1435 josd
+#Processed by EYE v20.0313.1435 josd
 #eye profile/knowledge.n3 profile/personalInfo.n3 interim/subgoals/extraRule_submitWasteInfo.n3 help-functions/aux2.n3 --nope --query show/waste-info.n3
 
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.

@@ -20,7 +20,7 @@ const config = {
   eyeOptions: {
     consoleLogging: true,
     command_arguments: { maxBuffer: 1024 * 500 },
-    eyePath: 'docker run --rm -v "/c/Users/Ben/Ben/Work/iMinds/Projects/2019 09 SEMIC - CGI/git/n3-mapping-rules/demo":/demo custom-eye',
+    eyePath: `docker run --rm -v "/c${path.resolve(__dirname, '../../').slice(2).replace(/\\/g, '/')}/demo":/demo custom-eye`,
     defaultFlags: ['--nope']
   }
 }
