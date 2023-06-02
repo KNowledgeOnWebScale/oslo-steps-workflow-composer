@@ -1,5 +1,0 @@
-@prefix : <http://example.org#>.
-@prefix step: <http://localhost:8000/steps#>.
-
-step:provideCitizenMobilePhoneNumberManually :value "12345".
-step:provideCitizenMobilePhoneNumberManually :value "123485".

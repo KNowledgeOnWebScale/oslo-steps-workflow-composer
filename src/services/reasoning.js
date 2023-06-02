@@ -13,6 +13,8 @@ const path = require('path')
 const exec = require('child-process-promise').exec
 const Glob = require('glob').Glob
 
+const mountPath = "/mnt";
+
 const config = {
   serverOptions: {
     verbose: false,
@@ -20,7 +22,7 @@ const config = {
   eyeOptions: {
     consoleLogging: true,
     command_arguments: { maxBuffer: 1024 * 500 },
-    eyePath: `docker run --rm -v "/c${path.resolve(__dirname, '../../').slice(2).replace(/\\/g, '/')}/demo":/demo custom-eye`,
+    eyePath: `docker run --rm -v "/c${path.resolve(__dirname, '../../').slice(2).replace(/\\/g, '/')}/":${mountPath} custom-eye`,
     defaultFlags: ['--nope']
   }
 }
@@ -94,7 +96,7 @@ function getEyeCommand(inference) {
     }
 
     // replace old date locations with the new ones, so it contains paths to /* locations
-    inference.data = dataLocations
+    inference.data = dataLocations.map(d => mountPath + '/' + d)
 
     // build the data part of the command
     command = command + ' ' + inference.data.join(' ')
@@ -106,12 +108,12 @@ function getEyeCommand(inference) {
   if (inference.query) {
     if (Array.isArray(inference.query)) {
       if (inference.query.length === 1) {
-        command = command + ' --query ' + inference.query[0]
+        command = command + ' --query ' + mountPath + '/' + inference.query[0]
       } else {
         throw new Error('cannot handle multiple queries')
       }
     } else {
-      command = command + ' --query ' + inference.query
+      command = command + ' --query ' + mountPath + '/' + inference.query
     }
   }
 

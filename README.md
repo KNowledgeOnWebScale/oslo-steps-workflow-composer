@@ -1,5 +1,7 @@
 # README
 
+N3 mapping rules for the workflow composer that dynamically reasons about the next journey, container, or component-level steps to be executed.
+
 - `demo`: actual used code
   - `run.sh`: build and testscript
     - build: take all (SHACL) shapes

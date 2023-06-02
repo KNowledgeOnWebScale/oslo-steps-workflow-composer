@@ -1,4 +1,0 @@
-@prefix ex: <http://example.org/ns/example#>.
-
-
-{?a ex:usesData ?b} => {?a ex:usesData ?b}.

@@ -1,5 +1,0 @@
-@prefix : <https://example.org/ns/example#> .
-@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-
-:Person a rdfs:Class.
-:Person :definedBy (:name :gender :address).

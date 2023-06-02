@@ -1,4 +1,0 @@
-@prefix step: <http://localhost:8000/steps#>.
-@prefix : <http://example.org#> .
-
-step:provideGreenWasteContainerInfo :findSubpath true.

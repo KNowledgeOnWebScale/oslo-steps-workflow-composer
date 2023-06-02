@@ -23,9 +23,9 @@ async function main() {
     const config = {
         label,
         oslo: {
-            shapes: `demo/_${label}/shapes.ttl`,
-            states: `demo/_${label}/states.ttl`,
-            steps: `demo/_${label}/steps.ttl`,
+            shapes: `scenarios/${label}/shapes.ttl`,
+            states: `scenarios/${label}/states.ttl`,
+            steps: `scenarios/${label}/steps.ttl`,
         },
         goalStates: ["http://localhost:8000/states#newEidPincodeRequested"],
     };
@@ -36,24 +36,24 @@ async function main() {
     // const config = {
     //     label: "moving",
     //     oslo: {
-    //         steps: "demo/oslo-descriptions/change-address-steps.ttl",
-    //         states: "demo/oslo-descriptions/change-address-states.ttl",
-    //         shapes: "demo/oslo-descriptions/change-address-shapes.ttl",
+    //         steps: "scenarios/_endevent_demo/change-address-steps.ttl",
+    //         states: "scenarios/_endevent_demo/change-address-states.ttl",
+    //         shapes: "scenarios/_endevent_demo/change-address-shapes.ttl",
     //     },
     //     goal: "?x <https://example.org/ns/example#wasteCollectionRequested> true ; <https://example.org/ns/example#addressChanged> true .",
     // };
 
     try {
-        await fs.mkdir(path.resolve(basePath, 'demo/_result/'));
+        await fs.mkdir(path.resolve(basePath, '_output/'));
     } catch (e) {
         // OK already exists
     }
     try {
-        await fs.mkdir(path.resolve(basePath, 'demo/_result/', config.label));
+        await fs.mkdir(path.resolve(basePath, '_output/', config.label));
     } catch (e) {
         // OK already exists
     }
-    const baseFolder = `demo/_result/${config.label}`;
+    const baseFolder = `_output/${config.label}`;
     const personalInfoPath = baseFolder + '/profile.ttl';
     config.baseFolder = baseFolder;
     config.personalInfo = personalInfoPath;
@@ -77,8 +77,8 @@ async function main() {
                 journeySelectedStepsPath,
                 config.oslo.steps,
                 config.personalInfo,
-                "demo/workflow-composer/gps-plugin_modified_noPermutations.n3",
-                "demo/profile/knowledge.n3",
+                "rules/workflow-composer/gps-plugin_modified_noPermutations.n3",
+                "scenarios/knowledge.n3",
             ],
             query: goalPath
         }
@@ -284,14 +284,14 @@ async function main() {
 async function reasonJourneyLevelSteps(data, baseFolder) {
     const produceBase = {
         data: [
-            "demo/translation/step-reasoning.n3",
-            "demo/translation/help.n3",
-            "demo/translation/createPattern.n3",
+            "rules/oslo-steps/step-reasoning.n3",
+            "rules/util/help.n3",
+            "rules/shacl/createPattern.n3",
         ].concat(data),
         "eye:flags": [
             "--quantify http://josd.github.io/.well-known/genid/",
         ],
-        query: "demo/translation/mappingRuleCreationJourney.n3",
+        query: "rules/oslo-steps/mappingRuleCreationJourney_query.n3",
     }
     const output = `${baseFolder}/steps_journey_level.n3`;
     await _cached(output, produceBase);
@@ -301,14 +301,14 @@ async function reasonJourneyLevelSteps(data, baseFolder) {
 async function reasonContainerLevelSteps(data, baseFolder) {
     const produceBase = {
         data: [
-            "demo/translation/step-reasoning.n3",
-            "demo/translation/help.n3",
-            "demo/translation/createPattern.n3",
+            "rules/oslo-steps/step-reasoning.n3",
+            "rules/util/help.n3",
+            "rules/shacl/createPattern.n3",
         ].concat(data),
         "eye:flags": [
             "--quantify http://josd.github.io/.well-known/genid/",
         ],
-        query: "demo/translation/mappingRuleCreationContainer.n3",
+        query: "rules/oslo-steps/mappingRuleCreationContainer_query.n3",
     }
     const output = `${baseFolder}/steps_container_level.n3`;
     await _cached(output, produceBase);
@@ -318,14 +318,14 @@ async function reasonContainerLevelSteps(data, baseFolder) {
 async function reasonComponentLevelSteps(data, baseFolder) {
     const produceBase = {
         data: [
-            "demo/translation/step-reasoning.n3",
-            "demo/translation/help.n3",
-            "demo/translation/createPattern.n3",
+            "rules/oslo-steps/step-reasoning.n3",
+            "rules/util/help.n3",
+            "rules/shacl/createPattern.n3",
         ].concat(data),
         "eye:flags": [
             "--quantify http://josd.github.io/.well-known/genid/",
         ],
-        query: "demo/translation/mappingRuleCreationComponent.n3",
+        query: "rules/oslo-steps/mappingRuleCreationComponent_query.n3",
     }
     const output = `${baseFolder}/steps_component_level.n3`;
     await _cached(output, produceBase);
@@ -337,15 +337,15 @@ async function reasonJourneyGoal(data, goalStates, baseFolder) {
     await fs.writeFile(path.resolve(basePath, goalStatePath), goalStates.map(s => `<${s}> a <https://example.org/ns/example#goalState> .`).join('\n'), 'utf8');
     const produceBase = {
         data: [
-            "demo/translation/step-reasoning.n3",
-            "demo/translation/help.n3",
-            "demo/translation/createPattern.n3",
+            "rules/oslo-steps/step-reasoning.n3",
+            "rules/util/help.n3",
+            "rules/shacl/createPattern.n3",
             goalStatePath,
         ].concat(data),
         "eye:flags": [
             "--quantify http://josd.github.io/.well-known/genid/",
         ],
-        query: "demo/translation/createGoal.n3",
+        query: "rules/oslo-steps/createGoal_query.n3",
     }
     const output = `${baseFolder}/goal_journey.n3`;
     await _cached(output, produceBase);
@@ -355,9 +355,9 @@ async function reasonJourneyGoal(data, goalStates, baseFolder) {
 async function reasonShortStepDescriptions(data, baseFolder, label) {
     const produceBase = {
         data: [
-            "demo/profile/knowledge.n3",
+            "scenarios/knowledge.n3",
         ].concat(data),
-        query: "demo/preselection/pregeneration.n3",
+        query: "rules/workflow-composer/preselection/pregeneration.n3",
     }
     const output = `${baseFolder}/short_step_descriptions_${label}.n3`;
     await _cached(output, produceBase);
@@ -367,10 +367,10 @@ async function reasonShortStepDescriptions(data, baseFolder, label) {
 async function reasonSelectedSteps(data, baseFolder, label, type) {
     const produceBase = {
         data: [
-            "demo/preselection/preselection.n3",
-            "demo/profile/knowledge.n3",
+            "rules/workflow-composer/preselection/preselection.n3",
+            "scenarios/knowledge.n3",
         ].concat(data),
-        query: "demo/preselection/prequery.n3",
+        query: "rules/workflow-composer/preselection/prequery_query.n3",
     }
     const output = `${baseFolder}/selected_steps_${type}_${label}.n3`;
     await _cached(output, produceBase);
@@ -380,8 +380,8 @@ async function reasonSelectedSteps(data, baseFolder, label, type) {
 async function reasonJourney(data, query, baseFolder) {
     const produceBase = {
         data: [
-            "demo/workflow-composer/gps-plugin_modified_noPermutations.n3",
-            "demo/profile/knowledge.n3",
+            "rules/workflow-composer/gps-plugin_modified_noPermutations.n3",
+            "scenarios/knowledge.n3",
         ].concat(data),
         query,
     }
@@ -433,9 +433,9 @@ async function reasonStep(parentLevelStep, stepsPath, descriptionsPath, parentSt
         inference: {
             data: [
                 selectedStepsPath, config.oslo.steps, config.personalInfo, parentExtraRulePath,
-                "demo/workflow-composer/gps-plugin_modified_noPermutations.n3",
-                "demo/profile/knowledge.n3",
-                "demo/help-functions/aux2.n3",
+                "rules/workflow-composer/gps-plugin_modified_noPermutations.n3",
+                "scenarios/knowledge.n3",
+                "rules/util/aux2.n3",
             ],
             query: parentGoalPath
         }
@@ -462,7 +462,7 @@ async function generateSelected(step, baseFolder, label, type) {
 async function reasonBlock(data, baseFolder, label, type) {
     const produceBase = {
         data,
-        query: "demo/subgoals/creationOfBlockingInfo.n3",
+        query: "rules/workflow-composer/subgoals/creationOfBlockingInfo_query.n3",
     }
     const output = `${baseFolder}/block_${type}_${label}.n3`;
     await _cached(output, produceBase);
@@ -475,7 +475,7 @@ async function reasonGoal(data, baseFolder, label, type) {
         "eye:flags": [
             "--quantify http://josd.github.io/.well-known/genid/",
         ],
-        query: "demo/subgoals/subgoalCreation.n3",
+        query: "rules/workflow-composer/subgoals/subgoalCreation_query.n3",
     }
     const output = `${baseFolder}/goal_${type}_${label}.n3`;
     await _cached(output, produceBase);
@@ -485,7 +485,7 @@ async function reasonGoal(data, baseFolder, label, type) {
 async function reasonExtraRule(data, baseFolder, label, type) {
     const produceBase = {
         data,
-        query: "demo/subgoals/creationOfRuleForMissingData.n3",
+        query: "rules/workflow-composer/creationOfRuleForMissingData_query.n3",
     }
     const output = `${baseFolder}/extra_rule_${type}_${label}.n3`;
     await _cached(output, produceBase);
@@ -495,9 +495,9 @@ async function reasonExtraRule(data, baseFolder, label, type) {
 async function reasonPaths(data, query, baseFolder, label, type) {
     const produceBase = {
         data: [
-            "demo/workflow-composer/gps-plugin_modified_noPermutations.n3",
-            "demo/profile/knowledge.n3",
-            "demo/help-functions/aux2.n3",
+            "rules/workflow-composer/gps-plugin_modified_noPermutations.n3",
+            "scenarios/knowledge.n3",
+            "rules/util/aux2.n3",
         ].concat(data),
         query,
     }

@@ -1,4 +1,0 @@
-@prefix ex: <http://example.org/ns/example#>.
-@prefix step: <http://localhost:8000/steps#>.
-
-step:showWasteCollection ex:displayInput true.
